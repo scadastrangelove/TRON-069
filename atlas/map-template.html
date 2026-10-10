@@ -172,14 +172,12 @@ main{max-width:1800px;margin:0 auto;padding:22px clamp(14px,3vw,44px) 40px}
 .zc{position:absolute;left:14px;bottom:14px;display:grid;border:1px solid var(--line);border-radius:11px;padding:3.5px;background:#ffffffef;box-shadow:var(--shadow2);z-index:5}
 .zc button{width:31px;height:31px;color:var(--muted);font-size:17px;border-radius:8px}
 .zc button:hover{background:var(--accent-soft);color:var(--accent)}
-.mapfoot{position:absolute;right:14px;bottom:60px;display:flex;gap:12px;align-items:center;font:10px ui-monospace,monospace;color:var(--faint);background:#ffffffc9;border:1px solid var(--line2);border-radius:9px;padding:5px 10px;pointer-events:none;z-index:4}
+.mapfoot{position:absolute;right:14px;bottom:14px;font:10px ui-monospace,monospace;color:var(--faint);background:#ffffffc9;border:1px solid var(--line2);border-radius:9px;padding:5px 10px;pointer-events:none;z-index:4}
 .tooltip{position:absolute;z-index:30;pointer-events:none;background:#fffffff2;border:1px solid var(--line);box-shadow:0 14px 38px rgba(30,48,90,.14);border-radius:12px;padding:12px 14px;min-width:190px;max-width:300px;font-size:12px;line-height:1.55}
 .tooltip strong{font-size:13px}
 .tooltip .big{font-size:21px;letter-spacing:-.7px;font-weight:730;margin:5px 0 2px}
 .tooltip .row{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px}
 .tooltip .row b{color:var(--ink2);font-weight:600}
-.mleg{position:absolute;right:14px;bottom:14px;background:#ffffffd9;border:1px solid var(--line2);border-radius:11px;padding:9px 12px;font-size:10.5px;color:var(--muted);z-index:4;pointer-events:none;max-width:210px;line-height:1.6}
-.mleg .grad{height:8px;border-radius:5px;margin:6px 0 3px}
 
 /* легенда линеек */
 .legendbar{border-top:1px solid var(--line2);background:#fdfdfeb0;padding:12px 18px;display:flex;align-items flex-start;gap:14px;align-items:center}
@@ -512,14 +510,13 @@ dialog b{color:var(--ink)}
      <rect width="1320" height="600" fill="url(#dots)"/>
      <g id="viewport"><g id="gDots"></g><g id="gCountries"></g><g id="gClouds"></g><g id="gLabels"></g></g>
     </svg>
-    <div class="mleg" id="mapLegend" hidden></div>
     <div class="zc">
      <button id="zin" data-i18n-title="zoom_in" title="Приблизить (+)">+</button>
      <button id="zout" data-i18n-title="zoom_out" title="Отдалить (−)">−</button>
      <button id="zhome" data-i18n-title="zoom_home" title="Мир, сохранив фильтры">◎</button>
     </div>
     <div class="zoomhint" id="zoomHint"><span data-i18n="zh_zoom">⌘ / Ctrl + прокрутка — масштаб · перетаскивание — сдвиг</span></div>
-    <div class="mapfoot"><span id="zoomLabel">1.00×</span><span data-i18n="map_foot"></span></div>
+    <div class="mapfoot"><span id="zoomLabel">1.00×</span></div>
     <div class="tooltip" id="tip" hidden></div>
    </div>
    <button class="btn reopen-inspector" id="inspReopen" hidden data-i18n="open_panel"></button>
@@ -1483,9 +1480,6 @@ function renderMode(){
  const note=$("#modeNote");
  if(S.mode==="http"){note.hidden=false;note.innerHTML=t("http_note");}
  else note.hidden=true;
- const ml=$("#mapLegend");
- ml.hidden=false;
- ml.textContent=t(S.mode==="clouds"?"legend_clouds":S.mode==="countries"?"legend_countries":"legend_http");
  $("#mapHint").textContent=S.mode==="clouds"?t("hint_clouds"):S.mode==="countries"?t("hint_ctry"):t("hint_http");
  const eb=$(".maphead .eyebrow");
  const mt=$("#mapTitle");
