@@ -1,0 +1,1514 @@
+{
+  "taken": "20261010-083807",
+  "started_at": "2026-10-10T08:38:08+00:00",
+  "source": "Shodan /shodan/host/count",
+  "timezone": "UTC",
+  "plan": {
+    "version": 1,
+    "id": "20261010-083807",
+    "created_at": "2026-10-10T08:38:07+00:00",
+    "source_snapshot": "data/mapdata/snapshot-20261010-083331",
+    "mode": "queries-only",
+    "options": {
+      "drill_lines": 0,
+      "drill_countries": 0,
+      "org_limit": 100,
+      "asn_limit": 100,
+      "skip_drill": true,
+      "skip_stickers": true,
+      "skip_variants": false,
+      "queries_only": true,
+      "refresh_base": false,
+      "only": [],
+      "query_group": []
+    },
+    "selected": [
+      "acssimtool",
+      "arris-cpe-authentication",
+      "askeycwmp-askey",
+      "avsystem-libcwmp",
+      "axiros",
+      "centurylink-lighttpd",
+      "charter-anti-scan-404",
+      "cpe-server-1-0",
+      "cwmp-agent-orange-tunisie",
+      "cwmp-lancom",
+      "cwmp-server",
+      "cwmpd-tr069agent",
+      "decimal-nonce-class",
+      "digauth",
+      "dt-speedport-sdk",
+      "easycwmp-fork-ecntcwmp",
+      "easycwmp-fork-leanoacs",
+      "easycwmp-fork-ltecpe",
+      "easycwmp-vanilla",
+      "fake-apache-openagent",
+      "gateway-realm",
+      "genieacs-admin-ui",
+      "gsoap-2-7-vendor-map",
+      "gsoap-2-8-vendor-map",
+      "gsoap-park",
+      "gsoap-service-realm",
+      "huaweihomegateway",
+      "huaweihomegateway-cr-slice",
+      "icwmp-iopsys",
+      "igdauthentication",
+      "junk-realms",
+      "kt-cems",
+      "magticom-gsoap",
+      "meig-meigsmart-com",
+      "mini-web-server-1-0-zte-corp",
+      "nettyserver",
+      "openacs",
+      "qacafe-cdrouter-test-realm",
+      "rdk-b-ccsptr069pa",
+      "realtek-sdk",
+      "ruijie-cpe",
+      "sagemcom",
+      "sercomm-cpe-authentication",
+      "sky-ee-tr069-http-server",
+      "telefonica-cwmpweb",
+      "ti-cpe-authentication",
+      "tr069-client",
+      "tr069-client-cli-server-netcore",
+      "tr069-http-server",
+      "windtre-tr069-http-server",
+      "yapsieworld",
+      "zte"
+    ],
+    "base_jobs": [
+      {
+        "id": "icwmp-iopsys",
+        "name": "icwmp (iopsys)",
+        "query": "\"authenticate@cwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "tr069-http-server",
+        "name": "tr069 http server",
+        "query": "\"tr069 http server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-park",
+        "name": "gSOAP park",
+        "query": "\"Server: gSOAP\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "rdk-b-ccsptr069pa",
+        "name": "RDK-B CcspTr069Pa",
+        "query": "\"Cisco_CCSP_CWMP_TCPCR\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "tr069-client",
+        "name": "TR069 Client",
+        "query": "\"TR069 client TCP connection request Server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "igdauthentication",
+        "name": "IgdAuthentication",
+        "query": "\"IgdAuthentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-vanilla",
+        "name": "easycwmp vanilla",
+        "query": "\"realm@easycwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "huaweihomegateway",
+        "name": "HuaweiHomeGateway",
+        "query": "\"HuaweiHomeGateway\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "sagemcom",
+        "name": "Sagemcom",
+        "query": "\"Sagemcom TR-069\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "zte",
+        "name": "ZTE",
+        "query": "\"cpe@zte.com\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "digauth",
+        "name": "DigAuth",
+        "query": "\"DigAuth\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "yapsieworld",
+        "name": "YapsieWorld",
+        "query": "\"YapsieWorld\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "magticom-gsoap",
+        "name": "Magticom gSOAP",
+        "query": "port:6264 gSOAP",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "realtek-sdk",
+        "name": "Realtek SDK",
+        "query": "\"realtek.com.tw\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmpd-tr069agent",
+        "name": "cwmpd / TR069Agent",
+        "query": "\"cwmpd\" opaque",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "dt-speedport-sdk",
+        "name": "DT Speedport SDK",
+        "query": "\"DSLForum CPE Management\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "acssimtool",
+        "name": "ACSSimTool",
+        "query": "\"ACSSimTool\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "avsystem-libcwmp",
+        "name": "avsystem-libcwmp",
+        "query": "\"avsystem-libcwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-service-realm",
+        "name": "gSOAP Service realm",
+        "query": "port:7547 opaque \"gSOAP Service\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-fork-ecntcwmp",
+        "name": "easycwmp fork: ecntcwmp",
+        "query": "\"realm@ecntcwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-fork-leanoacs",
+        "name": "easycwmp fork: leanoacs",
+        "query": "\"realm@leanoacs\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-fork-ltecpe",
+        "name": "easycwmp fork: ltecpe",
+        "query": "\"realm@ltecpe\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "ruijie-cpe",
+        "name": "RUIJIE-CPE",
+        "query": "\"RUIJIE-CPE\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "junk-realms",
+        "name": "junk realms",
+        "query": "port:7547 opaque \"dirname\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "nettyserver",
+        "name": "NettyServer",
+        "query": "\"NettyServer\" port:7547",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "genieacs-admin-ui",
+        "name": "GenieACS admin-UI",
+        "query": "http.title:\"GenieACS\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "openacs",
+        "name": "openacs",
+        "query": "\"openacs\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "axiros",
+        "name": "Axiros",
+        "query": "\"Axiros\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "askeycwmp-askey",
+        "name": "ASKEYCWMP (Askey)",
+        "query": "port:7547 ASKEYCWMP",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "meig-meigsmart-com",
+        "name": "MEiG (meigsmart.com)",
+        "query": "\"www.meigsmart.com\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "kt-cems",
+        "name": "KT CEMS",
+        "query": "\"ktcems.com\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "qacafe-cdrouter-test-realm",
+        "name": "qacafe (CDRouter test realm)",
+        "query": "\"qacafe\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cpe-server-1-0",
+        "name": "CPE-SERVER/1.0",
+        "query": "\"CPE-SERVER/1.0\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "huaweihomegateway-cr-slice",
+        "name": "HuaweiHomeGateway CR slice",
+        "query": "port:7547 \"HuaweiHomeGateway\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "centurylink-lighttpd",
+        "name": "CenturyLink lighttpd",
+        "query": "port:7547 country:US lighttpd",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "arris-cpe-authentication",
+        "name": "Arris CPE Authentication",
+        "query": "\"Arris CPE Authentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "sky-ee-tr069-http-server",
+        "name": "Sky/EE tr069-http-server",
+        "query": "port:7547 country:GB \"tr069 http server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "ti-cpe-authentication",
+        "name": "TI CPE Authentication",
+        "query": "\"TI CPE Authentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gateway-realm",
+        "name": "Gateway realm",
+        "query": "port:7170 realm=\"Gateway\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "windtre-tr069-http-server",
+        "name": "WindTre tr069-http-server",
+        "query": "port:7547 country:IT \"tr069 http server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-2-7-vendor-map",
+        "name": "gSOAP/2.7 vendor map",
+        "query": "port:7547 \"Server: gSOAP/2.7\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-2-8-vendor-map",
+        "name": "gSOAP/2.8 vendor map",
+        "query": "port:7547 \"Server: gSOAP/2.8\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "sercomm-cpe-authentication",
+        "name": "Sercomm CPE Authentication",
+        "query": "\"Sercomm CPE Authentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "charter-anti-scan-404",
+        "name": "Charter anti-scan 404",
+        "query": "port:7547 \"HTTP/1.1 404\" org:\"Charter Communications\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmp-agent-orange-tunisie",
+        "name": "CWMP-Agent (Orange Tunisie)",
+        "query": "\"CWMP-Agent\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmp-lancom",
+        "name": "CWMP@Lancom",
+        "query": "port:7547 \"CWMP@Lancom\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "tr069-client-cli-server-netcore",
+        "name": "TR069 client CLI Server (Netcore)",
+        "query": "\"TR069 client CLI Server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "mini-web-server-1-0-zte-corp",
+        "name": "Mini web server 1.0 ZTE corp",
+        "query": "\"Mini web server 1.0 ZTE corp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "fake-apache-openagent",
+        "name": "fake-Apache openagent",
+        "query": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "decimal-nonce-class",
+        "name": "decimal-nonce class",
+        "query": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmp-server",
+        "name": "cwmp server",
+        "query": "\"Server: cwmp server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "telefonica-cwmpweb",
+        "name": "Telefónica cwmpWeb",
+        "query": "\"cwmpWeb\" \"main.acs.telefonica.net\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "denominator-park",
+        "name": "denominator-park",
+        "query": "port:7547",
+        "facets": "country:250"
+      },
+      {
+        "id": "denominator-http",
+        "name": "denominator-http",
+        "query": "port:7547 HTTP",
+        "facets": "country:250"
+      }
+    ],
+    "queries": [
+      {
+        "id": "tr069-total",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "цензус под-семей 2026-10-10 (host/count)",
+          "en": "Subfamily census, 2026-10-10 (host/count)",
+          "es": "Censo de subfamilias, 2026-10-10 (host/count)",
+          "zh": "子族统计，2026-10-10（host/count）"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-digest",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\" \"WWW-Authenticate: Digest\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Digest-ответы",
+          "en": "Digest responses",
+          "es": "Respuestas Digest",
+          "zh": "Digest 响应"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-basic",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\" \"WWW-Authenticate: Basic\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Basic-ответы",
+          "en": "Basic responses",
+          "es": "Respuestas Basic",
+          "zh": "Basic 响应"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-qop",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\" \"qop=\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Ответы с маркером qop",
+          "en": "Responses with a qop marker",
+          "es": "Respuestas con marcador qop",
+          "zh": "含 qop 标记的响应"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-nonce-after-realm",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\" \"realm=\\\"TR069 Client\\\", nonce=\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "nonce сразу после realm (маркер ответа)",
+          "en": "nonce immediately after realm (response marker)",
+          "es": "nonce inmediatamente después de realm (marcador de respuesta)",
+          "zh": "realm 后紧接 nonce（响应标记）"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-digauth-bridge",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\" \"DigAuth\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Мост к DigAuth",
+          "en": "DigAuth bridge",
+          "es": "Vínculo con DigAuth",
+          "zh": "与 DigAuth 的关联"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-digauth-br-8081",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\" \"DigAuth\" port:8081 country:BR",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Мост DigAuth · BR · 8081",
+          "en": "DigAuth bridge · BR · 8081",
+          "es": "Vínculo DigAuth · BR · 8081",
+          "zh": "DigAuth 关联 · BR · 8081"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-openagent-a",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"Apache/2.0.40 (Red Hat Linux)\" \"DigAuth\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Openagent: подсемейство A",
+          "en": "Openagent: subfamily A",
+          "es": "Openagent: subfamilia A",
+          "zh": "Openagent：子族 A"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "tr069-singtel-503",
+        "parent": "tr069-client",
+        "group": "tr069-family",
+        "query": "\"TR069 client TCP connection request Server\" country:SG \"503 Service Unavailable\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "SG: ответы 503",
+          "en": "SG: 503 responses",
+          "es": "SG: respuestas 503",
+          "zh": "SG：503 响应"
+        },
+        "source": {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-8081",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:8081",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 8081",
+          "en": "CR port 8081",
+          "es": "Puerto CR 8081",
+          "zh": "CR 端口 8081"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-8081-nz",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:8081 country:NZ",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 8081 · NZ",
+          "en": "CR port 8081 · NZ",
+          "es": "Puerto CR 8081 · NZ",
+          "zh": "CR 端口 8081 · NZ"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-51005",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:51005",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 51005",
+          "en": "CR port 51005",
+          "es": "Puerto CR 51005",
+          "zh": "CR 端口 51005"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-51005-gr",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:51005 country:GR",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 51005 · GR",
+          "en": "CR port 51005 · GR",
+          "es": "Puerto CR 51005 · GR",
+          "zh": "CR 端口 51005 · GR"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-8083",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:8083",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 8083",
+          "en": "CR port 8083",
+          "es": "Puerto CR 8083",
+          "zh": "CR 端口 8083"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-8083-gr",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:8083 country:GR",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 8083 · GR",
+          "en": "CR port 8083 · GR",
+          "es": "Puerto CR 8083 · GR",
+          "zh": "CR 端口 8083 · GR"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-8080",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:8080",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 8080",
+          "en": "CR port 8080",
+          "es": "Puerto CR 8080",
+          "zh": "CR 端口 8080"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-8080-ie",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:8080 country:IE",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 8080 · IE",
+          "en": "CR port 8080 · IE",
+          "es": "Puerto CR 8080 · IE",
+          "zh": "CR 端口 8080 · IE"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-30008",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:30008",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 30008",
+          "en": "CR port 30008",
+          "es": "Puerto CR 30008",
+          "zh": "CR 端口 30008"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-30008-au",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:30008 country:AU",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 30008 · AU",
+          "en": "CR port 30008 · AU",
+          "es": "Puerto CR 30008 · AU",
+          "zh": "CR 端口 30008 · AU"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-10302",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:10302",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 10302",
+          "en": "CR port 10302",
+          "es": "Puerto CR 10302",
+          "zh": "CR 端口 10302"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-10302-se",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:10302 country:SE",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 10302 · SE",
+          "en": "CR port 10302 · SE",
+          "es": "Puerto CR 10302 · SE",
+          "zh": "CR 端口 10302 · SE"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-7548",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:7548",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 7548",
+          "en": "CR port 7548",
+          "es": "Puerto CR 7548",
+          "zh": "CR 端口 7548"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-port-7548-fr",
+        "parent": "huaweihomegateway",
+        "group": "huawei-ports",
+        "query": "\"HuaweiHomeGateway\" port:7548 country:FR",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "CR-порт 7548 · FR",
+          "en": "CR port 7548 · FR",
+          "es": "Puerto CR 7548 · FR",
+          "zh": "CR 端口 7548 · FR"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-basic",
+        "parent": "huaweihomegateway",
+        "group": "huawei-auth",
+        "query": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Ответы Basic",
+          "en": "Basic responses",
+          "es": "Respuestas Basic",
+          "zh": "Basic 响应"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-basic-de",
+        "parent": "huaweihomegateway",
+        "group": "huawei-auth",
+        "query": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\" country:DE",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Ответы Basic · DE",
+          "en": "Basic responses · DE",
+          "es": "Respuestas Basic · DE",
+          "zh": "Basic 响应 · DE"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-basic-sa",
+        "parent": "huaweihomegateway",
+        "group": "huawei-auth",
+        "query": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\" country:SA",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Ответы Basic · SA",
+          "en": "Basic responses · SA",
+          "es": "Respuestas Basic · SA",
+          "zh": "Basic 响应 · SA"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-digest",
+        "parent": "huaweihomegateway",
+        "group": "huawei-auth",
+        "query": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Ответы Digest",
+          "en": "Digest responses",
+          "es": "Respuestas Digest",
+          "zh": "Digest 响应"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-digest-de",
+        "parent": "huaweihomegateway",
+        "group": "huawei-auth",
+        "query": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:DE",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Ответы Digest · DE",
+          "en": "Digest responses · DE",
+          "es": "Respuestas Digest · DE",
+          "zh": "Digest 响应 · DE"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "huawei-digest-sa",
+        "parent": "huaweihomegateway",
+        "group": "huawei-auth",
+        "query": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:SA",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Ответы Digest · SA",
+          "en": "Digest responses · SA",
+          "es": "Respuestas Digest · SA",
+          "zh": "Digest 响应 · SA"
+        },
+        "source": {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "avsystem-total",
+        "parent": "avsystem-libcwmp",
+        "group": "avsystem-versions",
+        "query": "\"avsystem-libcwmp\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Все версии AVSystem",
+          "en": "All AVSystem versions",
+          "es": "Todas las versiones AVSystem",
+          "zh": "AVSystem 全部版本"
+        },
+        "source": {
+          "file": "ACS-HUNT.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "avsystem-5-7-9",
+        "parent": "avsystem-libcwmp",
+        "group": "avsystem-versions",
+        "query": "\"avsystem-libcwmp/5.7.9\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "версионный цензус по Server-заголовку",
+          "en": "Version distribution from the Server header",
+          "es": "Distribución de versiones según la cabecera Server",
+          "zh": "按 Server 响应头统计的版本分布"
+        },
+        "source": {
+          "file": "ACS-HUNT.md"
+        },
+        "overlap": "possible",
+        "denominator": "avsystem-total"
+      },
+      {
+        "id": "avsystem-5-6-2",
+        "parent": "avsystem-libcwmp",
+        "group": "avsystem-versions",
+        "query": "\"avsystem-libcwmp/5.6.2\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Версия 5.6.2",
+          "en": "Version 5.6.2",
+          "es": "Versión 5.6.2",
+          "zh": "版本 5.6.2"
+        },
+        "source": {
+          "file": "ACS-HUNT.md"
+        },
+        "overlap": "possible",
+        "denominator": "avsystem-total"
+      },
+      {
+        "id": "avsystem-5-5-3",
+        "parent": "avsystem-libcwmp",
+        "group": "avsystem-versions",
+        "query": "\"avsystem-libcwmp/5.5.3\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Версия 5.5.3",
+          "en": "Version 5.5.3",
+          "es": "Versión 5.5.3",
+          "zh": "版本 5.5.3"
+        },
+        "source": {
+          "file": "ACS-HUNT.md"
+        },
+        "overlap": "possible",
+        "denominator": "avsystem-total"
+      },
+      {
+        "id": "avsystem-5-5-4",
+        "parent": "avsystem-libcwmp",
+        "group": "avsystem-versions",
+        "query": "\"avsystem-libcwmp/5.5.4\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Версия 5.5.4",
+          "en": "Version 5.5.4",
+          "es": "Versión 5.5.4",
+          "zh": "版本 5.5.4"
+        },
+        "source": {
+          "file": "ACS-HUNT.md"
+        },
+        "overlap": "possible",
+        "denominator": "avsystem-total"
+      },
+      {
+        "id": "easycwmp-total",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "port:7547 \"realm@easycwmp\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Всего на CR-порту",
+          "en": "Total on CR port",
+          "es": "Total en puerto CR",
+          "zh": "CR 端口总数"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-digest",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "port:7547 \"WWW-Authenticate: Digest\" \"realm@easycwmp\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Digest на CR-порту",
+          "en": "Digest on CR port",
+          "es": "Digest en puerto CR",
+          "zh": "CR 端口 Digest"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-basic",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "port:7547 \"WWW-Authenticate: Basic\" \"realm@easycwmp\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Basic на CR-порту",
+          "en": "Basic on CR port",
+          "es": "Basic en puerto CR",
+          "zh": "CR 端口 Basic"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-opaque",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "\"328458fab28345ae87ab3210a8513b14eff452a2\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "род по opaque-константе (все форки)",
+          "en": "Family by opaque constant (all forks)",
+          "es": "Familia por constante opaque (todas las bifurcaciones)",
+          "zh": "按 opaque 常量识别家族（所有分支）"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-qop",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "port:7547 \"qop=auth\" \"realm@easycwmp\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Маркер qop=auth",
+          "en": "qop=auth marker",
+          "es": "Marcador qop=auth",
+          "zh": "qop=auth 标记"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-http200",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "port:7547 \"HTTP/1.1 200 OK\" \"Content-Length: 0\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "HTTP 200: широкий контрольный запрос",
+          "en": "HTTP 200: broad control query",
+          "es": "HTTP 200: consulta de control amplia",
+          "zh": "HTTP 200：宽泛对照查询"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-http409",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "port:7547 \"HTTP/1.1 409 Conflict\"",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "HTTP 409: широкий контрольный запрос",
+          "en": "HTTP 409: broad control query",
+          "es": "HTTP 409: consulta de control amplia",
+          "zh": "HTTP 409：宽泛对照查询"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-ru",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "\"realm@easycwmp\" country:RU",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Россия",
+          "en": "Russia",
+          "es": "Rusia",
+          "zh": "俄罗斯"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-tn",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "\"realm@easycwmp\" country:TN",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Тунис",
+          "en": "Tunisia",
+          "es": "Túnez",
+          "zh": "突尼斯"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      },
+      {
+        "id": "easycwmp-port30005",
+        "parent": "easycwmp-vanilla",
+        "group": "easycwmp",
+        "query": "\"realm@easycwmp\" port:30005",
+        "facets": "country:250,org:100,asn:100,port:100",
+        "label": {
+          "ru": "Порт 30005",
+          "en": "Port 30005",
+          "es": "Puerto 30005",
+          "zh": "端口 30005"
+        },
+        "source": {
+          "file": "NOTES.md"
+        },
+        "overlap": "possible"
+      }
+    ],
+    "interval": 1.1,
+    "facts": null
+  },
+  "source_snapshot": "data/mapdata/snapshot-20261010-083331",
+  "collector_mode": "queries-only",
+  "status": "complete",
+  "updated_at": "2026-10-10T08:40:04+00:00",
+  "requests_this_run": 41,
+  "errors": 0,
+  "failures": {},
+  "lines": [
+    {
+      "name": "icwmp (iopsys)",
+      "file": "icwmp-iopsys.json",
+      "collection_status": "ok",
+      "total": 3197342
+    },
+    {
+      "name": "tr069 http server",
+      "file": "tr069-http-server.json",
+      "collection_status": "ok",
+      "total": 1980066
+    },
+    {
+      "name": "gSOAP park",
+      "file": "gsoap-park.json",
+      "collection_status": "ok",
+      "total": 1871363
+    },
+    {
+      "name": "RDK-B CcspTr069Pa",
+      "file": "rdk-b-ccsptr069pa.json",
+      "collection_status": "ok",
+      "total": 1788758
+    },
+    {
+      "name": "TR069 Client",
+      "file": "tr069-client.json",
+      "collection_status": "ok",
+      "total": 1671226
+    },
+    {
+      "name": "IgdAuthentication",
+      "file": "igdauthentication.json",
+      "collection_status": "ok",
+      "total": 1515054
+    },
+    {
+      "name": "easycwmp vanilla",
+      "file": "easycwmp-vanilla.json",
+      "collection_status": "ok",
+      "total": 1003996
+    },
+    {
+      "name": "HuaweiHomeGateway",
+      "file": "huaweihomegateway.json",
+      "collection_status": "ok",
+      "total": 2895277
+    },
+    {
+      "name": "Sagemcom",
+      "file": "sagemcom.json",
+      "collection_status": "ok",
+      "total": 222599
+    },
+    {
+      "name": "ZTE",
+      "file": "zte.json",
+      "collection_status": "ok",
+      "total": 263278
+    },
+    {
+      "name": "DigAuth",
+      "file": "digauth.json",
+      "collection_status": "ok",
+      "total": 29581
+    },
+    {
+      "name": "YapsieWorld",
+      "file": "yapsieworld.json",
+      "collection_status": "ok",
+      "total": 71974
+    },
+    {
+      "name": "Magticom gSOAP",
+      "file": "magticom-gsoap.json",
+      "collection_status": "ok",
+      "total": 26477
+    },
+    {
+      "name": "Realtek SDK",
+      "file": "realtek-sdk.json",
+      "collection_status": "ok",
+      "total": 28640
+    },
+    {
+      "name": "cwmpd / TR069Agent",
+      "file": "cwmpd-tr069agent.json",
+      "collection_status": "ok",
+      "total": 19074
+    },
+    {
+      "name": "DT Speedport SDK",
+      "file": "dt-speedport-sdk.json",
+      "collection_status": "ok",
+      "total": 117202
+    },
+    {
+      "name": "ACSSimTool",
+      "file": "acssimtool.json",
+      "collection_status": "ok",
+      "total": 11153
+    },
+    {
+      "name": "avsystem-libcwmp",
+      "file": "avsystem-libcwmp.json",
+      "collection_status": "ok",
+      "total": 6425
+    },
+    {
+      "name": "gSOAP Service realm",
+      "file": "gsoap-service-realm.json",
+      "collection_status": "ok",
+      "total": 6532
+    },
+    {
+      "name": "easycwmp fork: ecntcwmp",
+      "file": "easycwmp-fork-ecntcwmp.json",
+      "collection_status": "ok",
+      "total": 59002
+    },
+    {
+      "name": "easycwmp fork: leanoacs",
+      "file": "easycwmp-fork-leanoacs.json",
+      "collection_status": "ok",
+      "total": 4309
+    },
+    {
+      "name": "easycwmp fork: ltecpe",
+      "file": "easycwmp-fork-ltecpe.json",
+      "collection_status": "ok",
+      "total": 91
+    },
+    {
+      "name": "RUIJIE-CPE",
+      "file": "ruijie-cpe.json",
+      "collection_status": "ok",
+      "total": 521
+    },
+    {
+      "name": "junk realms",
+      "file": "junk-realms.json",
+      "collection_status": "ok",
+      "total": 3834
+    },
+    {
+      "name": "NettyServer",
+      "file": "nettyserver.json",
+      "collection_status": "ok",
+      "total": 31044
+    },
+    {
+      "name": "GenieACS admin-UI",
+      "file": "genieacs-admin-ui.json",
+      "collection_status": "ok",
+      "total": 3665
+    },
+    {
+      "name": "openacs",
+      "file": "openacs.json",
+      "collection_status": "ok",
+      "total": 14
+    },
+    {
+      "name": "Axiros",
+      "file": "axiros.json",
+      "collection_status": "ok",
+      "total": 7
+    },
+    {
+      "name": "ASKEYCWMP (Askey)",
+      "file": "askeycwmp-askey.json",
+      "collection_status": "ok",
+      "total": 653320
+    },
+    {
+      "name": "MEiG (meigsmart.com)",
+      "file": "meig-meigsmart-com.json",
+      "collection_status": "ok",
+      "total": 2623
+    },
+    {
+      "name": "KT CEMS",
+      "file": "kt-cems.json",
+      "collection_status": "ok",
+      "total": 27316
+    },
+    {
+      "name": "qacafe (CDRouter test realm)",
+      "file": "qacafe-cdrouter-test-realm.json",
+      "collection_status": "ok",
+      "total": 21020
+    },
+    {
+      "name": "CPE-SERVER/1.0",
+      "file": "cpe-server-1-0.json",
+      "collection_status": "ok",
+      "total": 3448399
+    },
+    {
+      "name": "HuaweiHomeGateway CR slice",
+      "file": "huaweihomegateway-cr-slice.json",
+      "collection_status": "ok",
+      "total": 2672492
+    },
+    {
+      "name": "CenturyLink lighttpd",
+      "file": "centurylink-lighttpd.json",
+      "collection_status": "ok",
+      "total": 459251
+    },
+    {
+      "name": "Arris CPE Authentication",
+      "file": "arris-cpe-authentication.json",
+      "collection_status": "ok",
+      "total": 10651
+    },
+    {
+      "name": "Sky/EE tr069-http-server",
+      "file": "sky-ee-tr069-http-server.json",
+      "collection_status": "ok",
+      "total": 64754
+    },
+    {
+      "name": "TI CPE Authentication",
+      "file": "ti-cpe-authentication.json",
+      "collection_status": "ok",
+      "total": 32411
+    },
+    {
+      "name": "Gateway realm",
+      "file": "gateway-realm.json",
+      "collection_status": "ok",
+      "total": 34186
+    },
+    {
+      "name": "WindTre tr069-http-server",
+      "file": "windtre-tr069-http-server.json",
+      "collection_status": "ok",
+      "total": 278407
+    },
+    {
+      "name": "gSOAP/2.7 vendor map",
+      "file": "gsoap-2-7-vendor-map.json",
+      "collection_status": "ok",
+      "total": 1249074
+    },
+    {
+      "name": "gSOAP/2.8 vendor map",
+      "file": "gsoap-2-8-vendor-map.json",
+      "collection_status": "ok",
+      "total": 106357
+    },
+    {
+      "name": "Sercomm CPE Authentication",
+      "file": "sercomm-cpe-authentication.json",
+      "collection_status": "ok",
+      "total": 308449
+    },
+    {
+      "name": "Charter anti-scan 404",
+      "file": "charter-anti-scan-404.json",
+      "collection_status": "ok",
+      "total": 105721
+    },
+    {
+      "name": "CWMP-Agent (Orange Tunisie)",
+      "file": "cwmp-agent-orange-tunisie.json",
+      "collection_status": "ok",
+      "total": 18421
+    },
+    {
+      "name": "CWMP@Lancom",
+      "file": "cwmp-lancom.json",
+      "collection_status": "ok",
+      "total": 6477
+    },
+    {
+      "name": "TR069 client CLI Server (Netcore)",
+      "file": "tr069-client-cli-server-netcore.json",
+      "collection_status": "ok",
+      "total": 1862
+    },
+    {
+      "name": "Mini web server 1.0 ZTE corp",
+      "file": "mini-web-server-1-0-zte-corp.json",
+      "collection_status": "ok",
+      "total": 77373
+    },
+    {
+      "name": "fake-Apache openagent",
+      "file": "fake-apache-openagent.json",
+      "collection_status": "ok",
+      "total": 2970
+    },
+    {
+      "name": "decimal-nonce class",
+      "file": "decimal-nonce-class.json",
+      "collection_status": "ok",
+      "total": 32392
+    },
+    {
+      "name": "cwmp server",
+      "file": "cwmp-server.json",
+      "collection_status": "ok",
+      "total": 84427
+    },
+    {
+      "name": "Telefónica cwmpWeb",
+      "file": "telefonica-cwmpweb.json",
+      "collection_status": "ok",
+      "total": 1476
+    },
+    {
+      "name": "denominator-park",
+      "file": "denominator-park.json",
+      "collection_status": "ok",
+      "total": 34390568
+    },
+    {
+      "name": "denominator-http",
+      "file": "denominator-http.json",
+      "collection_status": "ok",
+      "total": 22955701
+    }
+  ],
+  "org_drill": {
+    "scope": "skipped",
+    "expected": 0,
+    "completed": 0,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+  },
+  "variants": {
+    "expected": 44,
+    "completed": 44,
+    "pending": 0
+  },
+  "publication_redactions": {
+    "edition": "public",
+    "editorial_plan": "Private editorial annotations replaced by the current public edition; original run counters and measurements retained.",
+    "withheld_query_ids": [],
+    "public_variant_files": 44
+  }
+}

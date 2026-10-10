@@ -1,0 +1,49 @@
+{
+ "dork": "\"cwmpd\" opaque country:FI",
+ "total": 23,
+ "taken": "2026-10-10T11:02:18+00:00",
+ "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 23,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 23,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 20,
+   "value": "as16086"
+  },
+  {
+   "count": 2,
+   "value": "16086"
+  },
+  {
+   "count": 1,
+   "value": "as57013"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 22,
+   "value": "DNA Oyj"
+  },
+  {
+   "count": 1,
+   "value": "Eurasia-Star LLP"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "FI"
+}

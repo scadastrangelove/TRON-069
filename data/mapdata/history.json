@@ -1,0 +1,142 @@
+{
+ "schema_version": 1,
+ "timezone": "UTC",
+ "latest_complete": "snapshot-20261010-102121",
+ "snapshots": [
+  {
+   "snapshot": "snapshot-20261008-1451",
+   "status": "complete",
+   "started_at": "20261008-1451",
+   "completed_at": null,
+   "updated_at": null,
+   "source_snapshot": null,
+   "mode": "legacy",
+   "errors": 0,
+   "lines": 0,
+   "operator_pairs": {},
+   "research_queries": {}
+  },
+  {
+   "snapshot": "snapshot-20261008-1651",
+   "status": "complete",
+   "started_at": "20261008-1651",
+   "completed_at": null,
+   "updated_at": null,
+   "source_snapshot": null,
+   "mode": "legacy",
+   "errors": 0,
+   "lines": 47,
+   "operator_pairs": {},
+   "research_queries": {}
+  },
+  {
+   "snapshot": "snapshot-20261008-2227",
+   "status": "complete",
+   "started_at": "20261008-2227",
+   "completed_at": null,
+   "updated_at": null,
+   "source_snapshot": null,
+   "mode": "legacy",
+   "errors": 0,
+   "lines": 50,
+   "operator_pairs": {},
+   "research_queries": {}
+  },
+  {
+   "snapshot": "snapshot-20261010-083331",
+   "status": "complete",
+   "started_at": "2026-10-10T08:33:31+00:00",
+   "completed_at": null,
+   "updated_at": "2026-10-10T08:36:53+00:00",
+   "source_snapshot": "data/mapdata/snapshot-20261008-2227",
+   "mode": "full",
+   "errors": 0,
+   "lines": 52,
+   "operator_pairs": {
+    "scope": "selected",
+    "expected": 93,
+    "completed": 93,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 0,
+    "completed": 0,
+    "pending": 0
+   }
+  },
+  {
+   "snapshot": "snapshot-20261010-083807",
+   "status": "complete",
+   "started_at": "2026-10-10T08:38:08+00:00",
+   "completed_at": null,
+   "updated_at": "2026-10-10T08:40:04+00:00",
+   "source_snapshot": "data/mapdata/snapshot-20261010-083331",
+   "mode": "queries-only",
+   "errors": 0,
+   "lines": 52,
+   "operator_pairs": {
+    "scope": "skipped",
+    "expected": 0,
+    "completed": 0,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 44,
+    "completed": 44,
+    "pending": 0
+   }
+  },
+  {
+   "snapshot": "snapshot-20261010-101524",
+   "status": "interrupted",
+   "started_at": "2026-10-10T10:15:24+00:00",
+   "completed_at": null,
+   "updated_at": "2026-10-10T10:16:44+00:00",
+   "source_snapshot": null,
+   "mode": "full",
+   "errors": 0,
+   "lines": 52,
+   "operator_pairs": {
+    "scope": "all",
+    "expected": 2457,
+    "completed": 4,
+    "pending": 2453,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 74,
+    "completed": 0,
+    "pending": 74
+   }
+  },
+  {
+   "snapshot": "snapshot-20261010-102121",
+   "status": "complete",
+   "started_at": "2026-10-10T10:21:21+00:00",
+   "completed_at": "2026-10-10T11:11:55+00:00",
+   "updated_at": "2026-10-10T11:11:55+00:00",
+   "source_snapshot": null,
+   "mode": "full",
+   "errors": 0,
+   "lines": 52,
+   "operator_pairs": {
+    "scope": "all",
+    "expected": 2457,
+    "completed": 2457,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 93,
+    "completed": 93,
+    "pending": 0
+   }
+  }
+ ]
+}

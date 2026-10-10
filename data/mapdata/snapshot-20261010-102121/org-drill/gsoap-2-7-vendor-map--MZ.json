@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:MZ",
+ "total": 1018,
+ "taken": "2026-10-10T10:44:35+00:00",
+ "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 1018,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 1018,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 980,
+   "value": "as30619"
+  },
+  {
+   "count": 37,
+   "value": "30619"
+  },
+  {
+   "count": 1,
+   "value": "as37223"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1017,
+   "value": "TMCEL - Moçambique Telecom, SA"
+  },
+  {
+   "count": 1,
+   "value": "Vodacom Mocambique S.A"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "MZ"
+}

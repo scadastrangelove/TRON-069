@@ -1,0 +1,481 @@
+{
+  "_meta": {
+    "built": "2026-10-08",
+    "note": "подстрочный матч по org-строке Shodan; порядок = приоритет; несматченные org показываются как есть"
+  },
+  "rules": [
+    {
+      "match": [
+        "Charter Communications Inc",
+        "Charter Communications LLC",
+        "Charter Communications, Inc",
+        "Charter Communications"
+      ],
+      "norm": "Charter (Spectrum)",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "IP pools",
+        "BT Infrastructure Layer",
+        "BT-Central-Plus",
+        "BT Ireland"
+      ],
+      "norm": "BT (British Telecom)",
+      "cc": "GB"
+    },
+    {
+      "match": [
+        "Telecom Italia S.p.A. TIN EA",
+        "Telecom Italia S.p.A",
+        "TIN EA"
+      ],
+      "norm": "Telecom Italia",
+      "cc": "IT"
+    },
+    {
+      "match": [
+        "Office National des Postes e",
+        "ADSL_Maroc_telecom"
+      ],
+      "norm": "Maroc Telecom (IAM)",
+      "cc": "MA"
+    },
+    {
+      "match": [
+        "Saudi Telecom Company JSC",
+        "STC, Riyadh Residential Fixe",
+        "STC, Jeddah Residential Fixe",
+        "STC, Dammam Residential Fixe",
+        "Saudi Telecom"
+      ],
+      "norm": "STC",
+      "cc": "SA"
+    },
+    {
+      "match": [
+        "SingNET Broadband",
+        "SingNet Pte Ltd",
+        "SINGTEL BUSINESS INTERNET",
+        "Singtel"
+      ],
+      "norm": "Singtel",
+      "cc": "SG"
+    },
+    {
+      "match": [
+        "TELEFÔNICA BRASIL S.A",
+        "Telefonica Brasil"
+      ],
+      "norm": "Vivo (Telefônica Brasil)",
+      "cc": "BR"
+    },
+    {
+      "match": [
+        "Claro NXT Telecomunicacoes",
+        "CLARO CHILE S.A.",
+        "Claro Panamá S.A.",
+        "Claro Brasil"
+      ],
+      "norm": "Claro (América Latina)",
+      "cc": null
+    },
+    {
+      "match": [
+        "Telecom Argentina S.A.",
+        "Telecom Personal Bs As"
+      ],
+      "norm": "Telecom Argentina",
+      "cc": "AR"
+    },
+    {
+      "match": [
+        "TELEFONICA DE ARGENTINA"
+      ],
+      "norm": "Telefónica Argentina",
+      "cc": "AR"
+    },
+    {
+      "match": [
+        "TOT Public Company Limited B",
+        "TOT Public Company Limited",
+        "Dynamic IP assignment for br"
+      ],
+      "norm": "TOT",
+      "cc": "TH"
+    },
+    {
+      "match": [
+        "AIS Fibre"
+      ],
+      "norm": "AIS Fibre",
+      "cc": "TH"
+    },
+    {
+      "match": [
+        "Pakistan Telecommuication co",
+        "PTCL"
+      ],
+      "norm": "PTCL",
+      "cc": "PK"
+    },
+    {
+      "match": [
+        "Superonline Iletisim Hizmetl",
+        "SOLNET",
+        "TR-SOLNET-BB-VAE-ANADOLU"
+      ],
+      "norm": "Superonline (Türk Telekom)",
+      "cc": "TR"
+    },
+    {
+      "match": [
+        "Turk Telekomunikasyon Anonim"
+      ],
+      "norm": "Türk Telekom",
+      "cc": "TR"
+    },
+    {
+      "match": [
+        "MEO - SERVICOS DE COMUNICACO",
+        "MEO Mobile Customers"
+      ],
+      "norm": "MEO (Altice PT)",
+      "cc": "PT"
+    },
+    {
+      "match": [
+        "VTR BANDA ANCHA S.A."
+      ],
+      "norm": "VTR (Liberty Chile)",
+      "cc": "CL"
+    },
+    {
+      "match": [
+        "Cable & Wireless Panama",
+        "Cable and Wireless Jamaica",
+        "Cable & Wireless"
+      ],
+      "norm": "C&W (Liberty LatAm)",
+      "cc": null
+    },
+    {
+      "match": [
+        "Liberty Communications of Puerto Rico"
+      ],
+      "norm": "Liberty PR",
+      "cc": "PR"
+    },
+    {
+      "match": [
+        "Vodacom Business (ENS)",
+        "Vodacom ENS"
+      ],
+      "norm": "Vodacom Business ENS",
+      "cc": "ZA"
+    },
+    {
+      "match": [
+        "P4 Sp. z o.o."
+      ],
+      "norm": "Play (P4)",
+      "cc": "PL"
+    },
+    {
+      "match": [
+        "UPC Polska Sp. z o.o.",
+        "Liberty Global B.V."
+      ],
+      "norm": "UPC (Liberty Global)",
+      "cc": "PL"
+    },
+    {
+      "match": [
+        "Fidium"
+      ],
+      "norm": "Fidium (Consolidated)",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "Consolidated Communications,"
+      ],
+      "norm": "Consolidated Communications",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "Google Fiber Inc."
+      ],
+      "norm": "Google Fiber",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "Cogeco Connexion inc",
+        "Cogeco Connexion Inc."
+      ],
+      "norm": "Cogeco",
+      "cc": "CA"
+    },
+    {
+      "match": [
+        "Mobile Broadband Service"
+      ],
+      "norm": "Three UK",
+      "cc": "GB"
+    },
+    {
+      "match": [
+        "TPG Internet Pty Ltd",
+        "TPG Internet Pty Ltd."
+      ],
+      "norm": "TPG",
+      "cc": "AU"
+    },
+    {
+      "match": [
+        "iiNet Limited"
+      ],
+      "norm": "iiNet (TPG)",
+      "cc": "AU"
+    },
+    {
+      "match": [
+        "Societe Francaise Du Radiote"
+      ],
+      "norm": "SFR",
+      "cc": "FR"
+    },
+    {
+      "match": [
+        "WIND TRE S.P.A.",
+        "UMTS Company"
+      ],
+      "norm": "WindTre",
+      "cc": "IT"
+    },
+    {
+      "match": [
+        "CenturyLink Communications,"
+      ],
+      "norm": "CenturyLink (Lumen)",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "Verizon Business"
+      ],
+      "norm": "Verizon Business",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "WideOpenWest Finance LLC"
+      ],
+      "norm": "WOW!",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "Midcontinent Communications"
+      ],
+      "norm": "Midcontinent",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "RCN"
+      ],
+      "norm": "RCN (Astound)",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "So-net Service"
+      ],
+      "norm": "So-net (Sony)",
+      "cc": "JP"
+    },
+    {
+      "match": [
+        "its communications Inc."
+      ],
+      "norm": "its communications (JP)",
+      "cc": "JP"
+    },
+    {
+      "match": [
+        "Telia Finland Oyj"
+      ],
+      "norm": "Telia Finland",
+      "cc": "FI"
+    },
+    {
+      "match": [
+        "Jersey Telecom Rapid Service",
+        "JT (Jersey) Limited",
+        "WAVE RESIDENTIAL DSL SERVICE"
+      ],
+      "norm": "JT (Jersey)",
+      "cc": "JE"
+    },
+    {
+      "match": [
+        "TELEFONICA DE ESPANA S.A.U.",
+        "Red de Servicios IP"
+      ],
+      "norm": "Movistar (Telefónica ES)",
+      "cc": "ES"
+    },
+    {
+      "match": [
+        "XTRA TELECOM S.A."
+      ],
+      "norm": "Xfera/MásMóvil ES",
+      "cc": "ES"
+    },
+    {
+      "match": [
+        "TELEBUCARAMANGA S.A. E.S.P."
+      ],
+      "norm": "Telebucaramanga",
+      "cc": "CO"
+    },
+    {
+      "match": [
+        "Metrotel SA ESP"
+      ],
+      "norm": "Metrotel",
+      "cc": "CO"
+    },
+    {
+      "match": [
+        "COLOMBIA TELECOMUNICACIONES"
+      ],
+      "norm": "Colombia Telecom (Claro)",
+      "cc": "CO"
+    },
+    {
+      "match": [
+        "Cogent Communications, LLC"
+      ],
+      "norm": "Cogent (транзит — проверить контекст)",
+      "cc": null
+    },
+    {
+      "match": [
+        "Blue Stream"
+      ],
+      "norm": "Blue Stream",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "Aureon Network Services"
+      ],
+      "norm": "Aureon",
+      "cc": "US"
+    },
+    {
+      "match": [
+        "Orange Tunisie - Orange Tunisie",
+        "Orange Tunisie Smartphone Customer"
+      ],
+      "norm": "Orange Tunisie",
+      "cc": "TN"
+    },
+    {
+      "match": [
+        "ATI - Agence Tunisienne Internet"
+      ],
+      "norm": "ATI (Tunisia)",
+      "cc": "TN"
+    },
+    {
+      "match": [
+        "Open Fiber S.P.A."
+      ],
+      "norm": "Open Fiber",
+      "cc": "IT"
+    },
+    {
+      "match": [
+        "B.B.Bell SPA"
+      ],
+      "norm": "B.Bell (IT altnet)",
+      "cc": "IT"
+    },
+    {
+      "match": [
+        "Cooptel Coop de Telecommunic"
+      ],
+      "norm": "Cooptel (QC)",
+      "cc": "CA"
+    },
+    {
+      "match": [
+        "Brightbox Systems Ltd"
+      ],
+      "norm": "Brightbox (UK altnet)",
+      "cc": "GB"
+    },
+    {
+      "match": [
+        "F & W Networks Ltd"
+      ],
+      "norm": "F&W Networks (UK altnet)",
+      "cc": "GB"
+    },
+    {
+      "match": [
+        "ICC Corporation"
+      ],
+      "norm": "ICC (JP)",
+      "cc": "JP"
+    },
+    {
+      "match": [
+        "Cable Onda"
+      ],
+      "norm": "Cable Onda (PA)",
+      "cc": "PA"
+    },
+    {
+      "match": [
+        "Soft-X",
+        "USF DSLAM South",
+        "USF DSLAM Central",
+        "Mini-DSLAM North",
+        "Mini-DSLAM Central",
+        "Mini-DSLAM South"
+      ],
+      "norm": "PTCL-сеть (PK pools)",
+      "cc": "PK"
+    },
+    {
+      "match": [
+        "Apolo -Gold-Telecom-Per"
+      ],
+      "norm": "Apolo (PE)",
+      "cc": "PE"
+    },
+    {
+      "match": [
+        "Vodafone Net Iletisim Hizmet"
+      ],
+      "norm": "Vodafone TR",
+      "cc": "TR"
+    },
+    {
+      "match": [
+        "Net Onne - Comércio e Serviç",
+        "TVF INTERNET RAPIDA LTDA",
+        "COMUNIDAD 3 PLAY",
+        "Coop de Prov.Serv.Telef.Obra"
+      ],
+      "norm": "региональный ISP BR",
+      "cc": "BR"
+    }
+  ]
+}

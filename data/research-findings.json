@@ -1,0 +1,1767 @@
+{
+  "schema_version": 1,
+  "reviewed": "2026-10-10",
+  "edition": "public",
+  "findings": [
+    {
+      "id": "tr069-lineage",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client",
+        "digauth",
+        "fake-apache-openagent"
+      ],
+      "source": "DEANON-TR069CLIENT.md",
+      "news_id": "tr069-client-lineage",
+      "summary": "Component-family evidence; OEM unresolved.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "tr069-variants",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client"
+      ],
+      "source": "DEANON-TR069CLIENT.md",
+      "news_id": "line-variations",
+      "summary": "Basic, Digest, qop and port slices overlap.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "singtel-cohosting",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client",
+        "cpe-server-1-0"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "ZTE co-observation, not a proven hardware model or shared image.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "netis-negative",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client-cli-server-netcore"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "Negative in three retail images only.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "rac2v1k-limit",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "No stock rootfs in four inspected repositories; not global absence.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "huawei-auxiliary",
+      "status": "included-qualified",
+      "lines": [
+        "huaweihomegateway",
+        "huaweihomegateway-cr-slice"
+      ],
+      "source": "DEANON-HUAWEI-CR.md",
+      "news_id": "huawei-port-correction",
+      "summary": "Auxiliary authentication service correction and operator slices.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "huawei-authentication",
+      "status": "included-qualified",
+      "lines": [
+        "huaweihomegateway-cr-slice"
+      ],
+      "source": "DEANON-HUAWEI-CR.md",
+      "news_id": "huawei-port-correction",
+      "summary": "Basic/Digest counts do not prove distinct hardware generations.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "huawei-negative",
+      "status": "included-qualified",
+      "lines": [
+        "huaweihomegateway-cr-slice"
+      ],
+      "source": "DEANON-HUAWEI-CR.md",
+      "news_id": "bounded-negative-checks",
+      "summary": "No tested repetition in the inspected sample; not a security proof.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "cwmp-server-new",
+      "status": "included-qualified",
+      "lines": [
+        "cwmp-server"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "acs-cpe-research-catalog",
+      "summary": "Distinct signature; vendor and CPE/ACS role unknown.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "cwmp-server-candidates",
+      "status": "included-qualified",
+      "lines": [
+        "cwmp-server"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "Sample-bounded negatives; Ruijie and TOTOLINK not established.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "telefonica-acs",
+      "status": "included-qualified",
+      "lines": [
+        "telefonica-cwmpweb"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "acs-cpe-research-catalog",
+      "summary": "ACS frontend attribution; no version-based vulnerability inference.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "gateway-tim",
+      "status": "included-qualified",
+      "lines": [
+        "gateway-realm"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "TIM-associated scoped slice; vendor unresolved.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "gateway-round-four",
+      "status": "included-qualified",
+      "lines": [
+        "gateway-realm"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "Closed attribution claim corrected; insufficient matching evidence.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "acssim-vendor",
+      "status": "included-qualified",
+      "lines": [
+        "acssimtool"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "Reimplementation does not establish original vendor or credentials.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "netty-platform",
+      "status": "included-qualified",
+      "lines": [
+        "nettyserver"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "acs-cpe-research-catalog",
+      "summary": "WindTre association is qualified as a hypothesis.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "avsystem-versions",
+      "status": "included-qualified",
+      "lines": [
+        "avsystem-libcwmp"
+      ],
+      "source": "ACS-HUNT.md",
+      "news_id": "version-counts-qualified",
+      "summary": "CPE role, direct version counts and same-run denominator.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "genieacs-versions",
+      "status": "included-qualified",
+      "lines": [
+        "genieacs-admin-ui"
+      ],
+      "source": "NOTES.md",
+      "news_id": "version-counts-qualified",
+      "summary": "Version census without vulnerable-population claims.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "obuspa-negative",
+      "status": "included-qualified",
+      "lines": [],
+      "source": "ACS-HUNT.md",
+      "news_id": "obuspa-banner-research",
+      "summary": "Recorded in news; no distinct signature, so no manufactured atlas line.",
+      "atlas": [
+        "news"
+      ]
+    },
+    {
+      "id": "zte-artifact",
+      "status": "included-qualified",
+      "lines": [
+        "cpe-server-1-0",
+        "zte",
+        "mini-web-server-1-0-zte-corp"
+      ],
+      "source": "NOTES.md",
+      "news_id": "vendor-evidence",
+      "summary": "Signatures found in inspected image; extracts excluded.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "tplink-artifact",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-http-server"
+      ],
+      "source": "NOTES.md",
+      "news_id": "vendor-evidence",
+      "summary": "Inspected image signature and companion/default-realm queries.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "sercomm-negative",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client"
+      ],
+      "source": "NOTES.md",
+      "news_id": "tr069-client-lineage",
+      "summary": "Two inspected images weaken a particular carrier hypothesis.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "cwmp-agent-shared",
+      "status": "included-qualified",
+      "lines": [
+        "cwmp-agent-orange-tunisie"
+      ],
+      "source": "NOTES.md",
+      "news_id": "vendor-evidence",
+      "summary": "Shared response observed across distinct operators.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "common-constants",
+      "status": "included-qualified",
+      "lines": [
+        "dt-speedport-sdk",
+        "acssimtool"
+      ],
+      "source": "METHOD.md",
+      "news_id": "passive-attribution-round-three",
+      "summary": "RFC example is not evidence of a shared SDK.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "integrator-references",
+      "status": "included-qualified",
+      "lines": [
+        "easycwmp-vanilla"
+      ],
+      "source": "NOTES.md",
+      "news_id": "integrator-network-limits",
+      "summary": "Package/source references are not deployment evidence.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "spacex-control",
+      "status": "included-qualified",
+      "lines": [
+        "easycwmp-vanilla",
+        "tr069-client"
+      ],
+      "source": "NOTES.md",
+      "news_id": "integrator-network-limits",
+      "summary": "Network slice; zero control result is not global absence.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "family-overlaps",
+      "status": "included-qualified",
+      "lines": [
+        "easycwmp-vanilla",
+        "easycwmp-fork-ecntcwmp",
+        "easycwmp-fork-leanoacs",
+        "easycwmp-fork-ltecpe"
+      ],
+      "source": "METHOD.md",
+      "news_id": "line-variations",
+      "summary": "Family and subfamily counts are not additive.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "coverage-limits",
+      "status": "included-qualified",
+      "lines": [],
+      "source": "METHOD.md",
+      "news_id": "slice-quality",
+      "summary": "Development-sample coverage differs from accuracy and Internet-wide recall.",
+      "atlas": [
+        "news"
+      ]
+    },
+    {
+      "id": "soap-prefix-negative",
+      "status": "included-qualified",
+      "lines": [
+        "gsoap-park"
+      ],
+      "source": "NOTES.md",
+      "news_id": "bounded-negative-checks",
+      "summary": "SOAP namespace prefix was not a validated version discriminator.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "westell-control",
+      "status": "included-qualified",
+      "lines": [
+        "decimal-nonce-class"
+      ],
+      "source": "NONCE-PATHOLOGY.md",
+      "news_id": "bounded-negative-checks",
+      "summary": "Candidate realm is counted; unpublished security claims withheld.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "active-easycwmp-fingerprints",
+      "status": "included-qualified",
+      "lines": [
+        "easycwmp-vanilla"
+      ],
+      "source": "FINGERPRINTS.md",
+      "news_id": "active-fingerprint-results",
+      "summary": "Stable release-family markers and authorized 29,007-target historical response-class experiment; no vulnerability inference.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    },
+    {
+      "id": "specific-signature-precedence",
+      "status": "included-qualified",
+      "lines": [
+        "gsoap-park",
+        "sagemcom",
+        "realtek-sdk"
+      ],
+      "source": "FINGERPRINTS.md",
+      "news_id": "specific-signatures-before-toolkit",
+      "summary": "Prefer a specific realm for a response label while retaining toolkit evidence; no aggregate deduplication or version-based vulnerability inference.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    }
+  ],
+  "line_sources": {
+    "cpe-server-1-0": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "cpe-server-1-0"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "icwmp-iopsys": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "icwmp-iopsys"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "huaweihomegateway": [
+      {
+        "file": "DEANON-HUAWEI-CR.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "huaweihomegateway"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "huaweihomegateway-cr-slice": [
+      {
+        "file": "DEANON-HUAWEI-CR.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "huaweihomegateway-cr-slice"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "tr069-http-server": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "tr069-http-server"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "gsoap-park": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "gsoap-park"
+      },
+      {
+        "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "matching-precedence"
+      }
+    ],
+    "rdk-b-ccsptr069pa": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "rdk-b-ccsptr069pa"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "tr069-client": [
+      {
+        "file": "DEANON-TR069CLIENT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "tr069-client"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "igdauthentication": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "igdauthentication"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "easycwmp-vanilla": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "easycwmp-vanilla"
+      },
+      {
+        "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md"
+      }
+    ],
+    "askeycwmp-askey": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "askeycwmp-askey"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "centurylink-lighttpd": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "centurylink-lighttpd"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "sercomm-cpe-authentication": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "sercomm-cpe-authentication"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "windtre-tr069-http-server": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "windtre-tr069-http-server"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "zte": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "zte"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "sagemcom": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "sagemcom"
+      },
+      {
+        "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "matching-precedence"
+      }
+    ],
+    "dt-speedport-sdk": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "dt-speedport-sdk"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "charter-anti-scan-404": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "charter-anti-scan-404"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "yapsieworld": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "yapsieworld"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "sky-ee-tr069-http-server": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "sky-ee-tr069-http-server"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "gateway-realm": [
+      {
+        "file": "ACS-HUNT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "gateway-realm"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "ti-cpe-authentication": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "ti-cpe-authentication"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "nettyserver": [
+      {
+        "file": "ACS-HUNT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "nettyserver"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "digauth": [
+      {
+        "file": "DEANON-TR069CLIENT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "digauth"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "realtek-sdk": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "realtek-sdk"
+      },
+      {
+        "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "matching-precedence"
+      }
+    ],
+    "kt-cems": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "kt-cems"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "magticom-gsoap": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "magticom-gsoap"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "qacafe-cdrouter-test-realm": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "qacafe-cdrouter-test-realm"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "cwmpd-tr069agent": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "cwmpd-tr069agent"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "cwmp-agent-orange-tunisie": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "cwmp-agent-orange-tunisie"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "acssimtool": [
+      {
+        "file": "ACS-HUNT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "acssimtool"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "arris-cpe-authentication": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "arris-cpe-authentication"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "gsoap-service-realm": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "gsoap-service-realm"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "cwmp-lancom": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "cwmp-lancom"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "avsystem-libcwmp": [
+      {
+        "file": "ACS-HUNT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "avsystem-libcwmp"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "junk-realms": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "junk-realms"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "genieacs-admin-ui": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "genieacs-admin-ui"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "meig-meigsmart-com": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "meig-meigsmart-com"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "tr069-client-cli-server-netcore": [
+      {
+        "file": "DEANON-TR069CLIENT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "tr069-client-cli-server-netcore"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "ruijie-cpe": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "ruijie-cpe"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "openacs": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "openacs"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "axiros": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "axiros"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "easycwmp-fork-ecntcwmp": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "easycwmp-fork-ecntcwmp"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "easycwmp-fork-leanoacs": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "easycwmp-fork-leanoacs"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "easycwmp-fork-ltecpe": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "easycwmp-fork-ltecpe"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "gsoap-2-7-vendor-map": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "gsoap-2-7-vendor-map"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "gsoap-2-8-vendor-map": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "gsoap-2-8-vendor-map"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "fake-apache-openagent": [
+      {
+        "file": "DEANON-TR069CLIENT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "fake-apache-openagent"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "decimal-nonce-class": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "decimal-nonce-class"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "mini-web-server-1-0-zte-corp": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "mini-web-server-1-0-zte-corp"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "cwmp-server": [
+      {
+        "file": "ACS-HUNT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "cwmp-server"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "telefonica-cwmpweb": [
+      {
+        "file": "ACS-HUNT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "telefonica-cwmpweb"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ]
+  },
+  "observations": [
+    {
+      "parent": "easycwmp-vanilla",
+      "query": "\"328458fab28345ae87ab3210a8513b14eff452a2\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "easycwmp-opaque"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "easycwmp-vanilla",
+      "query": "\"realm@easycwmp\" org:\"Google Fiber\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-easycwmp-vanilla-9f594b9dba"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "easycwmp-vanilla",
+      "query": "\"realm@easycwmp\" org:\"Fidium\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-easycwmp-vanilla-52fb7670ac"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "zte",
+      "query": "\"Mini web server 1.0 ZTE corp\"",
+      "collection_ref": {
+        "kind": "base",
+        "id": "mini-web-server-1-0-zte-corp"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "zte",
+      "query": "\"ZTE web server 1.0 ZTE corp 2015\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-zte-f8413c63e8"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "zte",
+      "query": "\"ZXHN H108N\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-zte-9081d80feb"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "huaweihomegateway-cr-slice",
+      "query": "port:7547 \"HuaweiHomeGateway\"",
+      "collection_ref": {
+        "kind": "base",
+        "id": "huaweihomegateway-cr-slice"
+      },
+      "sources": [
+        {
+          "file": "DEANON-HUAWEI-CR.md"
+        }
+      ]
+    },
+    {
+      "parent": "huaweihomegateway-cr-slice",
+      "query": "\"HuaweiHomeGateway\" port:8081",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "huawei-port-8081"
+      },
+      "sources": [
+        {
+          "file": "DEANON-HUAWEI-CR.md"
+        }
+      ]
+    },
+    {
+      "parent": "huaweihomegateway-cr-slice",
+      "query": "\"HuaweiHomeGateway\" !port:7547",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-huaweihomegateway-cr-slice-2f12144216"
+      },
+      "sources": [
+        {
+          "file": "DEANON-HUAWEI-CR.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "tr069-total"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\" org:\"SpaceX\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-client-688f915ee0"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\" org:\"Charter Communications\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-client-f6875b1cd5"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\" country:HK",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-client-b49109396c"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\" country:SG",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-client-31c33d3590"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\" port:8081 country:BR",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-client-6d6092e15e"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "tr069-total"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client",
+      "query": "\"TR069 client TCP connection request Server\" port:1024 country:SG",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-client-dab033692e"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "cpe-server-1-0",
+      "query": "\"CPE-SERVER/1.0\" port:7170",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-cpe-server-1-0-72f2536beb"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "cpe-server-1-0",
+      "query": "\"CPE-SERVER/1.0\" port:58000",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-cpe-server-1-0-37a6d1be75"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-http-server",
+      "query": "\"tp-link.com.cn\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-http-server-92e5f81d26"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-http-server",
+      "query": "\"tr069 http server\" country:AU",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-http-server-7d56d5efd4"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-http-server",
+      "query": "http.title:\"Archer VR1600v\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-tr069-http-server-4c0fd1e05a"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "igdauthentication",
+      "query": "port:30005 \"IgdAuthentication\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-igdauthentication-06e8a31fc9"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "igdauthentication",
+      "query": "port:49501 \"IgdAuthentication\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-igdauthentication-705c894151"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "askeycwmp-askey",
+      "query": "port:7547 ASKEYCWMP country:BR",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-askeycwmp-askey-df50c6a787"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "digauth",
+      "query": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" \"DigAuth\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-digauth-6045097ebd"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "digauth",
+      "query": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" !\"DigAuth\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-digauth-fca6d4f2c9"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "digauth",
+      "query": "\"TR069 client TCP connection request Server\" port:8081",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-digauth-1a85eb598a"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    },
+    {
+      "parent": "cwmp-agent-orange-tunisie",
+      "query": "\"CWMP-Agent\" country:HK",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-cwmp-agent-orange-tunisie-c0ffddf421"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "cwmp-agent-orange-tunisie",
+      "query": "\"CWMP-Agent\" country:TN",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-cwmp-agent-orange-tunisie-55b1ab5cd8"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "genieacs-admin-ui",
+      "query": "\"GenieACS-Version: 1.2\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-genieacs-admin-ui-0365d63da7"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "genieacs-admin-ui",
+      "query": "\"GenieACS-Version: 1.3\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-genieacs-admin-ui-c56def127c"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "sercomm-cpe-authentication",
+      "query": "\"Sercomm CPE Authentication\" country:ZA",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-sercomm-cpe-authentication-89f1d6e85b"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ]
+    },
+    {
+      "parent": "acssimtool",
+      "query": "\"acssimtool\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-acssimtool-27af6cfcf2"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "parent": "nettyserver",
+      "query": "\"NettyServer\" country:IT",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-nettyserver-b44e80cd32"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "parent": "avsystem-libcwmp",
+      "query": "\"avsystem-libcwmp/5.7.9\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "avsystem-5-7-9"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "parent": "gateway-realm",
+      "query": "port:7170 realm=\"Gateway\"",
+      "collection_ref": {
+        "kind": "base",
+        "id": "gateway-realm"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "parent": "gateway-realm",
+      "query": "port:7170 realm=\"Gateway\"",
+      "collection_ref": {
+        "kind": "base",
+        "id": "gateway-realm"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "parent": "cwmp-server",
+      "query": "\"cwmp server\"",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "fact-cwmp-server-70ae9dea51"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    }
+  ],
+  "catalog_query_ids": [
+    "tr069-total",
+    "tr069-digest",
+    "tr069-basic",
+    "tr069-qop",
+    "tr069-nonce-after-realm",
+    "tr069-digauth-bridge",
+    "tr069-digauth-br-8081",
+    "tr069-openagent-a",
+    "tr069-singtel-503",
+    "huawei-port-8081",
+    "huawei-port-8081-nz",
+    "huawei-port-51005",
+    "huawei-port-51005-gr",
+    "huawei-port-8083",
+    "huawei-port-8083-gr",
+    "huawei-port-8080",
+    "huawei-port-8080-ie",
+    "huawei-port-30008",
+    "huawei-port-30008-au",
+    "huawei-port-10302",
+    "huawei-port-10302-se",
+    "huawei-port-7548",
+    "huawei-port-7548-fr",
+    "huawei-basic",
+    "huawei-basic-de",
+    "huawei-basic-sa",
+    "huawei-digest",
+    "huawei-digest-de",
+    "huawei-digest-sa",
+    "avsystem-total",
+    "avsystem-5-7-9",
+    "avsystem-5-6-2",
+    "avsystem-5-5-3",
+    "avsystem-5-5-4",
+    "easycwmp-total",
+    "easycwmp-digest",
+    "easycwmp-basic",
+    "easycwmp-opaque",
+    "easycwmp-qop",
+    "easycwmp-http200",
+    "easycwmp-http409",
+    "easycwmp-ru",
+    "easycwmp-tn",
+    "easycwmp-port30005",
+    "fact-easycwmp-vanilla-9f594b9dba",
+    "fact-easycwmp-vanilla-52fb7670ac",
+    "fact-zte-f8413c63e8",
+    "fact-zte-9081d80feb",
+    "fact-huaweihomegateway-cr-slice-2f12144216",
+    "fact-tr069-client-688f915ee0",
+    "fact-tr069-client-f6875b1cd5",
+    "fact-tr069-client-b49109396c",
+    "fact-tr069-client-31c33d3590",
+    "fact-tr069-client-6d6092e15e",
+    "fact-tr069-client-dab033692e",
+    "fact-cpe-server-1-0-72f2536beb",
+    "fact-cpe-server-1-0-37a6d1be75",
+    "fact-tr069-http-server-92e5f81d26",
+    "fact-tr069-http-server-7d56d5efd4",
+    "fact-tr069-http-server-4c0fd1e05a",
+    "fact-igdauthentication-06e8a31fc9",
+    "fact-igdauthentication-705c894151",
+    "fact-askeycwmp-askey-df50c6a787",
+    "fact-digauth-6045097ebd",
+    "fact-digauth-fca6d4f2c9",
+    "fact-digauth-1a85eb598a",
+    "fact-cwmp-agent-orange-tunisie-c0ffddf421",
+    "fact-cwmp-agent-orange-tunisie-55b1ab5cd8",
+    "fact-genieacs-admin-ui-0365d63da7",
+    "fact-genieacs-admin-ui-c56def127c",
+    "fact-sercomm-cpe-authentication-89f1d6e85b",
+    "fact-acssimtool-27af6cfcf2",
+    "fact-nettyserver-b44e80cd32",
+    "fact-cwmp-server-70ae9dea51",
+    "huawei-basic-outside-de",
+    "huawei-digest-de-7547",
+    "huawei-basic-de-as3320",
+    "huawei-digest-de-7547-as3320",
+    "tr069-realm-family-b",
+    "tr069-port-7547",
+    "tr069-singtel-port-1025",
+    "tr069-singtel-port-1026",
+    "tr069-singtel-port-1027",
+    "tr069-singtel-port-30005",
+    "tr069-singtel-port-51005",
+    "cwmp-server-port-7547",
+    "cwmp-server-port-7548",
+    "cwmp-server-port-8069",
+    "cwmp-server-lanet-ua",
+    "gateway-realm-port-51007",
+    "westell-secure-port-7547",
+    "easycwmp-opaque-spacex",
+    "acssimtool-observed-nonce"
+  ],
+  "withheld": [
+    {
+      "id": "unpublished-security-details",
+      "status": "excluded-by-owner",
+      "source": "NONCE-PATHOLOGY.md",
+      "scope": "New vulnerability findings, implementation analysis, advisory assertions, reproduction steps and associated laboratory records."
+    },
+    {
+      "id": "restricted-probes",
+      "status": "excluded-by-owner",
+      "scope": "The separate matcher package carries a proprietary/confidential CyberOK notice."
+    },
+    {
+      "id": "firmware-and-host-records",
+      "status": "excluded",
+      "scope": "Firmware binaries/extracts, decryptors, raw host/banner exports and original research Git history."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "dork": "\"TR069 client TCP connection request Server\" country:SG port:1026",
+  "total": 3822,
+  "taken": "2026-10-10T11:11:42+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 3822,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 7,
+      "covered": 3822,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 6,
+      "covered": 3822,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 3822,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 3822,
+      "value": "SG"
+    }
+  ],
+  "asn": [
+    {
+      "count": 3374,
+      "value": "as9506"
+    },
+    {
+      "count": 318,
+      "value": "as3758"
+    },
+    {
+      "count": 114,
+      "value": "9506"
+    },
+    {
+      "count": 11,
+      "value": "3758"
+    },
+    {
+      "count": 4,
+      "value": "as135600"
+    },
+    {
+      "count": 1,
+      "value": "135600"
+    }
+  ],
+  "ports": [
+    {
+      "count": 3822,
+      "value": 1026
+    }
+  ],
+  "orgs": [
+    {
+      "count": 3021,
+      "value": "SingNET Broadband"
+    },
+    {
+      "count": 506,
+      "value": "SingNet Pte Ltd"
+    },
+    {
+      "count": 149,
+      "value": "SingTel Mobile"
+    },
+    {
+      "count": 64,
+      "value": "SINGTEL BUSINESS INTERNET"
+    },
+    {
+      "count": 41,
+      "value": "SingNet BroadBand Network Singapore Telecommunications LTD"
+    },
+    {
+      "count": 36,
+      "value": "Singapore Telecommunications Ltd, Magix Services"
+    },
+    {
+      "count": 5,
+      "value": "Whiz Communications Pte Ltd"
+    }
+  ],
+  "id": "tr069-singtel-port-1026",
+  "parent": "tr069-client",
+  "group": "writeup-followups",
+  "label": {
+    "ru": "TR069 Client · Singtel / SG · 1026",
+    "en": "TR069 Client · Singtel / SG · 1026",
+    "es": "TR069 Client · Singtel / SG · 1026",
+    "zh": "TR069 Client · Singtel / SG · 1026"
+  },
+  "source": {
+    "file": "DEANON-TR069CLIENT.md"
+  },
+  "denominator": null
+}

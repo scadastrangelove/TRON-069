@@ -1,0 +1,308 @@
+{
+  "target": "atlas/tr-atlas.html",
+  "sourceSha256": "c532f6cf77de8b4fbacddd5fcb81ea5ae8bbd423276592ab6bb3d14e841cc7ba",
+  "snapshot": "20261010-102121",
+  "testedAt": "2026-10-10T14:05:43.910Z",
+  "method": "Offline source-function tests with inert output sinks; no browser rendering",
+  "pass": 47,
+  "fail": 0,
+  "results": [
+    {
+      "id": "syntax",
+      "description": "Application JavaScript parses",
+      "status": "PASS",
+      "evidence": "Parsed"
+    },
+    {
+      "id": "source-links",
+      "description": "Evidence links resolve from both entry points and reject unsafe paths",
+      "status": "PASS",
+      "evidence": "<span class=\"note source-links\" style=\"display:block\">Sources: <a target=\"_blank\" rel=\"noopener\" href=\"NOTES.md#%22%20onmouseover%3Dalert(1)\">&lt;img src=x&gt;</a></span>"
+    },
+    {
+      "id": "snapshot",
+      "description": "All embedded lines match their source snapshot",
+      "status": "PASS",
+      "evidence": "{\"lines\":52,\"mismatches\":[]}"
+    },
+    {
+      "id": "observation-counts",
+      "description": "Observation counts and dates come from exact collected queries",
+      "status": "PASS",
+      "evidence": {
+        "collected": 39,
+        "missing": 0
+      }
+    },
+    {
+      "id": "http-bounds",
+      "description": "HTTP counts stay within port 7547 denominators",
+      "status": "PASS",
+      "evidence": "[]"
+    },
+    {
+      "id": "ident",
+      "description": "Default country sums equal embedded ident",
+      "status": "PASS",
+      "evidence": "{\"total\":21517651,\"countries\":215,\"mismatches\":[]}"
+    },
+    {
+      "id": "line-country-sweep",
+      "description": "Every line and country filter preserves source counts",
+      "status": "PASS",
+      "evidence": "2457 line-country cases"
+    },
+    {
+      "id": "region-country",
+      "description": "Selecting Italy inside Europe narrows the slice to Italy",
+      "status": "PASS",
+      "evidence": "{\"italy\":1932665,\"combined\":1932665,\"countries\":1}"
+    },
+    {
+      "id": "operator-counts",
+      "description": "Operator filter uses selected operator facet counts",
+      "status": "PASS",
+      "evidence": "{\"actual\":8902,\"expected\":8902,\"ratio\":1}"
+    },
+    {
+      "id": "operator-normalization",
+      "description": "Specific Jersey operator is not captured by a generic foreign DSL rule",
+      "status": "PASS",
+      "evidence": "{\"raw\":\"WAVE RESIDENTIAL DSL SERVICE\",\"actual\":\"JT (Jersey)\",\"expected\":\"JT (Jersey)\"}"
+    },
+    {
+      "id": "disjoint-overlap",
+      "description": "Default core selection excludes a documented overlapping nonce class",
+      "status": "PASS",
+      "evidence": "{\"included\":[\"sercomm-cpe-authentication\"],\"classCount\":30821,\"evidence\":[\"Decimal authentication-response pattern; a response class, not a vendor attribution.\"]}"
+    },
+    {
+      "id": "facet-coverage",
+      "description": "Operator drill retains the coverage metadata required to explain its truncated tail",
+      "status": "PASS",
+      "evidence": "{\"embeddedFields\":[\"dork\",\"total\",\"taken\",\"run_id\",\"collection_status\",\"requested_facets\",\"facet_meta\",\"countries\",\"asn\",\"ports\",\"orgs\",\"line\",\"line_id\",\"cc\"],\"sumTopOrgs\":204009}"
+    },
+    {
+      "id": "geo-html",
+      "description": "A malformed country URL is escaped before HTML insertion",
+      "status": "PASS",
+      "evidence": "Whole world"
+    },
+    {
+      "id": "invalid-region",
+      "description": "Unknown regions in URLs do not crash suggestions",
+      "status": "PASS",
+      "evidence": "No exception"
+    },
+    {
+      "id": "prototype-line",
+      "description": "Inherited object properties are rejected as line slugs",
+      "status": "PASS",
+      "evidence": "No exception"
+    },
+    {
+      "id": "language-url",
+      "description": "URL roundtrip preserves language",
+      "status": "PASS",
+      "evidence": "#lang=es"
+    },
+    {
+      "id": "language-priority",
+      "description": "Explicit URL language overrides stored preference",
+      "status": "PASS",
+      "evidence": "LANG=es"
+    },
+    {
+      "id": "storage-blocked",
+      "description": "Storage restrictions do not prevent initialization",
+      "status": "PASS",
+      "evidence": "No exception"
+    },
+    {
+      "id": "org-url-roundtrip",
+      "description": "Operator names containing commas survive URL roundtrip",
+      "status": "PASS",
+      "evidence": "{\"org\":\"NBN, Private IP, IPWAN, MPLS & ADSL broadband technologies\",\"actual\":[\"NBN, Private IP, IPWAN, MPLS & ADSL broadband technologies\"]}"
+    },
+    {
+      "id": "chips",
+      "description": "Selection labels contain translated text, not source fragments",
+      "status": "PASS",
+      "evidence": "nothing selected — core signature set"
+    },
+    {
+      "id": "pair-title",
+      "description": "Opening a pair updates the map title",
+      "status": "PASS",
+      "evidence": "{\"title\":\"Italy × CPE-SERVER/1.0\"}"
+    },
+    {
+      "id": "pair-outside-selection",
+      "description": "Visible dimmed map pairs keep their real count in inspector",
+      "status": "PASS",
+      "evidence": "{\"displayed\":\"1.45M\",\"source\":1446069}"
+    },
+    {
+      "id": "lines-in-slice",
+      "description": "In-slice line table respects selected country",
+      "status": "PASS",
+      "evidence": "{\"actual\":49034,\"expected\":49034}"
+    },
+    {
+      "id": "top-countries",
+      "description": "Line table populates top-country column",
+      "status": "PASS",
+      "evidence": "0 empty top-country cells"
+    },
+    {
+      "id": "toast-timeout",
+      "description": "Toast disappears after its timeout callback",
+      "status": "PASS",
+      "evidence": "Toast hidden after timer"
+    },
+    {
+      "id": "inspector-reopen",
+      "description": "Inspector collapse leaves a reachable reopening control",
+      "status": "PASS",
+      "evidence": "Inspector reopens"
+    },
+    {
+      "id": "shortcut-labels",
+      "description": "Shortcut labels interpolate country and line names",
+      "status": "PASS",
+      "evidence": "[\"Largest line:  CPE-SERVER/1.0\",\"Richest mix:  United States\",\"Monocentric:  Charter anti-scan 404\"]"
+    },
+    {
+      "id": "operator-search",
+      "description": "Quick search finds collected operators outside the first twelve",
+      "status": "PASS",
+      "evidence": "[{\"kind\":\"org\",\"id\":\"Blue Stream\",\"t\":\"Blue Stream\",\"n\":\"8.9k\",\"sub\":\"operator\"}]"
+    },
+    {
+      "id": "svg-coordinates",
+      "description": "Pointer coordinates account for SVG aspect-ratio letterboxing",
+      "status": "PASS",
+      "evidence": "{\"svgBox\":\"660x600\",\"viewBox\":\"1320x600\",\"actual\":[660,0],\"expected\":[660,0]}"
+    },
+    {
+      "id": "copy-dork",
+      "description": "Country copy action matches the adjacent Shodan link query",
+      "status": "PASS",
+      "evidence": "{\"link\":\"\\\"CPE-SERVER/1.0\\\" country:IT\",\"copy\":\"\\\"CPE-SERVER/1.0\\\" country:IT\"}"
+    },
+    {
+      "id": "map-all-countries",
+      "description": "Every country with line data has a map anchor",
+      "status": "PASS",
+      "evidence": "[]"
+    },
+    {
+      "id": "country-picker-coverage",
+      "description": "Country selector can discover countries present outside the 7547 denominator",
+      "status": "PASS",
+      "evidence": "[\"YE\",\"FJ\",\"LC\",\"GW\",\"VU\"]"
+    },
+    {
+      "id": "geo-duplicates",
+      "description": "Map rendering does not overwrite paths sharing a country code",
+      "status": "PASS",
+      "evidence": "[[\"SO\",2],[\"CY\",2]]"
+    },
+    {
+      "id": "json-export",
+      "description": "JSON export creates a nonempty downloadable blob",
+      "status": "PASS",
+      "evidence": "JSON blob generated"
+    },
+    {
+      "id": "no-runtime-fetch",
+      "description": "HTML has no external runtime scripts or automatic network requests",
+      "status": "PASS",
+      "evidence": "No external scripts, fetch, XHR, or WebSocket"
+    },
+    {
+      "id": "all-locales-content",
+      "description": "All line inspectors, registry, observations and methodology render without Russian fallback in EN/ES/ZH",
+      "status": "PASS",
+      "evidence": "165 localized sections/inspectors"
+    },
+    {
+      "id": "operator-shortcuts",
+      "description": "Suggested largest line stays within the selected operator data",
+      "status": "PASS",
+      "evidence": "{\"title\":\"Largest line:  IgdAuthentication\",\"why\":\"8.9k matches — start here\",\"val\":\"8.9k\",\"act\":{\"t\":\"solo\",\"slug\":\"igdauthentication\"}}"
+    },
+    {
+      "id": "invalid-cell",
+      "description": "Malformed pair URL cannot inject HTML or access inherited line keys",
+      "status": "PASS",
+      "evidence": "3 invalid cells rejected"
+    },
+    {
+      "id": "state-roundtrip",
+      "description": "A shared URL restores multiple operators, geography, pair, mode and tab",
+      "status": "PASS",
+      "evidence": "{\"lines\":[\"igdauthentication\"],\"geo\":[\"c:US\"],\"orgs\":[\"Blue Stream\",\"D&P Communications, Inc.\"],\"cell\":{\"cc\":\"US\",\"slug\":\"igdauthentication\"},\"mode\":\"countries\",\"tab\":\"findings\"}"
+    },
+    {
+      "id": "service-classification",
+      "description": "ACS roles are explicit and excluded from the core set",
+      "status": "PASS",
+      "evidence": {
+        "acs": [
+          "axiros",
+          "genieacs-admin-ui",
+          "openacs",
+          "telefonica-cwmpweb"
+        ],
+        "unknown": "unknown",
+        "mixed": "mixed"
+      }
+    },
+    {
+      "id": "variant-counts",
+      "description": "Research variants stay outside map sums and render in all languages",
+      "status": "PASS",
+      "evidence": {
+        "rendered": 372,
+        "total": 21517651
+      }
+    },
+    {
+      "id": "news-locales",
+      "description": "Every news item renders in all four languages without Russian fallback outside RU",
+      "status": "PASS",
+      "evidence": "22 news items × 4 languages"
+    },
+    {
+      "id": "news-navigation",
+      "description": "News previous/next wraps and news tab survives a shared URL",
+      "status": "PASS",
+      "evidence": "News tab restored"
+    },
+    {
+      "id": "manifesto-first",
+      "description": "Manifesto leads the news list and initial ticker, with readable paragraphs and tool links",
+      "status": "PASS",
+      "evidence": "Pinned first card and ticker; three paragraphs; two HTTPS project links"
+    },
+    {
+      "id": "news-pause",
+      "description": "News rotation stops on pause, reduced motion, hidden tab, hover and keyboard focus",
+      "status": "PASS",
+      "evidence": "All six pause conditions respected"
+    },
+    {
+      "id": "export-operator-total",
+      "description": "Export preserves the filtered operator count and coverage scope",
+      "status": "PASS",
+      "evidence": "{\"snapshot\":\"20261010-102121\",\"selection\":{\"lines\":[\"igdauthentication\"],\"geo\":[\"c:US\"],\"orgs\":[\"Blue Stream\"]},\"unit\":\"Shodan query matches\",\"operatorScope\":\"collected top-N facets\",\"unknownCountry\":null,\"countries\":{\"US\":{\"base\":8902,\"lines\":{\"igdauthentication\":8902}}}}"
+    },
+    {
+      "id": "csv-format",
+      "description": "CSV uses quoted fields and CRLF with the selected operator count",
+      "status": "PASS",
+      "evidence": "\"cc\";\"country\";\"IgdAuthentication\";\"park_7547\"\r\n\"US\";\"United States\";\"8902\";\"5206749\""
+    }
+  ]
+}

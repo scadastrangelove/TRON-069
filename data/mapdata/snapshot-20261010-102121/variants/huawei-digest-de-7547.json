@@ -1,0 +1,143 @@
+{
+  "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:DE port:7547",
+  "total": 48210,
+  "taken": "2026-10-10T11:11:34+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 48210,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 10,
+      "covered": 48210,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 11,
+      "covered": 48189,
+      "remainder": 21
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 48210,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 48210,
+      "value": "DE"
+    }
+  ],
+  "asn": [
+    {
+      "count": 46704,
+      "value": "as3320"
+    },
+    {
+      "count": 1047,
+      "value": "3320"
+    },
+    {
+      "count": 317,
+      "value": "as50670"
+    },
+    {
+      "count": 49,
+      "value": "as152672"
+    },
+    {
+      "count": 27,
+      "value": "as199414"
+    },
+    {
+      "count": 25,
+      "value": "as203728"
+    },
+    {
+      "count": 9,
+      "value": "50670"
+    },
+    {
+      "count": 7,
+      "value": "as206355"
+    },
+    {
+      "count": 2,
+      "value": "44034"
+    },
+    {
+      "count": 1,
+      "value": "as396982"
+    },
+    {
+      "count": 1,
+      "value": "as63949"
+    }
+  ],
+  "ports": [
+    {
+      "count": 48210,
+      "value": 7547
+    }
+  ],
+  "orgs": [
+    {
+      "count": 47751,
+      "value": "Deutsche Telekom AG"
+    },
+    {
+      "count": 283,
+      "value": "VTEL HOLDINGS LIMITED/JORDAN CO."
+    },
+    {
+      "count": 64,
+      "value": "Private Customer"
+    },
+    {
+      "count": 49,
+      "value": "Aiyun (HK) Network Technology Limited"
+    },
+    {
+      "count": 27,
+      "value": "Noah Kolossa"
+    },
+    {
+      "count": 25,
+      "value": "BAHU LTD"
+    },
+    {
+      "count": 7,
+      "value": "UAB Simurgh"
+    },
+    {
+      "count": 2,
+      "value": "3 Customer dynamic address pool"
+    },
+    {
+      "count": 1,
+      "value": "Google LLC"
+    },
+    {
+      "count": 1,
+      "value": "Linode"
+    }
+  ],
+  "id": "huawei-digest-de-7547",
+  "parent": "huaweihomegateway",
+  "group": "writeup-followups",
+  "label": {
+    "ru": "Huawei Digest · DE · 7547",
+    "en": "Huawei Digest · DE · 7547",
+    "es": "Huawei Digest · DE · 7547",
+    "zh": "Huawei Digest · DE · 7547"
+  },
+  "source": {
+    "file": "DEANON-HUAWEI-CR.md"
+  },
+  "denominator": null
+}

@@ -1,0 +1,73 @@
+{
+ "dork": "\"authenticate@cwmp\" country:FI",
+ "total": 12096,
+ "taken": "2026-10-10T10:24:30+00:00",
+ "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 12096,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 12096,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 11894,
+   "value": "as1759"
+  },
+  {
+   "count": 198,
+   "value": "1759"
+  },
+  {
+   "count": 1,
+   "value": "as213269"
+  },
+  {
+   "count": 1,
+   "value": "as39699"
+  },
+  {
+   "count": 1,
+   "value": "as51728"
+  },
+  {
+   "count": 1,
+   "value": "as719"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 12092,
+   "value": "Telia Finland Oyj"
+  },
+  {
+   "count": 1,
+   "value": "Cinia Oy"
+  },
+  {
+   "count": 1,
+   "value": "Elisa Oyj"
+  },
+  {
+   "count": 1,
+   "value": "Jyvässeudun kiinteistöpaletti Oy"
+  },
+  {
+   "count": 1,
+   "value": "Lounea palvelut Oy, Tehdaskatu 6, 24100 Salo"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "FI"
+}

@@ -1,0 +1,44 @@
+{
+ "dork": "\"Server: cwmp server\" country:NO",
+ "total": 2,
+ "taken": "2026-10-10T08:36:27+00:00",
+ "run_id": "20261010-083331",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as2119"
+  },
+  {
+   "count": 1,
+   "value": "as61275"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "NEAS-CUSTOMER"
+  },
+  {
+   "count": 1,
+   "value": "Telenor Norge AS"
+  }
+ ],
+ "line": "cwmp server",
+ "cc": "NO"
+}

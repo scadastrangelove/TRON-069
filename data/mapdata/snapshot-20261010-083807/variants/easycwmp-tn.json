@@ -1,0 +1,107 @@
+{
+  "dork": "\"realm@easycwmp\" country:TN",
+  "total": 18824,
+  "taken": "2026-10-10T08:40:03+00:00",
+  "run_id": "20261010-083807",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 18824,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 8,
+      "covered": 18824,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 4,
+      "covered": 18824,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 18824,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 18824,
+      "value": "TN"
+    }
+  ],
+  "asn": [
+    {
+      "count": 18633,
+      "value": "as37492"
+    },
+    {
+      "count": 172,
+      "value": "37492"
+    },
+    {
+      "count": 18,
+      "value": "as327934"
+    },
+    {
+      "count": 1,
+      "value": "327934"
+    }
+  ],
+  "ports": [
+    {
+      "count": 18824,
+      "value": 7547
+    }
+  ],
+  "orgs": [
+    {
+      "count": 10926,
+      "value": "Orange Tunisie - Orange Tunisie"
+    },
+    {
+      "count": 6489,
+      "value": "ATI - Agence Tunisienne Internet"
+    },
+    {
+      "count": 1074,
+      "value": "Flybox"
+    },
+    {
+      "count": 235,
+      "value": "Dungle"
+    },
+    {
+      "count": 84,
+      "value": "Smartphone"
+    },
+    {
+      "count": 11,
+      "value": "SOCIETE NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom)"
+    },
+    {
+      "count": 3,
+      "value": "LTE-3G Tunisia Telecom internet"
+    },
+    {
+      "count": 2,
+      "value": "NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom) - SOCIETE NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom)"
+    }
+  ],
+  "id": "easycwmp-tn",
+  "parent": "easycwmp-vanilla",
+  "group": "easycwmp",
+  "label": {
+    "ru": "Тунис",
+    "en": "Tunisia",
+    "es": "Túnez",
+    "zh": "突尼斯"
+  },
+  "source": {
+    "file": "NOTES.md"
+  },
+  "denominator": null
+}

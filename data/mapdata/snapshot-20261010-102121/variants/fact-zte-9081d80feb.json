@@ -1,0 +1,203 @@
+{
+  "dork": "\"ZXHN H108N\"",
+  "total": 15,
+  "taken": "2026-10-10T11:10:59+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 9,
+      "covered": 15,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 12,
+      "covered": 15,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 8,
+      "covered": 15,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 9,
+      "covered": 15,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 3,
+      "value": "JP"
+    },
+    {
+      "count": 2,
+      "value": "DZ"
+    },
+    {
+      "count": 2,
+      "value": "EG"
+    },
+    {
+      "count": 2,
+      "value": "RU"
+    },
+    {
+      "count": 2,
+      "value": "UA"
+    },
+    {
+      "count": 1,
+      "value": "BR"
+    },
+    {
+      "count": 1,
+      "value": "HK"
+    },
+    {
+      "count": 1,
+      "value": "SE"
+    },
+    {
+      "count": 1,
+      "value": "SG"
+    }
+  ],
+  "asn": [
+    {
+      "count": 3,
+      "value": "as20473"
+    },
+    {
+      "count": 2,
+      "value": "as12389"
+    },
+    {
+      "count": 2,
+      "value": "as36947"
+    },
+    {
+      "count": 2,
+      "value": "as61112"
+    },
+    {
+      "count": 2,
+      "value": "as6849"
+    },
+    {
+      "count": 2,
+      "value": "as8452"
+    },
+    {
+      "count": 1,
+      "value": "as14061"
+    },
+    {
+      "count": 1,
+      "value": "as210644"
+    }
+  ],
+  "ports": [
+    {
+      "count": 2,
+      "value": 23
+    },
+    {
+      "count": 2,
+      "value": 80
+    },
+    {
+      "count": 2,
+      "value": 427
+    },
+    {
+      "count": 2,
+      "value": 1433
+    },
+    {
+      "count": 2,
+      "value": 1723
+    },
+    {
+      "count": 2,
+      "value": 52869
+    },
+    {
+      "count": 1,
+      "value": 5986
+    },
+    {
+      "count": 1,
+      "value": 14265
+    },
+    {
+      "count": 1,
+      "value": 51235
+    }
+  ],
+  "orgs": [
+    {
+      "count": 2,
+      "value": "Akile LTD"
+    },
+    {
+      "count": 2,
+      "value": "TE Data"
+    },
+    {
+      "count": 2,
+      "value": "The Constant Company, LLC"
+    },
+    {
+      "count": 1,
+      "value": "AEZA GROUP LLC"
+    },
+    {
+      "count": 1,
+      "value": "DigitalOcean, LLC"
+    },
+    {
+      "count": 1,
+      "value": "E-mail for SPAM and abuse postmaster@ukrtelecom.ua"
+    },
+    {
+      "count": 1,
+      "value": "JSC Ukrtelecom"
+    },
+    {
+      "count": 1,
+      "value": "OJSC Sibirtelecom"
+    },
+    {
+      "count": 1,
+      "value": "Telecom Algeria"
+    },
+    {
+      "count": 1,
+      "value": "Telecom Algeria - Telecom Algeria"
+    },
+    {
+      "count": 1,
+      "value": "Vultr Holdings, LLC"
+    },
+    {
+      "count": 1,
+      "value": "samtel"
+    }
+  ],
+  "id": "fact-zte-9081d80feb",
+  "parent": "zte",
+  "group": "facts",
+  "label": {
+    "ru": "telnet-баннеры ZXHN",
+    "en": "ZXHN Telnet banners",
+    "es": "Banners Telnet ZXHN",
+    "zh": "ZXHN Telnet 横幅"
+  },
+  "source": {
+    "file": "NOTES.md"
+  },
+  "denominator": null
+}

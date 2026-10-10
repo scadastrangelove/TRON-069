@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:CA",
+ "total": 2,
+ "taken": "2026-10-10T10:59:13+00:00",
+ "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as1403"
+  },
+  {
+   "count": 1,
+   "value": "as32613"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "EBOX"
+  },
+  {
+   "count": 1,
+   "value": "Leaseweb Canada Inc."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "CA"
+}

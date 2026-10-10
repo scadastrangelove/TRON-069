@@ -1,0 +1,155 @@
+{
+  "dork": "\"HuaweiHomeGateway\" port:30008",
+  "total": 6527,
+  "taken": "2026-10-10T08:39:19+00:00",
+  "run_id": "20261010-083807",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 4,
+      "covered": 6527,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 13,
+      "covered": 6527,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 8,
+      "covered": 6527,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 6527,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 6524,
+      "value": "AU"
+    },
+    {
+      "count": 1,
+      "value": "CL"
+    },
+    {
+      "count": 1,
+      "value": "NL"
+    },
+    {
+      "count": 1,
+      "value": "US"
+    }
+  ],
+  "asn": [
+    {
+      "count": 6220,
+      "value": "as7545"
+    },
+    {
+      "count": 298,
+      "value": "7545"
+    },
+    {
+      "count": 4,
+      "value": "as4739"
+    },
+    {
+      "count": 1,
+      "value": "14061"
+    },
+    {
+      "count": 1,
+      "value": "as14061"
+    },
+    {
+      "count": 1,
+      "value": "as20473"
+    },
+    {
+      "count": 1,
+      "value": "as7600"
+    },
+    {
+      "count": 1,
+      "value": "as9443"
+    }
+  ],
+  "ports": [
+    {
+      "count": 6527,
+      "value": 30008
+    }
+  ],
+  "orgs": [
+    {
+      "count": 2959,
+      "value": "TPG Internet Pty Ltd"
+    },
+    {
+      "count": 1974,
+      "value": "iiNet Limited"
+    },
+    {
+      "count": 1388,
+      "value": "TPG Internet Pty Ltd."
+    },
+    {
+      "count": 168,
+      "value": "AAPT Limited"
+    },
+    {
+      "count": 17,
+      "value": "POWERTEL LIMITED"
+    },
+    {
+      "count": 9,
+      "value": "Powertel Internet Service Provider"
+    },
+    {
+      "count": 5,
+      "value": "Telecommunications carrier and service provider"
+    },
+    {
+      "count": 2,
+      "value": "DigitalOcean, LLC"
+    },
+    {
+      "count": 1,
+      "value": "Level 3, 121 Walker St,"
+    },
+    {
+      "count": 1,
+      "value": "NBN, Private IP, IPWAN, MPLS & ADSL broadband technologies"
+    },
+    {
+      "count": 1,
+      "value": "Salient Enterprises Pty Ltd t/a Interworx Technologies Pty Ltd"
+    },
+    {
+      "count": 1,
+      "value": "Vocus Australia"
+    },
+    {
+      "count": 1,
+      "value": "Vultr Holdings, LLC"
+    }
+  ],
+  "id": "huawei-port-30008",
+  "parent": "huaweihomegateway",
+  "group": "huawei-ports",
+  "label": {
+    "ru": "CR-порт 30008",
+    "en": "CR port 30008",
+    "es": "Puerto CR 30008",
+    "zh": "CR 端口 30008"
+  },
+  "source": {
+    "file": "DEANON-HUAWEI-CR.md"
+  },
+  "denominator": null
+}

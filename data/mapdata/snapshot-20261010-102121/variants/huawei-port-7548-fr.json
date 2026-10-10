@@ -1,0 +1,147 @@
+{
+  "dork": "\"HuaweiHomeGateway\" port:7548 country:FR",
+  "total": 3560,
+  "taken": "2026-10-10T11:10:31+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 3560,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 19,
+      "covered": 3560,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 3,
+      "covered": 3560,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 3560,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 3560,
+      "value": "FR"
+    }
+  ],
+  "asn": [
+    {
+      "count": 3527,
+      "value": "as60032"
+    },
+    {
+      "count": 32,
+      "value": "60032"
+    },
+    {
+      "count": 1,
+      "value": "as8362"
+    }
+  ],
+  "ports": [
+    {
+      "count": 3560,
+      "value": 7548
+    }
+  ],
+  "orgs": [
+    {
+      "count": 2164,
+      "value": "Coriolis Telecom SAS"
+    },
+    {
+      "count": 226,
+      "value": "FTTH Customers - 18"
+    },
+    {
+      "count": 214,
+      "value": "FTTH Customers - 19"
+    },
+    {
+      "count": 187,
+      "value": "FTTH Customers - 20"
+    },
+    {
+      "count": 125,
+      "value": "FTTH Customers - 16"
+    },
+    {
+      "count": 122,
+      "value": "FTTH Customers - 17"
+    },
+    {
+      "count": 66,
+      "value": "FTTH Customers - 09"
+    },
+    {
+      "count": 62,
+      "value": "FTTH Customers - 10"
+    },
+    {
+      "count": 53,
+      "value": "FTTH Customers - 12"
+    },
+    {
+      "count": 50,
+      "value": "FTTH Customers - 01"
+    },
+    {
+      "count": 48,
+      "value": "FTTH Customers - 11"
+    },
+    {
+      "count": 42,
+      "value": "FTTH Customers - 04"
+    },
+    {
+      "count": 37,
+      "value": "FTTH Customers - 05"
+    },
+    {
+      "count": 35,
+      "value": "FTTH Customers - 02"
+    },
+    {
+      "count": 34,
+      "value": "FTTH Customers - 08"
+    },
+    {
+      "count": 33,
+      "value": "FTTH Customers - 03"
+    },
+    {
+      "count": 33,
+      "value": "FTTH Customers - 06"
+    },
+    {
+      "count": 28,
+      "value": "FTTH Customers - 07"
+    },
+    {
+      "count": 1,
+      "value": "Orange S.A."
+    }
+  ],
+  "id": "huawei-port-7548-fr",
+  "parent": "huaweihomegateway",
+  "group": "huawei-ports",
+  "label": {
+    "ru": "CR-порт 7548 · FR",
+    "en": "CR port 7548 · FR",
+    "es": "Puerto CR 7548 · FR",
+    "zh": "CR 端口 7548 · FR"
+  },
+  "source": {
+    "file": "DEANON-HUAWEI-CR.md"
+  },
+  "denominator": null
+}

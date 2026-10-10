@@ -1,0 +1,99 @@
+{
+  "dork": "\"avsystem-libcwmp/5.5.3\"",
+  "total": 4,
+  "taken": "2026-10-10T08:39:51+00:00",
+  "run_id": "20261010-083807",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 3,
+      "covered": 4,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 4,
+      "covered": 4,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 4,
+      "covered": 4,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 4,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 2,
+      "value": "IT"
+    },
+    {
+      "count": 1,
+      "value": "DE"
+    },
+    {
+      "count": 1,
+      "value": "ES"
+    }
+  ],
+  "asn": [
+    {
+      "count": 1,
+      "value": "as12338"
+    },
+    {
+      "count": 1,
+      "value": "as3269"
+    },
+    {
+      "count": 1,
+      "value": "as3320"
+    },
+    {
+      "count": 1,
+      "value": "as44092"
+    }
+  ],
+  "ports": [
+    {
+      "count": 4,
+      "value": 7547
+    }
+  ],
+  "orgs": [
+    {
+      "count": 1,
+      "value": "Deutsche Telekom AG"
+    },
+    {
+      "count": 1,
+      "value": "Global Telecommunication Service Provider"
+    },
+    {
+      "count": 1,
+      "value": "HAL Service SpA"
+    },
+    {
+      "count": 1,
+      "value": "Telecom Italia S.p.A."
+    }
+  ],
+  "id": "avsystem-5-5-3",
+  "parent": "avsystem-libcwmp",
+  "group": "avsystem-versions",
+  "label": {
+    "ru": "Версия 5.5.3",
+    "en": "Version 5.5.3",
+    "es": "Versión 5.5.3",
+    "zh": "版本 5.5.3"
+  },
+  "source": {
+    "file": "ACS-HUNT.md"
+  },
+  "denominator": "avsystem-total"
+}

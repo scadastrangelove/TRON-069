@@ -1,0 +1,714 @@
+{
+  "taken": "20261010-083331",
+  "started_at": "2026-10-10T08:33:31+00:00",
+  "source": "Shodan /shodan/host/count",
+  "timezone": "UTC",
+  "plan": {
+    "version": 1,
+    "id": "20261010-083331",
+    "created_at": "2026-10-10T08:33:31+00:00",
+    "source_snapshot": "data/mapdata/snapshot-20261008-2227",
+    "mode": "full",
+    "options": {
+      "drill_lines": 0,
+      "drill_countries": 0,
+      "org_limit": 100,
+      "asn_limit": 100,
+      "skip_drill": false,
+      "skip_stickers": true,
+      "skip_variants": true,
+      "queries_only": false,
+      "refresh_base": false,
+      "only": [
+        "cwmp-server",
+        "telefonica-cwmpweb"
+      ],
+      "query_group": []
+    },
+    "selected": [
+      "cwmp-server",
+      "telefonica-cwmpweb"
+    ],
+    "base_jobs": [
+      {
+        "id": "icwmp-iopsys",
+        "name": "icwmp (iopsys)",
+        "query": "\"authenticate@cwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "tr069-http-server",
+        "name": "tr069 http server",
+        "query": "\"tr069 http server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-park",
+        "name": "gSOAP park",
+        "query": "\"Server: gSOAP\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "rdk-b-ccsptr069pa",
+        "name": "RDK-B CcspTr069Pa",
+        "query": "\"Cisco_CCSP_CWMP_TCPCR\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "tr069-client",
+        "name": "TR069 Client",
+        "query": "\"TR069 client TCP connection request Server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "igdauthentication",
+        "name": "IgdAuthentication",
+        "query": "\"IgdAuthentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-vanilla",
+        "name": "easycwmp vanilla",
+        "query": "\"realm@easycwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "huaweihomegateway",
+        "name": "HuaweiHomeGateway",
+        "query": "\"HuaweiHomeGateway\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "sagemcom",
+        "name": "Sagemcom",
+        "query": "\"Sagemcom TR-069\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "zte",
+        "name": "ZTE",
+        "query": "\"cpe@zte.com\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "digauth",
+        "name": "DigAuth",
+        "query": "\"DigAuth\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "yapsieworld",
+        "name": "YapsieWorld",
+        "query": "\"YapsieWorld\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "magticom-gsoap",
+        "name": "Magticom gSOAP",
+        "query": "port:6264 gSOAP",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "realtek-sdk",
+        "name": "Realtek SDK",
+        "query": "\"realtek.com.tw\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmpd-tr069agent",
+        "name": "cwmpd / TR069Agent",
+        "query": "\"cwmpd\" opaque",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "dt-speedport-sdk",
+        "name": "DT Speedport SDK",
+        "query": "\"DSLForum CPE Management\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "acssimtool",
+        "name": "ACSSimTool",
+        "query": "\"ACSSimTool\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "avsystem-libcwmp",
+        "name": "avsystem-libcwmp",
+        "query": "\"avsystem-libcwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-service-realm",
+        "name": "gSOAP Service realm",
+        "query": "port:7547 opaque \"gSOAP Service\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-fork-ecntcwmp",
+        "name": "easycwmp fork: ecntcwmp",
+        "query": "\"realm@ecntcwmp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-fork-leanoacs",
+        "name": "easycwmp fork: leanoacs",
+        "query": "\"realm@leanoacs\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "easycwmp-fork-ltecpe",
+        "name": "easycwmp fork: ltecpe",
+        "query": "\"realm@ltecpe\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "ruijie-cpe",
+        "name": "RUIJIE-CPE",
+        "query": "\"RUIJIE-CPE\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "junk-realms",
+        "name": "junk realms",
+        "query": "port:7547 opaque \"dirname\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "nettyserver",
+        "name": "NettyServer",
+        "query": "\"NettyServer\" port:7547",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "genieacs-admin-ui",
+        "name": "GenieACS admin-UI",
+        "query": "http.title:\"GenieACS\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "openacs",
+        "name": "openacs",
+        "query": "\"openacs\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "axiros",
+        "name": "Axiros",
+        "query": "\"Axiros\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "askeycwmp-askey",
+        "name": "ASKEYCWMP (Askey)",
+        "query": "port:7547 ASKEYCWMP",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "meig-meigsmart-com",
+        "name": "MEiG (meigsmart.com)",
+        "query": "\"www.meigsmart.com\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "kt-cems",
+        "name": "KT CEMS",
+        "query": "\"ktcems.com\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "qacafe-cdrouter-test-realm",
+        "name": "qacafe (CDRouter test realm)",
+        "query": "\"qacafe\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cpe-server-1-0",
+        "name": "CPE-SERVER/1.0",
+        "query": "\"CPE-SERVER/1.0\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "huaweihomegateway-cr-slice",
+        "name": "HuaweiHomeGateway CR slice",
+        "query": "port:7547 \"HuaweiHomeGateway\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "centurylink-lighttpd",
+        "name": "CenturyLink lighttpd",
+        "query": "port:7547 country:US lighttpd",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "arris-cpe-authentication",
+        "name": "Arris CPE Authentication",
+        "query": "\"Arris CPE Authentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "sky-ee-tr069-http-server",
+        "name": "Sky/EE tr069-http-server",
+        "query": "port:7547 country:GB \"tr069 http server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "ti-cpe-authentication",
+        "name": "TI CPE Authentication",
+        "query": "\"TI CPE Authentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gateway-realm",
+        "name": "Gateway realm",
+        "query": "port:7170 realm=\"Gateway\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "windtre-tr069-http-server",
+        "name": "WindTre tr069-http-server",
+        "query": "port:7547 country:IT \"tr069 http server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-2-7-vendor-map",
+        "name": "gSOAP/2.7 vendor map",
+        "query": "port:7547 \"Server: gSOAP/2.7\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "gsoap-2-8-vendor-map",
+        "name": "gSOAP/2.8 vendor map",
+        "query": "port:7547 \"Server: gSOAP/2.8\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "sercomm-cpe-authentication",
+        "name": "Sercomm CPE Authentication",
+        "query": "\"Sercomm CPE Authentication\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "charter-anti-scan-404",
+        "name": "Charter anti-scan 404",
+        "query": "port:7547 \"HTTP/1.1 404\" org:\"Charter Communications\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmp-agent-orange-tunisie",
+        "name": "CWMP-Agent (Orange Tunisie)",
+        "query": "\"CWMP-Agent\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmp-lancom",
+        "name": "CWMP@Lancom",
+        "query": "port:7547 \"CWMP@Lancom\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "tr069-client-cli-server-netcore",
+        "name": "TR069 client CLI Server (Netcore)",
+        "query": "\"TR069 client CLI Server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "mini-web-server-1-0-zte-corp",
+        "name": "Mini web server 1.0 ZTE corp",
+        "query": "\"Mini web server 1.0 ZTE corp\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "fake-apache-openagent",
+        "name": "fake-Apache openagent",
+        "query": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "decimal-nonce-class",
+        "name": "decimal-nonce class",
+        "query": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "cwmp-server",
+        "name": "cwmp server",
+        "query": "\"Server: cwmp server\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "telefonica-cwmpweb",
+        "name": "Telefónica cwmpWeb",
+        "query": "\"cwmpWeb\" \"main.acs.telefonica.net\"",
+        "facets": "country:250,asn:100,port:100"
+      },
+      {
+        "id": "denominator-park",
+        "name": "denominator-park",
+        "query": "port:7547",
+        "facets": "country:250"
+      },
+      {
+        "id": "denominator-http",
+        "name": "denominator-http",
+        "query": "port:7547 HTTP",
+        "facets": "country:250"
+      }
+    ],
+    "queries": [],
+    "interval": 1.1,
+    "facts": null
+  },
+  "source_snapshot": "data/mapdata/snapshot-20261008-2227",
+  "collector_mode": "full",
+  "status": "complete",
+  "updated_at": "2026-10-10T08:36:53+00:00",
+  "requests_this_run": 93,
+  "errors": 0,
+  "failures": {},
+  "lines": [
+    {
+      "name": "icwmp (iopsys)",
+      "file": "icwmp-iopsys.json",
+      "collection_status": "ok",
+      "total": 3197342
+    },
+    {
+      "name": "tr069 http server",
+      "file": "tr069-http-server.json",
+      "collection_status": "ok",
+      "total": 1980066
+    },
+    {
+      "name": "gSOAP park",
+      "file": "gsoap-park.json",
+      "collection_status": "ok",
+      "total": 1871363
+    },
+    {
+      "name": "RDK-B CcspTr069Pa",
+      "file": "rdk-b-ccsptr069pa.json",
+      "collection_status": "ok",
+      "total": 1788758
+    },
+    {
+      "name": "TR069 Client",
+      "file": "tr069-client.json",
+      "collection_status": "ok",
+      "total": 1671226
+    },
+    {
+      "name": "IgdAuthentication",
+      "file": "igdauthentication.json",
+      "collection_status": "ok",
+      "total": 1515054
+    },
+    {
+      "name": "easycwmp vanilla",
+      "file": "easycwmp-vanilla.json",
+      "collection_status": "ok",
+      "total": 1003996
+    },
+    {
+      "name": "HuaweiHomeGateway",
+      "file": "huaweihomegateway.json",
+      "collection_status": "ok",
+      "total": 2895277
+    },
+    {
+      "name": "Sagemcom",
+      "file": "sagemcom.json",
+      "collection_status": "ok",
+      "total": 222599
+    },
+    {
+      "name": "ZTE",
+      "file": "zte.json",
+      "collection_status": "ok",
+      "total": 263278
+    },
+    {
+      "name": "DigAuth",
+      "file": "digauth.json",
+      "collection_status": "ok",
+      "total": 29581
+    },
+    {
+      "name": "YapsieWorld",
+      "file": "yapsieworld.json",
+      "collection_status": "ok",
+      "total": 71974
+    },
+    {
+      "name": "Magticom gSOAP",
+      "file": "magticom-gsoap.json",
+      "collection_status": "ok",
+      "total": 26477
+    },
+    {
+      "name": "Realtek SDK",
+      "file": "realtek-sdk.json",
+      "collection_status": "ok",
+      "total": 28640
+    },
+    {
+      "name": "cwmpd / TR069Agent",
+      "file": "cwmpd-tr069agent.json",
+      "collection_status": "ok",
+      "total": 19074
+    },
+    {
+      "name": "DT Speedport SDK",
+      "file": "dt-speedport-sdk.json",
+      "collection_status": "ok",
+      "total": 117202
+    },
+    {
+      "name": "ACSSimTool",
+      "file": "acssimtool.json",
+      "collection_status": "ok",
+      "total": 11153
+    },
+    {
+      "name": "avsystem-libcwmp",
+      "file": "avsystem-libcwmp.json",
+      "collection_status": "ok",
+      "total": 6425
+    },
+    {
+      "name": "gSOAP Service realm",
+      "file": "gsoap-service-realm.json",
+      "collection_status": "ok",
+      "total": 6532
+    },
+    {
+      "name": "easycwmp fork: ecntcwmp",
+      "file": "easycwmp-fork-ecntcwmp.json",
+      "collection_status": "ok",
+      "total": 59002
+    },
+    {
+      "name": "easycwmp fork: leanoacs",
+      "file": "easycwmp-fork-leanoacs.json",
+      "collection_status": "ok",
+      "total": 4309
+    },
+    {
+      "name": "easycwmp fork: ltecpe",
+      "file": "easycwmp-fork-ltecpe.json",
+      "collection_status": "ok",
+      "total": 91
+    },
+    {
+      "name": "RUIJIE-CPE",
+      "file": "ruijie-cpe.json",
+      "collection_status": "ok",
+      "total": 521
+    },
+    {
+      "name": "junk realms",
+      "file": "junk-realms.json",
+      "collection_status": "ok",
+      "total": 3834
+    },
+    {
+      "name": "NettyServer",
+      "file": "nettyserver.json",
+      "collection_status": "ok",
+      "total": 31044
+    },
+    {
+      "name": "GenieACS admin-UI",
+      "file": "genieacs-admin-ui.json",
+      "collection_status": "ok",
+      "total": 3665
+    },
+    {
+      "name": "openacs",
+      "file": "openacs.json",
+      "collection_status": "ok",
+      "total": 14
+    },
+    {
+      "name": "Axiros",
+      "file": "axiros.json",
+      "collection_status": "ok",
+      "total": 7
+    },
+    {
+      "name": "ASKEYCWMP (Askey)",
+      "file": "askeycwmp-askey.json",
+      "collection_status": "ok",
+      "total": 653320
+    },
+    {
+      "name": "MEiG (meigsmart.com)",
+      "file": "meig-meigsmart-com.json",
+      "collection_status": "ok",
+      "total": 2623
+    },
+    {
+      "name": "KT CEMS",
+      "file": "kt-cems.json",
+      "collection_status": "ok",
+      "total": 27316
+    },
+    {
+      "name": "qacafe (CDRouter test realm)",
+      "file": "qacafe-cdrouter-test-realm.json",
+      "collection_status": "ok",
+      "total": 21020
+    },
+    {
+      "name": "CPE-SERVER/1.0",
+      "file": "cpe-server-1-0.json",
+      "collection_status": "ok",
+      "total": 3448399
+    },
+    {
+      "name": "HuaweiHomeGateway CR slice",
+      "file": "huaweihomegateway-cr-slice.json",
+      "collection_status": "ok",
+      "total": 2672492
+    },
+    {
+      "name": "CenturyLink lighttpd",
+      "file": "centurylink-lighttpd.json",
+      "collection_status": "ok",
+      "total": 459251
+    },
+    {
+      "name": "Arris CPE Authentication",
+      "file": "arris-cpe-authentication.json",
+      "collection_status": "ok",
+      "total": 10651
+    },
+    {
+      "name": "Sky/EE tr069-http-server",
+      "file": "sky-ee-tr069-http-server.json",
+      "collection_status": "ok",
+      "total": 64754
+    },
+    {
+      "name": "TI CPE Authentication",
+      "file": "ti-cpe-authentication.json",
+      "collection_status": "ok",
+      "total": 32411
+    },
+    {
+      "name": "Gateway realm",
+      "file": "gateway-realm.json",
+      "collection_status": "ok",
+      "total": 34186
+    },
+    {
+      "name": "WindTre tr069-http-server",
+      "file": "windtre-tr069-http-server.json",
+      "collection_status": "ok",
+      "total": 278407
+    },
+    {
+      "name": "gSOAP/2.7 vendor map",
+      "file": "gsoap-2-7-vendor-map.json",
+      "collection_status": "ok",
+      "total": 1249074
+    },
+    {
+      "name": "gSOAP/2.8 vendor map",
+      "file": "gsoap-2-8-vendor-map.json",
+      "collection_status": "ok",
+      "total": 106357
+    },
+    {
+      "name": "Sercomm CPE Authentication",
+      "file": "sercomm-cpe-authentication.json",
+      "collection_status": "ok",
+      "total": 308449
+    },
+    {
+      "name": "Charter anti-scan 404",
+      "file": "charter-anti-scan-404.json",
+      "collection_status": "ok",
+      "total": 105721
+    },
+    {
+      "name": "CWMP-Agent (Orange Tunisie)",
+      "file": "cwmp-agent-orange-tunisie.json",
+      "collection_status": "ok",
+      "total": 18421
+    },
+    {
+      "name": "CWMP@Lancom",
+      "file": "cwmp-lancom.json",
+      "collection_status": "ok",
+      "total": 6477
+    },
+    {
+      "name": "TR069 client CLI Server (Netcore)",
+      "file": "tr069-client-cli-server-netcore.json",
+      "collection_status": "ok",
+      "total": 1862
+    },
+    {
+      "name": "Mini web server 1.0 ZTE corp",
+      "file": "mini-web-server-1-0-zte-corp.json",
+      "collection_status": "ok",
+      "total": 77373
+    },
+    {
+      "name": "fake-Apache openagent",
+      "file": "fake-apache-openagent.json",
+      "collection_status": "ok",
+      "total": 2970
+    },
+    {
+      "name": "decimal-nonce class",
+      "file": "decimal-nonce-class.json",
+      "collection_status": "ok",
+      "total": 32392
+    },
+    {
+      "name": "cwmp server",
+      "file": "cwmp-server.json",
+      "collection_status": "ok",
+      "total": 84427
+    },
+    {
+      "name": "Telefónica cwmpWeb",
+      "file": "telefonica-cwmpweb.json",
+      "collection_status": "ok",
+      "total": 1476
+    },
+    {
+      "name": "denominator-park",
+      "file": "denominator-park.json",
+      "collection_status": "ok",
+      "total": 34390568
+    },
+    {
+      "name": "denominator-http",
+      "file": "denominator-http.json",
+      "collection_status": "ok",
+      "total": 22955701
+    }
+  ],
+  "org_drill": {
+    "scope": "selected",
+    "expected": 93,
+    "completed": 93,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+  },
+  "variants": {
+    "expected": 0,
+    "completed": 0,
+    "pending": 0
+  },
+  "publication_redactions": {
+    "edition": "public",
+    "editorial_plan": "Private editorial annotations replaced by the current public edition; original run counters and measurements retained.",
+    "withheld_query_ids": [],
+    "public_variant_files": 0
+  }
+}

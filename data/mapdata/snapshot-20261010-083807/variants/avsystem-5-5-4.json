@@ -1,0 +1,75 @@
+{
+  "dork": "\"avsystem-libcwmp/5.5.4\"",
+  "total": 41,
+  "taken": "2026-10-10T08:39:52+00:00",
+  "run_id": "20261010-083807",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 41,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 3,
+      "covered": 41,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 1,
+      "covered": 41,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 41,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 41,
+      "value": "IL"
+    }
+  ],
+  "asn": [
+    {
+      "count": 41,
+      "value": "as12400"
+    }
+  ],
+  "ports": [
+    {
+      "count": 41,
+      "value": 4567
+    }
+  ],
+  "orgs": [
+    {
+      "count": 39,
+      "value": "Partner Communications Ltd."
+    },
+    {
+      "count": 1,
+      "value": "ORNOS"
+    },
+    {
+      "count": 1,
+      "value": "smile internet gold"
+    }
+  ],
+  "id": "avsystem-5-5-4",
+  "parent": "avsystem-libcwmp",
+  "group": "avsystem-versions",
+  "label": {
+    "ru": "Версия 5.5.4",
+    "en": "Version 5.5.4",
+    "es": "Versión 5.5.4",
+    "zh": "版本 5.5.4"
+  },
+  "source": {
+    "file": "ACS-HUNT.md"
+  },
+  "denominator": "avsystem-total"
+}

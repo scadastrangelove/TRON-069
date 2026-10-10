@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.DS_Store
+data/.collection.lock
+
+# Private research material: never add these to a public release.
+/firmware-extracts/
+/data/cohost-hosts.jsonl
+/data/*sample*.json*
+/.publication/
+/dist/
+/.env
+/.env.*
+*.pem
+*.key
+/reports/*.log
+
+/probes/
+/data/research-private/
+/private/
+*.jsonl
+*.json.gz

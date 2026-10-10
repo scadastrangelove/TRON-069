@@ -1,0 +1,859 @@
+{
+  "dork": "\"TR069 client TCP connection request Server\" \"DigAuth\" port:8081 country:BR",
+  "total": 16703,
+  "taken": "2026-10-10T08:39:07+00:00",
+  "run_id": "20261010-083807",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 16703,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 100,
+      "covered": 16622,
+      "remainder": 81
+    },
+    "asn": {
+      "values_returned": 100,
+      "covered": 16572,
+      "remainder": 131
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 16703,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 16703,
+      "value": "BR"
+    }
+  ],
+  "asn": [
+    {
+      "count": 4789,
+      "value": "as262673"
+    },
+    {
+      "count": 4281,
+      "value": "as28220"
+    },
+    {
+      "count": 1042,
+      "value": "as52974"
+    },
+    {
+      "count": 892,
+      "value": "as262992"
+    },
+    {
+      "count": 638,
+      "value": "as53088"
+    },
+    {
+      "count": 575,
+      "value": "as28210"
+    },
+    {
+      "count": 555,
+      "value": "as28667"
+    },
+    {
+      "count": 358,
+      "value": "as262659"
+    },
+    {
+      "count": 357,
+      "value": "as61917"
+    },
+    {
+      "count": 267,
+      "value": "as28258"
+    },
+    {
+      "count": 265,
+      "value": "28220"
+    },
+    {
+      "count": 223,
+      "value": "as262481"
+    },
+    {
+      "count": 191,
+      "value": "262673"
+    },
+    {
+      "count": 165,
+      "value": "as53184"
+    },
+    {
+      "count": 143,
+      "value": "as262773"
+    },
+    {
+      "count": 112,
+      "value": "as28202"
+    },
+    {
+      "count": 110,
+      "value": "as268669"
+    },
+    {
+      "count": 93,
+      "value": "as268104"
+    },
+    {
+      "count": 82,
+      "value": "as262509"
+    },
+    {
+      "count": 66,
+      "value": "as267293"
+    },
+    {
+      "count": 59,
+      "value": "as61701"
+    },
+    {
+      "count": 53,
+      "value": "as28287"
+    },
+    {
+      "count": 52,
+      "value": "as263252"
+    },
+    {
+      "count": 50,
+      "value": "as262480"
+    },
+    {
+      "count": 50,
+      "value": "as262903"
+    },
+    {
+      "count": 50,
+      "value": "as263072"
+    },
+    {
+      "count": 48,
+      "value": "52974"
+    },
+    {
+      "count": 45,
+      "value": "as262671"
+    },
+    {
+      "count": 42,
+      "value": "262992"
+    },
+    {
+      "count": 41,
+      "value": "as53080"
+    },
+    {
+      "count": 38,
+      "value": "as22689"
+    },
+    {
+      "count": 38,
+      "value": "as266502"
+    },
+    {
+      "count": 38,
+      "value": "as53097"
+    },
+    {
+      "count": 36,
+      "value": "as263332"
+    },
+    {
+      "count": 36,
+      "value": "as267085"
+    },
+    {
+      "count": 35,
+      "value": "as267385"
+    },
+    {
+      "count": 33,
+      "value": "as52571"
+    },
+    {
+      "count": 32,
+      "value": "as266044"
+    },
+    {
+      "count": 31,
+      "value": "28210"
+    },
+    {
+      "count": 30,
+      "value": "as263864"
+    },
+    {
+      "count": 26,
+      "value": "28667"
+    },
+    {
+      "count": 26,
+      "value": "as262700"
+    },
+    {
+      "count": 26,
+      "value": "as28270"
+    },
+    {
+      "count": 25,
+      "value": "53088"
+    },
+    {
+      "count": 25,
+      "value": "as263405"
+    },
+    {
+      "count": 25,
+      "value": "as264009"
+    },
+    {
+      "count": 24,
+      "value": "as28241"
+    },
+    {
+      "count": 21,
+      "value": "as262794"
+    },
+    {
+      "count": 17,
+      "value": "as268395"
+    },
+    {
+      "count": 17,
+      "value": "as53171"
+    },
+    {
+      "count": 15,
+      "value": "61917"
+    },
+    {
+      "count": 15,
+      "value": "as262272"
+    },
+    {
+      "count": 13,
+      "value": "262659"
+    },
+    {
+      "count": 13,
+      "value": "as263097"
+    },
+    {
+      "count": 12,
+      "value": "as263297"
+    },
+    {
+      "count": 12,
+      "value": "as268613"
+    },
+    {
+      "count": 11,
+      "value": "as262881"
+    },
+    {
+      "count": 10,
+      "value": "as266586"
+    },
+    {
+      "count": 10,
+      "value": "as28669"
+    },
+    {
+      "count": 9,
+      "value": "28202"
+    },
+    {
+      "count": 9,
+      "value": "as265929"
+    },
+    {
+      "count": 8,
+      "value": "as264299"
+    },
+    {
+      "count": 8,
+      "value": "as53085"
+    },
+    {
+      "count": 7,
+      "value": "as262427"
+    },
+    {
+      "count": 6,
+      "value": "262481"
+    },
+    {
+      "count": 6,
+      "value": "28258"
+    },
+    {
+      "count": 6,
+      "value": "53184"
+    },
+    {
+      "count": 6,
+      "value": "as263015"
+    },
+    {
+      "count": 6,
+      "value": "as266388"
+    },
+    {
+      "count": 6,
+      "value": "as61725"
+    },
+    {
+      "count": 5,
+      "value": "264009"
+    },
+    {
+      "count": 5,
+      "value": "as266216"
+    },
+    {
+      "count": 5,
+      "value": "as266445"
+    },
+    {
+      "count": 5,
+      "value": "as53191"
+    },
+    {
+      "count": 5,
+      "value": "as61942"
+    },
+    {
+      "count": 4,
+      "value": "268104"
+    },
+    {
+      "count": 4,
+      "value": "28287"
+    },
+    {
+      "count": 4,
+      "value": "as262444"
+    },
+    {
+      "count": 4,
+      "value": "as262612"
+    },
+    {
+      "count": 4,
+      "value": "as263032"
+    },
+    {
+      "count": 4,
+      "value": "as266211"
+    },
+    {
+      "count": 4,
+      "value": "as266363"
+    },
+    {
+      "count": 4,
+      "value": "as268976"
+    },
+    {
+      "count": 4,
+      "value": "as269517"
+    },
+    {
+      "count": 4,
+      "value": "as28257"
+    },
+    {
+      "count": 4,
+      "value": "as28352"
+    },
+    {
+      "count": 3,
+      "value": "267293"
+    },
+    {
+      "count": 3,
+      "value": "53080"
+    },
+    {
+      "count": 3,
+      "value": "as263495"
+    },
+    {
+      "count": 3,
+      "value": "as264013"
+    },
+    {
+      "count": 3,
+      "value": "as264275"
+    },
+    {
+      "count": 3,
+      "value": "as264328"
+    },
+    {
+      "count": 3,
+      "value": "as265152"
+    },
+    {
+      "count": 3,
+      "value": "as265369"
+    },
+    {
+      "count": 3,
+      "value": "as266224"
+    },
+    {
+      "count": 3,
+      "value": "as268509"
+    },
+    {
+      "count": 3,
+      "value": "as268552"
+    },
+    {
+      "count": 3,
+      "value": "as268939"
+    },
+    {
+      "count": 3,
+      "value": "as268975"
+    },
+    {
+      "count": 3,
+      "value": "as2914"
+    }
+  ],
+  "ports": [
+    {
+      "count": 16703,
+      "value": 8081
+    }
+  ],
+  "orgs": [
+    {
+      "count": 6467,
+      "value": "VERO S.A"
+    },
+    {
+      "count": 3479,
+      "value": "Alares Cabo Servicos de Telecomunicacoes S.A."
+    },
+    {
+      "count": 1493,
+      "value": "CABO SERVICOS DE TELECOMUNICACOES LTDA"
+    },
+    {
+      "count": 1090,
+      "value": "Henet Telecomunicacoes Ltda"
+    },
+    {
+      "count": 663,
+      "value": "FORNET COMUNICACOES LTDA"
+    },
+    {
+      "count": 618,
+      "value": "Videomar Rede Nordeste S/A"
+    },
+    {
+      "count": 606,
+      "value": "GIGA MAIS FIBRA TELECOMUNICACOES S.A."
+    },
+    {
+      "count": 601,
+      "value": "America-NET Ltda."
+    },
+    {
+      "count": 372,
+      "value": "NETMAIS TELECOM"
+    },
+    {
+      "count": 145,
+      "value": "PROXXIMA TELECOMUNICACOES SA"
+    },
+    {
+      "count": 97,
+      "value": "G7NET SERVICOS DE INTERNET EIRELI"
+    },
+    {
+      "count": 69,
+      "value": "Castrum Servicos Especializados ltda"
+    },
+    {
+      "count": 68,
+      "value": "Bruno e Lemes LTDA"
+    },
+    {
+      "count": 68,
+      "value": "Rede Brasileira de Comunicacao S/A"
+    },
+    {
+      "count": 53,
+      "value": "GIGASAT SERVIÇOS DE PROCESSAMENTOS DE DADOS LTDA"
+    },
+    {
+      "count": 53,
+      "value": "MASTER S/A"
+    },
+    {
+      "count": 50,
+      "value": "CONNECT10 INTERNET EIRELI"
+    },
+    {
+      "count": 50,
+      "value": "Tubaron Telecom"
+    },
+    {
+      "count": 44,
+      "value": "MUNDOGIGA TELECOM LTDA"
+    },
+    {
+      "count": 40,
+      "value": "Superip Telecomunicações LTDA"
+    },
+    {
+      "count": 38,
+      "value": "SERCOMTEL S/A TELECOMUNICACOES"
+    },
+    {
+      "count": 38,
+      "value": "TimerNet Telecom"
+    },
+    {
+      "count": 33,
+      "value": "G2G COM PROD ELETRO E SERV LTDA"
+    },
+    {
+      "count": 28,
+      "value": "INFIX TELECOM LTDA"
+    },
+    {
+      "count": 26,
+      "value": "MEGA NET RIO"
+    },
+    {
+      "count": 21,
+      "value": "DATA CENTER LINNKE TELECOMUNICACOES LTDA - EPP"
+    },
+    {
+      "count": 21,
+      "value": "NARCELIO L DE SOUZA - ME"
+    },
+    {
+      "count": 18,
+      "value": "G7 MS EIRELI - ME"
+    },
+    {
+      "count": 18,
+      "value": "Nicnet Telecom Ltda."
+    },
+    {
+      "count": 16,
+      "value": "Netfi serviços de comunicações ltda epp"
+    },
+    {
+      "count": 12,
+      "value": "ARIKI SOLUCOES EM TECNOLOGIA"
+    },
+    {
+      "count": 12,
+      "value": "VN INFRAESTRUTURA DE REDES LTDA."
+    },
+    {
+      "count": 11,
+      "value": "SUPER CK PROVEDORES DE ACESSO LTDA"
+    },
+    {
+      "count": 9,
+      "value": "Invista Net Telecom Ltda"
+    },
+    {
+      "count": 8,
+      "value": "NTT America, Inc."
+    },
+    {
+      "count": 8,
+      "value": "Nicnet S.A."
+    },
+    {
+      "count": 7,
+      "value": "Invista Net Provedor de Acesso Ltda"
+    },
+    {
+      "count": 7,
+      "value": "NetBig Informática Ltda"
+    },
+    {
+      "count": 6,
+      "value": "G7 Telecom Ltda"
+    },
+    {
+      "count": 6,
+      "value": "SEA TELECOM LTDA"
+    },
+    {
+      "count": 6,
+      "value": "Weclix Telecom S/A"
+    },
+    {
+      "count": 5,
+      "value": "AZEVEDO PROVEDOR DE INTERNET LTDA"
+    },
+    {
+      "count": 5,
+      "value": "BRASIL LIKE TELECOMUNICACOES EIRELLI"
+    },
+    {
+      "count": 5,
+      "value": "GERACAO NET"
+    },
+    {
+      "count": 5,
+      "value": "SPACENET PROVEDOR TELECOM LTDA"
+    },
+    {
+      "count": 5,
+      "value": "TURBONET TELECOM LTDA"
+    },
+    {
+      "count": 5,
+      "value": "ZAZ NATAL"
+    },
+    {
+      "count": 4,
+      "value": "CONCEITOS NET SERVICOS DE COMUNICACAO E MULTIMIDIA"
+    },
+    {
+      "count": 4,
+      "value": "G & M SERVICOS DE COMUNICACAO E MULTIMIDIA LTDA-ME"
+    },
+    {
+      "count": 4,
+      "value": "NETSPEED LTDA"
+    },
+    {
+      "count": 4,
+      "value": "NetBig Telecomunicaçoes Ltda"
+    },
+    {
+      "count": 4,
+      "value": "Piotr Piwowar"
+    },
+    {
+      "count": 4,
+      "value": "XTURBO PROVEDOR DE INTERNET LTDA"
+    },
+    {
+      "count": 3,
+      "value": "BRASIL TECPAR SERVICOS DE TELECOMUNICACOES SA"
+    },
+    {
+      "count": 3,
+      "value": "C-ComTelecom Servios Ltda-ME"
+    },
+    {
+      "count": 3,
+      "value": "CIDADE SONHO TELECOM EIRELI - EPP"
+    },
+    {
+      "count": 3,
+      "value": "COMPLETA Telecomunicacoes Ltda"
+    },
+    {
+      "count": 3,
+      "value": "CONNECTA TELECOM INTERNET LTDA - EPP"
+    },
+    {
+      "count": 3,
+      "value": "Eclipse Telecom"
+    },
+    {
+      "count": 3,
+      "value": "GLOBAL TELECOM SERVICOS DE COMUNICACAO E MULTIMIDI"
+    },
+    {
+      "count": 3,
+      "value": "INFOSERVIC INFORMATICA TELECOMUNICAÇÃO LTDA"
+    },
+    {
+      "count": 3,
+      "value": "MWA MAIS"
+    },
+    {
+      "count": 3,
+      "value": "NETSBRASIL LTDA"
+    },
+    {
+      "count": 3,
+      "value": "NEWCENTER TELECOM"
+    },
+    {
+      "count": 3,
+      "value": "NOVATEC TELECOM LTDA"
+    },
+    {
+      "count": 3,
+      "value": "NTT Communications"
+    },
+    {
+      "count": 3,
+      "value": "ROLIM NET TECNOLOGIA LTDA"
+    },
+    {
+      "count": 3,
+      "value": "WIP TELECOM MULTIMIDIA EIRELI - ME"
+    },
+    {
+      "count": 2,
+      "value": "Franzoni Telecomunicações"
+    },
+    {
+      "count": 2,
+      "value": "G4 Conectividade SVA Eireli"
+    },
+    {
+      "count": 2,
+      "value": "GIGA MAIS FIBRA TELECOMUNICACOES S.A. (BS COSTA)"
+    },
+    {
+      "count": 2,
+      "value": "INVINET PROVEDOR LTDA - ME"
+    },
+    {
+      "count": 2,
+      "value": "Infinity Web Fibra Optica Ltda"
+    },
+    {
+      "count": 2,
+      "value": "Intercom Informática LTDA ME"
+    },
+    {
+      "count": 2,
+      "value": "NEW ERA TECNOLOGIA LTDA"
+    },
+    {
+      "count": 2,
+      "value": "NMULTIFIBRA TELECOMUNICAÇÃO LTDA"
+    },
+    {
+      "count": 2,
+      "value": "R. C. F. ­ TELECOM LTDA ­ ME"
+    },
+    {
+      "count": 2,
+      "value": "S F INFOREDE LTDA ME"
+    },
+    {
+      "count": 2,
+      "value": "STARTNET PROVEDOR E INFORMATICA LTDA - ME"
+    },
+    {
+      "count": 2,
+      "value": "Tv Cabo de Presidente Venceslau S/S Ltda. EPP"
+    },
+    {
+      "count": 2,
+      "value": "ULTRA TELECOMUNICACOES LTDA"
+    },
+    {
+      "count": 2,
+      "value": "UNIFIQUE TELECOMUNICACOES S/A"
+    },
+    {
+      "count": 2,
+      "value": "VIAR TELECOMUNICAÇÕES LTDA"
+    },
+    {
+      "count": 2,
+      "value": "VNO Telecom LTDA"
+    },
+    {
+      "count": 1,
+      "value": "+Net & Telecom"
+    },
+    {
+      "count": 1,
+      "value": "AR TELECOM PROVEDOR DE INTERNET LTDA"
+    },
+    {
+      "count": 1,
+      "value": "BERTASSO E CIA LTDA"
+    },
+    {
+      "count": 1,
+      "value": "CAS TELECOMUNICACOES EIRELI"
+    },
+    {
+      "count": 1,
+      "value": "Cogent Communications, LLC"
+    },
+    {
+      "count": 1,
+      "value": "Desktop Sigmanet Comunicação Multimídia SA"
+    },
+    {
+      "count": 1,
+      "value": "FIBERCOM Telecomunicações"
+    },
+    {
+      "count": 1,
+      "value": "G7 BSB TELECOM LTDA"
+    },
+    {
+      "count": 1,
+      "value": "HARDONLINE LTDA"
+    },
+    {
+      "count": 1,
+      "value": "Halley Telecom Comercio & Serviço Ltda"
+    },
+    {
+      "count": 1,
+      "value": "INFIX NET LTDA"
+    },
+    {
+      "count": 1,
+      "value": "INTEGRATO TELECOMUNICAÇÕES LTDA - ME"
+    },
+    {
+      "count": 1,
+      "value": "INTERNET ULTRA LTDA"
+    },
+    {
+      "count": 1,
+      "value": "ITIBR - Instituto de Tecnologia Informacao Brasil"
+    },
+    {
+      "count": 1,
+      "value": "JARBAS PASCHOAL BRAZIL JUNIOR INFORMATICA"
+    },
+    {
+      "count": 1,
+      "value": "Joao Pinoti dos Santos-ME"
+    }
+  ],
+  "id": "tr069-digauth-br-8081",
+  "parent": "tr069-client",
+  "group": "tr069-family",
+  "label": {
+    "ru": "Мост DigAuth · BR · 8081",
+    "en": "DigAuth bridge · BR · 8081",
+    "es": "Vínculo DigAuth · BR · 8081",
+    "zh": "DigAuth 关联 · BR · 8081"
+  },
+  "source": {
+    "file": "DEANON-TR069CLIENT.md"
+  },
+  "denominator": null
+}

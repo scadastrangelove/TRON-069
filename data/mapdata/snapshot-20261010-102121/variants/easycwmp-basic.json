@@ -1,0 +1,179 @@
+{
+  "dork": "port:7547 \"WWW-Authenticate: Basic\" \"realm@easycwmp\"",
+  "total": 60,
+  "taken": "2026-10-10T11:10:46+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 3,
+      "covered": 60,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 19,
+      "covered": 60,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 9,
+      "covered": 60,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 60,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 57,
+      "value": "CN"
+    },
+    {
+      "count": 2,
+      "value": "CA"
+    },
+    {
+      "count": 1,
+      "value": "IR"
+    }
+  ],
+  "asn": [
+    {
+      "count": 38,
+      "value": "as9808"
+    },
+    {
+      "count": 9,
+      "value": "as4134"
+    },
+    {
+      "count": 3,
+      "value": "as4837"
+    },
+    {
+      "count": 2,
+      "value": "as17621"
+    },
+    {
+      "count": 2,
+      "value": "as24139"
+    },
+    {
+      "count": 2,
+      "value": "as54614"
+    },
+    {
+      "count": 2,
+      "value": "as56042"
+    },
+    {
+      "count": 1,
+      "value": "as44244"
+    },
+    {
+      "count": 1,
+      "value": "as4812"
+    }
+  ],
+  "ports": [
+    {
+      "count": 60,
+      "value": 7547
+    }
+  ],
+  "orgs": [
+    {
+      "count": 29,
+      "value": "China Mobile Communications Group Co., Ltd"
+    },
+    {
+      "count": 7,
+      "value": "China Mobile Communications Corporation"
+    },
+    {
+      "count": 4,
+      "value": "China Mobile Communications Corporation - shanxi"
+    },
+    {
+      "count": 2,
+      "value": "CHINA UNICOM Shanghai city network"
+    },
+    {
+      "count": 2,
+      "value": "CHINANET-ZJ Hangzhou node network"
+    },
+    {
+      "count": 2,
+      "value": "CIK Telecom INC"
+    },
+    {
+      "count": 2,
+      "value": "Huashu media&Network Limited"
+    },
+    {
+      "count": 1,
+      "value": "CHINANET Hubei province network"
+    },
+    {
+      "count": 1,
+      "value": "CHINANET SHANGHAI PROVINCE NETWORK"
+    },
+    {
+      "count": 1,
+      "value": "CHINANET Xinjiang province network"
+    },
+    {
+      "count": 1,
+      "value": "CHINANET anhui province network"
+    },
+    {
+      "count": 1,
+      "value": "CHINANET jiangsu province network"
+    },
+    {
+      "count": 1,
+      "value": "CHINANET-ZJ Ningbo node network"
+    },
+    {
+      "count": 1,
+      "value": "CHINANET-ZJ Zhongxin node network"
+    },
+    {
+      "count": 1,
+      "value": "China Unicom Guizhou province network"
+    },
+    {
+      "count": 1,
+      "value": "China Unicom Zhejiang province network"
+    },
+    {
+      "count": 1,
+      "value": "Chinanet Jiangsu Province Network"
+    },
+    {
+      "count": 1,
+      "value": "Iran Cell Service and Communication Company"
+    },
+    {
+      "count": 1,
+      "value": "sxyc-xinjiang-BAS"
+    }
+  ],
+  "id": "easycwmp-basic",
+  "parent": "easycwmp-vanilla",
+  "group": "easycwmp",
+  "label": {
+    "ru": "Basic на CR-порту",
+    "en": "Basic on CR port",
+    "es": "Basic en puerto CR",
+    "zh": "CR 端口 Basic"
+  },
+  "source": {
+    "file": "NOTES.md"
+  },
+  "denominator": null
+}

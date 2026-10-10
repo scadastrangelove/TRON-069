@@ -1,0 +1,147 @@
+{
+  "dork": "\"TR069 client TCP connection request Server\" country:SG port:1025",
+  "total": 36012,
+  "taken": "2026-10-10T11:11:41+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 36012,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 12,
+      "covered": 36012,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 10,
+      "covered": 36012,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 36012,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 36012,
+      "value": "SG"
+    }
+  ],
+  "asn": [
+    {
+      "count": 31676,
+      "value": "as9506"
+    },
+    {
+      "count": 2625,
+      "value": "as3758"
+    },
+    {
+      "count": 1522,
+      "value": "9506"
+    },
+    {
+      "count": 93,
+      "value": "as135600"
+    },
+    {
+      "count": 85,
+      "value": "3758"
+    },
+    {
+      "count": 4,
+      "value": "135600"
+    },
+    {
+      "count": 3,
+      "value": "as984"
+    },
+    {
+      "count": 2,
+      "value": "as17561"
+    },
+    {
+      "count": 1,
+      "value": "55430"
+    },
+    {
+      "count": 1,
+      "value": "as55430"
+    }
+  ],
+  "ports": [
+    {
+      "count": 36012,
+      "value": 1025
+    }
+  ],
+  "orgs": [
+    {
+      "count": 26872,
+      "value": "SingNET Broadband"
+    },
+    {
+      "count": 6540,
+      "value": "SingNet Pte Ltd"
+    },
+    {
+      "count": 902,
+      "value": "SINGTEL BUSINESS INTERNET"
+    },
+    {
+      "count": 795,
+      "value": "SingTel Mobile"
+    },
+    {
+      "count": 400,
+      "value": "Singapore Telecommunications Ltd, Magix Services"
+    },
+    {
+      "count": 380,
+      "value": "SingNet BroadBand Network Singapore Telecommunications LTD"
+    },
+    {
+      "count": 81,
+      "value": "Whiz Communications Pte Ltd"
+    },
+    {
+      "count": 19,
+      "value": "SingNET EVOLVE Broadband"
+    },
+    {
+      "count": 11,
+      "value": "Cogent Communications, LLC"
+    },
+    {
+      "count": 7,
+      "value": "Cloud Innovation Ltd"
+    },
+    {
+      "count": 3,
+      "value": "Octopus Web Solution LLC"
+    },
+    {
+      "count": 2,
+      "value": "StarHub Cable Vision Ltd"
+    }
+  ],
+  "id": "tr069-singtel-port-1025",
+  "parent": "tr069-client",
+  "group": "writeup-followups",
+  "label": {
+    "ru": "TR069 Client · Singtel / SG · 1025",
+    "en": "TR069 Client · Singtel / SG · 1025",
+    "es": "TR069 Client · Singtel / SG · 1025",
+    "zh": "TR069 Client · Singtel / SG · 1025"
+  },
+  "source": {
+    "file": "DEANON-TR069CLIENT.md"
+  },
+  "denominator": null
+}

@@ -1,0 +1,648 @@
+{
+ "tls_cr": {
+  "label": "TLS на CR-порту",
+  "query": "port:7547 ssl",
+  "total": 133,
+  "taken": "20261008-2227",
+  "countries": [
+   {
+    "count": 54,
+    "value": "US"
+   },
+   {
+    "count": 8,
+    "value": "IT"
+   },
+   {
+    "count": 7,
+    "value": "ES"
+   },
+   {
+    "count": 6,
+    "value": "DE"
+   },
+   {
+    "count": 5,
+    "value": "JP"
+   },
+   {
+    "count": 4,
+    "value": "CN"
+   },
+   {
+    "count": 4,
+    "value": "IN"
+   },
+   {
+    "count": 3,
+    "value": "AU"
+   },
+   {
+    "count": 3,
+    "value": "BE"
+   },
+   {
+    "count": 3,
+    "value": "CA"
+   },
+   {
+    "count": 3,
+    "value": "HU"
+   },
+   {
+    "count": 3,
+    "value": "NL"
+   },
+   {
+    "count": 2,
+    "value": "AR"
+   },
+   {
+    "count": 2,
+    "value": "FI"
+   },
+   {
+    "count": 2,
+    "value": "GB"
+   },
+   {
+    "count": 2,
+    "value": "ID"
+   },
+   {
+    "count": 2,
+    "value": "SE"
+   },
+   {
+    "count": 1,
+    "value": "AE"
+   },
+   {
+    "count": 1,
+    "value": "AT"
+   },
+   {
+    "count": 1,
+    "value": "BG"
+   },
+   {
+    "count": 1,
+    "value": "BO"
+   },
+   {
+    "count": 1,
+    "value": "BR"
+   },
+   {
+    "count": 1,
+    "value": "CH"
+   },
+   {
+    "count": 1,
+    "value": "CL"
+   },
+   {
+    "count": 1,
+    "value": "CZ"
+   },
+   {
+    "count": 1,
+    "value": "DK"
+   },
+   {
+    "count": 1,
+    "value": "HK"
+   },
+   {
+    "count": 1,
+    "value": "IE"
+   },
+   {
+    "count": 1,
+    "value": "MA"
+   },
+   {
+    "count": 1,
+    "value": "MX"
+   },
+   {
+    "count": 1,
+    "value": "MY"
+   },
+   {
+    "count": 1,
+    "value": "OM"
+   },
+   {
+    "count": 1,
+    "value": "PL"
+   },
+   {
+    "count": 1,
+    "value": "RU"
+   },
+   {
+    "count": 1,
+    "value": "SG"
+   },
+   {
+    "count": 1,
+    "value": "TW"
+   },
+   {
+    "count": 1,
+    "value": "VN"
+   }
+  ],
+  "asn": [
+   {
+    "count": 14,
+    "value": "as16509"
+   },
+   {
+    "count": 9,
+    "value": "as7922"
+   },
+   {
+    "count": 8,
+    "value": "as14061"
+   },
+   {
+    "count": 7,
+    "value": "as3269"
+   },
+   {
+    "count": 5,
+    "value": "as701"
+   },
+   {
+    "count": 5,
+    "value": "as8075"
+   },
+   {
+    "count": 3,
+    "value": "as208909"
+   },
+   {
+    "count": 2,
+    "value": "as16276"
+   },
+   {
+    "count": 2,
+    "value": "as20845"
+   },
+   {
+    "count": 2,
+    "value": "as22773"
+   }
+  ]
+ },
+ "genieacs": {
+  "label": "GenieACS admin-UI (открытые ACS)",
+  "query": "http.title:\"GenieACS\"",
+  "total": 3665,
+  "taken": "20261008-2227",
+  "countries": [
+   {
+    "count": 1242,
+    "value": "ID"
+   },
+   {
+    "count": 544,
+    "value": "BR"
+   },
+   {
+    "count": 480,
+    "value": "US"
+   },
+   {
+    "count": 207,
+    "value": "AU"
+   },
+   {
+    "count": 182,
+    "value": "AR"
+   },
+   {
+    "count": 132,
+    "value": "ES"
+   },
+   {
+    "count": 130,
+    "value": "IN"
+   },
+   {
+    "count": 81,
+    "value": "DE"
+   },
+   {
+    "count": 78,
+    "value": "SG"
+   },
+   {
+    "count": 64,
+    "value": "GB"
+   },
+   {
+    "count": 54,
+    "value": "NP"
+   },
+   {
+    "count": 32,
+    "value": "ZA"
+   },
+   {
+    "count": 28,
+    "value": "CN"
+   },
+   {
+    "count": 28,
+    "value": "CO"
+   },
+   {
+    "count": 25,
+    "value": "CA"
+   },
+   {
+    "count": 24,
+    "value": "KE"
+   },
+   {
+    "count": 22,
+    "value": "EC"
+   },
+   {
+    "count": 16,
+    "value": "MU"
+   },
+   {
+    "count": 14,
+    "value": "MX"
+   },
+   {
+    "count": 13,
+    "value": "HK"
+   },
+   {
+    "count": 12,
+    "value": "TR"
+   },
+   {
+    "count": 11,
+    "value": "FR"
+   },
+   {
+    "count": 11,
+    "value": "TW"
+   },
+   {
+    "count": 10,
+    "value": "AL"
+   },
+   {
+    "count": 10,
+    "value": "FI"
+   },
+   {
+    "count": 10,
+    "value": "PL"
+   },
+   {
+    "count": 9,
+    "value": "CL"
+   },
+   {
+    "count": 9,
+    "value": "CZ"
+   },
+   {
+    "count": 9,
+    "value": "HU"
+   },
+   {
+    "count": 9,
+    "value": "PK"
+   },
+   {
+    "count": 8,
+    "value": "BG"
+   },
+   {
+    "count": 8,
+    "value": "IT"
+   },
+   {
+    "count": 8,
+    "value": "NL"
+   },
+   {
+    "count": 8,
+    "value": "PH"
+   },
+   {
+    "count": 7,
+    "value": "BD"
+   },
+   {
+    "count": 6,
+    "value": "PE"
+   },
+   {
+    "count": 6,
+    "value": "TH"
+   },
+   {
+    "count": 5,
+    "value": "MM"
+   },
+   {
+    "count": 5,
+    "value": "UA"
+   },
+   {
+    "count": 4,
+    "value": "MY"
+   },
+   {
+    "count": 4,
+    "value": "VE"
+   },
+   {
+    "count": 4,
+    "value": "VN"
+   },
+   {
+    "count": 4,
+    "value": "XK"
+   },
+   {
+    "count": 3,
+    "value": "AE"
+   },
+   {
+    "count": 3,
+    "value": "AT"
+   },
+   {
+    "count": 3,
+    "value": "DO"
+   },
+   {
+    "count": 3,
+    "value": "JP"
+   },
+   {
+    "count": 3,
+    "value": "LT"
+   },
+   {
+    "count": 3,
+    "value": "MD"
+   },
+   {
+    "count": 3,
+    "value": "PY"
+   },
+   {
+    "count": 3,
+    "value": "SE"
+   },
+   {
+    "count": 3,
+    "value": "SK"
+   },
+   {
+    "count": 2,
+    "value": "AF"
+   },
+   {
+    "count": 2,
+    "value": "AM"
+   },
+   {
+    "count": 2,
+    "value": "BE"
+   },
+   {
+    "count": 2,
+    "value": "BT"
+   },
+   {
+    "count": 2,
+    "value": "BY"
+   },
+   {
+    "count": 2,
+    "value": "CY"
+   },
+   {
+    "count": 2,
+    "value": "DK"
+   },
+   {
+    "count": 2,
+    "value": "IE"
+   }
+  ]
+ },
+ "cwmp_agent": {
+  "label": "CWMP-Agent (профиль стран)",
+  "query": "\"CWMP-Agent\"",
+  "total": 18421,
+  "taken": "20261008-2227",
+  "countries": [
+   {
+    "count": 13711,
+    "value": "TN"
+   },
+   {
+    "count": 2007,
+    "value": "HK"
+   },
+   {
+    "count": 522,
+    "value": "US"
+   },
+   {
+    "count": 421,
+    "value": "CN"
+   },
+   {
+    "count": 275,
+    "value": "PH"
+   },
+   {
+    "count": 192,
+    "value": "UG"
+   },
+   {
+    "count": 146,
+    "value": "CI"
+   },
+   {
+    "count": 146,
+    "value": "ZA"
+   },
+   {
+    "count": 128,
+    "value": "SG"
+   },
+   {
+    "count": 114,
+    "value": "DE"
+   },
+   {
+    "count": 107,
+    "value": "GB"
+   },
+   {
+    "count": 71,
+    "value": "OM"
+   },
+   {
+    "count": 67,
+    "value": "JP"
+   },
+   {
+    "count": 58,
+    "value": "LK"
+   },
+   {
+    "count": 45,
+    "value": "ID"
+   },
+   {
+    "count": 43,
+    "value": "TH"
+   },
+   {
+    "count": 39,
+    "value": "NG"
+   },
+   {
+    "count": 33,
+    "value": "HT"
+   },
+   {
+    "count": 32,
+    "value": "HU"
+   },
+   {
+    "count": 30,
+    "value": "SE"
+   },
+   {
+    "count": 27,
+    "value": "MY"
+   },
+   {
+    "count": 25,
+    "value": "IT"
+   },
+   {
+    "count": 24,
+    "value": "RS"
+   },
+   {
+    "count": 21,
+    "value": "IR"
+   },
+   {
+    "count": 18,
+    "value": "AE"
+   },
+   {
+    "count": 18,
+    "value": "ES"
+   },
+   {
+    "count": 16,
+    "value": "KR"
+   },
+   {
+    "count": 15,
+    "value": "NL"
+   },
+   {
+    "count": 11,
+    "value": "IN"
+   },
+   {
+    "count": 9,
+    "value": "CA"
+   },
+   {
+    "count": 8,
+    "value": "AU"
+   },
+   {
+    "count": 8,
+    "value": "CH"
+   },
+   {
+    "count": 5,
+    "value": "EG"
+   },
+   {
+    "count": 4,
+    "value": "PL"
+   },
+   {
+    "count": 3,
+    "value": "BR"
+   },
+   {
+    "count": 3,
+    "value": "JO"
+   },
+   {
+    "count": 3,
+    "value": "PR"
+   },
+   {
+    "count": 3,
+    "value": "SN"
+   },
+   {
+    "count": 3,
+    "value": "UZ"
+   },
+   {
+    "count": 2,
+    "value": "BF"
+   },
+   {
+    "count": 1,
+    "value": "BH"
+   },
+   {
+    "count": 1,
+    "value": "CM"
+   },
+   {
+    "count": 1,
+    "value": "DK"
+   },
+   {
+    "count": 1,
+    "value": "DO"
+   },
+   {
+    "count": 1,
+    "value": "IL"
+   },
+   {
+    "count": 1,
+    "value": "MX"
+   },
+   {
+    "count": 1,
+    "value": "SA"
+   },
+   {
+    "count": 1,
+    "value": "UA"
+   }
+  ]
+ }
+}

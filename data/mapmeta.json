@@ -1,0 +1,1204 @@
+{
+  "_meta": {
+    "edition": "public",
+    "reviewed": "2026-10-10"
+  },
+  "lines": {
+    "cpe-server-1-0": {
+      "badge": "proven",
+      "vendor": "ZTE",
+      "role": "CPE CR",
+      "findings": [
+        "CPE-SERVER and cpe@zte.com markers were found in the inspected ZTE H108N image; they can describe related endpoints.",
+        "Operator and port associations support research slices, not hardware-model attribution."
+      ],
+      "anomalies": [
+        "A second line at Three UK: unusual outside Italy and Asia"
+      ],
+      "overlaps": [
+        {
+          "with": "zte",
+          "kind": "Same vendor, different stack generations"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "cpe-server-1-0"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "icwmp-iopsys": {
+      "badge": "proven",
+      "vendor": "iopsys/bbf (active OSS)",
+      "role": "CPE CR",
+      "findings": [
+        "Identified by the named authentication realm; counts describe the exact registry query."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "icwmp-iopsys"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "huaweihomegateway": {
+      "badge": "proven",
+      "vendor": "Huawei",
+      "role": "CPE CR / authentication response family",
+      "findings": [
+        "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
+        "Operator and port associations support research slices, not hardware-model attribution."
+      ],
+      "overlaps": [
+        {
+          "with": "huaweihomegateway-cr-slice",
+          "kind": "superset-of"
+        }
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "huaweihomegateway"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "huaweihomegateway-cr-slice": {
+      "badge": "proven",
+      "vendor": "Huawei",
+      "role": "CPE CR (7547)",
+      "findings": [
+        "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
+        "Operator and port associations support research slices, not hardware-model attribution."
+      ],
+      "overlaps": [
+        {
+          "with": "huaweihomegateway",
+          "kind": "subset-of"
+        }
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "huaweihomegateway-cr-slice"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "tr069-http-server": {
+      "badge": "proven",
+      "vendor": "TP-Link (IMAGE-PROVEN: /usr/bin/cwmp Archer VR1600v V2)",
+      "role": "CPE CR",
+      "findings": [
+        "The signature was found in an inspected TP-Link Archer VR1600v V2 image; firmware is not redistributed.",
+        "Response evidence does not establish a hardware model or exploitability."
+      ],
+      "anomalies": [],
+      "overlaps": [
+        {
+          "with": "sky-ee-tr069-http-server",
+          "kind": "superset-of"
+        },
+        {
+          "with": "windtre-tr069-http-server",
+          "kind": "superset-of"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "tr069-http-server"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "gsoap-park": {
+      "badge": "hypothesis",
+      "vendor": "gSOAP toolkit (multiple vendors)",
+      "role": "Mixed: toolkit shared by CPE, ACS and other SOAP services",
+      "findings": [
+        "Version markers are counted separately; a banner does not establish vulnerability.",
+        "Operator and port associations support research slices, not hardware-model attribution.",
+        "When a response matches both, prefer the specific realm as its primary label and retain gSOAP as toolkit evidence; aggregate query counts still overlap."
+      ],
+      "anomalies": [
+        "Response evidence does not establish a hardware model or exploitability."
+      ],
+      "overlaps": [
+        {
+          "with": "sagemcom",
+          "kind": "Same platform (Sagemcom on gSOAP/2.7)"
+        },
+        {
+          "with": "gsoap-2-7-vendor-map",
+          "kind": "superset-of"
+        },
+        {
+          "with": "gsoap-2-8-vendor-map",
+          "kind": "superset-of"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "gsoap-park"
+        },
+        {
+          "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "matching-precedence"
+        }
+      ]
+    },
+    "rdk-b-ccsptr069pa": {
+      "badge": "proven",
+      "vendor": "RDKCentral (OSS)",
+      "role": "CPE CR",
+      "findings": [
+        "Common Server: Cisco-CcspCwmpTcpCR/1.0",
+        "repo rdkcentral/tr069-protocol-agent"
+      ],
+      "anomalies": [
+        "US: regional cable operators WOW, Midcontinent and RCN, rather than the largest providers"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "rdk-b-ccsptr069pa"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "tr069-client": {
+      "badge": "class",
+      "vendor": "Atheros openagent family; device OEM unknown",
+      "role": "CPE CR",
+      "findings": [
+        "Source-template evidence supports an openagent-related component family; OEM carriers remain unresolved."
+      ],
+      "anomalies": [
+        "Response evidence does not establish a hardware model or exploitability."
+      ],
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "tr069-client"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "igdauthentication": {
+      "badge": "hypothesis",
+      "vendor": "IGD component class; vendor unresolved",
+      "role": "CPE CR",
+      "findings": [
+        "Identified by the named authentication realm; counts describe the exact registry query.",
+        "Operator and port associations support research slices, not hardware-model attribution."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "igdauthentication"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "easycwmp-vanilla": {
+      "badge": "proven",
+      "vendor": "Piva Software / easycwmp",
+      "role": "CPE CR",
+      "findings": [
+        "The opaque marker links the vanilla signature and renamed forks; their query results can overlap.",
+        "Reported package/source references do not prove deployment; the SpaceX control query is a network slice.",
+        "Historical authorized scans distinguished coarse 401/409 response classes; static realm and opaque markers do not identify exact patch releases."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "easycwmp-vanilla"
+        },
+        {
+          "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md"
+        }
+      ]
+    },
+    "askeycwmp-askey": {
+      "badge": "proven",
+      "vendor": "Askey (ODM)",
+      "role": "CPE CR",
+      "findings": [
+        "Server: ASKEY_CWMP_Client V1.2.2",
+        "Vivo BR = 591k ( Telefônica Brasil)"
+      ],
+      "anomalies": [
+        "No opaque: missed by Digest/opaque-based discovery",
+        "Colombia: regional ISPs Telebucaramanga and Metrotel"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "askeycwmp-askey"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "centurylink-lighttpd": {
+      "badge": "hypothesis",
+      "vendor": "ZyXEL/Technicolor class",
+      "role": "CPE CR",
+      "findings": [
+        "CR on lighttpd is a distinctive marker",
+        "CenturyLink share confirmed by subsets; query itself is US + lighttpd"
+      ],
+      "anomalies": [
+        "95%+ CenturyLink; remaining Verizon and Aureon"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "centurylink-lighttpd"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "sercomm-cpe-authentication": {
+      "badge": "proven",
+      "vendor": "Sercomm (explicit realm)",
+      "role": "CPE CR",
+      "findings": [
+        "Identified by the named authentication realm; counts describe the exact registry query.",
+        "Operator and port associations support research slices, not hardware-model attribution."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "sercomm-cpe-authentication"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "windtre-tr069-http-server": {
+      "badge": "class",
+      "vendor": "—",
+      "role": "CPE CR subset",
+      "findings": [
+        "WindTre has five platforms: this, Netty, Yapsie, TR069-Client and Huawei"
+      ],
+      "overlaps": [
+        {
+          "with": "tr069-http-server",
+          "kind": "subset-of"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "windtre-tr069-http-server"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "zte": {
+      "badge": "proven",
+      "vendor": "ZTE",
+      "role": "CPE CR (another generation)",
+      "findings": [
+        "CPE-SERVER and cpe@zte.com markers were found in the inspected ZTE H108N image; they can describe related endpoints."
+      ],
+      "anomalies": [
+        "Thailand: both TOT and AIS Fibre"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "zte"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "sagemcom": {
+      "badge": "proven",
+      "vendor": "Sagemcom",
+      "role": "CPE CR",
+      "findings": [
+        "Per-device opaque, not a family marker",
+        "Charter/Spectrum 211k + BT 6k + Superonline",
+        "When a response matches both, prefer the specific realm as its primary label and retain gSOAP as toolkit evidence; aggregate query counts still overlap."
+      ],
+      "overlaps": [
+        {
+          "with": "gsoap-park",
+          "kind": "same-chassis"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "sagemcom"
+        },
+        {
+          "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "matching-precedence"
+        }
+      ]
+    },
+    "dt-speedport-sdk": {
+      "badge": "hypothesis",
+      "vendor": "DT Speedport SDK (Thomson-style realm)",
+      "role": "CPE CR",
+      "findings": [
+        "opaque 5ccc069c… is the literal RFC 2617 §3.5 example. The claimed shared SDK with ACSSimTool was withdrawn on review, 2026-10-08"
+      ],
+      "overlaps": [
+        {
+          "with": "acssimtool",
+          "kind": "Shared SDK hypothesis; an RFC constant is not proof"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "dt-speedport-sdk"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "charter-anti-scan-404": {
+      "badge": "class",
+      "vendor": "—",
+      "role": "Path-strict CR class",
+      "findings": [
+        "Bare 404 at / complies with the specification: the device assigns its CR URL",
+        "'Anti-scan' is an interpretation of sample §9.7; the query is broader than that claim"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "charter-anti-scan-404"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "yapsieworld": {
+      "badge": "anonymous",
+      "vendor": "—",
+      "role": "CPE CR",
+      "findings": [
+        "Italy: EOLO, WindTre and TI business"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "yapsieworld"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "sky-ee-tr069-http-server": {
+      "badge": "class",
+      "vendor": "—",
+      "role": "CPE CR subset",
+      "findings": [
+        "Australian stack in the UK"
+      ],
+      "overlaps": [
+        {
+          "with": "tr069-http-server",
+          "kind": "subset-of"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "sky-ee-tr069-http-server"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "gateway-realm": {
+      "badge": "anonymous",
+      "vendor": "Vendor unknown; candidates Technicolor / ADB",
+      "role": "CPE CR",
+      "findings": [
+        "The port-7170 slice is associated with TIM. Technicolor and ADB remain candidates; the inspected image does not close attribution."
+      ],
+      "anomalies": [
+        "Response evidence does not establish a hardware model or exploitability."
+      ],
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "gateway-realm"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "ti-cpe-authentication": {
+      "badge": "proven",
+      "vendor": "Telecom Italia (operator)",
+      "role": "CPE CR",
+      "findings": [
+        "Identified by the named authentication realm; counts describe the exact registry query."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "ti-cpe-authentication"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "nettyserver": {
+      "badge": "hypothesis",
+      "vendor": "Custom WindTre implementation (Java/Netty)",
+      "role": "CPE CR",
+      "findings": [
+        "Italy-focused Basic-authentication signature; the WindTre platform association remains a hypothesis."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "nettyserver"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "digauth": {
+      "badge": "proven",
+      "vendor": "Atheros/Qualcomm SDK openagent-2.0",
+      "role": "CPE CR",
+      "findings": [
+        "Source-template evidence supports an openagent-related component family; OEM carriers remain unresolved."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "digauth"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "realtek-sdk": {
+      "badge": "proven",
+      "vendor": "Realtek SDK",
+      "role": "CPE CR",
+      "findings": [
+        "opaque per-device",
+        "When a response matches both, prefer the specific realm as its primary label and retain gSOAP as toolkit evidence; aggregate query counts still overlap."
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "realtek-sdk"
+        },
+        {
+          "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "matching-precedence"
+        }
+      ]
+    },
+    "kt-cems": {
+      "badge": "proven",
+      "vendor": "Korea Telecom",
+      "role": "CPE CR",
+      "findings": [
+        "KR park: 11.4M on 7547; ~80% silent (whitelist-CR hypothesis)"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "kt-cems"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "magticom-gsoap": {
+      "badge": "proven",
+      "vendor": "Magticom (operator)",
+      "role": "CPE CR",
+      "findings": [
+        "Port 6264: national default in Georgia"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "magticom-gsoap"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "qacafe-cdrouter-test-realm": {
+      "badge": "proven",
+      "vendor": "QA Cafe CDRouter",
+      "role": "Test tool in production",
+      "anomalies": [
+        "Test-tool realm on production CPE in KR"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "qacafe-cdrouter-test-realm"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "cwmpd-tr069agent": {
+      "badge": "proven",
+      "vendor": "Intel UGW",
+      "role": "CPE CR",
+      "findings": [
+        "Identified by the named authentication realm; counts describe the exact registry query."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "cwmpd-tr069agent"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "cwmp-agent-orange-tunisie": {
+      "badge": "proven",
+      "vendor": "Orange Tunisie (operator)",
+      "role": "CPE CR",
+      "anomalies": [
+        "49-country profile: TN 13.6k, HK 2k, US 0.5k and UG; not limited to Tunisia",
+        "Tunisia: 41% no_response; suspected SYN proxy",
+        "HKT/PCCW HK: 1.7k on port 5400 with byte-identical banners; shared OEM component across unrelated operators"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "cwmp-agent-orange-tunisie"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "acssimtool": {
+      "badge": "class",
+      "vendor": "Original ACSSimTool vendor unknown",
+      "role": "CPE CR",
+      "findings": [
+        "A public reimplementation does not identify the original vendor or deployed credentials."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "acssimtool"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "arris-cpe-authentication": {
+      "badge": "proven",
+      "vendor": "Arris",
+      "role": "CPE CR",
+      "findings": [
+        "Third Charter platform"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "arris-cpe-authentication"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "gsoap-service-realm": {
+      "badge": "class",
+      "vendor": "gSOAP toolkit",
+      "role": "CPE CR",
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "gsoap-service-realm"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "cwmp-lancom": {
+      "badge": "proven",
+      "vendor": "LANCOM",
+      "role": "CPE CR",
+      "findings": [
+        "Business routers in Germany"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "cwmp-lancom"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "avsystem-libcwmp": {
+      "badge": "proven",
+      "vendor": "AVSystem",
+      "role": "CPE CR",
+      "findings": [
+        "Swisscom CH 93%; banner versions 5.5.4–5.7.9",
+        "Ports 1024/1025"
+      ],
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "avsystem-libcwmp"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "junk-realms": {
+      "badge": "class",
+      "vendor": "—",
+      "role": "CPE CR",
+      "findings": [
+        "Empty realms or realm='dirname'; legacy RomPager/4.07 at TI"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "junk-realms"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "genieacs-admin-ui": {
+      "badge": "proven",
+      "vendor": "GenieACS",
+      "role": "ACS (not CPE)",
+      "findings": [
+        "Version markers are counted separately; a banner does not establish vulnerability."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "genieacs-admin-ui"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "meig-meigsmart-com": {
+      "badge": "proven",
+      "vendor": "MEiG (OEM)",
+      "role": "CPE CR",
+      "findings": [
+        "Identified by the named authentication realm; counts describe the exact registry query."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "meig-meigsmart-com"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "tr069-client-cli-server-netcore": {
+      "badge": "proven",
+      "vendor": "Netcore/Netis",
+      "role": "CPE CR",
+      "findings": [
+        "Related 'TR069 client X Server' template; CHINANET-ZJ and US WISPs",
+        "TR-069 was not found in three inspected retail builds: WF2419 V2.2, WF2409E V3.3 and WF2411E V2.1. An operator build is a working explanation for the observed signature; the result does not cover all Netis firmware. Source: ACS-HUNT.md, round 2."
+      ],
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "tr069-client-cli-server-netcore"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "ruijie-cpe": {
+      "badge": "proven",
+      "vendor": "RUIJIE",
+      "role": "CPE CR",
+      "findings": [
+        "CN Unicom; opaque=ffffff…"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "ruijie-cpe"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "openacs": {
+      "badge": "proven",
+      "vendor": "OpenACS",
+      "role": "ACS",
+      "findings": [
+        "12 hosts"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "openacs"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "axiros": {
+      "badge": "proven",
+      "vendor": "Axiros",
+      "role": "ACS",
+      "findings": [
+        "7 hosts"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "axiros"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "easycwmp-fork-ecntcwmp": {
+      "badge": "proven",
+      "vendor": "easycwmp fork (Econet SoC ONU)",
+      "role": "CPE CR",
+      "findings": [
+        "Family identified by opaque 328458fa… despite realm rebranding",
+        "Panama C&W/Liberty/Claro; HSGQ/V-SOL/Wasu ONUs"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "easycwmp-fork-ecntcwmp"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "easycwmp-fork-leanoacs": {
+      "badge": "proven",
+      "vendor": "easycwmp fork",
+      "role": "CPE CR",
+      "findings": [
+        "Iran Mobin/Asiatech; easycwmp opaque family"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "easycwmp-fork-leanoacs"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "easycwmp-fork-ltecpe": {
+      "badge": "proven",
+      "vendor": "easycwmp fork",
+      "role": "CPE CR",
+      "findings": [
+        "LTE CPE in Liberia/CHT"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "easycwmp-fork-ltecpe"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "gsoap-2-7-vendor-map": {
+      "badge": "class",
+      "vendor": "gSOAP/2.7 subset",
+      "role": "Version subset",
+      "overlaps": [
+        {
+          "with": "gsoap-park",
+          "kind": "subset-of"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "gsoap-2-7-vendor-map"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "gsoap-2-8-vendor-map": {
+      "badge": "class",
+      "vendor": "gSOAP/2.8 subset",
+      "role": "Version subset",
+      "overlaps": [
+        {
+          "with": "gsoap-park",
+          "kind": "subset-of"
+        }
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "gsoap-2-8-vendor-map"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "fake-apache-openagent": {
+      "badge": "proven",
+      "vendor": "Atheros openagent",
+      "role": "CPE CR",
+      "findings": [
+        "Source-template evidence supports an openagent-related component family; OEM carriers remain unresolved.",
+        "Response evidence does not establish a hardware model or exploitability."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "fake-apache-openagent"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "decimal-nonce-class": {
+      "badge": "class",
+      "vendor": "—",
+      "role": "Authentication response class",
+      "findings": [
+        "Decimal authentication-response pattern; a response class, not a vendor attribution."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "decimal-nonce-class"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "mini-web-server-1-0-zte-corp": {
+      "badge": "proven",
+      "vendor": "ZTE (IMAGE-PROVEN)",
+      "role": "Web UI (not CR)",
+      "findings": [
+        "String from ZXHN H108N bin/httpd",
+        "CANTV VE 30k and Link.NET EG 10k: ZTE web interfaces outside CR discovery"
+      ],
+      "sources": [
+        {
+          "file": "NOTES.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "mini-web-server-1-0-zte-corp"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "cwmp-server": {
+      "badge": "anonymous",
+      "vendor": "—",
+      "role": "CWMP HTTP service",
+      "findings": [
+        "Unattributed lowercase Server header with an uppercase date; observed on ports 7547, 7548 and 8069.",
+        "Research dated 2026-10-10: Lanet (UA), Hsin Yeong An Cable (TW), VIPTURBO (BR), Cool Ideas (ZA), A1 (BY). Operator distribution does not identify the manufacturer.",
+        "No web interface was found in 12 inspected host records; a separate check of 25 records found no Ruijie markers. These negative results are sample-limited; the inspected RDK/HoneyThing matches do not establish attribution. Source: ACS-HUNT.md, round 3."
+      ],
+      "anomalies": [
+        "The service role is not confirmed; a 404 response alone does not distinguish CPE from ACS."
+      ],
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "cwmp-server"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "telefonica-cwmpweb": {
+      "badge": "proven",
+      "vendor": "Telefónica",
+      "role": "ACS · HNM walled-garden",
+      "findings": [
+        "The cwmpWeb path and main.acs.telefonica.net cookie domain identify an ACS frontend.",
+        "The banner advertises gSOAP/2.7 and BIG-IP; software version alone does not establish exploitability."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "telefonica-cwmpweb"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    }
+  }
+}

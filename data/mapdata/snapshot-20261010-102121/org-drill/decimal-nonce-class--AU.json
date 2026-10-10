@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:AU",
+ "total": 137,
+ "taken": "2026-10-10T10:58:41+00:00",
+ "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 137,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 137,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 128,
+   "value": "as1221"
+  },
+  {
+   "count": 7,
+   "value": "1221"
+  },
+  {
+   "count": 1,
+   "value": "as2764"
+  },
+  {
+   "count": 1,
+   "value": "as4764"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 135,
+   "value": "Telstra Limited"
+  },
+  {
+   "count": 1,
+   "value": "AAPT Limited"
+  },
+  {
+   "count": 1,
+   "value": "Aussie Broadband"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "AU"
+}

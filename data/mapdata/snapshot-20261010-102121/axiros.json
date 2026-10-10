@@ -1,0 +1,65 @@
+{
+ "dork": "\"Axiros\"",
+ "total": 6,
+ "taken": "2026-10-10T10:21:52+00:00",
+ "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 4,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 4,
+   "value": "DE"
+  },
+  {
+   "count": 2,
+   "value": "CH"
+  }
+ ],
+ "asn": [
+  {
+   "count": 4,
+   "value": "as24940"
+  },
+  {
+   "count": 2,
+   "value": "as51873"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3,
+   "value": 80
+  },
+  {
+   "count": 1,
+   "value": 443
+  },
+  {
+   "count": 1,
+   "value": 7547
+  },
+  {
+   "count": 1,
+   "value": 8443
+  }
+ ],
+ "orgs": [],
+ "name": "Axiros"
+}

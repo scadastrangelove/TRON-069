@@ -1,0 +1,553 @@
+[
+  {
+    "id": "tron-069-manifesto",
+    "date": "2026-10-10",
+    "kind": "atlas",
+    "pinned": true,
+    "title": {
+      "en": "The last mile matters — the TRON-069 manifesto",
+      "ru": "Последняя миля важна — манифест TRON-069",
+      "es": "La última milla importa — manifiesto de TRON-069",
+      "zh": "最后一公里很重要 — TRON-069 宣言"
+    },
+    "body": {
+      "en": "TRON-069 exists to draw attention to the (in)security of the last mile: the familiar little boxes that connect our homes to the Internet. Routers and modems rarely command the attention given to wind turbines or power-generation control systems. Yet they are part of the Internet's invisible foundation. A healthy backbone is not enough: when the last mile fails, access disappears.\n\nContinuing the tradition of SCADA StrangeLove, SCADA SOS and SD-WAN New Hop, we make overlooked infrastructure visible and work responsibly with vendors to investigate vulnerabilities, coordinate disclosure and verify fixes. We want research to lead to safer devices and a more dependable Internet, making the world a little better for the people who rely on it.\n\nOur research uses agentic technologies, including Rust-in-Peace and Reproof, to support investigation, reproduction and verification. Evidence, human review and responsible disclosure guide what we publish.",
+      "ru": "TRON-069 создан, чтобы привлечь внимание к (не)безопасности последней мили — привычных коробочек, которые подключают наши дома к Интернету. Роутеры и модемы редко получают столько внимания, сколько ветряки или системы управления генерацией. Но они — часть невидимой основы Интернета. Исправного бэкбона недостаточно: когда последняя миля не работает, доступа нет.\n\nПродолжая традиции SCADA StrangeLove, SCADA SOS и SD-WAN New Hop, мы делаем незаметную инфраструктуру видимой и ответственно работаем с вендорами: исследуем уязвимости, согласуем их раскрытие и проверяем исправления. Мы хотим, чтобы исследования приводили к более безопасным устройствам и надёжному Интернету, делая мир немного лучше для тех, кто от него зависит.\n\nВ исследованиях мы используем агентские технологии, включая Rust-in-Peace и Reproof, для анализа, воспроизведения и проверки результатов. Доказательства, проверка человеком и ответственное раскрытие определяют, что мы публикуем.",
+      "es": "TRON-069 busca llamar la atención sobre la (in)seguridad de la última milla: esas pequeñas cajas cotidianas que conectan nuestros hogares a Internet. Los routers y módems rara vez reciben la atención dedicada a los aerogeneradores o los sistemas de control de generación eléctrica. Sin embargo, forman parte de los cimientos invisibles de Internet. Una red troncal en buen estado no basta: cuando falla la última milla, desaparece el acceso.\n\nSiguiendo la tradición de SCADA StrangeLove, SCADA SOS y SD-WAN New Hop, hacemos visible la infraestructura que pasa inadvertida y colaboramos responsablemente con los fabricantes para investigar vulnerabilidades, coordinar su divulgación y verificar las correcciones. Queremos que la investigación produzca dispositivos más seguros y una Internet más fiable, haciendo el mundo un poco mejor para quienes dependen de ella.\n\nNuestra investigación utiliza tecnologías de agentes, como Rust-in-Peace y Reproof, para apoyar el análisis, la reproducción y la verificación. La evidencia, la revisión humana y la divulgación responsable guían lo que publicamos.",
+      "zh": "TRON-069 希望让人们关注最后一公里的安全隐患：那些把我们的家连接到互联网的普通小盒子。路由器和调制解调器很少像风力发电机或发电控制系统那样受到关注，但它们也是互联网看不见的基础。骨干网正常运行还不够：最后一公里一旦中断，就无法接入网络。\n\n延续 SCADA StrangeLove、SCADA SOS 和 SD-WAN New Hop 的传统，我们让被忽视的基础设施进入公众视野，并以负责任的方式与厂商合作，研究漏洞、协调披露并验证修复。我们希望研究带来更安全的设备和更可靠的互联网，让依赖它的人们生活在更好的世界中。\n\n我们的研究使用包括 Rust-in-Peace 和 Reproof 在内的智能体技术，辅助分析、复现和验证。证据、人工审查和负责任的披露决定我们公开哪些成果。"
+    },
+    "links": [
+      {
+        "label": "Rust-in-Peace",
+        "url": "https://github.com/scadastrangelove/rust-in-peace"
+      },
+      {
+        "label": "Reproof",
+        "url": "https://github.com/scadastrangelove/reproof"
+      }
+    ],
+    "evidence": [
+      {
+        "file": "README.md",
+        "anchor": "manifesto"
+      }
+    ]
+  },
+  {
+    "id": "tron-069-project-name",
+    "date": "2026-10-10",
+    "kind": "atlas",
+    "title": {
+      "en": "TRON-069 by SCADA StrangeLove",
+      "ru": "TRON-069 by SCADA StrangeLove",
+      "es": "TRON-069 by SCADA StrangeLove",
+      "zh": "TRON-069 by SCADA StrangeLove"
+    },
+    "body": {
+      "en": "The atlas is now named TRON-069, a SCADA StrangeLove project. It maps TR-069/CWMP signatures, countries and operators using dated Shodan aggregates.",
+      "ru": "Атлас получил имя TRON-069 — проект SCADA StrangeLove. Он показывает сигнатуры TR-069/CWMP, страны и операторов на основе датированных агрегатов Shodan.",
+      "es": "El atlas se llama ahora TRON-069, un proyecto de SCADA StrangeLove. Representa firmas TR-069/CWMP, países y operadores mediante agregados de Shodan con fecha.",
+      "zh": "图谱现命名为 TRON-069，是 SCADA StrangeLove 的项目。它通过带有日期的 Shodan 聚合数据展示 TR-069/CWMP 指纹、国家及运营商。"
+    },
+    "evidence": [
+      {
+        "file": "README.md"
+      },
+      {
+        "file": "atlas/map-template.html"
+      },
+      {
+        "file": "NOTICE"
+      }
+    ]
+  },
+  {
+    "id": "complete-fact-catalog-history",
+    "date": "2026-10-10",
+    "kind": "data",
+    "title": {
+      "ru": "Все наблюдения включены в сбор; добавлена история",
+      "en": "All observations covered by collection; history added",
+      "es": "Todas las observaciones incluidas; historial añadido",
+      "zh": "采集覆盖全部观测，并新增历史记录"
+    },
+    "body": {
+      "en": "The full run collected 93 research queries and covered all 39 observations. Counts retain their collection times; separate UTC snapshots preserve history. Results describe fingerprints and indexed responses, not vulnerable-device counts.",
+      "ru": "Полный сбор включает 93 исследовательских запроса и все 39 наблюдений. Счётчики сохраняют время измерения; отдельные UTC-снапшоты сохраняют историю. Это фингерпринты и индексированные ответы, а не число уязвимых устройств.",
+      "es": "La recopilación completa incluye 93 consultas de investigación y las 39 observaciones. Los recuentos conservan sus fechas y las instantáneas UTC separadas preservan el historial. Describen huellas y respuestas indexadas, no dispositivos vulnerables.",
+      "zh": "完整采集包括 93 项研究查询和全部 39 项观察。计数保留采集时间，独立 UTC 快照保存历史。结果描述指纹及索引响应，不代表易受攻击设备的数量。"
+    },
+    "evidence": [
+      {
+        "file": "data/collection-queries.json"
+      },
+      {
+        "file": "tools/collection_catalog.py"
+      },
+      {
+        "file": "tools/snapshot_history.py"
+      }
+    ]
+  },
+  {
+    "id": "passive-attribution-round-three",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "ru": "Уточнены TIM, Singtel и границы атрибуции",
+      "en": "TIM, Singtel and attribution limits clarified",
+      "es": "Aclarados TIM, Singtel y los límites de atribución",
+      "zh": "明确 TIM、Singtel 归属及研究边界"
+    },
+    "body": {
+      "ru": "Gateway на 7170 связан с Telecom Italia / TIM; Technicolor и ADB остаются кандидатами. Для cwmp server добавлены операторский профиль и границы отрицательных проверок. Уточнены ко-хостинг Singtel с ZTE, результаты трёх retail-сборок Netis и ограничения проверки RAC2V1K. Публичный реимплемент ACSSimTool не устанавливает вендора оригинала.",
+      "en": "Gateway on port 7170 is associated with Telecom Italia / TIM; Technicolor and ADB remain candidates. cwmp server now includes an operator profile and the scope of negative checks. Singtel co-hosting with ZTE, three Netis retail builds and RAC2V1K verification limits are clarified. A public ACSSimTool reimplementation does not identify the original vendor.",
+      "es": "Gateway en el puerto 7170 se asocia con Telecom Italia / TIM; Technicolor y ADB siguen siendo candidatos. cwmp server incorpora el perfil de operadores y el alcance de las comprobaciones negativas. Se aclaran la coexistencia Singtel/ZTE, tres versiones comerciales Netis y los límites de verificación de RAC2V1K. Una reimplementación pública de ACSSimTool no identifica al fabricante original.",
+      "zh": "7170 端口的 Gateway 与 Telecom Italia / TIM 关联；Technicolor 和 ADB 仍为候选。cwmp server 新增运营商分布及负面检查范围。明确了 Singtel 与 ZTE 的同主机记录、三款 Netis 零售固件检查及 RAC2V1K 验证限制。公开的 ACSSimTool 重实现无法确定原始厂商。"
+    },
+    "evidence": [
+      {
+        "file": "ACS-HUNT.md"
+      },
+      {
+        "file": "DEANON-TR069CLIENT.md"
+      }
+    ]
+  },
+  {
+    "id": "obuspa-banner-research",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "ru": "obuspa: отдельная HTTP-сигнатура не найдена",
+      "en": "obuspa: no distinct HTTP signature found",
+      "es": "obuspa: no se encontró una firma HTTP propia",
+      "zh": "obuspa：未发现独有 HTTP 签名"
+    },
+    "body": {
+      "ru": "В исследованном исходнике WebSocket-сервер obuspa использует libwebsockets без собственной строки в HTTP-ответах. Отдельная линия в атлас не добавлена: отсутствие различимой сигнатуры не означает отсутствие развёрнутых агентов.",
+      "en": "In the inspected source, the obuspa WebSocket server uses libwebsockets without a custom HTTP response string. No separate atlas line was added: the lack of a distinct signature does not imply that no agents are deployed.",
+      "es": "En el código revisado, el servidor WebSocket de obuspa usa libwebsockets sin una cadena HTTP propia. No se añadió una línea al atlas: la falta de una firma distinguible no implica que no existan agentes desplegados.",
+      "zh": "所检查源码中的 obuspa WebSocket 服务使用 libwebsockets，HTTP 响应没有自定义字符串。未新增图集签名：缺少可区分的特征并不代表没有部署的代理。"
+    },
+    "evidence": [
+      {
+        "file": "ACS-HUNT.md"
+      }
+    ]
+  },
+  {
+    "id": "acs-cpe-research-catalog",
+    "date": "2026-10-10",
+    "kind": "data",
+    "title": {
+      "ru": "ACS и CPE разделены; добавлены две линии",
+      "en": "ACS and CPE distinguished; two lines added",
+      "es": "ACS y CPE diferenciados; dos líneas añadidas",
+      "zh": "区分 ACS 与 CPE，新增两条签名"
+    },
+    "body": {
+      "ru": "Добавлены cwmp server и Telefónica cwmpWeb. Роли CPE, ACS, смешанных и неподтверждённых сервисов обозначены явно. Каталог из 44 запросов обновляет исследовательские срезы TR069 Client, Huawei, AVSystem и easycwmp; новый сбор сохраняет исходный снапшот.",
+      "en": "Added cwmp server and Telefónica cwmpWeb. CPE, ACS, mixed and unconfirmed roles are explicit. A 44-query catalog refreshes research slices for TR069 Client, Huawei, AVSystem and easycwmp; new collections preserve the source snapshot.",
+      "es": "Se añadieron cwmp server y Telefónica cwmpWeb. Los roles CPE, ACS, mixtos y sin confirmar son explícitos. Un catálogo de 44 consultas actualiza los cortes de TR069 Client, Huawei, AVSystem y easycwmp; las nuevas recopilaciones conservan la instantánea original.",
+      "zh": "新增 cwmp server 和 Telefónica cwmpWeb，明确标注 CPE、ACS、混合及未确认角色。44 项查询目录用于更新 TR069 Client、Huawei、AVSystem 与 easycwmp 的研究子集；新采集保留原始快照。"
+    },
+    "evidence": [
+      {
+        "file": "registry.csv"
+      },
+      {
+        "file": "data/collection-queries.json"
+      },
+      {
+        "file": "tools/collect-map.py"
+      },
+      {
+        "file": "ACS-HUNT.md"
+      }
+    ]
+  },
+  {
+    "id": "full-operator-collector",
+    "date": "2026-10-10",
+    "kind": "data",
+    "title": {
+      "ru": "Сборщик готов к полной детализации операторов",
+      "en": "Collector ready for all country–line pairs",
+      "es": "Recopilador preparado para todos los pares país–línea",
+      "zh": "采集器已支持全部国家与产品线组合"
+    },
+    "body": {
+      "ru": "Добавлен сбор операторов и ASN для всех наблюдаемых пар «линейка × страна», с продолжением после остановки. Используется авторизация Shodan CLI. Новая детализация появится после завершения сбора.",
+      "en": "Operator and ASN collection now covers every observed country–line pair and can resume after interruption. It reuses Shodan CLI credentials. The additional detail becomes available after collection completes.",
+      "es": "La recopilación de operadores y ASN abarca todos los pares país–línea observados y puede reanudarse. Reutiliza las credenciales de Shodan CLI. El detalle adicional estará disponible al completar la recopilación.",
+      "zh": "运营商与 ASN 采集现已覆盖所有已观测到的国家与产品线组合，并支持中断后继续。沿用 Shodan CLI 的认证信息；新增明细将在采集完成后提供。"
+    },
+    "evidence": [
+      {
+        "file": "tools/collect-map.py"
+      }
+    ]
+  },
+  {
+    "id": "atlas-ready",
+    "date": "2026-10-10",
+    "kind": "atlas",
+    "title": {
+      "ru": "Атлас подготовлен к публикации",
+      "en": "Atlas prepared for publication",
+      "es": "Atlas preparado para su publicación",
+      "zh": "图集已准备发布"
+    },
+    "body": {
+      "ru": "В проекте собрана версия с 50 линейками, интерактивной картой и четырьмя языками. Входная страница подготовлена для статического хостинга.",
+      "en": "The project now includes 50 signature lines, an interactive map and four languages. Its entry page is prepared for static hosting.",
+      "es": "El proyecto reúne 50 líneas de firmas, un mapa interactivo y cuatro idiomas. La página de entrada está preparada para alojamiento estático.",
+      "zh": "项目已包含 50 条特征、交互地图和四种语言。入口页面已准备好用于静态托管。"
+    },
+    "evidence": [
+      {
+        "file": "README.md"
+      },
+      {
+        "file": "atlas/map-template.html"
+      }
+    ]
+  },
+  {
+    "id": "tr069-client-lineage",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "ru": "Уточнено происхождение TR069 Client",
+      "en": "TR069 Client lineage clarified",
+      "es": "Aclarado el origen de TR069 Client",
+      "zh": "TR069 Client 代码来源进一步明确"
+    },
+    "body": {
+      "ru": "В журнале исследования TR069 Client связан с Atheros openagent по шаблону HTTP-ответа. Уточнены подсемейства компонента; происхождение кода не означает единого производителя всех наблюдаемых устройств.",
+      "en": "The research log links TR069 Client to Atheros openagent through its HTTP response template. Component subfamilies have been clarified; code lineage does not imply one manufacturer for all observed devices.",
+      "es": "El registro de investigación vincula TR069 Client con Atheros openagent mediante la plantilla de respuesta HTTP. Se aclararon las subfamilias; el origen del código no implica un único fabricante de todos los equipos observados.",
+      "zh": "研究日志通过 HTTP 响应模板将 TR069 Client 与 Atheros openagent 关联，并明确了组件子族。代码来源并不意味着所有观测设备来自同一制造商。"
+    },
+    "evidence": [
+      {
+        "file": "DEANON-TR069CLIENT.md"
+      },
+      {
+        "file": "data/mapmeta.json"
+      }
+    ]
+  },
+  {
+    "id": "slice-quality",
+    "date": "2026-10-10",
+    "kind": "atlas",
+    "title": {
+      "ru": "Уточнены расчёты операторских срезов",
+      "en": "Operator slice calculations corrected",
+      "es": "Corregidos los cálculos por operador",
+      "zh": "运营商筛选计数已修正"
+    },
+    "body": {
+      "ru": "Фильтры учитывают фактические совпадения выбранного оператора. Добавлены пояснения покрытия данных и неизвестной географии; исправлены ссылки, поиск и мобильная раскладка.",
+      "en": "Filters use the selected operator’s actual match counts. Coverage and unknown geography are explained; shared links, search and the mobile layout have been corrected.",
+      "es": "Los filtros usan los recuentos reales del operador seleccionado. Se explica la cobertura y la geografía desconocida; se corrigieron enlaces, búsqueda y diseño móvil.",
+      "zh": "筛选使用所选运营商的实际匹配数。新增数据覆盖率与未知地理位置说明，并修正分享链接、搜索和移动端布局。"
+    },
+    "evidence": [
+      {
+        "file": "reports/TR-ATLAS-FIXES-2026-10-10.md"
+      }
+    ]
+  },
+  {
+    "id": "four-languages",
+    "date": "2026-10-10",
+    "kind": "atlas",
+    "title": {
+      "ru": "Атлас на четырёх языках",
+      "en": "Four languages for the atlas",
+      "es": "El atlas en cuatro idiomas",
+      "zh": "图集支持四种语言"
+    },
+    "body": {
+      "ru": "Доступны русский, английский, испанский и китайский. Переведены интерфейс, реестр линеек и исследовательские наблюдения; язык сохраняется в ссылке.",
+      "en": "Russian, English, Spanish and Chinese are available across the interface, signature registry and research observations. Shared links preserve the selected language.",
+      "es": "Ruso, inglés, español y chino están disponibles en la interfaz, el registro y las observaciones. Los enlaces conservan el idioma seleccionado.",
+      "zh": "界面、特征注册表与研究观察均支持俄语、英语、西班牙语和中文。分享链接会保留所选语言。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.29"
+      },
+      {
+        "file": "atlas/map-template.html"
+      }
+    ]
+  },
+  {
+    "id": "line-variations",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "ru": "Добавлены вариации и дополнительные запросы",
+      "en": "Variations and additional queries added",
+      "es": "Añadidas variantes y consultas adicionales",
+      "zh": "新增变体与补充查询"
+    },
+    "body": {
+      "ru": "Карточки линеек дополнены географическими и операторскими группами, портами и дополнительными сигнатурами. Рядом с наблюдениями доступны соответствующие запросы Shodan.",
+      "en": "Line profiles now include geographic and operator groups, ports and additional signatures. The corresponding Shodan queries accompany each observation.",
+      "es": "Los perfiles incluyen grupos geográficos y de operadores, puertos y firmas adicionales. Cada observación permite consultar su búsqueda de Shodan.",
+      "zh": "产品线资料新增地理与运营商分组、端口和补充特征。每项观察均附有对应的 Shodan 查询。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.28"
+      },
+      {
+        "file": "data/mapdata/facts.json"
+      }
+    ]
+  },
+  {
+    "id": "explorer-v3",
+    "date": "2026-10-09",
+    "kind": "atlas",
+    "title": {
+      "ru": "Единый выбор на карте, в фильтрах и таблицах",
+      "en": "Selection shared across map, filters and tables",
+      "es": "Selección común en mapa, filtros y tablas",
+      "zh": "地图、筛选器与表格共享选择状态"
+    },
+    "body": {
+      "ru": "В версии v3 выбор страны, линейки или оператора связан с картой и карточкой среза. Добавлены сравнение линеек и быстрый поиск.",
+      "en": "Version 3 connects country, line and operator selections to the map and slice inspector, with line comparison and quick search.",
+      "es": "La versión 3 vincula la selección de país, línea y operador con el mapa y el inspector, e incorpora comparación y búsqueda rápida.",
+      "zh": "v3 将国家、产品线和运营商选择与地图及详情面板关联，并加入产品线比较和快速搜索。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.25"
+      }
+    ]
+  },
+  {
+    "id": "vendor-evidence",
+    "date": "2026-10-08",
+    "kind": "research",
+    "title": {
+      "ru": "Подтверждены сигнатуры ZTE, TP-Link и Atheros",
+      "en": "Evidence added for ZTE, TP-Link and Atheros",
+      "es": "Confirmadas firmas de ZTE, TP-Link y Atheros",
+      "zh": "新增 ZTE、TP-Link 与 Atheros 特征证据"
+    },
+    "body": {
+      "ru": "CPE-SERVER/1.0 сопоставлен с прошивкой ZTE, tr069 http server — с прошивкой TP-Link. Для DigAuth найдено соответствие исходникам Atheros openagent. Основания атрибуции отражены в реестре.",
+      "en": "CPE-SERVER/1.0 was matched to ZTE firmware and tr069 http server to TP-Link firmware. DigAuth was matched to Atheros openagent source code. The registry records the attribution evidence.",
+      "es": "CPE-SERVER/1.0 se vinculó con firmware ZTE y tr069 http server con firmware TP-Link. DigAuth se vinculó con el código de Atheros openagent. El registro recoge las evidencias de atribución.",
+      "zh": "CPE-SERVER/1.0 与 ZTE 固件匹配，tr069 http server 与 TP-Link 固件匹配，DigAuth 与 Atheros openagent 源码匹配。注册表记录了这些归属证据。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.17"
+      }
+    ]
+  },
+  {
+    "id": "collector-added",
+    "date": "2026-10-08",
+    "kind": "data",
+    "title": {
+      "ru": "Добавлен автоматический сборщик Shodan",
+      "en": "Automated Shodan collector added",
+      "es": "Añadido el recopilador automático de Shodan",
+      "zh": "新增 Shodan 自动采集器"
+    },
+    "body": {
+      "ru": "Сбор из реестра сигнатур объединён в один скрипт: общие числа, страны, порты, ASN и операторские срезы. Для каждой записи сохраняются дата и статус сбора.",
+      "en": "A single script collects totals, countries, ports, ASNs and operator slices from the signature registry. Each record retains its collection time and status.",
+      "es": "Un único script recopila totales, países, puertos, ASN y cortes por operador desde el registro. Cada registro conserva la fecha y el estado de recopilación.",
+      "zh": "单个脚本从特征注册表采集总数、国家、端口、ASN 和运营商明细，并为每条记录保留采集时间与状态。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.15"
+      }
+    ]
+  },
+  {
+    "id": "first-map",
+    "date": "2026-10-08",
+    "kind": "atlas",
+    "title": {
+      "ru": "Собрана первая интерактивная карта",
+      "en": "First interactive map assembled",
+      "es": "Creado el primer mapa interactivo",
+      "zh": "首个交互地图完成"
+    },
+    "body": {
+      "ru": "Первая версия объединила 47 линеек и географию наблюдений Shodan. Появились карточки стран, атрибуция компонентов и переходы к исходным поисковым запросам.",
+      "en": "The first version combined 47 signature lines with Shodan observation geography, country profiles, component attribution and links to the original search queries.",
+      "es": "La primera versión reunió 47 líneas y la geografía de observaciones Shodan, con perfiles de países, atribución de componentes y enlaces a las consultas originales.",
+      "zh": "首版将 47 条特征与 Shodan 观测地理分布整合，提供国家资料、组件归属以及原始搜索查询链接。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.14"
+      }
+    ]
+  },
+  {
+    "id": "huawei-port-correction",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "en": "Huawei auxiliary ports and authentication slices clarified",
+      "ru": "Уточнены порты и варианты авторизации Huawei",
+      "es": "Aclarados puertos y autenticación Huawei",
+      "zh": "明确 Huawei 辅助端口与认证切片"
+    },
+    "body": {
+      "en": "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
+      "ru": "На дополнительных портах в выборках тот же шаблон авторизации, что на 7547; весь срез нельзя считать веб-интерфейсами.",
+      "es": "Las muestras de puertos auxiliares presentan el mismo patrón de autenticación que 7547, no una población uniforme de interfaces web.",
+      "zh": "辅助端口样本与 7547 切片具有相同认证响应模式，不能全部视为网页界面。"
+    },
+    "evidence": [
+      {
+        "file": "DEANON-HUAWEI-CR.md"
+      }
+    ]
+  },
+  {
+    "id": "version-counts-qualified",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "en": "AVSystem and GenieACS version counts qualified",
+      "ru": "Уточнены счётчики версий AVSystem и GenieACS",
+      "es": "Aclarados recuentos de versiones AVSystem y GenieACS",
+      "zh": "明确 AVSystem 与 GenieACS 版本计数"
+    },
+    "body": {
+      "en": "Version markers are counted separately; a banner does not establish vulnerability.",
+      "ru": "Маркеры версий считаются отдельно; баннер не доказывает уязвимость.",
+      "es": "Las versiones se cuentan por separado; un banner no demuestra vulnerabilidad.",
+      "zh": "版本标记单独计数；横幅不能证明存在漏洞。"
+    },
+    "evidence": [
+      {
+        "file": "ACS-HUNT.md"
+      }
+    ]
+  },
+  {
+    "id": "integrator-network-limits",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "en": "Package references distinguished from deployment",
+      "ru": "Исходники пакетов отделены от факта развёртывания",
+      "es": "Referencias de paquetes diferenciadas del despliegue",
+      "zh": "区分包引用与实际部署"
+    },
+    "body": {
+      "en": "Reported package/source references do not prove deployment; the SpaceX control query is a network slice.",
+      "ru": "Наличие пакета или исходника не доказывает развёртывание; контроль SpaceX — сетевой срез.",
+      "es": "Las referencias de código o paquetes no prueban despliegue; el control SpaceX es un corte de red.",
+      "zh": "包或源码引用不能证明部署；SpaceX 对照查询是网络切片。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md"
+      }
+    ]
+  },
+  {
+    "id": "bounded-negative-checks",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "en": "Negative checks and research controls documented",
+      "ru": "Зафиксированы отрицательные проверки и контроли",
+      "es": "Documentados controles y resultados negativos",
+      "zh": "记录负面检查与研究对照"
+    },
+    "body": {
+      "en": "The inspected gSOAP versions did not yield a SOAP-prefix discriminator. Huawei sample uniqueness is not a security proof. Westell Secure remains a separate candidate query. These bounded results are preserved without claiming model attribution or exploitability.",
+      "ru": "Проверенные версии gSOAP не дали различителя по SOAP-префиксу. Уникальность в выборке Huawei не доказывает безопасность. Westell Secure остаётся отдельным запросом-кандидатом. Результаты ограничены проверками и не доказывают модель или возможность эксплуатации.",
+      "es": "Las versiones gSOAP revisadas no dieron un discriminador de prefijo SOAP. La unicidad en la muestra Huawei no prueba seguridad. Westell Secure sigue como consulta candidata. Estos resultados limitados no prueban modelos ni explotabilidad.",
+      "zh": "已检查 gSOAP 版本未提供 SOAP 前缀区分依据。Huawei 样本唯一性不能证明安全。Westell Secure 保留为独立候选查询。这些有限结果不能确定型号或可利用性。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md"
+      },
+      {
+        "file": "DEANON-HUAWEI-CR.md"
+      },
+      {
+        "file": "NONCE-PATHOLOGY.md"
+      }
+    ]
+  },
+  {
+    "id": "active-fingerprint-results",
+    "date": "2026-10-07",
+    "kind": "research",
+    "title": {
+      "en": "Active easycwmp fingerprint results preserved",
+      "ru": "Сохранены результаты активного фингерпринтинга easycwmp",
+      "es": "Resultados de huellas activas de easycwmp conservados",
+      "zh": "保留 easycwmp 主动指纹研究结果"
+    },
+    "body": {
+      "en": "An authorized 29,007-target experiment distinguished coarse 401/409 response classes. Stable realm and opaque markers do not identify exact patch releases. These historical results remain separate from current Shodan counts and from vulnerability research.",
+      "ru": "Авторизованное исследование 29 007 целей выделило классы ответов 401/409. Стабильные realm и opaque не определяют точную версию. Исторические результаты отделены от текущих счётчиков Shodan и исследований уязвимостей.",
+      "es": "Un experimento autorizado de 29.007 objetivos distinguió clases de respuesta 401/409. Los marcadores realm y opaque estables no identifican versiones exactas. Estos resultados históricos se separan de los recuentos actuales y de la investigación de vulnerabilidades.",
+      "zh": "获授权的 29,007 个目标实验区分了 401/409 响应类别。稳定的 realm 和 opaque 标记无法确定精确补丁版本。这些历史结果与当前 Shodan 计数及漏洞研究分开呈现。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md"
+      }
+    ]
+  },
+  {
+    "id": "specific-signatures-before-toolkit",
+    "date": "2026-10-10",
+    "kind": "research",
+    "title": {
+      "en": "Specific signatures distinguished from toolkit matches",
+      "ru": "Специфичные сигнатуры отделены от признаков библиотек",
+      "es": "Firmas específicas diferenciadas de las bibliotecas",
+      "zh": "区分特定指纹与工具库匹配"
+    },
+    "body": {
+      "en": "When a response has both a specific realm and a gSOAP banner, preserve both and use the realm for the primary classification. Independent query totals can still overlap. The gSOAP description now agrees with its mixed service role; a toolkit banner alone proves neither CPE nor ACS.",
+      "ru": "Если в ответе есть специфичный realm и баннер gSOAP, сохраняются оба признака, а основная классификация определяется realm. Счётчики независимых запросов могут пересекаться. Описание gSOAP приведено в соответствие со смешанной ролью: один баннер библиотеки не доказывает ни CPE, ни ACS.",
+      "es": "Si una respuesta contiene un realm específico y gSOAP, se conservan ambos y el realm determina la clasificación principal. Los recuentos independientes pueden solaparse. La descripción de gSOAP refleja su papel mixto: un banner de biblioteca no demuestra por sí solo CPE ni ACS.",
+      "zh": "响应同时包含特定 realm 和 gSOAP 时，保留两者并以 realm 为主要分类依据。独立查询计数仍可能重叠。gSOAP 描述现与混合角色一致：工具库标记本身无法证明是 CPE 或 ACS。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "matching-precedence"
+      },
+      {
+        "file": "METHOD.md"
+      },
+      {
+        "file": "ACS-HUNT.md"
+      }
+    ]
+  }
+]

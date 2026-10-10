@@ -1,0 +1,135 @@
+{
+  "dork": "\"realm@easycwmp\" org:\"Fidium\"",
+  "total": 242598,
+  "taken": "2026-10-10T11:10:57+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 242598,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 1,
+      "covered": 242598,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 18,
+      "covered": 242598,
+      "remainder": 0
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 242598,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 242598,
+      "value": "US"
+    }
+  ],
+  "asn": [
+    {
+      "count": 185208,
+      "value": "as13977"
+    },
+    {
+      "count": 25830,
+      "value": "as6300"
+    },
+    {
+      "count": 16411,
+      "value": "as14051"
+    },
+    {
+      "count": 4392,
+      "value": "as12042"
+    },
+    {
+      "count": 3740,
+      "value": "13977"
+    },
+    {
+      "count": 3274,
+      "value": "as13333"
+    },
+    {
+      "count": 2276,
+      "value": "as5742"
+    },
+    {
+      "count": 439,
+      "value": "6300"
+    },
+    {
+      "count": 299,
+      "value": "as13672"
+    },
+    {
+      "count": 238,
+      "value": "as22647"
+    },
+    {
+      "count": 174,
+      "value": "as14671"
+    },
+    {
+      "count": 129,
+      "value": "14051"
+    },
+    {
+      "count": 84,
+      "value": "12042"
+    },
+    {
+      "count": 79,
+      "value": "5742"
+    },
+    {
+      "count": 16,
+      "value": "13333"
+    },
+    {
+      "count": 5,
+      "value": "13672"
+    },
+    {
+      "count": 3,
+      "value": "22647"
+    },
+    {
+      "count": 1,
+      "value": "14671"
+    }
+  ],
+  "ports": [
+    {
+      "count": 242598,
+      "value": 7547
+    }
+  ],
+  "orgs": [
+    {
+      "count": 242598,
+      "value": "Fidium"
+    }
+  ],
+  "id": "fact-easycwmp-vanilla-52fb7670ac",
+  "parent": "easycwmp-vanilla",
+  "group": "facts",
+  "label": {
+    "ru": "карман Fidium/Consolidated",
+    "en": "Fidium/Consolidated subset",
+    "es": "Subconjunto Fidium/Consolidated",
+    "zh": "Fidium/Consolidated 子集"
+  },
+  "source": {
+    "file": "NOTES.md"
+  },
+  "denominator": null
+}

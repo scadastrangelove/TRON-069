@@ -1,0 +1,44 @@
+{
+ "dork": "\"Server: cwmp server\" country:PR",
+ "total": 16,
+ "taken": "2026-10-10T08:36:06+00:00",
+ "run_id": "20261010-083331",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 16,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 16,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 16,
+   "value": "as36435"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 9,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 4,
+   "value": "M.S. Wifi Zone Inc."
+  },
+  {
+   "count": 3,
+   "value": "M.S. WIFI ZONE , INC."
+  }
+ ],
+ "line": "cwmp server",
+ "cc": "PR"
+}

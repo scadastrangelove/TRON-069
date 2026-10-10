@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" country:HT",
+ "total": 25,
+ "taken": "2026-10-10T11:08:22+00:00",
+ "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 25,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 25,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 22,
+   "value": "as52260"
+  },
+  {
+   "count": 2,
+   "value": "52260"
+  },
+  {
+   "count": 1,
+   "value": "as14593"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 24,
+   "value": "Télécommunications de Haití (Teleco)"
+  },
+  {
+   "count": 1,
+   "value": "SpaceX Services, Inc."
+  }
+ ],
+ "line": "fake-Apache openagent",
+ "line_id": "fake-apache-openagent",
+ "cc": "HT"
+}

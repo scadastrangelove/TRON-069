@@ -1,0 +1,139 @@
+{
+  "dork": "\"HuaweiHomeGateway\" port:8081 country:NZ",
+  "total": 97881,
+  "taken": "2026-10-10T11:10:18+00:00",
+  "run_id": "c4f0e158-344d-40ff-9ff9-67aa1aeeb2d7",
+  "collection_status": "ok",
+  "requested_facets": "country:250,org:100,asn:100,port:100",
+  "facet_meta": {
+    "country": {
+      "values_returned": 1,
+      "covered": 97881,
+      "remainder": 0
+    },
+    "org": {
+      "values_returned": 12,
+      "covered": 97881,
+      "remainder": 0
+    },
+    "asn": {
+      "values_returned": 8,
+      "covered": 90426,
+      "remainder": 7455
+    },
+    "port": {
+      "values_returned": 1,
+      "covered": 97881,
+      "remainder": 0
+    }
+  },
+  "countries": [
+    {
+      "count": 97881,
+      "value": "NZ"
+    }
+  ],
+  "asn": [
+    {
+      "count": 89377,
+      "value": "as4771"
+    },
+    {
+      "count": 1042,
+      "value": "4771"
+    },
+    {
+      "count": 2,
+      "value": "as45177"
+    },
+    {
+      "count": 1,
+      "value": "132857"
+    },
+    {
+      "count": 1,
+      "value": "9500"
+    },
+    {
+      "count": 1,
+      "value": "as134220"
+    },
+    {
+      "count": 1,
+      "value": "as18159"
+    },
+    {
+      "count": 1,
+      "value": "as55872"
+    }
+  ],
+  "ports": [
+    {
+      "count": 97881,
+      "value": 8081
+    }
+  ],
+  "orgs": [
+    {
+      "count": 75199,
+      "value": "Spark New Zealand Trading Ltd"
+    },
+    {
+      "count": 19030,
+      "value": "Spark New Zealand Trading Limited"
+    },
+    {
+      "count": 3642,
+      "value": "SPARK NEW ZEALAND TRADING LIMITED"
+    },
+    {
+      "count": 2,
+      "value": "Spark NZ Ltd"
+    },
+    {
+      "count": 1,
+      "value": "BayCity Communications"
+    },
+    {
+      "count": 1,
+      "value": "Bigpipe.co.nz"
+    },
+    {
+      "count": 1,
+      "value": "Devoli LTD"
+    },
+    {
+      "count": 1,
+      "value": "Devoli NZ Broadband customers"
+    },
+    {
+      "count": 1,
+      "value": "Dynamic allocations"
+    },
+    {
+      "count": 1,
+      "value": "FULL FLAVOUR LIMITED"
+    },
+    {
+      "count": 1,
+      "value": "Static Allocation Netspeed Misc"
+    },
+    {
+      "count": 1,
+      "value": "UFONE Next Generation Services Broadband"
+    }
+  ],
+  "id": "huawei-port-8081-nz",
+  "parent": "huaweihomegateway",
+  "group": "huawei-ports",
+  "label": {
+    "ru": "CR-порт 8081 · NZ",
+    "en": "CR port 8081 · NZ",
+    "es": "Puerto CR 8081 · NZ",
+    "zh": "CR 端口 8081 · NZ"
+  },
+  "source": {
+    "file": "DEANON-HUAWEI-CR.md"
+  },
+  "denominator": null
+}

@@ -1,0 +1,2062 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>TRON-069 by SCADA StrangeLove — A Global TR-069 Atlas</title>
+<meta name="description" content="TRON-069 by SCADA StrangeLove: a global atlas of TR-069/CWMP signatures, countries and operators built from dated Shodan aggregates.">
+<style>
+:root{
+ --bg:#f4f7fc; --surface:#ffffff; --ink:#22334e; --ink2:#42557a; --muted:#66799b;
+ --faint:#8fa0bd; --line:#dfe7f3; --line2:#e9eff8;
+ --accent:#6a55e8; --accent2:#846ff0; --accent-soft:#efebff; --accent-line:#d9d0fa;
+ --ok:#1d9e77; --warn:#b98324; --anon:#7d8aa5; --cls:#3f6fd8;
+ --amber-bg:#fff7e8; --amber-line:#f0e2c6; --amber-ink:#8a6b33;
+ --shadow:0 16px 44px rgba(34,52,94,.07); --shadow2:0 6px 18px rgba(34,52,94,.06);
+ --r-lg:16px; --r-md:11px; --r-sm:8px;
+ font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+ color:var(--ink); font-size:13.5px; font-synthesis:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(1100px 500px at 8% -4%, #e9ecff 0, transparent 60%),
+ radial-gradient(900px 420px at 96% 2%, #e5f7f4 0, transparent 55%),
+ var(--bg); min-height:100vh}
+button,select,input{font:inherit;color:inherit}button{cursor:pointer;border:0;background:transparent}button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2.5px solid #a08ff7;outline-offset:2px;border-radius:6px}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+[hidden]{display:none!important}
+.num,.td-num{font-variant-numeric:tabular-nums}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+::-webkit-scrollbar{width:9px;height:9px}::-webkit-scrollbar-thumb{background:#c9d4e8;border-radius:8px;border:2px solid transparent;background-clip:content-box}
+
+/* ── топбар ─────────────────────────────── */
+.topbar{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:26px;height:64px;padding:0 clamp(14px,3vw,44px);
+ background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:760;letter-spacing:-.6px;white-space:nowrap}
+.brandmark{display:grid;grid-template-columns:11px 11px;gap:3.5px;transform:rotate(-10deg)}
+.brandmark i{width:11px;height:11px;border-radius:3.5px;background:#7a63ea}
+.brandmark i:nth-child(2){background:#8fb8ff}.brandmark i:nth-child(3){background:#6fd0c8}.brandmark i:nth-child(4){background:#e3d9fb}
+.brand small{display:block;font-size:9px;letter-spacing:.6px;color:var(--muted);margin-top:3px;font-weight:540}
+nav.tabs{display:flex;gap:4px;height:100%}
+.nav{position:relative;color:var(--muted);padding:0 13px;font-size:12.5px;font-weight:540;display:flex;align-items:center;gap:7px;border-radius:8px}
+.nav:hover{color:var(--ink);background:#f0f3fb}
+.nav.active{color:var(--ink);font-weight:660}
+.nav.active:after{content:"";position:absolute;bottom:0;left:10px;right:10px;height:3px;border-radius:3px 3px 0 0;background:var(--accent)}
+.nav .cnt{font-size:10px;background:var(--accent-soft);color:#7d68d8;padding:2px 7px;border-radius:20px;font-weight:640}
+.topright{margin-left:auto;display:flex;align-items:center;gap:12px}
+.snapshot{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:22px;padding:7px 13px;font:10.5px ui-monospace,monospace;color:var(--muted);letter-spacing:.6px}
+.snapshot i{width:6px;height:6px;border-radius:50%;background:#3fae96;box-shadow:0 0 0 3px #3fae9622}
+.kbtn{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 11px;font-size:12px;color:var(--muted)}
+.kbtn:hover{border-color:var(--accent-line);color:var(--accent);background:var(--accent-soft)}
+.langbar{display:flex;gap:2px;border:1px solid var(--line);border-radius:9px;padding:2px;background:#fff}
+.langbtn{font-size:10.5px;font-weight:640;color:var(--muted);padding:5px 8px;border-radius:7px}
+.langbtn.on{background:var(--accent);color:#fff}
+.langbtn:not(.on):hover{background:var(--accent-soft);color:var(--accent)}
+.kbtn kbd{font:10.5px ui-monospace,monospace;border:1px solid var(--line2);border-bottom-width:2px;border-radius:5px;padding:1px 5px;background:#f6f8fc;color:var(--faint)}
+.iconbtn{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;color:var(--muted);font-size:17px}
+.iconbtn:hover{background:var(--accent-soft);color:var(--accent)}
+
+/* ── интро/KPI ─────────────────────────── */
+main{max-width:1800px;margin:0 auto;padding:22px clamp(14px,3vw,44px) 40px}
+.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;flex-wrap:wrap;margin:4px 0 18px}
+.eyebrow{font:600 9.5px ui-monospace,monospace;letter-spacing:2.2px;color:var(--faint);text-transform:uppercase}
+.intro h1{font-size:clamp(24px,3vw,33px);letter-spacing:-1.1px;font-weight:750;margin-top:8px}
+.intro h1 span{font-weight:400;color:var(--faint)}
+.intro .sub{color:var(--muted);font-size:12.5px;margin-top:9px;max-width:560px;line-height:1.6}
+.kpis{display:none}
+.kpi{padding-right:26px;border-right:1px solid var(--line);min-width:96px}
+.kpi:last-child{border:0}
+.kpi strong{display:block;font-size:26px;letter-spacing:-.9px;font-weight:740}
+.kpi small{font-size:12px;color:var(--muted)}
+.kpi label{display:block;font-size:10px;color:var(--faint);margin-top:4px;letter-spacing:.4px}
+
+/* ── фасеты ─────────────────────────────── */
+.facets{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.facet{position:relative}
+.fbtn{display:flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 13px;min-width:172px;font-size:12.5px;box-shadow:var(--shadow2);transition:border-color .15s}
+.fbtn:hover{border-color:#bfaef2}
+.fbtn.open{border-color:var(--accent);box-shadow:0 0 0 3px #6a55e815}
+.fbtn .flabel{display:block;font-size:9.5px;color:var(--faint);letter-spacing:.8px;text-transform:uppercase;font-weight:600}
+.fbtn .fval{display:flex;align-items:center;gap:6px;min-height:18px;color:var(--ink2);font-weight:560;max-width:230px;white-space:nowrap;overflow:hidden}
+.fbtn .fval .dots{display:flex;gap:2px}
+.fbtn .fval .dots i{width:8px;height:8px;border-radius:3px}
+.fbtn .fval em{font-style:normal}
+.fbtn .fval em.more{color:var(--faint);font-weight:400}
+.fbtn:after{content:"▾";color:var(--faint);margin-left:auto;font-size:10px}
+.facet.any .fbtn{border-color:#c3b3f2;background:#fbfaff}
+.panel{position:absolute;top:calc(100% + 7px);left:0;z-index:60;width:340px;max-width:min(92vw,392px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 22px 60px rgba(30,48,90,.16);overflow:hidden}
+.panel.right{left:auto;right:0}
+.panel .psearch{display:flex;align-items:center;gap:8px;padding:11px 13px;border-bottom:1px solid var(--line2)}
+.panel .psearch input{flex:1;border:0;outline:0;font-size:12.5px;background:transparent}
+.panel .psearch input::placeholder{color:var(--faint)}
+.panel .psearch span{color:var(--faint);font-size:13px}
+.plist{max-height:316px;overflow-y:auto;padding:6px}
+.pitem{display:flex;align-items:center;gap:9px;width:100%;text-align:left;padding:7px 9px;border-radius:8px;font-size:12.5px;color:var(--ink2)}
+.pitem:hover{background:#f2f4fc}
+.pitem.on{background:var(--accent-soft);color:var(--ink);font-weight:600}
+.pitem .mark{width:10px;height:10px;border-radius:3.5px;flex:none;border:1.5px solid #c6cfdf;background:transparent;position:relative}
+.pitem.on .mark{border-color:var(--accent);background:var(--accent)}
+.pitem.on .mark:after{content:"✓";position:absolute;inset:0;color:#fff;font-size:8px;line-height:9px;text-align:center;font-weight:800}
+.pitem .swatch{width:10px;height:10px;border-radius:3.5px;flex:none}
+.pitem .nm{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pitem .cnt{font:11px ui-monospace,monospace;color:var(--faint)}
+.pitem.zero .nm{color:var(--faint)}
+.pitem .only{visibility:hidden;margin-left:4px;font-size:10px;color:var(--accent);border:1px solid var(--accent-line);border-radius:6px;padding:2px 6px;background:#fff}
+.pitem:hover .only{visibility:visible}
+.pitem .only:hover{background:var(--accent-soft)}
+.pgroup{padding:10px 9px 4px;font:600 9.5px ui-monospace,monospace;letter-spacing:1.6px;color:var(--faint);text-transform:uppercase}
+.pfoot{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;border-top:1px solid var(--line2);background:#fafbfe}
+.pfoot .pact{font-size:11.5px;color:var(--accent);font-weight:600;padding:4px 8px;border-radius:7px}
+.pfoot .pact:hover{background:var(--accent-soft)}
+.pfoot .pdone{background:var(--accent);color:#fff;border-radius:8px;padding:6px 13px;font-size:11.5px;font-weight:640}
+.pempty{padding:22px 14px;text-align:center;color:var(--faint);font-size:11.5px}
+.resetall{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 14px;font-size:12px;color:var(--muted);box-shadow:var(--shadow2)}
+.resetall b{font-weight:640}
+.resetall:hover{color:#b3416a;border-color:#e8c3d2;background:#fdf4f7}
+
+.facets{position:sticky;top:64px;z-index:30;background:linear-gradient(180deg,var(--bg) 82%,rgba(244,247,252,0));padding:10px 0 6px}
+.chipsrow{position:sticky;top:132px;z-index:29;background:var(--bg);padding:2px 0 6px}
+/* чипы активных фильтров */
+.chipsrow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;min-height:30px;margin:2px 0 14px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:4.5px 6px 4.5px 11px;font-size:11.5px;color:var(--ink2);box-shadow:0 1px 3px rgba(34,52,94,.04)}
+.chip i.sw{width:8px;height:8px;border-radius:3px}
+.chip.x{cursor:pointer}
+.chip.x:hover{border-color:#d9b9c8;background:#fdf5f8}
+.chip.focus{border-color:var(--accent-line);background:var(--accent-soft);color:#5d49c7;font-weight:600}
+.chipslabel{font:600 9.5px ui-monospace,monospace;letter-spacing:1.4px;color:var(--faint);text-transform:uppercase}
+.notecard{font-size:12px;line-height:1.65;padding:11px 15px;border-radius:11px;color:var(--amber-ink);background:var(--amber-bg);border:1px solid var(--amber-line);margin:0 0 14px}
+
+/* ── карточка карты ─────────────────────── */
+.mapcard{background:rgba(255,255,255,.82);border:1px solid #dae3f1;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+.maphead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px 12px}
+.maphead h2{font-size:15.5px;font-weight:680;letter-spacing:-.3px;margin-top:5px}
+.segmented{display:flex;border:1px solid var(--line);background:#eef2fa;border-radius:10px;padding:3.5px;gap:2px}
+.segmented button{font-size:11.5px;color:var(--muted);padding:6.5px 12px;border-radius:7.5px;font-weight:540}
+.segmented button.active{background:#fff;color:var(--ink);font-weight:660;box-shadow:0 2px 6px rgba(34,52,94,.08)}
+.maphint{font-size:10.5px;color:var(--faint)}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 372px;gap:0}
+.workspace.nodetail{grid-template-columns:minmax(0,1fr)}
+.stage{position:relative;height:clamp(430px,56vh,720px);overflow:hidden;isolation:isolate;cursor:grab;background:
+ linear-gradient(180deg,#eef4fb 0%,#e9f1fa 60%,#e6eef9 100%)}
+.stage.dragging{cursor:grabbing}
+.stage{touch-action:pan-y}
+.reopen-inspector{margin:8px 12px;justify-self:end}
+.panel{max-width:calc(100vw - 24px)}
+.stage svg{width:100%;height:100%;display:block}
+.country{fill:#dde7f4;stroke:#c4d3e8;stroke-width:.6;vector-effect:non-scaling-stroke;cursor:pointer;transition:fill .15s}
+.country:hover{fill:#c9d9f2}
+.country.sel{stroke:#6a55e8;stroke-width:2}
+.country.hov{fill:#bfd2ef}
+.country.faded{opacity:.38}
+.dotanchor{cursor:pointer}
+.dotanchor.faded{opacity:.3}
+.dotanchor circle.pt{fill:#9fb1cf;stroke:#fff;stroke-width:1.2;transition:fill .15s}
+.dotanchor:hover circle.pt,.dotanchor.sel circle.pt{fill:#7a63ea;stroke:#4d3cc4}
+.cloudg{cursor:pointer;transition:opacity .18s}
+.cloudg .halo{transition:opacity .2s;pointer-events:none}
+.lblg,.lblg text{pointer-events:none!important}
+.cloudg .hitzone{fill:transparent}
+.cloudg .core{cursor:pointer}
+.cloudg:hover .halo{opacity:1}
+.cloudg:hover .core{stroke:#fff;stroke-width:1.4;stroke-opacity:.9}
+.cloudg.dim{opacity:.16}
+.cloudg.hi{opacity:1}
+.cloud circle.core{stroke:#fff;stroke-width:1.4}
+.cloud text{font:600 10px Inter,sans-serif;fill:#31435f;paint-order:stroke;stroke:rgba(255,255,255,.88);stroke-width:3px;text-anchor:middle;pointer-events:none}
+.cloud text small{fill:#7d8ea9}
+.zoomhint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:#22334ee6;color:#fff;font-size:11px;padding:7px 13px;border-radius:9px;pointer-events:none;opacity:0;transition:opacity .2s}
+.zoomhint.show{opacity:1}
+.zc{position:absolute;left:14px;bottom:14px;display:grid;border:1px solid var(--line);border-radius:11px;padding:3.5px;background:#ffffffef;box-shadow:var(--shadow2);z-index:5}
+.zc button{width:31px;height:31px;color:var(--muted);font-size:17px;border-radius:8px}
+.zc button:hover{background:var(--accent-soft);color:var(--accent)}
+.mapfoot{position:absolute;right:14px;bottom:60px;display:flex;gap:12px;align-items:center;font:10px ui-monospace,monospace;color:var(--faint);background:#ffffffc9;border:1px solid var(--line2);border-radius:9px;padding:5px 10px;pointer-events:none;z-index:4}
+.tooltip{position:absolute;z-index:30;pointer-events:none;background:#fffffff2;border:1px solid var(--line);box-shadow:0 14px 38px rgba(30,48,90,.14);border-radius:12px;padding:12px 14px;min-width:190px;max-width:300px;font-size:12px;line-height:1.55}
+.tooltip strong{font-size:13px}
+.tooltip .big{font-size:21px;letter-spacing:-.7px;font-weight:730;margin:5px 0 2px}
+.tooltip .row{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px}
+.tooltip .row b{color:var(--ink2);font-weight:600}
+.mleg{position:absolute;right:14px;bottom:14px;background:#ffffffd9;border:1px solid var(--line2);border-radius:11px;padding:9px 12px;font-size:10.5px;color:var(--muted);z-index:4;pointer-events:none;max-width:210px;line-height:1.6}
+.mleg .grad{height:8px;border-radius:5px;margin:6px 0 3px}
+
+/* легенда линеек */
+.legendbar{border-top:1px solid var(--line2);background:#fdfdfeb0;padding:12px 18px;display:flex;align-items flex-start;gap:14px;align-items:center}
+.lgcap{font:600 9.5px ui-monospace,monospace;letter-spacing:1.6px;color:var(--faint);text-transform:uppercase;white-space:nowrap;padding-top:5px}
+.lgcap small{display:block;font:400 9.5px Inter,sans-serif;letter-spacing:0;text-transform:none;color:#a4b1c8;margin-top:4px}
+.lgitems{display:flex;flex-wrap:wrap;gap:5px;flex:1;max-height:96px;overflow:hidden;min-width:0}
+.lgitems.exp{max-height:none;overflow:visible}
+.lgchip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:8px;padding:5px 9px;font-size:11px;color:var(--ink2);background:#fff;max-width:240px;transition:all .13s;flex:0 1 auto;min-width:0}
+.lgchip i{width:9px;height:9px;border-radius:3px;flex:none}
+.lgchip .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lgchip .n{font:10px ui-monospace,monospace;color:var(--faint)}
+.lgchip:hover{border-color:#bfaef2;background:#faf9ff}
+.lgchip.on{border-color:var(--accent);background:var(--accent-soft);color:#4c3ab3;font-weight:620;box-shadow:0 0 0 1px #6a55e826}
+.lgchip.off{opacity:.42}
+.lgchip.off:hover{opacity:.8}
+.lgchip .solo{visibility:hidden;font-size:9.5px;color:var(--accent);border:1px solid var(--accent-line);border-radius:5px;padding:1px 5px}
+.lgchip:hover .solo{visibility:visible}
+.lgchip.hi{box-shadow:0 0 0 2px #6a55e855;border-color:var(--accent)}
+.lgmore{font-size:11px;color:var(--accent);font-weight:600;padding:5px 8px}
+.lgclear{font-size:11px;color:#b3416a;font-weight:600;padding:5px 8px;border:1px solid #eccdd9;border-radius:8px;background:#fff}
+.lgclear:hover{background:#fdf2f6}
+.lghint{font-size:10px;color:var(--faint);white-space:nowrap;padding-top:6px}
+
+/* ── инспектор ─────────────────────────── */
+.inspector{border-left:1px solid var(--line2);background:#ffffffdd;max-height:clamp(430px,56vh,720px);overflow-y:auto;padding:18px 18px 22px;position:relative}
+.insphead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:4px}
+.crumbs{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--faint);margin:8px 0 2px}
+.crumbs b{color:var(--ink2);font-weight:600;cursor:pointer}
+.crumbs b:hover{color:var(--accent)}
+.crumbs span{color:#c3cde0}
+.inspector h2{font-size:19px;letter-spacing:-.6px;line-height:1.25;margin:6px 0 3px;font-weight:720}
+.inspector .subtitle{color:var(--muted);font-size:11.5px;line-height:1.6}
+.inspector .bignum{font-size:27px;font-weight:740;letter-spacing:-1px;margin:14px 0 2px}
+.inspector .bignum small{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0}
+.inspector h3{font:600 10px ui-monospace,monospace;letter-spacing:1.8px;text-transform:uppercase;color:var(--faint);margin:20px 0 9px}
+.klist .krow{display:flex;align-items:center;gap:9px;width:100%;text-align:left;padding:7px 8px;border-radius:8px;font-size:12px;color:var(--ink2)}
+.krow:hover{background:#f1f4fb}
+.krow i.sw{width:9px;height:9px;border-radius:3px;flex:none}
+.krow .nm{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.krow .n{font:11px ui-monospace,monospace;color:var(--muted)}
+.krow .bar{height:4px;border-radius:3px;background:var(--accent-soft);flex:1;max-width:70px;overflow:hidden}
+.krow .bar i{display:block;height:100%;border-radius:3px}
+.note{font-size:11.5px;line-height:1.7;color:var(--ink2);padding:2px 0 2px 11px;border-left:2.5px solid #d9d0fa;margin:8px 0}
+.source-links{white-space:normal;overflow-wrap:anywhere}
+.note.anom{border-color:#e8c98c;background:var(--amber-bg);padding:8px 10px;border-radius:0 8px 8px 0;color:var(--amber-ink)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:660;border-radius:7px;padding:3.5px 9px;letter-spacing:.3px}
+.service-badge{display:inline-block;margin:2px 4px;font:600 10px var(--mono);padding:3px 7px;border-radius:6px;background:#edf1fb;color:#42628c;white-space:nowrap}.service-badge.acs{background:#fff0db;color:#8d5918}.service-badge.mixed{background:#f0eafd;color:#7651a7}.service-select{border:1px solid var(--line);border-radius:9px;padding:8px;background:#fff;color:var(--ink);max-width:100%}.variant-card{border:1px solid var(--line);border-radius:9px;margin:8px 0;padding:10px}.variant-card summary{cursor:pointer;font-size:12px;line-height:1.6}.variant-card .note{font-size:10px;overflow-wrap:anywhere}.variant-card .krow{font-size:11px}.service-presets{display:flex;gap:6px;padding:8px;flex-wrap:wrap}.service-presets button{font-size:10px;padding:5px 8px;background:#f2effb;border-radius:6px}
+.badge.proven{background:#e2f5ec;color:#157a58}
+.badge.hypothesis{background:var(--amber-bg);color:var(--amber-ink)}
+.badge.anonymous{background:#eef1f7;color:var(--anon)}
+.badge.class{background:#e6edfc;color:var(--cls)}
+.actrow{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px}
+.btn{display:inline-flex;align-items:center;gap:7px;border-radius:9px;padding:8px 13px;font-size:11.5px;font-weight:620;border:1px solid transparent}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:#5a46d6}
+.btn.soft{background:var(--accent-soft);color:#6a55c9;border-color:var(--accent-line)}
+.btn.soft:hover{background:#e4dcfb}
+.btn.ghost{border-color:var(--line);color:var(--muted);background:#fff}
+.btn.ghost:hover{border-color:#bfaef2;color:var(--accent)}
+.btn.danger{background:#fff;border-color:#eccdd9;color:#b3416a}
+.btn.danger:hover{background:#fdf2f6}
+.portrow{display:flex;gap:5px;flex-wrap:wrap}
+.pchip{border:1px solid var(--line);border-radius:7px;padding:4.5px 8px;font:10.5px ui-monospace,monospace;color:var(--ink2);background:#fff}
+.dorkbox{font:10.5px/1.6 ui-monospace,monospace;padding:10px 11px;background:#f3f5fb;border:1px solid var(--line2);border-radius:9px;color:var(--ink2);overflow-wrap:anywhere}
+.ovcard{border:1px solid var(--line);border-radius:12px;padding:13px;margin:10px 0;background:#fff}
+.ovcard h4{font-size:12.5px;font-weight:660;margin-bottom:3px;display:flex;align-items:center;gap:7px}
+.ovcard p{font-size:11px;color:var(--muted);line-height:1.6;margin:5px 0 9px}
+.cmpgrid{display:grid;gap:9px}
+.scopewarn{font-size:10.5px;color:var(--amber-ink);background:var(--amber-bg);border:1px solid var(--amber-line);padding:9px 11px;border-radius:9px;line-height:1.6;margin-top:12px}
+
+/* ── нижняя сетка ───────────────────────── */
+.bottom{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;margin-top:18px}
+.card{background:rgba(255,255,255,.85);border:1px solid #dde6f2;border-radius:var(--r-lg);padding:19px;box-shadow:var(--shadow)}
+.cardhead{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:13px;flex-wrap:wrap}
+.cardhead h2{font-size:16px;font-weight:690;letter-spacing:-.4px;margin-top:4px}
+.cardhead .tools{display:flex;gap:7px;align-items:center}
+.searchbox{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:9px;padding:7px 11px;background:#fff;min-width:210px}
+.searchbox input{border:0;outline:0;background:transparent;font-size:12px;flex:1}
+.searchbox span{color:var(--faint)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{font:600 9.5px ui-monospace,monospace;color:var(--faint);text-align:left;letter-spacing:1.1px;text-transform:uppercase;padding:8px 8px 9px;white-space:nowrap;user-select:none}
+th.srt{cursor:pointer}
+th.srt:hover{color:var(--accent)}
+th.srt.on:after{content:" ↓";color:var(--accent)}
+th.srt.on.rev:after{content:" ↑"}
+td{border-top:1px solid var(--line2);padding:9.5px 8px;vertical-align:middle}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:#f4f6fd}
+tbody tr.sel{background:#f0ecfd}
+tbody tr.dimmed{opacity:.45}
+tbody tr.sel td:first-child{box-shadow:inset 3px 0 var(--accent)}
+td.num,th.num{text-align:right;font-family:ui-monospace,monospace;font-size:11px;color:var(--ink2)}
+.cc{font:10.5px ui-monospace,monospace;color:var(--muted);background:#eef2f9;border-radius:5px;padding:2.5px 6px;margin-right:9px;display:inline-block;min-width:30px;text-align:center}
+.minibar{display:inline-block;height:5px;border-radius:4px;min-width:2px;vertical-align:middle;margin-left:7px}
+.leadcol{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--ink2)}
+.leadcol i{width:8px;height:8px;border-radius:2.5px;flex:none}
+.tblwrap{overflow-x:auto;max-height:520px;overflow-y:auto;border-radius:10px}
+.morebtn{margin-top:13px;font-size:11.5px;color:var(--accent);font-weight:620}
+.morebtn:hover{text-decoration:underline}
+/* точки входа */
+.sc-grid{display:grid;gap:9px}
+.sc-card{border:1px solid var(--line);background:#fff;border-radius:12px;padding:13px 14px;text-align:left;transition:border-color .13s;width:100%}
+.sc-card:hover{border-color:#b9a7f0;background:#fbfaff}
+.sc-card .t{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:650;color:var(--ink)}
+.sc-card .t i{width:9px;height:9px;border-radius:3px;flex:none}
+.sc-card .why{font-size:11px;color:var(--muted);line-height:1.55;margin-top:5px}
+.sc-card .val{font-size:11px;color:var(--accent);font-weight:640;margin-top:7px;font-family:ui-monospace,monospace}
+.researchnote{margin-top:15px;color:var(--muted);font-size:11px;line-height:1.7;border-top:1px dashed var(--line);padding-top:13px}
+.researchnote b{color:var(--ink2)}
+
+/* ── реестр/находки ─────────────────────── */
+.regtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.regrow td:first-child{font-weight:600}
+.regrow .show{font-size:11px;color:var(--accent);font-weight:640;padding:4px 9px;border:1px solid var(--accent-line);border-radius:8px;background:#fff}
+.regrow .show:hover{background:var(--accent-soft)}
+.regrow .shodanlink{font-size:11px;color:var(--muted)}
+.regrow .shodanlink:hover{color:var(--accent)}
+.vendorcell{font-size:11px;color:var(--muted);max-width:330px;line-height:1.5}
+.fndgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.fndcard{border:1px solid var(--line);background:rgba(255,255,255,.9);border-radius:14px;padding:16px}
+.fndcard h3{font-size:13.5px;font-weight:680;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.fndcard .vend{font-size:11px;color:var(--muted);margin:5px 0 2px}
+.fndcard ul{margin:8px 0 0;padding-left:0;list-style:none}
+.fndcard li{font-size:11.5px;color:var(--ink2);line-height:1.65;padding:6px 0 6px 12px;border-left:2.5px solid #d9d0fa;margin:6px 0}
+.fndcard li.anom{border-color:#e8c98c;background:var(--amber-bg);border-radius:0 8px 8px 0;padding:8px 10px;color:var(--amber-ink)}
+.fndcard .act{margin-top:11px}
+footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#9daac2;font:10px ui-monospace,monospace;padding:22px 2px}
+footer b{font-weight:400;padding:0 8px;opacity:.5}
+
+/* ── ⌘K ─────────────────────────────────── */
+.kk-overlay{position:fixed;inset:0;z-index:100;background:rgba(26,38,66,.34);backdrop-filter:blur(3px);display:flex;justify-content:center;padding-top:12vh}
+.kk{width:min(620px,92vw);background:#fff;border-radius:16px;box-shadow:0 30px 90px rgba(20,34,70,.3);overflow:hidden;height:fit-content}
+.kk input{width:100%;border:0;outline:0;padding:17px 19px;font-size:14.5px;border-bottom:1px solid var(--line2)}
+.kk-list{max-height:340px;overflow-y:auto;padding:7px}
+.kk-item{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:9.5px 11px;border-radius:9px;font-size:12.5px;color:var(--ink2)}
+.kk-item.sel{background:var(--accent-soft);color:var(--ink)}
+.kk-item .kind{font:9.5px ui-monospace,monospace;color:var(--faint);border:1px solid var(--line2);border-radius:5px;padding:2px 6px}
+.kk-item .n{margin-left:auto;font:11px ui-monospace,monospace;color:var(--faint)}
+.kk-foot{display:flex;gap:16px;padding:9px 16px;border-top:1px solid var(--line2);font-size:10.5px;color:var(--faint);background:#fafbfe}
+.kk-foot kbd{font:10px ui-monospace,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 4px;background:#f4f6fa}
+
+/* ── диалог/тост ───────────────────────── */
+dialog{border:1px solid var(--line);border-radius:20px;background:#fff;width:min(600px,92vw);padding:30px;box-shadow:0 30px 90px rgba(24,38,74,.28);max-height:86vh}
+dialog::backdrop{background:rgba(30,44,78,.4);backdrop-filter:blur(4px)}
+dialog h2{font-size:23px;letter-spacing:-.7px;margin:10px 0 14px;line-height:1.25}
+dialog p{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:11px 0}
+dialog b{color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#25365a;color:#fff;padding:11px 18px;border-radius:12px;font-size:12px;z-index:90;box-shadow:0 16px 44px rgba(20,32,64,.3);display:flex;gap:14px;align-items:center}
+.toast button{color:#c3b5ff;font-weight:660;font-size:12px}
+.toast button:hover{text-decoration:underline}
+
+/* Project news */
+.news-ticker{display:flex;align-items:center;gap:14px;margin:0 0 16px;padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:12px;min-width:0}
+.news-kicker{font:650 10px ui-monospace,monospace;text-transform:uppercase;letter-spacing:1px;color:var(--accent);white-space:nowrap}
+.news-headline{flex:1;min-width:0;text-align:left;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--ink2)}
+.news-headline time{font:10px ui-monospace,monospace;color:var(--muted);white-space:nowrap}
+.news-headline span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.news-controls{display:flex;gap:3px;flex:none}
+.news-controls button{min-width:30px;height:30px;border-radius:7px;color:var(--muted)}
+.news-controls button:hover{background:var(--accent-soft);color:var(--accent)}
+.news-controls button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
+.news-header{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:6px 0 20px}
+.news-header h2{font-size:26px;letter-spacing:-.7px;margin:6px 0}
+.news-header p{color:var(--muted);font-size:12px;line-height:1.65;max-width:640px}
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.news-card{padding:22px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.news-card:first-child{grid-column:1/-1;border-color:var(--accent-line);background:linear-gradient(120deg,#faf8ff,#fff)}
+.news-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font:10px ui-monospace,monospace;color:var(--muted);margin-bottom:12px}
+.news-tag{padding:4px 7px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.news-pin{color:var(--accent);font-weight:700}
+.news-card h3{font-size:17px;line-height:1.35;margin:0 0 10px;letter-spacing:-.3px}
+.news-card p{font-size:12px;line-height:1.8;color:var(--muted);margin:0;max-width:850px}
+.news-card p+p{margin-top:12px}
+.news-links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:12px;color:var(--accent)}
+.news-links a{text-decoration:underline;text-underline-offset:3px}
+.news-card:focus{outline:2px solid var(--accent);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:760px){.news-ticker{flex-wrap:wrap;gap:8px;padding:12px}.news-headline{order:3;flex-basis:100%;min-height:54px;align-items:start;flex-direction:column;gap:6px}.news-headline span{white-space:normal;line-height:1.55}.news-controls{margin-left:auto}.news-grid{grid-template-columns:1fr}.news-card{padding:18px}.news-header{align-items:start;flex-direction:column}.news-all{font-size:10px}}
+
+/* ── адаптив ───────────────────────────── */
+@media(max-width:1280px){
+ .workspace{grid-template-columns:minmax(0,1fr) 330px}
+ .topbar{position:static;flex-wrap:wrap;height:auto;gap:10px;padding:10px 20px}
+ nav.tabs{height:34px}.nav{padding:0 10px}
+ .facets{top:0}.chipsrow{position:static}
+}
+@media(max-width:1080px){
+ .workspace{grid-template-columns:minmax(0,1fr)}
+ .inspector{border-left:0;border-top:1px solid var(--line2);max-height:430px}
+ .bottom{grid-template-columns:1fr}
+ .fbtn{min-width:140px}
+}
+@media(max-width:760px){
+ .topbar{gap:8px;height:auto;min-height:52px;flex-wrap:wrap;padding:6px 12px;position:static}
+ .facets{top:0}
+ .chipsrow{top:56px}
+ nav.tabs{width:100%;height:auto;flex-wrap:wrap}
+ .nav{padding:7px 8px;font-size:11px}
+ .brand small{display:none}
+ .topright{margin-left:0;gap:6px;flex-wrap:wrap}
+ .snapshot{white-space:nowrap;font-size:9px;padding:6px 8px}
+ .langbar{flex-shrink:0}
+ .langbtn{white-space:nowrap;padding:5px 7px}
+ .panel,.panel.right{position:fixed;top:130px;left:12px;right:12px;width:auto;max-width:none}
+ .plist{max-height:min(316px,50vh)}
+ .nav .cnt{display:none}
+ .kbtn span{display:none}
+ .facets{gap:7px}
+ .fbtn{flex:1;min-width:120px}
+ .kpis{gap:16px}.kpi{padding-right:14px;min-width:78px}.kpi strong{font-size:20px}
+ .stage{height:400px}
+ .lgitems{max-height:70px}
+ .intro h1{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+
+<style>
+@media(max-width:760px){
+ main{padding:14px 12px 30px}
+ .intro{margin:8px 0 12px}
+ .intro .sub{font-size:11px}
+ .facets{top:0;padding:6px 0 2px}
+ .fbtn{min-width:0;flex:1 1 40%;padding:7px 9px}
+ .fbtn .fval{max-width:100px;font-size:11px}
+ .chipsrow{top:0;position:static}
+ .legendbar{padding:9px 10px}
+ .lgitems{max-height:64px}
+ .lgchip{max-width:150px;font-size:10px}
+ .bottom{grid-template-columns:1fr}
+ .card{padding:13px}
+ .tblwrap{max-height:320px}
+ .searchbox{min-width:130px}
+ table{font-size:11px}
+ .workspace{grid-template-columns:1fr}
+ .inspector{max-height:380px}
+ .stage{height:340px}
+}</style>
+
+<style>
+@media(max-width:760px){
+ html,body{overflow-x:hidden}
+ main{overflow-x:hidden}
+ .mapcard,.card{min-width:0;max-width:100vw}
+ .legendbar{overflow-x:auto}
+ .filtersX{display:none}
+ .lgchip{max-width:44vw}
+ .lgchip .nm{max-width:26vw;min-width:0;flex:1}
+ .lgchip .n{flex-shrink:0}
+ .lgchip .solo{display:none}
+ .tblwrap{overflow-x:auto}
+}
+</style><body>
+<header class="topbar">
+ <a href="#" class="brand" id="brandHome" aria-label="TRON-069 by SCADA StrangeLove"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span>TRON<span style="font-weight:350;color:#a08ff7">-</span>069<small>by SCADA StrangeLove</small></span></a>
+ <nav class="tabs" aria-label="Sections" data-i18n-aria="nav_sections">
+  <button class="nav active" data-tab="map" data-i18n="tab_map">Карта</button>
+  <button class="nav" data-tab="registry"><span data-i18n="tab_lines">Линейки</span> <span class="cnt" id="navLinesCnt"></span></button>
+  <button class="nav" data-tab="findings" data-i18n="tab_findings">Наблюдения</button>
+  <button class="nav" data-tab="news" data-i18n="news_title">Новости проекта</button>
+ </nav>
+ <div class="topright">
+  <span class="snapshot"><i></i> <span id="snapLabel"></span></span>
+  <button class="kbtn" id="kkOpen" data-i18n-title="search" title="Быстрый поиск"><span data-i18n="search">Поиск</span><kbd>⌘K</kbd></button>
+ <span class="langbar" role="group" aria-label="Language" data-i18n-aria="language">
+  <button class="langbtn" data-lang="en">EN</button><button class="langbtn" data-lang="zh">中文</button><button class="langbtn" data-lang="es">ES</button><button class="langbtn" data-lang="ru">RU</button>
+ </span>
+  <button class="iconbtn" id="aboutBtn" data-i18n-title="about_t" title="О данных и методике">ⓘ</button>
+ </div>
+</header>
+<main>
+<section class="intro" id="atlasIntro">
+ <div>
+  <div class="eyebrow" data-i18n="intro_eyebrow">TR-069 / CWMP · RESEARCH EXPLORER</div>
+  <h1 data-i18n="intro_title">Весь флот. <span>Одна карта.</span></h1>
+  <p class="sub" data-i18n="intro_sub">Компоненты, география и операторы — от обзора к доказательствам. Всё пассивно: совпадения Shodan, никаких запросов к устройствам.</p>
+ </div>
+
+</section>
+
+<div class="facets" id="facetsRow">
+ <div class="facet" id="facet-lines">
+  <button class="fbtn" aria-haspopup="listbox" aria-expanded="false"><span><span class="flabel" data-i18n="f_lines">Линейки</span><span class="fval" id="fv-lines">Все 50</span></span></button>
+ </div>
+ <div class="facet" id="facet-geo">
+  <button class="fbtn" aria-haspopup="listbox" aria-expanded="false"><span><span class="flabel" data-i18n="f_geo">География</span><span class="fval" id="fv-geo">Весь мир</span></span></button>
+ </div>
+ <div class="facet" id="facet-org">
+  <button class="fbtn" aria-haspopup="listbox" aria-expanded="false"><span><span class="flabel" data-i18n="f_org">Операторы · собранные срезы</span><span class="fval" id="fv-org">Все</span></span></button>
+ </div>
+ <div class="segmented" role="group" aria-label="Режим карты" data-i18n-aria="map_mode" id="modeSeg">
+  <button class="active" data-mode="clouds">◌ <span data-i18n="m_clouds">Облака</span></button>
+  <button data-mode="countries">◈ <span data-i18n="m_countries">Страны</span></button>
+  <button data-mode="http">HTTP</button>
+ </div>
+ <button class="resetall" id="resetAll" data-i18n-title="reset_title" title="Сбросить все фильтры (фокус останется)">↺ <b data-i18n="reset_all">Сбросить всё</b></button>
+</div>
+<div class="chipsrow" id="chipsRow"></div>
+<div id="modeNote" class="notecard" hidden></div>
+
+<section id="tab-map">
+ <section class="news-ticker" id="newsTicker" data-i18n-aria="news_title" aria-label="Project news">
+  <span class="news-kicker" data-i18n="news_title">Project news</span>
+  <button class="news-headline" id="newsHeadline" aria-controls="tab-news"></button>
+  <div class="news-controls">
+   <button id="newsPrev" data-i18n-aria="news_prev" aria-label="Previous news">‹</button>
+   <button id="newsPause" aria-pressed="false"></button>
+   <button id="newsNext" data-i18n-aria="news_next" aria-label="Next news">›</button>
+  </div>
+  <button class="btn ghost news-all" id="newsAll" data-i18n="news_all">All news</button>
+  <span class="sr-only" id="newsStatus" aria-live="polite"></span>
+ </section>
+ <div class="mapcard" id="mapcard">
+  <div class="maphead">
+   <div><div class="eyebrow" id="mapEyebrow">GLOBAL OVERVIEW</div><h2 id="mapTitle">География компонентов</h2></div>
+   <div style="display:flex;gap:12px;align-items:center">
+    <span class="maphint" id="mapHint"></span>
+    <button class="iconbtn" id="fitBtn" title="Вписать срез" data-i18n-title="zoom_fit">⤢</button>
+    <button class="iconbtn" id="fsBtn" data-i18n-title="zoom_fs" title="Во весь экран">⛶</button>
+   </div>
+  </div>
+  <div class="workspace" id="workspace">
+   <div class="stage" id="stage">
+    <svg id="world" viewBox="0 0 1320 600" role="img" aria-label="Карта: страны и компоненты" data-i18n-aria="map_access">
+     <defs>
+      <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1" fill="#a9bad2" opacity=".28"/></pattern>
+     </defs>
+     <rect width="1320" height="600" fill="url(#dots)"/>
+     <g id="viewport"><g id="gDots"></g><g id="gCountries"></g><g id="gClouds"></g><g id="gLabels"></g></g>
+    </svg>
+    <div class="mleg" id="mapLegend" hidden></div>
+    <div class="zc">
+     <button id="zin" data-i18n-title="zoom_in" title="Приблизить (+)">+</button>
+     <button id="zout" data-i18n-title="zoom_out" title="Отдалить (−)">−</button>
+     <button id="zhome" data-i18n-title="zoom_home" title="Мир, сохранив фильтры">◎</button>
+    </div>
+    <div class="zoomhint" id="zoomHint"><span data-i18n="zh_zoom">⌘ / Ctrl + прокрутка — масштаб · перетаскивание — сдвиг</span></div>
+    <div class="mapfoot"><span id="zoomLabel">1.00×</span><span data-i18n="map_foot"></span></div>
+    <div class="tooltip" id="tip" hidden></div>
+   </div>
+   <button class="btn reopen-inspector" id="inspReopen" hidden data-i18n="open_panel"></button>
+   <aside class="inspector" id="inspector" aria-label="Инспектор среза" data-i18n-aria="inspector_access"></aside>
+  </div>
+  <div class="legendbar">
+   <div class="lgcap"><span data-i18n="light">Лёгкий срез</span><small data-i18n="light_hint">клик — вкл/выкл · ⌥ — только она</small></div>
+   <div style="min-width:150px"><b class="num" id="sliceSum" style="font-size:16px"></b><div class="num" id="sliceSub" style="font-size:10.5px;color:var(--muted);margin-top:3px"></div></div>
+   <div class="lgitems" id="lgItems"></div>
+   <button class="lgmore" id="lgMore"></button>
+   <button class="lgclear" id="lgClear" hidden data-i18n="remove_selection"></button>
+  </div>
+ </div>
+
+ <div class="bottom">
+  <section class="card" style="grid-row:span 2">
+   <div class="cardhead"><div><div class="eyebrow" data-i18n="eb_lines">LINES IN SLICE</div><h2 data-i18n="lt_title">Линейки в срезе</h2></div></div>
+   <div class="tblwrap" style="max-height:300px"><table><thead><tr><th data-i18n="line_header">Линейка</th><th data-i18n="lt_vendor">Вендор / статус</th><th class="num" data-i18n="lt_in">В срезе</th><th class="num" data-i18n="lt_glob">Глобально</th><th data-i18n="lt_top">Топ-страны</th></tr></thead><tbody id="linesBody"></tbody></table></div>
+  </section>
+  <section class="card">
+   <div class="cardhead">
+    <div><div class="eyebrow" data-i18n="eb_countries">COUNTRY INDEX</div><h2 id="tblTitle" data-i18n="tbl_title">Флот по странам</h2></div>
+    <div class="tools">
+     <div class="searchbox"><span>⌕</span><input id="ccSearch" placeholder="Страна: Россия / Italy / IT…" data-i18n-ph="cc_search" aria-label="Search country" data-i18n-aria="search_geo"><button id="ccSearchClear" data-i18n-aria="clear_search" hidden style="color:var(--faint)">×</button></div>
+     <button class="btn ghost" id="csvBtn">CSV</button>
+     <button class="btn ghost" id="jsonBtn">JSON</button>
+    </div>
+   </div>
+   <div class="tblwrap"><table id="ccTable"><thead id="ccHead"></thead><tbody id="ccBody"></tbody></table></div>
+   <button class="morebtn" id="ccMore"></button>
+  </section>
+  <section class="card">
+   <div class="cardhead"><div><div class="eyebrow" data-i18n="eb_next">WHERE TO NEXT</div><h2 id="scTitle" data-i18n="wtn">Куда дальше</h2></div><span style="font-size:19px;color:#b5a4f2">✧</span></div>
+   <div class="sc-grid" id="scGrid"></div>
+   <div class="researchnote" data-i18n="research_note"></div>
+  </section>
+ </div>
+</section>
+
+<section id="tab-registry" hidden>
+ <div class="card">
+  <div class="cardhead">
+   <div><div class="eyebrow" data-i18n="eb_registry">SIGNATURE REGISTRY</div><h2 data-i18n="lt_title">Линейки и компоненты</h2></div>
+   <div class="tools"><select class="service-select" id="regService" aria-label="Service role" data-i18n-aria="service_filter"><option value="all" data-i18n="service_all">All roles</option><option value="cpe" data-i18n="service_cpe">CPE</option><option value="acs" data-i18n="service_acs">ACS</option><option value="mixed" data-i18n="service_mixed">Mixed</option><option value="unknown" data-i18n="service_unknown">Unknown</option></select><div class="searchbox"><span>⌕</span><input id="regSearch" placeholder="Name, vendor, dork…" data-i18n-ph="reg_search_ph" aria-label="Search registry" data-i18n-aria="search_lines"></div></div>
+  </div>
+  <p style="font-size:11.5px;color:var(--muted);line-height:1.6;margin:0 0 14px" data-i18n="registry_note"></p><p class="note" data-i18n="service_scope"></p>
+  <div class="tblwrap"><table><thead><tr><th data-i18n="reg_th_c">Компонент</th><th data-i18n="reg_th_a">Атрибуция</th><th class="num" data-i18n="reg_th_m">Совпадения</th><th data-i18n="reg_th_g">География</th><th></th></tr></thead><tbody id="regBody"></tbody></table></div>
+ </div>
+</section>
+
+<section id="tab-findings" hidden>
+ <div style="margin:2px 0 18px">
+  <div class="eyebrow" data-i18n="eb_notes">RESEARCH NOTES</div>
+  <h2 style="font-size:22px;letter-spacing:-.7px;margin-top:8px" data-i18n="fnd_t">Находки, аномалии и ограничения</h2>
+  <p style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6" data-i18n="fnd_sub">Утверждения нашего исследования на дату снапшота.</p>
+ </div>
+ <div class="fndgrid" id="fndGrid"></div>
+</section>
+
+<section id="tab-news" hidden>
+ <div class="news-header"><div><div class="eyebrow" data-i18n="news_eyebrow">PROJECT LOG</div><h2 data-i18n="news_title">Project news</h2><p data-i18n="news_intro"></p></div><button class="btn" id="newsBack" data-i18n="news_back"></button></div>
+ <div class="news-grid" id="newsGrid"></div>
+</section>
+
+<footer><span>TRON-069 by SCADA StrangeLove <b>·</b> <span data-i18n="footer_l">локальный исследовательский срез</span></span><span><span data-i18n="footer_r">пассивные агрегаты Shodan · без запросов к устройствам · OFFLINE READY</span></span></footer>
+</main>
+
+<dialog id="aboutDlg"><button class="iconbtn" id="aboutX" data-i18n-aria="close" style="position:absolute;top:12px;right:12px">×</button>
+ <div class="eyebrow" data-i18n="eb_method">DATA & METHODOLOGY</div><h2 data-i18n="about_heading"></h2>
+ <div id="aboutBody"></div>
+ <button class="btn primary" id="aboutOk" style="margin-top:12px" data-i18n="about_ok">Понятно</button>
+</dialog>
+
+<div class="kk-overlay" id="kkOverlay" hidden>
+ <div class="kk" role="dialog" aria-modal="true" aria-label="Быстрый поиск" data-i18n-aria="search">
+  <input id="kkInput" placeholder="Страна, линейка, регион, оператор…" data-i18n-ph="kk_ph" autocomplete="off">
+  <div class="kk-list" id="kkList" role="listbox"></div>
+  <div class="kk-foot"><span><kbd>↑↓</kbd> <em data-i18n="kk_sel">выбрать</em></span><span><kbd>Enter</kbd> <em data-i18n="kk_open">открыть</em></span><span><kbd>⌥Enter</kbd> <em data-i18n="kk_add">добавить</em></span><span><kbd>Esc</kbd> <em data-i18n="kk_close">закрыть</em></span></div>
+ </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+/* ══ i18n ══ */
+const I18N = {
+en: {
+ reg_hint:"Numbers are individual dorks (query matches), see snapshot in header. Badges: proven / hypothesis / anonymous / class.",
+ reg_search_ph:"Name, vendor, dork…",
+ show_on_map:"Show on map",
+ tbl_title:"Fleet by country",
+ slice_sub:(c,l,ds,s)=>c+" countries · "+l+" lines"+(ds?" (disj.)":" (sel.)")+" · snapshot "+s,
+ sc_largest_why:n=>n+" matches — start here",
+ cmp_all_short:n=>"all "+n+" lines present here",
+ note_data:"Data, not decoration.",
+ note_clouds:"Colored clouds show real country counts. Line mix does not sum to unique devices.",
+ note_facets:"Operator facets collected for 41 line×country pairs. Exact firmware versions not measured.",
+ sc_rich_val:n=>n+" lines",
+ fmt_mln:"M",
+ brand_sub:"by SCADA StrangeLove",
+ tab_map:"Map", tab_lines:"Lines", tab_findings:"Observations",
+ search:"Search", about_t:"About data & methodology",
+ intro_eyebrow:"TR-069 / CWMP · RESEARCH EXPLORER",
+ intro_title:"The whole fleet. <span>One map.</span>",
+ intro_sub:"Components, geography and operators — from overview to evidence. Fully passive: Shodan matches, zero requests to devices.",
+ f_lines:"Lines", f_geo:"Geography", f_org:"Operators · collected slices",
+ f_all_lines:l=>"All · disjoint "+l, f_world:"Whole world", f_orgs_all:"All",
+ m_clouds:"Clouds", m_countries:"Countries", m_http:"HTTP",
+ reset_all:"Reset all", sel:"Selected", sel_none:"nothing selected — whole park (disjoint sums)",
+ n_sel:n=>n+" selected", n_sel_geo:n=>n+" selected",
+ eyebrow_sel:"SELECTION", eyebrow_glob:"GLOBAL OVERVIEW",
+ title_def:"Component geography", title_cmp:n=>"Compare · "+n, title_ctry:n=>"Countries · "+n, title_orgs:n=>"Operators · "+n,
+ hint_clouds:"cloud = country × line (up to 4)", hint_ctry:"color — line", hint_http:"share without HTTP signature",
+ zh_zoom:"⌘ / Ctrl + scroll — zoom · drag — pan",
+ light:"Light slice", light_hint:"click — toggle · ⌥ — only it",
+ lg_more:"more", lg_less:"collapse", lg_clear:"Clear selection",
+ th_country:"Country", th_sum:"Σ lines (disj.)", th_park:"Park :7547", th_silent:"silent", th_mix:"Mix", th_leader:"Leader", th_sel_sum:"Σ selected", th_mixes:"Mixes",
+ cc_search:"Country: Italia / Германия / IT…", show_all:n=>"Show all "+n, empty_tbl:"Nothing found — “no data” ≠ zero devices",
+ lt_title:"Lines in slice", lt_vendor:"Vendor / status", lt_in:"In slice", lt_glob:"Global", lt_top:"Top countries",
+ b_proven:"proven", b_hyp:"hypothesis", b_anon:"anonymous", b_class:"class",
+ s_ports:"Ports", s_find:"Findings", s_anom:"Anomalies", s_ovl:"Overlaps — do not sum", s_top:"Top countries (click — pair card)", s_var:"Variations · pockets · extra dorks", s_ops:"Operators (org-facet)",
+ pair_in:"in country", pair_share:"share of Σ lines of country (disj.)", pair_glob:"globally in line",
+ line_in:"in slice · global:", line_hint:"click on legend chip to clear",
+ cty_sum:"Σ lines in slice", cty_allports:"Σ lines · all ports (disj.)", cty_park:"park :7547", cty_silent:"no HTTP signature", cty_lines:"Lines in country (click — pair card)", cty_ops:"Operators (top line)",
+ cmp_cards:"cards — × removes", cmp_all:n=>"Countries with all "+n, cmp_empty:"intersection is empty",
+ wtn:"Where to next", wtn_sum:t=>t+" matches · disjoint lines", wtn_full:"full list — at page bottom",
+ warn_slice:"Matches ≠ devices. Disjoint sum excludes supersets/slices; with manual line selection your selection is summed.",
+ copy:"Copy dork", done:"Done", clear_all:"Clear all", only:"only",
+ t_reset:"Selection reset", t_undo:"Undo", t_copied:"Dork copied",
+ pg_regions:"Regions", pg_countries:"Countries & territories",
+ sc_largest:"Largest line: ", sc_rich:"Richest mix: ", sc_mono:"Monocentric: ", sc_main:"Main country: ", sc_similar:"Similar geography: ", sc_common:"Common country: ", sc_region:"Region special: ",
+ sc_rich_why:n=>n+" distinct lines — multi-platform operator", sc_mono_why:(p,c)=>p+" of the line in one country ("+c+")",
+ sc_similar_why:v=>"country cosine "+v+" — add to compare", sc_region_why:(p,l)=>p+" of the line in region — "+l+"× its park share",
+ reg_Europe:"Europe", reg_Asia:"Asia", reg_Africa:"Africa", reg_NAm:"North America", reg_SAm:"South America", reg_Oceania:"Oceania", reg_Other:"Other",
+ reg4:(a,b)=>a+" · "+b,
+ http_note:"HTTP mode: color — share of :7547 addresses <b>without observable HTTP signature</b> (whitelist-CR, SYN-proxy, stale entries — neutral). Selection preserved; KR ~80% — whitelist hypothesis.",
+ nfound:"Nothing found", pick:"pick", kop:"copy",
+ reg_th_c:"Component", reg_th_a:"Attribution", reg_th_m:"Matches", reg_th_g:"Geography",
+ fnd_t:"Findings, anomalies & limits", fnd_sub:"Statements of our research as of snapshot date. Line scale ≠ vulnerability scale.",
+ fnd_pick:"Pick",
+ tip_sel:"click — select · ⌥ — only it", tip_pair:"click — pair card (filters unchanged)",
+ about_p1:"<b>Matches, not devices.</b> Every number is how many services the Shodan search returned for a signature within the 30-day index window. “matches → unique IPs → devices” requires dedup which is absent here.",
+ about_p2:"<b>Ports.</b> Lines are collected across their whole port ecology (7547, 7170, 58000, 50805, 30005, 1024/1025, 6264…), so a line can <b>exceed</b> the “park” of a country — while park is always :7547 only (denominator for silent share). Default slice is the sum of <b>disjoint</b> lines (no supersets/slices); manual selection sums your choice.",
+ about_p3:"<b>Clicks.</b> Country — toggle (⌥ — only it), line — toggle, cloud — pair card without changing filters, sea — clear countries, Esc — level by level.",
+ about_p4:"<b>Operators.</b> Strict mode: only collected line×country pairs count (top-15×3); pairs without data are excluded.",
+ about_p5:"<b>RU segment</b> is a coverage artifact, not posture. KR ~80% without HTTP signature — whitelist-CR hypothesis.",
+ about_ok:"Got it",
+ footer_l:"local research snapshot", footer_r:"passive Shodan aggregates · zero requests to devices · OFFLINE READY",
+ kk_ph:"Country, line, region, operator…", kk_sel:"select", kk_open:"open", kk_add:"add to selection", kk_close:"close",
+ zoom_fit:"Fit slice", zoom_fs:"Fullscreen", zoom_home:"World, keep filters", zoom_in:"Zoom in (+)", zoom_out:"Zoom out (−)",
+ col_on:"“no data” is not zero devices", fold_panel:"Collapse panel",
+},
+ru: {
+ reg_hint:"Числа — отдельные дорки (query matches), снапшот в шапке. proven / hypothesis / anonymous / class — статус атрибуции.",
+ reg_search_ph:"Название, вендор, дорк…",
+ show_on_map:"Показать на карте",
+ tbl_title:"Флот по странам",
+ slice_sub:(c,l,ds,s)=>c+" стран · "+l+" линеек"+(ds?" (дизъ.)":" (выбор)")+" · снапшот "+s,
+ sc_largest_why:n=>n+" совпадений — начать с неё",
+ cmp_all_short:n=>"все "+n+" линеек встречаются здесь",
+ note_data:"Данные, не декорация.",
+ note_clouds:"Цветные облака показывают реальные страновые счётчики. Состав линеек не складывается в число уникальных устройств.",
+ note_facets:"Операторские фасеты собраны для 41 пары линейка×страна. Точные версии прошивок не измерены.",
+ sc_rich_val:n=>n+" лин.",
+ fmt_mln:" млн",
+ brand_sub:"by SCADA StrangeLove",
+ tab_map:"Карта", tab_lines:"Линейки", tab_findings:"Наблюдения",
+ search:"Поиск", about_t:"О данных и методике",
+ intro_eyebrow:"TR-069 / CWMP · RESEARCH EXPLORER",
+ intro_title:"Весь флот. <span>Одна карта.</span>",
+ intro_sub:"Компоненты, география и операторы — от обзора к доказательствам. Всё пассивно: совпадения Shodan, ноль запросов к устройствам.",
+ f_lines:"Линейки", f_geo:"География", f_org:"Операторы · собранные срезы",
+ f_all_lines:l=>"Все · дизъ. "+l, f_world:"Весь мир", f_orgs_all:"Все",
+ m_clouds:"Облака", m_countries:"Страны", m_http:"HTTP",
+ reset_all:"Сбросить всё", sel:"Выбрано", sel_none:"ничего не выбрано — весь парк (дизъ. суммы)",
+ n_sel:n=>"выбрано: "+n, n_sel_geo:n=>n+" выбрано",
+ eyebrow_sel:"ВЫБОР", eyebrow_glob:"ГЛОБАЛЬНЫЙ ОБЗОР",
+ title_def:"География компонентов", title_cmp:n=>"Сравнение · "+n, title_ctry:n=>"Страны · "+n, title_orgs:n=>"Операторы · "+n,
+ hint_clouds:"облако = страна × линейка (до 4)", hint_ctry:"цвет — линейка", hint_http:"доля без HTTP-сигнатуры",
+ zh_zoom:"⌘ / Ctrl + прокрутка — масштаб · перетаскивание — сдвиг",
+ light:"Лёгкий срез", light_hint:"клик — вкл/выкл · ⌥ — только она",
+ lg_more:"ещё", lg_less:"свернуть", lg_clear:"Снять выбор",
+ th_country:"Страна", th_sum:"Σ линий (дизъ.)", th_park:"Парк :7547", th_silent:"silent", th_mix:"Состав", th_leader:"Лидер", th_sel_sum:"Σ выбранных", th_mixes:"Составы",
+ cc_search:"Страна: Россия / Italy / IT…", show_all:n=>"Показать все "+n, empty_tbl:"Ничего не найдено — «нет данных» ≠ ноль устройств",
+ lt_title:"Линейки в срезе", lt_vendor:"Вендор / статус", lt_in:"В срезе", lt_glob:"Глобально", lt_top:"Топ-страны",
+ b_proven:"доказано", b_hyp:"гипотеза", b_anon:"аноним", b_class:"класс",
+ s_ports:"Порты", s_find:"Находки", s_anom:"Аномалии", s_ovl:"Пересечения — не суммировать", s_top:"Топ-страны (клик — карточка пары)", s_var:"Вариации · карманы · доп. дорки", s_ops:"Операторы (org-facet)",
+ pair_in:"в стране", pair_share:"доля Σ линий страны (дизъ.)", pair_glob:"глобально у линейки",
+ line_in:"в срезе · глобально:", line_hint:"клик по чипу легенды снимет",
+ cty_sum:"Σ линий в срезе", cty_allports:"Σ линий · все порты (дизъ.)", cty_park:"парк :7547", cty_silent:"без HTTP-сигнатуры", cty_lines:"Линейки в стране (клик — карточка пары)", cty_ops:"Операторы (лидер линейки)",
+ cmp_cards:"карточки — × убирает", cmp_all:n=>"Где есть все "+n, cmp_empty:"пересечение пусто",
+ wtn:"Куда дальше", wtn_sum:t=>t+" совпадений · дизъ. линейки", wtn_full:"полный список — внизу страницы",
+ warn_slice:"Совпадения ≠ устройства. Дизъ.-сумма без надмножеств/срезов; при ручном выборе линеек суммируется ваш выбор.",
+ copy:"Копировать дорк", done:"Готово", clear_all:"Снять всё", only:"только",
+ t_reset:"Выбор сброшен", t_undo:"Вернуть", t_copied:"Дорк скопирован",
+ pg_regions:"Регионы", pg_countries:"Страны и территории",
+ sc_largest:"Крупнейшая линейка: ", sc_rich:"Самый пёстрый состав: ", sc_mono:"Моноконцентрация: ", sc_main:"Главная страна: ", sc_similar:"Похожая география: ", sc_common:"Общая страна: ", sc_region:"Спец региона: ",
+ sc_rich_why:n=>n+" разных линеек — мультиплатформенный оператор", sc_mono_why:(p,c)=>p+" линии в одной стране ("+c+")",
+ sc_similar_why:v=>"косинус стран "+v+" — добавить к сравнению", sc_region_why:(p,l)=>p+" линии в регионе — в "+l+"× чаще доли региона в парке",
+ reg_Europe:"Европа", reg_Asia:"Азия", reg_Africa:"Африка", reg_NAm:"Северная Америка", reg_SAm:"Южная Америка", reg_Oceania:"Океания", reg_Other:"Прочее",
+ reg4:(a,b)=>a+" · "+b,
+ http_note:"HTTP-режим: цвет — доля адресов :7547 <b>без наблюдаемой HTTP-сигнатуры</b> (whitelist-CR, SYN-proxy, устаревшие записи — нейтрально). Выбор сохранён; KR ~80% — гипотеза whitelist.",
+ nfound:"Ничего не найдено", pick:"выбрать", kop:"копи",
+ reg_th_c:"Компонент", reg_th_a:"Атрибуция", reg_th_m:"Совпадения", reg_th_g:"География",
+ fnd_t:"Находки, аномалии и ограничения", fnd_sub:"Утверждения нашего исследования на дату снапшота. Масштаб линии ≠ масштаб уязвимости.",
+ fnd_pick:"Выбрать",
+ tip_sel:"клик — выделить · ⌥клик — только она", tip_pair:"клик — карточка пары (фильтры не меняются)",
+ about_p1:"<b>Совпадения, не устройства.</b> Каждое число — сколько сервисов выдал поиск Shodan по сигнатуре за 30-дневное окно. «Совпадения → уникальные IP → устройства» требует дедупликации, которой здесь нет.",
+ about_p2:"<b>Порты.</b> Линейки собираются по всей их порт-экологии (7547, 7170, 58000, 50805, 30005, 1024/1025, 6264…), поэтому линейка в стране может <b>превышать</b> «парк» — а парк всегда только :7547 (знаменатель для silent-доли). Срез по умолчанию — сумма <b>дизъюнктных</b> линеек; при ручном выборе суммируется ваш выбор.",
+ about_p3:"<b>Клики.</b> Страна — тоггл (⌥ — только она), линейка — тоггл, облако — карточка пары без изменения фильтров, море — снять страны, Esc — по уровням.",
+ about_p4:"<b>Операторы.</b> Строгий режим: считаются только собранные пары линейка×страна (топ-15×3); пары без данных в срез не проходят.",
+ about_p5:"<b>RU-сегмент</b> — артефакт покрытия, не постура. KR ~80% без HTTP-сигнатуры — гипотеза whitelist-CR.",
+ about_ok:"Понятно",
+ footer_l:"локальный исследовательский срез", footer_r:"пассивные агрегаты Shodan · без запросов к устройствам · OFFLINE READY",
+ kk_ph:"Страна, линейка, регион, оператор…", kk_sel:"выбрать", kk_open:"открыть", kk_add:"добавить к выбору", kk_close:"закрыть",
+ zoom_fit:"Вписать срез", zoom_fs:"Во весь экран", zoom_home:"Мир, сохранив фильтры", zoom_in:"Приблизить (+)", zoom_out:"Отдалить (−)",
+ col_on:"«нет данных» — не ноль устройств", fold_panel:"Свернуть панель",
+},
+zh: {
+ reg_hint:"数字为各自的检索式（query matches），快照见页首。徽章：已证实 / 推测 / 未知 / 类别。",
+ reg_search_ph:"名称、厂商、检索式…",
+ show_on_map:"在地图上显示",
+ tbl_title:"按国家统计的设备群",
+ slice_sub:(c,l,ds,s)=>c+" 国家 · "+l+" 产品线"+(ds?"（去重）":"（已选）")+" · 快照 "+s,
+ sc_largest_why:n=>n+" 条匹配 —— 从这里开始",
+ cmp_all_short:n=>"全部 "+n+" 条产品线都在此",
+ note_data:"数据，而非装饰。",
+ note_clouds:"彩色气泡显示真实的国家级计数。产品线之和不等于唯一设备数。",
+ note_facets:"运营商维度按 41 对产品线×国家采集。未测量精确固件版本。",
+ sc_rich_val:n=>n+" 条",
+ fmt_mln:"M",
+ brand_sub:"by SCADA StrangeLove",
+ tab_map:"地图", tab_lines:"产品线", tab_findings:"观察记录",
+ search:"搜索", about_t:"关于数据与方法",
+ intro_eyebrow:"TR-069 / CWMP · RESEARCH EXPLORER",
+ intro_title:"整个设备群。<span>一张地图。</span>",
+ intro_sub:"组件、地理与运营商——从概览到证据。完全被动：Shodan 匹配，不向设备发送任何请求。",
+ f_lines:"产品线", f_geo:"地理", f_org:"运营商 · 已采集切片",
+ f_all_lines:l=>"全部 · 去重 "+l, f_world:"全球", f_orgs_all:"全部",
+ m_clouds:"云", m_countries:"国家", m_http:"HTTP",
+ reset_all:"重置全部", sel:"已选", sel_none:"未选择任何内容 —— 整个设备群（去重求和）",
+ n_sel:n=>"已选 "+n+" 项", n_sel_geo:n=>"已选 "+n,
+ eyebrow_sel:"已选", eyebrow_glob:"全局概览",
+ title_def:"组件地理分布", title_cmp:n=>"比较 · "+n, title_ctry:n=>"国家 · "+n, title_orgs:n=>"运营商 · "+n,
+ hint_clouds:"气泡 = 国家 × 产品线（最多 4 个）", hint_ctry:"颜色 — 产品线", hint_http:"无 HTTP 签名占比",
+ zh_zoom:"⌘ / Ctrl + 滚轮 — 缩放 · 拖拽 — 平移",
+ light:"轻量切片", light_hint:"点击 — 开关 · ⌥ — 仅选此项",
+ lg_more:"更多", lg_less:"收起", lg_clear:"清除选择",
+ th_country:"国家", th_sum:"Σ 产品线（去重）", th_park:"端口 :7547 合计", th_silent:"静默", th_mix:"构成", th_leader:"主导", th_sel_sum:"Σ 已选", th_mixes:"构成",
+ cc_search:"国家：中国 / Italia / IT…", show_all:n=>"显示全部 "+n, empty_tbl:"未找到 —— 「无数据」≠ 零设备",
+ lt_title:"切片中的产品线", lt_vendor:"厂商 / 状态", lt_in:"切片内", lt_glob:"全局", lt_top:"主要国家",
+ b_proven:"已证实", b_hyp:"推测", b_anon:"未知", b_class:"类别",
+ s_ports:"端口", s_find:"发现", s_anom:"异常", s_ovl:"重叠 —— 不可相加", s_top:"主要国家（点击打开组合卡片）", s_var:"变体 · 聚类 · 附加检索", s_ops:"运营商（org 维度）",
+ pair_in:"在该国", pair_share:"占该国 Σ 产品线（去重）", pair_glob:"产品线全局",
+ line_in:"切片内 · 全局：", line_hint:"点击图例芯片可取消",
+ cty_sum:"切片内 Σ 产品线", cty_allports:"Σ 产品线 · 全端口（去重）", cty_park:"端口 :7547 合计", cty_silent:"无 HTTP 签名", cty_lines:"该国产品线（点击 — 组合卡片）", cty_ops:"运营商（头部产品线）",
+ cmp_cards:"卡片 — × 可移除", cmp_all:n=>"同时拥有全部 "+n+" 条的国家", cmp_empty:"交集为空",
+ wtn:"下一步", wtn_sum:t=>t+" 条匹配 · 去重产品线", wtn_full:"完整清单见页底",
+ warn_slice:"匹配 ≠ 设备。去重求和不含超集/切片；手动选择产品线时按您的选择求和。",
+ copy:"复制检索式", done:"完成", clear_all:"全部清除", only:"仅此项",
+ t_reset:"已重置选择", t_undo:"撤销", t_copied:"已复制检索式",
+ pg_regions:"区域", pg_countries:"国家与地区",
+ sc_largest:"最大产品线：", sc_rich:"最杂构成：", sc_mono:"单一集中：", sc_main:"主要国家：", sc_similar:"相似地理：", sc_common:"共同国家：", sc_region:"区域特色：",
+ sc_rich_why:n=>n+" 条不同产品线 —— 多平台运营商", sc_mono_why:(p,c)=>p+" 的产品线集中于一国（"+c+"）",
+ sc_similar_why:v=>"国家余弦 "+v+" —— 加入比较", sc_region_why:(p,l)=>p+" 的产品线在本区域 —— 为区域占比的 "+l+" 倍",
+ reg_Europe:"欧洲", reg_Asia:"亚洲", reg_Africa:"非洲", reg_NAm:"北美洲", reg_SAm:"南美洲", reg_Oceania:"大洋洲", reg_Other:"其他",
+ reg4:(a,b)=>a+" · "+b,
+ http_note:"HTTP 模式：颜色 — :7547 地址中<b>无可观测 HTTP 签名</b>的占比（whitelist-CR、SYN-proxy、过期记录 —— 中性）。选择保留；韩国约 80% —— whitelist 假说。",
+ nfound:"未找到", pick:"选取", kop:"复制",
+ reg_th_c:"组件", reg_th_a:"归属", reg_th_m:"匹配数", reg_th_g:"地理",
+ fnd_t:"发现、异常与限制", fnd_sub:"截至快照日期的研究结论。产品线规模 ≠ 漏洞规模。",
+ fnd_pick:"选取",
+ tip_sel:"点击 — 选择 · ⌥ — 仅此项", tip_pair:"点击 — 组合卡片（不改筛选）",
+ about_p1:"<b>匹配，不是设备。</b> 每个数字是 Shodan 在 30 天索引窗口内按签名返回的服务数。「匹配 → 唯一 IP → 设备」需要去重，此处没有。",
+ about_p2:"<b>端口。</b> 产品线按其完整端口生态采集（7547、7170、58000、50805、30005、1024/1025、6264…），因此某国产品线可<b>超过</b>其「端口合计」—— 合计始终仅 :7547（静默占比的分母）。默认切片为<b>去重</b>产品线之和；手动选择则按您的选择求和。",
+ about_p3:"<b>点击。</b> 国家 — 开关（⌥ — 仅此项），产品线 — 开关，气泡 — 组合卡片且不改筛选，海面 — 清除国家，Esc — 逐层返回。",
+ about_p4:"<b>运营商。</b> 严格模式：仅统计已采集的产品线×国家对（top-15×3）；无数据的对不计入。",
+ about_p5:"<b>俄语区</b>是覆盖伪影，不代表实际态势。韩国约 80% 无 HTTP 签名 —— whitelist-CR 假说。",
+ about_ok:"明白了",
+ footer_l:"本地研究快照", footer_r:"被动 Shodan 聚合 · 不向设备发请求 · 离线可用",
+ kk_ph:"国家、产品线、区域、运营商…", kk_sel:"选择", kk_open:"打开", kk_add:"加入选择", kk_close:"关闭",
+ zoom_fit:"适配切片", zoom_fs:"全屏", zoom_home:"世界（保留筛选）", zoom_in:"放大（+）", zoom_out:"缩小（−）",
+ col_on:"「无数据」不等于零设备", fold_panel:"折叠面板",
+},
+es: {
+ reg_hint:"Los números son dorks individuales (coincidencias), corte en cabecera. Insignias: comprobado / hipótesis / anónimo / clase.",
+ reg_search_ph:"Nombre, vendedor, dork…",
+ show_on_map:"Mostrar en el mapa",
+ tbl_title:"Flota por país",
+ slice_sub:(c,l,ds,s)=>c+" países · "+l+" líneas"+(ds?" (disj.)":" (sel.)")+" · corte "+s,
+ sc_largest_why:n=>n+" coincidencias — empieza aquí",
+ cmp_all_short:n=>"todas las "+n+" líneas aquí",
+ note_data:"Datos, no decoración.",
+ note_clouds:"Las nubes muestran contadores reales por país. La suma de líneas no equivale a dispositivos únicos.",
+ note_facets:"Facetas de operador recopiladas para 41 pares línea×país. Versiones no medidas.",
+ sc_rich_val:n=>n+" líneas",
+ fmt_mln:"M",
+ brand_sub:"by SCADA StrangeLove",
+ tab_map:"Mapa", tab_lines:"Líneas", tab_findings:"Observaciones",
+ search:"Buscar", about_t:"Sobre los datos y metodología",
+ intro_eyebrow:"TR-069 / CWMP · RESEARCH EXPLORER",
+ intro_title:"Toda la flota. <span>Un mapa.</span>",
+ intro_sub:"Componentes, geografía y operadores — de la vista general a la evidencia. Todo pasivo: coincidencias de Shodan, cero peticiones a dispositivos.",
+ f_lines:"Líneas", f_geo:"Geografía", f_org:"Operadores · cortes recopilados",
+ f_all_lines:l=>"Todas · disj. "+l, f_world:"Todo el mundo", f_orgs_all:"Todos",
+ m_clouds:"Nubes", m_countries:"Países", m_http:"HTTP",
+ reset_all:"Reiniciar todo", sel:"Selección", sel_none:"nada seleccionado — todo el parque (sumas disjuntas)",
+ n_sel:n=>n+" seleccionadas", n_sel_geo:n=>n+" elegido",
+ eyebrow_sel:"SELECCIÓN", eyebrow_glob:"VISTA GLOBAL",
+ title_def:"Geografía de componentes", title_cmp:n=>"Comparar · "+n, title_ctry:n=>"Países · "+n, title_orgs:n=>"Operadores · "+n,
+ hint_clouds:"nube = país × línea (hasta 4)", hint_ctry:"color — línea", hint_http:"fracción sin firma HTTP",
+ zh_zoom:"⌘ / Ctrl + rueda — zoom · arrastrar — desplazar",
+ light:"Corte ligero", light_hint:"clic — alternar · ⌥ — solo esta",
+ lg_more:"más", lg_less:"plegar", lg_clear:"Quitar selección",
+ th_country:"País", th_sum:"Σ líneas (disj.)", th_park:"Parque :7547", th_silent:"mudo", th_mix:"Composición", th_leader:"Líder", th_sel_sum:"Σ elegidas", th_mixes:"Composición",
+ cc_search:"País: España / Italia / IT…", show_all:n=>"Mostrar todas "+n, empty_tbl:"Nada encontrado — «sin datos» ≠ cero dispositivos",
+ lt_title:"Líneas en el corte", lt_vendor:"Vendedor / estado", lt_in:"En corte", lt_glob:"Global", lt_top:"Top países",
+ b_proven:"comprobado", b_hyp:"hipótesis", b_anon:"anónimo", b_class:"clase",
+ s_ports:"Puertos", s_find:"Hallazgos", s_anom:"Anomalías", s_ovl:"Superposiciones — no sumar", s_top:"Top países (clic — tarjeta de par)", s_var:"Variaciones · bolsillos · dorks extra", s_ops:"Operadores (org-facet)",
+ pair_in:"en el país", pair_share:"parte de Σ líneas del país (disj.)", pair_glob:"global de la línea",
+ line_in:"en corte · global:", line_hint:"clic en el chip de leyenda para quitar",
+ cty_sum:"Σ líneas en el corte", cty_allports:"Σ líneas · todos los puertos (disj.)", cty_park:"parque :7547", cty_silent:"sin firma HTTP", cty_lines:"Líneas en el país (clic — tarjeta de par)", cty_ops:"Operadores (línea líder)",
+ cmp_cards:"tarjetas — × quita", cmp_all:n=>"Países con todas las "+n, cmp_empty:"intersección vacía",
+ wtn:"¿Qué sigue?", wtn_sum:t=>t+" coincidencias · líneas disj.", wtn_full:"lista completa — al pie",
+ warn_slice:"Coincidencias ≠ dispositivos. La suma disjunta excluye superconjuntos/cortes; con selección manual se suma su elección.",
+ copy:"Copiar dork", done:"Listo", clear_all:"Quitar todo", only:"solo",
+ t_reset:"Selección reiniciada", t_undo:"Deshacer", t_copied:"Dork copiado",
+ pg_regions:"Regiones", pg_countries:"Países y territorios",
+ sc_largest:"Línea mayor: ", sc_rich:"Composición más rica: ", sc_mono:"Monocéntrica: ", sc_main:"País principal: ", sc_similar:"Geografía similar: ", sc_common:"País común: ", sc_region:"Especial de región: ",
+ sc_rich_why:n=>n+" líneas distintas — operador multiplataforma", sc_mono_why:(p,c)=>p+" de la línea en un solo país ("+c+")",
+ sc_similar_why:v=>"coseno de países "+v+" — añadir a comparar", sc_region_why:(p,l)=>p+" de la línea en la región — "+l+"× su parte del parque",
+ reg_Europe:"Europa", reg_Asia:"Asia", reg_Africa:"África", reg_NAm:"América del Norte", reg_SAm:"América del Sur", reg_Oceania:"Oceanía", reg_Other:"Otros",
+ reg4:(a,b)=>a+" · "+b,
+ http_note:"Modo HTTP: color — fracción de direcciones :7547 <b>sin firma HTTP observable</b> (whitelist-CR, SYN-proxy, registros obsoletos — neutral). Selección conservada; KR ~80% — hipótesis whitelist.",
+ nfound:"Nada encontrado", pick:"elegir", kop:"copiar",
+ reg_th_c:"Componente", reg_th_a:"Atribución", reg_th_m:"Coincidencias", reg_th_g:"Geografía",
+ fnd_t:"Hallazgos, anomalías y límites", fnd_sub:"Afirmaciones de nuestra investigación a la fecha del corte. Escala de línea ≠ escala de vulnerabilidad.",
+ fnd_pick:"Elegir",
+ tip_sel:"clic — seleccionar · ⌥ — solo esta", tip_pair:"clic — tarjeta de par (filtros intactos)",
+ about_p1:"<b>Coincidencias, no dispositivos.</b> Cada número es cuántos servicios devolvió la búsqueda de Shodan por firma en la ventana de 30 días. «coincidencias → IPs únicos → dispositivos» exige dedup que aquí no existe.",
+ about_p2:"<b>Puertos.</b> Las líneas se recopilan en toda su ecología de puertos (7547, 7170, 58000, 50805, 30005, 1024/1025, 6264…), por lo que una línea puede <b>superar</b> el «parque» de un país — y parque siempre es solo :7547 (denominador de la fracción muda). El corte por defecto es la suma de líneas <b>disjuntas</b>; la selección manual suma su elección.",
+ about_p3:"<b>Clics.</b> País — alternar (⌥ — solo esta), línea — alternar, nube — tarjeta de par sin tocar filtros, mar — quitar países, Esc — nivel por nivel.",
+ about_p4:"<b>Operadores.</b> Modo estricto: solo cuentan los pares línea×país recopilados (top-15×3); los pares sin datos quedan fuera.",
+ about_p5:"<b>El segmento RU</b> es artefacto de cobertura, no postura. KR ~80% sin firma HTTP — hipótesis whitelist-CR.",
+ about_ok:"Entendido",
+ footer_l:"corte local de investigación", footer_r:"agregados pasivos de Shodan · cero peticiones a dispositivos · OFFLINE READY",
+ kk_ph:"País, línea, región, operador…", kk_sel:"elegir", kk_open:"abrir", kk_add:"añadir a selección", kk_close:"cerrar",
+ zoom_fit:"Ajustar corte", zoom_fs:"Pantalla completa", zoom_home:"Mundo, mantener filtros", zoom_in:"Acercar (+)", zoom_out:"Alejar (−)",
+ col_on:"«sin datos» no es cero dispositivos", fold_panel:"Plegar panel",
+},
+};
+const UI_TRANSLATIONS = /*__UI__*/{};
+for(const [language,strings] of Object.entries(UI_TRANSLATIONS))Object.assign(I18N[language],strings);
+let LANG = (()=>{try{const u=new URLSearchParams(location.hash.slice(1)).get("lang");if(u&&Object.hasOwn(I18N,u))return u;const s=localStorage.getItem("atlas-lang");if(s&&Object.hasOwn(I18N,s))return s;const n=(navigator.language||"en").slice(0,2);return I18N[n]?n:"en";}catch(e){return "en";}})();
+if(!I18N[LANG]) LANG="en";
+function t(k,...a){ const v=(I18N[LANG]&&I18N[LANG][k])??I18N.en[k]; return typeof v==="function"?v(...a):String(v??k).replace(/\{(\d+)\}/g,(_,i)=>a[+i]??""); }
+let DNcur=null;
+function setLang(l){
+ closePanel();LANG=Object.hasOwn(I18N,l)?l:"en";
+ try{DNcur=new Intl.DisplayNames([LANG==="zh"?"zh-Hans":LANG],{type:"region"});}catch(e){DNcur=null;}
+ try{localStorage.setItem("atlas-lang",LANG);}catch(e){}
+ document.title="TRON-069 by SCADA StrangeLove — "+t("title_def");
+ const p=new URLSearchParams(location.hash.slice(1)); p.set("lang",LANG);
+ history.replaceState(null,"","#"+p.toString());
+ applyStaticI18N(); $$(".langbtn").forEach(b=>b.classList.toggle("on",b.dataset.lang===LANG));
+ refreshAll();
+}
+function REG_NAME(r){ const k={Europe:"reg_Europe",Asia:"reg_Asia",Africa:"reg_Africa","North America":"reg_NAm","South America":"reg_SAm",Oceania:"reg_Oceania",Other:"reg_Other"}[r]; return t(k); }
+function applyStaticI18N(){
+ $$("[data-i18n]").forEach(el=>{ el.innerHTML=t(el.dataset.i18n); });
+ $$("[data-i18n-ph]").forEach(el=>{ el.placeholder=t(el.dataset.i18nPh); });
+ $$("[data-i18n-title]").forEach(el=>{ el.title=t(el.dataset.i18nTitle); });
+ document.documentElement.lang=LANG;
+ $$("[data-i18n-aria]").forEach(el=>el.setAttribute("aria-label",t(el.dataset.i18nAria)));
+}
+
+document.title = "TRON-069 by SCADA StrangeLove — " + t("title_def");
+
+"use strict";
+/* ════════ TRON-069 v3 — клик = выбор ════════ */
+const DATA = /*__DATA__*/{};
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = n => n == null ? "—" : new Intl.NumberFormat(LANG, {notation:"compact",maximumFractionDigits:2}).format(n);
+const fmtF = n => n == null ? "—" : n >= 1e6 ? (n/1e6).toFixed(2)+"M" : n >= 1e3 ? (n/1e3).toFixed(n>=1e5?0:1)+"k" : ""+n;
+let DNru, DNen; try{DNru=new Intl.DisplayNames(["ru"],{type:"region"});DNen=new Intl.DisplayNames(["en"],{type:"region"});}catch(e){}
+const ccName = cc => { try{ if(LANG!=='ru'&&DNcur){const n=DNcur.of(cc); if(n&&n!==cc)return n;} const n=DNru&&DNru.of(cc); return n&&n!==cc?n:cc; }catch(e){ return cc; } };
+const ccNameEn = cc => { try{ return DNen?DNen.of(cc):cc; }catch(e){ return cc; } };
+
+/* регионы (исправлены RU/MX/CY/MV/LS, CI→Африка) */
+const REGION_RU = {Europe:"Европа",Asia:"Азия",Africa:"Африка","North America":"Северная Америка","South America":"Южная Америка",Oceania:"Океания",Other:"Прочее"};
+const REGIONS = {Europe:"AL AD AT AX BA BE BG BY CH CZ DE DK EE ES CY FO FI FR GB GG GI GR HR HU IE IM IS IT JE LI LT LU LV MC MD ME MK MT NL NO PL PT RO RS RU SE SI SK SM UA VA XK",Asia:"AE AF AM AZ BD BH BN BT CN GE HK ID IL IN IQ IR JO JP KG KH KR KW KZ LA LB LK MM MN MO MV MY NP OM PH PK PS QA SA SG SY TH TJ TL TM TR TW UZ VN YE",Africa:"AO BF BI BJ BW CD CF CG CI CM CV DJ DZ EG EH ER ET GA GH GM GN GQ KE KM LR LY MA MG ML MR MU MW MZ NA NE NG RE RW SC SD SL SN SO SS ST SZ TD TG TN TZ UG YT ZA ZM ZW","North America":"AG AI AW BB BL BM BQ BS BZ CA CR CU CW DM DO GD GL GP GT HN HT JM KN KY LC MF MQ MX MS NI PA PM PR SV SX TC TT US VC VG VI","South America":"AR BO BR CL CO EC FK GF GY PE PY SR UY VE",Oceania:"AS AU CK FJ FM GU KI MH MP NC NF NR NU NZ PF PG PN PW SB TK TO TV VU WF WS",Other:"AQ BV GS HM TF UM"};
+const CC2REG = {}; for(const [r,list] of Object.entries(REGIONS)) list.split(" ").forEach(cc=>CC2REG[cc]=r);
+const REGION_CCS = {}; for(const [r,list] of Object.entries(REGIONS)) REGION_CCS[r]=new Set(list.split(" "));
+
+const MICRO = {BH:[50.55,26.07],AD:[1.52,42.51],AG:[-61.8,17.07],AI:[-63.06,18.22],AW:[-70.03,12.51],AX:[19.95,60.2],BB:[-59.6,13.18],BM:[-64.75,32.3],BQ:[-68.27,12.15],CK:[-159.8,-21.2],CV:[-23.6,15.1],CW:[-68.99,12.2],DM:[-61.38,15.47],FM:[158.2,6.9],FO:[-6.9,62.0],GD:[-61.68,12.12],GF:[-53.0,4.0],GG:[-2.58,49.46],GI:[-5.35,36.14],GP:[-61.55,16.24],GU:[144.75,13.45],HK:[114.15,22.32],IM:[-4.55,54.24],JE:[-2.13,49.21],KI:[173.0,1.4],KM:[43.7,-11.9],KN:[-62.75,17.33],KY:[-80.9,19.3],LC:[-60.97,14.01],LI:[9.55,47.15],MC:[7.42,43.74],MF:[-63.06,18.07],MO:[113.55,22.19],MQ:[-60.98,14.64],MT:[14.42,35.9],MU:[57.56,-20.26],MV:[73.5,4.2],PF:[-149.4,-17.5],RE:[55.5,-21.1],SC:[55.5,-4.6],SG:[103.82,1.35],SM:[12.45,43.94],ST:[6.73,0.34],SX:[-63.05,18.03],TC:[-71.9,21.8],TO:[-175.2,-21.2],TV:[179.2,-8.5],VC:[-61.23,13.25],VG:[-64.6,18.44],VI:[-64.8,18.34],WF:[-176.2,-13.3],WS:[-172.1,-13.6]};
+
+const HUES = [262,212,168,24,336,190,42,292,120,10,224,64];
+const sortedSlugs = Object.entries(DATA.lines).sort((a,b)=>b[1].total-a[1].total).map(e=>e[0]);
+const PALETTE = {};
+sortedSlugs.slice(0,12).forEach((s,i)=>PALETTE[s]=`hsl(${HUES[i]} 62% 56%)`);
+sortedSlugs.slice(12).forEach((s,i)=>PALETTE[s]=`hsl(${270+(i*23)%40} 18% ${58+(i%3)*6}%)`);
+const lineColor = s => PALETTE[s] || "#9aa3b8";
+const ONORM = DATA.orgnorm.rules;
+function normOrg(o,cc){
+ const candidates=ONORM.filter(r=>!cc||!r.cc||r.cc===cc);
+ const value=o.toLocaleLowerCase();
+ const exact=candidates.find(r=>r.match.some(m=>value===m.toLocaleLowerCase()));
+ if(exact)return exact.norm;
+ for(const r of candidates)if(r.match.some(m=>value.includes(m.toLocaleLowerCase())))return r.norm;
+ return o;
+}
+const EXCL = new Set(DATA.excluded);
+const DISJOINT = sortedSlugs.filter(s=>!EXCL.has(s));
+
+const ALL_CCS = new Set([...Object.keys(DATA.park),...Object.values(DATA.lines).flatMap(l=>Object.keys(l.countries))]);
+const ORG_NAMES = new Set(Object.entries(DATA.orgdrill).flatMap(([key,cell])=>cell.orgs.map(o=>normOrg(o.value,key.split("--")[1]))));
+function loc(value){ return DATA.translations[value]?.[LANG]??value; }
+function orgCounts(cell,cc){
+ const out=new Map();
+ for(const o of cell?.orgs||[]){const name=normOrg(o.value,cc);out.set(name,(out.get(name)||0)+o.count);}
+ return out;
+}
+function lineCount(slug,cc){
+ if(!S.orgs.size)return DATA.lines[slug].countries[cc]||0;
+ const counts=orgCounts(DATA.orgdrill[slug+"--"+cc],cc);
+ return [...S.orgs].reduce((n,o)=>n+(counts.get(o)||0),0);
+}
+/* состояние */
+const S = { lines:new Set(), geo:new Set(), orgs:new Set(), mode:"clouds",
+ cell:null, sort:{key:"base",dir:-1}, ccq:"", shown:60, tab:"map",
+ lgExpanded:false, lgHover:null, hovCc:null };
+let openPanel=null, inspCollapsed=false;
+
+/* URL */
+function urlWrite(){
+ const p=new URLSearchParams({lang:LANG});
+ if(S.lines.size)p.set("lines",[...S.lines].join(","));
+ if(S.geo.size)p.set("geo",[...S.geo].join(","));
+ for(const org of S.orgs)p.append("org",org);
+ if(S.mode!=="clouds")p.set("mode",S.mode);
+ if(S.cell)p.set("cell",S.cell.cc+","+S.cell.slug);
+ if(S.tab!=="map")p.set("tab",S.tab);
+ history.replaceState(null,"","#"+p.toString());
+}
+function urlRead(){
+ const p=new URLSearchParams(location.hash.slice(1));
+ S.lines.clear();S.geo.clear();S.orgs.clear();S.cell=null;S.mode="clouds";
+ for(const x of (p.get("lines")||"").split(","))if(Object.hasOwn(DATA.lines,x))S.lines.add(x);
+ for(const x of (p.get("geo")||"").split(",")){
+  if(x.startsWith("r:")&&Object.hasOwn(REGIONS,x.slice(2))||x.startsWith("c:")&&ALL_CCS.has(x.slice(2)))S.geo.add(x);
+ }
+ const old=p.get("orgs")||"";
+ const orgs=p.getAll("org").concat(ORG_NAMES.has(old)?[old]:old.split(","));
+ for(const o of orgs)if(ORG_NAMES.has(o))S.orgs.add(o);
+ if(["clouds","countries","http"].includes(p.get("mode")))S.mode=p.get("mode");
+ const c=(p.get("cell")||"").split(",");
+ if(c.length===2&&ALL_CCS.has(c[0])&&Object.hasOwn(DATA.lines,c[1]))S.cell={cc:c[0],slug:c[1]};
+ if(Object.hasOwn(I18N,p.get("lang")))LANG=p.get("lang");
+ S.tab=["map","registry","findings","news"].includes(p.get("tab"))?p.get("tab"):"map";
+}
+
+/* срез */
+function geoPass(cc,noCountries){
+ const regs=[...S.geo].filter(token=>token.startsWith("r:"));
+ if(regs.length&&!regs.some(token=>token==="r:"+CC2REG[cc]))return false;
+ const countries=[...S.geo].filter(token=>token.startsWith("c:"));
+ return noCountries||!countries.length||countries.includes("c:"+cc);
+}
+function orgPass(slug,cc){ return !S.orgs.size||lineCount(slug,cc)>0; }
+function computeSlice(ignoreCountries){
+ const lineSel=S.lines.size?[...S.lines]:DISJOINT;
+ const out={lines:new Map(),ccs:new Map(),total:0,disjoint:!S.lines.size};
+ for(const slug of lineSel){
+  const L=DATA.lines[slug]; if(!L)continue;
+  const cs={}; let t=0;
+  for(const cc of Object.keys(L.countries)){
+   if(!geoPass(cc,ignoreCountries))continue;
+   if(!orgPass(slug,cc))continue;
+   const n=lineCount(slug,cc);cs[cc]=n; t+=n;
+  }
+  out.lines.set(slug,{total:t,countries:cs});
+  for(const [cc,n] of Object.entries(cs)){
+   const cur=out.ccs.get(cc)||{base:0,lines:{}};
+   cur.base+=n; cur.lines[slug]=n; out.ccs.set(cc,cur);
+  }
+  out.total+=t;
+ }
+ return out;
+}
+let SLICE=null, SLICE_FULL=null;
+const selCountries=()=>[...S.geo].filter(t=>t.startsWith("c:")).map(t=>t.slice(2));
+function homeIfNoCountries(){ if(!selCountries().length && K>1.01) tween(1,0,0); }
+
+function unknownCountryTotal(){
+ if(S.geo.size||S.orgs.size)return null;
+ return (S.lines.size?[...S.lines]:DISJOINT).reduce((n,slug)=>n+(DATA.lines[slug].unknown_country||0),0);
+}
+function coverageNote(cell){
+ if(!cell?.facet_meta?.org)return "";
+ const f=cell.facet_meta.org;
+ return `<div class="note">${esc(t("coverage",fmtF(f.covered),fmtF(cell.total),fmtF(f.remainder)))}</div>`;
+}
+/* фасеты */
+function facetBtnState(){
+ $$("#facetsRow .facet").forEach(f=>f.classList.remove("any"));
+ if(S.lines.size)$("#facet-lines").classList.add("any");
+ if(S.geo.size)$("#facet-geo").classList.add("any");
+ if(S.orgs.size)$("#facet-org").classList.add("any");
+ $("#fv-lines").innerHTML=!S.lines.size?t("f_all_lines",DISJOINT.length)
+  :S.lines.size<=2?[...S.lines].map(s=>`<em>${esc(DATA.lines[s].name)}</em>`).join(", ")
+  :`<span class="dots">${[...S.lines].slice(0,4).map(s=>`<i style="background:${lineColor(s)}"></i>`).join("")}</span><em>${t("n_sel",S.lines.size)}</em>`;
+ const gp=[...S.geo];
+ $("#fv-geo").innerHTML=!gp.length?t("f_world")
+  :gp.length<=2?gp.map(t=>`<em>${esc(t[0]==="r"?REG_NAME(t.slice(2)):ccName(t.slice(2)))}</em>`).join(" + ")
+  :t('n_sel_geo',gp.length);
+ $("#fv-org").innerHTML=!S.orgs.size?t("f_orgs_all"):S.orgs.size<=1?`<em>${esc(loc([...S.orgs][0]))}</em>`:t("n_sel",S.orgs.size);
+}
+function closePanel(){ if(openPanel){openPanel.btn.setAttribute("aria-expanded","false");openPanel.root.classList.remove("open");openPanel.panel.remove();openPanel=null;} }
+function pitem(it,on,isLine,sw,isRegion){
+ return `<button class="pitem ${on?"on":""} ${it.n?"":"zero"}" role="option" aria-selected="${on}" data-id="${esc(it.id)}">
+  ${isLine?`<span class="mark"></span><span class="swatch" style="background:${sw}"></span>`:isRegion?`<span class="mark" style="border-radius:50%"></span>`:`<span class="mark"></span>`}
+  <span class="nm">${it.name}${it.sub?` <span style="color:var(--faint);font-size:10.5px">· ${esc(it.sub)}</span>`:""}</span>
+  <span class="cnt">${it.n?fmtF(it.n):"—"}</span><span class="only" data-solo="${esc(it.id)}">${t("only")}</span></button>`;
+}
+function buildPanel(kind,anchorBtn,rootEl,alignRight){
+ closePanel();
+ const p=document.createElement("div");
+ p.className="panel"+(alignRight?" right":"");
+ rootEl.appendChild(p); rootEl.classList.add("open"); anchorBtn.setAttribute("aria-expanded","true");
+ openPanel={kind,panel:p,btn:anchorBtn,root:rootEl};
+ const isLines=kind==="lines",isGeo=kind==="geo",isOrg=kind==="orgs";
+ p.innerHTML=`<div class="psearch"><span>⌕</span><input placeholder="${esc(t(isLines?"search_lines":isGeo?"search_geo":"search_org"))}"><span style="font-size:10px;color:var(--faint)">Esc</span></div>${isLines?`<div class="service-presets"><button data-service-preset="cpe">${t("service_cpe")}</button><button data-service-preset="acs">${t("service_acs")}</button><button data-service-preset="mixed">${t("service_mixed")}</button><button data-service-preset="unknown">${t("service_unknown")}</button></div>`:""}<div class="plist" role="listbox" aria-multiselectable="true"></div><div class="pfoot"><button class="pact" data-a="clear">${t("clear_all")}</button><button class="pdone" data-a="done">${t("done")}</button></div>`;
+ const list=p.querySelector(".plist"),inp=p.querySelector("input");
+ const render=()=>{
+  const q=inp.value.trim().toLowerCase(); let html="";
+  if(isLines){
+   html=sortedSlugs.map(slug=>{
+    const it={id:slug,name:esc(DATA.lines[slug].name),n:(SLICE.lines.get(slug)?.total)??0,sub:t("service_"+(DATA.lines[slug].service||"unknown"))+" · "+loc((DATA.meta.lines[slug]||{}).vendor||"")};
+    if(q&&!it.name.toLowerCase().includes(q)&&!it.sub.toLowerCase().includes(q))return "";
+    return pitem(it,S.lines.has(it.id),true,lineColor(slug));
+   }).join("");
+  } else if(isGeo){
+   const regSize=r=>[...REGION_CCS[r]].reduce((s,cc)=>s+(DATA.park[cc]||0),0);
+   const regs=Object.keys(REGIONS).sort((a,b)=>regSize(b)-regSize(a));
+   const ccs=[...ALL_CCS].sort((a,b)=>(DATA.park[b]||0)-(DATA.park[a]||0));
+   const rq=(q?regs.filter(r=>r.toLowerCase().includes(q)||REG_NAME(r).toLowerCase().includes(q)):regs).filter(r=>regSize(r)>0);
+   if(rq.length)html+=`<div class="pgroup">${t("pg_regions")}</div>`+rq.map(r=>pitem({id:"r:"+r,name:REG_NAME(r),n:regSize(r)},S.geo.has("r:"+r),false,null,true)).join("");
+   const ccList=ccs.filter(cc=>!q||ccName(cc).toLowerCase().includes(q)||ccNameEn(cc).toLowerCase().includes(q)||cc.toLowerCase().includes(q));
+   if(ccList.length)html+=`<div class="pgroup">${t("pg_countries")}</div>`+ccList.map(cc=>pitem({id:"c:"+cc,name:`${ccName(cc)} <span class="mono" style="color:var(--faint);font-size:10px">${esc(cc)}</span>`,n:DATA.park[cc]||0},S.geo.has("c:"+cc),false,null)).join("");
+  } else {
+   const tally=new Map();
+   const ls=S.lines.size?[...S.lines]:DISJOINT;
+   for(const slug of ls){ if(!SLICE.lines.has(slug))continue;
+    for(const cc of Object.keys(SLICE.lines.get(slug).countries)){
+     const cell=DATA.orgdrill[slug+"--"+cc]; if(!cell)continue;
+     for(const o of cell.orgs){const nz=normOrg(o.value,cc);tally.set(nz,(tally.get(nz)||0)+o.count);}
+    }}
+   html=[...tally.entries()].sort((a,b)=>b[1]-a[1]).map(([nz,n])=>{
+    if(q&&!nz.toLowerCase().includes(q)&&!loc(nz).toLowerCase().includes(q))return "";
+    return pitem({id:nz,name:esc(loc(nz)),n},S.orgs.has(nz),false,null);
+   }).join("");
+  }
+  list.innerHTML=html||`<div class="pempty">${t("nfound")}</div>`;
+  list.querySelectorAll(".pitem").forEach(el=>{
+   el.onclick=e=>{
+    if(e.target.dataset.solo!==undefined){toggleSolo(kind,e.target.dataset.solo);render();refreshAll();return;}
+    const id=el.dataset.id;
+    const set=kind==="lines"?S.lines:kind==="orgs"?S.orgs:S.geo;
+    if(e.altKey){set.clear();set.add(id);}
+    else set.has(id)?set.delete(id):set.add(id);
+    afterGeoTouch(id);
+    render();refreshAll();
+   };
+  });
+ };
+ p.querySelectorAll("[data-service-preset]").forEach(b=>b.onclick=()=>{S.lines=new Set(sortedSlugs.filter(s=>DATA.lines[s].service===b.dataset.servicePreset));S.cell=null;refreshAll();render();});
+ inp.oninput=render;
+ p.querySelector('[data-a="clear"]').onclick=()=>{(kind==="lines"?S.lines:kind==="orgs"?S.orgs:S.geo).clear();render();refreshAll();};
+ p.querySelector('[data-a="done"]').onclick=closePanel;
+ p.onkeydown=e=>{
+  if(e.key==="Escape"){e.stopPropagation();const btn=openPanel?.btn;closePanel();btn?.focus();return;}
+  const items=[...list.querySelectorAll(".pitem")];
+  if(!items.length)return;
+  let i=items.findIndex(x=>x===document.activeElement);
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();
+   i=e.key==="ArrowDown"?Math.min(items.length-1,i+1):Math.max(0,(i<0?0:i)-1);
+   items[i].focus();}
+  if(e.key===" "&&i>=0){e.preventDefault();items[i].click();}
+ };
+ render();setTimeout(()=>inp.focus(),30);
+}
+function toggleSolo(kind,id){
+ const set=kind==="lines"?S.lines:kind==="orgs"?S.orgs:S.geo;
+ if(set.size===1&&set.has(id))set.clear();else{set.clear();set.add(id);}
+}
+function afterGeoTouch(id){
+ if(id&&id.startsWith("r:"))zoomToRegion(id.slice(2));
+ if(id&&id.startsWith("c:")&&S.geo.has(id)&&selCountries().length===1)zoomToCountry(id.slice(2));
+ if(id&&id.startsWith("c:")&&!S.geo.has(id))homeIfNoCountries();
+}
+for(const [kind,sel] of [["lines","#facet-lines"],["geo","#facet-geo"],["orgs","#facet-org"]]){
+ $(sel).querySelector(".fbtn").addEventListener("click",e=>{
+  e.stopPropagation();
+  if(openPanel&&openPanel.kind===kind){closePanel();return;}
+  buildPanel(kind,e.currentTarget,$(sel),kind==="orgs");
+ });
+}
+document.addEventListener("click",e=>{if(openPanel&&!openPanel.panel.contains(e.target))closePanel();});
+
+/* чипы */
+function renderChips(){
+ const row=$("#chipsRow");const parts=[];
+ for(const s of S.lines)
+  parts.push(`<button class="chip x" data-kind="line" data-id="${esc(s)}"><i class="sw" style="background:${lineColor(s)}"></i>${esc(DATA.lines[s].name)} <b style="color:var(--faint)">×</b></button>`);
+ for(const t of S.geo)
+  parts.push(`<button class="chip x" data-kind="geo" data-id="${esc(t)}">${t[0]==="r"?REG_NAME(t.slice(2)):esc(ccName(t.slice(2)))} <b style="color:var(--faint)">×</b></button>`);
+ for(const o of S.orgs)
+  parts.push(`<button class="chip x" data-kind="org" data-id="${esc(o)}">${esc(loc(o))} <b style="color:var(--faint)">×</b></button>`);
+ if(S.cell)parts.push(`<span class="chip focus">${esc(ccName(S.cell.cc))} × ${esc(DATA.lines[S.cell.slug].name)} <button data-kind="cellx" aria-label="${esc(t("remove_selection"))}">×</button></span>`);
+ row.innerHTML=parts.length?t('sel')+parts.join(""):t('sel_none');
+ row.querySelectorAll(".chip.x").forEach(ch=>ch.onclick=()=>{
+  const{kind,id}=ch.dataset;
+  if(kind==="line")S.lines.delete(id);
+  if(kind==="geo"){S.geo.delete(id);if(S.cell&&S.cell.cc===id.slice(2))S.cell=null;homeIfNoCountries();}
+  if(kind==="org")S.orgs.delete(id);
+  refreshAll();
+ });
+ const fx=row.querySelector('[data-kind="cellx"]');if(fx)fx.onclick=()=>{S.cell=null;refreshAll();};
+}
+$("#resetAll").onclick=()=>{
+ const snap={lines:[...S.lines],geo:[...S.geo],orgs:[...S.orgs],cell:S.cell};
+ S.lines.clear();S.geo.clear();S.orgs.clear();S.cell=null;
+ refreshAll();
+ showToast(t('t_reset'),t('t_undo'),()=>{snap.lines.forEach(x=>S.lines.add(x));snap.geo.forEach(x=>S.geo.add(x));snap.orgs.forEach(x=>S.orgs.add(x));S.cell=snap.cell;refreshAll();});
+};
+let toastT=null;
+function showToast(text,action,cb){
+ const tt=$("#toast");tt.hidden=false;
+ tt.innerHTML=`<span>${esc(text)}</span>${action?`<button>${esc(action)}</button>`:""}`;
+ if(action)tt.querySelector("button").onclick=()=>{tt.hidden=true;cb&&cb();};
+ clearTimeout(toastT);toastT=setTimeout(()=>tt.hidden=true,5200);
+}
+
+/* карта: проекция с обрезкой −58…84 */
+const W=1320,H=600,LAT_TOP=84,LAT_BOT=-58;
+let K=1,TX=0,TY=0;const homeT={k:1,x:0,y:0};
+const featByCc={};
+for(const f of DATA.geo.features){if(f.properties.cc)(featByCc[f.properties.cc]=featByCc[f.properties.cc]||[]).push(f);}
+function proj(lon,lat){
+ const x=(lon+180)/360*W;
+ const cl=Math.max(LAT_BOT,Math.min(LAT_TOP,lat));
+ const y=(LAT_TOP-cl)/(LAT_TOP-LAT_BOT)*H;
+ return [x,y];
+}
+function pathOf(geom){
+ const ring=r=>r.map(([lon,lat])=>proj(lon,lat).map(v=>v.toFixed(1)).join(",")).join("L");
+ if(geom.type==="Polygon")return "M"+ring(geom.coordinates[0])+"Z";
+ if(geom.type==="MultiPolygon")return geom.coordinates.map(p=>"M"+ring(p[0])+"Z").join("");
+ return "";
+}
+function ringAreaCentroid(r){
+ let cx=0,cy=0,a=0;
+ const pts=r.map(([lon,lat])=>proj(lon,lat));
+ for(let i=0;i<pts.length-1;i++){
+  const[x1,y1]=pts[i],[x2,y2]=pts[i+1];
+  const cr=x1*y2-x2*y1;a+=cr;cx+=(x1+x2)*cr;cy+=(y1+y2)*cr;
+ }
+ a/=2;if(!a)return{a:0,c:pts[0]||[0,0]};
+ return{a:Math.abs(a),c:[cx/(6*a),cy/(6*a)]};
+}
+const CENT={};
+for(const cc in featByCc){
+ let best=null,bA=-1;
+ for(const f of featByCc[cc]){
+  const polys=f.geometry.type==="Polygon"?[f.geometry.coordinates]:f.geometry.coordinates;
+  for(const p of polys){const{a,c}=ringAreaCentroid(p[0]);if(a>bA){bA=a;best=c;}}
+ }
+ CENT[cc]=best||[W/2,H/2];
+}
+for(const cc in MICRO){const[x,y]=proj(MICRO[cc][0],MICRO[cc][1]);CENT[cc]=[x,y];}
+function bboxOf(cc){ /* крупнейший полигон — антимеридиан-безопасно */
+ let best=null,bA=-1;
+ const take=g=>{if(!g)return;
+  const polys=g.type==="Polygon"?[g.coordinates]:g.coordinates;
+  for(const p of polys){const{a}=ringAreaCentroid(p[0]);if(a>bA){bA=a;best=p[0];}}};
+ if(featByCc[cc])featByCc[cc].forEach(f=>take(f.geometry));
+ if(!best){if(MICRO[cc]){const c=CENT[cc];return[c[0]-40,c[1]-30,c[0]+40,c[1]+30];}return null;}
+ let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
+ for(const[lon,lat]of best){const[x,y]=proj(lon,lat);mnx=Math.min(mnx,x);mny=Math.min(mny,y);mxx=Math.max(mxx,x);mxy=Math.max(mxy,y);}
+ return[mnx,mny,mxx,mxy];
+}
+const vp=$("#viewport");
+function applyT(){vp.setAttribute("transform",`translate(${TX} ${TY}) scale(${K})`);$("#zoomLabel").textContent=K.toFixed(2)+"×";scaleStatics();}
+function clampT(){TX=Math.min(W*0.6*K,Math.max(W-W*0.6*K-140,TX));TY=Math.min(H*0.6*K,Math.max(H-H*0.6*K-140,TY));}
+let anim=null;
+function tween(toK,toX,toY,ms=420){
+ if(anim)clearInterval(anim);
+ const fK=K,fX=TX,fY=TY,t0=performance.now();
+ const step=()=>{let p=Math.min(1,(performance.now()-t0)/ms);p=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+  K=fK+(toK-fK)*p;TX=fX+(toX-fX)*p;TY=fY+(toY-fY)*p;applyT();
+  if(p>=1){clearInterval(anim);anim=null;}};
+ anim=setInterval(step,16);
+}
+function zoomAt(f,cx,cy){const k2=Math.min(24,Math.max(1,K*f));const dx=(cx-TX)/K,dy=(cy-TY)/K;tween(k2,cx-dx*k2,cy-dy*k2,260);}
+function fitBBox(bb,pad=0.4){
+ if(!bb)return;const[x1,y1,x2,y2]=bb;
+ const k=Math.max(1,Math.min(W/((x2-x1)*(1+pad)),H/((y2-y1)*(1+pad)),24));
+ tween(k,W/2-(x1+x2)/2*k,H/2-(y1+y2)/2*k,520);
+}
+function zoomToCountry(cc){const bb=bboxOf(cc);if(bb)fitBBox(bb,0.5);}
+const REGION_BBOX={Europe:[-26,33,46,73],Asia:[25,0,150,82],Africa:[-20,-36,53,38],"North America":[-170,5,-50,74],"South America":[-83,-57,-32,15],Oceania:[110,-48,180,-8]};
+function zoomToRegion(r){
+ const rb=REGION_BBOX[r];
+ if(!rb){tween(1,0,0);return;}
+ const p1=proj(rb[0],rb[3]),p2=proj(rb[2],rb[1]);
+ fitBBox([p1[0],p1[1],p2[0],p2[1]],0.1);
+}
+function fitSlice(){
+ const ccs=[...SLICE.ccs.keys()];if(!ccs.length){tween(1,0,0);return;}
+ let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
+ for(const cc of ccs){const bb=bboxOf(cc);if(!bb)continue;mnx=Math.min(mnx,bb[0]);mny=Math.min(mny,bb[1]);mxx=Math.max(mxx,bb[2]);mxy=Math.max(mxy,bb[3]);}
+ if(mxx<mnx)return;fitBBox([mnx,mny,mxx,mxy],0.14);
+}
+const stage=$("#stage"),svg=$("#world");
+function svgXY(e){
+ const pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;
+ const matrix=svg.getScreenCTM();if(!matrix)return[0,0];
+ const local=pt.matrixTransform(matrix.inverse());return[local.x,local.y];
+}
+let drag=null,downHit=null;
+function hitOf(t){
+ const cl=t.closest("[data-cloud]");if(cl)return{cloud:cl.dataset};
+ const c=t.closest("[data-cc]");if(c)return{cc:c.dataset.cc};
+ return null;
+}
+stage.addEventListener("pointerdown",e=>{
+ if(e.target.closest("button"))return;
+ const [sx,sy]=svgXY(e);drag={x:e.clientX,y:e.clientY,sx,sy,tx:TX,ty:TY,moved:false};
+ downHit=hitOf(e.target);
+ stage.classList.add("dragging");stage.setPointerCapture(e.pointerId);
+});
+stage.addEventListener("pointermove",e=>{
+ if(!drag)return;
+ const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+ if(Math.abs(dx)+Math.abs(dy)>4)drag.moved=true;
+ const [sx,sy]=svgXY(e);TX=drag.tx+sx-drag.sx;TY=drag.ty+sy-drag.sy;
+ clampT();applyT();
+});
+stage.addEventListener("pointerup",e=>{
+ const wasDrag=drag&&drag.moved;drag=null;stage.classList.remove("dragging");
+ if(wasDrag){downHit=null;return;}
+ const hit=downHit||hitOf(e.target);downHit=null;
+ if(hit&&hit.cloud){
+  const{cc,slug}=hit.cloud;
+  if(S.cell&&S.cell.cc===cc&&S.cell.slug===slug)S.cell=null;else S.cell={cc,slug};
+  refreshAll();return;
+ }
+ if(hit&&hit.cc){
+  if(e.altKey){S.geo.clear();S.geo.add("c:"+hit.cc);zoomToCountry(hit.cc);}
+  else{
+   const tok="c:"+hit.cc;
+   S.geo.has(tok)?S.geo.delete(tok):S.geo.add(tok);
+   if(S.geo.has(tok)&&selCountries().length===1)zoomToCountry(hit.cc);
+   else if(!selCountries().length)tween(1,0,0);
+  }
+  if(S.cell&&S.cell.cc===hit.cc&&!S.geo.has("c:"+hit.cc))S.cell=null;
+  refreshAll();return;
+ }
+ let removed=false;
+ for(const t of[...S.geo])if(t.startsWith("c:")){S.geo.delete(t);removed=true;}
+ if(removed){if(S.cell)S.cell=null;refreshAll();homeIfNoCountries();}
+});
+stage.addEventListener("pointercancel",()=>{drag=null;downHit=null;stage.classList.remove("dragging");});
+let wheelHintT=null;
+stage.addEventListener("wheel",e=>{
+ if(!(e.ctrlKey||e.metaKey)){e.preventDefault();
+  const zh=$("#zoomHint");zh.classList.add("show");clearTimeout(wheelHintT);wheelHintT=setTimeout(()=>zh.classList.remove("show"),1400);return;}
+ e.preventDefault();const[cx,cy]=svgXY(e);zoomAt(e.deltaY<0?1.22:1/1.22,cx,cy);
+},{passive:false});
+$("#zin").onclick=()=>zoomAt(1.35,W/2,H/2);
+$("#zout").onclick=()=>zoomAt(1/1.35,W/2,H/2);
+$("#zhome").onclick=()=>{tween(homeT.k,homeT.x,homeT.y);};
+$("#fitBtn").onclick=fitSlice;
+
+/* рендер стран */
+const pathMap=new Map();
+function renderCountries(){
+ const g=$("#gCountries");
+ if(!g.children.length){
+  let h="";
+  for(const f of DATA.geo.features){
+   if(!f.properties.cc)continue;
+   h+=`<path class="country" d="${pathOf(f.geometry)}" data-cc="${f.properties.cc}"/>`;
+  }
+  g.innerHTML=h;
+  g.querySelectorAll(".country").forEach(el=>{
+   if(!pathMap.has(el.dataset.cc))pathMap.set(el.dataset.cc,[]);pathMap.get(el.dataset.cc).push(el);
+   el.addEventListener("mouseenter",()=>{S.hovCc=el.dataset.cc;paintHover();if(SLICE.ccs.has(el.dataset.cc))showTipCc(el.dataset.cc);});
+   el.addEventListener("mousemove",e=>moveTip(e));
+   el.addEventListener("mouseleave",()=>{S.hovCc=null;paintHover();hideTip();});
+  });
+ }
+ const maxLine=Math.max(1,...[...SLICE_FULL.lines.values()].map(l=>l.total));
+ const solo=S.lines.size===1?[...S.lines][0]:null;
+ const cselSet=new Set(selCountries());
+ for(const[cc,els]of pathMap)for(const el of els){
+  const inGeo=geoPass(cc);
+  const c=SLICE_FULL.ccs.get(cc);
+  let fill="#dde7f4";
+  if(S.mode==="countries"&&c){
+   if(solo){const v=c.lines[solo]||0;fill=`hsl(${PALETTE[solo]?PALETTE[solo].match(/\d+/)[0]:262} 55% ${88-Math.min(1,Math.log10(v+1)/Math.log10(maxLine+1))*34}%)`;}
+   else{const lead=Object.entries(c.lines).sort((a,b)=>b[1]-a[1])[0];fill=lead?lineColor(lead[0]):fill;}
+  }
+  if(S.mode==="http"&&DATA.park[cc]){
+   const s=1-(DATA.http[cc]||0)/DATA.park[cc];
+   fill=s>0.5?"#e8b27a":s>0.15?"#d9c9a8":"#d3e3f5";
+  }
+  if(S.mode==="clouds"&&DATA.park[cc])fill="#dfe9f5";
+  el.style.fill=fill;
+  const cls=["country"];
+  if(!inGeo)cls.push("faded");
+  else if(S.mode!=="http"&&solo&&!c)cls.push("faded");
+  if(cselSet&&cselSet.has(cc))cls.push("sel");
+  if(S.hovCc===cc)cls.push("hov");
+  el.setAttribute("class",cls.join(" "));
+ }
+ const gD=$("#gDots");let hd="";
+ const soloAbsent=cc=>S.lines.size===1&&!((SLICE.ccs.get(cc)||{lines:{}}).lines[[...S.lines][0]]);
+ for(const cc in MICRO){
+  const[x,y]=CENT[cc];if(x==null)continue;
+  const dim=(!geoPass(cc)||(S.mode!=="http"&&soloAbsent(cc)))?"faded":"";
+  hd+=`<g class="dotanchor ${dim}" data-cc="${cc}" transform="translate(${x} ${y})"><circle r="2.6" class="pt"/><circle r="6.5" fill="transparent"/></g>`;
+ }
+ gD.innerHTML=hd;
+ gD.querySelectorAll(".dotanchor").forEach(el=>{
+  el.addEventListener("mouseenter",()=>{if(!SLICE.ccs.has(el.dataset.cc))return;showTipCc(el.dataset.cc);});
+  el.addEventListener("mousemove",e=>moveTip(e));
+  el.addEventListener("mouseleave",hideTip);
+ });
+ scaleStatics();
+}
+function scaleStatics(){
+ const s=1/K;
+ for(const sel of ["#gClouds .cloudg","#gLabels g","#gDots .dotanchor"]){
+  document.querySelectorAll(sel).forEach(el=>{
+   const tr=el.getAttribute("transform")||"";
+   el.setAttribute("transform",tr.replace(/ scale\([0-9.]+\)/,"")+` scale(${s.toFixed(3)})`);
+  });
+ }
+}
+/* облака */
+let haloDefsReady=false;
+function ensureHaloDefs(){
+ if(haloDefsReady)return;
+ const defs=svg.querySelector("defs");
+ for(const slug of sortedSlugs){
+  const g=document.createElementNS("http://www.w3.org/2000/svg","radialGradient");
+  g.setAttribute("id","halo-"+slug);
+  for(const pair of[["0%",".67"],["50%",".40"],["79%",".18"],["100%","0"]]){
+   const st=document.createElementNS("http://www.w3.org/2000/svg","stop");
+   st.setAttribute("offset",pair[0]);st.setAttribute("stop-color",lineColor(slug));st.setAttribute("stop-opacity",pair[1]);
+   g.appendChild(st);
+  }
+  defs.appendChild(g);
+ }
+ haloDefsReady=true;
+}
+function renderClouds(){
+ const g=$("#gClouds");
+ if(S.mode!=="clouds"){g.innerHTML="";return;}
+ ensureHaloDefs();
+ let h="";
+ const csel=selCountries();
+ let maxN=1;[...SLICE_FULL.ccs.values()].forEach(c=>Object.values(c.lines).forEach(v=>maxN=Math.max(maxN,v)));
+ const ccs=[...SLICE_FULL.ccs.keys()].sort((a,b)=>SLICE_FULL.ccs.get(b).base-SLICE_FULL.ccs.get(a).base);
+ for(const cc of ccs){
+  const c=SLICE_FULL.ccs.get(cc);const ax=CENT[cc]?.[0],ay=CENT[cc]?.[1];if(ax==null)continue;
+  const dimCountry=csel.length&&!csel.includes(cc);
+  const parts=Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,4);
+  parts.forEach(([slug,n],i)=>{
+   const baseR=3+29*Math.sqrt(n/maxN);
+   const angle=(i*2*Math.PI/Math.max(3,parts.length))-Math.PI*.63;
+   const disp=parts.length===1?0:Math.min(26,8+baseR*.62);
+   const x=ax+Math.cos(angle)*disp,y=ay+Math.sin(angle)*disp;
+   const dim=(dimCountry||(S.lgHover&&S.lgHover!==slug))?"dim":"";
+   const hi=S.lgHover===slug;
+   const selPair=S.cell&&S.cell.cc===cc&&S.cell.slug===slug;
+   h+=`<g class="cloudg ${dim} ${hi?"hi":""}" data-cloud data-cc="${cc}" data-slug="${slug}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})">`+
+      `<g class="cloud"><circle class="halo" r="${(baseR*1.65).toFixed(1)}" fill="url(#halo-${slug})"/>`+
+      `<circle class="core" r="${Math.min(baseR*.60, 7/Math.sqrt(K)).toFixed(1)}" fill="${lineColor(slug)}" fill-opacity=".20" stroke="${selPair?"#5a46d6":lineColor(slug)}" stroke-opacity="${selPair?".95":".18"}" stroke-width="${selPair?1.6:.6}"/>`+
+      `</g></g>`;
+  });
+ }
+ g.innerHTML=h;
+ g.querySelectorAll("[data-cloud]").forEach(el=>{
+  el.addEventListener("mouseenter",()=>{showTipCell(el.dataset.cc,el.dataset.slug);});
+  el.addEventListener("mousemove",e=>moveTip(e));
+  el.addEventListener("mouseleave",hideTip);
+ });
+ scaleStatics();
+}
+function paintHover(){
+ for(const[cc,els]of pathMap)for(const el of els){
+  const cls=el.getAttribute("class").split(" ").filter(c=>c!=="hov");
+  if(S.hovCc===cc)cls.push("hov");
+  el.setAttribute("class",cls.join(" "));
+ }
+}
+function paintCloudHover(){
+ document.querySelectorAll("#gClouds .cloudg").forEach(el=>el.classList.toggle("dim",!!S.lgHover&&el.dataset.slug!==S.lgHover));
+}
+function renderLabels(){
+ const g=$("#gLabels");
+ if(S.mode!=="clouds"){g.innerHTML="";return;}
+ const csel=selCountries();
+ let rows=[...SLICE_FULL.ccs.entries()].sort((a,b)=>b[1].base-a[1].base);
+ if(csel.length)rows=rows.filter(([cc])=>csel.includes(cc));
+ rows=rows.slice(0,16);
+ const placed=[];let h="";
+ for(const[cc,c]of rows){
+  if(!CENT[cc])continue;
+  const x=CENT[cc][0],y=CENT[cc][1]+34/K;
+  if(placed.some(p=>Math.abs(p[0]-x)<64&&Math.abs(p[1]-y)<15))continue;
+  placed.push([x,y]);
+  h+=`<g class="lblg" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><text class="cloud text" style="font-size:10.5px">${esc(ccName(cc))} <tspan style="fill:#8ba">·</tspan> ${fmtF(c.base)}</text></g>`;
+ }
+ g.innerHTML=h;scaleStatics();
+}
+/* тултипы */
+const tip=$("#tip");
+function showTipCc(cc){
+ const c=SLICE_FULL.ccs.get(cc)||SLICE.ccs.get(cc);
+ if(!c){tip.innerHTML=`<strong>${esc(ccName(cc))}</strong><div class="row"><span>${t("in_slice_short")}</span><b>${t("no_data")}</b></div>`;tip.hidden=false;return;}
+ const lead=Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,3);
+ tip.innerHTML=`<strong>${esc(ccName(cc))} <span class="mono" style="color:var(--faint);font-size:11px">${esc(cc)}</span></strong>
+ <div class="big num">${fmtF(c.base)}</div>
+ <div class="row"><span>${t("park_label")}</span><b class="num">${fmtF(DATA.park[cc]||0)}</b></div>
+ <div class="row"><span>${t("silent_label")}</span><b class="num">${DATA.park[cc]?Math.round(100*(1-(DATA.http[cc]||0)/DATA.park[cc]))+"%":"—"}</b></div>
+ ${lead.map(([s,n])=>`<div class="row"><span><i style="display:inline-block;width:8px;height:8px;border-radius:3px;background:${lineColor(s)};margin-right:6px"></i>${esc(DATA.lines[s].name)}</span><b class="num">${fmtF(n)}</b></div>`).join("")}
+ <div class="row" style="margin-top:6px;color:var(--faint)">${t("tip_sel")}</div>`;
+ tip.hidden=false;
+}
+function showTipCell(cc,slug){
+ tip.innerHTML=`<strong><i style="display:inline-block;width:9px;height:9px;border-radius:3px;background:${lineColor(slug)};margin-right:7px"></i>${esc(DATA.lines[slug].name)}</strong>
+ <div style="color:var(--muted);font-size:11px;margin-top:2px">${esc(ccName(cc))}</div>
+ <div class="big num">${fmtF((SLICE.ccs.get(cc)||SLICE_FULL.ccs.get(cc))?.lines[slug]||0)}</div>
+ <div class="row" style="color:var(--faint)">${t("tip_pair")}</div>`;
+ tip.hidden=false;
+}
+function moveTip(e){const r=stage.getBoundingClientRect();tip.style.left=Math.min(r.width-310,e.clientX-r.left+16)+"px";tip.style.top=Math.min(r.height-170,e.clientY-r.top+14)+"px";}
+function hideTip(){tip.hidden=true;}
+
+/* режимы */
+$("#modeSeg").addEventListener("click",e=>{
+ const b=e.target.closest("button");if(!b)return;
+ S.mode=b.dataset.mode;refreshAll();
+});
+function renderMode(){
+ $$("#modeSeg button").forEach(b=>b.classList.toggle("active",b.dataset.mode===S.mode));
+ const note=$("#modeNote");
+ if(S.mode==="http"){note.hidden=false;note.innerHTML=t("http_note");}
+ else note.hidden=true;
+ const ml=$("#mapLegend");
+ ml.hidden=false;
+ ml.textContent=t(S.mode==="clouds"?"legend_clouds":S.mode==="countries"?"legend_countries":"legend_http");
+ $("#mapHint").textContent=S.mode==="clouds"?t("hint_clouds"):S.mode==="countries"?t("hint_ctry"):t("hint_http");
+ const eb=$(".maphead .eyebrow");
+ const mt=$("#mapTitle");
+ const csel=selCountries();
+ eb.textContent=(S.cell||S.lines.size||csel.length||S.orgs.size)?t("eyebrow_sel"):t("eyebrow_glob");
+ if(S.cell)mt.textContent=`${ccName(S.cell.cc)} × ${DATA.lines[S.cell.slug].name}`;
+ else if(S.lines.size===1)mt.textContent=DATA.lines[[...S.lines][0]].name;
+ else if(S.lines.size>1)mt.textContent=t("title_cmp",S.lines.size);
+ else if(csel.length===1)mt.textContent=ccName(csel[0]);
+ else if(csel.length>1)mt.textContent=t("title_ctry",csel.length);
+ else if(S.orgs.size)mt.textContent=t("title_orgs",S.orgs.size);
+ else mt.textContent=t("title_def");
+}
+
+/* легенда-лёгкий срез */
+function renderLegend(){
+ const box=$("#lgItems");
+ box.classList.toggle("exp",S.lgExpanded);
+ box.innerHTML=sortedSlugs.map(slug=>{
+  const n=GEOT?(GEOT.get(slug)??0):0;
+  const on=S.lines.has(slug),off=S.lines.size&&!on;
+  return`<button class="lgchip ${on?"on":off?"off":""}" data-slug="${esc(slug)}" title="${esc(DATA.lines[slug].name)} — ${esc(loc((DATA.meta.lines[slug]||{}).vendor||""))}"><i style="background:${lineColor(slug)}"></i><span class="nm">${esc(DATA.lines[slug].name)}</span><span class="n">${n?fmtF(n):"—"}</span><span class="solo">⌥</span></button>`;
+ }).join("");
+ $("#lgMore").textContent=S.lgExpanded?t("lg_less"):t("lg_more");
+ $("#lgClear").hidden=!S.lines.size;
+ $("#sliceSum").textContent=fmt(SLICE.total);
+ $("#sliceSub").textContent=t("slice_sub",SLICE.ccs.size,SLICE.lines.size,SLICE.disjoint,DATA.snapshot.slice(-4));
+ const unknown=unknownCountryTotal();
+ if(unknown)$("#sliceSub").textContent+=" · "+t("unknown_country",fmtF(unknown));
+ box.querySelectorAll(".lgchip").forEach(ch=>{
+  const slug=ch.dataset.slug;
+  ch.onclick=e=>{
+   if(e.altKey)toggleSolo("lines",slug);
+   else S.lines.has(slug)?S.lines.delete(slug):S.lines.add(slug);
+   if(S.cell&&!S.lines.has(S.cell.slug))S.cell=null;
+   refreshAll();maybeFitSolo();
+  };
+  ch.onmouseenter=()=>{S.lgHover=slug;paintCloudHover();};
+  ch.onmouseleave=()=>{S.lgHover=null;paintCloudHover();};
+ });
+}
+function maybeFitSolo(){if(S.lines.size===1)setTimeout(fitSlice,80);}
+function scrollToMap(){
+ const mr=$("#mapcard").getBoundingClientRect();
+ if(mr.bottom<0||mr.top<130){
+  const y=mr.top+window.scrollY-128;
+  window.scrollTo({top:y,behavior:"smooth"});
+ }
+}
+$("#lgMore").onclick=()=>{S.lgExpanded=!S.lgExpanded;renderLegend();};
+$("#lgClear").onclick=()=>{S.lines.clear();S.cell=null;refreshAll();};
+
+/* таблица стран */
+function renderTable(){
+ const cols=!S.lines.size?{type:"base"}:S.lines.size<=5?{type:"lines",lines:[...S.lines]}:{type:"leader"};
+ const thead=$("#ccHead"),tbody=$("#ccBody");
+ let h="";
+ if(cols.type==="base")
+  h=`<tr><th tabindex="0" class="srt ${S.sort.key==="name"?"on":""}" data-k="name">${t("th_country")}</th><th tabindex="0" class="srt num ${S.sort.key==="base"?"on":""}" data-k="base" title="Σ">${t("th_sum")}</th><th tabindex="0" class="srt num ${S.sort.key==="park"?"on":""}" data-k="park">${t("th_park")}</th><th tabindex="0" class="srt num ${S.sort.key==="silent"?"on":""}" data-k="silent">${t("th_silent")}</th><th>${t("th_mix")}</th></tr>`;
+ else if(cols.type==="lines")
+  h=`<tr><th tabindex="0" class="srt ${S.sort.key==="name"?"on":""}" data-k="name">${t("th_country")}</th>${cols.lines.map(s=>`<th tabindex="0" class="srt num ${S.sort.key==="L:"+s?"on":""}" data-k="L:${esc(s)}"><span style="display:inline-block;width:8px;height:8px;border-radius:3px;background:${lineColor(s)};margin-right:6px"></span>${esc(DATA.lines[s].name)}</th>`).join("")}</tr>`;
+ else
+  h=`<tr><th tabindex="0" class="srt ${S.sort.key==="name"?"on":""}" data-k="name">${t("th_country")}</th><th tabindex="0" class="srt num ${S.sort.key==="base"?"on":""}" data-k="base">${t("th_sel_sum")}</th><th>${t("th_leader")}</th><th>${t("th_mix")}</th></tr>`;
+ thead.innerHTML=h;
+ thead.querySelectorAll("th.srt").forEach(th=>th.onclick=()=>{
+  const k=th.dataset.k;
+  if(S.sort.key===k)S.sort.dir*=-1;else S.sort={key:k,dir:-1};
+  renderTable();
+ });
+ let rows=[...SLICE_FULL.ccs.keys()];
+ const q=S.ccq.trim().toLowerCase();
+ if(q)rows=rows.filter(cc=>ccName(cc).toLowerCase().includes(q)||ccNameEn(cc).toLowerCase().includes(q)||cc.toLowerCase().includes(q));
+ const dir=S.sort.dir;
+ const val=(cc,k)=>{if(k==="name")return ccNameEn(cc);const c=SLICE_FULL.ccs.get(cc);
+  if(k==="base")return c.base;if(k==="park")return DATA.park[cc]||0;
+  if(k==="silent")return DATA.park[cc]?1-(DATA.http[cc]||0)/DATA.park[cc]:0;
+  if(k.startsWith("L:"))return c.lines[k.slice(2)]||0;return 0;};
+ rows.sort((a,b)=>{const va=val(a,S.sort.key),vb=val(b,S.sort.key);return(typeof va==="string"?va.localeCompare(vb):va-vb)*dir;});
+ const csel=new Set(selCountries());
+ rows.sort((a,b)=>(csel.has(b)?1:0)-(csel.has(a)?1:0));
+ const shown=rows.slice(0,S.shown);
+ const maxBase=Math.max(1,...rows.map(cc=>SLICE_FULL.ccs.get(cc).base));
+ tbody.innerHTML=shown.map(cc=>{
+  const c=SLICE_FULL.ccs.get(cc);const sel=csel.has(cc);
+  const comp=Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,3)
+   .map(([s,n])=>`<i title="${esc(DATA.lines[s].name)}: ${fmtF(n)}" class="minibar" style="width:${Math.max(3,Math.round(n/c.base*46))}px;background:${lineColor(s)}"></i>`).join("");
+  let tds;
+  if(cols.type==="base"){
+   const silent=DATA.park[cc]?Math.round(100*(1-(DATA.http[cc]||0)/DATA.park[cc])):"—";
+   tds=`<td class="num">${fmtF(c.base)}<i class="minibar" style="width:${Math.round(c.base/maxBase*50)}px;background:#9db4e8"></i></td><td class="num">${fmtF(DATA.park[cc]||0)}</td><td class="num" style="color:${silent!=="—"&&silent>50?"#b98324":"inherit"}">${silent!=="—"?"­"+silent+"%":"—"}</td><td>${comp}</td>`;
+  }else if(cols.type==="lines"){
+   tds=cols.lines.map(s=>{const n=c.lines[s]||0;return`<td class="num">${n?fmtF(n):"—"}</td>`;}).join("");
+  }else{
+   const lead=Object.entries(c.lines).sort((a,b)=>b[1]-a[1])[0];
+   tds=`<td class="num">${fmtF(c.base)}</td><td><span class="leadcol"><i style="background:${lead?lineColor(lead[0]):"#ccc"}"></i>${lead?esc(DATA.lines[lead[0]].name):"—"}</span></td><td>${comp}</td>`;
+  }
+  return`<tr tabindex="0" class="${sel?"sel":""} ${csel.size&&!sel?"dimmed":""}" data-cc="${cc}"><td style="white-space:nowrap"><span class="cc">${esc(cc)}</span>${esc(ccName(cc))}${sel?` <span data-rowx="1" title="${esc(t("remove_selection"))}" style="color:#b3416a;cursor:pointer;font-weight:700;padding:0 4px">×</span>`:""}</td>${tds}</tr>`;
+ }).join("")||`<tr><td colspan="9" style="color:var(--faint);padding:22px;text-align:center">${t("empty_tbl")}</td></tr>`;
+ tbody.querySelectorAll("[data-rowx]").forEach(x=>x.onclick=e=>{e.stopPropagation();const cc=x.closest("tr").dataset.cc;S.geo.delete("c:"+cc);if(S.cell&&S.cell.cc===cc)S.cell=null;refreshAll();homeIfNoCountries();});
+ tbody.querySelectorAll("tr[data-cc]").forEach(tr=>{
+  tr.onclick=e=>{
+   const cc=tr.dataset.cc;const tok="c:"+cc;
+   if(e.altKey){S.geo.clear();S.geo.add(tok);zoomToCountry(cc);}
+   else if(S.geo.has(tok)){S.geo.delete(tok);if(S.cell&&S.cell.cc===cc)S.cell=null;if(!selCountries().length)tween(1,0,0);}
+   else{S.geo.add(tok);if(selCountries().length===1)zoomToCountry(cc);}
+   refreshAll();scrollToMap();
+  };
+  tr.onmouseenter=()=>{S.hovCc=tr.dataset.cc;paintHover();};
+  tr.onmouseleave=()=>{S.hovCc=null;paintHover();};
+ });
+ $("#ccMore").textContent=rows.length>S.shown?t("show_all",rows.length):"";
+ $("#ccMore").hidden=!(rows.length>S.shown);
+}
+$("#ccMore").onclick=()=>{S.shown=1e5;renderTable();};
+$("#ccSearch").oninput=e=>{S.ccq=e.target.value;S.shown=60;renderTable();$("#ccSearchClear").hidden=!S.ccq;};
+$("#ccSearchClear").onclick=()=>{S.ccq="";$("#ccSearch").value="";$("#ccSearchClear").hidden=true;renderTable();};
+function exportCSV(){
+ const lines=S.lines.size?[...S.lines]:DISJOINT;
+ const rows=[...SLICE.ccs.keys()];
+ const head=["cc","country",...lines.map(s=>DATA.lines[s].name),"park_7547"];
+ const body=rows.map(cc=>{const c=SLICE.ccs.get(cc);return[cc,ccNameEn(cc),...lines.map(s=>c.lines[s]||0),DATA.park[cc]||0];});
+ const quote=v=>'"'+String(v).replaceAll('"','""')+'"';
+ const csv=[head,...body].map(r=>r.map(quote).join(";")).join("\r\n");
+ dl(new Blob(["\ufeff"+csv],{type:"text/csv"}),"tron-069-countries.csv");
+}
+function exportJSON(){dl(new Blob([JSON.stringify({snapshot:DATA.snapshot,selection:{lines:[...S.lines],geo:[...S.geo],orgs:[...S.orgs]},unit:"Shodan query matches",operatorScope:S.orgs.size?"collected top-N facets":"all",unknownCountry:unknownCountryTotal(),countries:Object.fromEntries([...SLICE.ccs.entries()])},null,1)],{type:"application/json"}),"tron-069-slice.json");}
+function dl(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000);}
+$("#csvBtn").onclick=exportCSV;$("#jsonBtn").onclick=exportJSON;
+
+/* таблица «Линейки в срезе» */
+function renderLinesTable(){
+ const tb=$("#linesBody");
+ const list=sortedSlugs.map(s=>[s,{total:GEOT.get(s)||0,countries:Object.fromEntries(Object.keys(DATA.lines[s].countries).filter(cc=>geoPass(cc)&&orgPass(s,cc)).map(cc=>[cc,lineCount(s,cc)]))}]).sort((a,b)=>b[1].total-a[1].total);
+ tb.innerHTML=list.map(([s,l])=>{
+  const M=DATA.meta.lines[s]||{};const b=M.badge||"anonymous";
+  const top=Object.entries(l.countries).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([cc,n])=>`${ccName(cc)} ${fmtF(n)}`).join(", ");
+  const sel=S.lines.has(s);
+  return`<tr tabindex="0" data-slug="${esc(s)}" class="${sel?"sel":""} ${S.lines.size&&!sel?"dimmed":""}" style="${sel?"background:#f0ecfd":""}">
+   <td style="display:flex;align-items:center;gap:8px"><i style="width:9px;height:9px;border-radius:3px;background:${lineColor(s)};flex:none"></i>${esc(DATA.lines[s].name)} ${serviceBadge(s)}</td>
+   <td class="vendorcell"><span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span> ${esc(loc(M.vendor||"—"))}</td>
+   <td class="num">${fmtF(l.total)}</td><td class="num" style="color:var(--faint)">${fmtF(DATA.lines[s].total)}</td>
+   <td class="vendorcell">${esc(top)}</td></tr>`;
+ }).join("");
+ tb.querySelectorAll("tr").forEach(tr=>tr.onclick=e=>{
+  const s=tr.dataset.slug;
+  if(e.altKey)toggleSolo("lines",s);
+  else S.lines.has(s)?S.lines.delete(s):S.lines.add(s);
+  if(S.cell&&!S.lines.has(S.cell.slug))S.cell=null;
+  refreshAll();maybeFitSolo();scrollToMap();
+ });
+}
+
+/* инспектор */
+const insp=$("#inspector");
+function card(s){
+ const L=SLICE.lines.get(s)||{total:0};
+ return`<div class="ovcard"><h4 style="display:flex"><i style="width:9px;height:9px;border-radius:3px;background:${lineColor(s)};flex:none;margin:3px 5px 0 2px"></i><span style="flex:1">${esc(DATA.lines[s].name)}</span><button data-cmpx="${esc(s)}" title="${esc(t("remove_compare"))}" style="color:#b3416a;font-weight:700">×</button></h4><p>${fmtF(L.total)} ${t("in_slice_short")} · ${esc(loc((DATA.meta.lines[s]||{}).vendor||""))}</p></div>`;
+}
+function serviceBadge(s){const kind=DATA.lines[s]?.service||"unknown";return `<span class="service-badge ${esc(kind)}">${esc(t("service_"+kind))}</span>`;}
+function badgeHtml(s){const M=DATA.meta.lines[s]||{};const b=M.badge||"anonymous";return`<span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span>`;}
+function sourcesHtml(items){
+ if(!items?.length)return "";
+ const prefix=/\/atlas\/tr-atlas\.html$/.test(location.pathname||"")?"../":"";
+ return `<span class="note source-links" style="display:block">${esc(t("sources_label"))}: `+items.map(item=>{
+  if(!item.file||!/^[a-zA-Z0-9_./-]+$/.test(item.file)||item.file.split("/").some(p=>p===".."||!p))return "";
+  const href=prefix+item.file.split("/").map(encodeURIComponent).join("/")+(item.anchor?"#"+encodeURIComponent(item.anchor):"");
+  return `<a target="_blank" rel="noopener" href="${esc(href)}">${esc(item.title||item.file)}</a>`;
+ }).filter(Boolean).join(" · ")+"</span>";
+}
+function variantHtml(slug){
+ const variants=DATA.variants?.[slug]||[];
+ if(!variants.length)return "";
+ return `<h3>${t("collected_variants")}</h3><div class="note">${t("variant_scope")}</div>`+variants.map(v=>{
+  const label=v.label[LANG]||v.label.en;
+  const groups=[["orgs",t("s_ops")],["asn","ASN"],["ports",t("s_ports")],["countries",t("pg_countries")]];
+  return `<details class="variant-card"><summary>${esc(label)} · <b>${fmtF(v.total)}</b>${v.share!=null?` · ${(v.share*100).toLocaleString(LANG,{maximumFractionDigits:1})}%`:""}</summary>
+  <div class="note">${t("collected_at")}: ${esc(v.taken)}${v.share!=null?` · ${t("variant_baseline")}: ${fmtF(v.denominator_total)}`:""}</div>
+  ${groups.map(([key,title])=>v[key]?.length?`<h4>${title}</h4>${v[key].slice(0,10).map(x=>`<div class="krow"><span class="nm">${esc(key==="countries"?ccName(x.value):String(x.value))}</span><span class="n">${fmtF(x.count)}</span></div>`).join("")}`:"").join("")}
+  <div class="note">${t("variant_top")}</div><div class="note"><code>${esc(v.dork)}</code></div>${sourcesHtml(v.source?[v.source]:[])}
+  <a class="btn ghost" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(v.dork)}">↗ Shodan</a></details>`;
+ }).join("");
+}
+function renderInspector(){
+ let h=`<button id="inspCollapse" title="${esc(t("fold_panel"))}" style="position:sticky;top:0;float:right;z-index:5;background:#fff;border:1px solid var(--line);border-radius:8px;width:24px;height:24px;color:var(--muted)">${inspCollapsed?"‹":"›"}</button>`;
+ const M=slug=>DATA.meta.lines[slug]||{};
+ if(S.cell){
+  const{cc,slug}=S.cell;const L=DATA.lines[slug];
+  const inSlice=SLICE.lines.get(slug)||{total:0,countries:{}};
+  const n=lineCount(slug,cc);
+  const drill=DATA.orgdrill[slug+"--"+cc];
+  const ident=DATA.ident[cc]||0;
+  h+=`<div class="insphead"><div class="eyebrow">${t("pair_label")}</div></div>
+  <div class="crumbs"><b data-go="root">${t("root")}</b><span>›</span><b data-selcc="${esc(cc)}">${esc(ccName(cc))}</b><span>›</span><b>${esc(L.name)}</b></div>
+  <h2>${esc(L.name)} <span style="font-weight:400;color:var(--faint)">· ${esc(ccName(cc))}</span></h2>
+  <div class="subtitle">${esc(loc(M(slug).vendor||""))} ${badgeHtml(slug)} ${serviceBadge(slug)}</div><div class="note">${t("collected_at")}: ${esc(drill?.taken||L.taken||DATA.snapshot)}</div>
+  ${!geoPass(cc)?`<div class="scopewarn">${t("outside_slice")}</div>`:""}
+  <div class="bignum num">${fmt(n)} <small>${t("pair_in")}</small></div>
+  <div class="krow"><span class="nm">${t("pair_share")}</span><span class="n">${ident&&L.service!=="acs"?Math.round(100*n/ident)+"%":"—"}</span></div>
+  <div class="krow"><span class="nm">${t("pair_glob")}</span><span class="n">${fmtF(L.total)}</span></div>
+  ${drill?`${coverageNote(drill)}<h3>${t("s_ops")}</h3><div class="klist">${(()=>{const m=new Map();for(const o of drill.orgs){const nz=normOrg(o.value,cc);m.set(nz,(m.get(nz)||0)+o.count);}return[...m.entries()].sort((a,b2)=>b2[1]-a[1]).map(([nz,n])=>`<div class="krow"><span class="nm">${esc(loc(nz))}</span><span class="n">${fmtF(n)}</span></div>`).join("");})()}</div><h3>ASN</h3><div class="portrow">${drill.asn.map(a=>`<span class="pchip">${a.value}: ${fmtF(a.count)}</span>`).join("")}</div>`:`<div class="scopewarn">${t("no_org_data")}</div>`}
+  <div class="actrow"><a class="btn primary" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(L.dork+" country:"+cc)}">↗ Shodan</a><button class="btn ghost" data-copy="${esc(L.dork+" country:"+cc)}">${t("copy")}</button></div>`;
+ }
+ else if(selCountries().length===1){
+  const cc=selCountries()[0];const c=SLICE.ccs.get(cc);
+  const drillSlug=(()=>{const e=c?Object.entries(c.lines).sort((a,b)=>b[1]-a[1])[0]:null;return e?e[0]:null;})();
+  const orgs=drillSlug&&DATA.orgdrill[drillSlug+"--"+cc]?[...orgCounts(DATA.orgdrill[drillSlug+"--"+cc],cc)].sort((a,b)=>b[1]-a[1]).map(([value,count])=>({value,count})):null;
+  const silent=DATA.park[cc]?Math.round(100*(1-(DATA.http[cc]||0)/DATA.park[cc])):null;
+  const ident=DATA.ident[cc]||0;
+  h+=`<div class="insphead"><div class="eyebrow">${t("country_label")}</div></div>
+  <div class="crumbs"><b data-go="root">${t("root")}</b><span>›</span><b>${esc(ccName(cc))}</b></div>
+  <h2>${esc(ccName(cc))} <span class="mono" style="font-size:13px;color:var(--faint)">${esc(cc)}</span></h2>
+  <div class="subtitle">${esc(ccNameEn(cc))} · ${REG_NAME(CC2REG[cc])||"—"} · ${t("country_toggle_hint")}</div>
+  ${c?`<div class="bignum num">${fmt(c.base)} <small>${t("cty_sum")}</small></div>
+  <div class="krow" title="${esc(t("cty_allports"))}"><span class="nm">${t("cty_allports")}</span><span class="n">${fmtF(ident)}</span></div>
+  <div class="krow"><span class="nm">${t("cty_park")}</span><span class="n">${fmtF(DATA.park[cc]||0)}</span></div>
+  <div class="krow"><span class="nm">${t("cty_silent")}</span><span class="n">${silent==null?"—":silent+"%"}</span></div>
+  <h3>${t("cty_lines")}</h3><div class="klist">
+  ${Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,12).map(([s,n])=>`<button class="krow" data-pair="${esc(s)}"><i class="sw" style="background:${lineColor(s)}"></i><span class="nm">${esc(DATA.lines[s].name)}</span><span class="n">${fmtF(n)}${ident?" · "+Math.round(100*n/ident)+"%":""}</span></button>`).join("")}
+  </div>`:`<div class="note">${t("no_country_data")}</div>`}
+  ${orgs?`${coverageNote(DATA.orgdrill[drillSlug+"--"+cc])}<h3>${t("cty_ops")}</h3><div class="klist">${orgs.slice(0,7).map(o=>`<div class="krow"><span class="nm">${esc(loc(o.value))}</span><span class="n">${fmtF(o.count)}</span></div>`).join("")}</div>`:""}
+  <div class="actrow"><a class="btn primary" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent((S.lines.size===1?DATA.lines[[...S.lines][0]].dork:"port:7547")+" country:"+cc)}">↗ Shodan</a><button class="btn ghost" data-copy="${esc((S.lines.size===1?DATA.lines[[...S.lines][0]].dork:"port:7547")+" country:"+cc)}">${t("copy")}</button></div>`;
+ }
+ else if(S.lines.size===1){
+  const slug=[...S.lines][0];const L=DATA.lines[slug];const m=M(slug);
+  const inSlice=SLICE.lines.get(slug)||{total:0,countries:{}};
+  const topCc=Object.entries(inSlice.countries).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  h+=`<div class="insphead"><div class="eyebrow">${t("line_label")}</div></div>
+  <div class="crumbs"><b data-go="root">${t("root")}</b><span>›</span><b>${esc(L.name)}</b></div>
+  <h2>${esc(L.name)}</h2>
+  <div class="subtitle">${esc(loc(m.vendor||""))} · ${esc(loc(m.role||""))} ${badgeHtml(slug)} ${serviceBadge(slug)} · ${t("line_hint")}</div>
+  <div class="bignum num">${fmt(inSlice.total)} <small>${t("line_in")} ${fmtF(L.total)}</small></div><div class="note">${t("collected_at")}: ${esc(L.taken||DATA.snapshot)}</div>
+  ${L.ports&&L.ports.length?`<h3>${t("s_ports")}</h3><div class="portrow">${L.ports.map(p=>`<span class="pchip">${p.value}: ${fmtF(p.count)}</span>`).join("")}</div>`:""}
+  ${m.findings&&m.findings.length?`<h3>${t("s_find")}</h3>${m.findings.map(f=>`<div class="note">${esc(loc(f))}</div>`).join("")}`:""}
+  ${m.anomalies&&m.anomalies.length?`<h3>${t("s_anom")}</h3>${m.anomalies.map(f=>`<div class="note anom">${esc(loc(f))}</div>`).join("")}`:""}
+  ${sourcesHtml(m.sources)}
+  ${(m.overlaps||[]).length?`<h3>${t("s_ovl")}</h3><div class="actrow">${m.overlaps.map(o=>`<button class="btn ghost" data-ovl="${esc(o.with)}">${esc(loc(o.kind))}: ${esc(o.with)}</button>`).join("")}</div>`:""}
+  ${(DATA.facts&&DATA.facts[slug]||[]).length?`<h3>${t("s_var")}</h3><div class="klist">
+  <div class="note">${t("fact_scope")}</div>
+  ${(DATA.facts[slug]||[]).map(f=>`<div class="krow" title="${esc(f.dork)}"><span class="nm">${esc(loc(f.label))}${f.note?` <span style="color:var(--faint)">· ${esc(loc(f.note))}</span>`:""}<span class="note" style="display:block">${f.taken?`${t("collected_at")}: ${esc(f.taken)}`:t("fact_not_collected")}</span>${sourcesHtml([...(f.sources||[]),...(f.collection_source?[{file:"data/mapdata/"+f.collection_source.snapshot+"/"+f.collection_source.file}]:[])])}</span><span class="n">${f.count!=null?fmtF(f.count):"—"}</span><a target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(f.dork)}" style="margin-left:8px;font-size:11px;color:var(--muted)">↗</a><button class="btn ghost" data-copy="${esc(f.dork)}" style="padding:2px 8px;font-size:10px">${t("kop")}</button></div>`).join("")}
+  </div>`:""}
+  ${variantHtml(slug)}
+  <h3>${t("s_top")}</h3><div class="klist">
+  ${topCc.map(([c2,n])=>`<button class="krow" data-paircc="${esc(c2)}"><span class="nm">${esc(ccName(c2))}</span><span class="n">${fmtF(n)}</span></button>`).join("")||`<div class="note">${t("empty_slice")}</div>`}
+  </div>
+  <div class="actrow"><a class="btn primary" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(L.dork)}">↗ Shodan</a><button class="btn ghost" data-copy="${esc(L.dork)}">${t("copy")}</button></div>`;
+ }
+ else if(S.lines.size>1){
+  const arr=[...S.lines];
+  const inter=arr.map(s=>new Set(Object.keys(SLICE.lines.get(s)?.countries||{}))).reduce((a,b)=>new Set([...a].filter(x=>b.has(x))));
+  const interBig=[...inter].map(cc=>[cc,SLICE.ccs.get(cc).base]).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  h+=`<div class="insphead"><div class="eyebrow">${t("compare_label")}</div></div>
+  <h2>${t("title_cmp",arr.length)}</h2>
+  <div class="subtitle">${t("cmp_cards")}</div>
+  <div class="cmpgrid">${arr.map(s=>card(s)).join("")}</div>
+  <h3>${t("cmp_all",arr.length)}</h3>
+  <div class="klist">${interBig.map(([cc,n])=>`<button class="krow" data-ccsel="${cc}"><span class="nm">${esc(ccName(cc))}</span><span class="n">${fmtF(n)}</span></button>`).join("")||'<div class="note">'+t('cmp_empty')+'</div>'}</div>`;
+ }
+ else{
+  h+=`<div class="insphead"><div class="eyebrow">${t("slice_label")}</div></div>
+  <h2 style="font-size:17px">${t("wtn")}</h2>
+  <div class="subtitle">${t("wtn_sum",fmt(SLICE.total))} · ${SLICE.ccs.size} · ${SLICE.lines.size}</div>
+  <div class="sc-grid" style="margin-top:14px" id="scPanel"></div>
+  <div class="scopewarn">${t("warn_slice")}</div>`;
+ }
+ insp.innerHTML=h;
+ insp.scrollTop=0;
+ const ic=insp.querySelector("#inspCollapse");if(ic)ic.onclick=toggleInsp;
+ insp.querySelectorAll("[data-cmpx]").forEach(b=>b.onclick=()=>{S.lines.delete(b.dataset.cmpx);refreshAll();});
+ insp.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{if(b.dataset.go==="root"){S.cell=null;S.geo.clear();refreshAll();}});
+ insp.querySelectorAll("[data-selcc]").forEach(b=>b.onclick=()=>{const cc=b.dataset.selcc;S.cell=null;S.geo.clear();S.geo.add("c:"+cc);zoomToCountry(cc);refreshAll();});
+ insp.querySelectorAll("[data-pair]").forEach(b=>b.onclick=()=>{S.cell={cc:selCountries()[0],slug:b.dataset.pair};refreshAll();});
+ insp.querySelectorAll("[data-paircc]").forEach(b=>b.onclick=()=>{S.cell={cc:b.dataset.paircc,slug:[...S.lines][0]};refreshAll();});
+ insp.querySelectorAll("[data-ccsel]").forEach(b=>b.onclick=()=>{const cc=b.dataset.ccsel;S.geo.add("c:"+cc);zoomToCountry(cc);refreshAll();});
+ insp.querySelectorAll("[data-copy]").forEach(b=>b.onclick=()=>{(navigator.clipboard?navigator.clipboard.writeText(b.dataset.copy):Promise.reject(new Error("Clipboard unavailable"))).then(()=>showToast(t("t_copied"))).catch(()=>showToast(t("copy_error")));});
+ insp.querySelectorAll("[data-ovl]").forEach(b=>b.onclick=()=>{
+  const ov=Object.keys(DATA.lines).find(k=>k.includes(b.dataset.ovl)||b.dataset.ovl.includes(k));
+  if(ov){S.lines.has(ov)||S.lines.add(ov);refreshAll();}
+ });
+ renderShortcuts();
+}
+function toggleInsp(){
+ inspCollapsed=!inspCollapsed;
+ $("#inspector").hidden=inspCollapsed;
+ $("#inspReopen").hidden=!inspCollapsed;
+ $("#workspace").classList.toggle("nodetail",inspCollapsed);
+ (inspCollapsed?$("#inspReopen"):$("#inspCollapse"))?.focus();
+}
+
+$("#inspReopen").onclick=toggleInsp;
+
+/* подсказки */
+function computeShortcuts(){
+ const out=[];
+ const add=(title,why,val,act)=>out.push({title,why,val,act});
+ const csel=selCountries();
+ if(csel.length===1){
+  const cc=csel[0];const c=SLICE.ccs.get(cc);
+  if(c){
+   const lead=Object.entries(c.lines).sort((a,b)=>b[1]-a[1])[0];
+   if(lead)add(t("country_leader",DATA.lines[lead[0]].name),t("leader_why",fmtF(lead[1]),fmtF(c.base)),Math.round(100*lead[1]/c.base)+"%",{t:"pair",cc,slug:lead[0]});
+   const v1=c.lines;const sims=[];
+   for(const[c2,c2o]of SLICE_FULL.ccs){if(c2===cc)continue;
+    let d=0,n1=0,n2=0;
+    for(const s in v1){n1+=v1[s]**2;if(c2o.lines[s])d+=v1[s]*c2o.lines[s];}
+    for(const s in c2o.lines)n2+=c2o.lines[s]**2;
+    const sim=d/(Math.sqrt(n1*n2)||1);if(sim>0.55&&c2o.base>2000)sims.push([c2,sim]);
+   }
+   sims.sort((a,b)=>b[1]-a[1]);
+   if(sims[0])add(t("sc_similar")+" "+ccName(sims[0][0]),t("sc_similar_why",(sims[0][1]*100).toFixed(0)+"%"),(sims[0][1]*100).toFixed(0)+"%",{t:"selcc",cc:sims[0][0]});
+  }
+ }
+ if(S.lines.size===1){
+  const slug=[...S.lines][0];const l=SLICE.lines.get(slug)||{countries:{},total:0};
+  const top=Object.entries(l.countries).sort((a,b)=>b[1]-a[1])[0];
+  if(top)add(t("sc_main")+" "+ccName(top[0]),`${fmtF(top[1])} / ${fmtF(l.total||DATA.lines[slug].total)}`,fmtF(top[1]),{t:"pair",cc:top[0],slug});
+  const geography=s=>Object.fromEntries(Object.keys(DATA.lines[s].countries).filter(cc=>geoPass(cc)).map(cc=>[cc,lineCount(s,cc)]));
+  const g=geography(slug);const sims=[];
+  for(const s2 of sortedSlugs){if(s2===slug)continue;
+   const g2=geography(s2);
+   let d=0,n1=0,n2=0;
+   for(const cc in g){n1+=g[cc]**2;if(g2[cc])d+=g[cc]*g2[cc];}
+   for(const cc in g2)n2+=g2[cc]**2;
+   const sim=d/(Math.sqrt(n1*n2)||1);if(sim>0.25)sims.push([s2,sim]);
+  }
+  sims.sort((a,b)=>b[1]-a[1]);
+  if(sims[0])add(t("sc_similar")+" "+DATA.lines[sims[0][0]].name,t("sc_similar_why",(sims[0][1]*100).toFixed(0)+"%"),(sims[0][1]*100).toFixed(0)+"%",{t:"addline",slug:sims[0][0]});
+ }
+ if(S.lines.size>=2){
+  const arr=[...S.lines];
+  const inter=arr.map(s=>new Set(Object.keys(SLICE.lines.get(s)?.countries||{}))).reduce((a,b)=>new Set([...a].filter(x=>b.has(x))));
+  const big=[...inter].map(cc=>[cc,SLICE.ccs.get(cc).base]).sort((a,b)=>b[1]-a[1]);
+  if(big[0])add(t("sc_common")+" "+ccName(big[0][0]),t("cmp_all_short",arr.length),fmtF(big[0][1]),{t:"selcc",cc:big[0][0]});
+ }
+ if(!S.lines.size&&!csel.length){
+  const top=[...SLICE.lines].filter(([,line])=>line.total>0).sort((a,b)=>b[1].total-a[1].total)[0];
+  if(top)add(t("sc_largest")+" "+DATA.lines[top[0]].name,t("sc_largest_why",fmtF(top[1].total)),fmtF(top[1].total),{t:"solo",slug:top[0]});
+  let diverse=null,best=-1;
+  for(const[cc,c]of SLICE.ccs){if((DATA.park[cc]||0)<30000)continue;const n=Object.keys(c.lines).length;if(n>best){best=n;diverse=cc;}}
+  if(diverse&&best>1)add(t("sc_rich")+" "+ccName(diverse),t("sc_rich_why",best),t("sc_rich_val",best),{t:"selcc",cc:diverse});
+  let conc=null,bestS=0;
+  for(const[s,l]of SLICE.lines){
+   const nc=Object.keys(l.countries).length;if(nc<3)continue;
+   const tc=Object.entries(l.countries).sort((a,b)=>b[1]-a[1])[0];
+   if(tc&&l.total>5000&&tc[1]<l.total&&tc[1]/l.total>bestS){bestS=tc[1]/l.total;conc=[s,tc[0]];}
+  }
+  if(conc)add(t("sc_mono")+" "+DATA.lines[conc[0]].name,t("sc_mono_why",Math.round(bestS*100)+"%",ccName(conc[1])),Math.round(bestS*100)+"%",{t:"pair",cc:conc[1],slug:conc[0]});
+ }
+ const regs=[...S.geo].filter(t=>t.startsWith("r:"));
+ if(regs.length===1&&!csel.length&&!S.lines.size&&!S.orgs.size){
+  const regName=regs[0].slice(2);const reg=REGION_CCS[regName];
+  const regionPark=[...reg].reduce((s2,cc)=>s2+(DATA.park[cc]||0),0);
+  const totalPark=Object.values(DATA.park).reduce((a,b2)=>a+b2,0)||1;
+  const parkShare=regionPark/totalPark;
+  const lifts=[];
+  for(const s of sortedSlugs){
+   const G=DATA.lines[s].countries,gt=DATA.lines[s].total;
+   if(gt<3000)continue;
+   let inR=0;for(const[cc,n]of Object.entries(G))if(reg.has(cc))inR+=n;
+   const obs=gt?inR/gt:0;
+   if(obs<0.02)continue;
+   const lift=obs/(parkShare||1e-9);
+   if(lift>1.8)lifts.push([s,lift,inR]);
+  }
+  lifts.sort((a,b2)=>b2[1]-a[1]);
+  if(lifts[0])add(t("sc_region")+" "+DATA.lines[lifts[0][0]].name,t("sc_region_why",Math.round(100*lifts[0][2]/DATA.lines[lifts[0][0]].total)+"%",lifts[0][1].toFixed(1)),lifts[0][1].toFixed(1)+"×",{t:"solo",slug:lifts[0][0]});
+ }
+ return out;
+}
+function wireShortcuts(container){
+ container.querySelectorAll(".sc-card").forEach(b=>b.onclick=()=>{
+  const a=JSON.parse(b.dataset.act);
+  if(a.t==="pair"){S.cell={cc:a.cc,slug:a.slug};refreshAll();}
+  if(a.t==="selcc"){S.geo.add("c:"+a.cc);zoomToCountry(a.cc);refreshAll();}
+  if(a.t==="solo"){toggleSolo("lines",a.slug);refreshAll();maybeFitSolo();}
+  if(a.t==="addline"){S.lines.add(a.slug);refreshAll();}
+ });
+}
+function renderShortcuts(){
+ const list=computeShortcuts();
+ const card=s=>`<button class="sc-card" data-act='${esc(JSON.stringify(s.act))}'><div class="t"><i style="background:${s.act.slug?lineColor(s.act.slug):"#7a63ea"}"></i>${esc(s.title)}</div><div class="why">${esc(s.why)}</div><div class="val">${esc(s.val)} →</div></button>`;
+ const panel=$("#scPanel");
+ if(panel){panel.innerHTML=list.slice(0,3).map(card).join("")+`<div class="note" style="margin-top:8px">${t("wtn_full")}</div>`;wireShortcuts(panel);}
+ const grid=$("#scGrid");
+ if(grid){grid.innerHTML=list.map(card).join("")||`<div class="note">${t("next_hint")}</div>`;wireShortcuts(grid);}
+}
+
+/* реестр/находки */
+function renderRegistry(){
+ const service=$("#regService").value||"all";
+ const q=($("#regSearch").value||"").toLowerCase();
+ const rows=sortedSlugs.filter(s=>{
+  const L=DATA.lines[s],M=DATA.meta.lines[s]||{};
+  return (service==="all"||L.service===service)&&(!q||L.name.toLowerCase().includes(q)||loc(M.vendor||"").toLowerCase().includes(q)||L.dork.toLowerCase().includes(q));
+ });
+ $("#regBody").innerHTML=rows.map(s=>{
+  const L=DATA.lines[s],M=DATA.meta.lines[s]||{};const b=M.badge||"anonymous";
+  const sel=S.lines.has(s);
+  const top=Object.entries(L.countries).sort((a,b)=>b[1]-a[1]).slice(0,2).map(([cc,n])=>ccName(cc)).join(", ");
+  return`<tr tabindex="0" data-slug="${esc(s)}" style="${sel?"background:#f0ecfd":""}"><td>${esc(L.name)} ${serviceBadge(s)}</td>
+  <td class="vendorcell"><span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span> ${esc(loc(M.vendor||"—"))}</td>
+  <td class="num">${fmtF(L.total)}</td><td class="vendorcell">${esc(top)} · ${t("countries_count",Object.keys(L.countries).length)}</td>
+  <td><button class="show">${sel?t("deselect"):t("select")}</button> <a class="shodanlink" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(L.dork)}">↗ shodan</a></td></tr>`;
+ }).join("");
+ $$("#regBody tr[data-slug]").forEach(tr=>{
+  tr.querySelector(".show").onclick=e=>{e.stopPropagation();const s=tr.dataset.slug;S.lines.has(s)?S.lines.delete(s):S.lines.add(s);if(S.cell&&!S.lines.has(S.cell.slug))S.cell=null;refreshAll();};
+  tr.onclick=()=>{const s=tr.dataset.slug;S.lines.has(s)?S.lines.delete(s):S.lines.add(s);if(S.cell&&!S.lines.has(S.cell.slug))S.cell=null;refreshAll();};
+ });
+ $("#navLinesCnt").textContent=Object.keys(DATA.lines).length;
+}
+$("#regSearch").oninput=renderRegistry;
+$("#regService").onchange=renderRegistry;
+function renderFindings(){
+ $("#fndGrid").innerHTML=sortedSlugs.filter(s=>{const M=DATA.meta.lines[s]||{};return(M.findings||[]).length||(M.anomalies||[]).length;}).map(s=>{
+  const M=DATA.meta.lines[s]||{};const b=M.badge||"anonymous";
+  return`<div class="fndcard"><h3><i style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${lineColor(s)};flex:none"></i>${esc(DATA.lines[s].name)} ${serviceBadge(s)} <span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span></h3>
+  <div class="vend">${esc(loc(M.vendor||""))} · ${t("matches_count",fmtF(DATA.lines[s].total))}</div>
+  <ul>${(M.findings||[]).map(f=>`<li>${esc(loc(f))}</li>`).join("")}${(M.anomalies||[]).map(f=>`<li class="anom">${esc(loc(f))}</li>`).join("")}</ul>
+  ${sourcesHtml(M.sources)}<div class="act"><button class="btn soft" data-s="${esc(s)}">${t("fnd_pick")}</button></div></div>`;
+ }).join("");
+ $$("#fndGrid [data-s]").forEach(b=>b.onclick=()=>{toggleSolo("lines",b.dataset.s);switchTab("map");refreshAll();maybeFitSolo();});
+}
+function renderTabVisibility(){
+ $$(".nav").forEach(b=>b.classList.toggle("active",b.dataset.tab===S.tab));
+ for(const name of ["map","registry","findings","news"])$("#tab-"+name).hidden=S.tab!==name;
+ for(const id of ["#atlasIntro","#facetsRow","#chipsRow"])$(id).hidden=S.tab==="news";
+ $("#modeNote").hidden=S.tab==="news"||S.mode!=="http";
+}
+function switchTab(t){S.tab=t;renderTabVisibility();urlWrite();}
+$$(".nav").forEach(b=>b.onclick=()=>{switchTab(b.dataset.tab);window.scrollTo({top:0,behavior:"auto"});});
+$("#brandHome").onclick=e=>{e.preventDefault();switchTab("map");};
+
+/* Project news: user-controlled rotation, paused on focus/hover and reduced motion. */
+let newsIndex=0,newsPaused=false;
+const newsMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
+function newsText(item,key){return item[key][LANG]||item[key].en;}
+function newsDate(value){return new Intl.DateTimeFormat(LANG,{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}).format(new Date(value+"T12:00:00Z"));}
+function renderNewsTicker(){
+ const items=DATA.news||[];$("#newsTicker").hidden=!items.length;
+ if(!items.length)return;
+ newsIndex=((newsIndex%items.length)+items.length)%items.length;
+ const item=items[newsIndex];
+ $("#newsHeadline").innerHTML=`<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span>${esc(newsText(item,"title"))}</span>`;
+ const paused=newsPaused||newsMotion.matches;
+ $("#newsPause").textContent=paused?"▶":"Ⅱ";
+ $("#newsPause").setAttribute("aria-label",t(paused?"news_resume":"news_pause"));
+ $("#newsPause").setAttribute("aria-pressed",String(paused));
+ $("#newsPause").disabled=newsMotion.matches||items.length<2;
+ $("#newsPrev").disabled=$("#newsNext").disabled=items.length<2;
+}
+function renderNews(){
+ $("#newsGrid").innerHTML=(DATA.news||[]).map(item=>`<article class="news-card" id="news-${esc(item.id)}" tabindex="-1"><div class="news-meta">${item.pinned?`<span class="news-pin">${esc(t("news_pinned"))}</span>`:""}<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span class="news-tag">${t("news_kind_"+item.kind)}</span></div><h3>${esc(newsText(item,"title"))}</h3>${newsText(item,"body").split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join("")}${item.links?.length?`<div class="news-links">${item.links.map(link=>`<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join("")}</div>`:""}${sourcesHtml(item.evidence)}</article>`).join("");
+ renderNewsTicker();
+}
+function newsStep(delta,announce){
+ newsIndex+=delta;renderNewsTicker();
+ if(announce)$("#newsStatus").textContent=$("#newsHeadline").textContent;
+}
+$("#newsPrev").onclick=()=>newsStep(-1,true);
+$("#newsNext").onclick=()=>newsStep(1,true);
+$("#newsPause").onclick=()=>{newsPaused=!newsPaused;renderNewsTicker();};
+function openNews(focusItem){
+ switchTab("news");
+ if(focusItem){const card=$("#news-"+DATA.news[newsIndex].id);card.scrollIntoView({block:"center"});card.focus({preventScroll:true});}
+ else $("#tab-news").scrollIntoView({block:"start"});
+}
+$("#newsHeadline").onclick=()=>openNews(true);
+$("#newsAll").onclick=()=>openNews(false);
+$("#newsBack").onclick=()=>{switchTab("map");$("#newsAll").focus();};
+newsMotion.addEventListener("change",renderNewsTicker);
+function shouldRotateNews(){
+ const ticker=$("#newsTicker");
+ return S.tab==="map"&&!document.hidden&&!newsPaused&&!newsMotion.matches&&!ticker.matches(":hover")&&!ticker.contains(document.activeElement)&&(DATA.news||[]).length>1;
+}
+setInterval(()=>{if(shouldRotateNews())newsStep(1,false);},8000);
+
+/* ⌘K */
+const kk=$("#kkOverlay"),kkI=$("#kkInput"),kkL=$("#kkList");
+let kkItems=[],kkSel=0,kkReturnFocus=null;
+function kkOpenFn(){kkReturnFocus=document.activeElement;kk.hidden=false;kk.style.display="flex";kkI.value="";kkBuild("");kkI.focus();}
+function kkCloseFn(){kk.hidden=true;kk.style.display="none";kkReturnFocus?.focus();}
+function kkBuild(q){
+ q=q.trim().toLowerCase();kkItems=[];kkSel=0;
+ for(const s of sortedSlugs){const L=DATA.lines[s],M=DATA.meta.lines[s]||{};
+  if(!q||L.name.toLowerCase().includes(q)||loc(M.vendor||"").toLowerCase().includes(q))kkItems.push({kind:"line",id:s,t:L.name,n:fmtF(L.total),sub:loc(M.vendor||"")});}
+ for(const cc of ALL_CCS){const nm=ccName(cc),ne=ccNameEn(cc);
+  if(q&&(nm.toLowerCase().includes(q)||ne.toLowerCase().includes(q)||cc.toLowerCase().includes(q)))kkItems.push({kind:"cc",id:cc,t:nm,n:fmtF(DATA.park[cc]),sub:cc});}
+ {const tally=new Map();const ls=S.lines.size?[...S.lines]:DISJOINT;
+  for(const slug of ls){if(!SLICE.lines.has(slug))continue;
+   for(const cc of Object.keys(SLICE.lines.get(slug).countries)){const cell=DATA.orgdrill[slug+"--"+cc];if(!cell)continue;
+    for(const o of cell.orgs){const nz=normOrg(o.value,cc);tally.set(nz,(tally.get(nz)||0)+o.count);}}}
+  for(const[nz,n]of[...tally.entries()].filter(([nz])=>!q||loc(nz).toLowerCase().includes(q)||nz.toLowerCase().includes(q)).sort((a,b)=>b[1]-a[1]).slice(0,q?12:8))
+   if(!q||loc(nz).toLowerCase().includes(q)||nz.toLowerCase().includes(q))kkItems.push({kind:"org",id:nz,t:loc(nz),n:fmtF(n),sub:t("kind_org")});}
+ for(const r of Object.keys(REGIONS)){
+  if(!q||r.toLowerCase().includes(q)||REG_NAME(r).toLowerCase().includes(q))kkItems.push({kind:"reg",id:r,t:REG_NAME(r),n:"",sub:r});}
+ kkItems=kkItems.slice(0,40);
+ kkL.innerHTML=kkItems.map((it,i)=>`<button class="kk-item ${i===0?"sel":""}" data-i="${i}"><span class="kind">${t("kind_"+it.kind)}</span><span>${esc(it.t)}${it.sub?` <span style="color:var(--faint)">· ${esc(it.sub)}</span>`:""}</span><span class="n">${esc(it.n)}</span></button>`).join("")||`<div class="pempty">${t("nfound")}</div>`;
+ kkL.querySelectorAll(".kk-item").forEach(b=>b.onclick=()=>{kkGo(+b.dataset.i,false);});
+}
+function kkGo(i,addOnly){
+ const it=kkItems[i];if(!it)return;
+ kkCloseFn();
+ if(it.kind==="line"){if(addOnly)S.lines.add(it.id);else toggleSolo("lines",it.id);refreshAll();maybeFitSolo();}
+ if(it.kind==="cc"){S.geo.add("c:"+it.id);zoomToCountry(it.id);refreshAll();}
+ if(it.kind==="reg"){S.geo.add("r:"+it.id);refreshAll();zoomToRegion(it.id);}
+ if(it.kind==="org"){S.orgs.add(it.id);refreshAll();}
+}
+$("#kkOpen").onclick=kkOpenFn;
+kkI.oninput=e=>kkBuild(e.target.value);
+document.addEventListener("keydown",e=>{
+ if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();kk.hidden?kkOpenFn():kkCloseFn();return;}
+ if(!kk.hidden){
+  if(e.key==="Tab"){
+   const items=[kkI,...kkL.querySelectorAll("button")];const index=items.indexOf(document.activeElement);
+   e.preventDefault();items[(index+(e.shiftKey?-1:1)+items.length)%items.length].focus();return;
+  }
+  if(e.key==="Escape")kkCloseFn();
+  if(e.target.matches(".kk-item"))kkSel=+e.target.dataset.i;
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();kkSel=Math.max(0,Math.min(kkItems.length-1,kkSel+(e.key==="ArrowDown"?1:-1)));
+   kkL.querySelectorAll(".kk-item").forEach((b,i)=>b.classList.toggle("sel",i===kkSel));
+   kkL.querySelector(".kk-item.sel")?.scrollIntoView({block:"nearest"});}
+  if(e.key==="Enter"){e.preventDefault();kkGo(kkSel,e.altKey);}
+  return;
+ }
+ if(e.key==="Escape"){
+  if(openPanel){closePanel();return;}
+  if(S.cell){S.cell=null;refreshAll();return;}
+  if(selCountries().length){for(const t of[...S.geo])if(t.startsWith("c:"))S.geo.delete(t);refreshAll();homeIfNoCountries();return;}
+ }
+ if(e.key==="+"&&!e.target.closest("input"))zoomAt(1.3,W/2,H/2);
+ if(e.key==="-"&&!e.target.closest("input"))zoomAt(1/1.3,W/2,H/2);
+});
+
+/* about */
+function renderAbout(){
+ $("#aboutBody").innerHTML=`<p>${t("about_p1")}</p><p>${t("about_p2")}</p><p>${t("about_p3")}</p><p>${t("about_p4")}</p><p>${t("about_p5")}</p><p class="mono" style="font-size:10.5px;color:var(--muted)">snapshot ${esc(DATA.snapshot)} · ${Object.keys(DATA.lines).length} · ${Object.keys(DATA.park).length} · org ${Object.keys(DATA.orgdrill).length}</p>`;
+}
+$("#aboutBtn").onclick=()=>$("#aboutDlg").showModal();
+$("#aboutX").onclick=$("#aboutOk").onclick=()=>$("#aboutDlg").close();
+$("#fsBtn").onclick=()=>{const c=$("#mapcard");(document.fullscreenElement?document.exitFullscreen():c.requestFullscreen()).catch(()=>showToast(t("nfound")));};
+
+/* общий refresh */
+function lineGeoTotals(){
+ const out=new Map();
+ for(const slug of sortedSlugs){
+  let n=0;
+  for(const cc of Object.keys(DATA.lines[slug].countries))if(geoPass(cc))n+=lineCount(slug,cc);
+  out.set(slug,n);
+ }
+ return out;
+}
+let GEOT=null;
+function refreshAll(){
+ SLICE=computeSlice();
+ SLICE_FULL=computeSlice(true);
+ GEOT=lineGeoTotals();
+ $("#snapLabel").textContent=DATA.snapshot.replace(/(\d{4})(\d{2})(\d{2})-(\d{2})(\d{2})(\d{2})?/,"$3.$2.$1 · $4:$5 UTC");
+ facetBtnState();renderChips();renderMode();
+ renderCountries();renderClouds();renderLabels();
+ renderLegend();renderTable();renderLinesTable();renderInspector();
+ renderRegistry();renderFindings();renderAbout();renderNews();renderTabVisibility();urlWrite();
+
+}
+document.addEventListener("keydown",e=>{
+ if(e.target.matches("tr[data-cc],tr[data-slug],th.srt")&&(e.key==="Enter"||e.key===" ")){e.preventDefault();e.target.click();}
+});
+urlRead();switchTab(S.tab);try{DNcur=new Intl.DisplayNames([LANG==="zh"?"zh-Hans":LANG],{type:"region"});}catch(e){}
+applyStaticI18N();$$(".langbtn").forEach(b2=>{b2.classList.toggle("on",b2.dataset.lang===LANG);b2.onclick=()=>setLang(b2.dataset.lang);});
+refreshAll();
+window.addEventListener("resize",()=>{scaleStatics();});
+window.addEventListener("hashchange",()=>{urlRead();setLang(LANG);switchTab(S.tab);});
+
+</script>
+</body>
+</html>
