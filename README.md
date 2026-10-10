@@ -85,6 +85,7 @@ python3 tests/test_collect_map.py
 python3 tests/test_sync_facts.py
 node tests/atlas-audit.mjs index.html
 node tests/atlas-audit.mjs atlas/tr-atlas.html
+node --test tests/map-gestures.mjs
 python3 tools/audit-publication.py
 ```
 

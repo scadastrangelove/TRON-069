@@ -142,7 +142,7 @@ main{max-width:1800px;margin:0 auto;padding:22px clamp(14px,3vw,44px) 40px}
 .stage{position:relative;height:clamp(430px,56vh,720px);overflow:hidden;isolation:isolate;cursor:grab;background:
  linear-gradient(180deg,#eef4fb 0%,#e9f1fa 60%,#e6eef9 100%)}
 .stage.dragging{cursor:grabbing}
-.stage{touch-action:pan-y}
+.stage{touch-action:none;user-select:none;-webkit-user-select:none}
 .reopen-inspector{margin:8px 12px;justify-self:end}
 .panel{max-width:calc(100vw - 24px)}
 .stage svg{width:100%;height:100%;display:block}
@@ -172,6 +172,7 @@ main{max-width:1800px;margin:0 auto;padding:22px clamp(14px,3vw,44px) 40px}
 .zc{position:absolute;left:14px;bottom:14px;display:grid;border:1px solid var(--line);border-radius:11px;padding:3.5px;background:#ffffffef;box-shadow:var(--shadow2);z-index:5}
 .zc button{width:31px;height:31px;color:var(--muted);font-size:17px;border-radius:8px}
 .zc button:hover{background:var(--accent-soft);color:var(--accent)}
+@media(pointer:coarse),(max-width:640px){.zc button{width:44px;height:44px}}
 .mapfoot{position:absolute;right:14px;bottom:14px;font:10px ui-monospace,monospace;color:var(--faint);background:#ffffffc9;border:1px solid var(--line2);border-radius:9px;padding:5px 10px;pointer-events:none;z-index:4}
 .tooltip{position:absolute;z-index:30;pointer-events:none;background:#fffffff2;border:1px solid var(--line);box-shadow:0 14px 38px rgba(30,48,90,.14);border-radius:12px;padding:12px 14px;min-width:190px;max-width:300px;font-size:12px;line-height:1.55}
 .tooltip strong{font-size:13px}
@@ -1211,10 +1212,12 @@ function bboxOf(cc){ /* крупнейший полигон — антимери
 }
 const vp=$("#viewport");
 function applyT(){vp.setAttribute("transform",`translate(${TX} ${TY}) scale(${K})`);$("#zoomLabel").textContent=K.toFixed(2)+"×";scaleStatics();}
-function clampT(){TX=Math.min(W*0.6*K,Math.max(W-W*0.6*K-140,TX));TY=Math.min(H*0.6*K,Math.max(H-H*0.6*K-140,TY));}
+function boundT(k,x,y){return[Math.min(0,Math.max(W*(1-k),x)),Math.min(0,Math.max(H*(1-k),y))];}
+function clampT(){[TX,TY]=boundT(K,TX,TY);}
 let anim=null;
+function stopTween(){if(anim!==null){clearInterval(anim);anim=null;}}
 function tween(toK,toX,toY,ms=420){
- if(anim)clearInterval(anim);
+ stopTween();[toX,toY]=boundT(toK,toX,toY);
  const fK=K,fX=TX,fY=TY,t0=performance.now();
  const step=()=>{let p=Math.min(1,(performance.now()-t0)/ms);p=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
   K=fK+(toK-fK)*p;TX=fX+(toX-fX)*p;TY=fY+(toY-fY)*p;applyT();
@@ -1247,29 +1250,54 @@ function svgXY(e){
  const matrix=svg.getScreenCTM();if(!matrix)return[0,0];
  const local=pt.matrixTransform(matrix.inverse());return[local.x,local.y];
 }
-let drag=null,downHit=null;
+const pointers=new Map(),TAP_SLOP=6;
+let gesture=null,downHit=null,tapCandidate=false;
 function hitOf(t){
  const cl=t.closest("[data-cloud]");if(cl)return{cloud:cl.dataset};
  const c=t.closest("[data-cc]");if(c)return{cc:c.dataset.cc};
  return null;
 }
+function rebaseGesture(){
+ const pts=[...pointers.values()];
+ if(!pts.length){gesture=null;stage.classList.remove("dragging");return;}
+ const a=pts[0],b=pts[1];
+ const center=b?{clientX:(a.clientX+b.clientX)/2,clientY:(a.clientY+b.clientY)/2}:a;
+ const[sx,sy]=svgXY(center);
+ gesture={sx,sy,x:a.clientX,y:a.clientY,tx:TX,ty:TY,k:K,
+  distance:b?Math.max(1,Math.hypot(b.clientX-a.clientX,b.clientY-a.clientY)):null};
+}
 stage.addEventListener("pointerdown",e=>{
- if(e.target.closest("button"))return;
- const [sx,sy]=svgXY(e);drag={x:e.clientX,y:e.clientY,sx,sy,tx:TX,ty:TY,moved:false};
- downHit=hitOf(e.target);
+ if(e.button!==0||e.target.closest("button"))return;
+ stopTween();
+ pointers.set(e.pointerId,{clientX:e.clientX,clientY:e.clientY});
+ tapCandidate=pointers.size===1;downHit=tapCandidate?hitOf(e.target):null;
+ rebaseGesture();
  stage.classList.add("dragging");stage.setPointerCapture(e.pointerId);
 });
 stage.addEventListener("pointermove",e=>{
- if(!drag)return;
- const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
- if(Math.abs(dx)+Math.abs(dy)>4)drag.moved=true;
- const [sx,sy]=svgXY(e);TX=drag.tx+sx-drag.sx;TY=drag.ty+sy-drag.sy;
+ if(!pointers.has(e.pointerId))return;
+ pointers.set(e.pointerId,{clientX:e.clientX,clientY:e.clientY});
+ const[a,b]=[...pointers.values()];
+ if(b){
+  const distance=Math.hypot(b.clientX-a.clientX,b.clientY-a.clientY);
+  const[cx,cy]=svgXY({clientX:(a.clientX+b.clientX)/2,clientY:(a.clientY+b.clientY)/2});
+  K=Math.min(24,Math.max(1,gesture.k*distance/gesture.distance));
+  TX=cx-(gesture.sx-gesture.tx)*K/gesture.k;
+  TY=cy-(gesture.sy-gesture.ty)*K/gesture.k;
+ }else{
+  if(tapCandidate&&Math.hypot(a.clientX-gesture.x,a.clientY-gesture.y)<=TAP_SLOP)return;
+  tapCandidate=false;
+  const[sx,sy]=svgXY(a);TX=gesture.tx+sx-gesture.sx;TY=gesture.ty+sy-gesture.sy;
+ }
  clampT();applyT();
 });
 stage.addEventListener("pointerup",e=>{
- const wasDrag=drag&&drag.moved;drag=null;stage.classList.remove("dragging");
- if(wasDrag){downHit=null;return;}
- const hit=downHit||hitOf(e.target);downHit=null;
+ if(!pointers.has(e.pointerId))return;
+ const isTap=tapCandidate&&pointers.size===1&&Math.hypot(e.clientX-gesture.x,e.clientY-gesture.y)<=TAP_SLOP;
+ const hit=downHit;
+ pointers.delete(e.pointerId);tapCandidate=false;downHit=null;rebaseGesture();
+ if(stage.hasPointerCapture(e.pointerId))stage.releasePointerCapture(e.pointerId);
+ if(!isTap)return;
  if(hit&&hit.cloud){
   const{cc,slug}=hit.cloud;
   if(S.cell&&S.cell.cc===cc&&S.cell.slug===slug)S.cell=null;else S.cell={cc,slug};
@@ -1290,7 +1318,12 @@ stage.addEventListener("pointerup",e=>{
  for(const t of[...S.geo])if(t.startsWith("c:")){S.geo.delete(t);removed=true;}
  if(removed){if(S.cell)S.cell=null;refreshAll();homeIfNoCountries();}
 });
-stage.addEventListener("pointercancel",()=>{drag=null;downHit=null;stage.classList.remove("dragging");});
+function cancelPointer(e){
+ if(!pointers.delete(e.pointerId))return;
+ tapCandidate=false;downHit=null;rebaseGesture();
+}
+stage.addEventListener("pointercancel",cancelPointer);
+stage.addEventListener("lostpointercapture",cancelPointer);
 let wheelHintT=null;
 stage.addEventListener("wheel",e=>{
  if(!(e.ctrlKey||e.metaKey)){e.preventDefault();
