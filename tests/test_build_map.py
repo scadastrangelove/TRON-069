@@ -1,5 +1,6 @@
 """Offline build regression checks. Never runs the Shodan collector."""
 import copy
+import csv
 import importlib.util
 import json
 from pathlib import Path
@@ -88,6 +89,55 @@ class BuildTests(unittest.TestCase):
         ui = builder.read(ROOT/'data/ui-i18n.json')
         for lang in ('ru', 'es', 'zh'):
             self.assertEqual(set(ui['en']), set(ui[lang]), lang)
+
+    def test_ecosystem_rejects_broken_and_non_public_evidence(self):
+        with (ROOT/'registry.csv').open() as stream:
+            registry = {row['id']: row for row in csv.DictReader(stream)}
+        catalog = builder.read_ecosystem(registry)
+        def check_bad(change, message):
+            bad = copy.deepcopy(catalog)
+            change(bad)
+            original_read = builder.read
+            with patch.object(builder, 'read', side_effect=lambda path: bad if path.name == 'acs-relations.json' else original_read(path)):
+                with self.assertRaisesRegex(ValueError, message):
+                    builder.read_ecosystem(registry)
+        check_bad(lambda c: c['edges'][0].update(target='missing'), 'Dangling')
+        check_bad(lambda c: c['edges'][0]['summary'].pop('zh'), 'translation')
+        check_bad(lambda c: c['nodes'].append(c['nodes'][0]), 'duplicate')
+        check_bad(lambda c: c['nodes'][0].update(line='genieacs-admin-ui'), 'registry role')
+        check_bad(lambda c: c['edges'][0].update(sources=[{'url':'https://user:secret@example.org', 'title':'bad'}]), 'URL')
+        check_bad(lambda c: c['edges'][0].update(sources=[{'file':'private/report.md'}]), 'Non-public')
+        check_bad(lambda c: c['edges'][0].update(sources=[{'file':'../report.md'}]), 'Non-public')
+        check_bad(lambda c: c['edges'][0].update(sources=[]), 'Missing ecosystem sources')
+        check_bad(lambda c: c['edges'][0].update(map={'line':'gateway-realm','country':'IT'}), 'map scope')
+        check_bad(lambda c: c['edges'][0].update(credentials='secret'), 'Unknown ecosystem edge fields')
+
+    def test_operator_aliases_require_unambiguous_country_scopes(self):
+        catalog = builder.read_operators()
+        def check_bad(change, message):
+            bad = copy.deepcopy(catalog)
+            change(bad)
+            with patch.object(builder, 'read', return_value=bad):
+                with self.assertRaisesRegex(ValueError, message):
+                    builder.read_operators()
+        check_bad(lambda c: c['operators'][0]['aliases'].append(' TPG INTERNET PTY LTD '), 'Ambiguous')
+        check_bad(lambda c: c['operators'][0].update(group='absent'), 'Unknown operator group')
+        check_bad(lambda c: c['groups'][0]['source'].update(url='https://user:secret@example.org'), 'source')
+        check_bad(lambda c: c['operators'].append(c['operators'][0]), 'duplicate')
+        other = copy.deepcopy(catalog['operators'][0])
+        other.update(id='other-country', country='GB')
+        catalog['operators'].append(other)
+        with patch.object(builder, 'read', return_value=catalog):
+            self.assertEqual(builder.read_operators(), catalog)
+
+    def test_ecosystem_sources_are_checked_and_old_snapshots_keep_evidence_dates(self):
+        data = builder.build(SNAPSHOT, self.root/'output')
+        self.assertEqual(data['ecosystem'], builder.read(ROOT/'data/acs-relations.json'))
+        edge = next(e for e in data['ecosystem']['edges'] if e['id']=='mifibra-zte-deployment')
+        self.assertEqual(edge['observed'], '2024-12-20')
+        data['ecosystem']['edges'][0]['sources'] = [{'file':'missing-public-source.md'}]
+        with self.assertRaisesRegex(ValueError, 'Invalid public source reference'):
+            builder.validate_sources(data)
 
     def test_fact_counts_are_read_from_exact_dated_records(self):
         facts={'line':[dict(dork='"line"',count=999,collection_ref=dict(kind='variant',id='slice'))]}

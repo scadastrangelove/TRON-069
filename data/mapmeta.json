@@ -1,7 +1,7 @@
 {
   "_meta": {
     "edition": "public",
-    "reviewed": "2026-10-10"
+    "reviewed": "2026-10-12"
   },
   "lines": {
     "cpe-server-1-0": {
@@ -10,7 +10,8 @@
       "role": "CPE CR",
       "findings": [
         "CPE-SERVER and cpe@zte.com markers were found in the inspected ZTE H108N image; they can describe related endpoints.",
-        "Operator and port associations support research slices, not hardware-model attribution."
+        "Operator and port associations support research slices, not hardware-model attribution.",
+        "Two inspected ZTE F670L firmware generations contain the cpe@zte.com realm and a default connection-request port of 58000. Operator NAT can hide such listeners from public indexing."
       ],
       "anomalies": [
         "A second line at Three UK: unusual outside Italy and Asia"
@@ -24,6 +25,10 @@
       "sources": [
         {
           "file": "NOTES.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.31"
         },
         {
           "file": "TR-PARK-REGISTRY.md",
@@ -61,7 +66,8 @@
       "role": "CPE CR / authentication response family",
       "findings": [
         "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
-        "Operator and port associations support research slices, not hardware-model attribution."
+        "Operator and port associations support research slices, not hardware-model attribution.",
+        "An inspected HG8145V5 image configures connection requests on port 30005 and draws nonce randomness from the operating system."
       ],
       "overlaps": [
         {
@@ -73,6 +79,10 @@
       "sources": [
         {
           "file": "DEANON-HUAWEI-CR.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.31"
         },
         {
           "file": "TR-PARK-REGISTRY.md",
@@ -89,7 +99,8 @@
       "role": "CPE CR (7547)",
       "findings": [
         "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
-        "Operator and port associations support research slices, not hardware-model attribution."
+        "Operator and port associations support research slices, not hardware-model attribution.",
+        "An inspected HG8145V5 image configures connection requests on port 30005 and draws nonce randomness from the operating system."
       ],
       "overlaps": [
         {
@@ -101,6 +112,10 @@
       "sources": [
         {
           "file": "DEANON-HUAWEI-CR.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.31"
         },
         {
           "file": "TR-PARK-REGISTRY.md",
@@ -211,11 +226,12 @@
       ]
     },
     "tr069-client": {
-      "badge": "class",
-      "vendor": "Atheros openagent family; device OEM unknown",
+      "badge": "proven",
+      "vendor": "Atheros openagent (proven component lineage; device OEM unknown)",
       "role": "CPE CR",
       "findings": [
-        "Source-template evidence supports an openagent-related component family; OEM carriers remain unresolved."
+        "Source-template comparison and the Brazilian port-8081 bridge establish Atheros openagent-2.0 component lineage; device OEM carriers remain unresolved.",
+        "Observed sub-families: DigAuth with an Apache-style Server header, 64-character nonce and Date; TR069 Client with a custom Server header, 31-character nonce and no Date."
       ],
       "anomalies": [
         "Response evidence does not establish a hardware model or exploitability."
@@ -383,7 +399,8 @@
       "vendor": "ZTE",
       "role": "CPE CR (another generation)",
       "findings": [
-        "CPE-SERVER and cpe@zte.com markers were found in the inspected ZTE H108N image; they can describe related endpoints."
+        "CPE-SERVER and cpe@zte.com markers were found in the inspected ZTE H108N image; they can describe related endpoints.",
+        "Two inspected ZTE F670L firmware generations contain the cpe@zte.com realm and a default connection-request port of 58000. Operator NAT can hide such listeners from public indexing."
       ],
       "anomalies": [
         "Thailand: both TOT and AIS Fibre"
@@ -391,6 +408,10 @@
       "sources": [
         {
           "file": "NOTES.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.31"
         },
         {
           "file": "TR-PARK-REGISTRY.md",
@@ -596,7 +617,8 @@
       "vendor": "Atheros/Qualcomm SDK openagent-2.0",
       "role": "CPE CR",
       "findings": [
-        "Source-template evidence supports an openagent-related component family; OEM carriers remain unresolved."
+        "Source-template comparison and the Brazilian port-8081 bridge establish Atheros openagent-2.0 component lineage; device OEM carriers remain unresolved.",
+        "Observed sub-families: DigAuth with an Apache-style Server header, 64-character nonce and Date; TR069 Client with a custom Server header, 31-character nonce and no Date."
       ],
       "anomalies": [],
       "sources": [
@@ -1094,8 +1116,9 @@
       "vendor": "Atheros openagent",
       "role": "CPE CR",
       "findings": [
-        "Source-template evidence supports an openagent-related component family; OEM carriers remain unresolved.",
-        "Response evidence does not establish a hardware model or exploitability."
+        "Source-template comparison and the Brazilian port-8081 bridge establish Atheros openagent-2.0 component lineage; device OEM carriers remain unresolved.",
+        "Response evidence does not establish a hardware model or exploitability.",
+        "Observed sub-families: DigAuth with an Apache-style Server header, 64-character nonce and Date; TR069 Client with a custom Server header, 31-character nonce and no Date."
       ],
       "anomalies": [],
       "sources": [

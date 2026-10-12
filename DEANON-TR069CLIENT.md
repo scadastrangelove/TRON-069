@@ -1,8 +1,10 @@
 # TR069 Client: component lineage and attribution limits
 
-Public research edition, 10 October 2026. The evidence supports an Atheros
-openagent-related component family. It does not identify the manufacturer of
-every device returned by the main query.
+Public research edition, reviewed 12 October 2026. Source-template comparison
+and a response carrying both families' markers establish component lineage from
+the Atheros/Qualcomm openagent-2.0 connection-request server. The source is
+`AthSDK/apps/openagent-2.0/src/tools/conn_req_server.c`, published in the D-Link
+DIR-615 GPL release. Device OEM carriers remain a separate question.
 
 ## Observable response
 
@@ -20,16 +22,20 @@ fingerprints, but do not establish identical code on all devices.
 
 ## Component evidence
 
-The research compared the DigAuth-associated response template with
-`AthSDK/apps/openagent-2.0/src/tools/conn_req_server.c` in a D-Link DIR-615 GPL
-source release. The distinctive template includes an Apache-style Server string,
-Date, Vary and Accept-Ranges headers. A Brazilian port-8081 slice bridges the
-TR069 Client Server string and DigAuth realm.
+The full 401-response template (header order, Apache-imitation Server string,
+Date, Vary, Accept-Ranges, Content-Type) in the DigAuth-associated sub-family
+matches the structure and literals in `conn_req_server.c` line 700. The
+difference is the Server header value, which the OEM fork replaced with
+`TR069 client TCP connection request Server`. A Brazilian port-8081 slice
+carries both markers in one response — the bridge confirms both sub-families
+derive from the same code base.
 
-The main population has a shorter response template. The defensible conclusion
-is component-family evidence with an unresolved OEM carrier, rather than a
-fleet-wide hardware attribution. Source and firmware extracts are retained
-privately and are not included in this release.
+The main population uses a shorter response template (Date, Vary and
+Accept-Ranges headers removed), consistent with a derived OEM build. The
+proven component lineage (Atheros openagent-2.0) does not by itself attribute
+individual devices to a specific OEM or hardware vendor — device-level
+attribution remains open. The GPL source is publicly available; no proprietary
+code is reproduced here.
 
 ## Variants overlap
 
@@ -42,6 +48,29 @@ DigAuth-bridge counts were 1,479 and 21,488 respectively.
 Current dated counts are collected independently in
 [data/collection-queries.json](data/collection-queries.json). Do not add the
 main family, DigAuth, fake-Apache, port slices and variants as independent devices.
+
+## Sub-family identification (fingerprint guide)
+
+The component family has two observable sub-families, distinguishable from
+the response alone:
+
+| Feature | Sub-family A (openagent stock) | Sub-family B (OEM fork) |
+| --- | --- | --- |
+| Realm | `DigAuth` | `TR069 Client` |
+| Server header | `Apache/2.0.40 (Red Hat Linux)` (imitation) | `TR069 client TCP connection request Server` |
+| Nonce length | 64 base64 characters | 31 base64 characters |
+| Date header | Present (provides a timing reference) | Absent |
+| Vary / Accept-Ranges | Present | Absent |
+| Content-Type | `text/html; charset=ISO-8859-1` | Absent (Content-Length: 0 only) |
+| Observed on | BR port 8081; small ISPs | Main fleet: Charter, EBOX, Maroc, Vivo, Singtel |
+| qop variant | Always `qop="auth"` | Operator-dependent (with/without qop, some Basic) |
+
+A Brazilian port-8081 slice carries both the sub-family-B Server string and
+the sub-family-A realm in a single response, linking the two sub-families.
+
+The observed 31-character nonce (sub-family B) and 64-character nonce
+(sub-family A), together with the realm and header layout, provide additional
+fingerprint markers. Their fleet-wide coverage remains to be measured.
 
 ## Singtel cross-service observations
 
@@ -68,7 +97,7 @@ hardware is compatible with the component hypothesis but is not proof of it.
 
 ## Atlas integration
 
-The main line retains a component-class badge. DigAuth and fake-Apache keep their
+The main line carries an Atheros openagent lineage badge with a note that device OEM carriers are unresolved. DigAuth and fake-Apache keep their
 specific source-backed scope. Variants, Singtel ports and the Brazilian bridge
 are collected separately. Research news and observation cards link here and to
 [ACS-HUNT.md](ACS-HUNT.md). Unpublished security-audit hypotheses and reproduction

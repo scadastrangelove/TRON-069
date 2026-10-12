@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "reviewed": "2026-10-11",
+  "nodes": [
+    {
+      "id": "easycwmp",
+      "kind": "cpe",
+      "name": "easycwmp",
+      "description": {
+        "en": "Open-source CWMP client.",
+        "ru": "Открытый CWMP-клиент.",
+        "es": "Cliente CWMP de código abierto.",
+        "zh": "开源 CWMP 客户端。"
+      },
+      "line": "easycwmp-vanilla"
+    },
+    {
+      "id": "genieacs",
+      "kind": "acs",
+      "name": "GenieACS",
+      "description": {
+        "en": "Open-source ACS. The atlas measures its public admin-UI signature.",
+        "ru": "Открытый ACS. В атласе измеряется публичная сигнатура его панели управления.",
+        "es": "ACS de código abierto. El atlas mide la firma pública de su interfaz de administración.",
+        "zh": "开源 ACS。图谱统计其公开管理界面的指纹。"
+      },
+      "line": "genieacs-admin-ui"
+    },
+    {
+      "id": "rdk-b",
+      "kind": "cpe",
+      "name": "RDK-B · CcspTr069Pa",
+      "description": {
+        "en": "TR-069 protocol agent in the RDK-B software stack.",
+        "ru": "Агент протокола TR-069 в составе RDK-B.",
+        "es": "Agente del protocolo TR-069 en RDK-B.",
+        "zh": "RDK-B 软件栈中的 TR-069 协议代理。"
+      },
+      "line": "rdk-b-ccsptr069pa"
+    },
+    {
+      "id": "unspecified-acs",
+      "kind": "acs",
+      "name": {
+        "en": "Operator ACS · unspecified",
+        "ru": "ACS оператора · не установлен",
+        "es": "ACS del operador · sin identificar",
+        "zh": "运营商 ACS · 未确定"
+      },
+      "description": {
+        "en": "Architectural role; no ACS product or operator has been assigned.",
+        "ru": "Архитектурная роль; продукт ACS и оператор не установлены.",
+        "es": "Rol arquitectónico; no se ha asignado un producto ACS ni un operador.",
+        "zh": "架构角色；尚未确定 ACS 产品或运营商。"
+      }
+    },
+    {
+      "id": "icwmp",
+      "kind": "cpe",
+      "name": "icwmp · iopsys",
+      "description": {
+        "en": "Client family identified by the authenticate@cwmp realm.",
+        "ru": "Семейство клиентов с realm authenticate@cwmp.",
+        "es": "Familia de clientes identificada por el realm authenticate@cwmp.",
+        "zh": "由 authenticate@cwmp realm 识别的客户端系列。"
+      },
+      "line": "icwmp-iopsys"
+    },
+    {
+      "id": "bt",
+      "kind": "operator",
+      "name": "BT",
+      "description": {
+        "en": "Named BT organizations appear in the UK organization facets. ACS implementation remains unidentified.",
+        "ru": "Именованные сети BT присутствуют в британских срезах организаций. Реализация ACS не установлена.",
+        "es": "Las facetas británicas incluyen organizaciones de BT. La implementación ACS sigue sin identificar.",
+        "zh": "英国组织分面中出现了具名 BT 网络。ACS 实现尚未确定。"
+      },
+      "operator": "bt"
+    },
+    {
+      "id": "gateway",
+      "kind": "cpe",
+      "name": "Gateway realm · :7170",
+      "description": {
+        "en": "CPE fingerprint associated with TIM networks; component attribution is open.",
+        "ru": "CPE-сигнатура в сетях TIM; атрибуция компонента остаётся открытой.",
+        "es": "Firma CPE asociada con redes de TIM; la atribución del componente está abierta.",
+        "zh": "与 TIM 网络相关的 CPE 指纹；组件归属仍待确定。"
+      },
+      "line": "gateway-realm"
+    },
+    {
+      "id": "tim",
+      "kind": "operator",
+      "name": "TIM / Telecom Italia",
+      "description": {
+        "en": "Operator association from the Italian organization facets.",
+        "ru": "Операторская привязка по итальянским срезам организаций.",
+        "es": "Asociación de operador a partir de las facetas de organizaciones italianas.",
+        "zh": "根据意大利组织分面确定的运营商关联。"
+      },
+      "operator": "tim"
+    },
+    {
+      "id": "gateway-candidates",
+      "kind": "cpe",
+      "name": {
+        "en": "Technicolor / ADB?",
+        "ru": "Technicolor / ADB?",
+        "es": "¿Technicolor / ADB?",
+        "zh": "Technicolor / ADB？"
+      },
+      "description": {
+        "en": "Candidate vendors for Gateway realm; no matching firmware attribution yet.",
+        "ru": "Кандидаты для Gateway realm; совпадение с прошивкой пока не подтверждено.",
+        "es": "Fabricantes candidatos para Gateway realm; aún sin atribución confirmada por firmware.",
+        "zh": "Gateway realm 的候选厂商；尚无匹配固件证据。"
+      }
+    },
+    {
+      "id": "dga0122",
+      "kind": "cpe",
+      "name": "Technicolor DGA0122",
+      "description": {
+        "en": "Model discussed in a public firmware-configuration report.",
+        "ru": "Модель из публичного разбора конфигурации прошивки.",
+        "es": "Modelo de un informe público de configuración de firmware.",
+        "zh": "公开固件配置报告中讨论的型号。"
+      }
+    },
+    {
+      "id": "nld-acs",
+      "kind": "endpoint",
+      "name": "nld-acs.com",
+      "description": {
+        "en": "ACS hostname recorded in configuration; operator ownership is unresolved.",
+        "ru": "Имя ACS из конфигурации; принадлежность оператору не установлена.",
+        "es": "Nombre ACS registrado en configuración; propietario sin determinar.",
+        "zh": "配置中记录的 ACS 主机名；运营商归属未确定。"
+      }
+    },
+    {
+      "id": "tg789-iinet",
+      "kind": "cpe",
+      "name": "TG789vac v2 · iiNet",
+      "description": {
+        "en": "VANT-6 2.5.3 image described in the local firmware review.",
+        "ru": "Образ VANT-6 2.5.3 из локального разбора прошивок.",
+        "es": "Imagen VANT-6 2.5.3 descrita en la revisión local de firmware.",
+        "zh": "本地固件审查中记录的 VANT-6 2.5.3 镜像。"
+      }
+    },
+    {
+      "id": "iinet-endpoint",
+      "kind": "endpoint",
+      "name": "setup.iinet.net.au:8881",
+      "description": {
+        "en": "Reported ACS configuration endpoint. No current service measurement.",
+        "ru": "Адрес ACS из отчёта о конфигурации. Текущая работа сервиса не измерялась.",
+        "es": "Destino ACS informado en configuración. Sin medición actual del servicio.",
+        "zh": "配置报告中的 ACS 地址。未测量当前服务状态。"
+      }
+    },
+    {
+      "id": "mifibra",
+      "kind": "operator",
+      "name": "MiFibra · Peru",
+      "description": {
+        "en": "Operator named in the ZTE commercial-deployment announcement.",
+        "ru": "Оператор из сообщения ZTE о коммерческом внедрении.",
+        "es": "Operador identificado en el anuncio de despliegue comercial de ZTE.",
+        "zh": "ZTE 商用部署公告中列出的运营商。"
+      }
+    },
+    {
+      "id": "zte-scp",
+      "kind": "acs",
+      "name": "ZTE Smart Cloud Platform",
+      "description": {
+        "en": "CPE management platform. A named deployment does not identify the ACS of every ZTE device.",
+        "ru": "Платформа управления CPE. Конкретное внедрение не определяет ACS всех устройств ZTE.",
+        "es": "Plataforma de gestión CPE. Un despliegue concreto no identifica el ACS de todos los dispositivos ZTE.",
+        "zh": "CPE 管理平台。某个已知部署不能确定所有 ZTE 设备使用的 ACS。"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "easycwmp-genieacs",
+      "source": "easycwmp",
+      "target": "genieacs",
+      "kind": "interop",
+      "status": "documented",
+      "reviewed": "2026-10-11",
+      "observed": "2026-10-11",
+      "summary": {
+        "en": "The easycwmp maintainer describes testing with GenieACS; the reporter confirms the setup works. This is interoperability evidence.",
+        "ru": "Разработчик easycwmp описал тестирование с GenieACS; автор обращения подтвердил работу настройки. Это свидетельство совместимости.",
+        "es": "El mantenedor de easycwmp describe pruebas con GenieACS; el autor confirma que funciona. Es evidencia de interoperabilidad.",
+        "zh": "easycwmp 维护者描述了与 GenieACS 的测试，报告者确认配置可用。这是互操作性证据。"
+      },
+      "sources": [
+        {
+          "url": "https://support.easycwmp.org/view.php?id=128",
+          "title": "easycwmp issue 128"
+        },
+        {
+          "file": "ACS-INTEGRATION-EVIDENCE.md"
+        }
+      ]
+    },
+    {
+      "id": "rdk-architecture",
+      "source": "rdk-b",
+      "target": "unspecified-acs",
+      "kind": "architecture",
+      "status": "documented",
+      "reviewed": "2026-10-11",
+      "observed": "2026-10-11",
+      "summary": {
+        "en": "RDKCentral documents CcspTr069Pa as the TR-069 agent connecting a broadband device to an ACS.",
+        "ru": "RDKCentral описывает CcspTr069Pa как агент TR-069 для связи широкополосного устройства с ACS.",
+        "es": "RDKCentral documenta CcspTr069Pa como el agente TR-069 que conecta un dispositivo de banda ancha con un ACS.",
+        "zh": "RDKCentral 将 CcspTr069Pa 描述为连接宽带设备与 ACS 的 TR-069 代理。"
+      },
+      "sources": [
+        {
+          "url": "https://developer.rdkcentral.com/documentation/documentation/rdk_broadband_documentation/components/ccsptr069pa/",
+          "title": "RDKCentral · CcspTr069Pa"
+        }
+      ]
+    },
+    {
+      "id": "icwmp-bt-observation",
+      "source": "icwmp",
+      "target": "bt",
+      "kind": "operator",
+      "status": "observed",
+      "reviewed": "2026-10-11",
+      "observed": "2026-10-10",
+      "summary": {
+        "en": "The UK icwmp slice includes BT Infrastructure Layer, BT-Central-Plus and BT Group Broadband. It identifies network presence; the ACS product is unknown.",
+        "ru": "В британском срезе icwmp есть BT Infrastructure Layer, BT-Central-Plus и BT Group Broadband. Это присутствие в сети; продукт ACS неизвестен.",
+        "es": "El corte británico de icwmp incluye BT Infrastructure Layer, BT-Central-Plus y BT Group Broadband. Identifica presencia en la red; el producto ACS es desconocido.",
+        "zh": "英国 icwmp 分面包括 BT Infrastructure Layer、BT-Central-Plus 和 BT Group Broadband。这表明网络分布；ACS 产品未知。"
+      },
+      "sources": [
+        {
+          "file": "data/mapdata/snapshot-20261010-102121/org-drill/icwmp-iopsys--GB.json"
+        }
+      ],
+      "map": {
+        "line": "icwmp-iopsys",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "gateway-tim-observation",
+      "source": "gateway",
+      "target": "tim",
+      "kind": "operator",
+      "status": "observed",
+      "reviewed": "2026-10-11",
+      "observed": "2026-10-10",
+      "summary": {
+        "en": "The Italian port-7170 slice contains Telecom Italia and TIM organization names. The ACS address and product are unresolved.",
+        "ru": "В итальянском срезе порта 7170 присутствуют организации Telecom Italia и TIM. Адрес и продукт ACS не установлены.",
+        "es": "El corte italiano del puerto 7170 contiene organizaciones Telecom Italia y TIM. La dirección y el producto ACS no se han identificado.",
+        "zh": "意大利 7170 端口分面包含 Telecom Italia 和 TIM 组织名称。ACS 地址和产品未确定。"
+      },
+      "sources": [
+        {
+          "file": "data/mapdata/snapshot-20261010-102121/org-drill/gateway-realm--IT.json"
+        },
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ],
+      "map": {
+        "line": "gateway-realm",
+        "country": "IT"
+      }
+    },
+    {
+      "id": "gateway-vendor-candidates",
+      "source": "gateway",
+      "target": "gateway-candidates",
+      "kind": "attribution",
+      "status": "hypothesis",
+      "reviewed": "2026-10-11",
+      "observed": "2026-10-10",
+      "summary": {
+        "en": "Technicolor and ADB remain candidates. The inspected TG789 image used port 51007 and did not contain the observed Gateway realm.",
+        "ru": "Technicolor и ADB остаются кандидатами. В проверенном образе TG789 был порт 51007 и не найден наблюдаемый realm Gateway.",
+        "es": "Technicolor y ADB siguen siendo candidatos. La imagen TG789 examinada usaba el puerto 51007 y no contenía el realm Gateway observado.",
+        "zh": "Technicolor 和 ADB 仍是候选。已检查的 TG789 镜像使用端口 51007，未包含观测到的 Gateway realm。"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "id": "dga0122-nld-config",
+      "source": "dga0122",
+      "target": "nld-acs",
+      "kind": "configuration",
+      "status": "documented",
+      "reviewed": "2026-10-11",
+      "observed": "2022-03-08",
+      "summary": {
+        "en": "A public DGA0122 configuration lists nld-acs.com as acs_url, with CWMP state set to 0. It records a configured value, not an active deployment.",
+        "ru": "В публичной конфигурации DGA0122 nld-acs.com указан как acs_url, при state CWMP = 0. Это значение настройки, а не активное внедрение.",
+        "es": "Una configuración pública de DGA0122 incluye nld-acs.com como acs_url, con estado CWMP 0. Registra un valor configurado, no un despliegue activo.",
+        "zh": "公开 DGA0122 配置将 nld-acs.com 列为 acs_url，CWMP state 为 0。这是配置值，并非活跃部署。"
+      },
+      "sources": [
+        {
+          "url": "https://github.com/hack-technicolor/hack-technicolor/discussions/218",
+          "title": "hack-technicolor · discussion 218"
+        },
+        {
+          "file": "ACS-URL-MINING.md"
+        }
+      ]
+    },
+    {
+      "id": "tg789-iinet-config",
+      "source": "tg789-iinet",
+      "target": "iinet-endpoint",
+      "kind": "configuration",
+      "status": "reported",
+      "reviewed": "2026-10-11",
+      "observed": "2026-10-11",
+      "summary": {
+        "en": "The local review reports this endpoint in the iiNet VANT-6 2.5.3 image. An artifact digest and a redacted configuration excerpt remain to be recorded.",
+        "ru": "Локальный разбор сообщает об этом адресе в образе iiNet VANT-6 2.5.3. Хеш образа и очищенный фрагмент конфигурации ещё предстоит зафиксировать.",
+        "es": "La revisión local informa de este destino en la imagen iiNet VANT-6 2.5.3. Faltan el hash del artefacto y un extracto de configuración depurado.",
+        "zh": "本地审查报告在 iiNet VANT-6 2.5.3 镜像中发现此地址。仍需记录镜像哈希和脱敏配置片段。"
+      },
+      "sources": [
+        {
+          "file": "ACS-URL-MINING.md"
+        }
+      ]
+    },
+    {
+      "id": "mifibra-zte-deployment",
+      "source": "mifibra",
+      "target": "zte-scp",
+      "kind": "deployment",
+      "status": "documented",
+      "reviewed": "2026-10-11",
+      "observed": "2024-12-20",
+      "summary": {
+        "en": "ZTE announced the commercial deployment of Smart Cloud Platform for MiFibra home-CPE management in Peru.",
+        "ru": "ZTE сообщила о коммерческом внедрении Smart Cloud Platform для управления домашними CPE MiFibra в Перу.",
+        "es": "ZTE anunció el despliegue comercial de Smart Cloud Platform para gestionar los CPE domésticos de MiFibra en Perú.",
+        "zh": "ZTE 宣布在秘鲁 MiFibra 商用部署 Smart Cloud Platform，用于家庭 CPE 管理。"
+      },
+      "sources": [
+        {
+          "url": "https://www.zte.com.cn/global/about/news/mifibra-partners-with-zte-to-complete-the-commercial-deployment-of-smart-cloud-platform.html",
+          "title": "ZTE · MiFibra deployment"
+        }
+      ]
+    }
+  ]
+}

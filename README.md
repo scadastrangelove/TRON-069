@@ -85,7 +85,7 @@ python3 tests/test_collect_map.py
 python3 tests/test_sync_facts.py
 node tests/atlas-audit.mjs index.html
 node tests/atlas-audit.mjs atlas/tr-atlas.html
-node --test tests/map-gestures.mjs
+node --test tests/map-gestures.mjs tests/network-gestures.mjs
 python3 tools/audit-publication.py
 ```
 
@@ -133,6 +133,22 @@ use a new snapshot for daily history. No daily scheduler is installed by this re
 `--query-group` selects catalog groups. `--skip-variants` omits research queries.
 The resume plan freezes these choices, including query text and facets.
 
+## CPE–ACS graph
+
+Open the **CPE ↔ ACS** tab or [link directly to it](index.html#lang=en&tab=ecosystem).
+**Observed networks** builds country–organization–signature combinations from
+the saved snapshot. Switch between the interactive network, flow overview and matrix; filter countries,
+operators, signatures and service roles, or combine documented corporate groups.
+Connections link to exact measurements and map selections. Mobile users retain
+the interactive graph with pan, pinch zoom and full-screen mode, plus a scrollable matrix. See [DEPLOYMENTS.md](DEPLOYMENTS.md).
+
+**ACS evidence** contains the curated integration and configuration graph from
+`data/acs-relations.json`. Its sources, translations and references are validated
+at build time. Hypotheses are optional. Shared links preserve both views' filters
+and selections. See the [integration matrix](ACS-INTEGRATION-EVIDENCE.md) for the
+catalog schema. The reviewed operator aliases and groups are maintained in
+`data/operator-catalog.json`; unrecognized organization labels remain unassigned.
+
 ## Data and evidence
 
 | File | Purpose |
@@ -141,6 +157,8 @@ The resume plan freezes these choices, including query text and facets.
 | [data/collection-queries.json](data/collection-queries.json) | Versioned variants, parent lines, facets and research sources |
 | [data/mapdata/history.json](data/mapdata/history.json) | Snapshot status index and latest completed collection |
 | [data/mapdata/facts.json](data/mapdata/facts.json) | Current observation counts, dates and response references |
+| [data/operator-catalog.json](data/operator-catalog.json) | Exact country-scoped operator aliases and sourced corporate groups |
+| [data/acs-relations.json](data/acs-relations.json) | CPE–ACS relationship graph, evidence status, dates and sources |
 | [data/mapmeta.json](data/mapmeta.json) | Attribution, findings, limitations and source links |
 | [data/research-findings.json](data/research-findings.json) | Research-to-atlas coverage and explicitly withheld categories |
 | [data/project-news.json](data/project-news.json) | Dated developments with supporting files |
@@ -165,6 +183,10 @@ exports, operational logs and restricted probe packages are not distributed.
 - [NOTES.md](NOTES.md): public research chronology and corrections.
 - [DEANON-TR069CLIENT.md](DEANON-TR069CLIENT.md): component lineage and attribution limits.
 - [DEANON-HUAWEI-CR.md](DEANON-HUAWEI-CR.md): authentication and port/operator slices.
+- [DEANON-OBUSPA.md](DEANON-OBUSPA.md): USP transport fingerprints and obuspa attribution limits.
+- [ACS-INTEGRATION-EVIDENCE.md](ACS-INTEGRATION-EVIDENCE.md): CPE–ACS graph and evidence matrix.
+- [ACS-URL-MINING.md](ACS-URL-MINING.md): firmware configuration records and provenance.
+- [ACS-LANDSCAPE.md](ACS-LANDSCAPE.md): the public Bad CPE threat model.
 - [ACS-HUNT.md](ACS-HUNT.md): ACS identification and unresolved signatures.
 - [NONCE-PATHOLOGY.md](NONCE-PATHOLOGY.md): interpretation limits and disclosure boundary.
 - [TODO.md](TODO.md): completed integration work and open research questions.

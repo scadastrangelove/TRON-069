@@ -34,6 +34,175 @@
     ]
   },
   {
+    "id": "zte-huawei-second-image",
+    "date": "2026-10-12",
+    "kind": "research",
+    "title": {
+      "en": "ZTE F670L and Huawei: firmware evidence",
+      "ru": "ZTE F670L и Huawei: подтверждение из прошивок",
+      "es": "ZTE F670L y Huawei: evidencia de firmware",
+      "zh": "ZTE F670L 与华为：固件证据"
+    },
+    "body": {
+      "en": "Two F670L firmware generations contain cpe@zte.com and a default connection-request port of 58000, extending ZTE evidence beyond H108N. An HG8145V5 image uses port 30005 and operating-system randomness for the nonce. These image-specific findings now appear in the line cards. Public exposure remains limited by operator NAT and indexing coverage.",
+      "ru": "Два поколения прошивки F670L содержат cpe@zte.com и порт запросов соединения 58000 по умолчанию: подтверждение ZTE теперь выходит за рамки H108N. В образе HG8145V5 найдены порт 30005 и системный источник случайности для nonce. Находки из конкретных образов добавлены в карточки линий. Публичная видимость ограничена операторским NAT и охватом индексации.",
+      "es": "Dos generaciones de firmware F670L contienen cpe@zte.com y el puerto 58000 por defecto, ampliando la evidencia ZTE más allá del H108N. Una imagen HG8145V5 usa el puerto 30005 y aleatoriedad del sistema operativo para el nonce. Los hallazgos de estas imágenes figuran en las fichas. El NAT del operador y la cobertura del índice limitan la visibilidad pública.",
+      "zh": "两代 F670L 固件均包含 cpe@zte.com 和默认连接请求端口 58000，将 ZTE 证据扩展到 H108N 之外。一个 HG8145V5 固件使用端口 30005 及操作系统随机源生成 nonce。这些特定固件的发现已加入签名卡片。运营商 NAT 和索引覆盖范围仍限制公共可见性。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.31"
+      },
+      {
+        "file": "DEANON-HUAWEI-CR.md"
+      }
+    ]
+  },
+  {
+    "id": "openagent-subfamily-fingerprints",
+    "date": "2026-10-12",
+    "kind": "research",
+    "title": {
+      "en": "Openagent lineage and sub-family fingerprints",
+      "ru": "Происхождение openagent и признаки подсемейств",
+      "es": "Linaje openagent y firmas de subfamilias",
+      "zh": "Openagent 来源及子家族指纹"
+    },
+    "body": {
+      "en": "TR069 Client now carries a proven Atheros openagent component-lineage badge. The fingerprint guide distinguishes DigAuth and OEM-derived responses by realm, header layout and observed nonce length. The Brazilian port-8081 bridge links their markers. Device OEM attribution remains open; the overlapping families retain their existing dated query counts.",
+      "ru": "TR069 Client получил статус подтверждённого происхождения компонента от Atheros openagent. Справочник различает DigAuth и OEM-производные ответы по realm, набору заголовков и наблюдаемой длине nonce. Бразильский срез порта 8081 связывает их маркеры. OEM-производители устройств ещё не установлены; пересекающиеся семейства сохраняют существующие счётчики запросов с датами.",
+      "es": "TR069 Client pasa a mostrar un linaje de componente Atheros openagent demostrado. La guía distingue respuestas DigAuth y derivadas OEM por realm, cabeceras y longitud observada del nonce. El puerto 8081 de Brasil vincula sus marcadores. La atribución OEM sigue abierta; las familias solapadas conservan sus recuentos fechados existentes.",
+      "zh": "TR069 Client 现标注为已确认源自 Atheros openagent 组件。指纹指南通过 realm、响应头布局和观察到的 nonce 长度区分 DigAuth 与 OEM 衍生响应。巴西端口 8081 的响应关联了两者标记。设备 OEM 归属仍待确认；重叠家族保留原有带日期的查询计数。"
+    },
+    "evidence": [
+      {
+        "file": "DEANON-TR069CLIENT.md"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "tr069-client"
+      }
+    ]
+  },
+  {
+    "id": "usp-transport-fingerprints",
+    "date": "2026-10-12",
+    "kind": "research",
+    "title": {
+      "en": "USP transport markers from the obuspa review",
+      "ru": "Маркеры транспорта USP из исследования obuspa",
+      "es": "Marcadores de transporte USP del análisis de obuspa",
+      "zh": "obuspa 研究中的 USP 传输标记"
+    },
+    "body": {
+      "en": "WebSocket v1.usp negotiation and CoAP bbf.usp.endpoint discovery provide protocol-level markers. They identify USP support, while obuspa attribution requires further evidence. The English research note links the specification and implementation sources. No fleet count is inferred from generic CoAP banners or port 5683.",
+      "ru": "Согласование WebSocket v1.usp и обнаружение CoAP-ресурса bbf.usp.endpoint дают признаки уровня протокола. Они определяют поддержку USP; для атрибуции obuspa нужны дополнительные доказательства. Английский райтап содержит ссылки на спецификацию и исходники. Общие CoAP-баннеры и порт 5683 не используются как счётчик флота.",
+      "es": "La negociación WebSocket v1.usp y el descubrimiento CoAP bbf.usp.endpoint aportan marcadores del protocolo. Identifican soporte USP; la atribución a obuspa requiere más evidencia. La nota en inglés enlaza la especificación y el código. Los banners CoAP genéricos y el puerto 5683 no se usan para contar una flota.",
+      "zh": "WebSocket v1.usp 协商及 CoAP bbf.usp.endpoint 发现提供协议级标记，可识别 USP 支持；归属 obuspa 仍需更多证据。英文研究笔记链接了规范与实现源码。不从通用 CoAP 响应或端口 5683 推导设备数量。"
+    },
+    "evidence": [
+      {
+        "file": "DEANON-OBUSPA.md"
+      }
+    ]
+  },
+  {
+    "id": "observed-network-combinations",
+    "date": "2026-10-11",
+    "kind": "atlas",
+    "view": "ecosystem",
+    "title": {
+      "en": "Country–operator–CPE: network, flows and matrix",
+      "ru": "Страны, операторы и CPE: сеть, потоки и матрица",
+      "es": "País–operador–CPE: red, flujos y matriz",
+      "zh": "国家–运营商–CPE：网络、流向与矩阵"
+    },
+    "body": {
+      "en": "The interactive network reveals neighboring operators and signatures when a node is selected. Nodes can be dragged and pinned; pan, zoom and full-screen mode work on small screens too. The flow overview and matrix use the same snapshot, filters and dated source records. Each measured connection retains its exact map selection.",
+      "ru": "Интерактивная сеть раскрывает соседних операторов и сигнатуры при выборе узла. Узлы можно перетаскивать и закреплять; перемещение, масштабирование и полноэкранный режим доступны и на узких экранах. Потоки и матрица используют тот же снапшот, фильтры и источники с датами. Каждая измеренная связь сохраняет точный переход на карту.",
+      "es": "La red interactiva revela operadores y firmas vecinos al seleccionar un nodo. Los nodos se pueden arrastrar y fijar; el desplazamiento, zoom y pantalla completa también funcionan en pantallas pequeñas. Los flujos y la matriz comparten la misma instantánea, filtros y fuentes fechadas. Cada conexión conserva su selección exacta en el mapa.",
+      "zh": "交互网络在选择节点时展开相邻运营商和指纹。节点可拖动并固定；小屏幕同样支持平移、缩放和全屏。流向视图与矩阵使用相同快照、筛选条件及带日期的来源。每条测量关联均保留精确的地图选择。"
+    },
+    "evidence": [
+      {
+        "file": "DEPLOYMENTS.md"
+      },
+      {
+        "file": "data/operator-catalog.json"
+      }
+    ]
+  },
+  {
+    "id": "cpe-acs-relationships",
+    "date": "2026-10-11",
+    "kind": "atlas",
+    "title": {
+      "en": "CPE–ACS connections now have their own graph",
+      "ru": "Связи CPE–ACS получили отдельный граф",
+      "es": "Las conexiones CPE–ACS tienen su propio grafo",
+      "zh": "CPE–ACS 关联现有独立关系图"
+    },
+    "body": {
+      "en": "The new view connects client components, operators, ACS products and configuration endpoints. Each edge carries its evidence type, date and sources. Search, filters and map links work in all four languages. Hypotheses are optional.",
+      "ru": "Новая вкладка связывает клиентские компоненты, операторов, продукты ACS и адреса из конфигураций. У каждой связи есть тип свидетельства, дата и источники. Поиск, фильтры и переходы на карту работают на четырёх языках. Гипотезы включаются отдельно.",
+      "es": "La nueva vista conecta componentes cliente, operadores, productos ACS y destinos de configuración. Cada arista incluye tipo de evidencia, fecha y fuentes. Búsqueda, filtros y enlaces al mapa funcionan en cuatro idiomas. Las hipótesis son opcionales.",
+      "zh": "新视图连接客户端组件、运营商、ACS 产品与配置地址。每条边均附有证据类型、日期与来源。搜索、筛选和地图链接支持四种语言，可选择显示假设。"
+    },
+    "evidence": [
+      {
+        "file": "ACS-INTEGRATION-EVIDENCE.md"
+      }
+    ],
+    "view": "ecosystem"
+  },
+  {
+    "id": "acs-firmware-evidence",
+    "date": "2026-10-11",
+    "kind": "research",
+    "title": {
+      "en": "ACS addresses from firmware: configuration evidence",
+      "ru": "Адреса ACS из прошивок: свидетельства конфигурации",
+      "es": "Direcciones ACS del firmware: evidencia de configuración",
+      "zh": "固件中的 ACS 地址：配置证据"
+    },
+    "body": {
+      "en": "Technicolor configuration records are now represented separately from Shodan counts. The public DGA0122 record and the reported iiNet TG789 endpoint have different evidence status. Gateway/TIM component attribution and nld-acs.com ownership remain open.",
+      "ru": "Конфигурации Technicolor представлены отдельно от счётчиков Shodan. Публичная запись DGA0122 и адрес из локального разбора iiNet TG789 имеют разный статус доказательности. Атрибуция компонента Gateway/TIM и принадлежность nld-acs.com остаются открытыми.",
+      "es": "Los registros de configuración Technicolor se presentan por separado de los recuentos Shodan. El registro público DGA0122 y el destino informado de iiNet TG789 tienen distinto estado de evidencia. La atribución Gateway/TIM y la propiedad de nld-acs.com siguen abiertas.",
+      "zh": "Technicolor 配置记录现与 Shodan 计数分开展示。公开 DGA0122 记录与 iiNet TG789 本地报告的证据状态不同。Gateway/TIM 组件归属和 nld-acs.com 所有权仍待确定。"
+    },
+    "evidence": [
+      {
+        "file": "ACS-URL-MINING.md"
+      }
+    ],
+    "view": "ecosystem"
+  },
+  {
+    "id": "bad-cpe-model",
+    "date": "2026-10-11",
+    "kind": "research",
+    "title": {
+      "en": "Bad CPE: the managed device as an attack source",
+      "ru": "Bad CPE: управляемое устройство как источник атаки",
+      "es": "Bad CPE: el dispositivo gestionado como origen de ataque",
+      "zh": "Bad CPE：受管设备作为攻击来源"
+    },
+    "body": {
+      "en": "The atlas adds the CPE → ACS → managed devices trust-boundary model and links to prior public research. The graph records deployment and configuration evidence; new vulnerability details remain in coordinated disclosure.",
+      "ru": "В атлас добавлена модель границы доверия CPE → ACS → управляемые устройства со ссылками на предшествующие публичные исследования. Граф содержит свидетельства внедрений и конфигураций; детали новых уязвимостей остаются в процессе ответственного раскрытия.",
+      "es": "El atlas incorpora el modelo de confianza CPE → ACS → dispositivos gestionados con investigación pública previa. El grafo registra evidencia de despliegue y configuración; los detalles de nuevas vulnerabilidades siguen bajo divulgación coordinada.",
+      "zh": "图谱新增 CPE → ACS → 受管设备的信任边界模型，并链接已有公开研究。关系图记录部署和配置证据；新漏洞细节仍处于协调披露流程。"
+    },
+    "evidence": [
+      {
+        "file": "ACS-LANDSCAPE.md"
+      }
+    ],
+    "view": "ecosystem"
+  },
+  {
     "id": "tron-069-project-name",
     "date": "2026-10-10",
     "kind": "atlas",

@@ -38,7 +38,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
   const elements = new Map();
   const element = selector => {
     if (!elements.has(selector)) elements.set(selector, {
-      innerHTML: '', textContent: '', value: '', hidden: false, style: {}, dataset: {},
+      innerHTML: '', textContent: '', value: '', hidden: false, style: {setProperty(){}}, dataset: {},
       classList: { add() {}, remove() {}, toggle() {} },
       focus() {},
       attrs: {}, setAttribute(key,value){this.attrs[key]=value;}, matches(){return false;}, contains(){return false;},
@@ -57,7 +57,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
       setItem() { if (storageBlocked) throw new Error('SecurityError: storage unavailable'); }
     },
     document: { querySelector: element, querySelectorAll: () => [], documentElement: {} },
-    history: { replaceState(_a, _b, url) { sandbox.location.hash = url; } },
+    history: { replaceState(_a, _b, url) { sandbox.location.hash = url; }, pushState(_a, _b, url) { sandbox.location.hash = url; } },
     setTimeout(callback) { sandbox.timer = callback; return 1; }, clearTimeout() {},
     renderShortcuts() {}, scaleStatics() {}, element,
     dl(blob, name) { sandbox.download = { blob, name }; }
@@ -71,17 +71,159 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
     'const insp=$("#inspector"),kkL=$("#kkList"); let kkItems=[],kkSel=0,toastT=null;',
     'const W=1320,H=600,svg=$("#world"); let newsIndex=0,newsPaused=false;const newsMotion={matches:false};',
     ...['facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
-      'sourcesHtml','renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
+      'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
+      'sourcesHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
+      'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderFindings','renderAbout',
       'newsText','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews'].map(fn),
     'function refreshTest(){SLICE=computeSlice();SLICE_FULL=computeSlice(true);GEOT=lineGeoTotals();}',
     'DNcur=new Intl.DisplayNames([LANG],{type:"region"});'
   ];
-  vm.runInContext(chunks.join('\n'), sandbox, { timeout: 2000 });
+  // Each isolated VM indexes the full snapshot. Keep setup separate from the
+  // three-second function-call bound, including on busy development machines.
+  vm.runInContext(chunks.join('\n'), sandbox, { timeout: 10000 });
   return { run: code => vm.runInContext(code, sandbox, { timeout: 3000 }), sandbox, element };
 }
 
 test('syntax', 'Application JavaScript parses', () => { new vm.Script(source); return 'Parsed'; });
+test('ecosystem-views', 'Filters, neighborhoods and shared graph state preserve evidence scope', () => {
+  const c=context({hash:'#lang=es&tab=ecosystem&eco_node=gateway&eco_focus=gateway&eco_hyp=1&eco_depth=2'});
+  c.run('urlRead();renderEcosystem();urlWrite();');
+  expect(c.run('S.tab')==='ecosystem', 'Graph route lost');
+  expect(c.run('ecoFiltered().length')===2, 'Gateway neighborhood should contain observation and hypothesis');
+  expect(c.sandbox.location.hash.includes('eco_focus=gateway'), 'Shared focus lost');
+  expect(c.sandbox.location.hash.includes('eco_depth=2'), 'Shared depth lost');
+  c.run('E.hyp=false');
+  expect(c.run('ecoFiltered().length')===1, 'Hypothesis visible while disabled');
+  c.run('E.focus="";E.q="MiFibra";E.kind="deployment"');
+  expect(c.run('ecoFiltered()[0].id')==='mifibra-zte-deployment', 'Search or evidence filter failed');
+  c.run('E.q="missing-component";renderEcosystem()');
+  expect(c.element('#ecoEmpty').hidden===false, 'Empty results missing');
+  c.sandbox.location.hash='#tab=ecosystem&eco_node=__proto__&eco_edge=missing&eco_depth=999&eco_kind=invalid';
+  c.run('urlRead()');
+  expect(c.run('E.node===""&&E.edge===""&&E.depth===1&&E.kind==="all"'), 'Invalid graph route accepted');
+  return 'Valid filters and share state; invalid IDs rejected';
+});
+test('ecosystem-localization', 'All graph cards render in four languages with dated map counts', () => {
+  const c=context();
+  for(const lang of ['en','ru','es','zh']) {
+    c.run(`LANG=${JSON.stringify(lang)};E.view="evidence";E.node="genieacs";E.edge="";renderEcosystem()`);
+    const text=c.element('#ecoDetail').innerHTML;
+    expect(text.includes(data.lines['genieacs-admin-ui'].taken), 'Snapshot date missing');
+    expect(text.includes('data-eco-map="genieacs-admin-ui"'), 'Map link missing');
+    for(const edge of data.ecosystem.edges) {
+      c.run(`E.node="";E.edge=${JSON.stringify(edge.id)};E.hyp=true;renderEcosystem()`);
+      const html=c.element('#ecoDetail').innerHTML;
+      expect(html.includes(edge.reviewed), 'Evidence review date missing');
+      expect(!/eco_[a-z_]+/.test(html.replace(/data-eco-[a-z]+/g,'')), 'Untranslated graph key');
+      if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(html), `Russian fallback in ${lang}/${edge.id}`);
+    }
+  }
+  return 'Node and edge cards translated; counts use the selected snapshot';
+});
+test('network-combinations', 'Country-scoped operator aliases preserve many-to-many observations', () => {
+  const c=context();
+  c.run('DS.country="IT";DS.operator="o:windtre"');
+  const rows=c.run('dFiltered()');
+  expect(rows.length>=5, 'WindTre combinations collapsed');
+  expect(rows.find(r=>r.line==='tr069-http-server').count===167081,'WindTre source count changed');
+  c.run('DS.country="AU";DS.operator="o:tpg"');
+  const tpg=c.run('dFiltered().find(r=>r.line==="tr069-http-server")');
+  expect(tpg.count===388086&&tpg.raws.length===2,'TPG aliases did not retain exact source members');
+  c.run('DS.group=true;DS.operator="g:tpg-telecom"');
+  const grouped=c.run('dFiltered().find(r=>r.line==="tr069-http-server")');
+  expect(grouped.count===590750&&grouped.raws.length===3,'TPG group failed');
+  c.run('DS.operator="";DS.q="iiNet"');
+  expect(c.run('dFiltered().find(r=>r.line==="tr069-http-server").count')===590750,'Search matched a partial group');
+  const idx=c.run('buildDeploymentIndex({"x--GB":{orgs:[{value:"IP pools",count:2}]},"x--IT":{orgs:[{value:"IP pools",count:3}]}},{x:{}},DATA.operatorCatalog)');
+  expect(idx.observations[0].operator!==idx.observations[1].operator,'Countries merged');
+  expect(idx.entities[idx.observations[0].operator].kind==='raw','Generic pool inferred as BT');
+  return 'WindTre branches, exact aliases, group membership and country boundaries verified';
+});
+test('network-roles-evidence', 'Service roles and ACS evidence retain their original scope', () => {
+  const c=context();
+  expect(c.run('dFiltered().every(r=>DATA.lines[r.line].service==="cpe")'),'Default includes ACS');
+  c.run('DS.role="acs"');
+  expect(c.run('dFiltered().length>0&&dFiltered().every(r=>DATA.lines[r.line].service==="acs")'),'ACS filter failed');
+  c.run('DS.role="cpe";DS.country="GB";DS.line="icwmp-iopsys"');
+  const mapped=c.run('dEvidence(dFiltered().find(r=>r.operator==="o:bt"))');
+  expect(mapped.length===1&&mapped[0].kind==='operator','BT observation missing');
+  expect(c.run('dEvidence(dFiltered().find(r=>r.operator==="u:GB:IP pools")).length')===0,'Raw pool inherited BT evidence');
+  c.run('DS.country="US";DS.line="easycwmp-vanilla"');
+  expect(c.run('dFiltered().every(r=>dEvidence(r).length===0)'),'Generic interop assigned to production network');
+  return 'CPE and ACS separated; operator and interop evidence not propagated';
+});
+test('matrix-coverage', 'Matrix distinguishes zero, truncated tail, uncollected and measured cells', () => {
+  const c=context(), full=Object.entries(data.orgdrill).find(([,v])=>v.facet_meta.org.remainder===0),tail=Object.entries(data.orgdrill).find(([,v])=>v.facet_meta.org.remainder>0);
+  for(const [record,expected] of [[full,'zero'],[tail,'tail']]) {
+    const i=record[0].lastIndexOf('--'),line=record[0].slice(0,i),cc=record[0].slice(i+2);
+    expect(c.run(`dCellState(${JSON.stringify(line)},${JSON.stringify(cc)},"nonexistent",[]).kind`)===expected,expected);
+  }
+  expect(c.run('dCellState("uncollected","AU","o:tpg",[]).kind')==='missing','Missing is not zero');
+  c.run('DS.country="AU";DS.operator="o:tpg";DS.view="matrix";renderDeployments()');
+  expect(c.element('#dMatrix').innerHTML.includes('data-d-cell='),'Measured matrix cell absent');
+  return 'All four measurement states verified';
+});
+test('network-map-roundtrip', 'Exact raw organization selections survive map URLs without broadening or double counting', () => {
+  const c=context();
+  c.run('S.lines=new Set(["tr069-http-server"]);S.geo=new Set(["c:AU"]);S.orgs=new Set(["raw:TPG Internet Pty Ltd","raw:TPG Internet Pty Ltd."]);urlWrite(true);S.orgs.clear();urlRead()');
+  expect(c.run('computeSlice().total')===388086,'Exact TPG map total failed');
+  c.run('S.orgs.add(normOrg("TPG Internet Pty Ltd","AU"))');
+  const actual=c.run('computeSlice().total');
+  const expected=data.orgdrill['tr069-http-server--AU'].orgs.reduce((n,o)=>n+(c.run(`S.orgs.has("raw:"+${JSON.stringify(o.value)})||S.orgs.has(normOrg(${JSON.stringify(o.value)},"AU"))`)?o.count:0),0);
+  expect(actual===expected,'Broad and exact labels double-counted');
+  return {exact:388086,withAlias:actual};
+});
+test('network-share-localization', 'Graph and matrix links restore filters, selection and four languages', () => {
+  const c=context({hash:'#tab=ecosystem&eco_view=networks&net_country=IT&net_operator=o%3Awindtre&net_view=matrix'});
+  c.run('urlRead();DS.selected=dFiltered()[0].id;urlWrite();DS.operator="";DS.selected="";urlRead()');
+  expect(c.run('DS.operator==="o:windtre"&&DS.country==="IT"&&DS.view==="matrix"&&Boolean(DS.selected)'),'Shared selection lost');
+  for(const lang of ['en','ru','es','zh']) {
+    c.run(`LANG=${JSON.stringify(lang)};DNcur=new Intl.DisplayNames([LANG],{type:"region"});renderEcosystem()`);
+    const html=c.element('#dDetail').innerHTML;
+    expect(html.includes('WIND TRE S.P.A.')&&html.includes('/org-drill/'),'Source labels or dated evidence absent');
+    expect(!/\bd_[a-z_]+\b/.test(html),'Untranslated deployment key');
+    if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(html),'Russian fallback');
+    c.run('DS.view="graph";renderDeployments();DS.view="matrix"');
+    expect(c.element('#dWorld').innerHTML.includes('data-d-cell='),'Graph edges absent');
+    c.run(`DNcur=new Intl.DisplayNames([${JSON.stringify(lang)}],{type:'region'});renderDeployments()`);
+    expect(c.element('#dWorld').innerHTML.includes(new Intl.DisplayNames([lang],{type:'region'}).of('IT')),'Cached node labels did not change language');
+  }
+  c.sandbox.location.hash='#tab=ecosystem&net_operator=__proto__&net_line=constructor&net_country=XX&net_role=invalid';
+  c.run('urlRead()');
+  expect(c.run('DS.operator===""&&DS.line===""&&DS.country===""&&DS.role==="cpe"'),'Invalid network URL accepted');
+  return 'Shared state, graph, matrix, sources and translations verified';
+});
+test('network-exploration', 'Node expansion keeps the graph context, country scope and exact records', () => {
+  const c=context();
+  c.run('DS.country="AU";const before=dGraphRows(dFiltered());dExpandNode("l:igdauthentication")');
+  expect(c.run('DS.line===""&&DS.operator===""&&DS.country==="AU"'),'Expanding silently applied a filter');
+  expect(c.run('dGraphRows(dFiltered()).some(r=>r.line!=="igdauthentication")'),'Expansion discarded graph context');
+  expect(c.run('dGraphRows(dFiltered()).filter(r=>r.line==="igdauthentication").length>=8'),'Neighbors not expanded');
+  expect(c.run('dGraphRows(dFiltered()).every(r=>r.cc==="AU")'),'Country scope widened');
+  c.run('S.tab="ecosystem";urlWrite();DS.expanded=[];DS.node="";urlRead()');
+  expect(c.run('DS.node==="l:igdauthentication"&&DS.expanded[0][1]===8'),'Shared expansion lost');
+  c.run('dExpandNode("l:igdauthentication",true)');
+  expect(c.run('DS.expanded[0][1]')===16,'More neighbors failed');
+  return 'Expansion reveals real neighbors without replacing filters; URLs preserve it';
+});
+test('network-layout-and-flows', 'Layouts retain measurements, pinned nodes and country-scoped operator identities', () => {
+  const c=context();
+  const output=c.run(`(()=>{
+    DS.country="AU";const rows=dGraphRows(dFiltered()),m=dBuildGraph(rows),p=new Map(),pins=new Set();
+    const first=dForceLayout(m,p,pins),id=first.nodes[0].id;p.set(id,{x:333,y:222});pins.add(id);
+    const next=dForceLayout(m,p,pins),flow=dFlowLayout(m);
+    return {pinned:next.nodes.find(n=>n.id===id),finite:next.nodes.every(n=>Number.isFinite(n.x)&&Number.isFinite(n.y)),
+      counts:flow.edges.filter(e=>e.row).map(e=>e.row.count),expected:rows.map(r=>r.count),geo:flow.edges.filter(e=>e.geo).length,operators:m.nodes.filter(n=>n.kind==="operator").length};
+  })()`);
+  expect(output.pinned.x===333&&output.pinned.y===222&&output.finite,'Force layout moved a pin or produced invalid coordinates');
+  expect(JSON.stringify(output.counts)===JSON.stringify(output.expected),'Flow transformed source counts');
+  expect(output.geo===output.operators,'An operator lost its country in flows');
+  c.sandbox.location.hash='#tab=ecosystem&net_view=flows&net_node=__proto__&net_expand=%5B%5B%22l%3Aconstructor%22%2C999%5D%5D';
+  c.run('urlRead();renderEcosystem()');
+  expect(c.run('DS.view==="flows"&&DS.node===""&&DS.expanded.length===0'),'Unsafe expansion accepted');
+  return 'Stable finite layout; original weights and country-scoped flow edges';
+});
 test('source-links', 'Evidence links resolve from both entry points and reject unsafe paths', () => {
   const c=context();
   for(const [pathname,prefix] of [['/index.html',''],['/atlas/tr-atlas.html','../'],['/project/atlas/tr-atlas.html','../']]) {

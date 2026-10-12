@@ -57,6 +57,8 @@ def read_news():
         date.fromisoformat(item['date'])
         if item['kind'] not in ('atlas', 'research', 'data'):
             raise ValueError('Unknown news category')
+        if item.get('view') not in (None, 'ecosystem'):
+            raise ValueError('Unknown news view')
         if not isinstance(item.get('pinned', False), bool):
             raise ValueError('News pinned flag must be boolean')
         for link in item.get('links', []):
@@ -85,6 +87,8 @@ def validate_sources(data):
     references += [s for items in data['facts'].values() for f in items for s in f.get('sources', [])]
     references += [v['source'] for items in data['variants'].values() for v in items if v.get('source')]
     references += [s for n in data['news'] for s in n['evidence']]
+    references += [s for e in data.get('ecosystem', {}).get('edges', [])
+                   for s in e['sources'] if 'file' in s]
     for source in references:
         name = source.get('file', '')
         path = (ROOT/name).resolve()
@@ -95,6 +99,113 @@ def validate_sources(data):
         if anchor and (not re.fullmatch(r'[a-zA-Z0-9_.-]+', anchor)
                        or f'id="{anchor}"' not in path.read_text(encoding='utf-8')):
             raise ValueError(f'Missing public source anchor: {name}#{anchor}')
+
+
+def read_ecosystem(registry):
+    catalog = read(ROOT/'data/acs-relations.json')
+    operator_ids = {op['id'] for op in read_operators()['operators']}
+    if catalog.get('schema_version') != 1:
+        raise ValueError('Unknown ecosystem schema')
+    date.fromisoformat(catalog['reviewed'])
+    def localized(value):
+        return (isinstance(value, dict) and all(isinstance(value.get(lang), str)
+                and value[lang].strip() for lang in ('en', 'ru', 'es', 'zh')))
+    def identifiers(items):
+        ids = [item['id'] for item in items]
+        if len(set(ids)) != len(ids) or any(not re.fullmatch('[a-z0-9-]+', i) for i in ids):
+            raise ValueError('Invalid or duplicate ecosystem ID')
+        return set(ids)
+    nodes = identifiers(catalog['nodes'])
+    identifiers(catalog['edges'])
+    for node in catalog['nodes']:
+        if set(node) - {'id', 'kind', 'name', 'description', 'line', 'operator'}:
+            raise ValueError('Unknown ecosystem node fields')
+        if node.get('operator') and (node['kind'] != 'operator' or node['operator'] not in operator_ids):
+            raise ValueError('Invalid ecosystem operator reference')
+        if node['kind'] not in ('cpe', 'operator', 'acs', 'endpoint'):
+            raise ValueError('Unknown ecosystem node kind')
+        if not localized(node['description']) or not (localized(node['name']) or
+                isinstance(node['name'], str) and node['name'].strip()):
+            raise ValueError('Missing ecosystem translation')
+        if 'line' in node and (node['line'] not in registry or
+                registry[node['line']]['service'] != node['kind']):
+            raise ValueError('Invalid ecosystem registry role')
+    for edge in catalog['edges']:
+        if set(edge) - {'id', 'source', 'target', 'kind', 'status', 'reviewed', 'observed', 'summary', 'sources', 'map', 'scope'}:
+            raise ValueError('Unknown ecosystem edge fields')
+        if edge['source'] not in nodes or edge['target'] not in nodes or edge['source'] == edge['target']:
+            raise ValueError('Dangling or self-referencing ecosystem edge')
+        if edge['kind'] not in ('interop', 'architecture', 'deployment', 'configuration', 'operator', 'attribution'):
+            raise ValueError('Unknown ecosystem relationship kind')
+        if edge['status'] not in ('documented', 'observed', 'reported', 'hypothesis'):
+            raise ValueError('Unknown ecosystem evidence status')
+        if not localized(edge['summary']):
+            raise ValueError('Missing ecosystem translation')
+        for field in ('observed', 'reviewed'):
+            date.fromisoformat(edge[field])
+        if edge['observed'] > edge['reviewed']:
+            raise ValueError('Ecosystem evidence postdates review')
+        if not edge['sources']:
+            raise ValueError('Missing ecosystem sources')
+        for source in edge['sources']:
+            if ('file' in source) == ('url' in source) or set(source) - {'file', 'anchor', 'url', 'title'}:
+                raise ValueError('Invalid ecosystem source')
+            if 'file' in source:
+                path = Path(source['file'])
+                if (path.suffix not in ('.md', '.json') or any(part.startswith('.') or
+                        part in ('private', 'research-private', 'firmware-extracts', 'probes') for part in path.parts)):
+                    raise ValueError('Non-public ecosystem source')
+            else:
+                raw = source['url']
+                url = urlsplit(raw)
+                if (url.scheme != 'https' or not url.hostname or url.username or url.password or
+                        any(c.isspace() or ord(c) < 32 for c in raw) or not source.get('title', '').strip()):
+                    raise ValueError('Invalid ecosystem URL')
+        scope = edge.get('map')
+        if scope:
+            linked = {n.get('line') for n in catalog['nodes'] if n['id'] in (edge['source'], edge['target'])}
+            if (set(scope) != {'line', 'country'} or scope['line'] not in linked or
+                    scope['line'] not in registry or not re.fullmatch('[A-Z]{2}', scope['country'])):
+                raise ValueError('Invalid ecosystem map scope')
+        scope = edge.get('scope')
+        if scope and (set(scope) != {'line', 'country', 'operator'} or scope['line'] not in registry
+                      or not re.fullmatch('[A-Z]{2}', scope['country']) or scope['operator'] not in operator_ids):
+            raise ValueError('Invalid ecosystem deployment scope')
+    return catalog
+
+
+def read_operators():
+    catalog = read(ROOT/'data/operator-catalog.json')
+    if catalog.get('schema_version') != 1:
+        raise ValueError('Unknown operator catalog schema')
+    date.fromisoformat(catalog['reviewed'])
+    ids, aliases = set(), set()
+    groups = {group['id'] for group in catalog['groups']}
+    if len(groups) != len(catalog['groups']):
+        raise ValueError('Duplicate operator group')
+    for group in catalog['groups']:
+        if not re.fullmatch('[a-z0-9-]+', group['id']) or not group['name'].strip():
+            raise ValueError('Invalid operator group')
+        source = group['source']
+        url = urlsplit(source['url'])
+        if (url.scheme != 'https' or not url.hostname or url.username or url.password or
+                any(c.isspace() or ord(c) < 32 for c in source['url']) or not source['title'].strip()):
+            raise ValueError('Invalid operator group source')
+    for operator in catalog['operators']:
+        if (not re.fullmatch('[a-z0-9-]+', operator['id']) or operator['id'] in ids or
+                not operator['name'].strip() or not re.fullmatch('[A-Z]{2}', operator['country'])):
+            raise ValueError('Invalid or duplicate operator ID')
+        ids.add(operator['id'])
+        if operator.get('group') and operator['group'] not in groups:
+            raise ValueError('Unknown operator group')
+        if not operator['aliases']:
+            raise ValueError('Missing operator aliases')
+        for alias in operator['aliases']:
+            key = (operator['country'], alias.strip().lower())
+            if not alias.strip() or key in aliases:
+                raise ValueError('Ambiguous operator alias')
+            aliases.add(key)
+    return catalog
 
 def read_variants(snapshot, manifest, lines):
     records = {}
@@ -191,6 +302,8 @@ def build(snapshot, output_root=ROOT):
         'geo': read(ROOT/'data/world.geojson'), 'facts': facts,
         'translations': read(ROOT/'data/content-i18n.json'),
         'news': read_news(),
+        'ecosystem': read_ecosystem(registry),
+        'operatorCatalog': read_operators(),
     }
     validate_translations(data)
     validate_sources(data)

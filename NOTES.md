@@ -200,3 +200,20 @@ The completed snapshot-20261010-102121 contains 52 lines, 2,457 operator pairs a
 ## Additional bounded negative: SOAP namespace prefix
 
 The inspected gSOAP 2.7 and 2.8 laboratory responses used the same SOAP-ENV prefix. This did not validate a version discriminator; vendor or client variation cannot be inferred from that check alone.
+
+<a id="section-9.31"></a>
+## 9.31. Second-image evidence for the ZTE and Huawei lines — October 12
+
+Inspection of a ZTE F670L image pair (two firmware generations) found the
+`cpe@zte.com` connection-request realm and a default listener port of 58000
+in both generations. This extends the implementation evidence for the ZTE
+line beyond the previously inspected H108N image to a newer GPON platform;
+it does not attribute every indexed match to that platform. Operator NAT can
+hide connection-request listeners from public indexing; the visible line
+cannot measure the total deployment of this generation.
+
+A Huawei HG8145V5 image independently confirms a connection-request listener
+default of port 30005 and a nonce path reading from the operating-system
+random device, consistent with the observed response uniqueness
+(see [DEANON-HUAWEI-CR.md](DEANON-HUAWEI-CR.md)). Security evaluation of
+these images is not part of the public release.

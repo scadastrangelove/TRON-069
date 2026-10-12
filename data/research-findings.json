@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-10-10",
+  "reviewed": "2026-10-12",
   "edition": "public",
   "findings": [
     {
@@ -499,12 +499,121 @@
         "findings",
         "sources"
       ]
+    },
+    {
+      "id": "cpe-acs-relationships",
+      "status": "included-qualified",
+      "lines": [
+        "easycwmp-vanilla",
+        "genieacs-admin-ui",
+        "rdk-b-ccsptr069pa",
+        "icwmp-iopsys",
+        "gateway-realm"
+      ],
+      "source": "ACS-INTEGRATION-EVIDENCE.md",
+      "news_id": "cpe-acs-relationships",
+      "summary": "CPE–ACS connections now have their own graph",
+      "atlas": [
+        "ecosystem",
+        "news",
+        "sources"
+      ]
+    },
+    {
+      "id": "acs-firmware-evidence",
+      "status": "included-qualified",
+      "lines": [],
+      "source": "ACS-URL-MINING.md",
+      "news_id": "acs-firmware-evidence",
+      "summary": "ACS addresses from firmware: configuration evidence",
+      "atlas": [
+        "ecosystem",
+        "news",
+        "sources"
+      ]
+    },
+    {
+      "id": "bad-cpe-model",
+      "status": "included-qualified",
+      "lines": [],
+      "source": "ACS-LANDSCAPE.md",
+      "news_id": "bad-cpe-model",
+      "summary": "Bad CPE: the managed device as an attack source",
+      "atlas": [
+        "ecosystem",
+        "news",
+        "sources"
+      ]
+    },
+    {
+      "id": "observed-network-combinations",
+      "status": "included-qualified",
+      "lines": [],
+      "source": "DEPLOYMENTS.md",
+      "news_id": "observed-network-combinations",
+      "summary": "Joint country–organization–signature observations, exact operator aliases, source coverage and scoped evidence.",
+      "atlas": [
+        "ecosystem",
+        "news",
+        "sources"
+      ]
+    },
+    {
+      "id": "zte-huawei-second-image",
+      "status": "included-qualified",
+      "lines": [
+        "zte",
+        "cpe-server-1-0",
+        "huaweihomegateway",
+        "huaweihomegateway-cr-slice"
+      ],
+      "source": "NOTES.md",
+      "news_id": "zte-huawei-second-image",
+      "summary": "F670L realm/port corroboration and HG8145V5 port/randomness evidence, scoped to inspected images.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    },
+    {
+      "id": "openagent-subfamily-fingerprints",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client",
+        "digauth",
+        "fake-apache-openagent"
+      ],
+      "source": "DEANON-TR069CLIENT.md",
+      "news_id": "openagent-subfamily-fingerprints",
+      "summary": "Confirmed component lineage and observed sub-family markers, without a duplicate population count.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    },
+    {
+      "id": "usp-transport-fingerprints",
+      "status": "included-qualified",
+      "lines": [],
+      "source": "DEANON-OBUSPA.md",
+      "news_id": "usp-transport-fingerprints",
+      "summary": "USP transport recognition with implementation attribution unresolved; no counted line.",
+      "atlas": [
+        "news",
+        "sources"
+      ]
     }
   ],
   "line_sources": {
     "cpe-server-1-0": [
       {
         "file": "NOTES.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.31"
       },
       {
         "file": "TR-PARK-REGISTRY.md",
@@ -531,6 +640,10 @@
         "file": "DEANON-HUAWEI-CR.md"
       },
       {
+        "file": "NOTES.md",
+        "anchor": "section-9.31"
+      },
+      {
         "file": "TR-PARK-REGISTRY.md",
         "anchor": "huaweihomegateway"
       },
@@ -541,6 +654,10 @@
     "huaweihomegateway-cr-slice": [
       {
         "file": "DEANON-HUAWEI-CR.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.31"
       },
       {
         "file": "TR-PARK-REGISTRY.md",
@@ -680,6 +797,10 @@
     "zte": [
       {
         "file": "NOTES.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.31"
       },
       {
         "file": "TR-PARK-REGISTRY.md",

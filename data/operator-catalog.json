@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "reviewed": "2026-10-11",
+  "operators": [
+    {
+      "id": "tpg",
+      "name": "TPG",
+      "country": "AU",
+      "aliases": [
+        "TPG Internet Pty Ltd",
+        "TPG Internet Pty Ltd."
+      ],
+      "group": "tpg-telecom"
+    },
+    {
+      "id": "iinet",
+      "name": "iiNet",
+      "country": "AU",
+      "aliases": [
+        "iiNet Limited"
+      ],
+      "group": "tpg-telecom"
+    },
+    {
+      "id": "windtre",
+      "name": "WindTre",
+      "country": "IT",
+      "aliases": [
+        "WIND TRE S.P.A."
+      ]
+    },
+    {
+      "id": "tim",
+      "name": "TIM / Telecom Italia",
+      "country": "IT",
+      "aliases": [
+        "Telecom Italia S.p.A.",
+        "Telecom Italia S.p.A",
+        "Telecom Italia S.p.A. TIN EASY LITE",
+        "Telecom Italia Spa FTTx",
+        "TIM SB FTTX"
+      ]
+    },
+    {
+      "id": "bt",
+      "name": "BT",
+      "country": "GB",
+      "aliases": [
+        "BT Infrastructure Layer",
+        "BT-Central-Plus",
+        "BT CENTRAL PLUS",
+        "BT Group Broadband",
+        "British Telecommunications Limited",
+        "British Telecommunications plc",
+        "BT Retail",
+        "BT-ADSL",
+        "BT-ADSL-LNS",
+        "BT-OPENWORLD",
+        "BT-OW"
+      ]
+    },
+    {
+      "id": "charter",
+      "name": "Charter / Spectrum",
+      "country": "US",
+      "aliases": [
+        "Charter Communications Inc",
+        "Charter Communications Inc.",
+        "Charter Communications, Inc.",
+        "Charter Communications LLC",
+        "Charter Communications"
+      ]
+    },
+    {
+      "id": "fidium",
+      "name": "Fidium",
+      "country": "US",
+      "aliases": [
+        "Fidium"
+      ]
+    },
+    {
+      "id": "google-fiber",
+      "name": "Google Fiber",
+      "country": "US",
+      "aliases": [
+        "Google Fiber Inc."
+      ]
+    },
+    {
+      "id": "consolidated",
+      "name": "Consolidated Communications",
+      "country": "US",
+      "aliases": [
+        "Consolidated Communications, Inc."
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "tpg-telecom",
+      "name": "TPG Telecom",
+      "source": {
+        "url": "https://www.tpgtelecom.com.au/about-us/our-brands",
+        "title": "TPG Telecom · Our brands"
+      }
+    }
+  ],
+  "matching": "Country-scoped, case-insensitive exact aliases. Unmatched labels remain raw Shodan organizations."
+}

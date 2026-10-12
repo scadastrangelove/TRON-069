@@ -68,6 +68,12 @@ including 63 groups collected in the same second. No tested repetition pattern
 was found. This is a sample-limited negative, not proof of cryptographic security.
 Detailed security evaluation is outside the public atlas release.
 
+Firmware inspection of one HG8145V5 image (October 2026) independently supports
+two of the observed traits: the connection-request listener is configured on
+port 30005 in the shipped configuration, and the nonce path draws from the
+operating-system random device. This is implementation evidence for the
+platform family, not for every indexed match.
+
 Uniform responses do not distinguish HG8245, HG8247, HG8310 or EchoLife models.
 The atlas records ports, authentication modes and operator facets without claiming
 that model-level decomposition has been achieved.
