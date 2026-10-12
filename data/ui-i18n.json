@@ -205,7 +205,12 @@
     "overview_scope": "Весь мир · до фильтров карты",
     "overview_park": "Все совпадения на порту 7547",
     "overview_signatures": "Основные сигнатуры · порты по запросам",
-    "slice_matches": "Совпадения сигнатур в срезе"
+    "slice_matches": "Совпадения сигнатур в срезе",
+    "snapshot_choose": "Выбрать дату сбора (UTC)",
+    "snapshot_loading": "Загружаем снапшот…",
+    "snapshot_load_error": "Не удалось загрузить снапшот. Показаны данные на дату в шапке. Выберите дату ещё раз, чтобы повторить загрузку.",
+    "snapshot_unknown": "Этот снапшот недоступен. Сохранена отображаемая дата.",
+    "snapshot_missing": "Выбранная сигнатура на эту дату ещё не собиралась. Фильтры сохранены; её счётчики недоступны."
   },
   "en": {
     "open_panel": "Open inspector",
@@ -413,7 +418,12 @@
     "overview_scope": "Worldwide · before map filters",
     "overview_park": "All matches on port 7547",
     "overview_signatures": "Core signature matches · query port scopes",
-    "slice_matches": "Signature matches in this selection"
+    "slice_matches": "Signature matches in this selection",
+    "snapshot_choose": "Choose snapshot date (UTC)",
+    "snapshot_loading": "Loading snapshot…",
+    "snapshot_load_error": "Could not load that snapshot. Showing the date in the header. Choose the date again to retry.",
+    "snapshot_unknown": "This snapshot is unavailable. The displayed date has been kept.",
+    "snapshot_missing": "The selected signature was not collected on this date. Filters are kept; its counts are unavailable."
   },
   "es": {
     "open_panel": "Abrir inspector",
@@ -621,7 +631,12 @@
     "overview_scope": "Todo el mundo · antes de filtrar el mapa",
     "overview_park": "Todas las coincidencias en el puerto 7547",
     "overview_signatures": "Firmas principales · puertos de cada consulta",
-    "slice_matches": "Coincidencias de firmas en esta selección"
+    "slice_matches": "Coincidencias de firmas en esta selección",
+    "snapshot_choose": "Elegir fecha de recopilación (UTC)",
+    "snapshot_loading": "Cargando captura…",
+    "snapshot_load_error": "No se pudo cargar la captura. Se muestran los datos de la fecha indicada arriba. Vuelva a elegir la fecha para reintentar.",
+    "snapshot_unknown": "Esta captura no está disponible. Se conserva la fecha mostrada.",
+    "snapshot_missing": "La firma seleccionada no se recopiló en esta fecha. Se conservan los filtros; sus recuentos no están disponibles."
   },
   "zh": {
     "open_panel": "打开详情面板",
@@ -829,6 +844,11 @@
     "overview_scope": "全球 · 地图筛选前",
     "overview_park": "端口 7547 的全部匹配",
     "overview_signatures": "主要指纹匹配 · 各查询的端口范围",
-    "slice_matches": "当前筛选中的指纹匹配"
+    "slice_matches": "当前筛选中的指纹匹配",
+    "snapshot_choose": "选择采集日期（UTC）",
+    "snapshot_loading": "正在加载快照…",
+    "snapshot_load_error": "无法加载该快照。显示的是页首日期对应的数据。请重新选择日期以重试。",
+    "snapshot_unknown": "该快照不可用。保留当前显示的日期。",
+    "snapshot_missing": "所选指纹在此日期尚未采集。筛选条件已保留，其计数不可用。"
   }
 }

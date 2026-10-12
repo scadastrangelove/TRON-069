@@ -85,13 +85,26 @@ python3 tests/test_collect_map.py
 python3 tests/test_sync_facts.py
 node tests/atlas-audit.mjs index.html
 node tests/atlas-audit.mjs atlas/tr-atlas.html
-node --test tests/map-gestures.mjs tests/network-gestures.mjs
+node --test tests/map-gestures.mjs tests/network-gestures.mjs tests/snapshot-navigation.mjs
 python3 tools/audit-publication.py
 ```
 
 The builder selects the latest completed, error-free snapshot. To build another
 date, pass its directory; use `--output-dir DIR` for an isolated output.
 Edit `atlas/map-template.html`, then rebuild both entry points.
+
+Use the date selector in the atlas header to open a completed collection. Dates
+include UTC time because a day can contain several runs. The URL keeps the chosen
+snapshot, language, map filters and network view; browser Back restores the
+previous selection. Signatures absent from an older collection remain selectable
+with unavailable counts rather than falling back to the whole map.
+
+The build also generates compact measurement files in `atlas/snapshots/`. Publish
+that directory alongside the HTML files. Historical dates load these files from
+the same site; the embedded snapshot still opens offline. News, attribution and
+the documented ACS relationships use the current editorial catalog, with their
+own evidence dates. Switching snapshots changes measured counts and operator
+observations, not the revision of those documents.
 
 ## Collect fresh aggregates
 

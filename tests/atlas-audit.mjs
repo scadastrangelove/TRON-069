@@ -41,7 +41,7 @@ function fn(name) {
   if (end < 0) throw new Error(`Missing function end: ${name}`);
   return lines.slice(start, end + 1).join('\n');
 }
-function context({ hash = '', storageBlocked = false, storedLanguage = null } = {}) {
+function context({ hash = '', storageBlocked = false, storedLanguage = null, payload = data } = {}) {
   const elements = new Map();
   const element = selector => {
     if (!elements.has(selector)) elements.set(selector, {
@@ -57,8 +57,8 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
     return elements.get(selector);
   };
   const sandbox = {
-    DATA: data, URLSearchParams, Intl, Blob, console,
-    location: { hash }, navigator: { language: 'en' },
+    DATA: structuredClone(payload), URLSearchParams, Intl, Blob, console,
+    location: { hash, reload() { sandbox.reloaded=true; } }, navigator: { language: 'en' },
     localStorage: {
       getItem() { if (storageBlocked) throw new Error('SecurityError: storage unavailable'); return storedLanguage; },
       setItem() { if (storageBlocked) throw new Error('SecurityError: storage unavailable'); }
@@ -72,7 +72,10 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
   vm.createContext(sandbox);
   const chunks = [
     section('const I18N =', 'function REG_NAME'),
+    section('/* SNAPSHOT LOADER */', '/* SNAPSHOT LOADER END */'),
+    'addUncollectedLines();',
     section('const $ =', '/* URL */'),
+    fn('snapshotLabel'), fn('renderSnapshotPicker'), fn('chooseSnapshot'),
     fn('REG_NAME'), fn('urlRead'), fn('urlWrite'), fn('geoPass'), fn('orgPass'), fn('computeSlice'),
     'let SLICE, SLICE_FULL, GEOT; const selCountries=()=>[...S.geo].filter(t=>t.startsWith("c:")).map(t=>t.slice(2));',
     'const insp=$("#inspector"),kkL=$("#kkList"); let kkItems=[],kkSel=0,toastT=null;',
@@ -93,6 +96,33 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
 }
 
 test('syntax', 'Application JavaScript parses', () => { new vm.Script(source); return 'Parsed'; });
+test('snapshot-filter-roundtrip', 'Date selection preserves map, language, registry and network filters in the URL', () => {
+  const hash='#'+new URLSearchParams({lang:'es',lines:'tr069-http-server',geo:'c:AU',mode:'countries',tab:'ecosystem',eco_view:'networks',net_view:'matrix',net_country:'AU',net_line:'tr069-http-server',net_operator:'o:tpg',net_group:'1',net_q:'TPG',reg_q:'Huawei',reg_service:'cpe',cc_q:'Australia'})+'&org='+encodeURIComponent('raw:TPG Internet Pty Ltd.')+'&org='+encodeURIComponent('raw:TPG Internet Pty Ltd');
+  const c=context({hash});c.run('urlRead();urlWrite()');
+  const before=new URLSearchParams(c.sandbox.location.hash.slice(1));
+  c.run('chooseSnapshot("20261010-102121")');
+  const after=new URLSearchParams(c.sandbox.location.hash.slice(1));
+  expect(c.sandbox.reloaded&&after.get('snapshot')==='20261010-102121','Date selection did not navigate');
+  for(const [key] of before)if(key!=='snapshot')expect(JSON.stringify(before.getAll(key))===JSON.stringify(after.getAll(key)),`Lost ${key}`);
+  const old=JSON.parse(fs.readFileSync(path.join(root,'atlas/snapshots/20261010-102121.json'),'utf8'));
+  const restored=context({hash:c.sandbox.location.hash,payload:{...data,...old}});
+  restored.run('urlRead();refreshTest();renderOverview();renderSnapshotPicker();urlWrite()');
+  expect(restored.run('S.lines.has("tr069-http-server")&&S.geo.has("c:AU")&&S.orgs.size===2&&LANG==="es"&&DS.operator==="o:tpg"&&DS.view==="matrix"'),'Filters changed after historical data was loaded');
+  expect(restored.element('#overviewPark').title===new Intl.NumberFormat('es').format(old.denominators.park.total),'Current measurements leaked into history');
+  return 'Snapshot URL, repeated organization parameters, language and both views survive';
+});
+test('historical-uncollected-line', 'New signatures remain selected on old dates without importing current counts', () => {
+  const old=JSON.parse(fs.readFileSync(path.join(root,'atlas/snapshots/20261008-1651.json'),'utf8'));
+  expect(!old.lines['freeacs'],'Fixture unexpectedly collected FreeACS');
+  const c=context({hash:'#lang=en&lines=freeacs&geo=c:IT&org=raw%3ABlue+Stream',payload:{...data,...old}});
+  c.run('urlRead();refreshTest();renderSnapshotPicker();renderLegend();renderInspector();urlWrite()');
+  expect(c.run('S.lines.has("freeacs")&&S.geo.has("c:IT")&&S.orgs.size===1'),'Unavailable filter discarded');
+  expect(c.run('DATA.lines["freeacs"].total===null&&!DISJOINT.includes("freeacs")'),'Missing line gained a current count');
+  expect(c.element('#sliceSum').textContent==='—'&&!c.element('#snapshotStatus').hidden,'Missing data shown as zero');
+  expect(c.element('#snapshotStatus').textContent.includes('not collected'),'Missing collection note');
+  expect(!c.element('#inspector').innerHTML.includes('undefined'),'Invalid historical inspector');
+  return 'Filter kept, unavailable counts marked, absent line excluded from the core';
+});
 test('overview-count-scopes', 'Worldwide port and signature counts remain distinct from a filtered map selection', () => {
   const c=context();
   const coreTotal=Object.entries(data.lines).filter(([slug])=>!data.excluded.includes(slug)).reduce((sum,[,line])=>sum+line.total,0);
@@ -421,9 +451,11 @@ test('json-export', 'JSON export creates a nonempty downloadable blob', () => {
   const c=context();c.run('S.lines.add("cpe-server-1-0");S.geo.add("c:IT");refreshTest();exportJSON();');
   return expect(c.sandbox.download.name==='tron-069-slice.json'&&c.sandbox.download.blob.size>0,'JSON blob generated');
 });
-test('no-runtime-fetch', 'HTML has no external runtime scripts or automatic network requests', () => {
-  const external=/<script\b[^>]*\bsrc=|\bfetch\s*\(|new\s+(?:XMLHttpRequest|WebSocket)\s*\(/.test(html);
-  return expect(!external,'No external scripts, fetch, XHR, or WebSocket');
+test('snapshot-only-fetch', 'Only the selected same-origin archive can be fetched at runtime', () => {
+  const external=/<script\b[^>]*\bsrc=|new\s+(?:XMLHttpRequest|WebSocket)\s*\(/.test(html);
+  expect(!external,'No external scripts, XHR or WebSocket');
+  expect((source.match(/\bfetch\s*\(/g)||[]).length===1&&source.includes('fetch(snapshotURL(id)'), 'Unexpected fetch outside snapshot loader');
+  return 'One allowlisted snapshot request; the embedded date needs no network';
 });
 
 test('all-locales-content', 'All line inspectors, registry, observations and methodology render without Russian fallback in EN/ES/ZH', () => {

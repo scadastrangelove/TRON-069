@@ -48,6 +48,9 @@ nav.tabs{display:flex;gap:4px;height:100%}
 .nav .cnt{font-size:10px;background:var(--accent-soft);color:#7d68d8;padding:2px 7px;border-radius:20px;font-weight:640}
 .topright{margin-left:auto;display:flex;align-items:center;gap:12px}
 .snapshot{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:22px;padding:7px 13px;font:10.5px ui-monospace,monospace;color:var(--muted);letter-spacing:.6px}
+.snapshot select{max-width:100%;min-width:0;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;cursor:pointer;padding:0 2px;outline-offset:5px}
+.snapshot:focus-within{border-color:var(--accent)}
+.snapshot-status{margin:12px 28px;padding:12px 16px;border:1px solid var(--accent-line);border-radius:12px;background:var(--accent-soft);color:var(--ink);font-size:12px;line-height:1.5}
 .snapshot i{width:6px;height:6px;border-radius:50%;background:#3fae96;box-shadow:0 0 0 3px #3fae9622}
 .kbtn{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 11px;font-size:12px;color:var(--muted)}
 .kbtn:hover{border-color:var(--accent-line);color:var(--accent);background:var(--accent-soft)}
@@ -514,7 +517,7 @@ dialog b{color:var(--ink)}
   <button class="nav" data-tab="news" data-i18n="news_title">Новости проекта</button>
  </nav>
  <div class="topright">
-  <span class="snapshot"><i></i> <span id="snapLabel"></span></span>
+  <label class="snapshot"><i aria-hidden="true"></i><select id="snapshotSelect" data-i18n-aria="snapshot_choose" data-i18n-title="snapshot_choose"></select></label>
   <button class="kbtn" id="kkOpen" data-i18n-title="search" title="Быстрый поиск"><span data-i18n="search">Поиск</span><kbd>⌘K</kbd></button>
  <span class="langbar" role="group" aria-label="Language" data-i18n-aria="language">
   <button class="langbtn" data-lang="en">EN</button><button class="langbtn" data-lang="zh">中文</button><button class="langbtn" data-lang="es">ES</button><button class="langbtn" data-lang="ru">RU</button>
@@ -522,6 +525,7 @@ dialog b{color:var(--ink)}
   <button class="iconbtn" id="aboutBtn" data-i18n-title="about_t" title="О данных и методике">ⓘ</button>
  </div>
 </header>
+<div id="snapshotStatus" class="snapshot-status" role="status" hidden></div>
 <main>
 <section class="intro" id="atlasIntro">
  <div>
@@ -732,6 +736,7 @@ dialog b{color:var(--ink)}
 <div class="toast" id="toast" hidden></div>
 
 <script>
+(async function(){
 /* ══ i18n ══ */
 const I18N = {
 en: {
@@ -1029,6 +1034,44 @@ document.title = "TRON-069 by SCADA StrangeLove — " + t("title_def");
 "use strict";
 /* ════════ TRON-069 v3 — клик = выбор ════════ */
 const DATA = /*__DATA__*/{};
+/* SNAPSHOT LOADER */
+const INITIAL_SNAPSHOT=DATA.snapshot;
+const SNAPSHOT_INDEX=DATA.history||{snapshots:[{id:DATA.snapshot}],latest:DATA.snapshot,lines:{},countries:[],orgs:{}};
+const SNAPSHOT_FIELDS=['snapshot','park','http','denominators','ident','lines','excluded','orgdrill','variants','collection','stickers','facts'];
+let snapshotError='';
+function snapshotTarget(){
+ return new URLSearchParams(location.hash.slice(1)).get('snapshot')||INITIAL_SNAPSHOT;
+}
+function snapshotURL(id){
+ const prefix=/\/tr-atlas\.html$/.test(location.pathname)?'snapshots/':'atlas/snapshots/';
+ return new URL(prefix+id+'.json',location.href).href;
+}
+async function loadSnapshot(id){
+ if(!SNAPSHOT_INDEX.snapshots.some(item=>item.id===id)){snapshotError='snapshot_unknown';return false;}
+ if(id===DATA.snapshot)return true;
+ const status=document.querySelector('#snapshotStatus');
+ status.hidden=false;status.textContent=t('snapshot_loading');
+ try{
+  const response=await fetch(snapshotURL(id),{signal:AbortSignal.timeout(20000)});
+  if(!response.ok)throw new Error('Snapshot HTTP '+response.status);
+  const next=await response.json();
+  if(next.snapshot!==id||SNAPSHOT_FIELDS.some(key=>!Object.hasOwn(next,key))||
+     !Object.keys(next.lines).length||Object.values(next.lines).some(line=>line.collection_status!=='ok')||
+     ['park','http'].some(key=>next.denominators[key]?.collection_status!=='ok'))throw new Error('Invalid snapshot');
+  for(const key of SNAPSHOT_FIELDS)DATA[key]=next[key];
+  snapshotError='';return true;
+ }catch(error){snapshotError='snapshot_load_error';return false;}
+ finally{status.hidden=true;}
+}
+function addUncollectedLines(){
+ // Retain filters for signatures introduced after the chosen collection.
+ // No measurements from another date are copied into the historical payload.
+ for(const [slug,line] of Object.entries(SNAPSHOT_INDEX.lines))if(!Object.hasOwn(DATA.lines,slug))
+  DATA.lines[slug]={...line,total:null,countries:{},ports:[],taken:null,unknown_country:null,collection_status:'not_collected'};
+}
+/* SNAPSHOT LOADER END */
+await loadSnapshot(snapshotTarget());
+addUncollectedLines();
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -1062,11 +1105,11 @@ function normOrg(o,cc){
  return o;
 }
 const EXCL = new Set(DATA.excluded);
-const DISJOINT = sortedSlugs.filter(s=>!EXCL.has(s));
+const DISJOINT = sortedSlugs.filter(s=>!EXCL.has(s)&&DATA.lines[s].collection_status==="ok");
 
-const ALL_CCS = new Set([...Object.keys(DATA.park),...Object.values(DATA.lines).flatMap(l=>Object.keys(l.countries))]);
-const RAW_ORG_NAMES=new Set(Object.values(DATA.orgdrill).flatMap(cell=>cell.orgs.map(o=>o.value)));
-const ORG_NAMES = new Set(Object.entries(DATA.orgdrill).flatMap(([key,cell])=>cell.orgs.map(o=>normOrg(o.value,key.split("--")[1]))));
+const ALL_CCS = new Set([...(DATA.history?.countries||[]),...Object.keys(DATA.park),...Object.values(DATA.lines).flatMap(l=>Object.keys(l.countries))]);
+const RAW_ORG_NAMES=new Set([...Object.values(DATA.history?.orgs||{}).flat(),...Object.values(DATA.orgdrill).flatMap(cell=>cell.orgs.map(o=>o.value))]);
+const ORG_NAMES = new Set([...Object.entries(DATA.history?.orgs||{}).flatMap(([cc,names])=>names.map(name=>normOrg(name,cc))),...Object.entries(DATA.orgdrill).flatMap(([key,cell])=>cell.orgs.map(o=>normOrg(o.value,key.split("--")[1])))]);
 function loc(value){ if(typeof value==="string"&&value.startsWith("raw:")&&RAW_ORG_NAMES.has(value.slice(4)))value=value.slice(4);return DATA.translations[value]?.[LANG]??value; }
 function orgCounts(cell,cc){
  const out=new Map();
@@ -1088,12 +1131,19 @@ const ECO=DATA.ecosystem;
 const ENODES=Object.fromEntries(ECO.nodes.map(n=>[n.id,n]));
 const E={node:"",edge:"",focus:"",depth:1,q:"",kind:"all",hyp:false,view:"networks"};
 const DINDEX=buildDeploymentIndex(DATA.orgdrill,DATA.lines,DATA.operatorCatalog);
+for(const [cc,names] of Object.entries(DATA.history?.orgs||{}))for(const name of names){
+ const id='u:'+cc+':'+name;
+ if(!Object.hasOwn(DINDEX.entities,id))DINDEX.entities[id]={id,name,kind:'raw',country:cc,search:name.toLowerCase()};
+}
 const DS={view:"graph",country:"",line:"",operator:"",role:"cpe",q:"",group:false,selected:"",node:"",expanded:[],limit:12,page:0};
 const DG={view:"",signature:"",layout:null,rows:[],positions:new Map(),pins:new Set(),camera:{x:0,y:0,k:1}};
 
 /* URL */
 function urlWrite(push=false){
- const p=new URLSearchParams({lang:LANG});
+ const p=new URLSearchParams({lang:LANG,snapshot:DATA.snapshot});
+ if(S.ccq)p.set('cc_q',S.ccq);
+ if($('#regSearch').value)p.set('reg_q',$('#regSearch').value);
+ if($('#regService').value&&$('#regService').value!=='all')p.set('reg_service',$('#regService').value);
  if(S.lines.size)p.set("lines",[...S.lines].join(","));
  if(S.geo.size)p.set("geo",[...S.geo].join(","));
  for(const org of S.orgs)p.append("org",org);
@@ -1119,6 +1169,9 @@ function urlWrite(push=false){
 }
 function urlRead(){
  const p=new URLSearchParams(location.hash.slice(1));
+ S.ccq=(p.get('cc_q')||'').slice(0,160);$('#ccSearch').value=S.ccq;$('#ccSearchClear').hidden=!S.ccq;
+ $('#regSearch').value=(p.get('reg_q')||'').slice(0,160);
+ $('#regService').value=['cpe','acs','mixed','unknown'].includes(p.get('reg_service'))?p.get('reg_service'):'all';
  S.lines.clear();S.geo.clear();S.orgs.clear();S.cell=null;S.mode="clouds";
  for(const x of (p.get("lines")||"").split(","))if(Object.hasOwn(DATA.lines,x))S.lines.add(x);
  for(const x of (p.get("geo")||"").split(",")){
@@ -1189,7 +1242,7 @@ const selCountries=()=>[...S.geo].filter(t=>t.startsWith("c:")).map(t=>t.slice(2
 function homeIfNoCountries(){ if(!selCountries().length && K>1.01) tween(1,0,0); }
 
 function unknownCountryTotal(){
- if(S.geo.size||S.orgs.size)return null;
+ if(S.geo.size||S.orgs.size||[...S.lines].some(slug=>DATA.lines[slug].collection_status!=="ok"))return null;
  return (S.lines.size?[...S.lines]:DISJOINT).reduce((n,slug)=>n+(DATA.lines[slug].unknown_country||0),0);
 }
 function coverageNote(cell){
@@ -1721,7 +1774,7 @@ function renderLegend(){
  }).join("");
  $("#lgMore").textContent=S.lgExpanded?t("lg_less"):t("lg_more");
  $("#lgClear").hidden=!S.lines.size;
- $("#sliceSum").textContent=fmt(SLICE.total);
+ $("#sliceSum").textContent=fmt(S.lines.size&&[...S.lines].every(s=>DATA.lines[s].collection_status!=="ok")?null:SLICE.total);
  $("#sliceSub").textContent=t("slice_sub",SLICE.ccs.size,SLICE.lines.size,SLICE.disjoint,DATA.snapshot.slice(0,8).replace(/(\d{4})(\d{2})(\d{2})/,"$1-$2-$3"));
  const unknown=unknownCountryTotal();
  if(unknown)$("#sliceSub").textContent+=" · "+t("unknown_country",fmtF(unknown));
@@ -1836,7 +1889,7 @@ function renderLinesTable(){
   return`<tr tabindex="0" data-slug="${esc(s)}" class="${sel?"sel":""} ${S.lines.size&&!sel?"dimmed":""}" style="${sel?"background:#f0ecfd":""}">
    <td style="display:flex;align-items:center;gap:8px"><i style="width:9px;height:9px;border-radius:3px;background:${lineColor(s)};flex:none"></i>${esc(DATA.lines[s].name)} ${serviceBadge(s)}</td>
    <td class="vendorcell"><span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span> ${esc(loc(M.vendor||"—"))}</td>
-   <td class="num">${fmtF(l.total)}</td><td class="num" style="color:var(--faint)">${fmtF(DATA.lines[s].total)}</td>
+   <td class="num">${fmtF(DATA.lines[s].collection_status==="ok"?l.total:null)}</td><td class="num" style="color:var(--faint)">${fmtF(DATA.lines[s].total)}</td>
    <td class="vendorcell">${esc(top)}</td></tr>`;
  }).join("");
  tb.querySelectorAll("tr").forEach(tr=>tr.onclick=e=>{
@@ -1852,7 +1905,7 @@ function renderLinesTable(){
 const insp=$("#inspector");
 function card(s){
  const L=SLICE.lines.get(s)||{total:0};
- return`<div class="ovcard"><h4 style="display:flex"><i style="width:9px;height:9px;border-radius:3px;background:${lineColor(s)};flex:none;margin:3px 5px 0 2px"></i><span style="flex:1">${esc(DATA.lines[s].name)}</span><button data-cmpx="${esc(s)}" title="${esc(t("remove_compare"))}" style="color:#b3416a;font-weight:700">×</button></h4><p>${fmtF(L.total)} ${t("in_slice_short")} · ${esc(loc((DATA.meta.lines[s]||{}).vendor||""))}</p></div>`;
+ return`<div class="ovcard"><h4 style="display:flex"><i style="width:9px;height:9px;border-radius:3px;background:${lineColor(s)};flex:none;margin:3px 5px 0 2px"></i><span style="flex:1">${esc(DATA.lines[s].name)}</span><button data-cmpx="${esc(s)}" title="${esc(t("remove_compare"))}" style="color:#b3416a;font-weight:700">×</button></h4><p>${fmtF(DATA.lines[s].collection_status==="ok"?L.total:null)} ${t("in_slice_short")} · ${esc(loc((DATA.meta.lines[s]||{}).vendor||""))}</p></div>`;
 }
 function serviceBadge(s){const kind=DATA.lines[s]?.service||"unknown";return `<span class="service-badge ${esc(kind)}">${esc(t("service_"+kind))}</span>`;}
 function badgeHtml(s){const M=DATA.meta.lines[s]||{};const b=M.badge||"anonymous";return`<span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span>`;}
@@ -1890,9 +1943,9 @@ function renderInspector(){
   h+=`<div class="insphead"><div class="eyebrow">${t("pair_label")}</div></div>
   <div class="crumbs"><b data-go="root">${t("root")}</b><span>›</span><b data-selcc="${esc(cc)}">${esc(ccName(cc))}</b><span>›</span><b>${esc(L.name)}</b></div>
   <h2>${esc(L.name)} <span style="font-weight:400;color:var(--faint)">· ${esc(ccName(cc))}</span></h2>
-  <div class="subtitle">${esc(loc(M(slug).vendor||""))} ${badgeHtml(slug)} ${serviceBadge(slug)}</div><div class="note">${t("collected_at")}: ${esc(drill?.taken||L.taken||DATA.snapshot)}</div>
+  <div class="subtitle">${esc(loc(M(slug).vendor||""))} ${badgeHtml(slug)} ${serviceBadge(slug)}</div><div class="note">${t("collected_at")}: ${esc(drill?.taken||L.taken||t("fact_not_collected"))}</div>
   ${!geoPass(cc)?`<div class="scopewarn">${t("outside_slice")}</div>`:""}
-  <div class="bignum num">${fmt(n)} <small>${t("pair_in")}</small></div>
+  <div class="bignum num">${fmt(L.collection_status==="ok"?n:null)} <small>${t("pair_in")}</small></div>
   <div class="krow"><span class="nm">${t("pair_share")}</span><span class="n">${ident&&L.service!=="acs"?Math.round(100*n/ident)+"%":"—"}</span></div>
   <div class="krow"><span class="nm">${t("pair_glob")}</span><span class="n">${fmtF(L.total)}</span></div>
   ${drill?`${coverageNote(drill)}<h3>${t("s_ops")}</h3><div class="klist">${(()=>{const m=new Map();for(const o of drill.orgs){const nz=normOrg(o.value,cc);m.set(nz,(m.get(nz)||0)+o.count);}return[...m.entries()].sort((a,b2)=>b2[1]-a[1]).map(([nz,n])=>`<div class="krow"><span class="nm">${esc(loc(nz))}</span><span class="n">${fmtF(n)}</span></div>`).join("");})()}</div><h3>ASN</h3><div class="portrow">${drill.asn.map(a=>`<span class="pchip">${a.value}: ${fmtF(a.count)}</span>`).join("")}</div>`:`<div class="scopewarn">${t("no_org_data")}</div>`}
@@ -1926,7 +1979,7 @@ function renderInspector(){
   <div class="crumbs"><b data-go="root">${t("root")}</b><span>›</span><b>${esc(L.name)}</b></div>
   <h2>${esc(L.name)}</h2>
   <div class="subtitle">${esc(loc(m.vendor||""))} · ${esc(loc(m.role||""))} ${badgeHtml(slug)} ${serviceBadge(slug)} · ${t("line_hint")}</div>
-  <div class="bignum num">${fmt(inSlice.total)} <small>${t("line_in")} ${fmtF(L.total)}</small></div><div class="note">${t("collected_at")}: ${esc(L.taken||DATA.snapshot)}</div>
+  <div class="bignum num">${fmt(L.collection_status==="ok"?inSlice.total:null)} <small>${t("line_in")} ${fmtF(L.total)}</small></div><div class="note">${t("collected_at")}: ${esc(L.taken||t("fact_not_collected"))}</div>
   ${L.ports&&L.ports.length?`<h3>${t("s_ports")}</h3><div class="portrow">${L.ports.map(p=>`<span class="pchip">${p.value}: ${fmtF(p.count)}</span>`).join("")}</div>`:""}
   ${m.findings&&m.findings.length?`<h3>${t("s_find")}</h3>${m.findings.map(f=>`<div class="note">${esc(loc(f))}</div>`).join("")}`:""}
   ${m.anomalies&&m.anomalies.length?`<h3>${t("s_anom")}</h3>${m.anomalies.map(f=>`<div class="note anom">${esc(loc(f))}</div>`).join("")}`:""}
@@ -2103,7 +2156,7 @@ function renderRegistry(){
   tr.querySelector(".show").onclick=e=>{e.stopPropagation();const s=tr.dataset.slug;S.lines.has(s)?S.lines.delete(s):S.lines.add(s);if(S.cell&&!S.lines.has(S.cell.slug))S.cell=null;refreshAll();};
   tr.onclick=()=>{const s=tr.dataset.slug;S.lines.has(s)?S.lines.delete(s):S.lines.add(s);if(S.cell&&!S.lines.has(S.cell.slug))S.cell=null;refreshAll();};
  });
- $("#navLinesCnt").textContent=Object.keys(DATA.lines).length;
+ $("#navLinesCnt").textContent=Object.values(DATA.lines).filter(line=>line.collection_status==="ok").length;
 }
 $("#regSearch").oninput=renderRegistry;
 $("#regService").onchange=renderRegistry;
@@ -2676,11 +2729,31 @@ function lineGeoTotals(){
  return out;
 }
 let GEOT=null;
+function snapshotLabel(id){
+ return id.replace(/(\d{4})(\d{2})(\d{2})-(\d{2})(\d{2})(\d{2})?/,"$3.$2.$1 · $4:$5 UTC");
+}
+function renderSnapshotPicker(){
+ const select=$('#snapshotSelect');
+ select.innerHTML=SNAPSHOT_INDEX.snapshots.map(item=>`<option value="${esc(item.id)}">${esc(snapshotLabel(item.id))}</option>`).join('');
+ select.value=DATA.snapshot;
+ select.title=t('snapshot_choose');select.setAttribute('aria-label',t('snapshot_choose'));
+ const missing=[...S.lines,DS.line,S.cell?.slug].some(slug=>slug&&DATA.lines[slug]?.collection_status!=='ok');
+ const message=snapshotError|| (missing?'snapshot_missing':'');
+ $('#snapshotStatus').hidden=!message;
+ $('#snapshotStatus').textContent=message?t(message):'';
+}
+function chooseSnapshot(id){
+ if(id===DATA.snapshot||!SNAPSHOT_INDEX.snapshots.some(item=>item.id===id))return;
+ urlWrite();
+ const params=new URLSearchParams(location.hash.slice(1));params.set('snapshot',id);
+ history.pushState(null,'','#'+params.toString());
+ location.reload();
+}
 function refreshAll(){
  SLICE=computeSlice();
  SLICE_FULL=computeSlice(true);
  GEOT=lineGeoTotals();
- $("#snapLabel").textContent=DATA.snapshot.replace(/(\d{4})(\d{2})(\d{2})-(\d{2})(\d{2})(\d{2})?/,"$3.$2.$1 · $4:$5 UTC");
+ renderSnapshotPicker();
  facetBtnState();renderChips();renderMode();
  renderCountries();renderClouds();renderLabels();
  renderOverview();renderLegend();renderTable();renderLinesTable();renderInspector();
@@ -2694,8 +2767,13 @@ urlRead();switchTab(S.tab);try{DNcur=new Intl.DisplayNames([LANG==="zh"?"zh-Hans
 applyStaticI18N();$$(".langbtn").forEach(b2=>{b2.classList.toggle("on",b2.dataset.lang===LANG);b2.onclick=()=>setLang(b2.dataset.lang);});
 refreshAll();
 window.addEventListener("resize",()=>{scaleStatics();});
-window.addEventListener("hashchange",()=>{urlRead();setLang(LANG);switchTab(S.tab);});
+$('#snapshotSelect').onchange=e=>chooseSnapshot(e.target.value);
+window.addEventListener("hashchange",()=>{
+ if(snapshotTarget()!==DATA.snapshot){location.reload();return;}
+ urlRead();setLang(LANG);switchTab(S.tab);
+});
 
+})();
 </script>
 </body>
 </html>

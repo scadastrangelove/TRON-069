@@ -45,6 +45,27 @@ class BuildTests(unittest.TestCase):
             builder.build(snapshot, self.root/'output')
         self.assertFalse((self.root/'output/index.html').exists())
 
+    def test_history_payloads_keep_dated_measurements_and_skip_unfinished_runs(self):
+        data = builder.build(ROOT/'data/mapdata/snapshot-20261012-145337', self.root)
+        ids = [entry['id'] for entry in data['history']['snapshots']]
+        self.assertEqual(ids, sorted(ids, reverse=True))
+        self.assertIn('20261010-102121', ids)
+        self.assertNotIn('20261010-101524', ids)
+        self.assertNotIn('20261008-1451', ids)  # Legacy dump without validated statuses.
+        for ident in ids:
+            archive = builder.read(self.root/'atlas/snapshots'/f'{ident}.json')
+            source = ROOT/'data/mapdata'/f'snapshot-{ident}'
+            self.assertEqual(set(archive), set(builder.SNAPSHOT_FIELDS))
+            self.assertEqual(archive['snapshot'], ident)
+            self.assertEqual(archive['denominators']['park'], builder.read(source/'denominator-park.json'))
+            for slug, line in archive['lines'].items():
+                self.assertEqual(line['total'], builder.read(source/f'{slug}.json')['total'])
+            for key, cell in archive['orgdrill'].items():
+                self.assertEqual(cell, builder.read(source/'org-drill'/f'{key}.json'))
+        old = builder.read(self.root/'atlas/snapshots/20261010-102121.json')
+        self.assertNotIn('freeacs', old['lines'])
+        self.assertIn('freeacs', data['history']['lines'])
+
     def test_failed_manifest_rejected(self):
         snapshot = self.snapshot()
         manifest = builder.read(snapshot/'manifest.json')

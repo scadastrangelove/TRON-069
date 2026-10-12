@@ -230,7 +230,7 @@ def read_variants(snapshot, manifest, lines):
         out.setdefault(item['parent'], []).append(item)
     return out
 
-def build(snapshot, output_root=ROOT):
+def build_data(snapshot):
     manifest = read(snapshot / 'manifest.json')
     if manifest.get('status', 'complete') != 'complete':
         raise ValueError('Refusing to publish an incomplete snapshot checkpoint')
@@ -307,6 +307,45 @@ def build(snapshot, output_root=ROOT):
     }
     validate_translations(data)
     validate_sources(data)
+    return data
+
+
+SNAPSHOT_FIELDS = ('snapshot', 'park', 'http', 'denominators', 'ident', 'lines',
+                   'excluded', 'orgdrill', 'variants', 'collection', 'stickers', 'facts')
+
+
+def build(snapshot, output_root=ROOT):
+    data = build_data(snapshot)
+    # Keep the current atlas self-contained. Historical measurements are loaded
+    # on demand; geography and editorial material are shared by every date.
+    archives = {}
+    for entry in snapshot_history(ROOT/'data/mapdata')['snapshots']:
+        if entry['status'] != 'complete' or entry['errors']:
+            continue
+        path = ROOT/'data/mapdata'/entry['snapshot']
+        manifest = read(path/'manifest.json')
+        # The earliest legacy dump has no validated collection statuses.
+        if any(row.get('collection_status') != 'ok' for row in manifest['lines']):
+            continue
+        item = data if path.resolve() == snapshot.resolve() else build_data(path)
+        archives[item['snapshot']] = item
+    archives[data['snapshot']] = data
+    entries, line_catalog, countries, orgs = [], {}, set(), {}
+    for ident, item in sorted(archives.items(), reverse=True):
+        entries.append(dict(id=ident, lines=len(item['lines'])))
+        for slug, line in item['lines'].items():
+            line_catalog.setdefault(slug, {key: line[key] for key in ('name', 'dork', 'service')})
+            countries.update(line['countries'])
+        countries.update(item['park'])
+        for cell in item['orgdrill'].values():
+            orgs.setdefault(cell['cc'], set()).update(org['value'] for org in cell['orgs'])
+    data['history'] = dict(snapshots=entries, latest=entries[0]['id'], lines=line_catalog,
+                           countries=sorted(countries), orgs={cc: sorted(names) for cc, names in sorted(orgs.items())})
+    for ident, item in archives.items():
+        out = output_root/'atlas/snapshots'/f'{ident}.json'
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps({key: item[key] for key in SNAPSHOT_FIELDS},
+                                 ensure_ascii=False, separators=(',', ':'))+'\n', encoding='utf-8')
     template = (ROOT/'atlas/map-template.html').read_text(encoding='utf-8')
     if template.count('/*__DATA__*/{}') != 1:
         raise ValueError('Template must contain exactly one DATA placeholder')
@@ -320,7 +359,8 @@ def build(snapshot, output_root=ROOT):
         out = output_root/relative
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding='utf-8')
-    print(f'Built both entry points: {len(lines)} lines, {len(orgdrill)} operator pairs, {len(html.encode()):,} bytes each')
+    print(f'Built both entry points: {len(data["lines"])} lines, {len(data["orgdrill"])} operator pairs, '
+          f'{len(html.encode()):,} bytes each; {len(archives)} selectable snapshots')
     return data
 
 
