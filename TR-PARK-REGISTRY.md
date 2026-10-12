@@ -13,7 +13,7 @@ The attribution badge describes evidence about the signature/component. A source
 | <a id="tr069-http-server"></a>tr069 http server | cpe | 1,963,233 | 2026-10-10T10:21:23+00:00 | `"tr069 http server"` | [proven](NOTES.md) |
 | <a id="gsoap-park"></a>gSOAP park | mixed | 1,852,523 | 2026-10-10T10:21:24+00:00 | `"Server: gSOAP"` | [hypothesis](NOTES.md) |
 | <a id="rdk-b-ccsptr069pa"></a>RDK-B CcspTr069Pa | cpe | 1,791,300 | 2026-10-10T10:21:25+00:00 | `"Cisco_CCSP_CWMP_TCPCR"` | [proven](NOTES.md) |
-| <a id="tr069-client"></a>TR069 Client | cpe | 1,657,124 | 2026-10-10T10:21:26+00:00 | `"TR069 client TCP connection request Server"` | [Atheros openagent (proven)](DEANON-TR069CLIENT.md) |
+| <a id="tr069-client"></a>TR069 Client | cpe | 1,657,124 | 2026-10-10T10:21:26+00:00 | `"TR069 client TCP connection request Server"` | [Works Systems OneAgent TR (binary-proven)](DEANON-TR069CLIENT.md) |
 | <a id="igdauthentication"></a>IgdAuthentication | cpe | 1,525,906 | 2026-10-10T10:21:28+00:00 | `"IgdAuthentication"` | [hypothesis](NOTES.md) |
 | <a id="gsoap-2-7-vendor-map"></a>gSOAP/2.7 vendor map | mixed | 1,229,037 | 2026-10-10T10:22:06+00:00 | `port:7547 "Server: gSOAP/2.7"` | [class](NOTES.md) |
 | <a id="easycwmp-vanilla"></a>easycwmp vanilla | cpe | 999,591 | 2026-10-10T10:21:28+00:00 | `"realm@easycwmp"` | [proven](NOTES.md) |
@@ -61,6 +61,6 @@ The attribution badge describes evidence about the signature/component. A source
 
 ## Scope and historical corrections
 
-Huawei auxiliary ports are authentication-service slices, not automatically web interfaces. TR069 Client has component-family evidence with unresolved OEM carriers. Gateway/TIM vendor attribution remains open. NettyServer/WindTre remains a platform hypothesis. The shared DT/ACSSimTool RFC-example constant is not proof of a shared SDK. AVSystem libcwmp is CPE software; Telefónica cwmpWeb is an ACS frontend.
+Huawei auxiliary ports are authentication-service slices, not automatically web interfaces. TR069 Client is Works Systems OneAgent TR; DigAuth and fake-Apache trace to the earlier Works Systems openagent branch. Device OEM attribution remains separate. Gateway/TIM vendor attribution remains open. NettyServer/WindTre remains a platform hypothesis. The shared DT/ACSSimTool RFC-example constant is not proof of a shared SDK. AVSystem libcwmp is CPE software; Telefónica cwmpWeb is an ACS frontend.
 
 The original October 8 development sample classified 70% of 300 HTTP-bearing records. This is neither fleet-wide precision nor a current coverage measurement. Known overlaps are excluded from the default sum, but full disjointness is unproven.

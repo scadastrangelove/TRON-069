@@ -64,6 +64,12 @@ RAC2V1K repository checks are summarized in
 [DEANON-TR069CLIENT.md](DEANON-TR069CLIENT.md). Co-hosting does not prove one
 firmware image, and a finite search does not prove global absence.
 
+Update, 13 October: public Nokia and ASUS binaries, ASUS build metadata and
+Works Systems copyrights identify the main TR069 Client component as
+**Works Systems OneAgent TR**. The RAC2V1K/F609/Arcadyan acquisition hunts are
+closed for component attribution. The dossier records the evidence and the
+remaining EZpacket distribution hypothesis.
+
 ## gateway-realm
 
 The scoped query on port 7170 is strongly associated with Telecom Italia/TIM.

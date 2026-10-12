@@ -230,6 +230,22 @@ def read_variants(snapshot, manifest, lines):
         out.setdefault(item['parent'], []).append(item)
     return out
 
+def refresh_fact_commentary(facts, current_facts):
+    """Apply current research notes to the same observation, preserving its measurements.
+
+    Frozen plans remain the source of queries and collection references. Both
+    the label and exact query must match before reusing editorial commentary.
+    """
+    for parent, items in facts.items():
+        current = {(item.get('label'), item.get('dork')): item
+                   for item in current_facts.get(parent, [])}
+        for item in items:
+            editorial = current.get((item.get('label'), item.get('dork')), {})
+            for key in ('note', 'sources'):
+                if key in editorial:
+                    item[key] = editorial[key]
+
+
 def build_data(snapshot):
     manifest = read(snapshot / 'manifest.json')
     if manifest.get('status', 'complete') != 'complete':
@@ -242,17 +258,19 @@ def build_data(snapshot):
         services = {slug:r['service'] for slug,r in registry.items()}
     if any(s not in ('cpe','acs','mixed','unknown') for s in services.values()):
         raise ValueError('Invalid service classification')
+    current_facts = read(ROOT/'data/mapdata/facts.json')
     facts = manifest.get('plan', {}).get('facts')
     if facts is None:
         # Older snapshots predate frozen observations. Only use exact matching
         # records; an old handwritten count is never presented as a fresh result.
-        facts = bind_facts(read(ROOT/'data/mapdata/facts.json'),
+        facts = bind_facts(current_facts,
             [dict(id=slug,query=row['shodan_dork']) for slug,row in registry.items()],
             read(ROOT/'data/collection-queries.json')['queries'], strict=False)
     unknown_facts = set(facts) - set(registry)
     if unknown_facts:
         raise ValueError(f'Unknown fact line IDs: {sorted(unknown_facts)}')
     facts = collected_facts(facts, snapshot, read_optional)
+    refresh_fact_commentary(facts, current_facts)
     excluded = IDENT_EXCLUDE | {s for s,kind in services.items() if kind == 'acs'}
     lines, ident = {}, {}
     excluded_files = {'manifest.json', 'denominator-park.json', 'denominator-http.json', 'stickers.json'}

@@ -1,8 +1,26 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-10-12",
+  "reviewed": "2026-10-13",
   "edition": "public",
   "findings": [
+    {
+      "id": "works-systems-oneagent-attribution",
+      "status": "included",
+      "lines": [
+        "tr069-client",
+        "digauth",
+        "fake-apache-openagent"
+      ],
+      "source": "DEANON-TR069CLIENT.md",
+      "news_id": "works-systems-oneagent-attribution",
+      "summary": "Works Systems OneAgent TR identified by public binary templates, ASUS product naming and openagent source copyright; qop variants are build templates, hardware OEM attribution remains separate.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
     {
       "id": "tr069-lineage",
       "status": "included-qualified",
@@ -717,6 +735,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.33"
       }
     ],
     "igdauthentication": [
@@ -920,6 +942,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.33"
       }
     ],
     "realtek-sdk": [
@@ -1212,6 +1238,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.33"
       }
     ],
     "decimal-nonce-class": [

@@ -227,10 +227,11 @@
     },
     "tr069-client": {
       "badge": "proven",
-      "vendor": "Atheros openagent (proven component lineage; device OEM unknown)",
+      "vendor": "Works Systems OneAgent TR",
       "role": "CPE CR",
       "findings": [
-        "Source-template comparison and the Brazilian port-8081 bridge establish Atheros openagent-2.0 component lineage; device OEM carriers remain unresolved.",
+        "The Nokia FastMile binary matches the full 401 template. ASUS build files name OneAgent TR; ASUS and openagent-2.0 sources identify Works Systems as the author.",
+        "qop/no-qop are component build variants: Nokia includes a qop placeholder; ASUS omits it. The response does not identify the device OEM.",
         "Observed sub-families: DigAuth with an Apache-style Server header, 64-character nonce and Date; TR069 Client with a custom Server header, 31-character nonce and no Date."
       ],
       "anomalies": [
@@ -246,6 +247,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.33"
         }
       ]
     },
@@ -614,10 +619,10 @@
     },
     "digauth": {
       "badge": "proven",
-      "vendor": "Atheros/Qualcomm SDK openagent-2.0",
+      "vendor": "Works Systems openagent-2.0 (Atheros SDK)",
       "role": "CPE CR",
       "findings": [
-        "Source-template comparison and the Brazilian port-8081 bridge establish Atheros openagent-2.0 component lineage; device OEM carriers remain unresolved.",
+        "Works Systems authored openagent-2.0, distributed in the Atheros SDK. Its response template and the Brazilian port-8081 bridge connect DigAuth, fake-Apache and OneAgent TR.",
         "Observed sub-families: DigAuth with an Apache-style Server header, 64-character nonce and Date; TR069 Client with a custom Server header, 31-character nonce and no Date."
       ],
       "anomalies": [],
@@ -631,6 +636,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.33"
         }
       ]
     },
@@ -1113,10 +1122,10 @@
     },
     "fake-apache-openagent": {
       "badge": "proven",
-      "vendor": "Atheros openagent",
+      "vendor": "Works Systems openagent-2.0 (Atheros SDK)",
       "role": "CPE CR",
       "findings": [
-        "Source-template comparison and the Brazilian port-8081 bridge establish Atheros openagent-2.0 component lineage; device OEM carriers remain unresolved.",
+        "Works Systems authored openagent-2.0, distributed in the Atheros SDK. Its response template and the Brazilian port-8081 bridge connect DigAuth, fake-Apache and OneAgent TR.",
         "Response evidence does not establish a hardware model or exploitability.",
         "Observed sub-families: DigAuth with an Apache-style Server header, 64-character nonce and Date; TR069 Client with a custom Server header, 31-character nonce and no Date."
       ],
@@ -1131,6 +1140,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.33"
         }
       ]
     },

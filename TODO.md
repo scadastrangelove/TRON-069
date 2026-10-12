@@ -1,6 +1,6 @@
 # Public project backlog
 
-Reviewed 12 October 2026. This file records status, not instructions to run scans.
+Reviewed 13 October 2026. This file records status, not instructions to run scans.
 
 ## Integrated
 
@@ -21,7 +21,9 @@ Reviewed 12 October 2026. This file records status, not instructions to run scan
 - [ ] Establish the vendor and service role of cwmp server with independent evidence.
   Lanet's equipment catalog suggests candidates; none is a confirmed attribution.
 - [ ] Resolve Gateway/TIM component attribution. Technicolor and ADB remain candidates.
-- [ ] Identify the OEM carriers of the main TR069 Client component family.
+- [x] Identify the software family of the main TR069 Client component: binary-proven as Works Systems OneAgent TR (October 13). Device OEM carriers are not derivable from the response and remain unlabeled.
+- [x] Close RAC2V1K, F609/F612 and Arcadyan BRN acquisition hunts for component attribution; retain bounded results in the dossier.
+- [ ] Verify the EZpacket Agent4.0 distribution link with a response template or binary; object-name similarity remains a hypothesis.
 - [ ] Validate any hardware-model interpretation of Huawei operator slices.
 - [ ] Expand evaluation using a labeled holdout independent of discovery samples.
 - [ ] Investigate transport-level signatures for obuspa without claiming absence.

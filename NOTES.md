@@ -217,3 +217,22 @@ default of port 30005 and a nonce path reading from the operating-system
 random device, consistent with the observed response uniqueness
 (see [DEANON-HUAWEI-CR.md](DEANON-HUAWEI-CR.md)). Security evaluation of
 these images is not part of the public release.
+
+<a id="section-9.33"></a>
+## 9.33. TR069 Client attributed to Works Systems OneAgent TR — October 13
+
+The main TR069 Client family is identified as Works
+Systems' embeddable OneAgent TR client. Evidence: the full 401 template with
+the exact Server string and Digest parameter order found inside `tr_agent`
+of a public Nokia FastMile 5G Gateway 3.2 dump (which also carries Workssys
+strings), Works Systems copyright plus an explicit OneAgent-TR build label
+in ASUS asuswrt `apps/private/tr069`, and Works Systems copyright in the
+Atheros AthSDK openagent-2.0 source that the earlier source-lineage work had
+already tied to this family. OneAgent TR was documented as a component
+licensed across xDSL/cable/xPON/Wi-Fi platforms, which explains a
+byte-identical banner across unrelated operators. Consequences recorded in
+the registry: the full Server value is the primary marker; qop presence is a
+build variant; the hardware OEM is not derivable from the response. The
+sub-family guide and bounded negatives remain valid as search history.
+Pinned public sources, binary hashes and template offsets are recorded in
+[the attribution dossier](DEANON-TR069CLIENT.md#public-evidence).

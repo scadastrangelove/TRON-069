@@ -34,6 +34,33 @@
     ]
   },
   {
+    "id": "works-systems-oneagent-attribution",
+    "date": "2026-10-13",
+    "kind": "research",
+    "title": {
+      "en": "TR069 Client identified: Works Systems OneAgent TR",
+      "ru": "TR069 Client установлен: Works Systems OneAgent TR",
+      "es": "TR069 Client identificado: Works Systems OneAgent TR",
+      "zh": "TR069 Client 归属确认：Works Systems OneAgent TR"
+    },
+    "body": {
+      "en": "The TR069 Client signature now has a component supplier: Works Systems OneAgent TR. Three public sources agree: a complete 401 template in Nokia FastMile firmware, OneAgent TR build metadata in ASUS asuswrt, and Works Systems copyright in the earlier openagent-2.0 source. Nokia and ASUS binaries anchor the qop/no-qop build variants. The dossier includes pinned sources, hashes and offsets. Hardware OEMs require separate attribution; the EZpacket Agent4.0 link remains a hypothesis. Dated query counts are unchanged.",
+      "ru": "У сигнатуры TR069 Client появился поставщик компонента: Works Systems OneAgent TR. Сошлись три публичных источника: полный шаблон 401 в прошивке Nokia FastMile, имя OneAgent TR в сборочных файлах ASUS asuswrt и копирайт Works Systems в раннем исходнике openagent-2.0. Бинарники Nokia и ASUS подтверждают варианты сборки с qop и без него. В досье — ссылки на конкретные коммиты, хеши и смещения. OEM-производители устройств требуют отдельной атрибуции; связь с EZpacket Agent4.0 остаётся гипотезой. Счётчики запросов с датами сохранены.",
+      "es": "La firma TR069 Client ya tiene proveedor de componente: Works Systems OneAgent TR. Coinciden tres fuentes públicas: la plantilla 401 completa del firmware Nokia FastMile, el nombre OneAgent TR en la compilación de ASUS asuswrt y el copyright de Works Systems en el código anterior openagent-2.0. Los binarios Nokia y ASUS confirman variantes con y sin qop. El expediente incluye fuentes fijadas a commits, hashes y offsets. Los OEM requieren atribución independiente; el vínculo EZpacket Agent4.0 sigue siendo una hipótesis. Los recuentos fechados no cambian.",
+      "zh": "TR069 Client 指纹的组件供应商已确定为 Works Systems OneAgent TR。三项公开证据相互印证：Nokia FastMile 固件中的完整 401 模板、ASUS asuswrt 构建文件中的 OneAgent TR 名称，以及早期 openagent-2.0 源码中的 Works Systems 版权声明。Nokia 和 ASUS 二进制文件证实了有无 qop 的构建变体。研究文档提供固定提交链接、哈希和偏移量。设备 OEM 仍需单独归属；与 EZpacket Agent4.0 的关联保留为假设。带日期的查询计数保持不变。"
+    },
+    "evidence": [
+      {
+        "file": "DEANON-TR069CLIENT.md",
+        "anchor": "public-evidence"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.33"
+      }
+    ]
+  },
+  {
     "id": "zte-huawei-second-image",
     "date": "2026-10-12",
     "kind": "research",

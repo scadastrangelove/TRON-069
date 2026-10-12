@@ -74,6 +74,27 @@ class BuildTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'incomplete snapshot'):
             builder.build(snapshot, self.root/'output')
 
+    def test_current_fact_commentary_preserves_snapshot_measurements_and_query_scope(self):
+        old = dict(label='Observation', dork='exact query', count=12,
+                   taken='2026-10-08T12:00:00Z', note='Old attribution',
+                   sources=[{'file': 'METHOD.md'}],
+                   collection_ref={'kind': 'variant', 'id': 'old-query'},
+                   collection_source={'snapshot': 'old-snapshot'})
+        other_query = dict(old, dork='different query')
+        other_label = dict(old, label='Different observation')
+        facts = {'line': [copy.deepcopy(old), other_query.copy(), other_label.copy()],
+                 'other-line': [copy.deepcopy(old)]}
+        current = {'line': [dict(old, count=999, taken='2026-10-13T12:00:00Z',
+                                collection_ref={'kind': 'base', 'id': 'new-query'},
+                                note='Works Systems', sources=[{'file': 'DEANON-TR069CLIENT.md'}])],
+                   'new-line': [dict(old)]}
+        builder.refresh_fact_commentary(facts, current)
+        self.assertEqual(facts['line'][0], dict(old, note='Works Systems',
+                                              sources=[{'file': 'DEANON-TR069CLIENT.md'}]))
+        self.assertEqual(facts['line'][1:], [other_query, other_label])
+        self.assertEqual(facts['other-line'], [old])
+        self.assertNotIn('new-line', facts)
+
     def test_unknown_fact_line_rejected_without_publishing(self):
         snapshot = self.snapshot()
         original_read = builder.read
