@@ -9,10 +9,10 @@
     "sel_none": "ничего не выбрано — основной набор сигнатур",
     "th_sum": "Σ основных сигнатур",
     "pair_share": "доля от Σ основных сигнатур страны",
-    "cty_allports": "Σ основных сигнатур · все порты",
+    "cty_allports": "Σ основных сигнатур · порты по запросам",
     "wtn_sum": "{0} совпадений · основной набор",
     "warn_slice": "Совпадения ≠ устройства. Основной набор исключает известные надмножества, срезы, nonce-класс и веб-интерфейсы; непересекаемость всех запросов не доказана. Ручной выбор суммирует выбранные сигнатуры.",
-    "about_p2": "<b>Порты и суммы.</b> Линейки собраны по всем портам, а «парк» ограничен 7547 и служит знаменателем HTTP-доли. Основной набор исключает известные пересечения и другие роли; его сумма не является числом уникальных устройств. Неизвестная география показана отдельно.",
+    "about_p2": "<b>Порты и суммы.</b> В обзоре отдельно показаны все совпадения на 7547 и сумма основных сигнатур. Порты определяются каждым запросом; Huawei учитывается по всем портам. Счётчик карты следует выбранному срезу. Неизвестная география показана отдельно.",
     "about_p4": "<b>Операторы и география.</b> Фильтр оператора суммирует только собранные org-фасеты, без неподтверждённого хвоста. Несколько операторов объединяются. Регионы ограничивают список стран; выбранные страны дополнительно сужают регион.",
     "about_heading": "Карта наблюдений.<br>Не карта всех устройств.",
     "registry_note": "Числа — совпадения отдельных запросов на дату снапшота. Бейдж обозначает статус атрибуции; это не оценка уязвимости.",
@@ -201,7 +201,11 @@
     "d_pinned": "закреплён",
     "d_graph_hint": "Выберите узел, чтобы раскрыть соседей",
     "d_graph_help": "Выбор узла раскрывает соседей. Перетаскивайте узлы, чтобы закрепить их, и фон — чтобы сдвигать граф. Масштаб: щипок или +/−.",
-    "d_flow_help": "Сигнатура → организация → страна. Выберите связь, чтобы открыть её источник и дату. Перетаскивайте фон для перемещения."
+    "d_flow_help": "Сигнатура → организация → страна. Выберите связь, чтобы открыть её источник и дату. Перетаскивайте фон для перемещения.",
+    "overview_scope": "Весь мир · до фильтров карты",
+    "overview_park": "Все совпадения на порту 7547",
+    "overview_signatures": "Основные сигнатуры · порты по запросам",
+    "slice_matches": "Совпадения сигнатур в срезе"
   },
   "en": {
     "open_panel": "Open inspector",
@@ -213,10 +217,10 @@
     "sel_none": "nothing selected — core signature set",
     "th_sum": "Σ core signatures",
     "pair_share": "share of country core-signature sum",
-    "cty_allports": "Σ core signatures · all ports",
+    "cty_allports": "Σ core signatures · query port scopes",
     "wtn_sum": "{0} matches · core set",
     "warn_slice": "Matches ≠ devices. The core set excludes known supersets, subsets, the nonce class and web interfaces; complete disjointness is not proven. Manual selection sums the chosen signatures.",
-    "about_p2": "<b>Ports and sums.</b> Lines cover all their ports; the park is limited to 7547 and is the HTTP-share denominator. The core set excludes known overlaps and other roles, but its sum is not a count of unique devices. Unknown geography is reported separately.",
+    "about_p2": "<b>Ports and sums.</b> The overview separates all port-7547 matches from the sum of core signature queries. Each query retains its stated port scope; Huawei uses the all-port query. The map counter follows the selection. Unknown geography is reported separately.",
     "about_p4": "<b>Operators and geography.</b> Operator filtering sums only collected org facets, excluding the unmeasured tail. Multiple operators are combined. Regions restrict the country set; selected countries narrow it further.",
     "about_heading": "A map of observations.<br>Not a census of all devices.",
     "registry_note": "Counts are matches for individual queries at the snapshot date. Badges describe attribution confidence, not vulnerability.",
@@ -405,7 +409,11 @@
     "d_pinned": "pinned",
     "d_graph_hint": "Select a node to reveal its neighbors",
     "d_graph_help": "Select nodes to expand their neighbors. Drag nodes to pin them; drag the background to pan. Pinch or use +/− to zoom.",
-    "d_flow_help": "Signature → organization → country. Select a connection for its dated source record. Drag the background to pan."
+    "d_flow_help": "Signature → organization → country. Select a connection for its dated source record. Drag the background to pan.",
+    "overview_scope": "Worldwide · before map filters",
+    "overview_park": "All matches on port 7547",
+    "overview_signatures": "Core signature matches · query port scopes",
+    "slice_matches": "Signature matches in this selection"
   },
   "es": {
     "open_panel": "Abrir inspector",
@@ -417,10 +425,10 @@
     "sel_none": "sin selección — conjunto principal de firmas",
     "th_sum": "Σ firmas principales",
     "pair_share": "parte de la suma de firmas principales del país",
-    "cty_allports": "Σ firmas principales · todos los puertos",
+    "cty_allports": "Σ firmas principales · puertos de cada consulta",
     "wtn_sum": "{0} coincidencias · conjunto principal",
     "warn_slice": "Coincidencias ≠ dispositivos. El conjunto principal excluye superconjuntos, subconjuntos, clase nonce e interfaces web conocidos; no se ha probado que todos los conjuntos sean disjuntos. La selección manual suma las firmas elegidas.",
-    "about_p2": "<b>Puertos y sumas.</b> Las líneas abarcan todos sus puertos; el parque se limita a 7547 y es el denominador de la fracción HTTP. El conjunto principal excluye solapamientos conocidos y otros roles; su suma no cuenta dispositivos únicos. La geografía desconocida se muestra aparte.",
+    "about_p2": "<b>Puertos y sumas.</b> El resumen separa todas las coincidencias del puerto 7547 de la suma de las firmas principales. Cada consulta conserva sus condiciones de puerto; Huawei usa todos los puertos. El contador del mapa sigue la selección. La geografía desconocida se muestra aparte.",
     "about_p4": "<b>Operadores y geografía.</b> El filtro suma solo las facetas org recopiladas, sin el resto no medido. Se combinan varios operadores. Las regiones limitan los países; los países seleccionados restringen aún más el conjunto.",
     "about_heading": "Mapa de observaciones.<br>No un censo de todos los dispositivos.",
     "registry_note": "Los números son coincidencias de consultas individuales en la fecha del corte. Las etiquetas indican confianza en la atribución, no vulnerabilidad.",
@@ -609,7 +617,11 @@
     "d_pinned": "fijado",
     "d_graph_hint": "Selecciona un nodo para revelar sus vecinos",
     "d_graph_help": "Selecciona nodos para expandir sus vecinos. Arrastra nodos para fijarlos y el fondo para desplazar. Amplía con dos dedos o +/−.",
-    "d_flow_help": "Firma → organización → país. Selecciona una conexión para ver su fuente y fecha. Arrastra el fondo para desplazarte."
+    "d_flow_help": "Firma → organización → país. Selecciona una conexión para ver su fuente y fecha. Arrastra el fondo para desplazarte.",
+    "overview_scope": "Todo el mundo · antes de filtrar el mapa",
+    "overview_park": "Todas las coincidencias en el puerto 7547",
+    "overview_signatures": "Firmas principales · puertos de cada consulta",
+    "slice_matches": "Coincidencias de firmas en esta selección"
   },
   "zh": {
     "open_panel": "打开详情面板",
@@ -621,10 +633,10 @@
     "sel_none": "未选择筛选条件 — 主要签名集合",
     "th_sum": "Σ 主要签名",
     "pair_share": "占该国主要签名总和的比例",
-    "cty_allports": "Σ 主要签名 · 所有端口",
+    "cty_allports": "Σ 主要签名 · 各查询的端口范围",
     "wtn_sum": "{0} 条匹配 · 主要集合",
     "warn_slice": "匹配数不等于设备数。主要集合排除已知超集、子集、nonce 类和 Web 界面；尚未证明所有查询互不重叠。手动选择会对所选签名求和。",
-    "about_p2": "<b>端口与求和。</b>产品线覆盖其全部端口；群体仅限于 7547，用作 HTTP 占比的分母。主要集合排除已知重叠及其他角色，但总和并非唯一设备数。未知地理位置单独显示。",
+    "about_p2": "<b>端口与求和。</b>概览分别显示端口 7547 的全部匹配和主要指纹查询的总和。各查询保留其端口条件；Huawei 查询覆盖所有端口。地图计数随筛选变化。未知地理位置单独显示。",
     "about_p4": "<b>运营商与地理位置。</b>运营商筛选仅汇总已采集的 org 分类，不包含未测量的余量。多个运营商合并计算。地区限定国家范围；所选国家进一步缩小范围。",
     "about_heading": "观测地图。<br>并非所有设备的普查。",
     "registry_note": "计数为快照日期各查询的匹配数。徽章表示归属可信度，并非漏洞评估。",
@@ -813,6 +825,10 @@
     "d_pinned": "已固定",
     "d_graph_hint": "选择节点以展开相邻节点",
     "d_graph_help": "选择节点以展开邻居。拖动节点可固定位置，拖动背景可平移。双指或 +/− 缩放。",
-    "d_flow_help": "指纹 → 组织 → 国家。选择关联查看来源与日期，拖动背景平移。"
+    "d_flow_help": "指纹 → 组织 → 国家。选择关联查看来源与日期，拖动背景平移。",
+    "overview_scope": "全球 · 地图筛选前",
+    "overview_park": "端口 7547 的全部匹配",
+    "overview_signatures": "主要指纹匹配 · 各查询的端口范围",
+    "slice_matches": "当前筛选中的指纹匹配"
   }
 }

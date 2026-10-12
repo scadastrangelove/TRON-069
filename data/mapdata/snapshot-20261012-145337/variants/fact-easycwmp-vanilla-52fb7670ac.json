@@ -1,0 +1,135 @@
+{
+ "dork": "\"realm@easycwmp\" org:\"Fidium\"",
+ "total": 249902,
+ "taken": "2026-10-12T15:44:03+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 249902,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 249902,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 18,
+   "covered": 249902,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 249902,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 249902,
+   "value": "US"
+  }
+ ],
+ "asn": [
+  {
+   "count": 191174,
+   "value": "as13977"
+  },
+  {
+   "count": 26608,
+   "value": "as6300"
+  },
+  {
+   "count": 16697,
+   "value": "as14051"
+  },
+  {
+   "count": 4546,
+   "value": "as12042"
+  },
+  {
+   "count": 3397,
+   "value": "13977"
+  },
+  {
+   "count": 3315,
+   "value": "as13333"
+  },
+  {
+   "count": 2727,
+   "value": "as5742"
+  },
+  {
+   "count": 409,
+   "value": "6300"
+  },
+  {
+   "count": 306,
+   "value": "as13672"
+  },
+  {
+   "count": 254,
+   "value": "as22647"
+  },
+  {
+   "count": 178,
+   "value": "as14671"
+  },
+  {
+   "count": 120,
+   "value": "14051"
+  },
+  {
+   "count": 76,
+   "value": "12042"
+  },
+  {
+   "count": 73,
+   "value": "5742"
+  },
+  {
+   "count": 14,
+   "value": "13333"
+  },
+  {
+   "count": 5,
+   "value": "13672"
+  },
+  {
+   "count": 2,
+   "value": "22647"
+  },
+  {
+   "count": 1,
+   "value": "14671"
+  }
+ ],
+ "ports": [
+  {
+   "count": 249902,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 249902,
+   "value": "Fidium"
+  }
+ ],
+ "id": "fact-easycwmp-vanilla-52fb7670ac",
+ "parent": "easycwmp-vanilla",
+ "group": "facts",
+ "label": {
+  "ru": "карман Fidium/Consolidated",
+  "en": "Fidium/Consolidated subset",
+  "es": "Subconjunto Fidium/Consolidated",
+  "zh": "Fidium/Consolidated 子集"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

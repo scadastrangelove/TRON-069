@@ -222,6 +222,19 @@ class BuildTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, 'Invalid news link'):
                     builder.read_news()
 
+    def test_core_keeps_huawei_auxiliary_ports_without_adding_7547_subset(self):
+        snapshot = self.snapshot()
+        for slug, count in [('huaweihomegateway', 30), ('huaweihomegateway-cr-slice', 10)]:
+            record = builder.read(snapshot / f'{slug}.json')
+            record.update(total=count, countries=[dict(value='US', count=count)])
+            (snapshot / f'{slug}.json').write_text(json.dumps(record))
+        data = builder.build(snapshot, self.root / 'output')
+        self.assertNotIn('huaweihomegateway', data['excluded'])
+        self.assertIn('huaweihomegateway-cr-slice', data['excluded'])
+        other = sum(line['countries'].get('US', 0) for slug, line in data['lines'].items()
+                    if slug not in data['excluded'] and slug != 'huaweihomegateway')
+        self.assertEqual(data['ident']['US'], other + 30)
+
     def test_acs_is_excluded_independently_of_static_exclusion_list(self):
         snapshot=self.snapshot()
         rec=builder.read(snapshot/'tr069-client.json')

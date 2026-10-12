@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:GE",
+ "total": 12,
+ "taken": "2026-10-12T15:18:22+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 12,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 12,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as34797"
+  },
+  {
+   "count": 5,
+   "value": "as49628"
+  },
+  {
+   "count": 1,
+   "value": "as57768"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 6,
+   "value": "LLC Skytel"
+  },
+  {
+   "count": 2,
+   "value": "Point to point broadband lines block-6"
+  },
+  {
+   "count": 2,
+   "value": "System Net Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Egrisi ISP ADSL2+ Broadband block 6"
+  },
+  {
+   "count": 1,
+   "value": "Point to point broadband lines block-1"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "GE"
+}

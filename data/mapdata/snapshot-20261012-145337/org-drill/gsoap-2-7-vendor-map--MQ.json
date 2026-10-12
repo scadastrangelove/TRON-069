@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:MQ",
+ "total": 32,
+ "taken": "2026-10-12T15:18:05+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 32,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 32,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 32,
+   "value": "as3215"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 10,
+   "value": "BSLAM651 Lamentin Bloc 2"
+  },
+  {
+   "count": 9,
+   "value": "BSLAM651 Lamentin Bloc 1"
+  },
+  {
+   "count": 9,
+   "value": "LNLAM656 Lamentin Bloc 1"
+  },
+  {
+   "count": 2,
+   "value": "LNLAM656 Lamentin"
+  },
+  {
+   "count": 2,
+   "value": "LNLAM656 Lamentin Bloc 2"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "MQ"
+}

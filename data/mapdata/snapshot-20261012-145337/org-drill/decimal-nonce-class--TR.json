@@ -1,0 +1,81 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:TR",
+ "total": 12,
+ "taken": "2026-10-12T15:31:43+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 8,
+   "covered": 12,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 12,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 4,
+   "value": "as8386"
+  },
+  {
+   "count": 3,
+   "value": "as205424"
+  },
+  {
+   "count": 2,
+   "value": "as12735"
+  },
+  {
+   "count": 2,
+   "value": "as34984"
+  },
+  {
+   "count": 1,
+   "value": "as209714"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Ulunet Internet ve Iletisim Hizmetleri San. ve Tic. Ltd. Sti."
+  },
+  {
+   "count": 2,
+   "value": "Superonline Iletisim Hizmetleri A.S."
+  },
+  {
+   "count": 2,
+   "value": "Vodafone Net Iletisim Hizmetler AS"
+  },
+  {
+   "count": 1,
+   "value": "CERENNET CEREN NET BILISIM TELEKOMUNIKASYON HABERLESME TIC.LTD.STI."
+  },
+  {
+   "count": 1,
+   "value": "Koc.Net DSL Denizli"
+  },
+  {
+   "count": 1,
+   "value": "Koc.net Network Operations Center"
+  },
+  {
+   "count": 1,
+   "value": "TurkNet Iletisim Hizmetleri A.S."
+  },
+  {
+   "count": 1,
+   "value": "Turknet-Broadband"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "TR"
+}

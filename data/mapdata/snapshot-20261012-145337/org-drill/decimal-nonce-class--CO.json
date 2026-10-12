@@ -1,0 +1,85 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:CO",
+ "total": 131,
+ "taken": "2026-10-12T15:31:28+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 8,
+   "covered": 131,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 130,
+   "remainder": 1
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 117,
+   "value": "as11139"
+  },
+  {
+   "count": 7,
+   "value": "as10299"
+  },
+  {
+   "count": 2,
+   "value": "11139"
+  },
+  {
+   "count": 2,
+   "value": "as14813"
+  },
+  {
+   "count": 1,
+   "value": "10299"
+  },
+  {
+   "count": 1,
+   "value": "as22368"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 29,
+   "value": "Cable & Wireless St. Kitts"
+  },
+  {
+   "count": 28,
+   "value": "Cable & Wireless Antigua and Barbuda Ltd"
+  },
+  {
+   "count": 24,
+   "value": "Cable & Wireless (Barbados) Limited"
+  },
+  {
+   "count": 21,
+   "value": "Cable and Wireless Anguilla"
+  },
+  {
+   "count": 16,
+   "value": "Cable and Wireless Jamaica"
+  },
+  {
+   "count": 8,
+   "value": "EMPRESAS MUNICIPALES DE CALI E.I.C.E. E.S.P."
+  },
+  {
+   "count": 4,
+   "value": "Cable & Wiresles Tortola"
+  },
+  {
+   "count": 1,
+   "value": "TELEBUCARAMANGA S.A. E.S.P."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "CO"
+}

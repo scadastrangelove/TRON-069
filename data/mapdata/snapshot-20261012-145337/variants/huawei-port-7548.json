@@ -1,0 +1,219 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:7548",
+ "total": 3587,
+ "taken": "2026-10-12T15:43:32+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 6,
+   "covered": 3587,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 26,
+   "covered": 3587,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 9,
+   "covered": 3587,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 3587,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 3560,
+   "value": "FR"
+  },
+  {
+   "count": 19,
+   "value": "DK"
+  },
+  {
+   "count": 5,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "LT"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 3544,
+   "value": "as60032"
+  },
+  {
+   "count": 19,
+   "value": "as3292"
+  },
+  {
+   "count": 15,
+   "value": "60032"
+  },
+  {
+   "count": 4,
+   "value": "as8151"
+  },
+  {
+   "count": 1,
+   "value": "1257"
+  },
+  {
+   "count": 1,
+   "value": "as13999"
+  },
+  {
+   "count": 1,
+   "value": "as3320"
+  },
+  {
+   "count": 1,
+   "value": "as8048"
+  },
+  {
+   "count": 1,
+   "value": "as8362"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3587,
+   "value": 7548
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2141,
+   "value": "Coriolis Telecom SAS"
+  },
+  {
+   "count": 227,
+   "value": "FTTH Customers - 18"
+  },
+  {
+   "count": 215,
+   "value": "FTTH Customers - 19"
+  },
+  {
+   "count": 189,
+   "value": "FTTH Customers - 20"
+  },
+  {
+   "count": 128,
+   "value": "FTTH Customers - 16"
+  },
+  {
+   "count": 124,
+   "value": "FTTH Customers - 17"
+  },
+  {
+   "count": 67,
+   "value": "FTTH Customers - 09"
+  },
+  {
+   "count": 62,
+   "value": "FTTH Customers - 10"
+  },
+  {
+   "count": 54,
+   "value": "FTTH Customers - 12"
+  },
+  {
+   "count": 51,
+   "value": "FTTH Customers - 01"
+  },
+  {
+   "count": 51,
+   "value": "FTTH Customers - 11"
+  },
+  {
+   "count": 43,
+   "value": "FTTH Customers - 04"
+  },
+  {
+   "count": 40,
+   "value": "FTTH Customers - 05"
+  },
+  {
+   "count": 36,
+   "value": "FTTH Customers - 06"
+  },
+  {
+   "count": 35,
+   "value": "FTTH Customers - 02"
+  },
+  {
+   "count": 34,
+   "value": "FTTH Customers - 03"
+  },
+  {
+   "count": 34,
+   "value": "FTTH Customers - 08"
+  },
+  {
+   "count": 28,
+   "value": "FTTH Customers - 07"
+  },
+  {
+   "count": 19,
+   "value": "TDC Holding A/S"
+  },
+  {
+   "count": 3,
+   "value": "Gestión de direccionamiento UniNet"
+  },
+  {
+   "count": 1,
+   "value": "CANTV Servicios, Venezuela"
+  },
+  {
+   "count": 1,
+   "value": "Mega Cable, S.A. de C.V."
+  },
+  {
+   "count": 1,
+   "value": "Mobile Services Lithuania"
+  },
+  {
+   "count": 1,
+   "value": "Orange S.A."
+  },
+  {
+   "count": 1,
+   "value": "Telekom Deutschland GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Uninet S.A. de C.V."
+  }
+ ],
+ "id": "huawei-port-7548",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 7548",
+  "en": "CR port 7548",
+  "es": "Puerto CR 7548",
+  "zh": "CR 端口 7548"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

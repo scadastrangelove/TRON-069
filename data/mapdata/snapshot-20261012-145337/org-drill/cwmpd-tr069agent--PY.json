@@ -1,0 +1,45 @@
+{
+ "dork": "\"cwmpd\" opaque country:PY",
+ "total": 5,
+ "taken": "2026-10-12T15:36:15+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 1
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 4,
+   "value": "as263750"
+  },
+  {
+   "count": 1,
+   "value": "as269783"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "FLIEGNER MARCIANO(SCHMITZ SEGURIDAD ELECTRONICA)"
+  },
+  {
+   "count": 1,
+   "value": "WIND NET S.A."
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "PY"
+}

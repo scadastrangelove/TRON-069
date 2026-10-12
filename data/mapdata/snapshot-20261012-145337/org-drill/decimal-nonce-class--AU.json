@@ -1,0 +1,69 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:AU",
+ "total": 131,
+ "taken": "2026-10-12T15:31:25+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 131,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 131,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 124,
+   "value": "as1221"
+  },
+  {
+   "count": 3,
+   "value": "1221"
+  },
+  {
+   "count": 2,
+   "value": "as2764"
+  },
+  {
+   "count": 1,
+   "value": "as38333"
+  },
+  {
+   "count": 1,
+   "value": "as4804"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 127,
+   "value": "Telstra Limited"
+  },
+  {
+   "count": 1,
+   "value": "AAPT Limited"
+  },
+  {
+   "count": 1,
+   "value": "Optus Internet Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Symbio Networks"
+  },
+  {
+   "count": 1,
+   "value": "TPG Internet Pty Ltd."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "AU"
+}

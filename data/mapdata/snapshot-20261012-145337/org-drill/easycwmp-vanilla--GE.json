@@ -1,0 +1,65 @@
+{
+ "dork": "\"realm@easycwmp\" country:GE",
+ "total": 180,
+ "taken": "2026-10-12T15:20:05+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 180,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 180,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 178,
+   "value": "as16010"
+  },
+  {
+   "count": 1,
+   "value": "16010"
+  },
+  {
+   "count": 1,
+   "value": "as34797"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 100,
+   "value": "MAGTCION"
+  },
+  {
+   "count": 41,
+   "value": "Magticom"
+  },
+  {
+   "count": 30,
+   "value": "MAGTICOM"
+  },
+  {
+   "count": 5,
+   "value": "MagticomAS Magticom Ltd."
+  },
+  {
+   "count": 3,
+   "value": "Magticom Ltd."
+  },
+  {
+   "count": 1,
+   "value": "Egrisi ISP ADSL2+ Broadband block 6"
+  }
+ ],
+ "line": "easycwmp vanilla",
+ "line_id": "easycwmp-vanilla",
+ "cc": "GE"
+}

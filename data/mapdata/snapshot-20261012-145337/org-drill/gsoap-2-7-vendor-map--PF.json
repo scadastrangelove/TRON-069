@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:PF",
+ "total": 53,
+ "taken": "2026-10-12T15:17:53+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 1,
+   "covered": 53,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 53,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 51,
+   "value": "as9471"
+  },
+  {
+   "count": 2,
+   "value": "9471"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 53,
+   "value": "ONATI"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "PF"
+}

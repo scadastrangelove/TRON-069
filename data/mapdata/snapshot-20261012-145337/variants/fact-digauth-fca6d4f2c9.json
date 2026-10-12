@@ -1,0 +1,87 @@
+{
+ "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" !\"DigAuth\"",
+ "total": 6,
+ "taken": "2026-10-12T15:44:24+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 4,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 5,
+   "value": "TW"
+  },
+  {
+   "count": 1,
+   "value": "BR"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as3462"
+  },
+  {
+   "count": 1,
+   "value": "as27699"
+  }
+ ],
+ "ports": [
+  {
+   "count": 6,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Chunghwa Telecom Co.,Ltd."
+  },
+  {
+   "count": 1,
+   "value": "Chunghwa Telecom Data Communication Business Group"
+  },
+  {
+   "count": 1,
+   "value": "Data Communication Business Group,"
+  },
+  {
+   "count": 1,
+   "value": "TELEFÔNICA BRASIL S.A"
+  }
+ ],
+ "id": "fact-digauth-fca6d4f2c9",
+ "parent": "digauth",
+ "group": "facts",
+ "label": {
+  "ru": "fake-Apache ребренд (Vivo BR)",
+  "en": "Rebranded fake Apache (Vivo BR)",
+  "es": "Apache falso con otra marca (Vivo BR)",
+  "zh": "改名后的伪 Apache（Vivo BR）"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,49 @@
+{
+ "dork": "\"Server: cwmp server\" country:MG",
+ "total": 4,
+ "taken": "2026-10-12T15:27:37+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 4,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as37037"
+  },
+  {
+   "count": 1,
+   "value": "as37054"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Mobile Service"
+  },
+  {
+   "count": 1,
+   "value": "Telecom Malagasy"
+  },
+  {
+   "count": 1,
+   "value": "for abuses: abuse@orange.mg"
+  }
+ ],
+ "line": "cwmp server",
+ "line_id": "cwmp-server",
+ "cc": "MG"
+}

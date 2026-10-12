@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:CL",
+ "total": 4238,
+ "taken": "2026-10-12T15:31:04+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 4238,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 4238,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 4191,
+   "value": "as22047"
+  },
+  {
+   "count": 47,
+   "value": "22047"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4235,
+   "value": "VTR BANDA ANCHA S.A."
+  },
+  {
+   "count": 2,
+   "value": "CLARO CHILE S.A."
+  },
+  {
+   "count": 1,
+   "value": "Hotel Rugendas 2"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "CL"
+}

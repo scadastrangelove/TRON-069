@@ -27,6 +27,7 @@ nettyserver,cpe,NettyServer,Custom WindTre implementation (Java/Netty),"""NettyS
 genieacs-admin-ui,acs,GenieACS admin-UI,GenieACS,"http.title:""GenieACS""",3730,2026-10-10T10:21:49+00:00,"ID 1,298; BR 541; US 479; AU 208",Version markers are counted separately; a banner does not establish vulnerability.
 openacs,acs,openacs,OpenACS,"""openacs""",13,2026-10-10T10:21:51+00:00,MK 7; TN 2; AT 1; BR 1,12 hosts
 axiros,acs,Axiros,Axiros,"""Axiros""",6,2026-10-10T10:21:52+00:00,DE 4; CH 2,7 hosts
+freeacs,acs,FreeACS Web,FreeACS community,"http.title:""FreeACS""",6,2026-10-12T13:37:05+00:00,IT 2; SG 2; BE 1; CA 1,"Admin-UI title matches only; two deployment stacks observed (direct Tomcat at two Italian ISP networks, nginx reverse proxy at cloud test rigs); a doubled Web Web module-name title artifact on the ISP hosts; no honeypot markers in the inspected records"
 askeycwmp-askey,cpe,ASKEYCWMP (Askey),Askey (ODM),port:7547 ASKEYCWMP,661990,2026-10-10T10:21:53+00:00,"BR 606,371; CO 32,906; AR 22,106; ES 255",Server: ASKEY_CWMP_Client V1.2.2 Vivo BR = 591k ( Telefônica Brasil)
 meig-meigsmart-com,cpe,MEiG (meigsmart.com),MEiG (OEM),"""www.meigsmart.com""",2528,2026-10-10T10:21:54+00:00,"KW 1,341; HT 973; BR 159; JO 38",Identified by the named authentication realm; counts describe the exact registry query.
 kt-cems,cpe,KT CEMS,Korea Telecom,"""ktcems.com""",26755,2026-10-10T10:21:55+00:00,"KR 26,751; CA 2; HK 1; US 1",KR park: 11.4M on 7547; ~80% silent (whitelist-CR hypothesis)

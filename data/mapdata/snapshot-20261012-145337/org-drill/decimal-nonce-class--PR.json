@@ -1,0 +1,73 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PR",
+ "total": 1826,
+ "taken": "2026-10-12T15:31:06+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 1826,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 1826,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1798,
+   "value": "as14638"
+  },
+  {
+   "count": 22,
+   "value": "14638"
+  },
+  {
+   "count": 4,
+   "value": "as22581"
+  },
+  {
+   "count": 2,
+   "value": "as10396"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1767,
+   "value": "Liberty Communications of Puerto Rico LLC"
+  },
+  {
+   "count": 25,
+   "value": "Liberty Cablevision - Caguas"
+  },
+  {
+   "count": 13,
+   "value": "Liberty Cablevision - Luquillo"
+  },
+  {
+   "count": 9,
+   "value": "Liberty Cablevision - Arecibo"
+  },
+  {
+   "count": 7,
+   "value": "Liberty Cablevision - Humacao"
+  },
+  {
+   "count": 3,
+   "value": "Broadband VI, LLC"
+  },
+  {
+   "count": 2,
+   "value": "Puerto Rico Telephone Company"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PR"
+}

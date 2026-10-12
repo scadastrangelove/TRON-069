@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:MA",
+ "total": 57,
+ "taken": "2026-10-12T15:31:37+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 57,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 57,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 55,
+   "value": "as36903"
+  },
+  {
+   "count": 1,
+   "value": "36903"
+  },
+  {
+   "count": 1,
+   "value": "as6713"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 18,
+   "value": "ADSL_Maroc_telecom"
+  },
+  {
+   "count": 16,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 14,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 8,
+   "value": "MarocTelecomASDL"
+  },
+  {
+   "count": 1,
+   "value": "PS CASA Marrakech Maroc Telecom"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "MA"
+}

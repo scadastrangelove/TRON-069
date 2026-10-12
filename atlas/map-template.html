@@ -66,6 +66,12 @@ main{max-width:1800px;margin:0 auto;padding:22px clamp(14px,3vw,44px) 40px}
 .intro h1{font-size:clamp(24px,3vw,33px);letter-spacing:-1.1px;font-weight:750;margin-top:8px}
 .intro h1 span{font-weight:400;color:var(--faint)}
 .intro .sub{color:var(--muted);font-size:12.5px;margin-top:9px;max-width:560px;line-height:1.6}
+.overview-counts{min-width:0;max-width:470px;flex:1 1 320px;border:1px solid var(--line);border-radius:12px;padding:12px 16px;background:#fff}
+.overview-counts>small{display:block;font-size:10px;color:var(--faint);margin-bottom:10px}
+.overview-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.overview-values>div+div{border-left:1px solid var(--line);padding-left:18px}
+.overview-values strong{display:block;font-size:25px;letter-spacing:-.6px}
+.overview-values span{display:block;font-size:11px;color:var(--muted);line-height:1.5;margin-top:3px}
 .kpis{display:none}
 .kpi{padding-right:26px;border-right:1px solid var(--line);min-width:96px}
 .kpi:last-child{border:0}
@@ -392,6 +398,7 @@ dialog b{color:var(--ink)}
  .stage{height:400px}
  .lgitems{max-height:70px}
  .intro h1{font-size:22px}
+ .overview-values{gap:10px}.overview-values>div+div{padding-left:10px}.overview-values strong{font-size:20px;white-space:nowrap}
 }
 /* Relationship graph: fixed evidence layout, native scrolling on touch screens. */
 .eco-header{display:flex;justify-content:space-between;align-items:start;gap:20px;margin:24px 0 20px}
@@ -522,7 +529,13 @@ dialog b{color:var(--ink)}
   <h1 data-i18n="intro_title">Весь флот. <span>Одна карта.</span></h1>
   <p class="sub" data-i18n="intro_sub">Компоненты, география и операторы — от обзора к доказательствам. Всё пассивно: совпадения Shodan, никаких запросов к устройствам.</p>
  </div>
-
+ <div class="overview-counts">
+  <small data-i18n="overview_scope"></small>
+  <div class="overview-values">
+   <div><strong class="num" id="overviewPark"></strong><span data-i18n="overview_park"></span></div>
+   <div><strong class="num" id="overviewSignatures"></strong><span data-i18n="overview_signatures"></span></div>
+  </div>
+ </div>
 </section>
 
 <div class="facets" id="facetsRow">
@@ -589,7 +602,7 @@ dialog b{color:var(--ink)}
   </div>
   <div class="legendbar">
    <div class="lgcap"><span data-i18n="light">Лёгкий срез</span><small data-i18n="light_hint">клик — вкл/выкл · ⌥ — только она</small></div>
-   <div style="min-width:150px"><b class="num" id="sliceSum" style="font-size:16px"></b><div class="num" id="sliceSub" style="font-size:10.5px;color:var(--muted);margin-top:3px"></div></div>
+   <div style="min-width:150px"><div class="note" data-i18n="slice_matches"></div><b class="num" id="sliceSum" style="font-size:16px"></b><div class="num" id="sliceSub" style="font-size:10.5px;color:var(--muted);margin-top:3px"></div></div>
    <div class="lgitems" id="lgItems"></div>
    <button class="lgmore" id="lgMore"></button>
    <button class="lgclear" id="lgClear" hidden data-i18n="remove_selection"></button>
@@ -1691,6 +1704,13 @@ function renderMode(){
 }
 
 /* легенда-лёгкий срез */
+function renderOverview(){
+ const signatureTotal=DISJOINT.reduce((sum,slug)=>sum+DATA.lines[slug].total,0);
+ for(const [id,total] of [["#overviewPark",DATA.denominators.park.total],["#overviewSignatures",signatureTotal]]){
+  $(id).textContent=fmt(total);
+  $(id).title=new Intl.NumberFormat(LANG).format(total);
+ }
+}
 function renderLegend(){
  const box=$("#lgItems");
  box.classList.toggle("exp",S.lgExpanded);
@@ -1702,7 +1722,7 @@ function renderLegend(){
  $("#lgMore").textContent=S.lgExpanded?t("lg_less"):t("lg_more");
  $("#lgClear").hidden=!S.lines.size;
  $("#sliceSum").textContent=fmt(SLICE.total);
- $("#sliceSub").textContent=t("slice_sub",SLICE.ccs.size,SLICE.lines.size,SLICE.disjoint,DATA.snapshot.slice(-4));
+ $("#sliceSub").textContent=t("slice_sub",SLICE.ccs.size,SLICE.lines.size,SLICE.disjoint,DATA.snapshot.slice(0,8).replace(/(\d{4})(\d{2})(\d{2})/,"$1-$2-$3"));
  const unknown=unknownCountryTotal();
  if(unknown)$("#sliceSub").textContent+=" · "+t("unknown_country",fmtF(unknown));
  box.querySelectorAll(".lgchip").forEach(ch=>{
@@ -2663,7 +2683,7 @@ function refreshAll(){
  $("#snapLabel").textContent=DATA.snapshot.replace(/(\d{4})(\d{2})(\d{2})-(\d{2})(\d{2})(\d{2})?/,"$3.$2.$1 · $4:$5 UTC");
  facetBtnState();renderChips();renderMode();
  renderCountries();renderClouds();renderLabels();
- renderLegend();renderTable();renderLinesTable();renderInspector();
+ renderOverview();renderLegend();renderTable();renderLinesTable();renderInspector();
  renderRegistry();renderFindings();renderAbout();renderNews();renderEcosystem();renderTabVisibility();urlWrite();
 
 }

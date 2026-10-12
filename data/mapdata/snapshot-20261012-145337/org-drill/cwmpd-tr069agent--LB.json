@@ -1,0 +1,57 @@
+{
+ "dork": "\"cwmpd\" opaque country:LB",
+ "total": 6,
+ "taken": "2026-10-12T15:36:11+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as31126"
+  },
+  {
+   "count": 2,
+   "value": "as42003"
+  },
+  {
+   "count": 1,
+   "value": "as48847"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "SODETEL S.A.L."
+  },
+  {
+   "count": 1,
+   "value": "2nd allocation inetnum4"
+  },
+  {
+   "count": 1,
+   "value": "OGERO"
+  },
+  {
+   "count": 1,
+   "value": "X.O.L Broadband sal"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "LB"
+}

@@ -1,0 +1,69 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:IM",
+ "total": 5295,
+ "taken": "2026-10-12T15:11:22+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 5295,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 5295,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5227,
+   "value": "as13122"
+  },
+  {
+   "count": 67,
+   "value": "13122"
+  },
+  {
+   "count": 1,
+   "value": "as8680"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4590,
+   "value": "Residential ADSL - Manx Telecom"
+  },
+  {
+   "count": 489,
+   "value": "Manx Telecom Trading Ltd"
+  },
+  {
+   "count": 194,
+   "value": "Licensed Provider"
+  },
+  {
+   "count": 10,
+   "value": "Corporate"
+  },
+  {
+   "count": 10,
+   "value": "Manx Telecom - ADSL - STATIC IP"
+  },
+  {
+   "count": 1,
+   "value": "ADSL - Static - Manx Telecom"
+  },
+  {
+   "count": 1,
+   "value": "Sure IOM BB"
+  }
+ ],
+ "line": "TR069 Client",
+ "line_id": "tr069-client",
+ "cc": "IM"
+}

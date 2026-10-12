@@ -14,6 +14,13 @@ const source = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const data = JSON.parse(source.match(/^const DATA = (.*);$/m)[1]);
 const operatorFixture = JSON.parse(fs.readFileSync(path.join(root,'data/mapdata',`snapshot-${data.snapshot}`,'org-drill','igdauthentication--US.json'),'utf8'));
 const blueStreamCount = operatorFixture.orgs.find(org=>org.value==='Blue Stream').count;
+function sourceOrgTotal(cc, labels) {
+  const record=JSON.parse(fs.readFileSync(path.join(root,'data/mapdata',`snapshot-${data.snapshot}`,'org-drill',`tr069-http-server--${cc}.json`),'utf8'));
+  return record.orgs.filter(org=>labels.includes(org.value)).reduce((sum,org)=>sum+org.count,0);
+}
+const tpgExactTotal=sourceOrgTotal('AU',['TPG Internet Pty Ltd','TPG Internet Pty Ltd.']);
+const tpgGroupTotal=sourceOrgTotal('AU',['TPG Internet Pty Ltd','TPG Internet Pty Ltd.','iiNet Limited']);
+const windTreTotal=sourceOrgTotal('IT',['WIND TRE S.P.A.']);
 const results = [];
 function test(id, description, work) {
   try {
@@ -74,7 +81,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
       'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
       'sourcesHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
-      'coverageNote','unknownCountryTotal','renderRegistry','renderFindings','renderAbout',
+      'coverageNote','unknownCountryTotal','renderRegistry','renderFindings','renderAbout','renderOverview','renderLegend',
       'newsText','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews'].map(fn),
     'function refreshTest(){SLICE=computeSlice();SLICE_FULL=computeSlice(true);GEOT=lineGeoTotals();}',
     'DNcur=new Intl.DisplayNames([LANG],{type:"region"});'
@@ -86,6 +93,21 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null } = 
 }
 
 test('syntax', 'Application JavaScript parses', () => { new vm.Script(source); return 'Parsed'; });
+test('overview-count-scopes', 'Worldwide port and signature counts remain distinct from a filtered map selection', () => {
+  const c=context();
+  const coreTotal=Object.entries(data.lines).filter(([slug])=>!data.excluded.includes(slug)).reduce((sum,[,line])=>sum+line.total,0);
+  c.run('refreshTest();renderOverview();renderLegend();');
+  expect(c.element('#overviewPark').title===new Intl.NumberFormat('en').format(data.denominators.park.total), 'Port baseline lost');
+  expect(c.element('#overviewSignatures').title===new Intl.NumberFormat('en').format(coreTotal), 'Core total must include unknown geography');
+  const allSignatures=c.element('#overviewSignatures').textContent;
+  c.run('S.lines=new Set(["huaweihomegateway"]);S.geo.add("c:US");refreshTest();renderOverview();renderLegend();');
+  expect(c.run('SLICE.total')===data.lines.huaweihomegateway.countries.US, 'Filtered Huawei slice differs from all-port query');
+  expect(c.element('#overviewSignatures').textContent===allSignatures, 'Worldwide total changed with filters');
+  const date=data.snapshot.slice(0,8).replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3');
+  expect(c.element('#sliceSub').textContent.includes(date), 'Slice date must show the calendar date');
+  for(const lang of ['en','ru','es','zh'])c.run(`LANG=${JSON.stringify(lang)};renderOverview();`);
+  return `Port baseline ${data.denominators.park.total}; core ${coreTotal}; selection scoped separately`;
+});
 test('ecosystem-views', 'Filters, neighborhoods and shared graph state preserve evidence scope', () => {
   const c=context({hash:'#lang=es&tab=ecosystem&eco_node=gateway&eco_focus=gateway&eco_hyp=1&eco_depth=2'});
   c.run('urlRead();renderEcosystem();urlWrite();');
@@ -126,15 +148,15 @@ test('network-combinations', 'Country-scoped operator aliases preserve many-to-m
   c.run('DS.country="IT";DS.operator="o:windtre"');
   const rows=c.run('dFiltered()');
   expect(rows.length>=5, 'WindTre combinations collapsed');
-  expect(rows.find(r=>r.line==='tr069-http-server').count===167081,'WindTre source count changed');
+  expect(windTreTotal>0&&rows.find(r=>r.line==='tr069-http-server').count===windTreTotal,'WindTre differs from its source count');
   c.run('DS.country="AU";DS.operator="o:tpg"');
   const tpg=c.run('dFiltered().find(r=>r.line==="tr069-http-server")');
-  expect(tpg.count===388086&&tpg.raws.length===2,'TPG aliases did not retain exact source members');
+  expect(tpgExactTotal>0&&tpg.count===tpgExactTotal&&tpg.raws.length===2,'TPG aliases did not retain exact source members');
   c.run('DS.group=true;DS.operator="g:tpg-telecom"');
   const grouped=c.run('dFiltered().find(r=>r.line==="tr069-http-server")');
-  expect(grouped.count===590750&&grouped.raws.length===3,'TPG group failed');
+  expect(tpgGroupTotal>tpgExactTotal&&grouped.count===tpgGroupTotal&&grouped.raws.length===3,'TPG group failed');
   c.run('DS.operator="";DS.q="iiNet"');
-  expect(c.run('dFiltered().find(r=>r.line==="tr069-http-server").count')===590750,'Search matched a partial group');
+  expect(c.run('dFiltered().find(r=>r.line==="tr069-http-server").count')===tpgGroupTotal,'Search matched a partial group');
   const idx=c.run('buildDeploymentIndex({"x--GB":{orgs:[{value:"IP pools",count:2}]},"x--IT":{orgs:[{value:"IP pools",count:3}]}},{x:{}},DATA.operatorCatalog)');
   expect(idx.observations[0].operator!==idx.observations[1].operator,'Countries merged');
   expect(idx.entities[idx.observations[0].operator].kind==='raw','Generic pool inferred as BT');
@@ -167,12 +189,12 @@ test('matrix-coverage', 'Matrix distinguishes zero, truncated tail, uncollected 
 test('network-map-roundtrip', 'Exact raw organization selections survive map URLs without broadening or double counting', () => {
   const c=context();
   c.run('S.lines=new Set(["tr069-http-server"]);S.geo=new Set(["c:AU"]);S.orgs=new Set(["raw:TPG Internet Pty Ltd","raw:TPG Internet Pty Ltd."]);urlWrite(true);S.orgs.clear();urlRead()');
-  expect(c.run('computeSlice().total')===388086,'Exact TPG map total failed');
+  expect(tpgExactTotal>0&&c.run('computeSlice().total')===tpgExactTotal,'Exact TPG map total failed');
   c.run('S.orgs.add(normOrg("TPG Internet Pty Ltd","AU"))');
   const actual=c.run('computeSlice().total');
   const expected=data.orgdrill['tr069-http-server--AU'].orgs.reduce((n,o)=>n+(c.run(`S.orgs.has("raw:"+${JSON.stringify(o.value)})||S.orgs.has(normOrg(${JSON.stringify(o.value)},"AU"))`)?o.count:0),0);
   expect(actual===expected,'Broad and exact labels double-counted');
-  return {exact:388086,withAlias:actual};
+  return {exact:tpgExactTotal,withAlias:actual};
 });
 test('network-share-localization', 'Graph and matrix links restore filters, selection and four languages', () => {
   const c=context({hash:'#tab=ecosystem&eco_view=networks&net_country=IT&net_operator=o%3Awindtre&net_view=matrix'});

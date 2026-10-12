@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:LS",
+ "total": 10,
+ "taken": "2026-10-12T15:18:25+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 1,
+   "covered": 10,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 10,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 9,
+   "value": "as33567"
+  },
+  {
+   "count": 1,
+   "value": "33567"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 10,
+   "value": "Econet Telecom Lesotho (PTY) LTD"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "LS"
+}

@@ -1,0 +1,45 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:TV",
+ "total": 351,
+ "taken": "2026-10-12T15:11:59+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 351,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 320,
+   "remainder": 31
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 319,
+   "value": "as23917"
+  },
+  {
+   "count": 1,
+   "value": "23917"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 320,
+   "value": "Government-Outer Islands Address Space"
+  },
+  {
+   "count": 31,
+   "value": "Tuvalu Telecommunications Corporation"
+  }
+ ],
+ "line": "TR069 Client",
+ "line_id": "tr069-client",
+ "cc": "TV"
+}

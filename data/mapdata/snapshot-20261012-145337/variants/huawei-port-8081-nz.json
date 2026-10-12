@@ -1,0 +1,135 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8081 country:NZ",
+ "total": 98169,
+ "taken": "2026-10-12T15:43:20+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 98169,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 11,
+   "covered": 98169,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 8,
+   "covered": 91706,
+   "remainder": 6463
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 98169,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 98169,
+   "value": "NZ"
+  }
+ ],
+ "asn": [
+  {
+   "count": 90719,
+   "value": "as4771"
+  },
+  {
+   "count": 980,
+   "value": "4771"
+  },
+  {
+   "count": 2,
+   "value": "as45177"
+  },
+  {
+   "count": 1,
+   "value": "132857"
+  },
+  {
+   "count": 1,
+   "value": "9500"
+  },
+  {
+   "count": 1,
+   "value": "as134220"
+  },
+  {
+   "count": 1,
+   "value": "as18159"
+  },
+  {
+   "count": 1,
+   "value": "as55872"
+  }
+ ],
+ "ports": [
+  {
+   "count": 98169,
+   "value": 8081
+  }
+ ],
+ "orgs": [
+  {
+   "count": 75746,
+   "value": "Spark New Zealand Trading Ltd"
+  },
+  {
+   "count": 19365,
+   "value": "Spark New Zealand Trading Limited"
+  },
+  {
+   "count": 3049,
+   "value": "SPARK NEW ZEALAND TRADING LIMITED"
+  },
+  {
+   "count": 2,
+   "value": "Spark NZ Ltd"
+  },
+  {
+   "count": 1,
+   "value": "BayCity Communications"
+  },
+  {
+   "count": 1,
+   "value": "Devoli LTD"
+  },
+  {
+   "count": 1,
+   "value": "Devoli NZ Broadband customers"
+  },
+  {
+   "count": 1,
+   "value": "Dynamic allocations"
+  },
+  {
+   "count": 1,
+   "value": "FULL FLAVOUR LIMITED"
+  },
+  {
+   "count": 1,
+   "value": "Static Allocation Netspeed Misc"
+  },
+  {
+   "count": 1,
+   "value": "UFONE Next Generation Services Broadband"
+  }
+ ],
+ "id": "huawei-port-8081-nz",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8081 · NZ",
+  "en": "CR port 8081 · NZ",
+  "es": "Puerto CR 8081 · NZ",
+  "zh": "CR 端口 8081 · NZ"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

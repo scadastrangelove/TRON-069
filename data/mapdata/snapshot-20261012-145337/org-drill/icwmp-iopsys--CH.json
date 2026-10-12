@@ -1,0 +1,73 @@
+{
+ "dork": "\"authenticate@cwmp\" country:CH",
+ "total": 1534,
+ "taken": "2026-10-12T14:56:50+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 1534,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 1534,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1523,
+   "value": "as3303"
+  },
+  {
+   "count": 9,
+   "value": "3303"
+  },
+  {
+   "count": 1,
+   "value": "as25375"
+  },
+  {
+   "count": 1,
+   "value": "as8758"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 699,
+   "value": "Bluewin is an LIR and ISP in Switzerland."
+  },
+  {
+   "count": 275,
+   "value": "Swisscom (Schweiz) AG is an LIR and ISP in Switzerland."
+  },
+  {
+   "count": 271,
+   "value": "Swisscom (Schweiz) AG"
+  },
+  {
+   "count": 176,
+   "value": "Swisscom (Schweiz) AG is an internet service provider in CH."
+  },
+  {
+   "count": 111,
+   "value": "Swisscom AG is a full service provider in CH"
+  },
+  {
+   "count": 1,
+   "value": "Iway AG"
+  },
+  {
+   "count": 1,
+   "value": "Leunet AG Frauenfeld"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "CH"
+}

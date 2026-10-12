@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:GR",
+ "total": 21,
+ "taken": "2026-10-12T15:31:41+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 21,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 21,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 18,
+   "value": "as6799"
+  },
+  {
+   "count": 2,
+   "value": "as3329"
+  },
+  {
+   "count": 1,
+   "value": "6799"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 11,
+   "value": "Multiprotocol Service Provider to other ISP's and End Users"
+  },
+  {
+   "count": 7,
+   "value": "Ote SA (Hellenic Telecommunications Organisation)"
+  },
+  {
+   "count": 1,
+   "value": "Hellas On Line S.A."
+  },
+  {
+   "count": 1,
+   "value": "Hellas On Line SA - DSL"
+  },
+  {
+   "count": 1,
+   "value": "OTE-DIA-CUSTOMERS"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "GR"
+}

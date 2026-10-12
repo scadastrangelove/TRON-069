@@ -1,6 +1,6 @@
 # Method: passive TR-069/CWMP measurement
 
-Public edition, reviewed 10 October 2026. This document distinguishes aggregate
+Public edition, reviewed 12 October 2026. This document distinguishes aggregate
 collection from the earlier research process. The current collector uses Shodan
 Count only. Earlier investigations also inspected cached banners, host records,
 public source code and firmware locally; those raw materials are not distributed.
@@ -22,6 +22,17 @@ It is not automatically a hardware model or a unique device population.
 
 CPE, ACS, mixed and unknown are separate service roles. A shared HTTP toolkit
 signature can span multiple roles. A 404 response alone does not establish a role.
+
+The overview shows two independent worldwide measurements: all Shodan matches
+on port 7547, and the sum of the core signature queries across their stated port
+scopes. The map's selection counter sums signature matches with known geography
+after filters. Unknown geography is listed separately. Neither signature counter
+is the entire port-7547 population; the two overview values must not be added.
+
+The core set uses the all-port `HuaweiHomeGateway` query and excludes its
+port-7547 subset. This keeps auxiliary-port matches in the default view without
+adding the subset a second time. Some other queries intentionally retain a port
+condition as part of their fingerprint; each query records its exact scope.
 
 ## 2. Iterative subtraction
 

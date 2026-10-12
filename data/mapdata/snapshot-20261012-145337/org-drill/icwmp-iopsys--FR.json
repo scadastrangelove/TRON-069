@@ -1,0 +1,49 @@
+{
+ "dork": "\"authenticate@cwmp\" country:FR",
+ "total": 89,
+ "taken": "2026-10-12T14:56:57+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 89,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 89,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 88,
+   "value": "as41114"
+  },
+  {
+   "count": 1,
+   "value": "as47648"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 47,
+   "value": "ORNE THD SPL"
+  },
+  {
+   "count": 41,
+   "value": "Orne THD SPL"
+  },
+  {
+   "count": 1,
+   "value": "NOREST-SERVICES SAS"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "FR"
+}

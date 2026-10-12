@@ -1,0 +1,45 @@
+{
+ "dork": "\"cwmpd\" opaque country:CL",
+ "total": 2,
+ "taken": "2026-10-12T15:36:25+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as18822"
+  },
+  {
+   "count": 1,
+   "value": "as27651"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "BANDA ANCHA GTD MANQUEHUE"
+  },
+  {
+   "count": 1,
+   "value": "ENTEL CHILE S.A."
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "CL"
+}

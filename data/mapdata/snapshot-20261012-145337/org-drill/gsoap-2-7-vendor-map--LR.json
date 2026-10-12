@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:LR",
+ "total": 35,
+ "taken": "2026-10-12T15:18:01+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 35,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 35,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 33,
+   "value": "as328136"
+  },
+  {
+   "count": 2,
+   "value": "328136"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 33,
+   "value": "Telecel Liberia Limited"
+  },
+  {
+   "count": 1,
+   "value": "Customers_west_10st"
+  },
+  {
+   "count": 1,
+   "value": "Telecel Liberia Limited - Telecel Liberia Limited"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "LR"
+}

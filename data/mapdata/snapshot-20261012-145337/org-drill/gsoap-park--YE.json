@@ -1,0 +1,57 @@
+{
+ "dork": "\"Server: gSOAP\" country:YE",
+ "total": 123,
+ "taken": "2026-10-12T15:08:03+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 122,
+   "remainder": 1
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 123,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 116,
+   "value": "as30873"
+  },
+  {
+   "count": 7,
+   "value": "30873"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 85,
+   "value": "Public Telecommunication Corporation"
+  },
+  {
+   "count": 30,
+   "value": "PTC-YemenNet Public Telecommunication Corporation"
+  },
+  {
+   "count": 4,
+   "value": "YemenNet ADSL POOL"
+  },
+  {
+   "count": 2,
+   "value": "YemenNet ADSL ATM Pool"
+  },
+  {
+   "count": 1,
+   "value": "YemenNet ADSL Pool"
+  }
+ ],
+ "line": "gSOAP park",
+ "line_id": "gsoap-park",
+ "cc": "YE"
+}

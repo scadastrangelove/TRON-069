@@ -1,0 +1,123 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:30008 country:AU",
+ "total": 6773,
+ "taken": "2026-10-12T15:43:29+00:00",
+ "run_id": "b3e3c5cc-dba7-4406-a814-ab9c488643db",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 6773,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 11,
+   "covered": 6773,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 6773,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 6773,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 6773,
+   "value": "AU"
+  }
+ ],
+ "asn": [
+  {
+   "count": 6519,
+   "value": "as7545"
+  },
+  {
+   "count": 248,
+   "value": "7545"
+  },
+  {
+   "count": 4,
+   "value": "as4739"
+  },
+  {
+   "count": 1,
+   "value": "as7600"
+  },
+  {
+   "count": 1,
+   "value": "as9443"
+  }
+ ],
+ "ports": [
+  {
+   "count": 6773,
+   "value": 30008
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3391,
+   "value": "TPG Internet Pty Ltd"
+  },
+  {
+   "count": 2053,
+   "value": "iiNet Limited"
+  },
+  {
+   "count": 1150,
+   "value": "TPG Internet Pty Ltd."
+  },
+  {
+   "count": 153,
+   "value": "AAPT Limited"
+  },
+  {
+   "count": 12,
+   "value": "POWERTEL LIMITED"
+  },
+  {
+   "count": 8,
+   "value": "Powertel Internet Service Provider"
+  },
+  {
+   "count": 2,
+   "value": "Telecommunications carrier and service provider"
+  },
+  {
+   "count": 1,
+   "value": "NBN, Private IP, IPWAN, MPLS & ADSL broadband technologies"
+  },
+  {
+   "count": 1,
+   "value": "Salient Enterprises Pty Ltd t/a Interworx Technologies Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Salient Enterprises Pty Ltd t/a Interworx Technologies Pty Ltd Level 1, 10 Barolin St, Bundaberg, QLD 4670"
+  },
+  {
+   "count": 1,
+   "value": "Vocus Australia"
+  }
+ ],
+ "id": "huawei-port-30008-au",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 30008 · AU",
+  "en": "CR port 30008 · AU",
+  "es": "Puerto CR 30008 · AU",
+  "zh": "CR 端口 30008 · AU"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

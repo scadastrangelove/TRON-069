@@ -15,7 +15,7 @@ from snapshot_history import snapshot_history, write_history
 
 ROOT = Path(__file__).resolve().parent.parent
 IDENT_EXCLUDE = {
-    'huaweihomegateway', 'gsoap-2-7-vendor-map', 'gsoap-2-8-vendor-map',
+    'huaweihomegateway-cr-slice', 'gsoap-2-7-vendor-map', 'gsoap-2-8-vendor-map',
     'sky-ee-tr069-http-server', 'windtre-tr069-http-server', 'sagemcom',
     'genieacs-admin-ui', 'openacs', 'axiros', 'magticom-gsoap',
     'decimal-nonce-class', 'mini-web-server-1-0-zte-corp',
