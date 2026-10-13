@@ -32,9 +32,9 @@ built from dated Shodan aggregates. Explore the map, compare implementations,
 inspect operator slices and follow each research observation to its source.
 The interface supports English, Spanish, Chinese and Russian.
 
-**Current collection: 12 October 2026.** 53 signature lines, 2,457 country–line
+**Current collection: 13 October 2026.** 53 signature lines, 2,457 country–line
 operator slices, 93 research queries and 39 additional observations. Collection
-ran from 14:53:37 to 15:44:57 UTC; individual results retain their own timestamps.
+ran from 16:05:03 to 16:55:30 UTC; individual results retain their own timestamps.
 These are search matches, not a census of unique devices or vulnerable systems.
 
 ## Open the atlas
@@ -93,8 +93,11 @@ The builder selects the latest completed, error-free snapshot. To build another
 date, pass its directory; use `--output-dir DIR` for an isolated output.
 Edit `atlas/map-template.html`, then rebuild both entry points.
 
-Use the date selector in the atlas header to open a completed collection. Dates
-include UTC time because a day can contain several runs. The URL keeps the chosen
+Use the date selector in the atlas header to open the best completed collection
+for each UTC day. Full country sweeps take precedence, followed by coverage of
+lines, operator slices and research queries; the later run breaks a tie. October 8
+uses 22:27 UTC and October 10 uses 10:21 UTC. Other runs remain archived and old
+shared URLs retain their exact measurements. The URL keeps the chosen
 snapshot, language, map filters and network view; browser Back restores the
 previous selection. Signatures absent from an older collection remain selectable
 with unavailable counts rather than falling back to the whole map.

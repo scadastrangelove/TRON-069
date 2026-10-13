@@ -1,0 +1,175 @@
+{
+ "dork": "\"ZXHN H108N\"",
+ "total": 11,
+ "taken": "2026-10-13T16:54:38+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 7,
+   "covered": 11,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 10,
+   "covered": 11,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 11,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 7,
+   "covered": 11,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 3,
+   "value": "EG"
+  },
+  {
+   "count": 2,
+   "value": "RU"
+  },
+  {
+   "count": 2,
+   "value": "UA"
+  },
+  {
+   "count": 1,
+   "value": "DZ"
+  },
+  {
+   "count": 1,
+   "value": "HK"
+  },
+  {
+   "count": 1,
+   "value": "JP"
+  },
+  {
+   "count": 1,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as8452"
+  },
+  {
+   "count": 2,
+   "value": "as12389"
+  },
+  {
+   "count": 2,
+   "value": "as6849"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as36947"
+  },
+  {
+   "count": 1,
+   "value": "as61112"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3,
+   "value": 1723
+  },
+  {
+   "count": 2,
+   "value": 23
+  },
+  {
+   "count": 2,
+   "value": 80
+  },
+  {
+   "count": 1,
+   "value": 427
+  },
+  {
+   "count": 1,
+   "value": 1433
+  },
+  {
+   "count": 1,
+   "value": 51235
+  },
+  {
+   "count": 1,
+   "value": 52869
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "TE Data"
+  },
+  {
+   "count": 1,
+   "value": "Akile LTD"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "E-mail for SPAM and abuse postmaster@ukrtelecom.ua"
+  },
+  {
+   "count": 1,
+   "value": "For Internet Abuse & Spam reports : admins@tedata.net"
+  },
+  {
+   "count": 1,
+   "value": "JSC Ukrtelecom"
+  },
+  {
+   "count": 1,
+   "value": "OJSC Sibirtelecom"
+  },
+  {
+   "count": 1,
+   "value": "Telecom Algeria - Telecom Algeria"
+  },
+  {
+   "count": 1,
+   "value": "Vultr Holdings, LLC"
+  },
+  {
+   "count": 1,
+   "value": "samtel"
+  }
+ ],
+ "id": "fact-zte-9081d80feb",
+ "parent": "zte",
+ "group": "facts",
+ "label": {
+  "ru": "telnet-баннеры ZXHN",
+  "en": "ZXHN Telnet banners",
+  "es": "Banners Telnet ZXHN",
+  "zh": "ZXHN Telnet 横幅"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,67 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:SG port:51005",
+ "total": 1,
+ "taken": "2026-10-13T16:55:20+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as63949"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1,
+   "value": 51005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "Akamai Technologies, Inc."
+  }
+ ],
+ "id": "tr069-singtel-port-51005",
+ "parent": "tr069-client",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "TR069 Client · Singtel / SG · 51005",
+  "en": "TR069 Client · Singtel / SG · 51005",
+  "es": "TR069 Client · Singtel / SG · 51005",
+  "zh": "TR069 Client · Singtel / SG · 51005"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

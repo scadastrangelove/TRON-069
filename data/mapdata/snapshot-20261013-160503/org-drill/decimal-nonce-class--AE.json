@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:AE",
+ "total": 392,
+ "taken": "2026-10-13T16:42:05+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 392,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 392,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 379,
+   "value": "as5384"
+  },
+  {
+   "count": 11,
+   "value": "5384"
+  },
+  {
+   "count": 2,
+   "value": "as15802"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 357,
+   "value": "Emirates Telecommunications Corporation"
+  },
+  {
+   "count": 30,
+   "value": "EMIRATES TELECOMMUNICATIONS GROUP COMPANY (ETISALAT GROUP) PJSC"
+  },
+  {
+   "count": 2,
+   "value": "Emirates Integrated Telecommunications Company PJSC (EITC-DU)"
+  },
+  {
+   "count": 1,
+   "value": "AL MUSAFRI INTERNET SERVICES"
+  },
+  {
+   "count": 1,
+   "value": "Al Muadaa Internet"
+  },
+  {
+   "count": 1,
+   "value": "FOUR CORNERS INTERNET SERVICES"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "AE"
+}

@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:IE",
+ "total": 138,
+ "taken": "2026-10-13T16:42:13+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 138,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 138,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 136,
+   "value": "as15502"
+  },
+  {
+   "count": 2,
+   "value": "15502"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 81,
+   "value": "Vodafone ISP"
+  },
+  {
+   "count": 52,
+   "value": "Vodafone Ireland Limited"
+  },
+  {
+   "count": 5,
+   "value": "Mobile Broadband ISP"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "IE"
+}

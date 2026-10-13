@@ -1,0 +1,203 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8080",
+ "total": 9701,
+ "taken": "2026-10-13T16:54:02+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 6,
+   "covered": 9701,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 19,
+   "covered": 9701,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 12,
+   "covered": 9701,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 9701,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 9696,
+   "value": "IE"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  },
+  {
+   "count": 1,
+   "value": "IS"
+  },
+  {
+   "count": 1,
+   "value": "MD"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "NZ"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5457,
+   "value": "as2110"
+  },
+  {
+   "count": 3893,
+   "value": "as5466"
+  },
+  {
+   "count": 169,
+   "value": "2110"
+  },
+  {
+   "count": 169,
+   "value": "5466"
+  },
+  {
+   "count": 5,
+   "value": "as15502"
+  },
+  {
+   "count": 2,
+   "value": "as5607"
+  },
+  {
+   "count": 1,
+   "value": "as12969"
+  },
+  {
+   "count": 1,
+   "value": "as13285"
+  },
+  {
+   "count": 1,
+   "value": "as25441"
+  },
+  {
+   "count": 1,
+   "value": "as31252"
+  },
+  {
+   "count": 1,
+   "value": "as4771"
+  },
+  {
+   "count": 1,
+   "value": "as8151"
+  }
+ ],
+ "ports": [
+  {
+   "count": 9701,
+   "value": 8080
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2760,
+   "value": "Enet Communications LIMITED"
+  },
+  {
+   "count": 2198,
+   "value": "Eircom"
+  },
+  {
+   "count": 1750,
+   "value": "BT Communications Ireland Limited"
+  },
+  {
+   "count": 1103,
+   "value": "Eircom Limited"
+  },
+  {
+   "count": 913,
+   "value": "BSkyB Broadband Ireland"
+  },
+  {
+   "count": 759,
+   "value": "eircom Ltd"
+  },
+  {
+   "count": 133,
+   "value": "BT Ireland Whitelabel BB"
+  },
+  {
+   "count": 67,
+   "value": "Ireland On-Line Broadband Customers"
+  },
+  {
+   "count": 3,
+   "value": "Hackwatch News"
+  },
+  {
+   "count": 3,
+   "value": "Vodafone Ireland Limited"
+  },
+  {
+   "count": 2,
+   "value": "Pure Telecom Ltd."
+  },
+  {
+   "count": 2,
+   "value": "SKY UK Limited"
+  },
+  {
+   "count": 2,
+   "value": "Vodafone ISP"
+  },
+  {
+   "count": 1,
+   "value": "Customer Dynamic IPs"
+  },
+  {
+   "count": 1,
+   "value": "Gestión de direccionamiento UniNet"
+  },
+  {
+   "count": 1,
+   "value": "Imagine Communications Group Limited"
+  },
+  {
+   "count": 1,
+   "value": "Spark New Zealand Trading Limited"
+  },
+  {
+   "count": 1,
+   "value": "StarNet Solutii SRL"
+  },
+  {
+   "count": 1,
+   "value": "Vodafone Iceland"
+  }
+ ],
+ "id": "huawei-port-8080",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8080",
+  "en": "CR port 8080",
+  "es": "Puerto CR 8080",
+  "zh": "CR 端口 8080"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

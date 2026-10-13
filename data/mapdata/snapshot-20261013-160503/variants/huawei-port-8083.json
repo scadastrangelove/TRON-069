@@ -1,0 +1,215 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8083",
+ "total": 8175,
+ "taken": "2026-10-13T16:54:00+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 8175,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 30,
+   "covered": 8175,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 8175,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 8175,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 8173,
+   "value": "GR"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "PL"
+  }
+ ],
+ "asn": [
+  {
+   "count": 4423,
+   "value": "as25472"
+  },
+  {
+   "count": 3406,
+   "value": "as1241"
+  },
+  {
+   "count": 182,
+   "value": "25472"
+  },
+  {
+   "count": 154,
+   "value": "1241"
+  },
+  {
+   "count": 8,
+   "value": "as3329"
+  },
+  {
+   "count": 1,
+   "value": "as201990"
+  },
+  {
+   "count": 1,
+   "value": "as8151"
+  }
+ ],
+ "ports": [
+  {
+   "count": 8175,
+   "value": 8083
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2384,
+   "value": "Evergy S.A."
+  },
+  {
+   "count": 2181,
+   "value": "Nova Telecommunications & Media Single Member S.A"
+  },
+  {
+   "count": 1329,
+   "value": "ADSL LLU POOLS"
+  },
+  {
+   "count": 820,
+   "value": "Tellas S.A."
+  },
+  {
+   "count": 509,
+   "value": "RESIDENTIAL CUSTOMER POOL"
+  },
+  {
+   "count": 435,
+   "value": "FORTHNET LLU POOLS"
+  },
+  {
+   "count": 208,
+   "value": "NOVA S.A."
+  },
+  {
+   "count": 109,
+   "value": "ADSL POOLS"
+  },
+  {
+   "count": 81,
+   "value": "Retail Customer Pool"
+  },
+  {
+   "count": 28,
+   "value": "aDSL dynamic pools"
+  },
+  {
+   "count": 20,
+   "value": "ADSL POOL"
+  },
+  {
+   "count": 17,
+   "value": "Hellenic-Telecommunications-and-Telematic-Applications-Company"
+  },
+  {
+   "count": 14,
+   "value": "ADSL LLU POOL"
+  },
+  {
+   "count": 10,
+   "value": "ADSL SITES KLN"
+  },
+  {
+   "count": 8,
+   "value": "FORTHNet Noc"
+  },
+  {
+   "count": 3,
+   "value": "Greece"
+  },
+  {
+   "count": 3,
+   "value": "PC SYSTEMS AE"
+  },
+  {
+   "count": 2,
+   "value": "Assignments for Always-On Services"
+  },
+  {
+   "count": 2,
+   "value": "Athens"
+  },
+  {
+   "count": 2,
+   "value": "Hellas On Line S.A."
+  },
+  {
+   "count": 1,
+   "value": "Daphne communications"
+  },
+  {
+   "count": 1,
+   "value": "Dial-up pools"
+  },
+  {
+   "count": 1,
+   "value": "Gestión de direccionamiento UniNet"
+  },
+  {
+   "count": 1,
+   "value": "Hellas On Line SA - DSL"
+  },
+  {
+   "count": 1,
+   "value": "INFRA-AW"
+  },
+  {
+   "count": 1,
+   "value": "Jakub Bartlomiej Osuch trading as Techgroup"
+  },
+  {
+   "count": 1,
+   "value": "PROVIDER"
+  },
+  {
+   "count": 1,
+   "value": "VODAFONE-PANAFON HELLENIC TELECOMMUNICATIONS COMPANY SA"
+  },
+  {
+   "count": 1,
+   "value": "Vodafone-panafon Hellenic Telecommunications Company SA"
+  },
+  {
+   "count": 1,
+   "value": "hotel"
+  }
+ ],
+ "id": "huawei-port-8083",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8083",
+  "en": "CR port 8083",
+  "es": "Puerto CR 8083",
+  "zh": "CR 端口 8083"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

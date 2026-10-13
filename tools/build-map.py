@@ -332,6 +332,21 @@ SNAPSHOT_FIELDS = ('snapshot', 'park', 'http', 'denominators', 'ident', 'lines',
                    'excluded', 'orgdrill', 'variants', 'collection', 'stickers', 'facts')
 
 
+def daily_snapshots(archives):
+    """Prefer complete country sweeps and broader coverage; break ties by time."""
+    def quality(ident):
+        item = archives[ident]
+        return ((item.get('collection') or {}).get('scope') == 'all',
+                len(item['lines']), len(item['orgdrill']),
+                sum(len(items) for items in item['variants'].values()), ident)
+    best = {}
+    for ident in archives:
+        day = ident[:8]
+        if day not in best or quality(ident) > quality(best[day]):
+            best[day] = ident
+    return [best[day] for day in sorted(best, reverse=True)]
+
+
 def build(snapshot, output_root=ROOT):
     data = build_data(snapshot)
     # Keep the current atlas self-contained. Historical measurements are loaded
@@ -357,7 +372,7 @@ def build(snapshot, output_root=ROOT):
         countries.update(item['park'])
         for cell in item['orgdrill'].values():
             orgs.setdefault(cell['cc'], set()).update(org['value'] for org in cell['orgs'])
-    data['history'] = dict(snapshots=entries, latest=entries[0]['id'], lines=line_catalog,
+    data['history'] = dict(snapshots=entries, daily=daily_snapshots(archives), latest=entries[0]['id'], lines=line_catalog,
                            countries=sorted(countries), orgs={cc: sorted(names) for cc, names in sorted(orgs.items())})
     for ident, item in archives.items():
         out = output_root/'atlas/snapshots'/f'{ident}.json'
@@ -378,7 +393,7 @@ def build(snapshot, output_root=ROOT):
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding='utf-8')
     print(f'Built both entry points: {len(data["lines"])} lines, {len(data["orgdrill"])} operator pairs, '
-          f'{len(html.encode()):,} bytes each; {len(archives)} selectable snapshots')
+          f'{len(html.encode()):,} bytes each; {len(data["history"]["daily"])} daily choices, {len(archives)} archived snapshots')
     return data
 
 

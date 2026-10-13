@@ -96,6 +96,17 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
 }
 
 test('syntax', 'Application JavaScript parses', () => { new vm.Script(source); return 'Parsed'; });
+test('daily-snapshot-picker', 'One best snapshot per day; archived shared links retain exact dates', () => {
+  const c=context();c.run('renderSnapshotPicker()');
+  const choices=[...c.element('#snapshotSelect').innerHTML.matchAll(/<option value="([^"]+)"([^>]*)>/g)];
+  const visible=choices.filter(match=>!match[2].includes('hidden')).map(match=>match[1]);
+  expect(new Set(visible.map(id=>id.slice(0,8))).size===visible.length,'Duplicate daily choices');
+  expect(visible.includes('20261008-2227')&&visible.includes('20261010-102121'),'Best historical runs absent');
+  c.run('DATA.snapshot="20261010-083331";renderSnapshotPicker()');
+  expect(c.element('#snapshotSelect').value==='20261010-083331','Archived selection lost');
+  expect(c.element('#snapshotSelect').innerHTML.includes('value="20261010-083331" hidden'),'Archived run entered daily menu');
+  return visible;
+});
 test('snapshot-filter-roundtrip', 'Date selection preserves map, language, registry and network filters in the URL', () => {
   const hash='#'+new URLSearchParams({lang:'es',lines:'tr069-http-server',geo:'c:AU',mode:'countries',tab:'ecosystem',eco_view:'networks',net_view:'matrix',net_country:'AU',net_line:'tr069-http-server',net_operator:'o:tpg',net_group:'1',net_q:'TPG',reg_q:'Huawei',reg_service:'cpe',cc_q:'Australia'})+'&org='+encodeURIComponent('raw:TPG Internet Pty Ltd.')+'&org='+encodeURIComponent('raw:TPG Internet Pty Ltd');
   const c=context({hash});c.run('urlRead();urlWrite()');

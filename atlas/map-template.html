@@ -2734,7 +2734,9 @@ function snapshotLabel(id){
 }
 function renderSnapshotPicker(){
  const select=$('#snapshotSelect');
- select.innerHTML=SNAPSHOT_INDEX.snapshots.map(item=>`<option value="${esc(item.id)}">${esc(snapshotLabel(item.id))}</option>`).join('');
+ const daily=new Set(SNAPSHOT_INDEX.daily||SNAPSHOT_INDEX.snapshots.map(item=>item.id));
+ // Older shared URLs still show their exact snapshot without adding duplicate daily choices.
+ select.innerHTML=SNAPSHOT_INDEX.snapshots.filter(item=>daily.has(item.id)||item.id===DATA.snapshot).map(item=>`<option value="${esc(item.id)}"${daily.has(item.id)?'':' hidden'}>${esc(snapshotLabel(item.id))}</option>`).join('');
  select.value=DATA.snapshot;
  select.title=t('snapshot_choose');select.setAttribute('aria-label',t('snapshot_choose'));
  const missing=[...S.lines,DS.line,S.cell?.slug].some(slug=>slug&&DATA.lines[slug]?.collection_status!=='ok');

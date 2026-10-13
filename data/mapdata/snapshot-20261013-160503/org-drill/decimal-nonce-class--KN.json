@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:KN",
+ "total": 112,
+ "taken": "2026-10-13T16:42:18+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 112,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 112,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 111,
+   "value": "as11139"
+  },
+  {
+   "count": 1,
+   "value": "11139"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 54,
+   "value": "Cable and Wireless St Kitts"
+  },
+  {
+   "count": 27,
+   "value": "Cable & Wireless Antigua and Barbuda Ltd"
+  },
+  {
+   "count": 15,
+   "value": "Cable & Wireless (Barbados) Limited"
+  },
+  {
+   "count": 11,
+   "value": "Cable and Wireless Anguilla"
+  },
+  {
+   "count": 5,
+   "value": "St. Kitts & Nevis Telecommunications"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "KN"
+}

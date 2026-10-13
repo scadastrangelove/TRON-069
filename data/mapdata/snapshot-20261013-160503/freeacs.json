@@ -1,0 +1,81 @@
+{
+ "dork": "http.title:\"FreeACS\"",
+ "total": 6,
+ "taken": "2026-10-13T16:05:35+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 4,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 6,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 3,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2,
+   "value": "IT"
+  },
+  {
+   "count": 2,
+   "value": "SG"
+  },
+  {
+   "count": 1,
+   "value": "BE"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as12874"
+  },
+  {
+   "count": 1,
+   "value": "as196749"
+  },
+  {
+   "count": 1,
+   "value": "as31898"
+  },
+  {
+   "count": 1,
+   "value": "as396982"
+  }
+ ],
+ "ports": [
+  {
+   "count": 4,
+   "value": 80
+  },
+  {
+   "count": 1,
+   "value": 88
+  },
+  {
+   "count": 1,
+   "value": 8081
+  }
+ ],
+ "orgs": [],
+ "name": "FreeACS Web"
+}

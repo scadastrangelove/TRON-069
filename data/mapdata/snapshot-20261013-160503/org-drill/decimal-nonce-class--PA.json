@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PA",
+ "total": 8720,
+ "taken": "2026-10-13T16:41:53+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 8720,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 8720,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 8659,
+   "value": "as11556"
+  },
+  {
+   "count": 60,
+   "value": "11556"
+  },
+  {
+   "count": 1,
+   "value": "as18809"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 6135,
+   "value": "Cable & Wireless Panama"
+  },
+  {
+   "count": 2584,
+   "value": "Claro Panamá S.A."
+  },
+  {
+   "count": 1,
+   "value": "Cable Onda"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PA"
+}

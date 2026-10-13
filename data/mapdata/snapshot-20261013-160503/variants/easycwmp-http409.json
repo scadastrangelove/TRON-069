@@ -1,0 +1,67 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 409 Conflict\"",
+ "total": 1,
+ "taken": "2026-10-13T16:54:31+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1,
+   "value": "CA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as46320"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "BLU Fibre Networks inc."
+  }
+ ],
+ "id": "easycwmp-http409",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "HTTP 409: широкий контрольный запрос",
+  "en": "HTTP 409: broad control query",
+  "es": "HTTP 409: consulta de control amplia",
+  "zh": "HTTP 409：宽泛对照查询"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

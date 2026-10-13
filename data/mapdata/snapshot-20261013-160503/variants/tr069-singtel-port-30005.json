@@ -1,0 +1,143 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:SG port:30005",
+ "total": 104572,
+ "taken": "2026-10-13T16:55:19+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 104572,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 12,
+   "covered": 104572,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 9,
+   "covered": 104572,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 104572,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 104572,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 93901,
+   "value": "as9506"
+  },
+  {
+   "count": 5471,
+   "value": "as3758"
+  },
+  {
+   "count": 3082,
+   "value": "as135600"
+  },
+  {
+   "count": 1679,
+   "value": "9506"
+  },
+  {
+   "count": 155,
+   "value": "3758"
+  },
+  {
+   "count": 111,
+   "value": "as984"
+  },
+  {
+   "count": 107,
+   "value": "135600"
+  },
+  {
+   "count": 65,
+   "value": "as17561"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  }
+ ],
+ "ports": [
+  {
+   "count": 104572,
+   "value": 30005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 73735,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 20450,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 5088,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 2409,
+   "value": "Whiz Communications Pte Ltd"
+  },
+  {
+   "count": 1033,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 783,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 518,
+   "value": "SingTel Mobile"
+  },
+  {
+   "count": 382,
+   "value": "SingNet BroadBand Network Singapore Telecommunications LTD"
+  },
+  {
+   "count": 121,
+   "value": "Cloud Innovation Ltd"
+  },
+  {
+   "count": 45,
+   "value": "Octopus Web Solution LLC"
+  },
+  {
+   "count": 7,
+   "value": "OCTOPUS WEB SOLUTION INC"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  }
+ ],
+ "id": "tr069-singtel-port-30005",
+ "parent": "tr069-client",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "TR069 Client · Singtel / SG · 30005",
+  "en": "TR069 Client · Singtel / SG · 30005",
+  "es": "TR069 Client · Singtel / SG · 30005",
+  "zh": "TR069 Client · Singtel / SG · 30005"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

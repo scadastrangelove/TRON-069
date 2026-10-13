@@ -52,6 +52,13 @@ class BuildTests(unittest.TestCase):
         self.assertIn('20261010-102121', ids)
         self.assertNotIn('20261010-101524', ids)
         self.assertNotIn('20261008-1451', ids)  # Legacy dump without validated statuses.
+        daily = data['history']['daily']
+        self.assertEqual(len(daily), len({ident[:8] for ident in daily}))
+        self.assertIn('20261008-2227', daily)
+        self.assertIn('20261010-102121', daily)
+        for duplicate in ('20261008-1651', '20261010-083331', '20261010-083807'):
+            self.assertNotIn(duplicate, daily)
+            self.assertIn(duplicate, ids)  # Exact old links remain available.
         for ident in ids:
             archive = builder.read(self.root/'atlas/snapshots'/f'{ident}.json')
             source = ROOT/'data/mapdata'/f'snapshot-{ident}'
@@ -65,6 +72,16 @@ class BuildTests(unittest.TestCase):
         old = builder.read(self.root/'atlas/snapshots/20261010-102121.json')
         self.assertNotIn('freeacs', old['lines'])
         self.assertIn('freeacs', data['history']['lines'])
+
+    def test_daily_choice_keeps_full_sweep_over_later_limited_run(self):
+        full = dict(collection={'scope': 'all'}, lines={'one': {}},
+                    orgdrill={'one--GB': {}}, variants={})
+        limited = dict(collection={'scope': 'selected'}, lines={'one': {}, 'two': {}},
+                       orgdrill={}, variants={})
+        self.assertEqual(builder.daily_snapshots({
+            '20261013-120000': full, '20261013-180000': limited,
+            '20261012-120000': full, '20261012-130000': full,
+        }), ['20261013-120000', '20261012-130000'])
 
     def test_failed_manifest_rejected(self):
         snapshot = self.snapshot()

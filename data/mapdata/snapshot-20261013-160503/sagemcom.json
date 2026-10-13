@@ -1,0 +1,897 @@
+{
+ "dork": "\"Sagemcom TR-069\"",
+ "total": 218248,
+ "taken": "2026-10-13T16:05:13+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 16,
+   "covered": 218248,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 218139,
+   "remainder": 109
+  },
+  "port": {
+   "values_returned": 100,
+   "covered": 217128,
+   "remainder": 1120
+  }
+ },
+ "countries": [
+  {
+   "count": 207843,
+   "value": "US"
+  },
+  {
+   "count": 6161,
+   "value": "GB"
+  },
+  {
+   "count": 3949,
+   "value": "TR"
+  },
+  {
+   "count": 82,
+   "value": "DK"
+  },
+  {
+   "count": 55,
+   "value": "MX"
+  },
+  {
+   "count": 33,
+   "value": "JP"
+  },
+  {
+   "count": 24,
+   "value": "CA"
+  },
+  {
+   "count": 22,
+   "value": "AU"
+  },
+  {
+   "count": 18,
+   "value": "ZA"
+  },
+  {
+   "count": 15,
+   "value": "BR"
+  },
+  {
+   "count": 15,
+   "value": "IT"
+  },
+  {
+   "count": 12,
+   "value": "IN"
+  },
+  {
+   "count": 7,
+   "value": "DE"
+  },
+  {
+   "count": 5,
+   "value": "AR"
+  },
+  {
+   "count": 5,
+   "value": "BD"
+  },
+  {
+   "count": 2,
+   "value": "FR"
+  }
+ ],
+ "asn": [
+  {
+   "count": 84164,
+   "value": "as20115"
+  },
+  {
+   "count": 30147,
+   "value": "as10796"
+  },
+  {
+   "count": 18646,
+   "value": "as11351"
+  },
+  {
+   "count": 16669,
+   "value": "as20001"
+  },
+  {
+   "count": 15217,
+   "value": "as11426"
+  },
+  {
+   "count": 11712,
+   "value": "as11427"
+  },
+  {
+   "count": 10744,
+   "value": "as33363"
+  },
+  {
+   "count": 6790,
+   "value": "as12271"
+  },
+  {
+   "count": 5955,
+   "value": "as2856"
+  },
+  {
+   "count": 5351,
+   "value": "as33588"
+  },
+  {
+   "count": 3834,
+   "value": "as34984"
+  },
+  {
+   "count": 3605,
+   "value": "as22516"
+  },
+  {
+   "count": 1323,
+   "value": "20115"
+  },
+  {
+   "count": 686,
+   "value": "as10838"
+  },
+  {
+   "count": 495,
+   "value": "10796"
+  },
+  {
+   "count": 350,
+   "value": "11351"
+  },
+  {
+   "count": 330,
+   "value": "20001"
+  },
+  {
+   "count": 279,
+   "value": "33363"
+  },
+  {
+   "count": 259,
+   "value": "11426"
+  },
+  {
+   "count": 252,
+   "value": "as11955"
+  },
+  {
+   "count": 227,
+   "value": "11427"
+  },
+  {
+   "count": 188,
+   "value": "2856"
+  },
+  {
+   "count": 177,
+   "value": "as8075"
+  },
+  {
+   "count": 114,
+   "value": "34984"
+  },
+  {
+   "count": 102,
+   "value": "12271"
+  },
+  {
+   "count": 79,
+   "value": "as3292"
+  },
+  {
+   "count": 65,
+   "value": "33588"
+  },
+  {
+   "count": 55,
+   "value": "as20231"
+  },
+  {
+   "count": 46,
+   "value": "22516"
+  },
+  {
+   "count": 28,
+   "value": "as8151"
+  },
+  {
+   "count": 24,
+   "value": "as22884"
+  },
+  {
+   "count": 20,
+   "value": "as5056"
+  },
+  {
+   "count": 20,
+   "value": "as6128"
+  },
+  {
+   "count": 12,
+   "value": "as22423"
+  },
+  {
+   "count": 12,
+   "value": "as32458"
+  },
+  {
+   "count": 12,
+   "value": "as5650"
+  },
+  {
+   "count": 12,
+   "value": "as7843"
+  },
+  {
+   "count": 10,
+   "value": "as701"
+  },
+  {
+   "count": 8,
+   "value": "10838"
+  },
+  {
+   "count": 8,
+   "value": "8075"
+  },
+  {
+   "count": 7,
+   "value": "as24940"
+  },
+  {
+   "count": 7,
+   "value": "as36445"
+  },
+  {
+   "count": 5,
+   "value": "as6079"
+  },
+  {
+   "count": 5,
+   "value": "as7303"
+  },
+  {
+   "count": 5,
+   "value": "as7922"
+  },
+  {
+   "count": 4,
+   "value": "11955"
+  },
+  {
+   "count": 4,
+   "value": "as12083"
+  },
+  {
+   "count": 3,
+   "value": "20231"
+  },
+  {
+   "count": 3,
+   "value": "3292"
+  },
+  {
+   "count": 3,
+   "value": "as16612"
+  },
+  {
+   "count": 3,
+   "value": "as6181"
+  },
+  {
+   "count": 3,
+   "value": "as7311"
+  },
+  {
+   "count": 2,
+   "value": "as10279"
+  },
+  {
+   "count": 2,
+   "value": "as11776"
+  },
+  {
+   "count": 2,
+   "value": "as11796"
+  },
+  {
+   "count": 2,
+   "value": "as13692"
+  },
+  {
+   "count": 2,
+   "value": "as19746"
+  },
+  {
+   "count": 2,
+   "value": "as19901"
+  },
+  {
+   "count": 2,
+   "value": "as20055"
+  },
+  {
+   "count": 2,
+   "value": "as20185"
+  },
+  {
+   "count": 2,
+   "value": "as22379"
+  },
+  {
+   "count": 2,
+   "value": "as29979"
+  },
+  {
+   "count": 2,
+   "value": "as3215"
+  },
+  {
+   "count": 2,
+   "value": "as7459"
+  },
+  {
+   "count": 1,
+   "value": "20055"
+  },
+  {
+   "count": 1,
+   "value": "22884"
+  },
+  {
+   "count": 1,
+   "value": "46690"
+  },
+  {
+   "count": 1,
+   "value": "8151"
+  },
+  {
+   "count": 1,
+   "value": "as11232"
+  },
+  {
+   "count": 1,
+   "value": "as11404"
+  },
+  {
+   "count": 1,
+   "value": "as11448"
+  },
+  {
+   "count": 1,
+   "value": "as11492"
+  },
+  {
+   "count": 1,
+   "value": "as11550"
+  },
+  {
+   "count": 1,
+   "value": "as11910"
+  },
+  {
+   "count": 1,
+   "value": "as12119"
+  },
+  {
+   "count": 1,
+   "value": "as13370"
+  },
+  {
+   "count": 1,
+   "value": "as13638"
+  },
+  {
+   "count": 1,
+   "value": "as1378"
+  },
+  {
+   "count": 1,
+   "value": "as13977"
+  },
+  {
+   "count": 1,
+   "value": "as14188"
+  },
+  {
+   "count": 1,
+   "value": "as14615"
+  },
+  {
+   "count": 1,
+   "value": "as15142"
+  },
+  {
+   "count": 1,
+   "value": "as17"
+  },
+  {
+   "count": 1,
+   "value": "as17072"
+  },
+  {
+   "count": 1,
+   "value": "as174"
+  },
+  {
+   "count": 1,
+   "value": "as19108"
+  },
+  {
+   "count": 1,
+   "value": "as19331"
+  },
+  {
+   "count": 1,
+   "value": "as20224"
+  },
+  {
+   "count": 1,
+   "value": "as20303"
+  },
+  {
+   "count": 1,
+   "value": "as22792"
+  },
+  {
+   "count": 1,
+   "value": "as23473"
+  },
+  {
+   "count": 1,
+   "value": "as25921"
+  },
+  {
+   "count": 1,
+   "value": "as26223"
+  },
+  {
+   "count": 1,
+   "value": "as26292"
+  },
+  {
+   "count": 1,
+   "value": "as26919"
+  },
+  {
+   "count": 1,
+   "value": "as27419"
+  },
+  {
+   "count": 1,
+   "value": "as29696"
+  },
+  {
+   "count": 1,
+   "value": "as30264"
+  },
+  {
+   "count": 1,
+   "value": "as31841"
+  },
+  {
+   "count": 1,
+   "value": "as32133"
+  }
+ ],
+ "ports": [
+  {
+   "count": 207861,
+   "value": 7547
+  },
+  {
+   "count": 7319,
+   "value": 1024
+  },
+  {
+   "count": 425,
+   "value": 61000
+  },
+  {
+   "count": 118,
+   "value": 61001
+  },
+  {
+   "count": 66,
+   "value": 62078
+  },
+  {
+   "count": 64,
+   "value": 1026
+  },
+  {
+   "count": 62,
+   "value": 61613
+  },
+  {
+   "count": 52,
+   "value": 63256
+  },
+  {
+   "count": 44,
+   "value": 8890
+  },
+  {
+   "count": 44,
+   "value": 61616
+  },
+  {
+   "count": 41,
+   "value": 63210
+  },
+  {
+   "count": 37,
+   "value": 4567
+  },
+  {
+   "count": 37,
+   "value": 50070
+  },
+  {
+   "count": 27,
+   "value": 54138
+  },
+  {
+   "count": 26,
+   "value": 52311
+  },
+  {
+   "count": 24,
+   "value": 60001
+  },
+  {
+   "count": 23,
+   "value": 55000
+  },
+  {
+   "count": 23,
+   "value": 61002
+  },
+  {
+   "count": 22,
+   "value": 50050
+  },
+  {
+   "count": 21,
+   "value": 60010
+  },
+  {
+   "count": 19,
+   "value": 50100
+  },
+  {
+   "count": 19,
+   "value": 52869
+  },
+  {
+   "count": 19,
+   "value": 60030
+  },
+  {
+   "count": 19,
+   "value": 65004
+  },
+  {
+   "count": 18,
+   "value": 55442
+  },
+  {
+   "count": 17,
+   "value": 1027
+  },
+  {
+   "count": 17,
+   "value": 51235
+  },
+  {
+   "count": 17,
+   "value": 55550
+  },
+  {
+   "count": 17,
+   "value": 55554
+  },
+  {
+   "count": 17,
+   "value": 62237
+  },
+  {
+   "count": 17,
+   "value": 62443
+  },
+  {
+   "count": 17,
+   "value": 65432
+  },
+  {
+   "count": 16,
+   "value": 55555
+  },
+  {
+   "count": 15,
+   "value": 65000
+  },
+  {
+   "count": 14,
+   "value": 51106
+  },
+  {
+   "count": 14,
+   "value": 63045
+  },
+  {
+   "count": 14,
+   "value": 64477
+  },
+  {
+   "count": 13,
+   "value": 61619
+  },
+  {
+   "count": 13,
+   "value": 63443
+  },
+  {
+   "count": 12,
+   "value": 63676
+  },
+  {
+   "count": 12,
+   "value": 64671
+  },
+  {
+   "count": 11,
+   "value": 50777
+  },
+  {
+   "count": 11,
+   "value": 50805
+  },
+  {
+   "count": 11,
+   "value": 55490
+  },
+  {
+   "count": 11,
+   "value": 62016
+  },
+  {
+   "count": 11,
+   "value": 62865
+  },
+  {
+   "count": 10,
+   "value": 50006
+  },
+  {
+   "count": 10,
+   "value": 61617
+  },
+  {
+   "count": 9,
+   "value": 50000
+  },
+  {
+   "count": 9,
+   "value": 50005
+  },
+  {
+   "count": 9,
+   "value": 50080
+  },
+  {
+   "count": 9,
+   "value": 50101
+  },
+  {
+   "count": 9,
+   "value": 50500
+  },
+  {
+   "count": 9,
+   "value": 54022
+  },
+  {
+   "count": 9,
+   "value": 57784
+  },
+  {
+   "count": 9,
+   "value": 58392
+  },
+  {
+   "count": 9,
+   "value": 58532
+  },
+  {
+   "count": 9,
+   "value": 61234
+  },
+  {
+   "count": 9,
+   "value": 62080
+  },
+  {
+   "count": 9,
+   "value": 64683
+  },
+  {
+   "count": 8,
+   "value": 8891
+  },
+  {
+   "count": 8,
+   "value": 49684
+  },
+  {
+   "count": 8,
+   "value": 49692
+  },
+  {
+   "count": 8,
+   "value": 50009
+  },
+  {
+   "count": 8,
+   "value": 50042
+  },
+  {
+   "count": 8,
+   "value": 50085
+  },
+  {
+   "count": 8,
+   "value": 50104
+  },
+  {
+   "count": 8,
+   "value": 51001
+  },
+  {
+   "count": 8,
+   "value": 55081
+  },
+  {
+   "count": 8,
+   "value": 57779
+  },
+  {
+   "count": 7,
+   "value": 49686
+  },
+  {
+   "count": 7,
+   "value": 50003
+  },
+  {
+   "count": 7,
+   "value": 50580
+  },
+  {
+   "count": 7,
+   "value": 50995
+  },
+  {
+   "count": 7,
+   "value": 50996
+  },
+  {
+   "count": 7,
+   "value": 51201
+  },
+  {
+   "count": 7,
+   "value": 53481
+  },
+  {
+   "count": 7,
+   "value": 54490
+  },
+  {
+   "count": 7,
+   "value": 55350
+  },
+  {
+   "count": 7,
+   "value": 55481
+  },
+  {
+   "count": 7,
+   "value": 57782
+  },
+  {
+   "count": 7,
+   "value": 58443
+  },
+  {
+   "count": 7,
+   "value": 58603
+  },
+  {
+   "count": 6,
+   "value": 50002
+  },
+  {
+   "count": 6,
+   "value": 50004
+  },
+  {
+   "count": 6,
+   "value": 50007
+  },
+  {
+   "count": 6,
+   "value": 50022
+  },
+  {
+   "count": 6,
+   "value": 50102
+  },
+  {
+   "count": 6,
+   "value": 50122
+  },
+  {
+   "count": 6,
+   "value": 50202
+  },
+  {
+   "count": 6,
+   "value": 50257
+  },
+  {
+   "count": 6,
+   "value": 50997
+  },
+  {
+   "count": 6,
+   "value": 52951
+  },
+  {
+   "count": 6,
+   "value": 53483
+  },
+  {
+   "count": 6,
+   "value": 53484
+  },
+  {
+   "count": 6,
+   "value": 54545
+  },
+  {
+   "count": 6,
+   "value": 54857
+  },
+  {
+   "count": 6,
+   "value": 55055
+  },
+  {
+   "count": 6,
+   "value": 55080
+  },
+  {
+   "count": 6,
+   "value": 55470
+  }
+ ],
+ "orgs": [],
+ "name": "Sagemcom"
+}

@@ -1,0 +1,161 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 404\" org:\"Charter Communications\"",
+ "total": 105973,
+ "taken": "2026-10-13T16:05:54+00:00",
+ "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 105973,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 28,
+   "covered": 105892,
+   "remainder": 81
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 105973,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 105970,
+   "value": "US"
+  },
+  {
+   "count": 2,
+   "value": "BD"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 18218,
+   "value": "as20001"
+  },
+  {
+   "count": 16725,
+   "value": "as10796"
+  },
+  {
+   "count": 15340,
+   "value": "as11427"
+  },
+  {
+   "count": 13852,
+   "value": "as11426"
+  },
+  {
+   "count": 11539,
+   "value": "as11351"
+  },
+  {
+   "count": 10331,
+   "value": "as12271"
+  },
+  {
+   "count": 8529,
+   "value": "as33363"
+  },
+  {
+   "count": 7648,
+   "value": "as20115"
+  },
+  {
+   "count": 513,
+   "value": "20001"
+  },
+  {
+   "count": 361,
+   "value": "as33588"
+  },
+  {
+   "count": 360,
+   "value": "10796"
+  },
+  {
+   "count": 357,
+   "value": "11426"
+  },
+  {
+   "count": 351,
+   "value": "11427"
+  },
+  {
+   "count": 349,
+   "value": "33363"
+  },
+  {
+   "count": 303,
+   "value": "as22516"
+  },
+  {
+   "count": 265,
+   "value": "11351"
+  },
+  {
+   "count": 228,
+   "value": "as10838"
+  },
+  {
+   "count": 222,
+   "value": "20115"
+  },
+  {
+   "count": 220,
+   "value": "12271"
+  },
+  {
+   "count": 79,
+   "value": "as20231"
+  },
+  {
+   "count": 68,
+   "value": "as11955"
+  },
+  {
+   "count": 9,
+   "value": "22516"
+  },
+  {
+   "count": 9,
+   "value": "33588"
+  },
+  {
+   "count": 7,
+   "value": "10838"
+  },
+  {
+   "count": 3,
+   "value": "11955"
+  },
+  {
+   "count": 3,
+   "value": "as7843"
+  },
+  {
+   "count": 2,
+   "value": "20231"
+  },
+  {
+   "count": 1,
+   "value": "as271904"
+  }
+ ],
+ "ports": [
+  {
+   "count": 105973,
+   "value": 7547
+  }
+ ],
+ "orgs": [],
+ "name": "Charter anti-scan 404"
+}
