@@ -58,6 +58,7 @@ The attribution badge describes evidence about the signature/component. A source
 | <a id="easycwmp-fork-ltecpe"></a>easycwmp fork: ltecpe | cpe | 87 | 2026-10-10T10:21:45+00:00 | `"realm@ltecpe"` | [proven](NOTES.md) |
 | <a id="openacs"></a>openacs | acs | 13 | 2026-10-10T10:21:51+00:00 | `"openacs"` | [proven](NOTES.md) |
 | <a id="axiros"></a>Axiros | acs | 6 | 2026-10-10T10:21:52+00:00 | `"Axiros"` | [proven](NOTES.md) |
+| <a id="freeacs"></a>FreeACS Web | acs | 6 | 2026-10-12T13:37:05+00:00 | `http.title:"FreeACS"` | [class](NOTES.md) |
 
 ## Scope and historical corrections
 

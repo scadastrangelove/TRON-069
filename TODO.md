@@ -20,7 +20,10 @@ Reviewed 13 October 2026. This file records status, not instructions to run scan
 
 - [ ] Establish the vendor and service role of cwmp server with independent evidence.
   Lanet's equipment catalog suggests candidates; none is a confirmed attribution.
-- [ ] Resolve Gateway/TIM component attribution. Technicolor and ADB remain candidates.
+- [ ] Resolve Gateway/TIM component attribution. Technicolor and ADB remain
+  candidates; the inspected TIM image used port 51007 and lacked the observed
+  realm, so the disassembly does not yet tie the 7170 Gateway slice to that
+  component (see ACS-HUNT.md).
 - [x] Identify the software family of the main TR069 Client component: binary-proven as Works Systems OneAgent TR (October 13). Device OEM carriers are not derivable from the response and remain unlabeled.
 - [x] Close RAC2V1K, F609/F612 and Arcadyan BRN acquisition hunts for component attribution; retain bounded results in the dossier.
 - [ ] Verify the EZpacket Agent4.0 distribution link with a response template or binary; object-name similarity remains a hypothesis.
@@ -45,13 +48,18 @@ part of the public repository. Daily collection is supported but not scheduled.
 - [x] Align the TR069 Client component-lineage badge and publish the sub-family fingerprint guide without a separate population count.
 - [x] Publish the USP transport fingerprint note; distinguish protocol identification from obuspa implementation attribution.
 - [ ] Test candidate vendor attributions for cwmp server against public firmware and source evidence.
-- [ ] Complete the public nonce-format census for ZTE and TP-Link client families.
-  The newer ZTE F670L platform is covered by firmware analysis (October 12);
-  the open part is the older inspected generation's binary, which would show
-  whether the visible `cpe@zte.com` fleet shares that nonce format.
+- [x] Complete the nonce-format census for the ZTE and TP-Link client
+  families (October 13) in the restricted census: both were resolved there.
+  Public detail on generation mechanics is withheld pending disclosure; the
+  public-side result is the Works Systems software-lineage attribution of the
+  TP-Link handler.
 - [ ] Check a WAN-exposed F670L banner (port 58000) for the opaque stub to
   decide whether the ZTE matcher should split by generation.
 - [ ] Expand the passive IgdAuth sample and compare the marker format with SDK sources.
+- [ ] Validate the easycwmp active classifier against reference builds, then
+  measure dated response-class shares, including no-response and error
+  outcomes. Derive generation estimates only for validated classes
+  (see [FINGERPRINTS.md](FINGERPRINTS.md#easycwmp-source-comparison)).
 - [ ] Validate USP transport markers across implementations and preserve dated query responses before adding a counted USP line.
 
 ## ACS research and atlas integration

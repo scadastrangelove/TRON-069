@@ -1,6 +1,6 @@
 # Passive and active fingerprinting
 
-Public research edition, 10 October 2026. Fingerprints describe response behavior
+Public research edition, updated 13 October 2026. Fingerprints describe response behavior
 and implementation families. They are not vulnerability tests or affected-device
 counts. The shipped collector reads Shodan Count; it does not perform these active
 experiments. The separate probe implementation is not included.
@@ -14,26 +14,32 @@ The research compared 44 release tags in the
 These markers identify a family, not a patch release. A changed marker can support
 a fork hypothesis, but configurable or copied responses require additional evidence.
 
-The historical source comparison and laboratory work recorded these distinctions:
+The October 13 review checked these distinctions directly in the upstream
+[1.6.2 handler](https://github.com/pivasoftware/easycwmp/blob/EasyCwmp-1.6.2/src/http.c)
+and [1.7.0 handler](https://github.com/pivasoftware/easycwmp/blob/EasyCwmp-1.7.0/src/http.c):
 
-| Observation | Through 1.6.2 | 1.7.0–1.8.6 |
+| Observation | 1.6.2 reference | 1.7.0 reference |
 | --- | --- | --- |
-| Connection closed with FIN before sending request bytes | 401 challenge | 409 Conflict |
+| TCP write side closed with FIN before sending request bytes | Closes without an HTTP response | 409 Conflict |
 | `Connection: close` on a successful Connection Request response | Absent in inspected code | Present in inspected code |
 | Configurable Basic Connection Request mode | Not present in inspected code | Present |
 
-These are coarse behavioral classes within the inspected releases. Forks, patches,
-proxies and deployment configuration can alter a response. No distinguishing
+In 1.6.2, EOF leaves the read loop through the error path and closes the socket.
+In 1.7.0, the empty-buffer branch emits 409. Both handlers use uloop; the
+distinction is a handler revision. A 401 response can occur in both releases
+after request processing. A 200 response alone does not establish unrestricted
+Connection Requests, and no response can also mean an older handler, a timeout
+or filtering. Forks, patches and proxies can alter these behaviors. No
 fingerprint for every patch release in 1.7.0–1.8.6 was established.
 
 ## Historical operator-authorized scan — 7 October 2026
 
 The research log records 29,007 targets checked within an authorized operator
 scope in approximately 13 minutes. 19,392 accepted a TCP connection. Of 18,662
-easycwmp-associated responders, 18,657 returned the later 409-on-FIN pattern,
-four returned the earlier 401-on-FIN pattern, and one returned an unexpected 500.
-The four earlier-pattern records also contained the easycwmp realm in the saved
-banner evidence. Median recorded latency was 277 ms.
+easycwmp-associated responders, 18,657 returned 409, four returned 401, and one
+returned an unexpected 500. The four 401 records also contained the easycwmp
+realm in the saved banner evidence; their versions remain unclassified.
+Median recorded latency was 277 ms.
 
 This is a dated scoped experiment, not an Internet-wide version census. Missing
 responses do not establish implementation absence, and neither response class

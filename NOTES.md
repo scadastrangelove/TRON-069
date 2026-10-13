@@ -218,6 +218,21 @@ random device, consistent with the observed response uniqueness
 (see [DEANON-HUAWEI-CR.md](DEANON-HUAWEI-CR.md)). Security evaluation of
 these images is not part of the public release.
 
+<a id="section-9.32"></a>
+## 9.32. FreeACS admin-UI line — October 12
+
+A title-based query (`http.title:"FreeACS"`) measures six open admin
+interfaces: two on Italian ISP networks (Fastweb, BBANDA), two on a Singapore
+DigitalOcean host, one on Google Cloud and one on Oracle Cloud. All six serve
+the stock FreeACS login page. The records carry deployment-coherent variance
+rather than honeypot markers: direct-Tomcat responses (Apache-Coyote, classic
+JSESSIONID) on the ISP hosts versus nginx reverse-proxy responses with
+sticky-session JSESSIONID prefixes on the cloud hosts, and one ISP pair shows
+a doubled "Web Web" module-name artifact in the title. The sample is small
+and one record dates to mid-September; no honeypot markers were identified
+in the inspected records. The count is an admin-UI
+lower bound: the SOAP and TR-069 modules expose no title or banner.
+
 <a id="section-9.33"></a>
 ## 9.33. TR069 Client attributed to Works Systems OneAgent TR — October 13
 
@@ -236,3 +251,45 @@ build variant; the hardware OEM is not derivable from the response. The
 sub-family guide and bounded negatives remain valid as search history.
 Pinned public sources, binary hashes and template offsets are recorded in
 [the attribution dossier](DEANON-TR069CLIENT.md#public-evidence).
+
+<a id="section-9.34"></a>
+## 9.34. Software-lineage attribution — October 13
+
+Two disassembly passes closed attribution questions. The older inspected ZTE
+generation's connection-request handler is one code family with the newer
+platform's (same challenge template literals; the visible fleet's banner
+matches the inspected binary's format string). The inspected TP-Link handler
+carries the Works Systems openagent software lineage — its function names and
+response template match the published GPL source. Nonce-generation mechanics
+belong to the restricted census and are withheld from the public release pending
+disclosure. The one >1M family with an unresolved attribution and census
+entry is IgdAuthentication (1.53M).
+
+<a id="section-9.35"></a>
+## 9.35. CLI deployment and active fingerprint observations — October 13
+
+Three observations extend the public fingerprint record:
+
+- **OneAgent CLI handler deployment facts.** The companion `TR069 client CLI
+  Server` line has 1,855 matches in the [October 10 snapshot](data/mapdata/snapshot-20261010-102121/tr069-client-cli-server-netcore.json),
+  all on the component's compiled-default port 1234. AS17306 accounts for
+  1,045 matches after combining Shodan's `as17306` and `17306` buckets.
+  Country totals include the United States (1,082), China (564), Serbia
+  (137), Iran (15), Mexico (15) and Australia (10). The Serbian ASN buckets
+  normalize to AS8400, Telekom Srbija, with 137 matches. The [October 12
+  snapshot](data/mapdata/snapshot-20261012-145337/tr069-client-cli-server-netcore.json)
+  records 1,850 matches, again all on 1234. Port observations alone do not
+  establish which configuration settings operators changed.
+- **CLI route-set build classes.** Sampled CLI deployments in China and
+  Serbia expose a fuller route table than the sampled United States
+  fixed-wireless deployments. Route presence provides a build discriminator
+  for the inspected endpoints. The sample does not establish country-wide
+  build classes; route names and security findings remain outside this note.
+- **Active response classes for easycwmp.** Closing the TCP write side before
+  sending request bytes distinguishes two upstream reference handlers: 1.6.2
+  closes without an HTTP response; 1.7.0 returns 409. A 401 response alone
+  does not establish an older release, and no response does not establish
+  filtering. A 200 response needs separate interpretation before making any
+  authentication claim. The [fingerprint note](FINGERPRINTS.md#easycwmp-source-comparison)
+  links the source comparison and retains the historical scan as response
+  counts. Shodan banners cannot reproduce this controlled active experiment.
