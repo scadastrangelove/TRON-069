@@ -81,7 +81,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
     'const insp=$("#inspector"),kkL=$("#kkList"); let kkItems=[],kkSel=0,toastT=null;',
     'const W=1320,H=600,svg=$("#world"); let newsIndex=0,newsPaused=false;const newsMotion={matches:false};',
     ...['facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
-      'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
+      'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dNodeBox','dNodePort','dConnection','dPaintConnections','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
       'sourcesHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderFindings','renderAbout','renderOverview','renderLegend',

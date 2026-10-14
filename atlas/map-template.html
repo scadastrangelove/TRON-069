@@ -459,9 +459,11 @@ dialog b{color:var(--ink)}
 
 /* The network remains an interactive graph at every viewport width. */
 .d-explorer{border:1px solid var(--line);border-radius:16px;padding:12px;background:#f8f9fd;overflow:hidden}
-.d-graph-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}.d-key,.d-key>span,.d-camera-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.d-key{font-size:11px;color:var(--muted);gap:14px}.d-key i{width:9px;height:9px;background:#8c70bd;border-radius:50%;display:inline-block}.d-key i.d-key-op{background:#4a9098;border-radius:2px}.d-camera-tools{gap:5px}.d-camera-tools .btn{min-height:34px;padding:6px 10px;font-size:11px}.d-camera-tools #dZoomLabel{min-width:38px;text-align:center}
-.d-stage{position:relative;height:570px;width:100%;overflow:hidden;touch-action:none;overscroll-behavior:contain;background-image:radial-gradient(#dce1ed 1px,transparent 1px);background-size:22px 22px;border-radius:9px;cursor:grab;isolation:isolate}.d-stage:active{cursor:grabbing}.d-stage:focus-visible{outline:2px solid #9c82c8;outline-offset:-2px}.d-world{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}.d-world svg{position:absolute;inset:0;overflow:visible}.d-world .d-wire{opacity:.5}.d-world .d-wire.selected{opacity:1;stroke:#7651ad}.d-world .d-wire.dimmed{opacity:.13}.d-world .d-geo-wire{stroke:#5d9198;opacity:.45}.d-world .d-hit{stroke-width:20}
-.d-net-node{position:absolute;transform:translate(-50%,-50%);width:156px;height:60px;padding:8px 11px;border:1px solid #dadfec;background:#fff;border-radius:24px;text-align:center;box-shadow:0 2px 6px #34446609;cursor:grab;touch-action:none}.d-net-node strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:1.2;font-weight:600}.d-net-node small{display:block;font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}.d-net-node:before{content:'';position:absolute;top:-5px;left:calc(50% - 5px);width:9px;height:9px;border-radius:50%;background:#8c70bd}.d-net-node.operator{border-radius:6px}.d-net-node.operator:before{border-radius:2px;background:#4a9098}.d-net-node.country{border-radius:10px;background:#eef5f5}.d-net-node.country:before{display:none}.d-net-node.dimmed{opacity:.5}.d-net-node.selected{border:2px solid #9273bd;background:#f2ecfa}.d-net-node:focus-visible{outline:3px solid #a08bbc;outline-offset:3px}
+.d-graph-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}.d-key,.d-key>span,.d-camera-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.d-key{font-size:11px;color:var(--muted);gap:14px}.d-key i{width:9px;height:9px;background:#8c70bd;border-radius:50%;display:inline-block}.d-key i.d-key-op{background:#267d88;border-radius:2px}.d-key i.d-key-acs{background:#c17b16}.d-camera-tools{gap:5px}.d-camera-tools .btn{min-height:34px;padding:6px 10px;font-size:11px}.d-camera-tools #dZoomLabel{min-width:38px;text-align:center}
+.d-stage{position:relative;height:570px;width:100%;overflow:hidden;touch-action:none;overscroll-behavior:contain;background-image:radial-gradient(#dce1ed 1px,transparent 1px);background-size:22px 22px;border-radius:9px;cursor:grab;isolation:isolate}.d-stage:active{cursor:grabbing}.d-stage:focus-visible{outline:2px solid #9c82c8;outline-offset:-2px}.d-world{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}.d-world svg{position:absolute;inset:0;overflow:visible}.d-world .d-wire{opacity:.6;stroke:#8574b0;stroke-linecap:round}.d-world .d-wire.selected{opacity:1;stroke:#6841b5}.d-world .d-wire.dimmed{opacity:.17}.d-world .d-geo-wire{stroke:#46838d;opacity:.55}.d-world .d-hit{stroke-width:20}.d-wire-halo{fill:none;stroke:#fff;stroke-linecap:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.d-port{position:absolute;pointer-events:none;transform:translate(-50%,-50%);width:7px;height:7px;border:1.5px solid #fff;border-radius:50%;background:#8574b0}.d-port.operator,.d-port.country{background:#267d88}.d-port.acs{background:#c17b16}.d-port.dimmed{background:#c7cddc}.d-port.selected{width:8.5px;height:8.5px;background:#6841b5}
+.d-net-node{position:absolute;z-index:1;transform:translate(-50%,-50%);width:156px;height:60px;padding:8px 11px;border:1px solid #c7c1dc;background:#fff;border-radius:24px;text-align:center;box-shadow:0 4px 12px #34446612;cursor:grab;touch-action:none}.d-net-node strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:1.2;font-weight:600}.d-net-node small{display:block;font-size:10px;color:#74628e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}.d-net-node.operator{border-radius:6px;border-color:#aacbd0}.d-net-node.operator small{color:#427982}.d-net-node.country{border-radius:10px;background:#eef5f5}.d-net-node.acs{border-color:#d6a44a;background:#fff7e7;box-shadow:0 4px 12px #93611c18}.d-net-node.acs small{color:#916009;font-weight:700}.d-net-node.adjacent{border-color:#a08ac7;box-shadow:0 4px 14px #6841b518}.d-net-node.dimmed{background:#f7f9fc;border-color:#e0e5ef;box-shadow:none;color:#6e7b93}.d-net-node.dimmed small{color:#7d899f}.d-net-node.selected{z-index:3;border:2px solid #6841b5;background:#30234f;color:#fff;box-shadow:0 0 0 4px #8260be25,0 8px 22px #30234f35}.d-net-node.selected small{color:#e0d5f5}.d-net-node:hover{border-color:#8260be;box-shadow:0 5px 16px #6841b523}.d-net-node:focus-visible{outline:3px solid #a08bbc;outline-offset:3px}
+
 .flow-view .d-net-node{width:calc(156px * var(--d-label-scale,1));height:calc(32px * var(--d-label-scale,1));padding:4px 8px}.flow-view .d-net-node strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:calc(12px * var(--d-label-scale,1))}.flow-view .d-net-node small{font-size:calc(10px * var(--d-label-scale,1));margin-top:1px}
 .d-selection-bar{display:flex;gap:12px;align-items:center;justify-content:space-between;min-height:44px;margin-top:8px;font-size:12px;color:var(--muted)}.d-selection-bar span{overflow-wrap:anywhere}.d-selection-bar .btn{flex-shrink:0;min-height:38px}.d-neighbors{max-height:420px;overflow:auto}.d-neighbors .d-proof{display:flex;justify-content:space-between;gap:10px}.d-neighbors .num{white-space:nowrap}
 .d-fullscreen-open{overflow:hidden}#deploymentPanel.d-fullscreen{position:fixed;inset:0;z-index:1000;background:var(--bg,#f6f7fb);padding:16px;overflow:auto;overscroll-behavior:contain}#deploymentPanel.d-fullscreen>.d-controls,#deploymentPanel.d-fullscreen>.d-viewbar,#deploymentPanel.d-fullscreen>.eco-summary,#deploymentPanel.d-fullscreen>p{display:none}#deploymentPanel.d-fullscreen .d-stage{height:calc(100dvh - 200px);min-height:340px}
@@ -677,7 +679,7 @@ dialog b{color:var(--ink)}
   <div class="eco-layout">
    <div class="d-main">
     <div id="dGraphView" class="d-explorer">
-     <div class="d-graph-tools"><div class="d-key"><span><i class="d-key-line"></i><span data-i18n="d_line"></span></span><span><i class="d-key-op"></i><span data-i18n="eco_operator"></span></span></div><div class="d-camera-tools"><button class="btn" id="dZoomOut" data-i18n-aria="d_zoom_out">−</button><span id="dZoomLabel" class="note num"></span><button class="btn" id="dZoomIn" data-i18n-aria="d_zoom_in">+</button><button class="btn" id="dFit" data-i18n="d_fit"></button><button class="btn" id="dLayout" data-i18n="d_relayout"></button><button class="btn" id="dFullscreen" data-i18n="d_fullscreen"></button></div></div>
+     <div class="d-graph-tools"><div class="d-key"><span><i class="d-key-line"></i><span data-i18n="d_line"></span></span><span><i class="d-key-op"></i><span data-i18n="eco_operator"></span></span><span id="dAcsKey" hidden><i class="d-key-acs"></i><span data-i18n="service_acs"></span></span></div><div class="d-camera-tools"><button class="btn" id="dZoomOut" data-i18n-aria="d_zoom_out">−</button><span id="dZoomLabel" class="note num"></span><button class="btn" id="dZoomIn" data-i18n-aria="d_zoom_in">+</button><button class="btn" id="dFit" data-i18n="d_fit"></button><button class="btn" id="dLayout" data-i18n="d_relayout"></button><button class="btn" id="dFullscreen" data-i18n="d_fullscreen"></button></div></div>
      <div id="dCanvas" class="d-stage" tabindex="0" role="group" data-i18n-aria="d_graph_help"><div id="dWorld" class="d-world"></div></div>
      <div class="d-selection-bar"><span id="dSelectionText"></span><button class="btn soft" id="dOpenDetail" data-i18n="d_details" hidden></button></div>
      <div class="d-pagination"><span id="dShown" class="note"></span><button class="btn" id="dMore" data-i18n="d_more"></button></div><p id="dGraphHelp" class="eco-help"></p><p class="eco-help" data-i18n="d_weight"></p>
@@ -2360,7 +2362,7 @@ function dDetail(row){
 /* Stable keys keep each operator tied to its observed country. */
 function dNodeKeys(row){return ['l:'+row.line,JSON.stringify(['o',row.cc,row.operator])];}
 function dNodeInfo(key){
- if(key.startsWith('l:')&&Object.hasOwn(DATA.lines,key.slice(2))){const line=key.slice(2);return {id:key,kind:'line',line,name:DATA.lines[line].name,sub:t('service_'+DATA.lines[line].service)};}
+ if(key.startsWith('l:')&&Object.hasOwn(DATA.lines,key.slice(2))){const line=key.slice(2);return {id:key,kind:'line',line,service:DATA.lines[line].service,name:DATA.lines[line].name,sub:t('service_'+DATA.lines[line].service)};}
  try{const [type,cc,operator]=JSON.parse(key);if(type==='o'&&ALL_CCS.has(cc)&&Object.hasOwn(DINDEX.entities,operator))return {id:key,kind:'operator',cc,operator,name:DINDEX.entities[operator].name,sub:ccName(cc)};}catch(e){}
  return null;
 }
@@ -2422,6 +2424,34 @@ function dNodeDetail(key,rows){
  const expansion=DS.expanded.find(e=>e[0]===key),more=DS.view==='graph'&&shown.length<adjacent.length&&(expansion?.[1]||0)<32;
  $('#dDetail').innerHTML=`<span class="eco-status">${node.kind==='line'?t('d_line'):t('eco_operator')}</span><h2>${esc(node.name)}</h2><p>${esc(node.sub)} · ${t('d_neighbors',adjacent.length)}</p><div class="actrow">${more?`<button class="btn soft" data-d-expand="${esc(key)}">${t('d_expand')}</button>`:''}<button class="btn ghost" data-d-filter="${esc(key)}">${t('d_filter_node')}</button>${DS.view==='graph'?`<button class="btn ghost" data-d-pin="${esc(key)}">${t(DG.pins.has(key)?'d_unpin':'d_pin')}</button>`:''}</div><h3>${t('d_connections')}</h3><div class="d-neighbors">${adjacent.slice(0,32).map(r=>`<button class="d-proof" data-d-cell="${esc(r.id)}"><span>${esc(node.kind==='line'?DINDEX.entities[r.operator].name+' · '+ccName(r.cc):DATA.lines[r.line].name)}</span><span class="num">${fmt(r.count)}</span></button>`).join('')}</div><p class="note">${t('d_shown',shown.length,adjacent.length)}</p>${ecoSources([{file:'DEPLOYMENTS.md',title:t('d_method')}])}`;
 }
+/* Card geometry is shared by initial rendering, drag and flow zoom. */
+function dNodeBox(node,view,labelScale=1){
+ const scale=view==='flows'?labelScale:1,h=(view==='flows'?32:60)*scale;
+ return {w:156*scale,h,r:node.kind==='operator'?6:node.kind==='country'?10:Math.min(24,h/2)};
+}
+function dNodePort(node,toward,view,labelScale=1){
+ const box=dNodeBox(node,view,labelScale),hw=box.w/2,hh=box.h/2,dx=toward.x-node.x,dy=toward.y-node.y;
+ const clamp=(v,limit)=>Math.max(-limit,Math.min(limit,v));
+ // Keep ports on straight border segments, clear of the rounded corners.
+ if(view==='flows'||Math.abs(dx)/hw>=Math.abs(dy)/hh){
+  const nx=dx<0?-1:1;
+  return {x:node.x+nx*hw,y:node.y+(view==='flows'?0:clamp(dy*hw/(Math.abs(dx)||1),hh-box.r)),nx,ny:0};
+ }
+ const ny=dy<0?-1:1;
+ return {x:node.x+clamp(dx*hh/(Math.abs(dy)||1),hw-box.r),y:node.y+ny*hh,nx:0,ny};
+}
+function dConnection(a,b,view,labelScale=1){
+ const start=dNodePort(a,b,view,labelScale),end=dNodePort(b,a,view,labelScale),gap=Math.hypot(end.x-start.x,end.y-start.y);
+ const bend=view==='flows'?Math.abs(end.x-start.x)/2:Math.min(70,gap*.32);
+ return {start,end,path:`M${start.x},${start.y} C${start.x+start.nx*bend},${start.y+start.ny*bend} ${end.x+end.nx*bend},${end.y+end.ny*bend} ${end.x},${end.y}`};
+}
+function dPaintConnections(){
+ if(!DG.layout)return;
+ const byId=new Map(DG.layout.nodes.map(n=>[n.id,n])),scale=Math.max(1,Math.min(2.5,1/DG.camera.k));
+ const connections=DG.layout.edges.map(e=>dConnection(byId.get(e.source),byId.get(e.target),DS.view,scale));
+ for(const p of $$('#dWorld [data-d-wire]'))p.setAttribute('d',connections[+p.dataset.dWire].path);
+ for(const p of $$('#dWorld [data-d-port]')){const edge=DG.layout.edges[+p.dataset.dPort],point=connections[+p.dataset.dPort][p.dataset.end],node=byId.get(edge[p.dataset.end==='start'?'source':'target']);p.style.left=`calc(50% + ${point.x-node.x}px)`;p.style.top=`calc(50% + ${point.y-node.y}px)`;}
+}
 function dGraph(rows){
  const shown=dGraphRows(rows),model=dBuildGraph(shown),signature=DS.view+'|'+shown.map(r=>r.id).sort().join('|');
  const initial=DG.view!==DS.view||!DG.layout;
@@ -2432,15 +2462,21 @@ function dGraph(rows){
  const byId=new Map(layout.nodes.map(n=>[n.id,n])),related=new Set();
  if(DS.node){for(const e of model.edges)if(e.source===DS.node||e.target===DS.node){related.add(e.source);related.add(e.target);}}
  const chosen=shown.find(r=>r.id===DS.selected);if(chosen)dNodeKeys(chosen).forEach(id=>related.add(id));
- const path=(a,b)=>DS.view==='flows'?`M${a.x},${a.y} C${(a.x+b.x)/2},${a.y} ${(a.x+b.x)/2},${b.y} ${b.x},${b.y}`:`M${a.x},${a.y} L${b.x},${b.y}`;
- const max=Math.max(1,...shown.map(r=>r.count));
- const svg=`<svg width="${layout.width}" height="${layout.height}" aria-label="${esc(t(DS.view==='flows'?'d_flows':'d_graph'))}" role="group">${layout.edges.map((e,i)=>{
-  const d=path(byId.get(e.source),byId.get(e.target));if(e.geo)return `<path data-d-wire="${i}" class="d-geo-wire" d="${d}"/>`;
-  const r=e.row,active=r.id===DS.selected||DS.node&&dTouches(r,DS.node),label=DINDEX.entities[r.operator].name+' · '+ccName(r.cc)+' → '+DATA.lines[r.line].name+': '+new Intl.NumberFormat(LANG).format(r.count);
-  return `<path data-d-wire="${i}" class="d-wire ${active?'selected':related.size?'dimmed':''}" stroke-width="${1+(DS.view==='flows'?16:5)*Math.sqrt(r.count/max)}" d="${d}"/><path data-d-wire="${i}" class="d-hit" d="${d}" role="button" tabindex="0" aria-label="${esc(label)}" data-d-cell="${esc(r.id)}"><title>${esc(label)}</title></path>`;
- }).join('')}</svg>`;
+ const max=Math.max(1,...shown.map(r=>r.count)),scale=Math.max(1,Math.min(2.5,1/DG.camera.k));
+ const ports=new Map(layout.nodes.map(n=>[n.id,[]])),wires=[];
+ const edges=layout.edges.map((e,i)=>({e,i,active:!e.geo&&(e.row.id===DS.selected||!!DS.node&&dTouches(e.row,DS.node))})).sort((a,b)=>Number(a.active)-Number(b.active));
+ for(const {e,i,active} of edges){
+  const a=byId.get(e.source),b=byId.get(e.target),connection=dConnection(a,b,DS.view,scale),d=connection.path;
+  const state=active?'selected':related.size?'dimmed':'';
+  for(const [end,node] of [['start',a],['end',b]]){const point=connection[end];ports.get(node.id).push(`<i class="d-port ${node.kind} ${node.service||''} ${state}" data-d-port="${i}" data-end="${end}" style="left:calc(50% + ${point.x-node.x}px);top:calc(50% + ${point.y-node.y}px)" aria-hidden="true"></i>`);}
+  if(e.geo){wires.push(`<path data-d-wire="${i}" class="d-geo-wire" d="${d}"/>`);continue;}
+  const r=e.row,width=Math.max(active?2.4:1,1+(DS.view==='flows'?16:5)*Math.sqrt(r.count/max)),label=DINDEX.entities[r.operator].name+' · '+ccName(r.cc)+' → '+DATA.lines[r.line].name+': '+new Intl.NumberFormat(LANG).format(r.count);
+  wires.push(`${active?`<path data-d-wire="${i}" class="d-wire-halo" stroke-width="${width+3}" d="${d}"/>`:''}<path data-d-wire="${i}" class="d-wire ${state}" stroke-width="${width}" d="${d}"/><path data-d-wire="${i}" class="d-hit" d="${d}" role="button" tabindex="0" aria-label="${esc(label)}" data-d-cell="${esc(r.id)}"><title>${esc(label)}</title></path>`);
+ }
+ const svg=`<svg width="${layout.width}" height="${layout.height}" aria-label="${esc(t(DS.view==='flows'?'d_flows':'d_graph'))}" role="group">${wires.join('')}</svg>`;
  $('#dWorld').style.width=layout.width+'px';$('#dWorld').style.height=layout.height+'px';
- $('#dWorld').innerHTML=svg+layout.nodes.map(n=>`<button class="d-net-node ${n.kind} ${DS.node===n.id?'selected':''} ${related.size&&!related.has(n.id)&&n.kind!=='country'?'dimmed':''}" style="left:${n.x}px;top:${n.y}px" ${n.kind==='country'?`data-d-country="${n.cc}"`:`data-d-node="${esc(n.id)}"`} title="${esc(n.name+' · '+n.sub)}" aria-pressed="${DS.node===n.id}"><strong>${esc(n.name)}</strong><small>${esc(n.sub)}${DS.view==='graph'&&DG.pins.has(n.id)?' · '+t('d_pinned'):''}</small></button>`).join('');
+ $('#dWorld').innerHTML=svg+layout.nodes.map(n=>`<button class="d-net-node ${n.kind} ${n.service||''} ${DS.node===n.id||chosen&&related.has(n.id)?'selected':related.has(n.id)?'adjacent':''} ${related.size&&!related.has(n.id)&&n.kind!=='country'?'dimmed':''}" style="left:${n.x}px;top:${n.y}px" ${n.kind==='country'?`data-d-country="${n.cc}"`:`data-d-node="${esc(n.id)}"`} title="${esc(n.name+' · '+n.sub)}" aria-pressed="${DS.node===n.id}"><strong>${esc(n.name)}</strong><small>${esc(n.sub)}${DS.view==='graph'&&DG.pins.has(n.id)?' · '+t('d_pinned'):''}</small>${ports.get(n.id).join('')}</button>`).join('');
+ $('#dAcsKey').hidden=!layout.nodes.some(n=>n.service==='acs');
  $('#dShown').textContent=t('d_shown',shown.length,rows.length);$('#dMore').hidden=shown.length>=rows.length||DS.limit>=96;
  $('#dGraphHelp').textContent=t(DS.view==='flows'?'d_flow_help':'d_graph_help');
  $('#dLayout').hidden=DS.view!=='graph';
@@ -2453,6 +2489,7 @@ function dPaintCamera(){
  $('#dWorld').style.transform=`translate(${DG.camera.x}px,${DG.camera.y}px) scale(${DG.camera.k})`;
  $('#dWorld').style.setProperty('--d-label-scale',String(Math.max(1,Math.min(2.5,1/DG.camera.k))));
  $('#dZoomLabel').textContent=Math.round(DG.camera.k*100)+'%';
+ if(DS.view==='flows')dPaintConnections();
 }
 function dFitGraph(initial=false){
  if(!DG.layout?.nodes.length)return;
@@ -2473,8 +2510,7 @@ function dMoveNode(key,x,y){
  node.x=x;node.y=y;DG.positions.set(key,{x,y});DG.pins.add(key);
  const button=$$('#dWorld [data-d-node]').find(b=>b.dataset.dNode===key);if(button){button.style.left=x+'px';button.style.top=y+'px';button.querySelector('small').textContent=node.sub+' · '+t('d_pinned');}
  const pin=$$('#dDetail [data-d-pin]').find(b=>b.dataset.dPin===key);if(pin)pin.textContent=t('d_unpin');
- const byId=new Map(DG.layout.nodes.map(n=>[n.id,n]));
- for(const p of $$('#dWorld [data-d-wire]')){const e=DG.layout.edges[+p.dataset.dWire],a=byId.get(e.source),b=byId.get(e.target);p.setAttribute('d',`M${a.x},${a.y} L${b.x},${b.y}`);}
+ dPaintConnections();
 }
 function dActivateGraph(target){
  const node=target.closest('[data-d-node]');if(node){dExpandNode(node.dataset.dNode);return;}
