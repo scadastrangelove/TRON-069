@@ -1,6 +1,6 @@
 # Public project backlog
 
-Reviewed 15 October 2026. This file records status, not instructions to run scans.
+Reviewed 16 October 2026. This file records status, not instructions to run scans.
 
 ## Integrated
 
@@ -78,6 +78,10 @@ part of the public repository. Daily collection is supported but not scheduled.
 
 ## ACS research and atlas integration
 
+- [x] Reject the Airties port-9080 ACS candidate: AirTies-Router / AR-141 web
+  interfaces on Türk Telekom are CPE-side management services, not an ACS
+  population (research correction, October 16; see
+  [ACS-HUNT.md](ACS-HUNT.md#airties-port-9080-cpe-web-interface-not-acs)).
 - [x] Separate relationship evidence from count observations.
 - [x] Add the CPE–ACS graph with evidence filters, source cards and map links.
 - [x] Add the measured country–operator–signature network, flow overview and matrix, exact aliases and corporate grouping.

@@ -3,6 +3,7 @@
 Public edition of the 10 October 2026 investigation. Historical sample counts
 below describe that research pass. The current atlas uses separately dated Count
 results. A visible service or software version is not proof of vulnerability.
+Later research corrections are dated separately below.
 
 ## cwmp-server
 
@@ -82,6 +83,18 @@ used port 51007 and did not contain the observed Gateway realm. A similar Digest
 template does not resolve those gaps. The claimed integer-overflow explanation
 also confused printf field width with value length. The public atlas therefore
 keeps attribution open and records the 51007 control query separately.
+
+## Airties port 9080: CPE web interface, not ACS
+
+Research correction, 16 October 2026. The population initially described as
+"Airties Cloud" on port 9080 belongs to subscriber router web interfaces on
+Türk Telekom. The reviewed responses identify `AirTies-Router`, model `AR-141`,
+and `mini_httpd/1.19 19dec2003`.
+
+This closes the ACS candidate as a role misclassification. These are CPE-side
+web management interfaces; the observed markers do not establish a TR-069
+connection-request listener or an ACS relationship. The earlier 2,172-endpoint
+lead is not an ACS count and is not added to the atlas's TR-069 totals.
 
 ## Atlas integration
 
