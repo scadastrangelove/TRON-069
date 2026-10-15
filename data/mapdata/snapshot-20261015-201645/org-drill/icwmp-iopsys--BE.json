@@ -1,0 +1,41 @@
+{
+ "dork": "\"authenticate@cwmp\" country:BE",
+ "total": 2,
+ "taken": "2026-10-15T20:20:18+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as196755"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "SEWAN SAS"
+  },
+  {
+   "count": 1,
+   "value": "Sewan Belgium SA"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "BE"
+}

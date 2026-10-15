@@ -1,0 +1,65 @@
+{
+ "dork": "\"cwmpd\" opaque country:AZ",
+ "total": 5,
+ "taken": "2026-10-15T21:08:29+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as39232"
+  },
+  {
+   "count": 1,
+   "value": "200446"
+  },
+  {
+   "count": 1,
+   "value": "as200446"
+  },
+  {
+   "count": 1,
+   "value": "as208410"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "ARTKOM LLC"
+  },
+  {
+   "count": 1,
+   "value": "Leased IPv4 Blocks"
+  },
+  {
+   "count": 1,
+   "value": "SELNET LLC"
+  },
+  {
+   "count": 1,
+   "value": "Uninet Adsl Users"
+  },
+  {
+   "count": 1,
+   "value": "customers /23 FTTB network"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "AZ"
+}

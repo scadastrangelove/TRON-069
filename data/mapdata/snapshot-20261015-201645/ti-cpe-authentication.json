@@ -1,0 +1,93 @@
+{
+ "dork": "\"TI CPE Authentication\"",
+ "total": 32112,
+ "taken": "2026-10-15T20:17:30+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 4,
+   "covered": 32112,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 10,
+   "covered": 32112,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 32112,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 32088,
+   "value": "IT"
+  },
+  {
+   "count": 21,
+   "value": "ZA"
+  },
+  {
+   "count": 2,
+   "value": "UA"
+  },
+  {
+   "count": 1,
+   "value": "TR"
+  }
+ ],
+ "asn": [
+  {
+   "count": 31245,
+   "value": "as3269"
+  },
+  {
+   "count": 813,
+   "value": "3269"
+  },
+  {
+   "count": 22,
+   "value": "as1267"
+  },
+  {
+   "count": 21,
+   "value": "as327782"
+  },
+  {
+   "count": 5,
+   "value": "1267"
+  },
+  {
+   "count": 2,
+   "value": "as49824"
+  },
+  {
+   "count": 1,
+   "value": "20580"
+  },
+  {
+   "count": 1,
+   "value": "as197075"
+  },
+  {
+   "count": 1,
+   "value": "as24608"
+  },
+  {
+   "count": 1,
+   "value": "as9121"
+  }
+ ],
+ "ports": [
+  {
+   "count": 32112,
+   "value": 7170
+  }
+ ],
+ "orgs": [],
+ "name": "TI CPE Authentication"
+}

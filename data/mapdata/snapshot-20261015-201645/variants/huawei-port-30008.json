@@ -1,0 +1,147 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:30008",
+ "total": 6798,
+ "taken": "2026-10-15T21:15:25+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 6798,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 12,
+   "covered": 6798,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 8,
+   "covered": 6798,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 6798,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 6796,
+   "value": "AU"
+  },
+  {
+   "count": 1,
+   "value": "CL"
+  },
+  {
+   "count": 1,
+   "value": "NL"
+  }
+ ],
+ "asn": [
+  {
+   "count": 6552,
+   "value": "as7545"
+  },
+  {
+   "count": 237,
+   "value": "7545"
+  },
+  {
+   "count": 4,
+   "value": "as4739"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as2764"
+  },
+  {
+   "count": 1,
+   "value": "as7600"
+  },
+  {
+   "count": 1,
+   "value": "as9443"
+  }
+ ],
+ "ports": [
+  {
+   "count": 6798,
+   "value": 30008
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3733,
+   "value": "TPG Internet Pty Ltd"
+  },
+  {
+   "count": 2069,
+   "value": "iiNet Limited"
+  },
+  {
+   "count": 865,
+   "value": "TPG Internet Pty Ltd."
+  },
+  {
+   "count": 110,
+   "value": "AAPT Limited"
+  },
+  {
+   "count": 8,
+   "value": "POWERTEL LIMITED"
+  },
+  {
+   "count": 7,
+   "value": "Powertel Internet Service Provider"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "NBN, Private IP, IPWAN, MPLS & ADSL broadband technologies"
+  },
+  {
+   "count": 1,
+   "value": "Salient Enterprises Pty Ltd t/a Interworx Technologies Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Salient Enterprises Pty Ltd t/a Interworx Technologies Pty Ltd Level 1, 10 Barolin St, Bundaberg, QLD 4670"
+  },
+  {
+   "count": 1,
+   "value": "Vocus Australia"
+  },
+  {
+   "count": 1,
+   "value": "Vultr Holdings, LLC"
+  }
+ ],
+ "id": "huawei-port-30008",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 30008",
+  "en": "CR port 30008",
+  "es": "Puerto CR 30008",
+  "zh": "CR 端口 30008"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

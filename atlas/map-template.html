@@ -1126,6 +1126,13 @@ const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmt = n => n == null ? "—" : new Intl.NumberFormat(LANG, {notation:"compact",maximumFractionDigits:2}).format(n);
 const fmtF = n => n == null ? "—" : n >= 1e6 ? (n/1e6).toFixed(2)+"M" : n >= 1e3 ? (n/1e3).toFixed(n>=1e5?0:1)+"k" : ""+n;
+function httpMissingShare(cc){
+ const park=DATA.park[cc],http=DATA.http[cc]??0;
+ return Number.isFinite(park)&&park>0&&Number.isFinite(http)&&http>=0&&http<=park?1-http/park:null;
+}
+function httpShareReason(cc){
+ return (DATA.http[cc]||0)>(DATA.park[cc]||0)?t('http_inconsistent')+' HTTP: '+fmtF(DATA.http[cc])+' · :7547: '+fmtF(DATA.park[cc]||0):'';
+}
 let DNru, DNen; try{DNru=new Intl.DisplayNames(["ru"],{type:"region"});DNen=new Intl.DisplayNames(["en"],{type:"region"});}catch(e){}
 const ccName = cc => { try{ if(LANG!=='ru'&&DNcur){const n=DNcur.of(cc); if(n&&n!==cc)return n;} const n=DNru&&DNru.of(cc); return n&&n!==cc?n:cc; }catch(e){ return cc; } };
 const ccNameEn = cc => { try{ return DNen?DNen.of(cc):cc; }catch(e){ return cc; } };
@@ -1643,8 +1650,8 @@ function renderCountries(){
    else{const lead=Object.entries(c.lines).sort((a,b)=>b[1]-a[1])[0];fill=lead?lineColor(lead[0]):fill;}
   }
   if(S.mode==="http"&&DATA.park[cc]){
-   const s=1-(DATA.http[cc]||0)/DATA.park[cc];
-   fill=s>0.5?"#e8b27a":s>0.15?"#d9c9a8":"#d3e3f5";
+   const s=httpMissingShare(cc);
+   if(s!==null)fill=s>0.5?"#e8b27a":s>0.15?"#d9c9a8":"#d3e3f5";
   }
   if(S.mode==="clouds"&&DATA.park[cc])fill="#dfe9f5";
   el.style.fill=fill;
@@ -1766,7 +1773,7 @@ function showTipCc(cc){
  tip.innerHTML=`<strong>${esc(ccName(cc))} <span class="mono" style="color:var(--faint);font-size:11px">${esc(cc)}</span></strong>
  <div class="big num">${fmtF(c.base)}</div>
  <div class="row"><span>${t("park_label")}</span><b class="num">${fmtF(DATA.park[cc]||0)}</b></div>
- <div class="row"><span>${t("silent_label")}</span><b class="num">${DATA.park[cc]?Math.round(100*(1-(DATA.http[cc]||0)/DATA.park[cc]))+"%":"—"}</b></div>
+ <div class="row"><span>${t("silent_label")}</span><b class="num" title="${esc(httpShareReason(cc))}">${httpMissingShare(cc)===null?"—":Math.round(100*httpMissingShare(cc))+"%"}</b></div>
  ${lead.map(([s,n])=>`<div class="row"><span><i style="display:inline-block;width:8px;height:8px;border-radius:3px;background:${lineColor(s)};margin-right:6px"></i>${esc(DATA.lines[s].name)}</span><b class="num">${fmtF(n)}</b></div>`).join("")}
  <div class="row" style="margin-top:6px;color:var(--faint)">${t("tip_sel")}</div>`;
  tip.hidden=false;
@@ -1873,7 +1880,7 @@ function renderTable(){
  const dir=S.sort.dir;
  const val=(cc,k)=>{if(k==="name")return ccNameEn(cc);const c=SLICE_FULL.ccs.get(cc);
   if(k==="base")return c.base;if(k==="park")return DATA.park[cc]||0;
-  if(k==="silent")return DATA.park[cc]?1-(DATA.http[cc]||0)/DATA.park[cc]:0;
+  if(k==="silent")return httpMissingShare(cc)??-1;
   if(k.startsWith("L:"))return c.lines[k.slice(2)]||0;return 0;};
  rows.sort((a,b)=>{const va=val(a,S.sort.key),vb=val(b,S.sort.key);return(typeof va==="string"?va.localeCompare(vb):va-vb)*dir;});
  const csel=new Set(selCountries());
@@ -1886,8 +1893,8 @@ function renderTable(){
    .map(([s,n])=>`<i title="${esc(DATA.lines[s].name)}: ${fmtF(n)}" class="minibar" style="width:${Math.max(3,Math.round(n/c.base*46))}px;background:${lineColor(s)}"></i>`).join("");
   let tds;
   if(cols.type==="base"){
-   const silent=DATA.park[cc]?Math.round(100*(1-(DATA.http[cc]||0)/DATA.park[cc])):"—";
-   tds=`<td class="num">${fmtF(c.base)}<i class="minibar" style="width:${Math.round(c.base/maxBase*50)}px;background:#9db4e8"></i></td><td class="num">${fmtF(DATA.park[cc]||0)}</td><td class="num" style="color:${silent!=="—"&&silent>50?"#b98324":"inherit"}">${silent!=="—"?"­"+silent+"%":"—"}</td><td>${comp}</td>`;
+   const share=httpMissingShare(cc),silent=share===null?"—":Math.round(100*share);
+   tds=`<td class="num">${fmtF(c.base)}<i class="minibar" style="width:${Math.round(c.base/maxBase*50)}px;background:#9db4e8"></i></td><td class="num">${fmtF(DATA.park[cc]||0)}</td><td class="num" title="${esc(httpShareReason(cc))}" style="color:${silent!=="—"&&silent>50?"#b98324":"inherit"}">${silent!=="—"?"­"+silent+"%":"—"}</td><td>${comp}</td>`;
   }else if(cols.type==="lines"){
    tds=cols.lines.map(s=>{const n=c.lines[s]||0;return`<td class="num">${n?fmtF(n):"—"}</td>`;}).join("");
   }else{
@@ -2006,7 +2013,7 @@ function renderInspector(){
   const cc=selCountries()[0];const c=SLICE.ccs.get(cc);
   const drillSlug=(()=>{const e=c?Object.entries(c.lines).sort((a,b)=>b[1]-a[1])[0]:null;return e?e[0]:null;})();
   const orgs=drillSlug&&DATA.orgdrill[drillSlug+"--"+cc]?[...orgCounts(DATA.orgdrill[drillSlug+"--"+cc],cc)].sort((a,b)=>b[1]-a[1]).map(([value,count])=>({value,count})):null;
-  const silent=DATA.park[cc]?Math.round(100*(1-(DATA.http[cc]||0)/DATA.park[cc])):null;
+  const share=httpMissingShare(cc),silent=share===null?null:Math.round(100*share);
   const ident=DATA.ident[cc]||0;
   h+=`<div class="insphead"><div class="eyebrow">${t("country_label")}</div></div>
   <div class="crumbs"><b data-go="root">${t("root")}</b><span>›</span><b>${esc(ccName(cc))}</b></div>
@@ -2016,6 +2023,7 @@ function renderInspector(){
   <div class="krow" title="${esc(t("cty_allports"))}"><span class="nm">${t("cty_allports")}</span><span class="n">${fmtF(ident)}</span></div>
   <div class="krow"><span class="nm">${t("cty_park")}</span><span class="n">${fmtF(DATA.park[cc]||0)}</span></div>
   <div class="krow"><span class="nm">${t("cty_silent")}</span><span class="n">${silent==null?"—":silent+"%"}</span></div>
+  ${httpShareReason(cc)?`<p class="note">${esc(httpShareReason(cc))}</p>`:""}
   <h3>${t("cty_lines")}</h3><div class="klist">
   ${Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,12).map(([s,n])=>`<button class="krow" data-pair="${esc(s)}"><i class="sw" style="background:${lineColor(s)}"></i><span class="nm">${esc(DATA.lines[s].name)}</span><span class="n">${fmtF(n)}${ident?" · "+Math.round(100*n/ident)+"%":""}</span></button>`).join("")}
   </div>`:`<div class="note">${t("no_country_data")}</div>`}

@@ -1,0 +1,73 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:VN",
+ "total": 149,
+ "taken": "2026-10-15T21:05:49+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 149,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 149,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 137,
+   "value": "as7552"
+  },
+  {
+   "count": 8,
+   "value": "as24086"
+  },
+  {
+   "count": 3,
+   "value": "7552"
+  },
+  {
+   "count": 1,
+   "value": "as45903"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 128,
+   "value": "Viettel Group"
+  },
+  {
+   "count": 7,
+   "value": "Dai IP cho dich vu ADSL tai HCM"
+  },
+  {
+   "count": 6,
+   "value": "Dai IP su dung cho mang khach hang FTTH o HaNoi"
+  },
+  {
+   "count": 4,
+   "value": "Dai IP cho dich vu ADSL DGN+NAN"
+  },
+  {
+   "count": 2,
+   "value": "ADSL HNI"
+  },
+  {
+   "count": 1,
+   "value": "CMC Telecom Infrastructure Company"
+  },
+  {
+   "count": 1,
+   "value": "Dai IP cho dich vu ADSL HNI"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "VN"
+}

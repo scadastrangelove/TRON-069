@@ -1,0 +1,69 @@
+{
+ "dork": "\"cwmpd\" opaque country:PS",
+ "total": 1620,
+ "taken": "2026-10-15T21:07:42+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 1620,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 1619,
+   "remainder": 1
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1327,
+   "value": "as12754"
+  },
+  {
+   "count": 250,
+   "value": "as47253"
+  },
+  {
+   "count": 33,
+   "value": "12754"
+  },
+  {
+   "count": 9,
+   "value": "47253"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1360,
+   "value": "Coolnet New Communication Provider"
+  },
+  {
+   "count": 227,
+   "value": "BNET-NETWORK"
+  },
+  {
+   "count": 23,
+   "value": "BCI Telecommunication & Advanced Technology Company"
+  },
+  {
+   "count": 4,
+   "value": "BSA-ADSL Customer - ASR2"
+  },
+  {
+   "count": 3,
+   "value": "ADSL-Static"
+  },
+  {
+   "count": 3,
+   "value": "Palestine Telecommunications Company (PALTEL)"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "PS"
+}

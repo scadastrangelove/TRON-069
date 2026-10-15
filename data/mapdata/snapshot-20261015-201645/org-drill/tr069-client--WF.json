@@ -1,0 +1,61 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:WF",
+ "total": 50,
+ "taken": "2026-10-15T20:44:46+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 42,
+   "remainder": 8
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 50,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 47,
+   "value": "as45879"
+  },
+  {
+   "count": 3,
+   "value": "45879"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 14,
+   "value": "Broadband ADSL Pool 6 - Wallis islands"
+  },
+  {
+   "count": 8,
+   "value": "Broadband Wifi Pool 1 - Wallis islands"
+  },
+  {
+   "count": 7,
+   "value": "Broadband ADSL Pool 1 - Futuna islands"
+  },
+  {
+   "count": 6,
+   "value": "Asia Pacific Network Information Centre"
+  },
+  {
+   "count": 4,
+   "value": "Broadband ADSL Pool 4 - Wallis islands"
+  },
+  {
+   "count": 3,
+   "value": "ADSL CLIENT WITH FIXED IP - Wallis Island"
+  }
+ ],
+ "line": "TR069 Client",
+ "line_id": "tr069-client",
+ "cc": "WF"
+}

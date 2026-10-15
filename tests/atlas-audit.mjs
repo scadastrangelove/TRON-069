@@ -324,9 +324,24 @@ test('observation-counts', 'Observation counts and dates come from exact collect
   }
   return {collected,missing};
 });
-test('http-bounds', 'HTTP counts stay within port 7547 denominators', () => {
-  const bad=Object.entries(data.http).filter(([cc,n])=>n<0||n>data.park[cc]);
-  return expect(!bad.length,JSON.stringify(bad));
+test('http-bounds', 'Inconsistent source counts remain intact and never produce negative shares', () => {
+  const c=context(),bad=Object.entries(data.http).filter(([cc,n])=>n>(data.park[cc]||0));
+  for(const [cc,n] of Object.entries(data.http)){
+    expect(Number.isInteger(n)&&n>=0,'Invalid source HTTP count');
+    const share=c.run(`httpMissingShare(${JSON.stringify(cc)})`);
+    expect(share===null||(share>=0&&share<=1),'Out-of-range HTTP share');
+  }
+  for(const [cc,n] of bad){
+    expect(c.run(`httpMissingShare(${JSON.stringify(cc)})`)===null,'Inconsistent share is available');
+    c.run(`S.geo=new Set(['c:'+${JSON.stringify(cc)}]);refreshTest();renderInspector()`);
+    expect(c.element('#inspector').innerHTML.includes(c.run('t("http_inconsistent")')),'Mismatch explanation absent');
+    expect(c.run(`DATA.http[${JSON.stringify(cc)}]`)===n,'Source count was clamped');
+  }
+  for(const [park,http,want] of [[100,40,0.6],[100,100,0],[100,104,null],[0,0,null]]){
+    c.run(`DATA.park.ZZ=${park};DATA.http.ZZ=${http}`);
+    expect(c.run('httpMissingShare("ZZ")')===want,'Wrong handling of valid or inconsistent counts');
+  }
+  return {inconsistentCountries:bad.map(([cc])=>cc),sourceCountsPreserved:true};
 });
 test('ident', 'Default country sums equal embedded ident', () => {
   const c=context(); const actual=c.run('computeSlice()');
@@ -590,8 +605,9 @@ test('independent-index-comparison', 'FOFA comparison stays fixed across snapsho
   expect(c.run('!SNAPSHOT_FIELDS.includes("comparison")'),'Research was added to measurement fields');
   return 'Independent dated source, no map filtering';
 });
-test('pending-fingerprint-queries', 'New variant queries are uncollected rather than zero', () => {
-  const c=context();
+test('pending-fingerprint-queries', 'New variant queries are uncollected rather than zero in older snapshots', () => {
+  const old=JSON.parse(fs.readFileSync(path.join(root,'atlas/snapshots/20261013-160503.json'),'utf8'));
+  const c=context({payload:{...data,...old}});
   const markup=c.run('variantHtml("dt-speedport-sdk")');
   expect(markup.includes('DE:7170')&&markup.includes('SG:8085')&&markup.includes('GB:8085'),'Missing DSLForum scopes');
   expect(markup.includes(c.run('t("fact_not_collected")'))&&!markup.includes('<b>0</b>'),'Missing queries became zero counts');

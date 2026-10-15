@@ -1,0 +1,37 @@
+{
+ "dork": "port:7547 \"CWMP@Lancom\" country:US",
+ "total": 1,
+ "taken": "2026-10-15T21:10:32+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as14593"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "Space Exploration Technologies Corporation"
+  }
+ ],
+ "line": "CWMP@Lancom",
+ "line_id": "cwmp-lancom",
+ "cc": "US"
+}

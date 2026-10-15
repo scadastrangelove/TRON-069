@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" country:MZ",
+ "total": 28,
+ "taken": "2026-10-15T21:13:18+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 28,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 28,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 23,
+   "value": "as37342"
+  },
+  {
+   "count": 4,
+   "value": "37342"
+  },
+  {
+   "count": 1,
+   "value": "as25139"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 18,
+   "value": "Admin"
+  },
+  {
+   "count": 9,
+   "value": "Movitel, SA"
+  },
+  {
+   "count": 1,
+   "value": "TVCABO - Comunicacoes Multimedia, Lda"
+  }
+ ],
+ "line": "fake-Apache openagent",
+ "line_id": "fake-apache-openagent",
+ "cc": "MZ"
+}

@@ -1,0 +1,147 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8080 country:IE",
+ "total": 10215,
+ "taken": "2026-10-15T21:15:24+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 10215,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 15,
+   "covered": 10215,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 10215,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 10215,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 10215,
+   "value": "IE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5784,
+   "value": "as2110"
+  },
+  {
+   "count": 4105,
+   "value": "as5466"
+  },
+  {
+   "count": 160,
+   "value": "2110"
+  },
+  {
+   "count": 158,
+   "value": "5466"
+  },
+  {
+   "count": 5,
+   "value": "as15502"
+  },
+  {
+   "count": 2,
+   "value": "as5607"
+  },
+  {
+   "count": 1,
+   "value": "as25441"
+  }
+ ],
+ "ports": [
+  {
+   "count": 10215,
+   "value": 8080
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3444,
+   "value": "Enet Communications LIMITED"
+  },
+  {
+   "count": 2303,
+   "value": "Eircom"
+  },
+  {
+   "count": 1519,
+   "value": "BT Communications Ireland Limited"
+  },
+  {
+   "count": 1165,
+   "value": "Eircom Limited"
+  },
+  {
+   "count": 806,
+   "value": "BSkyB Broadband Ireland"
+  },
+  {
+   "count": 794,
+   "value": "eircom Ltd"
+  },
+  {
+   "count": 110,
+   "value": "BT Ireland Whitelabel BB"
+  },
+  {
+   "count": 62,
+   "value": "Ireland On-Line Broadband Customers"
+  },
+  {
+   "count": 3,
+   "value": "Hackwatch News"
+  },
+  {
+   "count": 3,
+   "value": "Vodafone Ireland Limited"
+  },
+  {
+   "count": 2,
+   "value": "Vodafone ISP"
+  },
+  {
+   "count": 1,
+   "value": "Imagine Communications Group Limited"
+  },
+  {
+   "count": 1,
+   "value": "Pure Telecom Ltd."
+  },
+  {
+   "count": 1,
+   "value": "SKY UK Limited"
+  },
+  {
+   "count": 1,
+   "value": "Sky UK Limited"
+  }
+ ],
+ "id": "huawei-port-8080-ie",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8080 · IE",
+  "en": "CR port 8080 · IE",
+  "es": "Puerto CR 8080 · IE",
+  "zh": "CR 端口 8080 · IE"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

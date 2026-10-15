@@ -1,0 +1,123 @@
+{
+ "dork": "\"Server: cwmp server\" country:UA org:\"Lanet\"",
+ "total": 11990,
+ "taken": "2026-10-15T21:16:46+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 11990,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 2,
+   "covered": 11990,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 14,
+   "covered": 11966,
+   "remainder": 24
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 11990,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 11990,
+   "value": "UA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5347,
+   "value": "as39608"
+  },
+  {
+   "count": 2750,
+   "value": "as202103"
+  },
+  {
+   "count": 2673,
+   "value": "as49332"
+  },
+  {
+   "count": 610,
+   "value": "as41911"
+  },
+  {
+   "count": 353,
+   "value": "as205673"
+  },
+  {
+   "count": 112,
+   "value": "as51180"
+  },
+  {
+   "count": 83,
+   "value": "as43120"
+  },
+  {
+   "count": 12,
+   "value": "39608"
+  },
+  {
+   "count": 10,
+   "value": "202103"
+  },
+  {
+   "count": 9,
+   "value": "49332"
+  },
+  {
+   "count": 3,
+   "value": "205673"
+  },
+  {
+   "count": 2,
+   "value": "51180"
+  },
+  {
+   "count": 1,
+   "value": "41911"
+  },
+  {
+   "count": 1,
+   "value": "43120"
+  }
+ ],
+ "ports": [
+  {
+   "count": 11990,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 11984,
+   "value": "Lanet Network Ltd"
+  },
+  {
+   "count": 6,
+   "value": "Lanet enterprise network"
+  }
+ ],
+ "id": "cwmp-server-lanet-ua",
+ "parent": "cwmp-server",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "cwmp server · Lanet UA; вендор не установлен",
+  "en": "cwmp server · Lanet UA; vendor unknown",
+  "es": "cwmp server · Lanet UA; fabricante desconocido",
+  "zh": "cwmp server · Lanet UA；厂商未确定"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": null
+}

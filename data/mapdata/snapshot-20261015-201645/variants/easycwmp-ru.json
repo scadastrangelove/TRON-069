@@ -1,0 +1,887 @@
+{
+ "dork": "\"realm@easycwmp\" country:RU",
+ "total": 7936,
+ "taken": "2026-10-15T21:15:52+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 7936,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 7836,
+   "remainder": 100
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 7934,
+   "remainder": 2
+  },
+  "port": {
+   "values_returned": 8,
+   "covered": 7936,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 7936,
+   "value": "RU"
+  }
+ ],
+ "asn": [
+  {
+   "count": 4130,
+   "value": "as12389"
+  },
+  {
+   "count": 1459,
+   "value": "as12714"
+  },
+  {
+   "count": 445,
+   "value": "as25513"
+  },
+  {
+   "count": 317,
+   "value": "as28840"
+  },
+  {
+   "count": 287,
+   "value": "as39927"
+  },
+  {
+   "count": 201,
+   "value": "12389"
+  },
+  {
+   "count": 180,
+   "value": "as15774"
+  },
+  {
+   "count": 77,
+   "value": "as21191"
+  },
+  {
+   "count": 74,
+   "value": "12714"
+  },
+  {
+   "count": 73,
+   "value": "as8427"
+  },
+  {
+   "count": 71,
+   "value": "as31133"
+  },
+  {
+   "count": 58,
+   "value": "as16285"
+  },
+  {
+   "count": 55,
+   "value": "as21127"
+  },
+  {
+   "count": 52,
+   "value": "as8359"
+  },
+  {
+   "count": 49,
+   "value": "as20485"
+  },
+  {
+   "count": 42,
+   "value": "as12688"
+  },
+  {
+   "count": 41,
+   "value": "as25490"
+  },
+  {
+   "count": 37,
+   "value": "as3216"
+  },
+  {
+   "count": 30,
+   "value": "as47586"
+  },
+  {
+   "count": 28,
+   "value": "as47241"
+  },
+  {
+   "count": 24,
+   "value": "25513"
+  },
+  {
+   "count": 18,
+   "value": "as28745"
+  },
+  {
+   "count": 17,
+   "value": "as15974"
+  },
+  {
+   "count": 12,
+   "value": "28840"
+  },
+  {
+   "count": 11,
+   "value": "as8439"
+  },
+  {
+   "count": 7,
+   "value": "15774"
+  },
+  {
+   "count": 7,
+   "value": "31133"
+  },
+  {
+   "count": 6,
+   "value": "39927"
+  },
+  {
+   "count": 6,
+   "value": "as31364"
+  },
+  {
+   "count": 5,
+   "value": "21127"
+  },
+  {
+   "count": 5,
+   "value": "as59476"
+  },
+  {
+   "count": 5,
+   "value": "as8369"
+  },
+  {
+   "count": 4,
+   "value": "8359"
+  },
+  {
+   "count": 4,
+   "value": "as31028"
+  },
+  {
+   "count": 4,
+   "value": "as47531"
+  },
+  {
+   "count": 4,
+   "value": "as51645"
+  },
+  {
+   "count": 4,
+   "value": "as57026"
+  },
+  {
+   "count": 3,
+   "value": "3216"
+  },
+  {
+   "count": 3,
+   "value": "8427"
+  },
+  {
+   "count": 3,
+   "value": "as196797"
+  },
+  {
+   "count": 3,
+   "value": "as57812"
+  },
+  {
+   "count": 3,
+   "value": "as8402"
+  },
+  {
+   "count": 2,
+   "value": "16285"
+  },
+  {
+   "count": 2,
+   "value": "20485"
+  },
+  {
+   "count": 2,
+   "value": "21191"
+  },
+  {
+   "count": 2,
+   "value": "47241"
+  },
+  {
+   "count": 2,
+   "value": "as31200"
+  },
+  {
+   "count": 2,
+   "value": "as34629"
+  },
+  {
+   "count": 2,
+   "value": "as34757"
+  },
+  {
+   "count": 2,
+   "value": "as42104"
+  },
+  {
+   "count": 2,
+   "value": "as44347"
+  },
+  {
+   "count": 2,
+   "value": "as49301"
+  },
+  {
+   "count": 2,
+   "value": "as50544"
+  },
+  {
+   "count": 2,
+   "value": "as57378"
+  },
+  {
+   "count": 1,
+   "value": "15974"
+  },
+  {
+   "count": 1,
+   "value": "197298"
+  },
+  {
+   "count": 1,
+   "value": "41275"
+  },
+  {
+   "count": 1,
+   "value": "8675"
+  },
+  {
+   "count": 1,
+   "value": "as12695"
+  },
+  {
+   "count": 1,
+   "value": "as15640"
+  },
+  {
+   "count": 1,
+   "value": "as20597"
+  },
+  {
+   "count": 1,
+   "value": "as21453"
+  },
+  {
+   "count": 1,
+   "value": "as21479"
+  },
+  {
+   "count": 1,
+   "value": "as24955"
+  },
+  {
+   "count": 1,
+   "value": "as28812"
+  },
+  {
+   "count": 1,
+   "value": "as28890"
+  },
+  {
+   "count": 1,
+   "value": "as29190"
+  },
+  {
+   "count": 1,
+   "value": "as35539"
+  },
+  {
+   "count": 1,
+   "value": "as35598"
+  },
+  {
+   "count": 1,
+   "value": "as35807"
+  },
+  {
+   "count": 1,
+   "value": "as41403"
+  },
+  {
+   "count": 1,
+   "value": "as41575"
+  },
+  {
+   "count": 1,
+   "value": "as41843"
+  },
+  {
+   "count": 1,
+   "value": "as43521"
+  },
+  {
+   "count": 1,
+   "value": "as43530"
+  },
+  {
+   "count": 1,
+   "value": "as43865"
+  },
+  {
+   "count": 1,
+   "value": "as44270"
+  },
+  {
+   "count": 1,
+   "value": "as47165"
+  },
+  {
+   "count": 1,
+   "value": "as47397"
+  },
+  {
+   "count": 1,
+   "value": "as47438"
+  },
+  {
+   "count": 1,
+   "value": "as48199"
+  },
+  {
+   "count": 1,
+   "value": "as48475"
+  },
+  {
+   "count": 1,
+   "value": "as48524"
+  },
+  {
+   "count": 1,
+   "value": "as49136"
+  },
+  {
+   "count": 1,
+   "value": "as49811"
+  },
+  {
+   "count": 1,
+   "value": "as50435"
+  },
+  {
+   "count": 1,
+   "value": "as50498"
+  },
+  {
+   "count": 1,
+   "value": "as51200"
+  },
+  {
+   "count": 1,
+   "value": "as51819"
+  },
+  {
+   "count": 1,
+   "value": "as56377"
+  },
+  {
+   "count": 1,
+   "value": "as56535"
+  },
+  {
+   "count": 1,
+   "value": "as56592"
+  },
+  {
+   "count": 1,
+   "value": "as56707"
+  },
+  {
+   "count": 1,
+   "value": "as56776"
+  },
+  {
+   "count": 1,
+   "value": "as56785"
+  },
+  {
+   "count": 1,
+   "value": "as57214"
+  },
+  {
+   "count": 1,
+   "value": "as58136"
+  },
+  {
+   "count": 1,
+   "value": "as59713"
+  },
+  {
+   "count": 1,
+   "value": "as61390"
+  },
+  {
+   "count": 1,
+   "value": "as8570"
+  }
+ ],
+ "ports": [
+  {
+   "count": 4736,
+   "value": 7547
+  },
+  {
+   "count": 2665,
+   "value": 6264
+  },
+  {
+   "count": 520,
+   "value": 51005
+  },
+  {
+   "count": 11,
+   "value": 9595
+  },
+  {
+   "count": 1,
+   "value": 1957
+  },
+  {
+   "count": 1,
+   "value": 2022
+  },
+  {
+   "count": 1,
+   "value": 3147
+  },
+  {
+   "count": 1,
+   "value": 8571
+  }
+ ],
+ "orgs": [
+  {
+   "count": 4193,
+   "value": "OJSC Rostelecom Macroregional Branch South"
+  },
+  {
+   "count": 1388,
+   "value": "Net By Net Holding LLC"
+  },
+  {
+   "count": 365,
+   "value": "Moscow Local Telephone Network (OAO MGTS)"
+  },
+  {
+   "count": 286,
+   "value": "E-Light-Telecom Ltd."
+  },
+  {
+   "count": 241,
+   "value": "Kazan Broad-band access pools"
+  },
+  {
+   "count": 154,
+   "value": "Joint Stock Company TransTeleCom"
+  },
+  {
+   "count": 137,
+   "value": "PJSC Rostelecom"
+  },
+  {
+   "count": 78,
+   "value": "Moscow Local Telephone Network (PJSC MGTS)"
+  },
+  {
+   "count": 74,
+   "value": "PJSC MegaFon"
+  },
+  {
+   "count": 62,
+   "value": "CJSC TransTeleCom"
+  },
+  {
+   "count": 42,
+   "value": "PJSC \"TATTELECOM\""
+  },
+  {
+   "count": 39,
+   "value": "Comstar-Direct CJSC"
+  },
+  {
+   "count": 37,
+   "value": "Block \"Access\" of \"Ural-TransTeleCom\""
+  },
+  {
+   "count": 34,
+   "value": "JSC \"Company TransTeleCom\" Magnitogorsk branch"
+  },
+  {
+   "count": 32,
+   "value": "JSC \"Zap-Sib TransTeleCom\""
+  },
+  {
+   "count": 30,
+   "value": "PJSC \"Vimpelcom\""
+  },
+  {
+   "count": 28,
+   "value": "Net By Net Holding LLC (Murmansk)"
+  },
+  {
+   "count": 26,
+   "value": "Closed Joint Stock Company SibTransTelecom"
+  },
+  {
+   "count": 26,
+   "value": "PJSC Moscow city telephone network"
+  },
+  {
+   "count": 26,
+   "value": "Provider in Ivanovo, Russia"
+  },
+  {
+   "count": 25,
+   "value": "JSC Surguttel"
+  },
+  {
+   "count": 25,
+   "value": "Tatarstan Broad-band access pools"
+  },
+  {
+   "count": 24,
+   "value": "JSC Zap-Sib TransTeleCom"
+  },
+  {
+   "count": 21,
+   "value": "CJSC Ural-TransTeleCom"
+  },
+  {
+   "count": 19,
+   "value": "TTK-Sever/BRAS2 in Yaroslavl"
+  },
+  {
+   "count": 18,
+   "value": "Dmitriy V. Kozmenko"
+  },
+  {
+   "count": 18,
+   "value": "OJSC \"Pskovskaya Gorodskaya Telefonnaya Set\""
+  },
+  {
+   "count": 15,
+   "value": "Limited Liability Company TTK-Svyaz"
+  },
+  {
+   "count": 15,
+   "value": "PJSC TATTELECOM"
+  },
+  {
+   "count": 15,
+   "value": "TTK-Sever/BRAS3 in Yaroslavl (subnet 3)"
+  },
+  {
+   "count": 14,
+   "value": "OJSC Rostelecom, Tula branch"
+  },
+  {
+   "count": 12,
+   "value": "Moscow broadband subscribers"
+  },
+  {
+   "count": 12,
+   "value": "OJSC Pskovskaya Gorodskaya Telefonnaya Set"
+  },
+  {
+   "count": 11,
+   "value": "Ethernet Home WebPlus"
+  },
+  {
+   "count": 11,
+   "value": "MTS PJSC"
+  },
+  {
+   "count": 11,
+   "value": "WEBPlus Ltd."
+  },
+  {
+   "count": 10,
+   "value": "AIST ISP, PPTP (physical persons)"
+  },
+  {
+   "count": 9,
+   "value": "CJSC TransTelecom-NN"
+  },
+  {
+   "count": 9,
+   "value": "Ethernet WebPlus"
+  },
+  {
+   "count": 9,
+   "value": "JSC \"Volgatranstelecom\""
+  },
+  {
+   "count": 9,
+   "value": "JSC \"Zap-SibTranstelecom\""
+  },
+  {
+   "count": 9,
+   "value": "Kaliningrad, Russia"
+  },
+  {
+   "count": 9,
+   "value": "Limited Liability Company \"TTK-Svyaz\""
+  },
+  {
+   "count": 8,
+   "value": "Business-Svyaz Dmitriy V. Kozmenko"
+  },
+  {
+   "count": 8,
+   "value": "Net By Net Holding LLC (HMAO)"
+  },
+  {
+   "count": 8,
+   "value": "PPPOE DYNAMIK POOL"
+  },
+  {
+   "count": 7,
+   "value": "(MS105500) UTTK,"
+  },
+  {
+   "count": 7,
+   "value": "E-Light-Telecom"
+  },
+  {
+   "count": 7,
+   "value": "IntTranspNet broadband"
+  },
+  {
+   "count": 7,
+   "value": "JSC Zap-SibTranstelecom"
+  },
+  {
+   "count": 7,
+   "value": "Krasnodar, Russia"
+  },
+  {
+   "count": 7,
+   "value": "network STTK for PPPOE Syktyvkar"
+  },
+  {
+   "count": 6,
+   "value": "CJSC \"SeverTransTeleCom\""
+  },
+  {
+   "count": 6,
+   "value": "JSC Volgatranstelecom"
+  },
+  {
+   "count": 5,
+   "value": "(MS003940) UV-TTK,"
+  },
+  {
+   "count": 5,
+   "value": "(MS003940) YugoVostokTTK,"
+  },
+  {
+   "count": 5,
+   "value": "Dynamic PPPoE address pool"
+  },
+  {
+   "count": 5,
+   "value": "Intersvyaz-2 JSC"
+  },
+  {
+   "count": 5,
+   "value": "JSC Tattelecom"
+  },
+  {
+   "count": 5,
+   "value": "Net By Net Holding LLC (Yugra)"
+  },
+  {
+   "count": 4,
+   "value": "(MS005986) YugoVostokTTK,"
+  },
+  {
+   "count": 4,
+   "value": "GorPTUs OOO"
+  },
+  {
+   "count": 4,
+   "value": "IP address space for Digital Telephone Lines Ltd"
+  },
+  {
+   "count": 4,
+   "value": "L2TP customers (dynamic ip address pool)"
+  },
+  {
+   "count": 4,
+   "value": "Novoe Kabelnoe Television Ltd."
+  },
+  {
+   "count": 3,
+   "value": "111250 Russia SOVINTEL/EDN"
+  },
+  {
+   "count": 3,
+   "value": "Business-Svyaz TM unnumbered clients"
+  },
+  {
+   "count": 3,
+   "value": "Closed Joint Stock Company \"Kaliningrad-TransTeleCom\""
+  },
+  {
+   "count": 3,
+   "value": "JSC \"ER-Telecom Holding\" Cheboksary Branch"
+  },
+  {
+   "count": 3,
+   "value": "JSC ADVANTAGE TELECOM"
+  },
+  {
+   "count": 3,
+   "value": "Moscow, Rostelecom"
+  },
+  {
+   "count": 3,
+   "value": "PE Yakovlev Stanislav Stanislavovich"
+  },
+  {
+   "count": 3,
+   "value": "TTK-Ural/BRAS in Ekaterinburg"
+  },
+  {
+   "count": 3,
+   "value": "TTK-Volga/BRAS, Saratov"
+  },
+  {
+   "count": 3,
+   "value": "samtel"
+  },
+  {
+   "count": 2,
+   "value": "(MS000112) UMN,"
+  },
+  {
+   "count": 2,
+   "value": "(MS004528) VolgaTransTelecom,"
+  },
+  {
+   "count": 2,
+   "value": "(VR000629) Vrz-Signal,"
+  },
+  {
+   "count": 2,
+   "value": "111250 Russia BeeLiNe"
+  },
+  {
+   "count": 2,
+   "value": "CJSC SeverTransTeleCom"
+  },
+  {
+   "count": 2,
+   "value": "Closed Joint Stock Company Kaliningrad-TransTeleCom"
+  },
+  {
+   "count": 2,
+   "value": "IP address space for Rostov-on-Don Regional Data exchange Network"
+  },
+  {
+   "count": 2,
+   "value": "JSC \"ER-Telecom Holding\" Krasnoyarsk Branch"
+  },
+  {
+   "count": 2,
+   "value": "JSC \"ER-Telecom Holding\" Rostov-na-Donu Branch"
+  },
+  {
+   "count": 2,
+   "value": "JSC ER-Telecom Holding Irkutsk branch"
+  },
+  {
+   "count": 2,
+   "value": "JSC Rostelecom regional branch \"Siberia\""
+  },
+  {
+   "count": 2,
+   "value": "Kupavna-Net Ltd"
+  },
+  {
+   "count": 2,
+   "value": "L2TP customers (static ip address pool)"
+  },
+  {
+   "count": 2,
+   "value": "Maxima Ltd."
+  },
+  {
+   "count": 2,
+   "value": "OJSC \"Sibirtelecom\""
+  },
+  {
+   "count": 2,
+   "value": "PPPoE pool"
+  },
+  {
+   "count": 2,
+   "value": "PtoP networks, Samara-Transtelecom /24"
+  },
+  {
+   "count": 2,
+   "value": "Resurs-Svyaz Ltd."
+  },
+  {
+   "count": 2,
+   "value": "Siberian Networks"
+  },
+  {
+   "count": 2,
+   "value": "Southern Urals TransTelecom MSS-DHCP"
+  },
+  {
+   "count": 2,
+   "value": "TTK Ulyanovsk Dynamic PPPoE address pool"
+  },
+  {
+   "count": 2,
+   "value": "TTK Ulyanovsk PPPoE address pool"
+  },
+  {
+   "count": 2,
+   "value": "TTK-Baikal/BRAS in Irkutsk"
+  },
+  {
+   "count": 2,
+   "value": "TTK-INTELBI retail customers networks / FTTB DHCP pool"
+  },
+  {
+   "count": 2,
+   "value": "TTK-Samara/BRAS1 in Samara (dynamic and static pools)"
+  }
+ ],
+ "id": "easycwmp-ru",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "Россия",
+  "en": "Russia",
+  "es": "Rusia",
+  "zh": "俄罗斯"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

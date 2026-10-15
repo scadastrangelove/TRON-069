@@ -1,0 +1,41 @@
+{
+ "dork": "\"realm@ecntcwmp\" country:EC",
+ "total": 3,
+ "taken": "2026-10-15T21:03:18+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as28006"
+  },
+  {
+   "count": 1,
+   "value": "as27757"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "CORPORACION NACIONAL DE TELECOMUNICACIONES - CNT EP"
+  }
+ ],
+ "line": "easycwmp fork: ecntcwmp",
+ "line_id": "easycwmp-fork-ecntcwmp",
+ "cc": "EC"
+}

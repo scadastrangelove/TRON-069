@@ -1,0 +1,47 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 409 Conflict\"",
+ "total": 0,
+ "taken": "2026-10-15T21:15:51+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [],
+ "ports": [],
+ "orgs": [],
+ "id": "easycwmp-http409",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "HTTP 409: широкий контрольный запрос",
+  "en": "HTTP 409: broad control query",
+  "es": "HTTP 409: consulta de control amplia",
+  "zh": "HTTP 409：宽泛对照查询"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

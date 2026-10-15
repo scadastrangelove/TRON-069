@@ -1,0 +1,57 @@
+{
+ "dork": "port:7170 realm=\"Gateway\"",
+ "total": 35308,
+ "taken": "2026-10-15T20:17:31+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 35308,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 35308,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 35308,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 35308,
+   "value": "IT"
+  }
+ ],
+ "asn": [
+  {
+   "count": 34384,
+   "value": "as3269"
+  },
+  {
+   "count": 919,
+   "value": "3269"
+  },
+  {
+   "count": 4,
+   "value": "as20580"
+  },
+  {
+   "count": 1,
+   "value": "as6503"
+  }
+ ],
+ "ports": [
+  {
+   "count": 35308,
+   "value": 7170
+  }
+ ],
+ "orgs": [],
+ "name": "Gateway realm"
+}

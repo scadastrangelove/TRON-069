@@ -1,0 +1,872 @@
+{
+ "dork": "\"TR069 client CLI Server\" port:1234",
+ "total": 1877,
+ "taken": "2026-10-15T21:16:58+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 24,
+   "covered": 1877,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 1860,
+   "remainder": 17
+  },
+  "asn": {
+   "values_returned": 80,
+   "covered": 1876,
+   "remainder": 1
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1877,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1075,
+   "value": "US"
+  },
+  {
+   "count": 591,
+   "value": "CN"
+  },
+  {
+   "count": 139,
+   "value": "RS"
+  },
+  {
+   "count": 17,
+   "value": "IR"
+  },
+  {
+   "count": 13,
+   "value": "MX"
+  },
+  {
+   "count": 12,
+   "value": "AU"
+  },
+  {
+   "count": 4,
+   "value": "CW"
+  },
+  {
+   "count": 4,
+   "value": "PS"
+  },
+  {
+   "count": 4,
+   "value": "TR"
+  },
+  {
+   "count": 3,
+   "value": "UA"
+  },
+  {
+   "count": 2,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "DK"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  },
+  {
+   "count": 1,
+   "value": "IL"
+  },
+  {
+   "count": 1,
+   "value": "JP"
+  },
+  {
+   "count": 1,
+   "value": "KG"
+  },
+  {
+   "count": 1,
+   "value": "LT"
+  },
+  {
+   "count": 1,
+   "value": "PL"
+  },
+  {
+   "count": 1,
+   "value": "SA"
+  },
+  {
+   "count": 1,
+   "value": "SE"
+  },
+  {
+   "count": 1,
+   "value": "SK"
+  },
+  {
+   "count": 1,
+   "value": "TH"
+  },
+  {
+   "count": 1,
+   "value": "ZW"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1035,
+   "value": "as17306"
+  },
+  {
+   "count": 283,
+   "value": "as4134"
+  },
+  {
+   "count": 267,
+   "value": "as4837"
+  },
+  {
+   "count": 133,
+   "value": "as8400"
+  },
+  {
+   "count": 18,
+   "value": "4134"
+  },
+  {
+   "count": 12,
+   "value": "as8151"
+  },
+  {
+   "count": 8,
+   "value": "4837"
+  },
+  {
+   "count": 8,
+   "value": "as402710"
+  },
+  {
+   "count": 8,
+   "value": "as4804"
+  },
+  {
+   "count": 6,
+   "value": "8400"
+  },
+  {
+   "count": 4,
+   "value": "17306"
+  },
+  {
+   "count": 4,
+   "value": "as11081"
+  },
+  {
+   "count": 4,
+   "value": "as43754"
+  },
+  {
+   "count": 3,
+   "value": "as12975"
+  },
+  {
+   "count": 3,
+   "value": "as140293"
+  },
+  {
+   "count": 3,
+   "value": "as140309"
+  },
+  {
+   "count": 3,
+   "value": "as140318"
+  },
+  {
+   "count": 3,
+   "value": "as47331"
+  },
+  {
+   "count": 3,
+   "value": "as8057"
+  },
+  {
+   "count": 2,
+   "value": "as11492"
+  },
+  {
+   "count": 2,
+   "value": "as140308"
+  },
+  {
+   "count": 2,
+   "value": "as140320"
+  },
+  {
+   "count": 2,
+   "value": "as31549"
+  },
+  {
+   "count": 2,
+   "value": "as34369"
+  },
+  {
+   "count": 2,
+   "value": "as36223"
+  },
+  {
+   "count": 2,
+   "value": "as39074"
+  },
+  {
+   "count": 1,
+   "value": "12975"
+  },
+  {
+   "count": 1,
+   "value": "140293"
+  },
+  {
+   "count": 1,
+   "value": "140318"
+  },
+  {
+   "count": 1,
+   "value": "as10143"
+  },
+  {
+   "count": 1,
+   "value": "as11427"
+  },
+  {
+   "count": 1,
+   "value": "as12430"
+  },
+  {
+   "count": 1,
+   "value": "as12735"
+  },
+  {
+   "count": 1,
+   "value": "as134697"
+  },
+  {
+   "count": 1,
+   "value": "as13807"
+  },
+  {
+   "count": 1,
+   "value": "as141739"
+  },
+  {
+   "count": 1,
+   "value": "as1441"
+  },
+  {
+   "count": 1,
+   "value": "as15895"
+  },
+  {
+   "count": 1,
+   "value": "as17203"
+  },
+  {
+   "count": 1,
+   "value": "as17511"
+  },
+  {
+   "count": 1,
+   "value": "as18859"
+  },
+  {
+   "count": 1,
+   "value": "as196816"
+  },
+  {
+   "count": 1,
+   "value": "as200370"
+  },
+  {
+   "count": 1,
+   "value": "as20115"
+  },
+  {
+   "count": 1,
+   "value": "as201150"
+  },
+  {
+   "count": 1,
+   "value": "as203953"
+  },
+  {
+   "count": 1,
+   "value": "as207369"
+  },
+  {
+   "count": 1,
+   "value": "as28773"
+  },
+  {
+   "count": 1,
+   "value": "as32444"
+  },
+  {
+   "count": 1,
+   "value": "as3301"
+  },
+  {
+   "count": 1,
+   "value": "as33922"
+  },
+  {
+   "count": 1,
+   "value": "as35372"
+  },
+  {
+   "count": 1,
+   "value": "as36103"
+  },
+  {
+   "count": 1,
+   "value": "as36149"
+  },
+  {
+   "count": 1,
+   "value": "as37332"
+  },
+  {
+   "count": 1,
+   "value": "as38835"
+  },
+  {
+   "count": 1,
+   "value": "as393238"
+  },
+  {
+   "count": 1,
+   "value": "as393429"
+  },
+  {
+   "count": 1,
+   "value": "as394911"
+  },
+  {
+   "count": 1,
+   "value": "as395846"
+  },
+  {
+   "count": 1,
+   "value": "as395876"
+  },
+  {
+   "count": 1,
+   "value": "as398844"
+  },
+  {
+   "count": 1,
+   "value": "as399559"
+  },
+  {
+   "count": 1,
+   "value": "as399584"
+  },
+  {
+   "count": 1,
+   "value": "as41881"
+  },
+  {
+   "count": 1,
+   "value": "as45758"
+  },
+  {
+   "count": 1,
+   "value": "as46692"
+  },
+  {
+   "count": 1,
+   "value": "as47794"
+  },
+  {
+   "count": 1,
+   "value": "as49824"
+  },
+  {
+   "count": 1,
+   "value": "as49847"
+  },
+  {
+   "count": 1,
+   "value": "as50810"
+  },
+  {
+   "count": 1,
+   "value": "as5089"
+  },
+  {
+   "count": 1,
+   "value": "as51074"
+  },
+  {
+   "count": 1,
+   "value": "as5578"
+  },
+  {
+   "count": 1,
+   "value": "as5769"
+  },
+  {
+   "count": 1,
+   "value": "as6128"
+  },
+  {
+   "count": 1,
+   "value": "as63394"
+  },
+  {
+   "count": 1,
+   "value": "as7029"
+  },
+  {
+   "count": 1,
+   "value": "as8551"
+  },
+  {
+   "count": 1,
+   "value": "as9141"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1877,
+   "value": 1234
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1032,
+   "value": "JAB Wireless, INC."
+  },
+  {
+   "count": 164,
+   "value": "China Unicom Heilongjiang Province Network"
+  },
+  {
+   "count": 84,
+   "value": "China Unicom Heilongjiang province network"
+  },
+  {
+   "count": 64,
+   "value": "TELEKOM SRBIJA, ADSL users"
+  },
+  {
+   "count": 59,
+   "value": "CHINANET Guangdong province network"
+  },
+  {
+   "count": 55,
+   "value": "TELEKOM SRBIJA a.d."
+  },
+  {
+   "count": 45,
+   "value": "CHINANET JIANGXI PROVINCE NETWORK"
+  },
+  {
+   "count": 29,
+   "value": "CHINANET-ZJ Lishui node network"
+  },
+  {
+   "count": 29,
+   "value": "CHINANET-ZJ Quzhou node network"
+  },
+  {
+   "count": 23,
+   "value": "CHINANET-ZJ Hangzhou node network"
+  },
+  {
+   "count": 22,
+   "value": "CHINANET-ZJ Ningbo node network"
+  },
+  {
+   "count": 17,
+   "value": "CHINANET-ZJ Shaoxing node network"
+  },
+  {
+   "count": 16,
+   "value": "CHINANET Jiangxi province network"
+  },
+  {
+   "count": 16,
+   "value": "Telekom Srbija, ADSL users"
+  },
+  {
+   "count": 12,
+   "value": "CHINANET-ZJ Jinhua node network"
+  },
+  {
+   "count": 10,
+   "value": "Vision Net, Inc."
+  },
+  {
+   "count": 9,
+   "value": "China Unicom Hebei province network"
+  },
+  {
+   "count": 8,
+   "value": "Gestión de direccionamiento UniNet"
+  },
+  {
+   "count": 8,
+   "value": "Optus Internet Pty Ltd"
+  },
+  {
+   "count": 6,
+   "value": "CHINANET GUANGXI PROVINCE NETWORK"
+  },
+  {
+   "count": 6,
+   "value": "CHINANET jiangxi province network"
+  },
+  {
+   "count": 6,
+   "value": "CHINANET xinjiang province network"
+  },
+  {
+   "count": 6,
+   "value": "Chinanet Jiangsu Province Network"
+  },
+  {
+   "count": 5,
+   "value": "CHINANET jiangsu province network"
+  },
+  {
+   "count": 5,
+   "value": "CHINANET-ZJ Zhoushan node network"
+  },
+  {
+   "count": 5,
+   "value": "China Unicom Shandong province network"
+  },
+  {
+   "count": 5,
+   "value": "Uninet S.A. de C.V."
+  },
+  {
+   "count": 4,
+   "value": "CHINANET Chongqing province network"
+  },
+  {
+   "count": 4,
+   "value": "China Unicom Heibei Province Network"
+  },
+  {
+   "count": 4,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 4,
+   "value": "Palestine Telecommunications Company (PALTEL)"
+  },
+  {
+   "count": 4,
+   "value": "T6 Broadband"
+  },
+  {
+   "count": 4,
+   "value": "TELEKOM SRBIJA"
+  },
+  {
+   "count": 4,
+   "value": "United Telecommunication Services (UTS)"
+  },
+  {
+   "count": 3,
+   "value": "Asiatech Data Transmission Co."
+  },
+  {
+   "count": 3,
+   "value": "CHINANET Anhui province network"
+  },
+  {
+   "count": 3,
+   "value": "CHINANET Hunan province network"
+  },
+  {
+   "count": 3,
+   "value": "CHINANET-ZJ network"
+  },
+  {
+   "count": 2,
+   "value": "ADSL-TT net_Static Pool"
+  },
+  {
+   "count": 2,
+   "value": "Aria Shatel PJSC"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET Anhui PROVINCE NETWORK"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET Chongqing Province Network"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET Guangxi province network"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET HUNAN PROVINCE NETWORK"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET Xinjiang province network"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET YunNan PROVINCE NETWORK"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET anhui province network"
+  },
+  {
+   "count": 2,
+   "value": "China Unicom Liaoning province network"
+  },
+  {
+   "count": 2,
+   "value": "China Unicom Shandong Province Network"
+  },
+  {
+   "count": 2,
+   "value": "Sepanta Communication Development Co. Ltd"
+  },
+  {
+   "count": 1,
+   "value": "*SE1-DRP*"
+  },
+  {
+   "count": 1,
+   "value": "360 Broadband, LLC"
+  },
+  {
+   "count": 1,
+   "value": "ADSL-MET-Acibadem-Static Pool"
+  },
+  {
+   "count": 1,
+   "value": "Anthem Broadband"
+  },
+  {
+   "count": 1,
+   "value": "Asiatech Data Transmission company"
+  },
+  {
+   "count": 1,
+   "value": "Aureon Network Services"
+  },
+  {
+   "count": 1,
+   "value": "Beresford Municipal Telephone"
+  },
+  {
+   "count": 1,
+   "value": "Bertram Communications LLC"
+  },
+  {
+   "count": 1,
+   "value": "Buroserv Australia Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "CABLE ONE"
+  },
+  {
+   "count": 1,
+   "value": "CABLE ONE, INC."
+  },
+  {
+   "count": 1,
+   "value": "CHINA UNICOM Liaoning province network"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET Yunnan province network"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET Zhejiang province network"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET ningxia province network"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET-ZJ Zhongxin node network"
+  },
+  {
+   "count": 1,
+   "value": "COMELEC SERVICES, INC"
+  },
+  {
+   "count": 1,
+   "value": "Central Utah Telephone, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Charter Communications Inc"
+  },
+  {
+   "count": 1,
+   "value": "Charter Communications LLC"
+  },
+  {
+   "count": 1,
+   "value": "China United Network Communications Corporation Limited"
+  },
+  {
+   "count": 1,
+   "value": "China United Telecommunications Corporation"
+  },
+  {
+   "count": 1,
+   "value": "City of Windom"
+  },
+  {
+   "count": 1,
+   "value": "Comm1"
+  },
+  {
+   "count": 1,
+   "value": "Didi ADSL Network"
+  },
+  {
+   "count": 1,
+   "value": "Digis Idaho"
+  },
+  {
+   "count": 1,
+   "value": "Direct Communications Cable LLC"
+  },
+  {
+   "count": 1,
+   "value": "Eastern Iowa IP, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Etihad Atheeb Telecom Company"
+  },
+  {
+   "count": 1,
+   "value": "Fanava DP"
+  },
+  {
+   "count": 1,
+   "value": "Farzanegan Pars Communications Company PJS"
+  },
+  {
+   "count": 1,
+   "value": "GILLINGHAM"
+  },
+  {
+   "count": 1,
+   "value": "GOSTARESH-E-ERTEBATAT-E MABNA COMPANY (Private Joint Stock)"
+  },
+  {
+   "count": 1,
+   "value": "Global Technologies of Ukraine LLC"
+  },
+  {
+   "count": 1,
+   "value": "Great Plains Communications LLC"
+  },
+  {
+   "count": 1,
+   "value": "Grizzly Internet"
+  },
+  {
+   "count": 1,
+   "value": "Hawaiian Telcom Services Company, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Hiper A/S"
+  },
+  {
+   "count": 1,
+   "value": "ImOn Communications, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Kyivstar GSM"
+  },
+  {
+   "count": 1,
+   "value": "Launtel Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Liquid Telecommunications Operations Limited"
+  },
+  {
+   "count": 1,
+   "value": "Longjiang county pilotage computer workroom"
+  },
+  {
+   "count": 1,
+   "value": "Mobin Net Communication Company (Private Joint Stock)"
+  },
+  {
+   "count": 1,
+   "value": "NICOS NETWORKS"
+  },
+  {
+   "count": 1,
+   "value": "Northern Telephone"
+  },
+  {
+   "count": 1,
+   "value": "OPTAGE Inc."
+  },
+  {
+   "count": 1,
+   "value": "Optimum Online"
+  },
+  {
+   "count": 1,
+   "value": "P4 Sp. z o.o."
+  },
+  {
+   "count": 1,
+   "value": "PC Astra-net"
+  }
+ ],
+ "id": "cli-port-1234",
+ "parent": "tr069-client-cli-server-netcore",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "CLI · default port 1234",
+  "ru": "CLI · порт по умолчанию 1234",
+  "es": "CLI · puerto predeterminado 1234",
+  "zh": "CLI · 默认端口 1234"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "cli-build-classes"
+ },
+ "denominator": null
+}

@@ -1,0 +1,45 @@
+{
+ "dork": "\"cwmpd\" opaque country:DK",
+ "total": 4,
+ "taken": "2026-10-15T21:08:33+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as44034"
+  },
+  {
+   "count": 1,
+   "value": "as44869"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Hi3G Access AB"
+  },
+  {
+   "count": 1,
+   "value": "SEAS-NVE Broadband DHCP"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "DK"
+}

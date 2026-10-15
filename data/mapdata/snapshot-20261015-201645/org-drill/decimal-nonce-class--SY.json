@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:SY",
+ "total": 7,
+ "taken": "2026-10-15T21:06:13+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 7,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 7,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 7,
+   "value": "as29256"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "RUNNET LLC"
+  },
+  {
+   "count": 1,
+   "value": "Pharoun LTD Co."
+  },
+  {
+   "count": 1,
+   "value": "Runnet ADSL Subscribers"
+  },
+  {
+   "count": 1,
+   "value": "SAMA GROUP LLC"
+  },
+  {
+   "count": 1,
+   "value": "Syrian Telecommunication Private Closed Joint Stock Company"
+  },
+  {
+   "count": 1,
+   "value": "Syriatel Mobile Telecom"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "SY"
+}

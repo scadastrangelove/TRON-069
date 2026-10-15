@@ -1,6 +1,6 @@
 # Method: passive TR-069/CWMP measurement
 
-Public edition, reviewed 12 October 2026. This document distinguishes aggregate
+Public edition, reviewed 16 October 2026. This document distinguishes aggregate
 collection from the earlier research process. The current collector uses Shodan
 Count only. Earlier investigations also inspected cached banners, host records,
 public source code and firmware locally; those raw materials are not distributed.
@@ -67,6 +67,14 @@ The historical October 8 baseline contained about 34.01M matches on port 7547 an
 of missing indexed HTTP evidence. Filtering, collection coverage, stale records
 and other causes remain possible. Whitelisting and SYN-proxy explanations are
 hypotheses, not measurements of that entire category.
+
+The two queries are collected separately. In the October 15 snapshot, the AI
+country facet reports 104 matches for `port:7547 HTTP` and 103 for `port:7547`,
+collected one second apart. The original responses and timestamps are retained.
+When the HTTP count exceeds the port count, the atlas leaves the country share
+unavailable and explains the mismatch instead of displaying a negative percentage.
+See the [port response](data/mapdata/snapshot-20261015-201645/denominator-park.json)
+and [HTTP response](data/mapdata/snapshot-20261015-201645/denominator-http.json).
 
 ## 5. Aggregate facets
 

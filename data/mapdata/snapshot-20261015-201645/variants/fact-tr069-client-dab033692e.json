@@ -1,0 +1,143 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" port:1024 country:SG",
+ "total": 44906,
+ "taken": "2026-10-15T21:16:07+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 44906,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 12,
+   "covered": 44906,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 9,
+   "covered": 44906,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 44906,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 44906,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 41371,
+   "value": "as9506"
+  },
+  {
+   "count": 2850,
+   "value": "as3758"
+  },
+  {
+   "count": 446,
+   "value": "9506"
+  },
+  {
+   "count": 187,
+   "value": "as135600"
+  },
+  {
+   "count": 44,
+   "value": "3758"
+  },
+  {
+   "count": 3,
+   "value": "as17561"
+  },
+  {
+   "count": 2,
+   "value": "135600"
+  },
+  {
+   "count": 2,
+   "value": "as984"
+  },
+  {
+   "count": 1,
+   "value": "as55430"
+  }
+ ],
+ "ports": [
+  {
+   "count": 44906,
+   "value": 1024
+  }
+ ],
+ "orgs": [
+  {
+   "count": 29324,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 11840,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 2225,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 961,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 171,
+   "value": "SingTel Mobile"
+  },
+  {
+   "count": 167,
+   "value": "SingNet BroadBand Network Singapore Telecommunications LTD"
+  },
+  {
+   "count": 136,
+   "value": "Whiz Communications Pte Ltd"
+  },
+  {
+   "count": 54,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 23,
+   "value": "SingNET EVOLVE Broadband"
+  },
+  {
+   "count": 3,
+   "value": "Cloud Innovation Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Octopus Web Solution LLC"
+  },
+  {
+   "count": 1,
+   "value": "StarHub Cable Vision Ltd"
+  }
+ ],
+ "id": "fact-tr069-client-dab033692e",
+ "parent": "tr069-client",
+ "group": "facts",
+ "label": {
+  "ru": "Singtel-aux: ко-хостинг с компонентом ZTE",
+  "en": "Singtel-aux: co-hosting with a ZTE component",
+  "es": "Singtel-aux: coexistencia con un componente ZTE",
+  "zh": "Singtel-aux：与 ZTE 组件同主机出现"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

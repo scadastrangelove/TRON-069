@@ -34,6 +34,31 @@
     ]
   },
   {
+    "id": "snapshot-20261015",
+    "date": "2026-10-15",
+    "kind": "data",
+    "title": {
+      "en": "October 15 snapshot: all 102 research queries collected",
+      "ru": "Срез 15 октября: собраны все 102 исследовательских запроса",
+      "es": "Instantánea del 15 de octubre: 102 consultas recopiladas",
+      "zh": "10 月 15 日快照：已完成全部 102 项研究查询"
+    },
+    "body": {
+      "en": "The complete UTC snapshot contains 53 signature lines, 2,463 country–line operator slices and 48 dated observations, with zero collection errors. Nine new follow-ups measure DSLForum country/port scopes, Gateway on alternate ports and the companion CLI. Earlier snapshots remain available in the date selector.",
+      "ru": "Полный UTC-срез содержит 53 линии, 2 463 операторских среза «страна × линия» и 48 датированных наблюдений. Ошибок сбора нет. Девять новых запросов измеряют срезы DSLForum по странам и портам, Gateway на других портах и сопутствующий CLI. Предыдущие снапшоты доступны в выборе даты.",
+      "es": "La instantánea UTC completa contiene 53 líneas, 2.463 cortes de operador por país y línea y 48 observaciones fechadas, sin errores de recopilación. Nueve consultas nuevas miden DSLForum por país y puerto, Gateway en puertos alternativos y el CLI auxiliar. Las instantáneas anteriores siguen disponibles en el selector de fecha.",
+      "zh": "完整 UTC 快照包含 53 条指纹线、2,463 个国家与指纹线的运营商切片，以及 48 项带日期的观察，采集错误为零。九项新查询覆盖 DSLForum 国家及端口切片、Gateway 其他端口和配套 CLI。历史快照仍可通过日期选择器查看。"
+    },
+    "evidence": [
+      {
+        "file": "data/mapdata/snapshot-20261015-201645/manifest.json"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md"
+      }
+    ]
+  },
+  {
     "id": "bring-your-own-tr069",
     "date": "2026-10-15",
     "kind": "research",

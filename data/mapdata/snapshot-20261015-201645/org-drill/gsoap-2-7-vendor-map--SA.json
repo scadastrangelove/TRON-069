@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:SA",
+ "total": 165,
+ "taken": "2026-10-15T20:49:29+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 165,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 165,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 158,
+   "value": "as35819"
+  },
+  {
+   "count": 5,
+   "value": "as25019"
+  },
+  {
+   "count": 2,
+   "value": "35819"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 96,
+   "value": "Broadband IP Range"
+  },
+  {
+   "count": 64,
+   "value": "Etihad Etisalat, a joint stock company"
+  },
+  {
+   "count": 3,
+   "value": "Saudi Telecom Company JSC"
+  },
+  {
+   "count": 1,
+   "value": "STC, Dammam Residential Fixed-Broadband"
+  },
+  {
+   "count": 1,
+   "value": "STC, Riyadh Residential Fixed-Broadband"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "SA"
+}

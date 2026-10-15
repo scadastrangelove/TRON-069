@@ -1,0 +1,191 @@
+{
+ "dork": "\"ZXHN H108N\"",
+ "total": 12,
+ "taken": "2026-10-15T21:15:59+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 8,
+   "covered": 12,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 11,
+   "covered": 12,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 8,
+   "covered": 12,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 8,
+   "covered": 12,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 3,
+   "value": "EG"
+  },
+  {
+   "count": 2,
+   "value": "RU"
+  },
+  {
+   "count": 2,
+   "value": "UA"
+  },
+  {
+   "count": 1,
+   "value": "CN"
+  },
+  {
+   "count": 1,
+   "value": "DZ"
+  },
+  {
+   "count": 1,
+   "value": "JP"
+  },
+  {
+   "count": 1,
+   "value": "SG"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as8452"
+  },
+  {
+   "count": 2,
+   "value": "as12389"
+  },
+  {
+   "count": 2,
+   "value": "as6849"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as36947"
+  },
+  {
+   "count": 1,
+   "value": "as37963"
+  },
+  {
+   "count": 1,
+   "value": "as8048"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3,
+   "value": 1723
+  },
+  {
+   "count": 2,
+   "value": 23
+  },
+  {
+   "count": 2,
+   "value": 80
+  },
+  {
+   "count": 1,
+   "value": 1433
+  },
+  {
+   "count": 1,
+   "value": 3541
+  },
+  {
+   "count": 1,
+   "value": 8181
+  },
+  {
+   "count": 1,
+   "value": 52869
+  },
+  {
+   "count": 1,
+   "value": 62023
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "For Internet Abuse & Spam reports : admins@tedata.net"
+  },
+  {
+   "count": 1,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 1,
+   "value": "CANTV Servicios, Venezuela"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "E-mail for SPAM and abuse postmaster@ukrtelecom.ua"
+  },
+  {
+   "count": 1,
+   "value": "JSC Ukrtelecom"
+  },
+  {
+   "count": 1,
+   "value": "OJSC Sibirtelecom"
+  },
+  {
+   "count": 1,
+   "value": "TE Data"
+  },
+  {
+   "count": 1,
+   "value": "Telecom Algeria - Telecom Algeria"
+  },
+  {
+   "count": 1,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 1,
+   "value": "samtel"
+  }
+ ],
+ "id": "fact-zte-9081d80feb",
+ "parent": "zte",
+ "group": "facts",
+ "label": {
+  "ru": "telnet-баннеры ZXHN",
+  "en": "ZXHN Telnet banners",
+  "es": "Banners Telnet ZXHN",
+  "zh": "ZXHN Telnet 横幅"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

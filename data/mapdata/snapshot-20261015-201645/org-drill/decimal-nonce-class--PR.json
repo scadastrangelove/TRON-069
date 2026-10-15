@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PR",
+ "total": 1632,
+ "taken": "2026-10-15T21:05:37+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 1632,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 1632,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1616,
+   "value": "as14638"
+  },
+  {
+   "count": 14,
+   "value": "14638"
+  },
+  {
+   "count": 2,
+   "value": "as22581"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1591,
+   "value": "Liberty Communications of Puerto Rico LLC"
+  },
+  {
+   "count": 18,
+   "value": "Liberty Cablevision - Caguas"
+  },
+  {
+   "count": 9,
+   "value": "Liberty Cablevision - Luquillo"
+  },
+  {
+   "count": 6,
+   "value": "Liberty Cablevision - Humacao"
+  },
+  {
+   "count": 5,
+   "value": "Liberty Cablevision - Arecibo"
+  },
+  {
+   "count": 3,
+   "value": "Broadband VI, LLC"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PR"
+}

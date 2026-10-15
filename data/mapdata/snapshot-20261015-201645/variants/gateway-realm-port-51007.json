@@ -1,0 +1,67 @@
+{
+ "dork": "port:51007 realm=\"Gateway\"",
+ "total": 1,
+ "taken": "2026-10-15T21:16:47+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1,
+   "value": "VN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as7552"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1,
+   "value": 51007
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "Viettel Group"
+  }
+ ],
+ "id": "gateway-realm-port-51007",
+ "parent": "gateway-realm",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "Gateway · 51007: контроль порта из прошивки",
+  "en": "Gateway · 51007: firmware-port control query",
+  "es": "Gateway · 51007: consulta de control del puerto del firmware",
+  "zh": "Gateway · 51007：固件端口对照查询"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": null
+}

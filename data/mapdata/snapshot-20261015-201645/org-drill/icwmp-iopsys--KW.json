@@ -1,0 +1,41 @@
+{
+ "dork": "\"authenticate@cwmp\" country:KW",
+ "total": 6,
+ "taken": "2026-10-15T20:20:13+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as42961"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4,
+   "value": "Mobile Telecommunications Company K.S.C.P."
+  },
+  {
+   "count": 2,
+   "value": "ZAIN KW"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "KW"
+}

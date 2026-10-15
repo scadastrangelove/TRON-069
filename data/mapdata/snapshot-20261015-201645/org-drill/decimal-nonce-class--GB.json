@@ -1,0 +1,77 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:GB",
+ "total": 53,
+ "taken": "2026-10-15T21:06:03+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 53,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 53,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 46,
+   "value": "as57793"
+  },
+  {
+   "count": 4,
+   "value": "as2856"
+  },
+  {
+   "count": 1,
+   "value": "57793"
+  },
+  {
+   "count": 1,
+   "value": "as13037"
+  },
+  {
+   "count": 1,
+   "value": "as8426"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 30,
+   "value": "thirteenten 1310 Limited"
+  },
+  {
+   "count": 15,
+   "value": "1310 Limited"
+  },
+  {
+   "count": 2,
+   "value": "BT Infrastructure Layer"
+  },
+  {
+   "count": 2,
+   "value": "BT-Central-Plus"
+  },
+  {
+   "count": 2,
+   "value": "Hampshire Broadband Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Claranet Limited"
+  },
+  {
+   "count": 1,
+   "value": "Zen Internet Ltd"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "GB"
+}

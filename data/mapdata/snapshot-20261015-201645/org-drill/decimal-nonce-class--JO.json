@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:JO",
+ "total": 10,
+ "taken": "2026-10-15T21:06:09+00:00",
+ "run_id": "5fa12991-299b-4acd-a0c0-4357ab6f7448",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 10,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 10,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as9038"
+  },
+  {
+   "count": 4,
+   "value": "as48832"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 5,
+   "value": "Umniah Lil-Hawatef Al-Mutanaqelah Co."
+  },
+  {
+   "count": 2,
+   "value": "Broadband Service"
+  },
+  {
+   "count": 1,
+   "value": "ADSL, Fastlinkdata, Jordan"
+  },
+  {
+   "count": 1,
+   "value": "Umniah Lil-Hawatef Al-Mutanaqelah Co"
+  },
+  {
+   "count": 1,
+   "value": "Zain Data-Jordan"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "JO"
+}
