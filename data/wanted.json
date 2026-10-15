@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15",
+  "items": [
+    {
+      "id": "cwmp-server",
+      "title": "cwmp server",
+      "line": "cwmp-server",
+      "status": "wanted",
+      "context": {
+        "en": "Lowercase Server: cwmp server, an uppercase date and a 404 response; ports 7547, 7548 and 8069. Seen in Lanet, Hsin Yeong An Cable, VIPTURBO, Cool Ideas and A1 networks. The supplier and CPE/ACS role are unknown.",
+        "ru": "Строчное Server: cwmp server, дата в верхнем регистре и ответ 404; порты 7547, 7548 и 8069. Встречается в сетях Lanet, Hsin Yeong An Cable, VIPTURBO, Cool Ideas и A1. Поставщик и роль CPE/ACS неизвестны.",
+        "es": "Server: cwmp server en minúsculas, fecha en mayúsculas y respuesta 404; puertos 7547, 7548 y 8069. Observado en redes de Lanet, Hsin Yeong An Cable, VIPTURBO, Cool Ideas y A1. Proveedor y función CPE/ACS desconocidos.",
+        "zh": "小写 Server: cwmp server、大写日期和 404 响应；端口为 7547、7548 和 8069。见于 Lanet、Hsin Yeong An Cable、VIPTURBO、Cool Ideas 和 A1 网络。供应商及 CPE/ACS 角色未知。"
+      },
+      "needed": {
+        "en": "A public firmware image, source tree or component binary with this response template, plus its device or service identity.",
+        "ru": "Публичный образ, исходники или бинарник компонента с этим шаблоном ответа и сведениями об устройстве или сервисе.",
+        "es": "Una imagen pública, código fuente o binario de componente con esta plantilla de respuesta e identificación del dispositivo o servicio.",
+        "zh": "包含此响应模板的公开固件、源码或组件二进制，以及设备或服务的身份信息。"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "id": "gateway-tim-7170",
+      "title": "Gateway / TIM :7170",
+      "line": "gateway-realm",
+      "status": "wanted",
+      "context": {
+        "en": "The port-7170 slice is associated with TIM. Technicolor and ADB are candidates. The inspected TIM image used port 51007 and lacked the Gateway realm.",
+        "ru": "Срез порта 7170 связан с TIM. Technicolor и ADB — кандидаты. Исследованный TIM-образ использовал порт 51007 и не содержал realm Gateway.",
+        "es": "El segmento del puerto 7170 está asociado con TIM. Technicolor y ADB son candidatos. La imagen TIM examinada usaba el puerto 51007 y no contenía el realm Gateway.",
+        "zh": "7170 端口群体与 TIM 关联。Technicolor 和 ADB 是候选厂商。已检查的 TIM 固件使用 51007 端口，且未包含 Gateway realm。"
+      },
+      "needed": {
+        "en": "An image or component containing realm=\"Gateway\" with evidence connecting it to the TIM port-7170 deployment. Model and firmware version are especially useful.",
+        "ru": "Образ или компонент с realm=\"Gateway\" и подтверждением связи с развёртыванием TIM на порту 7170. Особенно полезны модель и версия прошивки.",
+        "es": "Una imagen o componente con realm=\"Gateway\" y pruebas de su relación con el despliegue TIM del puerto 7170. El modelo y la versión son especialmente útiles.",
+        "zh": "包含 realm=\"Gateway\" 的固件或组件，以及它对应 TIM 7170 端口部署的证据。设备型号和固件版本尤其有用。"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "gateway-port-scopes"
+        }
+      ]
+    },
+    {
+      "id": "dslforum-cpe-management",
+      "title": "DSLForum CPE Management",
+      "line": "dt-speedport-sdk",
+      "status": "wanted",
+      "context": {
+        "en": "A response class seen in DE:7547, DE:7170, SG:8085 and legacy GB:8085 deployments. The component supplier remains unresolved.",
+        "ru": "Класс ответов в развёртываниях DE:7547, DE:7170, SG:8085 и историческом GB:8085. Поставщик компонента не установлен.",
+        "es": "Clase de respuesta observada en DE:7547, DE:7170, SG:8085 y despliegues históricos GB:8085. El proveedor del componente sigue sin identificarse.",
+        "zh": "在 DE:7547、DE:7170、SG:8085 以及历史 GB:8085 部署中发现的响应类别。组件供应商仍未确定。"
+      },
+      "needed": {
+        "en": "Firmware, GPL sources or a component binary matching the DSLForum CPE Management response, with model, version and operator context.",
+        "ru": "Прошивка, GPL-исходники или бинарник с ответом DSLForum CPE Management, с указанием модели, версии и оператора.",
+        "es": "Firmware, fuentes GPL o un binario que coincida con la respuesta DSLForum CPE Management, con modelo, versión y operador.",
+        "zh": "与 DSLForum CPE Management 响应匹配的固件、GPL 源码或组件二进制，并附型号、版本和运营商信息。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "dslforum-cpe-management"
+        }
+      ]
+    },
+    {
+      "id": "yapsieworld",
+      "title": "YapsieWorld",
+      "line": "yapsieworld",
+      "status": "wanted",
+      "context": {
+        "en": "An unattributed CPE response in Italy, including EOLO, WindTre and Telecom Italia business network contexts.",
+        "ru": "Неатрибутированный ответ CPE в Италии, включая сети EOLO, WindTre и бизнес-сегмент Telecom Italia.",
+        "es": "Respuesta CPE sin atribuir en Italia, incluidas redes de EOLO, WindTre y el segmento empresarial de Telecom Italia.",
+        "zh": "意大利尚未归属的 CPE 响应，涉及 EOLO、WindTre 和 Telecom Italia 企业网络。"
+      },
+      "needed": {
+        "en": "A public firmware or component source containing the YapsieWorld marker, with enough provenance to identify the implementation.",
+        "ru": "Публичная прошивка или исходник компонента с маркером YapsieWorld и данными о происхождении для установления реализации.",
+        "es": "Firmware público o código de componente con el marcador YapsieWorld y datos de procedencia suficientes para identificar la implementación.",
+        "zh": "包含 YapsieWorld 标记的公开固件或组件源码，以及足以确认其实现的来源信息。"
+      },
+      "sources": [
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "yapsieworld"
+        }
+      ]
+    },
+    {
+      "id": "nettyserver",
+      "title": "NettyServer",
+      "line": "nettyserver",
+      "status": "wanted",
+      "context": {
+        "en": "An Italy-focused port-7547 signature with Basic authentication and lowercase headers. The WindTre platform association is a hypothesis.",
+        "ru": "Преимущественно итальянская сигнатура порта 7547: Basic-аутентификация и заголовки в нижнем регистре. Связь с платформой WindTre — гипотеза.",
+        "es": "Firma centrada en Italia, puerto 7547, autenticación Basic y cabeceras en minúsculas. La asociación con la plataforma WindTre es una hipótesis.",
+        "zh": "主要见于意大利的 7547 端口指纹，使用 Basic 认证和小写响应头。与 WindTre 平台的关联仍是假设。"
+      },
+      "needed": {
+        "en": "Firmware, a service package or source code reproducing this response, with supplier and version information.",
+        "ru": "Прошивка, пакет сервиса или исходники, воспроизводящие этот ответ, со сведениями о поставщике и версии.",
+        "es": "Firmware, paquete de servicio o código fuente que reproduzca esta respuesta, con información de proveedor y versión.",
+        "zh": "可复现该响应的固件、服务软件包或源码，以及供应商和版本信息。"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "id": "ezpacket-agent4",
+      "title": "EZpacket Agent4.0",
+      "line": null,
+      "status": "wanted",
+      "context": {
+        "en": "A possible distribution branch of Works Systems code. Similar object and source filenames are the current lead; the link is not confirmed.",
+        "ru": "Возможная ветка распространения кода Works Systems. Текущая зацепка — похожие имена объектных и исходных файлов; связь не подтверждена.",
+        "es": "Posible rama de distribución del código de Works Systems. La pista actual son nombres similares de archivos fuente y objeto; la relación no está confirmada.",
+        "zh": "可能属于 Works Systems 代码的分发分支。目前线索是相似的目标文件和源文件名，关联尚未确认。"
+      },
+      "needed": {
+        "en": "A publicly shareable Agent4.0 binary or source package with a full HTTP response template and build provenance to check the Works Systems relationship.",
+        "ru": "Доступный для публичного распространения бинарник Agent4.0 или пакет исходников с полным шаблоном HTTP-ответа и происхождением сборки для проверки связи с Works Systems.",
+        "es": "Un binario Agent4.0 o paquete fuente que pueda compartirse públicamente, con plantilla HTTP completa y procedencia de la compilación para comprobar la relación con Works Systems.",
+        "zh": "可公开分享的 Agent4.0 二进制或源码包，包含完整 HTTP 响应模板和构建来源，以核实与 Works Systems 的关联。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ]
+    }
+  ]
+}

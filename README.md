@@ -37,6 +37,22 @@ operator slices, 93 research queries and 39 additional observations. Collection
 ran from 16:05:03 to 16:55:30 UTC; individual results retain their own timestamps.
 These are search matches, not a census of unique devices or vulnerable systems.
 
+## Bring Your Own TR-069
+
+**We have the banners. You may have the firmware.**
+
+Help identify the implementations behind unresolved TR-069 signatures.
+The [wanted list](WANTED.md) names the missing evidence for each search;
+it is also available in the [atlas](https://scadastrangelove.github.io/TRON-069/#lang=en&tab=wanted).
+Use **I have this** to open a prefilled GitHub issue with a public firmware or
+GPL link, known model/version details and a sanitized fingerprint. New signatures
+and attribution corrections are welcome too.
+
+Public issues accept links and sanitized evidence. Do not attach firmware,
+raw dumps, configurations, credentials or unpublished vulnerability details.
+For non-public material, arrange a private transfer with a maintainer first.
+Confirmed results receive an atlas source, a news entry and credit as requested.
+
 ## Open the atlas
 
 `index.html` is the public entry point. `atlas/tr-atlas.html` is an identical copy.
@@ -180,6 +196,7 @@ catalog schema. The reviewed operator aliases and groups are maintained in
 | [data/index-comparison.json](data/index-comparison.json) | Independent FOFA research aggregates and fixed Shodan reference counts |
 | [data/research-findings.json](data/research-findings.json) | Research-to-atlas coverage and explicitly withheld categories |
 | [data/project-news.json](data/project-news.json) | Dated developments with supporting files |
+| [data/wanted.json](data/wanted.json) | Community firmware searches, evidence gaps, review status and translations; generates WANTED.md |
 | [TR-PARK-REGISTRY.md](TR-PARK-REGISTRY.md) | Human-readable registry from the current collection |
 
 Each response records its query, UTC collection time and run ID. Completed fresh
@@ -221,6 +238,8 @@ The [publication review](reports/PUBLICATION-REVIEW-2026-10-10.md) records the
 reviewed scope, exclusions and validation.
 
 ## Contributions
+
+For firmware leads and fingerprint evidence, start with [Bring Your Own TR-069](WANTED.md).
 
 A new finding should include an exact query, observation date, source, service
 role and confidence level. Add its query to the catalog, its public explanation

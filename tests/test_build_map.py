@@ -37,6 +37,26 @@ class BuildTests(unittest.TestCase):
         self.assertEqual((self.root/'index.html').read_bytes(), expected)
         self.assertEqual((self.root/'atlas/tr-atlas.html').read_bytes(), expected)
         self.assertEqual((ROOT/'atlas/tr-atlas.html').read_bytes(), expected)
+        self.assertEqual((self.root/'WANTED.md').read_bytes(), (ROOT/'WANTED.md').read_bytes())
+
+    def test_wanted_catalog_validation_and_editorial_scope(self):
+        import csv
+        import wanted
+        with (ROOT/'registry.csv').open() as stream:
+            registry = {row['id']: row for row in csv.DictReader(stream)}
+        catalog = wanted.read_wanted(ROOT, registry)
+        self.assertEqual((ROOT/'WANTED.md').read_text(), wanted.render_wanted(catalog))
+        self.assertNotIn('wanted', builder.SNAPSHOT_FIELDS)
+        for change in [lambda d: d['items'].append(d['items'][0]),
+                       lambda d: d['items'][0]['needed'].pop('zh'),
+                       lambda d: d['items'][0].update(line='unknown-line'),
+                       lambda d: d['items'][0].update(status='attributed')]:
+            data = json.loads((ROOT/'data/wanted.json').read_text())
+            change(data)
+            (self.root/'data').mkdir(exist_ok=True)
+            (self.root/'data/wanted.json').write_text(json.dumps(data))
+            with self.assertRaises(ValueError):
+                wanted.read_wanted(self.root, registry)
 
     def test_missing_line_rejected_without_publishing(self):
         snapshot = self.snapshot()

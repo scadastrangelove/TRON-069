@@ -85,7 +85,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
       'sourcesHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
-      'newsText','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews'].map(fn),
+      'newsText','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews','renderWanted','renderTabVisibility'].map(fn),
     'function refreshTest(){SLICE=computeSlice();SLICE_FULL=computeSlice(true);GEOT=lineGeoTotals();}',
     'DNcur=new Intl.DisplayNames([LANG],{type:"region"});'
   ];
@@ -608,6 +608,36 @@ test('comparison-localization', 'Comparison and pending queries have all four tr
     if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(markup),'Russian fallback in comparison');
   }
   return 'en / ru / es / zh';
+});
+test('wanted-localization-and-links', 'Community searches render in four languages with distinct prefilled issues', () => {
+  const c=context();
+  for(const lang of ['en','ru','es','zh']){
+    c.run(`LANG=${JSON.stringify(lang)};renderWanted()`);
+    const markup=c.element('#wantedGrid').innerHTML;
+    expect((markup.match(/class="wanted-card"/g)||[]).length===data.wanted.items.length,'Missing wanted cards');
+    expect(!markup.includes('undefined')&&!markup.includes('wanted_have'),'Missing translation');
+    if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(markup),'Russian fallback in wanted cards');
+    for(const item of data.wanted.items){
+      const url=new URL(item.issue_url);
+      expect(url.origin==='https://github.com'&&url.pathname==='/scadastrangelove/TRON-069/issues/new','Wrong issue destination');
+      expect(url.searchParams.get('template')==='bring-your-own-tr069.yml'&&url.searchParams.get('target').startsWith(item.id+' — '),'Search prefill missing');
+      expect(markup.includes(item.issue_url.replaceAll('&','&amp;')),'Issue link absent');
+    }
+  }
+  c.run('DATA.wanted.items[0].title="<img src=x onerror=alert(1)>";renderWanted()');
+  expect(!c.element('#wantedGrid').innerHTML.includes('<img'),'Catalog text entered HTML unescaped');
+  return 'All languages, per-card form targets and HTML escaping verified';
+});
+test('wanted-navigation', 'Wanted tab and map filters survive snapshot changes; unrelated panels hide', () => {
+  const c=context({hash:'#lang=es&tab=wanted&lines=tr069-client&geo=c:GB'});
+  c.run('urlRead();renderTabVisibility();urlWrite()');
+  expect(!c.element('#tab-wanted').hidden&&c.element('#tab-map').hidden&&c.element('#facetsRow').hidden,'Incorrect wanted visibility');
+  c.run('chooseSnapshot("20261010-102121")');
+  const after=new URLSearchParams(c.sandbox.location.hash.slice(1));
+  expect(after.get('tab')==='wanted'&&after.get('lang')==='es'&&after.get('lines')==='tr069-client'&&after.get('geo')==='c:GB','Wanted navigation lost filters');
+  c.run('S.tab="map";renderTabVisibility()');
+  expect(c.element('#tab-wanted').hidden&&!c.element('#tab-map').hidden&&!c.element('#facetsRow').hidden,'Map visibility not restored');
+  return 'Wanted deep link, snapshot navigation and return to map';
 });
 const exportedContext=context();
 exportedContext.run('S.lines.add("igdauthentication");S.geo.add("c:US");S.orgs.add("Blue Stream");refreshTest();exportJSON();');

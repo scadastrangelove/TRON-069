@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from collection_catalog import bind_facts, collected_facts
 from snapshot_history import snapshot_history, write_history
 from index_comparison import read_comparison
+from wanted import read_wanted, render_wanted
 
 ROOT = Path(__file__).resolve().parent.parent
 IDENT_EXCLUDE = {
@@ -58,7 +59,7 @@ def read_news():
         date.fromisoformat(item['date'])
         if item['kind'] not in ('atlas', 'research', 'data'):
             raise ValueError('Unknown news category')
-        if item.get('view') not in (None, 'ecosystem'):
+        if item.get('view') not in (None, 'ecosystem', 'wanted'):
             raise ValueError('Unknown news view')
         if not isinstance(item.get('pinned', False), bool):
             raise ValueError('News pinned flag must be boolean')
@@ -89,6 +90,7 @@ def validate_sources(data):
     references += [v['source'] for items in data['variants'].values() for v in items if v.get('source')]
     references += [s for n in data['news'] for s in n['evidence']]
     references += [q['source'] for q in data.get('queryCatalog', [])]
+    references += [s for item in data.get('wanted', {}).get('items', []) for s in item['sources']]
     if data.get('comparison'):
         references.append(data['comparison']['source'])
     references += [s for e in data.get('ecosystem', {}).get('edges', [])
@@ -329,6 +331,7 @@ def build_data(snapshot):
         # Editorial research sources stay independent of the selected snapshot.
         'comparison': read_comparison(ROOT, registry),
         'queryCatalog': read_query_catalog(registry),
+        'wanted': read_wanted(ROOT, registry),
     }
     validate_translations(data)
     validate_sources(data)
@@ -414,6 +417,7 @@ def build(snapshot, output_root=ROOT):
         out = output_root/relative
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding='utf-8')
+    (output_root/'WANTED.md').write_text(render_wanted(data['wanted']), encoding='utf-8')
     print(f'Built both entry points: {len(data["lines"])} lines, {len(data["orgdrill"])} operator pairs, '
           f'{len(html.encode()):,} bytes each; {len(data["history"]["daily"])} daily choices, {len(archives)} archived snapshots')
     return data

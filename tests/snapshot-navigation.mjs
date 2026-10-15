@@ -23,10 +23,11 @@ test('embedded snapshot works offline without a request',async()=>{
   assert.equal(c.requests.length,0);
 });
 test('historical archive replaces every measurement field without replacing editorial data',async()=>{
-  const c=setup();const news=c.context.DATA.news;
+  const c=setup();const news=c.context.DATA.news,wanted=c.context.DATA.wanted;
   assert.equal(await c.run('loadSnapshot("20261010-102121")'),true);
   for(const key of Object.keys(old))assert.deepEqual(c.context.DATA[key],old[key],key);
   assert.equal(c.context.DATA.news,news);
+  assert.equal(c.context.DATA.wanted,wanted);
   assert.equal(c.requests[0].url,'https://example.test/TRON-069/atlas/snapshots/20261010-102121.json');
   assert.equal(c.status.hidden,true);
   assert.equal(c.requests[0].options.signal.aborted,false);
