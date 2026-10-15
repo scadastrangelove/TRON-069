@@ -247,8 +247,10 @@ to the notes, and a dated news entry. Keep all four interface languages complete
 Do not add device addresses, credentials, firmware or unpublished advisories.
 
 The manifesto is the single pinned news item (`pinned: true`). It stays first
-above newer dated entries and opens the news ticker; other items remain in
-reverse chronological order.
+and opens the news ticker. Published vulnerability reports (`kind: "disclosure"`)
+and major research entries (`important: true`, including Bad CPE) follow it, with
+amber cards and an Important label. Ordinary news follows this group. Each group
+is ordered by date, newest first; the map ticker uses the same order and emphasis.
 
 ## License and third-party sources
 

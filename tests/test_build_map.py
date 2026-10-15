@@ -276,15 +276,21 @@ class BuildTests(unittest.TestCase):
         news = builder.read_news()
         manifesto = next(item for item in news if item['id'] == 'tron-069-manifesto')
         self.assertTrue(manifesto['pinned'])
-        newer = copy.deepcopy(next(item for item in news if not item.get('pinned')))
+        newer = copy.deepcopy(next(item for item in news if not item.get('pinned')
+                                   and not item.get('important') and item['kind'] != 'disclosure'))
         newer.update(id='future-news', date='2099-01-01')
+        disclosure = copy.deepcopy(newer)
+        disclosure.update(id='future-disclosure', kind='disclosure')
         # Reorder the input too: neither its position nor its date should pin it.
-        with patch.object(builder, 'read', return_value=[newer, *reversed(news)]):
+        with patch.object(builder, 'read', return_value=[newer, *reversed(news), disclosure]):
             ordered = builder.read_news()
         self.assertEqual(ordered[0]['id'], manifesto['id'])
-        self.assertEqual(ordered[1]['id'], 'future-news')
-        dates = [item['date'] for item in ordered[1:]]
-        self.assertEqual(dates, sorted(dates, reverse=True))
+        self.assertEqual([item['id'] for item in ordered[1:5]],
+                         ['future-disclosure', 'freeacs-public-disclosure', 'bad-cpe-model', 'future-news'])
+        for important in (True, False):
+            dates = [item['date'] for item in ordered[1:]
+                     if (item.get('important', False) or item['kind'] == 'disclosure') == important]
+            self.assertEqual(dates, sorted(dates, reverse=True))
 
     def test_news_pin_and_external_links_are_validated(self):
         news = builder.read_news()
@@ -294,6 +300,11 @@ class BuildTests(unittest.TestCase):
             with patch.object(builder, 'read', return_value=invalid):
                 with self.assertRaisesRegex(ValueError, message):
                     builder.read_news()
+        invalid = copy.deepcopy(news)
+        invalid[1]['important'] = 'true'
+        with patch.object(builder, 'read', return_value=invalid):
+            with self.assertRaisesRegex(ValueError, 'important flag must be boolean'):
+                builder.read_news()
         for url in ('javascript:alert(1)', '//example.com', 'https://user:secret@example.com', 'https://example.com/a b'):
             invalid = copy.deepcopy(news)
             invalid[0]['links'] = [{'label':'Example','url':url}]

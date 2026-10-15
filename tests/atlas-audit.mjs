@@ -85,7 +85,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
       'sourcesHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
-      'newsText','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews','renderWanted','renderTabVisibility'].map(fn),
+      'newsText','newsImportant','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews','renderWanted','renderTabVisibility'].map(fn),
     'function refreshTest(){SLICE=computeSlice();SLICE_FULL=computeSlice(true);GEOT=lineGeoTotals();}',
     'DNcur=new Intl.DisplayNames([LANG],{type:"region"});'
   ];
@@ -582,7 +582,13 @@ test('manifesto-first', 'Manifesto leads the news list and initial ticker, with 
   expect((card.match(/<p>/g)||[]).length===3,'Manifesto lost paragraph structure');
   for(const repo of ['rust-in-peace','reproof'])expect(card.includes(`href="https://github.com/scadastrangelove/${repo}"`),repo+' link missing');
   expect(c.element('#newsHeadline').innerHTML.includes(data.news[0].title.en),'Initial ticker does not show manifesto');
-  return 'Pinned first card and ticker; three paragraphs; two HTTPS project links';
+  expect(data.news[1].id==='freeacs-public-disclosure'&&data.news[2].id==='bad-cpe-model','Important news does not follow manifesto');
+  for(const item of data.news.slice(1,3))expect(grid.includes(`class="news-card important" id="news-${item.id}"`),'Important card lacks emphasis');
+  c.run('newsStep(1,false)');
+  expect(c.element('#newsTicker').dataset.priority==='important'&&c.element('#newsKicker').textContent===c.run('t("news_important")'),'Ticker lacks important label');
+  c.run('newsIndex=3;renderNewsTicker()');
+  expect(c.element('#newsTicker').dataset.priority==='standard'&&c.element('#newsKicker').textContent===c.run('t("news_title")'),'Ticker keeps stale emphasis');
+  return 'Manifesto, public disclosures and major research, then ordinary news; matching ticker emphasis';
 });
 test('news-pause', 'News rotation stops on pause, reduced motion, hidden tab, hover and keyboard focus', () => {
   const c=context();expect(c.run('shouldRotateNews()'),'Rotation disabled unexpectedly');

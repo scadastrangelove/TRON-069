@@ -57,12 +57,14 @@ def read_news():
             raise ValueError('Invalid or duplicate news ID')
         ids.add(item['id'])
         date.fromisoformat(item['date'])
-        if item['kind'] not in ('atlas', 'research', 'data'):
+        if item['kind'] not in ('atlas', 'research', 'data', 'disclosure'):
             raise ValueError('Unknown news category')
         if item.get('view') not in (None, 'ecosystem', 'wanted'):
             raise ValueError('Unknown news view')
         if not isinstance(item.get('pinned', False), bool):
             raise ValueError('News pinned flag must be boolean')
+        if not isinstance(item.get('important', False), bool):
+            raise ValueError('News important flag must be boolean')
         for link in item.get('links', []):
             url = link.get('url', '')
             parsed = urlsplit(url)
@@ -81,7 +83,10 @@ def read_news():
                 raise ValueError(f'Invalid news evidence file: {item["id"]}')
     if sum(item.get('pinned', False) for item in news) > 1:
         raise ValueError('Only one news item may be pinned')
-    return sorted(news, key=lambda item: (item.get('pinned', False), item['date']), reverse=True)
+    return sorted(news, key=lambda item: (
+        item.get('pinned', False),
+        item.get('important', False) or item['kind'] == 'disclosure',
+        item['date']), reverse=True)
 
 
 def validate_sources(data):

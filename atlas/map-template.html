@@ -365,6 +365,11 @@ dialog b{color:var(--ink)}
 .news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .news-card{padding:22px;border:1px solid var(--line);border-radius:14px;background:#fff}
 .news-card:first-child{grid-column:1/-1;border-color:var(--accent-line);background:linear-gradient(120deg,#faf8ff,#fff)}
+.news-card.important{border-color:#e3bb79;border-left:4px solid #b87720;background:linear-gradient(120deg,#fff4de,#fffdf8)}
+.news-important{font-weight:750;color:#80500e;letter-spacing:.4px;text-transform:uppercase}
+.news-card.important .news-tag{background:#f7e5c3;color:#80500e}
+.news-ticker[data-priority="important"]{border-color:#e3bb79;border-left:4px solid #b87720;background:#fff8e9}
+.news-ticker[data-priority="important"] .news-kicker{color:#80500e}
 .news-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font:10px ui-monospace,monospace;color:var(--muted);margin-bottom:12px}
 .news-tag{padding:4px 7px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
 .news-pin{color:var(--accent);font-weight:700}
@@ -601,7 +606,7 @@ dialog b{color:var(--ink)}
 
 <section id="tab-map">
  <section class="news-ticker" id="newsTicker" data-i18n-aria="news_title" aria-label="Project news">
-  <span class="news-kicker" data-i18n="news_title">Project news</span>
+  <span class="news-kicker" id="newsKicker">Project news</span>
   <button class="news-headline" id="newsHeadline" aria-controls="tab-news"></button>
   <div class="news-controls">
    <button id="newsPrev" data-i18n-aria="news_prev" aria-label="Previous news">‹</button>
@@ -2730,12 +2735,15 @@ document.addEventListener('click',e=>{
 let newsIndex=0,newsPaused=false;
 const newsMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
 function newsText(item,key){return item[key][LANG]||item[key].en;}
+function newsImportant(item){return !!item.important||item.kind==="disclosure";}
 function newsDate(value){return new Intl.DateTimeFormat(LANG,{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}).format(new Date(value+"T12:00:00Z"));}
 function renderNewsTicker(){
  const items=DATA.news||[];$("#newsTicker").hidden=!items.length;
  if(!items.length)return;
  newsIndex=((newsIndex%items.length)+items.length)%items.length;
  const item=items[newsIndex];
+ $("#newsTicker").dataset.priority=newsImportant(item)?"important":"standard";
+ $("#newsKicker").textContent=t(newsImportant(item)?"news_important":"news_title");
  $("#newsHeadline").innerHTML=`<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span>${esc(newsText(item,"title"))}</span>`;
  const paused=newsPaused||newsMotion.matches;
  $("#newsPause").textContent=paused?"▶":"Ⅱ";
@@ -2745,7 +2753,7 @@ function renderNewsTicker(){
  $("#newsPrev").disabled=$("#newsNext").disabled=items.length<2;
 }
 function renderNews(){
- $("#newsGrid").innerHTML=(DATA.news||[]).map(item=>`<article class="news-card" id="news-${esc(item.id)}" tabindex="-1"><div class="news-meta">${item.pinned?`<span class="news-pin">${esc(t("news_pinned"))}</span>`:""}<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span class="news-tag">${t("news_kind_"+item.kind)}</span></div><h3>${esc(newsText(item,"title"))}</h3>${newsText(item,"body").split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join("")}${item.links?.length?`<div class="news-links">${item.links.map(link=>`<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join("")}</div>`:""}${sourcesHtml(item.evidence)}${item.view==="ecosystem"?`<div class="actrow"><button class="btn soft" data-eco-news>${t("eco_news_link")}</button></div>`:""}${item.view==="wanted"?`<div class="actrow"><button class="btn soft" data-wanted-open>${t("wanted_news_link")}</button></div>`:""}</article>`).join("");
+ $("#newsGrid").innerHTML=(DATA.news||[]).map(item=>`<article class="news-card${newsImportant(item)?" important":""}" id="news-${esc(item.id)}" tabindex="-1"><div class="news-meta">${item.pinned?`<span class="news-pin">${esc(t("news_pinned"))}</span>`:""}${newsImportant(item)?`<span class="news-important">${esc(t("news_important"))}</span>`:""}<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span class="news-tag">${t("news_kind_"+item.kind)}</span></div><h3>${esc(newsText(item,"title"))}</h3>${newsText(item,"body").split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join("")}${item.links?.length?`<div class="news-links">${item.links.map(link=>`<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join("")}</div>`:""}${sourcesHtml(item.evidence)}${item.view==="ecosystem"?`<div class="actrow"><button class="btn soft" data-eco-news>${t("eco_news_link")}</button></div>`:""}${item.view==="wanted"?`<div class="actrow"><button class="btn soft" data-wanted-open>${t("wanted_news_link")}</button></div>`:""}</article>`).join("");
  renderNewsTicker();
 }
 function newsStep(delta,announce){
