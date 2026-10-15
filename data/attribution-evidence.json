@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "works-oneagent-tr",
+      "title": "Works Systems OneAgent TR",
+      "lines": [
+        "tr069-client"
+      ],
+      "reviewed_at": "2026-10-16",
+      "summary": {
+        "en": "The complete connection-request response in Nokia and ASUS binaries, Works Systems copyrights and the OneAgent-TR build label identify the licensed component.",
+        "ru": "Полный ответ на Connection Request в бинарниках Nokia и ASUS, копирайты Works Systems и имя OneAgent-TR в сборке идентифицируют лицензируемый компонент.",
+        "es": "La respuesta completa de Connection Request en binarios Nokia y ASUS, los avisos de Works Systems y el nombre OneAgent-TR en la compilación identifican el componente licenciado.",
+        "zh": "Nokia 和 ASUS 二进制中的完整连接请求响应、Works Systems 版权声明及 OneAgent-TR 构建名称共同确认了这一授权组件。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md",
+          "anchor": "public-evidence"
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "Nokia FastMile 5G Gateway 3.2 · tr_agent",
+          "kind": "firmware",
+          "url": "https://github.com/natumbri/FastMile_5G_Gateway_3.2/blob/3bb8cce2dcf74e97a292574bbfc69a811bb5e7ea/firmware/usr/bin/tr_agent",
+          "commit": "3bb8cce2dcf74e97a292574bbfc69a811bb5e7ea",
+          "marker": "401 @ 0x92440; Workssys @ 0x9e798; www.workssys.com @ 0x9eac0",
+          "sha256": "c964db3a877d8a0d58ac7531b8b1caab2faaeba81de4d9192ad6be24651880ed"
+        },
+        {
+          "title": "ASUS asuswrt · tr.h",
+          "kind": "code",
+          "url": "https://github.com/smx-smx/asuswrt-rt/blob/81404a37312b7707c29de12c3a38ef7e50eea3c8/apps/private/tr069/include/tr.h#L3",
+          "commit": "81404a37312b7707c29de12c3a38ef7e50eea3c8",
+          "marker": "Copyright(c) 2009, Works Systems, Inc.; TR069_CLIENT_VERSION",
+          "sha256": "16cdbca47c18f6284b7922ff116dc27fbd9d70fee5505a7d82d7cb7d6a0479e4"
+        },
+        {
+          "title": "ASUS asuswrt · Makefile.DSL_ASUSWRT",
+          "kind": "code",
+          "url": "https://github.com/smx-smx/asuswrt-rt/blob/81404a37312b7707c29de12c3a38ef7e50eea3c8/apps/private/tr069/Makefile.DSL_ASUSWRT#L82",
+          "commit": "81404a37312b7707c29de12c3a38ef7e50eea3c8",
+          "marker": "Compile OneAgent-TR successful",
+          "sha256": "716c82e8b384c84defb2fd34de908cf00b41dd372fba6378139ef029e0c9dde6"
+        },
+        {
+          "title": "ASUS asuswrt-merlin · prebuild/tr",
+          "kind": "firmware",
+          "url": "https://github.com/gnuton/asuswrt-merlin.ng/blob/14166d1af5fc9a115c66f187e1618977b732682d/release/src/router/tr069/prebuild/tr",
+          "commit": "14166d1af5fc9a115c66f187e1618977b732682d",
+          "marker": "401 @ 0x7cd95; realm, nonce, algorithm, domain",
+          "sha256": "6ccb9cf73731b4eb70a264b845bce477512f468fbda329b98f58815b61b55d94"
+        }
+      ]
+    },
+    {
+      "id": "works-openagent",
+      "title": "Works Systems openagent-2.0",
+      "lines": [
+        "digauth",
+        "fake-apache-openagent"
+      ],
+      "reviewed_at": "2026-10-16",
+      "summary": {
+        "en": "The DIR-615 GPL source contains the Works Systems copyright and the Apache-imitation response template associated with the DigAuth subfamily.",
+        "ru": "GPL-исходник DIR-615 содержит копирайт Works Systems и шаблон ответа с имитацией Apache, связанный с подсемейством DigAuth.",
+        "es": "El código GPL de DIR-615 contiene el aviso de Works Systems y la plantilla de respuesta que imita Apache, asociada a la subfamilia DigAuth.",
+        "zh": "DIR-615 的 GPL 源码包含 Works Systems 版权声明，以及与 DigAuth 子族关联的仿 Apache 响应模板。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md",
+          "anchor": "public-evidence"
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "DIR-615 AthSDK · conn_req_server.c",
+          "kind": "code",
+          "url": "https://github.com/nist/DIR-615/blob/272e8bbe56907d3d89e8409f4de1552b63055823/GPL_Source_Code/src/AthSDK/apps/openagent-2.0/src/tools/conn_req_server.c#L2",
+          "commit": "272e8bbe56907d3d89e8409f4de1552b63055823",
+          "marker": "Works Systems, Inc.; Server: Apache/2.0.40 (Red Hat Linux)",
+          "sha256": "7fff1cfcb61b21424aedf9eec8bcedf02cc701532c1a2ffa447cf8e2e8cb0f7c",
+          "version": "openagent-2.0"
+        }
+      ]
+    },
+    {
+      "id": "broadcom-cms-tr69c",
+      "title": "Broadcom CMS tr69c",
+      "lines": [
+        "igdauthentication"
+      ],
+      "reviewed_at": "2026-10-16",
+      "summary": {
+        "en": "The public ZyXEL VMG1312-B10A binary matches the realm, challenge parameter order and fixed opaque marker. This anchors the shared software component.",
+        "ru": "Публичный бинарник ZyXEL VMG1312-B10A совпадает по realm, порядку параметров challenge и фиксированному opaque-маркеру. Это опорный образец общего программного компонента.",
+        "es": "El binario público de ZyXEL VMG1312-B10A coincide en realm, orden de parámetros del challenge y marcador opaque fijo. Sirve como referencia del componente compartido.",
+        "zh": "公开的 ZyXEL VMG1312-B10A 二进制在 realm、认证质询参数顺序和固定 opaque 标记上匹配，为共享软件组件提供可核验样本。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-IGDAUTH.md",
+          "anchor": "public-evidence"
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "ZyXEL VMG1312-B10A · tr69c",
+          "kind": "firmware",
+          "url": "https://github.com/Olipro/VMG1312-B10A/blob/9ae84bc248340f0cb3fb349afffd95a9939a0f02/userspace/private/apps/tr69c/tr69c_VMG1312-B10A_save",
+          "commit": "9ae84bc248340f0cb3fb349afffd95a9939a0f02",
+          "marker": "IgdAuthentication @ 0x40550; opaque @ 0x4018c; challenge @ 0x401ac",
+          "sha256": "dc327b502d6077638c1c2d46a71a17ba35101104f1068fe79c513e6375f02602",
+          "version": "1.00(AAJZ.14)C0"
+        }
+      ]
+    },
+    {
+      "id": "easycwmp",
+      "title": "Piva Software easycwmp",
+      "lines": [
+        "easycwmp-vanilla"
+      ],
+      "reviewed_at": "2026-10-16",
+      "summary": {
+        "en": "Upstream authentication constants identify the response family. The two reference handlers also document the active response-class comparison; they do not establish a deployed patch version.",
+        "ru": "Константы аутентификации в исходниках определяют семейство ответов. Два эталонных обработчика также показывают различия активных классов ответа; точную версию устройства они не устанавливают.",
+        "es": "Las constantes de autenticación del proyecto identifican la familia de respuestas. Los dos handlers de referencia documentan la comparación activa, sin determinar la versión exacta desplegada.",
+        "zh": "上游认证常量标识响应族。两个参考处理程序还记录了主动响应类别的差异，但不能据此确定设备部署的具体补丁版本。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md"
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "easycwmp · digestauth.h",
+          "kind": "code",
+          "url": "https://github.com/pivasoftware/easycwmp/blob/8a4c3f36d49cd85b33ebb8b9f05b448bcad85e51/src/digestauth.h#L17",
+          "commit": "8a4c3f36d49cd85b33ebb8b9f05b448bcad85e51",
+          "marker": "realm@easycwmp; 328458fab28345ae87ab3210a8513b14eff452a2",
+          "sha256": "0c9717d4e98eecfd84b1e7ef1c10cd899c0f8e96615efee657cacd1596d0acdb",
+          "version": "1.7.0"
+        },
+        {
+          "title": "easycwmp 1.6.2 · http.c",
+          "kind": "code",
+          "url": "https://github.com/pivasoftware/easycwmp/blob/2b2bc6e34fc0bf91b388c6a44ef5e4586c740efe/src/http.c",
+          "commit": "2b2bc6e34fc0bf91b388c6a44ef5e4586c740efe",
+          "marker": "http_new_client",
+          "sha256": "3bac3f17de457aa91a2fa592ff76678f549e690d4684e2c9e2949e5f387025c7",
+          "version": "1.6.2"
+        },
+        {
+          "title": "easycwmp 1.7.0 · http.c",
+          "kind": "code",
+          "url": "https://github.com/pivasoftware/easycwmp/blob/8a4c3f36d49cd85b33ebb8b9f05b448bcad85e51/src/http.c",
+          "commit": "8a4c3f36d49cd85b33ebb8b9f05b448bcad85e51",
+          "marker": "http_new_client; 409 Conflict",
+          "sha256": "4c8de2d583ed50d671dbaba5a733d46cf7930ed6de93b64e2ea17744da3b31dd",
+          "version": "1.7.0"
+        }
+      ]
+    },
+    {
+      "id": "rdk-b-tcpcr",
+      "title": "RDK-B CcspTr069Pa",
+      "lines": [
+        "rdk-b-ccsptr069pa"
+      ],
+      "reviewed_at": "2026-10-16",
+      "summary": {
+        "en": "The RDKCentral connection-request handler initializes the exact Cisco_CCSP_CWMP_TCPCR authentication realm used by this atlas query.",
+        "ru": "Обработчик Connection Request из RDKCentral задаёт точный realm Cisco_CCSP_CWMP_TCPCR, по которому построен запрос этой линии атласа.",
+        "es": "El handler de Connection Request de RDKCentral inicializa el realm exacto Cisco_CCSP_CWMP_TCPCR usado por la consulta del atlas.",
+        "zh": "RDKCentral 的连接请求处理程序设置了与该图谱查询一致的认证 realm：Cisco_CCSP_CWMP_TCPCR。"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md"
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "RDKCentral · ccsp_cwmp_tcpcrho_states.c",
+          "kind": "code",
+          "url": "https://github.com/rdkcentral/tr069-protocol-agent/blob/5f8082b38f43aecd232d9a4723ae5545811b7266/source-embedded/CcspCwmpTcpConnReqHandler/ccsp_cwmp_tcpcrho_states.c#L379",
+          "commit": "5f8082b38f43aecd232d9a4723ae5545811b7266",
+          "marker": "Cisco_CCSP_CWMP_TCPCR",
+          "sha256": "3b1877d457726ff84b6eb4bc79ca9592c2472072f677b5c0c7dd803470e67334"
+        }
+      ]
+    }
+  ]
+}

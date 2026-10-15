@@ -197,6 +197,7 @@ catalog schema. The reviewed operator aliases and groups are maintained in
 | [data/research-findings.json](data/research-findings.json) | Research-to-atlas coverage and explicitly withheld categories |
 | [data/project-news.json](data/project-news.json) | Dated developments with supporting files |
 | [data/wanted.json](data/wanted.json) | Community firmware searches, evidence gaps, review status and translations; generates WANTED.md |
+| [data/attribution-evidence.json](data/attribution-evidence.json) | Direct public code and firmware anchors, pinned commits, matching markers and file hashes; generates [ATTRIBUTIONS.md](ATTRIBUTIONS.md) |
 | [TR-PARK-REGISTRY.md](TR-PARK-REGISTRY.md) | Human-readable registry from the current collection |
 
 Each response records its query, UTC collection time and run ID. Completed fresh

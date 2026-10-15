@@ -363,6 +363,16 @@ dialog b{color:var(--ink)}
 .news-header h2{font-size:26px;letter-spacing:-.7px;margin:6px 0}
 .news-header p{color:var(--muted);font-size:12px;line-height:1.65;max-width:640px}
 .news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.attribution-evidence{margin:14px 0;border:1px solid var(--line);border-radius:10px;padding:12px;min-width:0;background:#faf9fe}
+.attribution-evidence summary{cursor:pointer;font-size:12px;font-weight:650;color:var(--accent)}
+.attribution-evidence p{font-size:12px;line-height:1.6}
+.attribution-artifact{padding:12px 0;overflow-wrap:anywhere}
+.attribution-artifact+.attribution-artifact{border-top:1px solid var(--line)}
+.attribution-artifact>a{display:block;color:var(--accent);font-size:12px;text-decoration:underline;text-underline-offset:3px;margin:5px 0}
+.attribution-artifact code{font-size:10px;overflow-wrap:anywhere;white-space:normal}
+.attribution-metadata{display:grid;grid-template-columns:76px minmax(0,1fr);gap:5px;margin:10px 0;font-size:10px;color:var(--muted)}
+.attribution-metadata dd{margin:0;min-width:0}
+.attributed-section{margin-top:28px}
 .news-card{padding:22px;border:1px solid var(--line);border-radius:14px;background:#fff}
 .news-card:first-child{grid-column:1/-1;border-color:var(--accent-line);background:linear-gradient(120deg,#faf8ff,#fff)}
 .news-card.important{border-color:#e3bb79;border-left:4px solid #b87720;background:linear-gradient(120deg,#fff4de,#fffdf8)}
@@ -762,6 +772,7 @@ dialog b{color:var(--ink)}
  </div>
  <div class="wanted-summary"><span id="wantedReviewed"></span><div class="wanted-progress"><span data-i18n="wanted_status_wanted"></span><b aria-hidden="true">→</b><span data-i18n="wanted_status_received"></span><b aria-hidden="true">→</b><span data-i18n="wanted_status_verified"></span><b aria-hidden="true">→</b><span data-i18n="wanted_status_attributed"></span></div></div>
  <div class="wanted-grid" id="wantedGrid"></div>
+ <section class="attributed-section" id="attributedSection"><h2 data-i18n="attribution_identified"></h2><p class="note" data-i18n="attribution_intro"></p><div class="wanted-grid" id="attributedGrid"></div></section>
  <div class="wanted-other"><h3 data-i18n="wanted_other"></h3><p data-i18n="wanted_other_text"></p><div class="wanted-actions"><a class="btn primary" id="wantedOther" target="_blank" rel="noopener" data-i18n="wanted_other_cta"></a></div></div>
  <p class="wanted-credit" data-i18n="wanted_credit"></p>
 </section>
@@ -1994,6 +2005,11 @@ function variantHtml(slug){
   <a class="btn ghost" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(v.dork)}">↗ Shodan</a></details>`;
  }).join("")+(pending.length?`<h3>${t("pending_queries")}</h3><p class="note">${t("pending_scope")}</p>`+pending.map(q=>`<details class="variant-card"><summary>${esc(ecoText(q.label))} · ${t("fact_not_collected")}</summary><div class="note"><code>${esc(q.query)}</code></div>${sourcesHtml([q.source])}<a class="btn ghost" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(q.query)}">↗ Shodan</a></details>`).join(""):"");
 }
+function attributionEvidenceHtml(slug){
+ const item=(DATA.attributions?.items||[]).find(item=>item.lines.includes(slug));
+ if(!item)return "";
+ return `<details class="attribution-evidence"><summary>${esc(t("attribution_title"))} · ${item.artifacts.length}</summary><p>${esc(ecoText(item.summary))}</p>${item.artifacts.map(a=>`<div class="attribution-artifact"><span class="note">${esc(t("attribution_"+a.kind))}</span><a href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">${esc(a.title)} ↗</a><p>${esc(t("attribution_marker"))}: <code>${esc(a.marker)}</code></p><dl class="attribution-metadata">${a.version?`<dt>${esc(t("attribution_version"))}</dt><dd>${esc(a.version)}</dd>`:""}${a.commit?`<dt>Commit</dt><dd><code>${esc(a.commit)}</code></dd>`:""}${a.sha256?`<dt>SHA-256</dt><dd><code>${esc(a.sha256)}</code></dd>`:""}</dl></div>`).join("")}<p class="note">${esc(t("attribution_reviewed"))}: ${esc(item.reviewed_at)}</p>${sourcesHtml(item.sources)}</details>`;
+}
 function renderInspector(){
  let h=`<button id="inspCollapse" title="${esc(t("fold_panel"))}" style="position:sticky;top:0;float:right;z-index:5;background:#fff;border:1px solid var(--line);border-radius:8px;width:24px;height:24px;color:var(--muted)">${inspCollapsed?"‹":"›"}</button>`;
  const M=slug=>DATA.meta.lines[slug]||{};
@@ -2007,6 +2023,7 @@ function renderInspector(){
   <div class="crumbs"><b data-go="root">${t("root")}</b><span>›</span><b data-selcc="${esc(cc)}">${esc(ccName(cc))}</b><span>›</span><b>${esc(L.name)}</b></div>
   <h2>${esc(L.name)} <span style="font-weight:400;color:var(--faint)">· ${esc(ccName(cc))}</span></h2>
   <div class="subtitle">${esc(loc(M(slug).vendor||""))} ${badgeHtml(slug)} ${serviceBadge(slug)}</div><div class="note">${t("collected_at")}: ${esc(drill?.taken||L.taken||t("fact_not_collected"))}</div>
+  ${attributionEvidenceHtml(slug)}
   ${!geoPass(cc)?`<div class="scopewarn">${t("outside_slice")}</div>`:""}
   <div class="bignum num">${fmt(L.collection_status==="ok"?n:null)} <small>${t("pair_in")}</small></div>
   <div class="krow"><span class="nm">${t("pair_share")}</span><span class="n">${ident&&L.service!=="acs"?Math.round(100*n/ident)+"%":"—"}</span></div>
@@ -2047,7 +2064,7 @@ function renderInspector(){
   ${L.ports&&L.ports.length?`<h3>${t("s_ports")}</h3><div class="portrow">${L.ports.map(p=>`<span class="pchip">${p.value}: ${fmtF(p.count)}</span>`).join("")}</div>`:""}
   ${m.findings&&m.findings.length?`<h3>${t("s_find")}</h3>${m.findings.map(f=>`<div class="note">${esc(loc(f))}</div>`).join("")}`:""}
   ${m.anomalies&&m.anomalies.length?`<h3>${t("s_anom")}</h3>${m.anomalies.map(f=>`<div class="note anom">${esc(loc(f))}</div>`).join("")}`:""}
-  ${sourcesHtml(m.sources)}${ecoLineLink(slug)}
+  ${sourcesHtml(m.sources)}${attributionEvidenceHtml(slug)}${ecoLineLink(slug)}
   ${(m.overlaps||[]).length?`<h3>${t("s_ovl")}</h3><div class="actrow">${m.overlaps.map(o=>`<button class="btn ghost" data-ovl="${esc(o.with)}">${esc(loc(o.kind))}: ${esc(o.with)}</button>`).join("")}</div>`:""}
   ${(DATA.facts&&DATA.facts[slug]||[]).length?`<h3>${t("s_var")}</h3><div class="klist">
   <div class="note">${t("fact_scope")}</div>
@@ -2242,7 +2259,7 @@ function renderFindings(){
   return`<div class="fndcard"><h3><i style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${lineColor(s)};flex:none"></i>${esc(DATA.lines[s].name)} ${serviceBadge(s)} <span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span></h3>
   <div class="vend">${esc(loc(M.vendor||""))} · ${t("matches_count",fmtF(DATA.lines[s].total))}</div>
   <ul>${(M.findings||[]).map(f=>`<li>${esc(loc(f))}</li>`).join("")}${(M.anomalies||[]).map(f=>`<li class="anom">${esc(loc(f))}</li>`).join("")}</ul>
-  ${sourcesHtml(M.sources)}<div class="act"><button class="btn soft" data-s="${esc(s)}">${t("fnd_pick")}</button></div></div>`;
+  ${sourcesHtml(M.sources)}${attributionEvidenceHtml(s)}<div class="act"><button class="btn soft" data-s="${esc(s)}">${t("fnd_pick")}</button></div></div>`;
  }).join("");
  $$("#fndGrid [data-s]").forEach(b=>b.onclick=()=>{toggleSolo("lines",b.dataset.s);switchTab("map");refreshAll();maybeFitSolo();});
 }
@@ -2720,6 +2737,9 @@ document.addEventListener('keydown',e=>{
 
 /* Current community research requests, independent of measurement dates. */
 function renderWanted(){
+ const attributed=DATA.attributions?.items||[];
+ $('#attributedSection').hidden=!attributed.length;
+ $('#attributedGrid').innerHTML=attributed.map(item=>`<article class="wanted-card" id="attributed-${esc(item.id)}"><div class="wanted-meta"><span class="wanted-status attributed">${t('wanted_status_attributed')}</span></div><h3>${esc(item.title)}</h3>${attributionEvidenceHtml(item.lines[0])}<div class="wanted-actions"><button class="btn soft" data-wanted-map="${esc(item.lines[0])}">${t('show_on_map')}</button></div></article>`).join('');
  const catalog=DATA.wanted;
  $('#wantedReviewed').textContent=t('wanted_reviewed')+' '+newsDate(catalog.reviewed_at);
  $('#wantedGuideSource').innerHTML=sourcesHtml([{file:'WANTED.md',title:t('wanted_guide')}]);

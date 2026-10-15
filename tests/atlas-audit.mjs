@@ -82,7 +82,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
     'const W=1320,H=600,svg=$("#world"); let newsIndex=0,newsPaused=false;const newsMotion={matches:false};',
     ...['facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
       'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dNodeBox','dNodePort','dConnection','dPaintConnections','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
-      'sourcesHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
+      'sourcesHtml','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
       'newsText','newsImportant','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews','renderWanted','renderTabVisibility'].map(fn),
@@ -649,6 +649,26 @@ test('wanted-localization-and-links', 'Community searches render in four languag
   c.run('DATA.wanted.items[0].title="<img src=x onerror=alert(1)>";renderWanted()');
   expect(!c.element('#wantedGrid').innerHTML.includes('<img'),'Catalog text entered HTML unescaped');
   return 'All languages, per-card form targets and HTML escaping verified';
+});
+test('attribution-evidence', 'Pinned code and firmware anchors render across languages and retain editorial scope', () => {
+  const c=context({hash:'#lines=igdauthentication'});
+  for(const lang of ['en','ru','es','zh']){
+    c.run(`LANG=${JSON.stringify(lang)};renderWanted()`);
+    const cards=c.element('#attributedGrid').innerHTML;
+    for(const item of data.attributions.items){
+      expect(cards.includes(item.title),'Missing attributed component');
+      for(const a of item.artifacts)expect(cards.includes(a.url)&&cards.includes(a.sha256),'Missing source URL or file hash');
+    }
+    expect(!cards.includes('undefined')&&!cards.includes('attribution_title'),'Missing evidence translation');
+    if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(cards),'Russian fallback in evidence');
+  }
+  c.run('urlRead();refreshTest();renderInspector()');
+  expect(c.element('#inspector').innerHTML.includes('dc327b502d6077638'),'Inspector lost binary anchor');
+  expect(c.run('attributionEvidenceHtml("gateway-realm")')==='','An unresolved line gained attribution');
+  expect(c.run('!SNAPSHOT_FIELDS.includes("attributions")'),'Evidence mixed into dated counts');
+  c.run('DATA.attributions.items[0].artifacts[0].title="<img src=x>";renderWanted()');
+  expect(!c.element('#attributedGrid').innerHTML.includes('<img'),'Artifact title entered HTML unescaped');
+  return 'Five components, six lines, four languages, direct pinned links and file hashes';
 });
 test('wanted-navigation', 'Wanted tab and map filters survive snapshot changes; unrelated panels hide', () => {
   const c=context({hash:'#lang=es&tab=wanted&lines=tr069-client&geo=c:GB'});

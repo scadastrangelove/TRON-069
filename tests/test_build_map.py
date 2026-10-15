@@ -38,6 +38,33 @@ class BuildTests(unittest.TestCase):
         self.assertEqual((self.root/'atlas/tr-atlas.html').read_bytes(), expected)
         self.assertEqual((ROOT/'atlas/tr-atlas.html').read_bytes(), expected)
         self.assertEqual((self.root/'WANTED.md').read_bytes(), (ROOT/'WANTED.md').read_bytes())
+        self.assertEqual((self.root/'ATTRIBUTIONS.md').read_bytes(), (ROOT/'ATTRIBUTIONS.md').read_bytes())
+
+    def test_attribution_evidence_is_pinned_validated_and_editorial(self):
+        import attribution
+        with (ROOT/'registry.csv').open() as stream:
+            registry = {row['id']: row for row in csv.DictReader(stream)}
+        catalog = attribution.read_attributions(ROOT, registry)
+        self.assertEqual((ROOT/'ATTRIBUTIONS.md').read_text(), attribution.render_attributions(catalog))
+        self.assertNotIn('attributions', builder.SNAPSHOT_FIELDS)
+        self.assertEqual({line for item in catalog['items'] for line in item['lines']},
+                         {'tr069-client', 'digauth', 'fake-apache-openagent',
+                          'igdauthentication', 'easycwmp-vanilla', 'rdk-b-ccsptr069pa'})
+        changes = [lambda d: d['items'].append(d['items'][0]),
+                   lambda d: d['items'][0]['summary'].pop('zh'),
+                   lambda d: d['items'][0].update(lines=['unknown-line']),
+                   lambda d: d['items'][0]['artifacts'][0].update(url='javascript:alert(1)'),
+                   lambda d: d['items'][0]['artifacts'][0].update(url='https://user:secret@example.org/file'),
+                   lambda d: d['items'][0]['artifacts'][0].update(sha256='bad'),
+                   lambda d: d['items'][0]['artifacts'][0].pop('sha256'),
+                   lambda d: d['items'][0]['artifacts'][0].update(url='https://github.com/vendor/repo/blob/main/file')]
+        (self.root/'data').mkdir()
+        for change in changes:
+            invalid = copy.deepcopy(catalog)
+            change(invalid)
+            (self.root/'data/attribution-evidence.json').write_text(json.dumps(invalid))
+            with self.assertRaises(ValueError):
+                attribution.read_attributions(self.root, registry)
 
     def test_wanted_catalog_validation_and_editorial_scope(self):
         import csv

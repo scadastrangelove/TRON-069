@@ -8,6 +8,9 @@ Known models and versions help us connect a response to its implementation.
 
 [Open this list in the atlas](https://scadastrangelove.github.io/TRON-069/#lang=en&tab=wanted).
 
+Already identified components have [direct code and firmware evidence](ATTRIBUTIONS.md),
+including pinned revisions, matching markers and file hashes.
+
 ## What to send
 
 - A public source link and how you identified the device or component.
