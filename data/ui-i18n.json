@@ -210,7 +210,18 @@
     "snapshot_loading": "Загружаем снапшот…",
     "snapshot_load_error": "Не удалось загрузить снапшот. Показаны данные на дату в шапке. Выберите дату ещё раз, чтобы повторить загрузку.",
     "snapshot_unknown": "Этот снапшот недоступен. Сохранена отображаемая дата.",
-    "snapshot_missing": "Выбранная сигнатура на эту дату ещё не собиралась. Фильтры сохранены; её счётчики недоступны."
+    "snapshot_missing": "Выбранная сигнатура на эту дату ещё не собиралась. Фильтры сохранены; её счётчики недоступны.",
+    "pending_queries": "Запросы без сбора в этом срезе",
+    "pending_scope": "Для этих запросов каталога нет результата в выбранном срезе. Счётчик не рассчитан.",
+    "cmp_title": "Два поисковых индекса",
+    "cmp_signatures": "Сигнатуры",
+    "cmp_countries": "Страны",
+    "cmp_scope": "Независимое исследовательское сравнение. Дата карты и фильтры не меняют этот блок. FOFA не входит в итоги карты; условия запросов и окна сбора различаются.",
+    "cmp_provenance": "FOFA: датированная сводка исследования; точное время запросов и фильтры периода не сохранены. Запросы перенесены из сводки, включая неоднозначные кавычки у Gateway. Фиксированный срез",
+    "cmp_notation": "Запись запроса в исследовании",
+    "cmp_query_time": "Сохранённый запрос и время сбора",
+    "cmp_country_title": "Срезы по странам · все совпадения на порту 7547",
+    "fnd_sub": "Текущие исследовательские комментарии с датированными наблюдениями. Счётчики запросов относятся к выбранному срезу; у сравнения индексов свои фиксированные даты."
   },
   "en": {
     "open_panel": "Open inspector",
@@ -423,7 +434,18 @@
     "snapshot_loading": "Loading snapshot…",
     "snapshot_load_error": "Could not load that snapshot. Showing the date in the header. Choose the date again to retry.",
     "snapshot_unknown": "This snapshot is unavailable. The displayed date has been kept.",
-    "snapshot_missing": "The selected signature was not collected on this date. Filters are kept; its counts are unavailable."
+    "snapshot_missing": "The selected signature was not collected on this date. Filters are kept; its counts are unavailable.",
+    "pending_queries": "Queries not collected in this snapshot",
+    "pending_scope": "These catalog queries have no result in the selected snapshot. No count is inferred.",
+    "cmp_title": "Across two indexes",
+    "cmp_signatures": "Signatures",
+    "cmp_countries": "Countries",
+    "cmp_scope": "Independent research comparison. The map date and filters do not change this block. FOFA counts are kept outside map totals; the query scopes and collection windows differ.",
+    "cmp_provenance": "FOFA: dated research summary; exact retrieval times and window filters were not retained. Query notation is transcribed, including ambiguous quoting in the Gateway entry. Fixed reference snapshot",
+    "cmp_notation": "Research query notation",
+    "cmp_query_time": "Saved query and collection time",
+    "cmp_country_title": "Country slices · all matches on port 7547",
+    "fnd_sub": "Current research commentary with explicitly dated observations. Query counts use the selected snapshot; the cross-index comparison has its own fixed dates."
   },
   "es": {
     "open_panel": "Abrir inspector",
@@ -636,7 +658,18 @@
     "snapshot_loading": "Cargando captura…",
     "snapshot_load_error": "No se pudo cargar la captura. Se muestran los datos de la fecha indicada arriba. Vuelva a elegir la fecha para reintentar.",
     "snapshot_unknown": "Esta captura no está disponible. Se conserva la fecha mostrada.",
-    "snapshot_missing": "La firma seleccionada no se recopiló en esta fecha. Se conservan los filtros; sus recuentos no están disponibles."
+    "snapshot_missing": "La firma seleccionada no se recopiló en esta fecha. Se conservan los filtros; sus recuentos no están disponibles.",
+    "pending_queries": "Consultas sin recopilar en esta instantánea",
+    "pending_scope": "Estas consultas del catálogo no tienen resultado en la instantánea seleccionada. No se infiere un recuento.",
+    "cmp_title": "Dos índices de búsqueda",
+    "cmp_signatures": "Firmas",
+    "cmp_countries": "Países",
+    "cmp_scope": "Comparación de investigación independiente. La fecha y los filtros del mapa no cambian este bloque. FOFA queda fuera de los totales; difieren los alcances y períodos de recopilación.",
+    "cmp_provenance": "FOFA: resumen fechado; no se conservaron horas exactas ni filtros temporales. La notación transcrita incluye comillas ambiguas en Gateway. Referencia fija",
+    "cmp_notation": "Notación de la consulta de investigación",
+    "cmp_query_time": "Consulta guardada y hora de recopilación",
+    "cmp_country_title": "Países · todas las coincidencias del puerto 7547",
+    "fnd_sub": "Comentarios de investigación actuales con observaciones fechadas. Los recuentos usan la instantánea seleccionada; la comparación de índices conserva sus propias fechas."
   },
   "zh": {
     "open_panel": "打开详情面板",
@@ -849,6 +882,17 @@
     "snapshot_loading": "正在加载快照…",
     "snapshot_load_error": "无法加载该快照。显示的是页首日期对应的数据。请重新选择日期以重试。",
     "snapshot_unknown": "该快照不可用。保留当前显示的日期。",
-    "snapshot_missing": "所选指纹在此日期尚未采集。筛选条件已保留，其计数不可用。"
+    "snapshot_missing": "所选指纹在此日期尚未采集。筛选条件已保留，其计数不可用。",
+    "pending_queries": "此快照未采集的查询",
+    "pending_scope": "这些目录查询在所选快照中没有结果，不推算计数。",
+    "cmp_title": "两个搜索索引",
+    "cmp_signatures": "指纹",
+    "cmp_countries": "国家",
+    "cmp_scope": "独立研究对照，地图日期及筛选不改变此区块。FOFA 不计入地图总数；查询范围和采集窗口不同。",
+    "cmp_provenance": "FOFA：带日期的研究摘要，未保留精确采集时间及时间窗口筛选。查询记法按摘要抄录，包括 Gateway 中有歧义的引号。固定参考快照",
+    "cmp_notation": "研究中的查询记法",
+    "cmp_query_time": "已保存查询及采集时间",
+    "cmp_country_title": "国家切片 · 7547 端口全部匹配",
+    "fnd_sub": "当前研究解读及带日期的观察。查询计数采用所选快照，跨索引对照保留自己的固定日期。"
   }
 }

@@ -532,6 +532,10 @@
    "collection_status": "ok",
    "sources": [
     {
+     "file": "DEANON-IGDAUTH.md",
+     "anchor": "public-evidence"
+    },
+    {
      "file": "NOTES.md"
     }
    ],
@@ -554,6 +558,10 @@
    "taken": "2026-10-13T16:54:54+00:00",
    "collection_status": "ok",
    "sources": [
+    {
+     "file": "DEANON-IGDAUTH.md",
+     "anchor": "public-evidence"
+    },
     {
      "file": "NOTES.md"
     }
@@ -903,6 +911,42 @@
     "file": "gateway-realm.json",
     "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad"
    }
+  },
+  {
+   "label": "Gateway · GB:1024",
+   "dork": "realm=\"Gateway\" country:GB port:1024",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "gateway-gb-1024"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "gateway-port-scopes"
+    }
+   ]
+  },
+  {
+   "label": "Gateway · CA:10001",
+   "dork": "realm=\"Gateway\" country:CA port:10001",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "gateway-ca-10001"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "gateway-port-scopes"
+    }
+   ]
   }
  ],
  "cwmp-server": [
@@ -928,6 +972,136 @@
     "file": "variants/fact-cwmp-server-70ae9dea51.json",
     "run_id": "48791ab3-1490-4bbc-b0bc-06324c2c17ad"
    }
+  }
+ ],
+ "dt-speedport-sdk": [
+  {
+   "label": "DSLForum · DE:7547",
+   "dork": "\"DSLForum CPE Management\" country:DE port:7547",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "dslforum-de-7547"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "dslforum-cpe-management"
+    }
+   ]
+  },
+  {
+   "label": "DSLForum · DE:7170",
+   "dork": "\"DSLForum CPE Management\" country:DE port:7170",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "dslforum-de-7170"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "dslforum-cpe-management"
+    }
+   ]
+  },
+  {
+   "label": "DSLForum · SG:8085",
+   "dork": "\"DSLForum CPE Management\" country:SG port:8085",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "dslforum-sg-8085"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "dslforum-cpe-management"
+    }
+   ]
+  },
+  {
+   "label": "DSLForum · GB:8085",
+   "dork": "\"DSLForum CPE Management\" country:GB port:8085",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "dslforum-gb-8085"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "dslforum-cpe-management"
+    }
+   ]
+  }
+ ],
+ "tr069-client-cli-server-netcore": [
+  {
+   "label": "CLI · default port 1234",
+   "dork": "\"TR069 client CLI Server\" port:1234",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "cli-port-1234"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "cli-build-classes"
+    }
+   ]
+  },
+  {
+   "label": "CLI · Serbia",
+   "dork": "\"TR069 client CLI Server\" country:RS",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "cli-serbia"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "cli-build-classes"
+    }
+   ]
+  },
+  {
+   "label": "CLI · Telekom Srbija / AS8400",
+   "dork": "\"TR069 client CLI Server\" asn:AS8400",
+   "count": null,
+   "note": "Dated query matches; overlapping variants are not independent device populations.",
+   "collection_ref": {
+    "kind": "variant",
+    "id": "cli-as8400"
+   },
+   "collection_status": "not-collected",
+   "taken": null,
+   "sources": [
+    {
+     "file": "FINGERPRINTS.md",
+     "anchor": "cli-build-classes"
+    }
+   ]
   }
  ]
 }

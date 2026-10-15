@@ -84,7 +84,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
       'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dNodeBox','dNodePort','dConnection','dPaintConnections','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
       'sourcesHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
-      'coverageNote','unknownCountryTotal','renderRegistry','renderFindings','renderAbout','renderOverview','renderLegend',
+      'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
       'newsText','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews'].map(fn),
     'function refreshTest(){SLICE=computeSlice();SLICE_FULL=computeSlice(true);GEOT=lineGeoTotals();}',
     'DNcur=new Intl.DisplayNames([LANG],{type:"region"});'
@@ -579,6 +579,35 @@ test('news-pause', 'News rotation stops on pause, reduced motion, hidden tab, ho
   ticker.matches=()=>true;expect(!c.run('shouldRotateNews()'),'Hover ignored');
   ticker.matches=()=>false;ticker.contains=()=>true;expect(!c.run('shouldRotateNews()'),'Focus ignored');
   return 'All six pause conditions respected';
+});
+test('independent-index-comparison', 'FOFA comparison stays fixed across snapshot and map filters', () => {
+  const c=context();
+  c.run('renderComparison()');
+  const initial=c.element('#indexComparison').innerHTML;
+  c.run('DATA.snapshot="20261008-2227";S.lines.add("igdauthentication");S.geo.add("c:GB");renderComparison()');
+  expect(c.element('#indexComparison').innerHTML===initial,'Comparison followed map date or filters');
+  expect(initial.includes('20261013-160503')&&initial.includes('CROSS-INDEX.md#method'),'Missing dated reference or method');
+  expect(c.run('!SNAPSHOT_FIELDS.includes("comparison")'),'Research was added to measurement fields');
+  return 'Independent dated source, no map filtering';
+});
+test('pending-fingerprint-queries', 'New variant queries are uncollected rather than zero', () => {
+  const c=context();
+  const markup=c.run('variantHtml("dt-speedport-sdk")');
+  expect(markup.includes('DE:7170')&&markup.includes('SG:8085')&&markup.includes('GB:8085'),'Missing DSLForum scopes');
+  expect(markup.includes(c.run('t("fact_not_collected")'))&&!markup.includes('<b>0</b>'),'Missing queries became zero counts');
+  expect(c.run('DATA.lines["dt-speedport-sdk"].name')==='DSLForum CPE Management','Stable ID/name missing');
+  return 'All four DSLForum follow-ups visible without inferred counts';
+});
+test('comparison-localization', 'Comparison and pending queries have all four translations', () => {
+  const c=context();
+  for(const lang of ['en','ru','es','zh']){
+    c.run(`LANG=${JSON.stringify(lang)};renderComparison()`);
+    const markup=c.element('#indexComparison').innerHTML;
+    expect(markup.includes(c.run('t("cmp_title")')),'Untranslated comparison heading');
+    expect(!markup.includes('cmp_scope'),'Raw translation key');
+    if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(markup),'Russian fallback in comparison');
+  }
+  return 'en / ru / es / zh';
 });
 const exportedContext=context();
 exportedContext.run('S.lines.add("igdauthentication");S.geo.add("c:US");S.orgs.add("Blue Stream");refreshTest();exportJSON();');

@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-13",
+  "reviewed": "2026-10-15",
+  "provenance": "dated-research-summary",
+  "reference_snapshot": "20261013-160503",
+  "source": {
+    "file": "CROSS-INDEX.md",
+    "anchor": "method"
+  },
+  "signatures": [
+    {
+      "line": "tr069-http-server",
+      "fofa_query_notation": "server==\"tr069 http server\"",
+      "fofa_count": 8805788,
+      "shodan_query": "\"tr069 http server\"",
+      "shodan_count": 1939646,
+      "shodan_taken": "2026-10-13T16:05:06+00:00"
+    },
+    {
+      "line": "cpe-server-1-0",
+      "fofa_query_notation": "server=\"CPE-SERVER\"",
+      "fofa_count": 18366912,
+      "shodan_query": "\"CPE-SERVER/1.0\"",
+      "shodan_count": 3458670,
+      "shodan_taken": "2026-10-13T16:05:42+00:00"
+    },
+    {
+      "line": "tr069-client",
+      "fofa_query_notation": "server==\"TR069 client TCP connection request Server\"",
+      "fofa_count": 6031672,
+      "shodan_query": "\"TR069 client TCP connection request Server\"",
+      "shodan_count": 1653673,
+      "shodan_taken": "2026-10-13T16:05:09+00:00"
+    },
+    {
+      "line": "tr069-client-cli-server-netcore",
+      "fofa_query_notation": "server==\"TR069 client CLI Server\"",
+      "fofa_count": 13123,
+      "shodan_query": "\"TR069 client CLI Server\"",
+      "shodan_count": 1861,
+      "shodan_taken": "2026-10-13T16:05:57+00:00"
+    },
+    {
+      "line": "igdauthentication",
+      "fofa_query_notation": "header=\"IgdAuthentication\"",
+      "fofa_count": 9336183,
+      "shodan_query": "\"IgdAuthentication\"",
+      "shodan_count": 1540730,
+      "shodan_taken": "2026-10-13T16:05:10+00:00"
+    },
+    {
+      "line": "cwmp-server",
+      "fofa_query_notation": "server==\"cwmp server\"",
+      "fofa_count": 621272,
+      "shodan_query": "\"Server: cwmp server\"",
+      "shodan_count": 84050,
+      "shodan_taken": "2026-10-13T16:06:02+00:00"
+    },
+    {
+      "line": "acssimtool",
+      "fofa_query_notation": "header=\"ACSSimTool\"",
+      "fofa_count": 54676,
+      "shodan_query": "\"ACSSimTool\"",
+      "shodan_count": 11009,
+      "shodan_taken": "2026-10-13T16:05:22+00:00"
+    },
+    {
+      "line": "gateway-realm",
+      "fofa_query_notation": "header=\"realm=\"Gateway\"\"",
+      "fofa_count": 235941,
+      "shodan_query": "port:7170 realm=\"Gateway\"",
+      "shodan_count": 35032,
+      "shodan_taken": "2026-10-13T16:05:48+00:00"
+    },
+    {
+      "line": "digauth",
+      "fofa_query_notation": "header=\"DigAuth\"",
+      "fofa_count": 292327,
+      "shodan_query": "\"DigAuth\"",
+      "shodan_count": 29061,
+      "shodan_taken": "2026-10-13T16:05:15+00:00"
+    },
+    {
+      "line": "easycwmp-vanilla",
+      "fofa_query_notation": "header=\"realm@easycwmp\"",
+      "fofa_count": 3447136,
+      "shodan_query": "\"realm@easycwmp\"",
+      "shodan_count": 997748,
+      "shodan_taken": "2026-10-13T16:05:11+00:00"
+    },
+    {
+      "line": "qacafe-cdrouter-test-realm",
+      "fofa_query_notation": "header=\"qacafe\"",
+      "fofa_count": 35074,
+      "shodan_query": "\"qacafe\"",
+      "shodan_count": 20190,
+      "shodan_taken": "2026-10-13T16:05:40+00:00"
+    },
+    {
+      "line": "yapsieworld",
+      "fofa_query_notation": "server==\"YAPS\"",
+      "fofa_count": 222420,
+      "shodan_query": "\"YapsieWorld\"",
+      "shodan_count": 70365,
+      "shodan_taken": "2026-10-13T16:05:16+00:00"
+    },
+    {
+      "line": "nettyserver",
+      "fofa_query_notation": "server==\"NettyServer\"",
+      "fofa_count": 0,
+      "shodan_query": "\"NettyServer\" port:7547",
+      "shodan_count": 29885,
+      "shodan_taken": "2026-10-13T16:05:31+00:00"
+    }
+  ],
+  "countries": [
+    {
+      "country": "KR",
+      "port": 7547,
+      "fofa_count": 4707708,
+      "shodan_count": 11174150,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "US",
+      "port": 7547,
+      "fofa_count": 11943911,
+      "shodan_count": 5134686,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "GB",
+      "port": 7547,
+      "fofa_count": 8846775,
+      "shodan_count": 3548599,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "BR",
+      "port": 7547,
+      "fofa_count": 6291755,
+      "shodan_count": 1542054,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "SA",
+      "port": 7547,
+      "fofa_count": 1876269,
+      "shodan_count": 1137554,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "AU",
+      "port": 7547,
+      "fofa_count": 2946362,
+      "shodan_count": 1029307,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "AR",
+      "port": 7547,
+      "fofa_count": 1195608,
+      "shodan_count": 796201,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "TH",
+      "port": 7547,
+      "fofa_count": 1412632,
+      "shodan_count": 709405,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "MA",
+      "port": 7547,
+      "fofa_count": 1737985,
+      "shodan_count": 716435,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "IT",
+      "port": 7547,
+      "fofa_count": 1748085,
+      "shodan_count": 613686,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "ZA",
+      "port": 7547,
+      "fofa_count": 1756897,
+      "shodan_count": 540929,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "CA",
+      "port": 7547,
+      "fofa_count": 1124144,
+      "shodan_count": 523474,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "JP",
+      "port": 7547,
+      "fofa_count": 778027,
+      "shodan_count": 419286,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "TN",
+      "port": 7547,
+      "fofa_count": 1425281,
+      "shodan_count": 401322,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "PK",
+      "port": 7547,
+      "fofa_count": 1224449,
+      "shodan_count": 384979,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "IN",
+      "port": 7547,
+      "fofa_count": 767149,
+      "shodan_count": 318032,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "ES",
+      "port": 7547,
+      "fofa_count": 1054163,
+      "shodan_count": 298611,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "DE",
+      "port": 7547,
+      "fofa_count": 1557457,
+      "shodan_count": 294130,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "DK",
+      "port": 7547,
+      "fofa_count": 698281,
+      "shodan_count": 300703,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "SG",
+      "port": 7547,
+      "fofa_count": 590007,
+      "shodan_count": 268167,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "SE",
+      "port": 7547,
+      "fofa_count": 1204558,
+      "shodan_count": 258523,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    },
+    {
+      "country": "FR",
+      "port": 7547,
+      "fofa_count": 408132,
+      "shodan_count": 249008,
+      "shodan_taken": "2026-10-13T16:06:04+00:00"
+    }
+  ]
+}

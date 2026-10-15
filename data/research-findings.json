@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-10-13",
+  "reviewed": "2026-10-15",
   "edition": "public",
   "findings": [
     {
@@ -622,6 +622,98 @@
         "news",
         "sources"
       ]
+    },
+    {
+      "id": "igdauth-broadcom-tr69c",
+      "status": "included-qualified",
+      "lines": [
+        "igdauthentication"
+      ],
+      "source": "DEANON-IGDAUTH.md",
+      "news_id": "igdauth-broadcom-tr69c",
+      "summary": "A public ZyXEL VMG1312-B10A client contains the matching realm, challenge template and fixed opaque marker. The dossier includes a pinned binary link, SHA-256 and offsets. The atlas now attributes the software component; hardware OEMs remain a separate question.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "dslforum-operator-scopes",
+      "status": "included-qualified",
+      "lines": [
+        "dt-speedport-sdk"
+      ],
+      "source": "FINGERPRINTS.md",
+      "news_id": "dslforum-operator-scopes",
+      "summary": "DT Speedport SDK is renamed DSLForum CPE Management. The stable ID is retained. New country/port queries cover DE:7547, DE:7170, SG:8085 and GB:8085. The supplier remains unresolved; a generic Apache label and an RFC example do not identify it.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "gateway-alternate-ports",
+      "status": "included-qualified",
+      "lines": [
+        "gateway-realm"
+      ],
+      "source": "FINGERPRINTS.md",
+      "news_id": "gateway-alternate-ports",
+      "summary": "UK:1024 and Canada:10001 contexts now have separate collection queries. They share a realm with the TIM:7170 population, but the component relationship is unproven. The inspected TIM image does not close the 7170 attribution.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "cli-deployment-build-classes",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-client-cli-server-netcore"
+      ],
+      "source": "FINGERPRINTS.md",
+      "news_id": "cli-deployment-build-classes",
+      "summary": "All 1,861 matches in the October 13 snapshot use port 1234. The October 10 record includes 137 Serbian matches associated with Telekom Srbija. Sampled route-set differences distinguish builds; route names are withheld. Three new queries track the port, Serbia and AS8400.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
+    },
+    {
+      "id": "fofa-dated-comparison",
+      "status": "included-qualified",
+      "lines": [],
+      "source": "CROSS-INDEX.md",
+      "news_id": "fofa-dated-comparison",
+      "summary": "Observations now includes the October 13 FOFA research aggregates alongside a fixed Shodan reference snapshot. Each source retains its own scope and date. FOFA does not enter map totals. Missing indexed authentication headers are not evidence of device silence or filtering.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    },
+    {
+      "id": "freeacs-public-disclosure",
+      "status": "included-qualified",
+      "lines": [
+        "freeacs"
+      ],
+      "source": "PUBLIC-DISCLOSURES.md",
+      "news_id": "freeacs-public-disclosure",
+      "summary": "Eight public reports plus an index; includes a Bad CPE case and documented agentic verification.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
     }
   ],
   "line_sources": {
@@ -743,6 +835,10 @@
     ],
     "igdauthentication": [
       {
+        "file": "DEANON-IGDAUTH.md",
+        "anchor": "public-evidence"
+      },
+      {
         "file": "NOTES.md"
       },
       {
@@ -850,6 +946,10 @@
     ],
     "dt-speedport-sdk": [
       {
+        "file": "FINGERPRINTS.md",
+        "anchor": "dslforum-cpe-management"
+      },
+      {
         "file": "NOTES.md"
       },
       {
@@ -897,6 +997,10 @@
       }
     ],
     "gateway-realm": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "gateway-port-scopes"
+      },
       {
         "file": "ACS-HUNT.md"
       },
@@ -965,6 +1069,10 @@
       }
     ],
     "kt-cems": [
+      {
+        "file": "CROSS-INDEX.md",
+        "anchor": "follow-ups"
+      },
       {
         "file": "NOTES.md"
       },
@@ -1121,6 +1229,10 @@
       }
     ],
     "tr069-client-cli-server-netcore": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "cli-build-classes"
+      },
       {
         "file": "DEANON-TR069CLIENT.md"
       },
@@ -1287,6 +1399,19 @@
       {
         "file": "TR-PARK-REGISTRY.md",
         "anchor": "telefonica-cwmpweb"
+      },
+      {
+        "file": "METHOD.md"
+      }
+    ],
+    "freeacs": [
+      {
+        "file": "PUBLIC-DISCLOSURES.md",
+        "anchor": "freeacs-20261012"
+      },
+      {
+        "file": "TR-PARK-REGISTRY.md",
+        "anchor": "freeacs"
       },
       {
         "file": "METHOD.md"
@@ -1589,6 +1714,10 @@
       },
       "sources": [
         {
+          "file": "DEANON-IGDAUTH.md",
+          "anchor": "public-evidence"
+        },
+        {
           "file": "NOTES.md"
         }
       ]
@@ -1601,6 +1730,10 @@
         "id": "fact-igdauthentication-705c894151"
       },
       "sources": [
+        {
+          "file": "DEANON-IGDAUTH.md",
+          "anchor": "public-evidence"
+        },
         {
           "file": "NOTES.md"
         }
@@ -1789,6 +1922,34 @@
       ]
     },
     {
+      "parent": "gateway-realm",
+      "query": "realm=\"Gateway\" country:GB port:1024",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "gateway-gb-1024"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "gateway-port-scopes"
+        }
+      ]
+    },
+    {
+      "parent": "gateway-realm",
+      "query": "realm=\"Gateway\" country:CA port:10001",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "gateway-ca-10001"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "gateway-port-scopes"
+        }
+      ]
+    },
+    {
       "parent": "cwmp-server",
       "query": "\"cwmp server\"",
       "collection_ref": {
@@ -1798,6 +1959,104 @@
       "sources": [
         {
           "file": "ACS-HUNT.md"
+        }
+      ]
+    },
+    {
+      "parent": "dt-speedport-sdk",
+      "query": "\"DSLForum CPE Management\" country:DE port:7547",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "dslforum-de-7547"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "dslforum-cpe-management"
+        }
+      ]
+    },
+    {
+      "parent": "dt-speedport-sdk",
+      "query": "\"DSLForum CPE Management\" country:DE port:7170",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "dslforum-de-7170"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "dslforum-cpe-management"
+        }
+      ]
+    },
+    {
+      "parent": "dt-speedport-sdk",
+      "query": "\"DSLForum CPE Management\" country:SG port:8085",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "dslforum-sg-8085"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "dslforum-cpe-management"
+        }
+      ]
+    },
+    {
+      "parent": "dt-speedport-sdk",
+      "query": "\"DSLForum CPE Management\" country:GB port:8085",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "dslforum-gb-8085"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "dslforum-cpe-management"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client-cli-server-netcore",
+      "query": "\"TR069 client CLI Server\" port:1234",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "cli-port-1234"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "cli-build-classes"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client-cli-server-netcore",
+      "query": "\"TR069 client CLI Server\" country:RS",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "cli-serbia"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "cli-build-classes"
+        }
+      ]
+    },
+    {
+      "parent": "tr069-client-cli-server-netcore",
+      "query": "\"TR069 client CLI Server\" asn:AS8400",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "cli-as8400"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "cli-build-classes"
         }
       ]
     }
@@ -1895,7 +2154,16 @@
     "gateway-realm-port-51007",
     "westell-secure-port-7547",
     "easycwmp-opaque-spacex",
-    "acssimtool-observed-nonce"
+    "acssimtool-observed-nonce",
+    "dslforum-de-7547",
+    "dslforum-de-7170",
+    "dslforum-sg-8085",
+    "dslforum-gb-8085",
+    "gateway-gb-1024",
+    "gateway-ca-10001",
+    "cli-port-1234",
+    "cli-serbia",
+    "cli-as8400"
   ],
   "withheld": [
     {

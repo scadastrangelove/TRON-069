@@ -34,6 +34,121 @@
     ]
   },
   {
+    "id": "fofa-dated-comparison",
+    "date": "2026-10-15",
+    "kind": "research",
+    "title": {
+      "en": "A separate FOFA comparison: 13 signatures, 22 countries",
+      "ru": "Отдельное сравнение FOFA: 13 сигнатур, 22 страны",
+      "es": "Comparación FOFA independiente: 13 firmas, 22 países",
+      "zh": "独立 FOFA 对照：13 个指纹，22 个国家"
+    },
+    "body": {
+      "en": "Observations now includes the October 13 FOFA research aggregates alongside a fixed Shodan reference snapshot. Each source retains its own scope and date. FOFA does not enter map totals. Missing indexed authentication headers are not evidence of device silence or filtering.",
+      "ru": "В «Наблюдения» добавлены агрегаты исследования FOFA от 13 октября рядом с фиксированным срезом Shodan. У каждого источника свои условия и дата. FOFA не входит в счётчики карты. Отсутствие заголовков авторизации в индексе не доказывает молчание или фильтрацию устройств.",
+      "es": "Observaciones incluye los agregados FOFA del 13 de octubre junto a una referencia fija de Shodan. Cada fuente conserva alcance y fecha. FOFA no entra en los totales del mapa. La falta de cabeceras indexadas no demuestra silencio ni filtrado.",
+      "zh": "观察页面新增 10 月 13 日 FOFA 研究汇总，并列显示固定 Shodan 快照。各来源保留自身范围和日期。FOFA 不计入地图总数；索引缺少认证头不能证明设备无响应或过滤。"
+    },
+    "evidence": [
+      {
+        "file": "CROSS-INDEX.md",
+        "anchor": "method"
+      }
+    ]
+  },
+  {
+    "id": "cli-deployment-build-classes",
+    "date": "2026-10-15",
+    "kind": "research",
+    "title": {
+      "en": "Companion CLI: default port and build fingerprints",
+      "ru": "Сопутствующий CLI: порт по умолчанию и маркеры сборок",
+      "es": "CLI auxiliar: puerto predeterminado y huellas de compilación",
+      "zh": "配套 CLI：默认端口和构建指纹"
+    },
+    "body": {
+      "en": "All 1,861 matches in the October 13 snapshot use port 1234. The October 10 record includes 137 Serbian matches associated with Telekom Srbija. Sampled route-set differences distinguish builds; route names are withheld. Three new queries track the port, Serbia and AS8400.",
+      "ru": "Все 1 861 совпадение среза 13 октября используют порт 1234. В записи 10 октября — 137 сербских совпадений, связанных с Telekom Srbija. Различия наборов маршрутов различают исследованные сборки; имена маршрутов не раскрываются. Добавлены три запроса: порт, Сербия и AS8400.",
+      "es": "Las 1.861 coincidencias del 13 de octubre usan el puerto 1234. El registro del día 10 incluye 137 coincidencias serbias asociadas con Telekom Srbija. Las rutas muestreadas distinguen compilaciones; se omiten sus nombres. Hay tres consultas nuevas: puerto, Serbia y AS8400.",
+      "zh": "10 月 13 日全部 1,861 个匹配均使用端口 1234。10 月 10 日记录含 137 个关联 Telekom Srbija 的塞尔维亚匹配。抽样路由集差异可区分构建，但不公开路由名称。新增端口、塞尔维亚和 AS8400 三项查询。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "cli-build-classes"
+      }
+    ]
+  },
+  {
+    "id": "gateway-alternate-ports",
+    "date": "2026-10-15",
+    "kind": "research",
+    "title": {
+      "en": "Gateway realm beyond port 7170",
+      "ru": "Gateway realm за пределами порта 7170",
+      "es": "Gateway realm fuera del puerto 7170",
+      "zh": "Gateway realm 不只出现在 7170 端口"
+    },
+    "body": {
+      "en": "UK:1024 and Canada:10001 contexts now have separate collection queries. They share a realm with the TIM:7170 population, but the component relationship is unproven. The inspected TIM image does not close the 7170 attribution.",
+      "ru": "Для UK:1024 и Canada:10001 добавлены отдельные запросы. Они разделяют realm с популяцией TIM:7170, но связь компонентов не доказана. Исследованный TIM-образ не закрывает атрибуцию 7170.",
+      "es": "UK:1024 y Canadá:10001 tienen consultas separadas. Comparten realm con TIM:7170, pero la relación de componentes no está demostrada. La imagen TIM inspeccionada no resuelve la atribución de 7170.",
+      "zh": "UK:1024 和加拿大:10001 现有独立查询。它们与 TIM:7170 群体共享 realm，但组件关联尚未证实。已检查的 TIM 固件不能确定 7170 的归属。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "gateway-port-scopes"
+      }
+    ]
+  },
+  {
+    "id": "dslforum-operator-scopes",
+    "date": "2026-10-15",
+    "kind": "research",
+    "title": {
+      "en": "DSLForum CPE Management spans several operator contexts",
+      "ru": "DSLForum CPE Management: несколько операторских контекстов",
+      "es": "DSLForum CPE Management en varios contextos de operador",
+      "zh": "DSLForum CPE Management 跨越多个运营商环境"
+    },
+    "body": {
+      "en": "DT Speedport SDK is renamed DSLForum CPE Management. The stable ID is retained. New country/port queries cover DE:7547, DE:7170, SG:8085 and GB:8085. The supplier remains unresolved; a generic Apache label and an RFC example do not identify it.",
+      "ru": "DT Speedport SDK переименован в DSLForum CPE Management с сохранением ID. Добавлены запросы DE:7547, DE:7170, SG:8085 и GB:8085. Поставщик не установлен: общий баннер Apache и пример из RFC его не определяют.",
+      "es": "DT Speedport SDK pasa a llamarse DSLForum CPE Management, conservando su ID. Nuevas consultas cubren DE:7547, DE:7170, SG:8085 y GB:8085. El proveedor sigue sin resolverse; Apache y un ejemplo RFC no lo identifican.",
+      "zh": "DT Speedport SDK 更名为 DSLForum CPE Management，保留稳定 ID。新增 DE:7547、DE:7170、SG:8085 和 GB:8085 查询。供应商仍未确定；通用 Apache 标记和 RFC 示例不足以归属。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "dslforum-cpe-management"
+      }
+    ]
+  },
+  {
+    "id": "igdauth-broadcom-tr69c",
+    "date": "2026-10-15",
+    "kind": "research",
+    "title": {
+      "en": "IgdAuthentication identified: Broadcom CMS tr69c",
+      "ru": "IgdAuthentication установлен: Broadcom CMS tr69c",
+      "es": "IgdAuthentication identificado: Broadcom CMS tr69c",
+      "zh": "IgdAuthentication 归属确认：Broadcom CMS tr69c"
+    },
+    "body": {
+      "en": "A public ZyXEL VMG1312-B10A client contains the matching realm, challenge template and fixed opaque marker. The dossier includes a pinned binary link, SHA-256 and offsets. The atlas now attributes the software component; hardware OEMs remain a separate question.",
+      "ru": "В публичном клиенте ZyXEL VMG1312-B10A найдены совпадающие realm, шаблон challenge и фиксированный opaque. В досье — ссылка на конкретный бинарник, SHA-256 и смещения. Атлас теперь указывает программный компонент; OEM устройств — отдельный вопрос.",
+      "es": "El cliente público de ZyXEL VMG1312-B10A contiene el realm, la plantilla challenge y el opaque fijo coincidentes. El expediente incluye enlace fijado al binario, SHA-256 y offsets. Se atribuye el componente; el OEM sigue siendo una cuestión independiente.",
+      "zh": "公开的 ZyXEL VMG1312-B10A 客户端包含匹配的 realm、challenge 模板和固定 opaque。文档提供固定二进制链接、SHA-256 和偏移量。现已确定软件组件归属，设备 OEM 需另行判断。"
+    },
+    "evidence": [
+      {
+        "file": "DEANON-IGDAUTH.md",
+        "anchor": "public-evidence"
+      }
+    ]
+  },
+  {
     "id": "works-systems-oneagent-attribution",
     "date": "2026-10-13",
     "kind": "research",
@@ -743,6 +858,39 @@
       },
       {
         "file": "ACS-HUNT.md"
+      }
+    ]
+  },
+  {
+    "id": "freeacs-public-disclosure",
+    "date": "2026-10-12",
+    "kind": "research",
+    "title": {
+      "en": "FreeACS: eight findings published",
+      "ru": "FreeACS: опубликованы восемь находок",
+      "es": "FreeACS: ocho hallazgos publicados",
+      "zh": "FreeACS：八项发现已公开"
+    },
+    "body": {
+      "en": "On October 12 we published eight FreeACS findings and a summary index: nine issues on scadastrangelove/freeacs. The public index describes isolated-lab verification, the Reproof and Rust-in-Peace pipelines, and a hostile-CPE path into the management plane — a Bad CPE case. Reports are linked below.",
+      "ru": "12 октября опубликованы восемь находок FreeACS и сводный индекс: девять issues на scadastrangelove/freeacs. В публичном индексе описаны проверка на изолированном стенде, пайплайны Reproof и Rust-in-Peace и путь от враждебного CPE к плоскости управления — кейс Bad CPE. Ссылки на отчёты ниже.",
+      "es": "El 12 de octubre publicamos ocho hallazgos de FreeACS y un índice: nueve issues en scadastrangelove/freeacs. El índice documenta la verificación en laboratorio aislado, los pipelines Reproof y Rust-in-Peace y una ruta desde un CPE hostil al plano de gestión: un caso Bad CPE. Informes enlazados abajo.",
+      "zh": "10 月 12 日，我们在 scadastrangelove/freeacs 发布八项发现及一份索引，共九个 issue。公开索引记录了隔离实验室验证、Reproof 和 Rust-in-Peace 流程，以及恶意 CPE 到管理平面的路径，是 Bad CPE 的具体案例。报告链接见下方。"
+    },
+    "evidence": [
+      {
+        "file": "PUBLIC-DISCLOSURES.md",
+        "anchor": "freeacs-20261012"
+      }
+    ],
+    "links": [
+      {
+        "label": "FreeACS · reports and index",
+        "url": "https://github.com/scadastrangelove/freeacs/issues/9"
+      },
+      {
+        "label": "Public disclosure tracker",
+        "url": "https://github.com/scadastrangelove/rust-in-peace/blob/main/DISCLOSURES-PUBLIC.md"
       }
     ]
   }

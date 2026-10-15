@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from collection_catalog import bind_facts, collected_facts
 from snapshot_history import snapshot_history, write_history
+from index_comparison import read_comparison
 
 ROOT = Path(__file__).resolve().parent.parent
 IDENT_EXCLUDE = {
@@ -87,6 +88,9 @@ def validate_sources(data):
     references += [s for items in data['facts'].values() for f in items for s in f.get('sources', [])]
     references += [v['source'] for items in data['variants'].values() for v in items if v.get('source')]
     references += [s for n in data['news'] for s in n['evidence']]
+    references += [q['source'] for q in data.get('queryCatalog', [])]
+    if data.get('comparison'):
+        references.append(data['comparison']['source'])
     references += [s for e in data.get('ecosystem', {}).get('edges', [])
                    for s in e['sources'] if 'file' in s]
     for source in references:
@@ -322,10 +326,28 @@ def build_data(snapshot):
         'news': read_news(),
         'ecosystem': read_ecosystem(registry),
         'operatorCatalog': read_operators(),
+        # Editorial research sources stay independent of the selected snapshot.
+        'comparison': read_comparison(ROOT, registry),
+        'queryCatalog': read_query_catalog(registry),
     }
     validate_translations(data)
     validate_sources(data)
     return data
+
+
+def read_query_catalog(registry):
+    catalog = read(ROOT/'data/collection-queries.json')
+    if catalog.get('schema_version') != 1:
+        raise ValueError('Unknown query catalog schema')
+    seen = set()
+    for q in catalog['queries']:
+        if (not re.fullmatch('[a-z0-9-]+', q['id']) or q['id'] in seen
+                or q['parent'] not in registry or not q['query'].strip()
+                or any(not q['label'].get(lang) for lang in ('en', 'ru', 'es', 'zh'))):
+            raise ValueError('Invalid query catalog entry')
+        seen.add(q['id'])
+    return [{key: q[key] for key in ('id', 'parent', 'query', 'label', 'source')}
+            for q in catalog['queries']]
 
 
 SNAPSHOT_FIELDS = ('snapshot', 'park', 'http', 'denominators', 'ident', 'lines',

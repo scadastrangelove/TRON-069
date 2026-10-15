@@ -83,6 +83,7 @@ python3 tools/build-map.py
 python3 tests/test_build_map.py
 python3 tests/test_collect_map.py
 python3 tests/test_sync_facts.py
+python3 tests/test_index_comparison.py
 node tests/atlas-audit.mjs index.html
 node tests/atlas-audit.mjs atlas/tr-atlas.html
 node --test tests/map-gestures.mjs tests/network-gestures.mjs tests/network-connections.mjs tests/snapshot-navigation.mjs
@@ -176,6 +177,7 @@ catalog schema. The reviewed operator aliases and groups are maintained in
 | [data/operator-catalog.json](data/operator-catalog.json) | Exact country-scoped operator aliases and sourced corporate groups |
 | [data/acs-relations.json](data/acs-relations.json) | CPE–ACS relationship graph, evidence status, dates and sources |
 | [data/mapmeta.json](data/mapmeta.json) | Attribution, findings, limitations and source links |
+| [data/index-comparison.json](data/index-comparison.json) | Independent FOFA research aggregates and fixed Shodan reference counts |
 | [data/research-findings.json](data/research-findings.json) | Research-to-atlas coverage and explicitly withheld categories |
 | [data/project-news.json](data/project-news.json) | Dated developments with supporting files |
 | [TR-PARK-REGISTRY.md](TR-PARK-REGISTRY.md) | Human-readable registry from the current collection |
@@ -195,6 +197,9 @@ exports, operational logs and restricted probe packages are not distributed.
 
 ## Research notes
 
+- [PUBLIC-DISCLOSURES.md](PUBLIC-DISCLOSURES.md): published reports relevant to the atlas, including FreeACS.
+- [DEANON-IGDAUTH.md](DEANON-IGDAUTH.md): Broadcom CMS tr69c attribution, pinned binary evidence and hash.
+- [CROSS-INDEX.md](CROSS-INDEX.md): separately dated FOFA/Shodan comparison and query scopes.
 - [FINGERPRINTS.md](FINGERPRINTS.md): passive markers and authorized active research results.
 - [NOTES.md](NOTES.md): public research chronology and corrections.
 - [DEANON-TR069CLIENT.md](DEANON-TR069CLIENT.md): component lineage and attribution limits.

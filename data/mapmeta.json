@@ -255,15 +255,19 @@
       ]
     },
     "igdauthentication": {
-      "badge": "hypothesis",
-      "vendor": "IGD component class; vendor unresolved",
+      "badge": "proven",
+      "vendor": "Broadcom CMS tr69c; public ZyXEL binary anchor",
       "role": "CPE CR",
       "findings": [
-        "Identified by the named authentication realm; counts describe the exact registry query.",
-        "Operator and port associations support research slices, not hardware-model attribution."
+        "Realm, challenge parameter order and fixed opaque marker match the public VMG1312-B10A tr69c binary. Pinned source, SHA-256 and offsets are in the dossier.",
+        "The attribution identifies a software component. The same response does not identify every device manufacturer or model."
       ],
       "anomalies": [],
       "sources": [
+        {
+          "file": "DEANON-IGDAUTH.md",
+          "anchor": "public-evidence"
+        },
         {
           "file": "NOTES.md"
         },
@@ -460,11 +464,13 @@
       ]
     },
     "dt-speedport-sdk": {
-      "badge": "hypothesis",
-      "vendor": "DT Speedport SDK (Thomson-style realm)",
+      "badge": "class",
+      "vendor": "DSLForum response class; supplier unresolved",
       "role": "CPE CR",
       "findings": [
-        "opaque 5ccc069c… is the literal RFC 2617 §3.5 example. The claimed shared SDK with ACSSimTool was withdrawn on review, 2026-10-08"
+        "opaque 5ccc069c… is the literal RFC 2617 §3.5 example. The claimed shared SDK with ACSSimTool was withdrawn on review, 2026-10-08",
+        "Observed contexts span DE:7547, DE:7170, SG:8085 and legacy GB:8085. Operator and port scopes have separate collection queries.",
+        "The name no longer implies a Deutsche Telekom SDK. The stable ID and historical query counts are preserved."
       ],
       "overlaps": [
         {
@@ -473,6 +479,10 @@
         }
       ],
       "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "dslforum-cpe-management"
+        },
         {
           "file": "NOTES.md"
         },
@@ -557,12 +567,17 @@
       "vendor": "Vendor unknown; candidates Technicolor / ADB",
       "role": "CPE CR",
       "findings": [
-        "The port-7170 slice is associated with TIM. Technicolor and ADB remain candidates; the inspected image does not close attribution."
+        "The port-7170 slice is associated with TIM. Technicolor and ADB remain candidates; the inspected image does not close attribution.",
+        "UK:1024 and Canada:10001 research populations share the realm. They are separate query scopes; TIM:7170 component attribution remains open."
       ],
       "anomalies": [
         "Response evidence does not establish a hardware model or exploitability."
       ],
       "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "gateway-port-scopes"
+        },
         {
           "file": "ACS-HUNT.md"
         },
@@ -673,9 +688,13 @@
       "vendor": "Korea Telecom",
       "role": "CPE CR",
       "findings": [
-        "KR park: 11.4M on 7547; ~80% silent (whitelist-CR hypothesis)"
+        "Korean port-7547 totals greatly exceed named signature counts. Missing indexed authentication headers do not establish silence, filtering or a device implementation."
       ],
       "sources": [
+        {
+          "file": "CROSS-INDEX.md",
+          "anchor": "follow-ups"
+        },
         {
           "file": "NOTES.md"
         },
@@ -935,12 +954,18 @@
     "tr069-client-cli-server-netcore": {
       "badge": "proven",
       "vendor": "Netcore/Netis",
-      "role": "CPE CR",
+      "role": "CPE companion CLI service",
       "findings": [
         "Related 'TR069 client X Server' template; CHINANET-ZJ and US WISPs",
-        "TR-069 was not found in three inspected retail builds: WF2419 V2.2, WF2409E V3.3 and WF2411E V2.1. An operator build is a working explanation for the observed signature; the result does not cover all Netis firmware. Source: ACS-HUNT.md, round 2."
+        "TR-069 was not found in three inspected retail builds: WF2419 V2.2, WF2409E V3.3 and WF2411E V2.1. An operator build is a working explanation for the observed signature; the result does not cover all Netis firmware. Source: ACS-HUNT.md, round 2.",
+        "13 October 2026: all 1,861 query matches are on compiled-default port 1234. The 10 October sample includes 137 Serbian matches associated with Telekom Srbija / AS8400.",
+        "Sampled Chinese and Serbian builds have a fuller CLI route set than sampled US fixed-wireless builds. This is a build fingerprint, with route names omitted."
       ],
       "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "cli-build-classes"
+        },
         {
           "file": "DEANON-TR069CLIENT.md"
         },
@@ -1230,6 +1255,28 @@
         {
           "file": "TR-PARK-REGISTRY.md",
           "anchor": "telefonica-cwmpweb"
+        },
+        {
+          "file": "METHOD.md"
+        }
+      ]
+    },
+    "freeacs": {
+      "badge": "class",
+      "vendor": "FreeACS community",
+      "role": "ACS administration UI",
+      "findings": [
+        "Eight findings and a summary index were published on 12 October 2026. The public reports include a Bad CPE case and isolated-lab verification using Reproof and Rust-in-Peace.",
+        "This line counts administration-page title matches, not affected servers or managed CPE devices."
+      ],
+      "sources": [
+        {
+          "file": "PUBLIC-DISCLOSURES.md",
+          "anchor": "freeacs-20261012"
+        },
+        {
+          "file": "TR-PARK-REGISTRY.md",
+          "anchor": "freeacs"
         },
         {
           "file": "METHOD.md"

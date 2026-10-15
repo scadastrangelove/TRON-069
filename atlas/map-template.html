@@ -315,6 +315,15 @@ td.num,th.num{text-align:right;font-family:ui-monospace,monospace;font-size:11px
 .fndcard li{font-size:11.5px;color:var(--ink2);line-height:1.65;padding:6px 0 6px 12px;border-left:2.5px solid #d9d0fa;margin:6px 0}
 .fndcard li.anom{border-color:#e8c98c;background:var(--amber-bg);border-radius:0 8px 8px 0;padding:8px 10px;color:var(--amber-ink)}
 .fndcard .act{margin-top:11px}
+.index-comparison{margin-bottom:18px}
+.index-comparison>summary{cursor:pointer;font-size:15px;line-height:1.6}
+.index-comparison>summary .note{display:block;margin-left:18px}
+.index-comparison p{font-size:12px;line-height:1.7;margin:12px 0}
+.index-comparison h3{margin:22px 0 10px;font-size:14px}
+.index-comparison table{min-width:590px;width:100%}
+.index-comparison td,.index-comparison th{vertical-align:top}
+.index-comparison code{display:block;white-space:normal;overflow-wrap:anywhere;font-size:10px;max-width:350px;margin-top:6px}
+.index-comparison small{font-size:10px;font-weight:400;color:var(--muted)}
 footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#9daac2;font:10px ui-monospace,monospace;padding:22px 2px}
 footer b{font-weight:400;padding:0 8px;opacity:.5}
 
@@ -658,6 +667,7 @@ dialog b{color:var(--ink)}
   <h2 style="font-size:22px;letter-spacing:-.7px;margin-top:8px" data-i18n="fnd_t">Находки, аномалии и ограничения</h2>
   <p style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6" data-i18n="fnd_sub">Утверждения нашего исследования на дату снапшота.</p>
  </div>
+ <div id="indexComparison"></div>
  <div class="fndgrid" id="fndGrid"></div>
 </section>
 
@@ -1923,8 +1933,10 @@ function sourcesHtml(items){
 }
 function variantHtml(slug){
  const variants=DATA.variants?.[slug]||[];
- if(!variants.length)return "";
- return `<h3>${t("collected_variants")}</h3><div class="note">${t("variant_scope")}</div>`+variants.map(v=>{
+ const collected=new Set(variants.map(v=>v.id));
+ const pending=(DATA.queryCatalog||[]).filter(q=>q.parent===slug&&!collected.has(q.id));
+ if(!variants.length&&!pending.length)return "";
+ return (variants.length?`<h3>${t("collected_variants")}</h3><div class="note">${t("variant_scope")}</div>`:"")+variants.map(v=>{
   const label=v.label[LANG]||v.label.en;
   const groups=[["orgs",t("s_ops")],["asn","ASN"],["ports",t("s_ports")],["countries",t("pg_countries")]];
   return `<details class="variant-card"><summary>${esc(label)} · <b>${fmtF(v.total)}</b>${v.share!=null?` · ${(v.share*100).toLocaleString(LANG,{maximumFractionDigits:1})}%`:""}</summary>
@@ -1932,7 +1944,7 @@ function variantHtml(slug){
   ${groups.map(([key,title])=>v[key]?.length?`<h4>${title}</h4>${v[key].slice(0,10).map(x=>`<div class="krow"><span class="nm">${esc(key==="countries"?ccName(x.value):String(x.value))}</span><span class="n">${fmtF(x.count)}</span></div>`).join("")}`:"").join("")}
   <div class="note">${t("variant_top")}</div><div class="note"><code>${esc(v.dork)}</code></div>${sourcesHtml(v.source?[v.source]:[])}
   <a class="btn ghost" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(v.dork)}">↗ Shodan</a></details>`;
- }).join("");
+ }).join("")+(pending.length?`<h3>${t("pending_queries")}</h3><p class="note">${t("pending_scope")}</p>`+pending.map(q=>`<details class="variant-card"><summary>${esc(ecoText(q.label))} · ${t("fact_not_collected")}</summary><div class="note"><code>${esc(q.query)}</code></div>${sourcesHtml([q.source])}<a class="btn ghost" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(q.query)}">↗ Shodan</a></details>`).join(""):"");
 }
 function renderInspector(){
  let h=`<button id="inspCollapse" title="${esc(t("fold_panel"))}" style="position:sticky;top:0;float:right;z-index:5;background:#fff;border:1px solid var(--line);border-radius:8px;width:24px;height:24px;color:var(--muted)">${inspCollapsed?"‹":"›"}</button>`;
@@ -2163,7 +2175,19 @@ function renderRegistry(){
 }
 $("#regSearch").oninput=renderRegistry;
 $("#regService").onchange=renderRegistry;
+function renderComparison(){
+ const C=DATA.comparison,root=$("#indexComparison");
+ if(!C){root.innerHTML="";return;}
+ const opened=root.querySelector?.("details")?.open;
+ const name=slug=>DATA.lines[slug]?.name||DATA.history?.lines?.[slug]?.name||slug;
+ root.innerHTML=`<details class="card index-comparison" ${opened?"open":""}><summary><b>${t("cmp_title")}</b><span class="note">FOFA · ${esc(C.research_date)} · ${t("cmp_signatures")}: ${C.signatures.length} · ${t("cmp_countries")}: ${C.countries.length}</span></summary>
+ <p>${t("cmp_scope")}</p><p class="note">${t("cmp_provenance")} Shodan: ${esc(C.reference_snapshot)}.</p>
+ <h3>${t("cmp_signatures")}</h3><div class="tblwrap"><table><thead><tr><th>${t("reg_th_c")}</th><th>FOFA · ${esc(C.research_date)}<br><small>${t("cmp_notation")}</small></th><th>Shodan · ${esc(C.reference_snapshot)}<br><small>${t("cmp_query_time")}</small></th></tr></thead><tbody>${C.signatures.map(r=>`<tr><th scope="row">${esc(name(r.line))}</th><td><b class="num">${r.fofa_count.toLocaleString(LANG)}</b><code>${esc(r.fofa_query_notation)}</code></td><td><b class="num">${r.shodan_count.toLocaleString(LANG)}</b><code>${esc(r.shodan_query)}</code><small>${esc(r.shodan_taken)}</small></td></tr>`).join("")}</tbody></table></div>
+ <h3>${t("cmp_country_title")}</h3><div class="tblwrap"><table><thead><tr><th>${t("cmp_countries")}</th><th class="num">FOFA</th><th class="num">Shodan</th></tr></thead><tbody>${C.countries.map(r=>`<tr><th scope="row">${esc(ccName(r.country))} <small>${esc(r.country)}</small></th><td class="num">${r.fofa_count.toLocaleString(LANG)}</td><td class="num">${r.shodan_count.toLocaleString(LANG)}</td></tr>`).join("")}</tbody></table></div><p class="note">Shodan · ${esc(C.countries[0]?.shodan_taken||"")}</p>
+ ${sourcesHtml([C.source,{file:"data/index-comparison.json"}])}</details>`;
+}
 function renderFindings(){
+ renderComparison();
  $("#fndGrid").innerHTML=sortedSlugs.filter(s=>{const M=DATA.meta.lines[s]||{};return(M.findings||[]).length||(M.anomalies||[]).length;}).map(s=>{
   const M=DATA.meta.lines[s]||{};const b=M.badge||"anonymous";
   return`<div class="fndcard"><h3><i style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${lineColor(s)};flex:none"></i>${esc(DATA.lines[s].name)} ${serviceBadge(s)} <span class="badge ${b}">${{proven:t("b_proven"),hypothesis:t("b_hyp"),anonymous:t("b_anon"),class:t("b_class")}[b]}</span></h3>

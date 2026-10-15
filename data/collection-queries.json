@@ -1588,6 +1588,168 @@
       },
       "overlap": "possible",
       "denominator": "fact-acssimtool-27af6cfcf2"
+    },
+    {
+      "id": "dslforum-de-7547",
+      "parent": "dt-speedport-sdk",
+      "group": "fingerprint-followup",
+      "query": "\"DSLForum CPE Management\" country:DE port:7547",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "DSLForum · DE:7547",
+        "ru": "DSLForum · DE:7547",
+        "es": "DSLForum · DE:7547",
+        "zh": "DSLForum · DE:7547"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "dslforum-cpe-management"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "dslforum-de-7170",
+      "parent": "dt-speedport-sdk",
+      "group": "fingerprint-followup",
+      "query": "\"DSLForum CPE Management\" country:DE port:7170",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "DSLForum · DE:7170",
+        "ru": "DSLForum · DE:7170",
+        "es": "DSLForum · DE:7170",
+        "zh": "DSLForum · DE:7170"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "dslforum-cpe-management"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "dslforum-sg-8085",
+      "parent": "dt-speedport-sdk",
+      "group": "fingerprint-followup",
+      "query": "\"DSLForum CPE Management\" country:SG port:8085",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "DSLForum · SG:8085",
+        "ru": "DSLForum · SG:8085",
+        "es": "DSLForum · SG:8085",
+        "zh": "DSLForum · SG:8085"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "dslforum-cpe-management"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "dslforum-gb-8085",
+      "parent": "dt-speedport-sdk",
+      "group": "fingerprint-followup",
+      "query": "\"DSLForum CPE Management\" country:GB port:8085",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "DSLForum · GB:8085",
+        "ru": "DSLForum · GB:8085",
+        "es": "DSLForum · GB:8085",
+        "zh": "DSLForum · GB:8085"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "dslforum-cpe-management"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "gateway-gb-1024",
+      "parent": "gateway-realm",
+      "group": "fingerprint-followup",
+      "query": "realm=\"Gateway\" country:GB port:1024",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "Gateway · GB:1024",
+        "ru": "Gateway · GB:1024",
+        "es": "Gateway · GB:1024",
+        "zh": "Gateway · GB:1024"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "gateway-port-scopes"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "gateway-ca-10001",
+      "parent": "gateway-realm",
+      "group": "fingerprint-followup",
+      "query": "realm=\"Gateway\" country:CA port:10001",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "Gateway · CA:10001",
+        "ru": "Gateway · CA:10001",
+        "es": "Gateway · CA:10001",
+        "zh": "Gateway · CA:10001"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "gateway-port-scopes"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "cli-port-1234",
+      "parent": "tr069-client-cli-server-netcore",
+      "group": "fingerprint-followup",
+      "query": "\"TR069 client CLI Server\" port:1234",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CLI · default port 1234",
+        "ru": "CLI · порт по умолчанию 1234",
+        "es": "CLI · puerto predeterminado 1234",
+        "zh": "CLI · 默认端口 1234"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "cli-build-classes"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "cli-serbia",
+      "parent": "tr069-client-cli-server-netcore",
+      "group": "fingerprint-followup",
+      "query": "\"TR069 client CLI Server\" country:RS",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CLI · Serbia",
+        "ru": "CLI · Сербия",
+        "es": "CLI · Serbia",
+        "zh": "CLI · 塞尔维亚"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "cli-build-classes"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "cli-as8400",
+      "parent": "tr069-client-cli-server-netcore",
+      "group": "fingerprint-followup",
+      "query": "\"TR069 client CLI Server\" asn:AS8400",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CLI · Telekom Srbija / AS8400",
+        "ru": "CLI · Telekom Srbija / AS8400",
+        "es": "CLI · Telekom Srbija / AS8400",
+        "zh": "CLI · Telekom Srbija / AS8400"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "cli-build-classes"
+      },
+      "overlap": "possible"
     }
   ]
 }

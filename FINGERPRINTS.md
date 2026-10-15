@@ -1,6 +1,6 @@
 # Passive and active fingerprinting
 
-Public research edition, updated 13 October 2026. Fingerprints describe response behavior
+Public research edition, updated 15 October 2026. Fingerprints describe response behavior
 and implementation families. They are not vulnerability tests or affected-device
 counts. The shipped collector reads Shodan Count; it does not perform these active
 experiments. The separate probe implementation is not included.
@@ -74,3 +74,49 @@ TR-069 endpoint, a CPE role, or a manufacturer. The atlas therefore labels the
 broad gSOAP line as mixed; the separately identified Telefónica frontend is ACS.
 An observed version string is recorded at its advertised precision: `2.7` is not
 an exact patch version, and a version label alone is not a vulnerability result.
+
+<a id="dslforum-cpe-management"></a>
+## DSLForum CPE Management across operator deployments
+
+The display name is now **DSLForum CPE Management**; stable ID
+`dt-speedport-sdk` and query `"DSLForum CPE Management"` are preserved.
+The old name implied a supplier and a Deutsche Telekom boundary that the
+response evidence does not establish. Research records include German 7547
+and 7170 populations, Singtel in Singapore on 8085, and a legacy BT/EE context
+in the United Kingdom on 8085. These are follow-up scopes, not model labels.
+
+The challenge parameter order differs from the
+[Broadcom tr69c anchor](DEANON-IGDAUTH.md#public-evidence). A generic Apache
+banner, a search engine's product tag and an RFC example constant do not
+resolve the supplier. The previous shared-SDK inference from the constant
+alone remains withdrawn. The [cross-index note](CROSS-INDEX.md#follow-ups)
+records the research counts separately from current Shodan measurements.
+
+<a id="gateway-port-scopes"></a>
+## Gateway realm on alternate ports
+
+The main atlas line retains `port:7170 realm="Gateway"`. UK:1024 and
+Canada:10001 are separate research variants, prompted by Vodafone and Bell
+operator contexts in the second index. A common realm does not prove a shared
+implementation; different ports do not prove different implementations.
+
+TIM:7170 attribution remains unresolved. The inspected TIM image used 51007
+and did not contain the observed realm. A sibling binary cannot close that
+gap; see [ACS-HUNT.md](ACS-HUNT.md). The query catalog preserves the 51007
+control and adds the two alternate-port country slices.
+
+<a id="cli-build-classes"></a>
+## Companion CLI service: deployment and build classes
+
+The [13 October record](data/mapdata/snapshot-20261013-160503/tr069-client-cli-server-netcore.json)
+has 1,861 matches, all on port 1234, the inspected component's compiled default.
+The [10 October record](data/mapdata/snapshot-20261010-102121/tr069-client-cli-server-netcore.json)
+has 1,855: Serbia contributes 137 matches associated with Telekom Srbija
+(AS8400). The CLI handler is a CPE companion service, not an ACS endpoint.
+Port observations do not reveal which settings an operator changed.
+
+Sampled deployments in China and Serbia expose a fuller route set than the
+sampled US fixed-wireless builds. Route presence distinguishes those inspected
+builds; it does not classify every device in a country. Route names, operational
+records and security findings are excluded. The catalog adds explicit port-1234,
+Serbia and AS8400 scopes for dated passive follow-up.

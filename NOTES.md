@@ -262,8 +262,8 @@ matches the inspected binary's format string). The inspected TP-Link handler
 carries the Works Systems openagent software lineage — its function names and
 response template match the published GPL source. Nonce-generation mechanics
 belong to the restricted census and are withheld from the public release pending
-disclosure. The one >1M family with an unresolved attribution and census
-entry is IgdAuthentication (1.53M).
+disclosure. At that review, IgdAuthentication remained unattributed; the subsequent
+public binary evidence is recorded in section 9.41.
 
 <a id="section-9.35"></a>
 ## 9.35. CLI deployment and active fingerprint observations — October 13
@@ -293,3 +293,82 @@ Three observations extend the public fingerprint record:
   authentication claim. The [fingerprint note](FINGERPRINTS.md#easycwmp-source-comparison)
   links the source comparison and retains the historical scan as response
   counts. Shodan banners cannot reproduce this controlled active experiment.
+
+<a id="section-9.36"></a>
+## 9.36. Cross-index observations (FOFA) — October 13
+
+A second index supplied 13 signature aggregates and 22 country slices on port
+7547. The [public comparison](CROSS-INDEX.md#method) retains them as an
+independent dated source. Exact FOFA retrieval timestamps and retention filters
+were not saved; query notation comes from the research summary. The atlas pairs
+these values with its saved October 13 Shodan snapshot, without combining totals
+or interpreting their ratios as measured coverage.
+
+Research follow-ups include the Gateway realm in UK:1024 and Canada:10001
+operator contexts and DSLForum CPE Management in DE:7170 and SG/GB:8085 contexts.
+They justify separate catalog queries. A shared realm does not resolve the
+component supplier, and index product labels do not supply independent proof.
+
+<a id="section-9.37"></a>
+## 9.37. Vendor dynamic-DNS names crossed with TR-069 ports — October 13
+
+Some router platforms publish their services under vendor-operated dynamic
+names (optionally relaying through the vendor cloud for addresses behind
+CGNAT). Cross-referencing those name spaces with TR-069 ports in the second
+engine gives a small but real discovery surface: a few hundred to ~1.5k
+hosts per vendor name space carry an open 7547, including at least one
+exact vendor-pair match (a vendor DDNS name on that vendor's own TR-069
+server string). Two limits are recorded from the same measurement: dynamic
+addresses make name-to-device mappings stale (a vendor name was observed on
+a clearly different vendor's device), and no vendor dynamic-DNS names were found in the inspected anonymous-line
+samples. Those samples offered no positive attribution evidence from DDNS.
+Cloud-relayed services require separate observation: inbound port scans do not
+by themselves enumerate devices behind CGNAT.
+
+<a id="section-9.38"></a>
+## 9.38. Korean authentication-marker coverage — October 13
+
+The research records 4,707,708 FOFA matches on port 7547 in South Korea, with
+157,484 in its authentication-header subset (about 3.35%). This measures indexed
+`WWW-Authenticate` presence. The complement is not a measured population of
+silent devices: missing headers can reflect response behavior, scanning or
+indexing. These counts do not test geo-filtering or establish device-side policy.
+A separate port-7548 query returned 7,413 matches. See the
+[cross-index follow-ups](CROSS-INDEX.md#follow-ups).
+
+<a id="section-9.39"></a>
+## 9.39. China-labeled aggregate and port reuse — October 13
+
+The research summary records 5,902,772 FOFA matches on port 7547 under its CN
+label and 396,785 authentication-marker matches. Operator examples include
+Taiwan; country assignments require normalization before this row can enter the
+country comparison. Sampled non-TR-069 services show that the port is reused.
+The sample does not measure their prevalence in the remaining millions of
+records. Neither the port total nor the authentication-header subset establishes
+a protocol population.
+
+<a id="section-9.40"></a>
+## 9.40. Twenty-two country slices — October 13
+
+The [comparison dataset](data/index-comparison.json) records FOFA port-7547
+aggregates for 22 countries and the corresponding saved Shodan country facets.
+Differences are useful leads for follow-up sampling. Different collection windows,
+queries and scan footprints prevent interpreting the ratios as coverage
+multipliers or revising a global device ranking. Authentication-marker presence
+is an additional observation, not a complete TR-069 classifier.
+
+<a id="section-9.41"></a>
+## 9.41. IgdAuthentication attributed to Broadcom CMS tr69c — October 14
+
+The component attribution is supported by a public ZyXEL VMG1312-B10A client
+binary: its realm, challenge parameter order and distinctive fixed opaque
+marker match the observed family. The
+[public dossier](DEANON-IGDAUTH.md#public-evidence), independently checked on
+October 15, supplies a pinned source, SHA-256, file size and string offsets.
+The attribution identifies a component lineage, not every hardware OEM.
+The October 13 Shodan record remains 1,540,730 query matches.
+
+The DSLForum-realm family has a different response template and retains an
+unresolved supplier. The atlas now calls it DSLForum CPE Management, preserving
+its stable ID and historical measurements. Operator/port follow-ups are recorded
+in [FINGERPRINTS.md](FINGERPRINTS.md#dslforum-cpe-management).

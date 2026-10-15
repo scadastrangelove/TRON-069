@@ -14,7 +14,7 @@ The attribution badge describes evidence about the signature/component. A source
 | <a id="gsoap-park"></a>gSOAP park | mixed | 1,841,416 | 2026-10-13T16:05:07+00:00 | `"Server: gSOAP"` | [hypothesis](NOTES.md) |
 | <a id="rdk-b-ccsptr069pa"></a>RDK-B CcspTr069Pa | cpe | 1,801,300 | 2026-10-13T16:05:07+00:00 | `"Cisco_CCSP_CWMP_TCPCR"` | [proven](NOTES.md) |
 | <a id="tr069-client"></a>TR069 Client | cpe | 1,653,673 | 2026-10-13T16:05:09+00:00 | `"TR069 client TCP connection request Server"` | [Works Systems OneAgent TR (binary-proven)](DEANON-TR069CLIENT.md) |
-| <a id="igdauthentication"></a>IgdAuthentication | cpe | 1,540,730 | 2026-10-13T16:05:10+00:00 | `"IgdAuthentication"` | [hypothesis](NOTES.md) |
+| <a id="igdauthentication"></a>IgdAuthentication | cpe | 1,540,730 | 2026-10-13T16:05:10+00:00 | `"IgdAuthentication"` | [Broadcom CMS tr69c (binary-proven)](DEANON-IGDAUTH.md) |
 | <a id="gsoap-2-7-vendor-map"></a>gSOAP/2.7 vendor map | mixed | 1,207,836 | 2026-10-13T16:05:51+00:00 | `port:7547 "Server: gSOAP/2.7"` | [class](NOTES.md) |
 | <a id="easycwmp-vanilla"></a>easycwmp vanilla | cpe | 997,748 | 2026-10-13T16:05:11+00:00 | `"realm@easycwmp"` | [proven](NOTES.md) |
 | <a id="askeycwmp-askey"></a>ASKEYCWMP (Askey) | cpe | 659,214 | 2026-10-13T16:05:37+00:00 | `port:7547 ASKEYCWMP` | [proven](NOTES.md) |
@@ -23,7 +23,7 @@ The attribution badge describes evidence about the signature/component. A source
 | <a id="windtre-tr069-http-server"></a>WindTre tr069-http-server | cpe | 269,162 | 2026-10-13T16:05:50+00:00 | `port:7547 country:IT "tr069 http server"` | [class](NOTES.md) |
 | <a id="zte"></a>ZTE | cpe | 256,784 | 2026-10-13T16:05:14+00:00 | `"cpe@zte.com"` | [proven](NOTES.md) |
 | <a id="sagemcom"></a>Sagemcom | cpe | 218,248 | 2026-10-13T16:05:13+00:00 | `"Sagemcom TR-069"` | [proven](NOTES.md) |
-| <a id="dt-speedport-sdk"></a>DT Speedport SDK | cpe | 119,043 | 2026-10-13T16:05:21+00:00 | `"DSLForum CPE Management"` | [hypothesis](NOTES.md) |
+| <a id="dt-speedport-sdk"></a>DSLForum CPE Management | cpe | 119,043 | 2026-10-13T16:05:21+00:00 | `"DSLForum CPE Management"` | [response class; supplier unresolved](FINGERPRINTS.md#dslforum-cpe-management) |
 | <a id="gsoap-2-8-vendor-map"></a>gSOAP/2.8 vendor map | mixed | 104,949 | 2026-10-13T16:05:52+00:00 | `port:7547 "Server: gSOAP/2.8"` | [class](NOTES.md) |
 | <a id="charter-anti-scan-404"></a>Charter anti-scan 404 | unknown | 105,973 | 2026-10-13T16:05:54+00:00 | `port:7547 "HTTP/1.1 404" org:"Charter Communications"` | [class](NOTES.md) |
 | <a id="cwmp-server"></a>cwmp server | unknown | 84,050 | 2026-10-13T16:06:02+00:00 | `"Server: cwmp server"` | [anonymous](ACS-HUNT.md) |
@@ -58,10 +58,12 @@ The attribution badge describes evidence about the signature/component. A source
 | <a id="easycwmp-fork-ltecpe"></a>easycwmp fork: ltecpe | cpe | 87 | 2026-10-13T16:05:28+00:00 | `"realm@ltecpe"` | [proven](NOTES.md) |
 | <a id="openacs"></a>openacs | acs | 16 | 2026-10-13T16:05:33+00:00 | `"openacs"` | [proven](NOTES.md) |
 | <a id="axiros"></a>Axiros | acs | 8 | 2026-10-13T16:05:34+00:00 | `"Axiros"` | [proven](NOTES.md) |
-| <a id="freeacs"></a>FreeACS Web | acs | 6 | 2026-10-13T16:05:35+00:00 | `http.title:"FreeACS"` | [class](NOTES.md) |
+| <a id="freeacs"></a>FreeACS Web | acs | 6 | 2026-10-13T16:05:35+00:00 | `http.title:"FreeACS"` | [title signature; public reports](PUBLIC-DISCLOSURES.md#freeacs-20261012) |
 
 ## Scope and historical corrections
 
 Huawei auxiliary ports are authentication-service slices, not automatically web interfaces. TR069 Client is Works Systems OneAgent TR; DigAuth and fake-Apache trace to the earlier Works Systems openagent branch. Device OEM attribution remains separate. Gateway/TIM vendor attribution remains open. NettyServer/WindTre remains a platform hypothesis. The shared DT/ACSSimTool RFC-example constant is not proof of a shared SDK. AVSystem libcwmp is CPE software; Telefónica cwmpWeb is an ACS frontend.
 
 The original October 8 development sample classified 70% of 300 HTTP-bearing records. This is neither fleet-wide precision nor a current coverage measurement. Known overlaps are excluded from the default sum, but full disjointness is unproven.
+
+Editorial attribution review: 15 October 2026. IgdAuthentication maps to Broadcom CMS tr69c through a public binary anchor. DSLForum CPE Management keeps ID `dt-speedport-sdk`; no measurements were relabeled with a new collection date. The [FOFA comparison](CROSS-INDEX.md) is separate from this Shodan registry.
