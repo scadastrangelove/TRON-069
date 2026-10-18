@@ -1,0 +1,168 @@
+{
+ "dork": "\"DSLForum CPE Management\" country:GB port:8085",
+ "total": 500,
+ "taken": "2026-10-18T08:25:45+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 500,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 20,
+   "covered": 500,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 500,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 500,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 500,
+   "value": "GB"
+  }
+ ],
+ "asn": [
+  {
+   "count": 466,
+   "value": "as2856"
+  },
+  {
+   "count": 21,
+   "value": "as13285"
+  },
+  {
+   "count": 6,
+   "value": "2856"
+  },
+  {
+   "count": 3,
+   "value": "as6871"
+  },
+  {
+   "count": 2,
+   "value": "as5089"
+  },
+  {
+   "count": 1,
+   "value": "as13037"
+  },
+  {
+   "count": 1,
+   "value": "as9105"
+  }
+ ],
+ "ports": [
+  {
+   "count": 500,
+   "value": 8085
+  }
+ ],
+ "orgs": [
+  {
+   "count": 238,
+   "value": "IP pools"
+  },
+  {
+   "count": 92,
+   "value": "BT-Central-Plus"
+  },
+  {
+   "count": 57,
+   "value": "BT Infrastructure Layer"
+  },
+  {
+   "count": 29,
+   "value": "IP Pools"
+  },
+  {
+   "count": 15,
+   "value": "Central + migration to 21CN"
+  },
+  {
+   "count": 14,
+   "value": "BT-CENTRAL-PLUS"
+  },
+  {
+   "count": 14,
+   "value": "TalkTalk Communications Limited"
+  },
+  {
+   "count": 10,
+   "value": "EE Limited"
+  },
+  {
+   "count": 8,
+   "value": "BT Group Broadband"
+  },
+  {
+   "count": 7,
+   "value": "British Telecommunications Limited"
+  },
+  {
+   "count": 7,
+   "value": "Customer Dynamic IPs"
+  },
+  {
+   "count": 1,
+   "value": "ADSL dynamic pool"
+  },
+  {
+   "count": 1,
+   "value": "BT Retail"
+  },
+  {
+   "count": 1,
+   "value": "BT-ADSL-LNS"
+  },
+  {
+   "count": 1,
+   "value": "British Telecommunications PLC"
+  },
+  {
+   "count": 1,
+   "value": "Customer Static IPs"
+  },
+  {
+   "count": 1,
+   "value": "DONCASTER"
+  },
+  {
+   "count": 1,
+   "value": "Dial-up and ADSL pool"
+  },
+  {
+   "count": 1,
+   "value": "Virgin Media Limited"
+  },
+  {
+   "count": 1,
+   "value": "Zen Internet Ltd"
+  }
+ ],
+ "id": "dslforum-gb-8085",
+ "parent": "dt-speedport-sdk",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "DSLForum · GB:8085",
+  "ru": "DSLForum · GB:8085",
+  "es": "DSLForum · GB:8085",
+  "zh": "DSLForum · GB:8085"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "dslforum-cpe-management"
+ },
+ "denominator": null
+}

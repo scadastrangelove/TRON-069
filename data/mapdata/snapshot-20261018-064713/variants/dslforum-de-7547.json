@@ -1,0 +1,148 @@
+{
+ "dork": "\"DSLForum CPE Management\" country:DE port:7547",
+ "total": 14047,
+ "taken": "2026-10-18T08:25:42+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 14047,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 13,
+   "covered": 14047,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 9,
+   "covered": 14047,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 14047,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 14047,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 13729,
+   "value": "as3320"
+  },
+  {
+   "count": 292,
+   "value": "3320"
+  },
+  {
+   "count": 8,
+   "value": "as6805"
+  },
+  {
+   "count": 6,
+   "value": "as12312"
+  },
+  {
+   "count": 5,
+   "value": "as12355"
+  },
+  {
+   "count": 3,
+   "value": "as8881"
+  },
+  {
+   "count": 2,
+   "value": "as57353"
+  },
+  {
+   "count": 1,
+   "value": "6805"
+  },
+  {
+   "count": 1,
+   "value": "as3209"
+  }
+ ],
+ "ports": [
+  {
+   "count": 14047,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 14021,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 6,
+   "value": "ecotel communication ag"
+  },
+  {
+   "count": 4,
+   "value": "Telefonica O2 Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 3,
+   "value": "HeLi NET Telekommunikation GmbH & Co."
+  },
+  {
+   "count": 2,
+   "value": "1&1 Versatel Deutschland GmbH"
+  },
+  {
+   "count": 2,
+   "value": "HeLi NET Telekommunikation GmbH & Co. KG"
+  },
+  {
+   "count": 2,
+   "value": "NCC"
+  },
+  {
+   "count": 2,
+   "value": "NCC#2008114512"
+  },
+  {
+   "count": 1,
+   "value": "1&1 Versatel GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Telefonica Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 1,
+   "value": "Vodafone GmbH"
+  },
+  {
+   "count": 1,
+   "value": "freenet DLS GmbH"
+  },
+  {
+   "count": 1,
+   "value": "freenet Datenkommunikations GmbH"
+  }
+ ],
+ "id": "dslforum-de-7547",
+ "parent": "dt-speedport-sdk",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "DSLForum · DE:7547",
+  "ru": "DSLForum · DE:7547",
+  "es": "DSLForum · DE:7547",
+  "zh": "DSLForum · DE:7547"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "dslforum-cpe-management"
+ },
+ "denominator": null
+}

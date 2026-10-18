@@ -1,0 +1,131 @@
+{
+ "dork": "\"realm@easycwmp\" org:\"Fidium\"",
+ "total": 295145,
+ "taken": "2026-10-18T08:24:47+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 295145,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 295145,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 17,
+   "covered": 295145,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 295145,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 295145,
+   "value": "US"
+  }
+ ],
+ "asn": [
+  {
+   "count": 225454,
+   "value": "as13977"
+  },
+  {
+   "count": 30695,
+   "value": "as6300"
+  },
+  {
+   "count": 18104,
+   "value": "as14051"
+  },
+  {
+   "count": 5723,
+   "value": "as5742"
+  },
+  {
+   "count": 5055,
+   "value": "as12042"
+  },
+  {
+   "count": 4789,
+   "value": "as13672"
+  },
+  {
+   "count": 3484,
+   "value": "as13333"
+  },
+  {
+   "count": 1001,
+   "value": "13977"
+  },
+  {
+   "count": 300,
+   "value": "as22647"
+  },
+  {
+   "count": 214,
+   "value": "6300"
+  },
+  {
+   "count": 192,
+   "value": "as14671"
+  },
+  {
+   "count": 57,
+   "value": "14051"
+  },
+  {
+   "count": 45,
+   "value": "12042"
+  },
+  {
+   "count": 21,
+   "value": "5742"
+  },
+  {
+   "count": 8,
+   "value": "13333"
+  },
+  {
+   "count": 2,
+   "value": "22647"
+  },
+  {
+   "count": 1,
+   "value": "13672"
+  }
+ ],
+ "ports": [
+  {
+   "count": 295145,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 295145,
+   "value": "Fidium"
+  }
+ ],
+ "id": "fact-easycwmp-vanilla-52fb7670ac",
+ "parent": "easycwmp-vanilla",
+ "group": "facts",
+ "label": {
+  "ru": "карман Fidium/Consolidated",
+  "en": "Fidium/Consolidated subset",
+  "es": "Subconjunto Fidium/Consolidated",
+  "zh": "Fidium/Consolidated 子集"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

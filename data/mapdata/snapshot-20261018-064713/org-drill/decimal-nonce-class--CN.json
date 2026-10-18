@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:CN",
+ "total": 10,
+ "taken": "2026-10-18T08:10:31+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 10,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 10,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as4837"
+  },
+  {
+   "count": 2,
+   "value": "as4134"
+  },
+  {
+   "count": 1,
+   "value": "as24445"
+  },
+  {
+   "count": 1,
+   "value": "as37963"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "China Unicom Shandong Province Network"
+  },
+  {
+   "count": 3,
+   "value": "China Unicom Shandong province network"
+  },
+  {
+   "count": 2,
+   "value": "CHINANET Guangdong province network"
+  },
+  {
+   "count": 1,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 1,
+   "value": "China Mobile Communications Group Co., Ltd"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "CN"
+}

@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "timezone": "UTC",
- "latest_complete": "snapshot-20261015-201645",
+ "latest_complete": "snapshot-20261018-064713",
  "snapshots": [
   {
    "snapshot": "snapshot-20261008-1451",
@@ -200,6 +200,30 @@
     "scope": "all",
     "expected": 2463,
     "completed": 2463,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 102,
+    "completed": 102,
+    "pending": 0
+   }
+  },
+  {
+   "snapshot": "snapshot-20261018-064713",
+   "status": "complete",
+   "started_at": "2026-10-18T06:47:14+00:00",
+   "completed_at": "2026-10-18T08:25:52+00:00",
+   "updated_at": "2026-10-18T08:25:52+00:00",
+   "source_snapshot": null,
+   "mode": "full",
+   "errors": 0,
+   "lines": 53,
+   "operator_pairs": {
+    "scope": "all",
+    "expected": 2473,
+    "completed": 2473,
     "pending": 0,
     "org_limit": 100,
     "asn_limit": 100

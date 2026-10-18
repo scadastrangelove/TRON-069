@@ -1,0 +1,41 @@
+{
+ "dork": "\"authenticate@cwmp\" country:FR",
+ "total": 61,
+ "taken": "2026-10-18T06:50:41+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 61,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 61,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 61,
+   "value": "as41114"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 45,
+   "value": "Orne THD SPL"
+  },
+  {
+   "count": 16,
+   "value": "ORNE THD SPL"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "FR"
+}

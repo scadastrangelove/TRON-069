@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:BS",
+ "total": 574,
+ "taken": "2026-10-18T08:08:48+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 574,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 574,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 572,
+   "value": "as8014"
+  },
+  {
+   "count": 2,
+   "value": "8014"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 542,
+   "value": "The Bahamas Telecommunications Company, Ltd."
+  },
+  {
+   "count": 17,
+   "value": "Karib Cable"
+  },
+  {
+   "count": 15,
+   "value": "Cable & Wireless (Barbados) Limited"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "BS"
+}

@@ -32,9 +32,9 @@ built from dated Shodan aggregates. Explore the map, compare implementations,
 inspect operator slices and follow each research observation to its source.
 The interface supports English, Spanish, Chinese and Russian.
 
-**Current collection: 15 October 2026.** 53 signature lines, 2,463 country–line
+**Current collection: 18 October 2026.** 53 signature lines, 2,473 country–line
 operator slices, 102 research queries and 48 additional observations. Collection
-ran from 20:16:45 to 21:17:01 UTC; individual results retain their own timestamps.
+ran from 06:47:14 to 08:25:52 UTC; individual results retain their own timestamps.
 These are search matches, not a census of unique devices or vulnerable systems.
 
 ## Bring Your Own TR-069
