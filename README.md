@@ -215,7 +215,7 @@ exports, operational logs and restricted probe packages are not distributed.
 
 ## Research notes
 
-- [PUBLIC-DISCLOSURES.md](PUBLIC-DISCLOSURES.md): published reports relevant to the atlas, including FreeACS.
+- [PUBLIC-DISCLOSURES.md](PUBLIC-DISCLOSURES.md): published findings and fixes relevant to the atlas, including FreeACS and icwmp (iopsys).
 - [DEANON-IGDAUTH.md](DEANON-IGDAUTH.md): Broadcom CMS tr69c attribution, pinned binary evidence and hash.
 - [CROSS-INDEX.md](CROSS-INDEX.md): separately dated FOFA/Shodan comparison and query scopes.
 - [FINGERPRINTS.md](FINGERPRINTS.md): passive markers and authorized active research results.

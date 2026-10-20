@@ -582,11 +582,13 @@ test('manifesto-first', 'Manifesto leads the news list and initial ticker, with 
   expect((card.match(/<p>/g)||[]).length===3,'Manifesto lost paragraph structure');
   for(const repo of ['rust-in-peace','reproof'])expect(card.includes(`href="https://github.com/scadastrangelove/${repo}"`),repo+' link missing');
   expect(c.element('#newsHeadline').innerHTML.includes(data.news[0].title.en),'Initial ticker does not show manifesto');
-  expect(data.news[1].id==='freeacs-public-disclosure'&&data.news[2].id==='bad-cpe-model','Important news does not follow manifesto');
-  for(const item of data.news.slice(1,3))expect(grid.includes(`class="news-card important" id="news-${item.id}"`),'Important card lacks emphasis');
+  const important=data.news.filter(item=>!item.pinned&&(item.important||item.kind==='disclosure'));
+  const firstOrdinary=data.news.findIndex((item,index)=>index>0&&!item.important&&item.kind!=='disclosure');
+  expect(firstOrdinary===important.length+1,'Important news does not follow manifesto');
+  for(const item of important)expect(grid.includes(`class="news-card important" id="news-${item.id}"`),'Important card lacks emphasis');
   c.run('newsStep(1,false)');
   expect(c.element('#newsTicker').dataset.priority==='important'&&c.element('#newsKicker').textContent===c.run('t("news_important")'),'Ticker lacks important label');
-  c.run('newsIndex=3;renderNewsTicker()');
+  c.run(`newsIndex=${firstOrdinary};renderNewsTicker()`);
   expect(c.element('#newsTicker').dataset.priority==='standard'&&c.element('#newsKicker').textContent===c.run('t("news_title")'),'Ticker keeps stale emphasis');
   return 'Manifesto, public disclosures and major research, then ordinary news; matching ticker emphasis';
 });

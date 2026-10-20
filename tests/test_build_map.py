@@ -312,8 +312,13 @@ class BuildTests(unittest.TestCase):
         with patch.object(builder, 'read', return_value=[newer, *reversed(news), disclosure]):
             ordered = builder.read_news()
         self.assertEqual(ordered[0]['id'], manifesto['id'])
-        self.assertEqual([item['id'] for item in ordered[1:5]],
-                         ['future-disclosure', 'freeacs-public-disclosure', 'bad-cpe-model', 'future-news'])
+        self.assertEqual(ordered[1]['id'], 'future-disclosure')
+        first_ordinary = next(i for i, item in enumerate(ordered[1:], 1)
+                              if not item.get('important') and item['kind'] != 'disclosure')
+        self.assertEqual(ordered[first_ordinary]['id'], 'future-news')
+        self.assertEqual({item['id'] for item in ordered[1:first_ordinary]},
+                         {'future-disclosure'} | {item['id'] for item in news
+                             if not item.get('pinned') and (item.get('important') or item['kind'] == 'disclosure')})
         for important in (True, False):
             dates = [item['date'] for item in ordered[1:]
                      if (item.get('important', False) or item['kind'] == 'disclosure') == important]
