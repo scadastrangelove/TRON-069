@@ -4,6 +4,35 @@ This page links published reports relevant to TRON-069. The
 [Rust-in-Peace disclosure tracker](https://github.com/scadastrangelove/rust-in-peace/blob/main/DISCLOSURES-PUBLIC.md)
 tracks the wider research programme, including reports that remain private.
 
+<a id="genieacs-20261020"></a>
+## GenieACS — seven advisories published 20 October 2026
+
+Seven [security advisories](https://github.com/scadastrangelove/genieacs/security/advisories)
+and [upstream PR #423](https://github.com/genieacs/genieacs/pull/423) were published
+following CERT/CC's recommendation, after the reporter received no maintainer
+response. The PR records the coordination context and supplies targeted fixes
+and recommendations for changes to authentication and isolation.
+
+| Advisory | Finding |
+| --- | --- |
+| [GHSA-4cqf-3mxq-h5p2](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-4cqf-3mxq-h5p2) | NBI provisioning scripts and VM sandbox escape: CVE-2025-56015 reproduced on `master`, plus an additional escape variant. |
+| [GHSA-f85p-xpvm-2v2g](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-f85p-xpvm-2v2g) | Unauthenticated NBI database queries expose credential hashes and operator secrets. |
+| [GHSA-cjv9-7rj9-fp6m](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-cjv9-7rj9-fp6m) | Unauthenticated upload and deletion of files distributed to CPE through the File Server. |
+| [GHSA-q8c4-88vj-32ww](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-q8c4-88vj-32ww) | ACS-side SSRF and Connection Request authentication-material disclosure. |
+| [GHSA-r976-f8qf-3hrm](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-r976-f8qf-3hrm) | Unbounded request bodies and decompression, plus CWMP worker crashes from device input. |
+| [GHSA-4wgx-cx5h-m65h](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-4wgx-cx5h-m65h) | `/ping` argument injection: fixed in the 1.2.15 release line, with the fix missing from the inspected `master`. |
+| [GHSA-4v25-9q7x-x86v](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-4v25-9q7x-x86v) | Reflected XML injection through the unencoded `cwmp:ID` response field. |
+
+The reports document isolated-lab testing on `master` at `4aa5cbf` and comparisons
+with the release branch. The research used Reproof and Rust-in-Peace. The CWMP
+availability and Connection Request findings extend the atlas's
+[Bad CPE model](ACS-LANDSCAPE.md); the NBI findings concern access to the
+administrative API and its management authority.
+
+Status on 20 October: all seven advisories are public; PR #423 is open.
+The PR contains targeted patches and recommendations for the broader design
+changes described in the reports.
+
 <a id="iopsys-icwmp-20261020"></a>
 ## icwmp (iopsys) — fixes confirmed 15 October 2026
 

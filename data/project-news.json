@@ -1,5 +1,41 @@
 [
   {
+    "id": "genieacs-public-advisories",
+    "date": "2026-10-20",
+    "kind": "disclosure",
+    "title": {
+      "en": "GenieACS: seven security advisories published",
+      "ru": "GenieACS: опубликованы семь отчётов об уязвимостях",
+      "es": "GenieACS: siete avisos de seguridad publicados",
+      "zh": "GenieACS：七份安全公告已公开"
+    },
+    "body": {
+      "en": "On October 20 we published seven GenieACS security advisories and opened upstream PR #423 with targeted fixes and hardening recommendations. Publication followed CERT/CC advice after no maintainer response. The reports cover code execution through NBI provisioning, disclosure of secrets, firmware/file distribution, SSRF and CWMP availability. The device-facing findings extend Bad CPE: a managed device can affect its management infrastructure. Research used Reproof and Rust-in-Peace; reports and the PR are linked below.",
+      "ru": "20 октября опубликованы семь security advisories GenieACS и открыт PR #423 с исправлениями и рекомендациями по защите. Сопровождающие проекта не ответили; по рекомендации CERT/CC отчёты и PR опубликованы открыто. Отчёты охватывают выполнение кода через provisioning в NBI, раскрытие секретов, раздачу прошивок и файлов, SSRF и доступность CWMP. Находки в обработке запросов CPE дополняют Bad CPE: управляемое устройство может атаковать инфраструктуру управления. В исследовании использовались Reproof и Rust-in-Peace. Ссылки на отчёты и PR — ниже.",
+      "es": "El 20 de octubre publicamos siete avisos de seguridad de GenieACS y abrimos el PR #423 con correcciones específicas y recomendaciones de protección. La publicación siguió el consejo de CERT/CC tras no recibir respuesta de los mantenedores. Los informes abarcan ejecución de código mediante provisioning en NBI, exposición de secretos, distribución de firmware y archivos, SSRF y disponibilidad de CWMP. Los hallazgos en la interfaz de dispositivos amplían Bad CPE: un dispositivo gestionado puede afectar a su infraestructura de gestión. La investigación utilizó Reproof y Rust-in-Peace. Informes y PR enlazados abajo.",
+      "zh": "10 月 20 日，我们公开了七份 GenieACS 安全公告，并向上游提交 PR #423，提供针对性修复和加固建议。在未收到维护者回复后，我们按 CERT/CC 的建议公开披露。报告涵盖通过 NBI 配置脚本执行代码、秘密信息泄露、固件及文件分发、SSRF 和 CWMP 可用性。设备接口相关发现扩展了 Bad CPE 模型：受管设备可以影响其管理基础设施。研究使用了 Reproof 和 Rust-in-Peace，报告和 PR 链接见下方。"
+    },
+    "evidence": [
+      {
+        "file": "PUBLIC-DISCLOSURES.md",
+        "anchor": "genieacs-20261020"
+      },
+      {
+        "file": "ACS-LANDSCAPE.md"
+      }
+    ],
+    "links": [
+      {
+        "label": "GenieACS · Security Advisories",
+        "url": "https://github.com/scadastrangelove/genieacs/security/advisories"
+      },
+      {
+        "label": "GenieACS · PR #423",
+        "url": "https://github.com/genieacs/genieacs/pull/423"
+      }
+    ]
+  },
+  {
     "id": "iopsys-icwmp-fixes",
     "date": "2026-10-20",
     "kind": "disclosure",
