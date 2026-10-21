@@ -1,0 +1,965 @@
+{
+ "dork": "\"CWMP-Agent\"",
+ "total": 21012,
+ "taken": "2026-10-21T20:36:48+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 48,
+   "covered": 21012,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 85,
+   "covered": 20993,
+   "remainder": 19
+  },
+  "port": {
+   "values_returned": 100,
+   "covered": 19595,
+   "remainder": 1417
+  }
+ },
+ "countries": [
+  {
+   "count": 15449,
+   "value": "TN"
+  },
+  {
+   "count": 2264,
+   "value": "HK"
+  },
+  {
+   "count": 671,
+   "value": "CN"
+  },
+  {
+   "count": 537,
+   "value": "US"
+  },
+  {
+   "count": 405,
+   "value": "PH"
+  },
+  {
+   "count": 200,
+   "value": "CI"
+  },
+  {
+   "count": 198,
+   "value": "UG"
+  },
+  {
+   "count": 166,
+   "value": "ZA"
+  },
+  {
+   "count": 152,
+   "value": "SG"
+  },
+  {
+   "count": 113,
+   "value": "DE"
+  },
+  {
+   "count": 99,
+   "value": "GB"
+  },
+  {
+   "count": 98,
+   "value": "OM"
+  },
+  {
+   "count": 85,
+   "value": "LK"
+  },
+  {
+   "count": 53,
+   "value": "TH"
+  },
+  {
+   "count": 48,
+   "value": "HT"
+  },
+  {
+   "count": 45,
+   "value": "IT"
+  },
+  {
+   "count": 44,
+   "value": "JP"
+  },
+  {
+   "count": 44,
+   "value": "NG"
+  },
+  {
+   "count": 41,
+   "value": "ES"
+  },
+  {
+   "count": 38,
+   "value": "HU"
+  },
+  {
+   "count": 38,
+   "value": "ID"
+  },
+  {
+   "count": 35,
+   "value": "MY"
+  },
+  {
+   "count": 29,
+   "value": "SE"
+  },
+  {
+   "count": 26,
+   "value": "RS"
+  },
+  {
+   "count": 24,
+   "value": "IR"
+  },
+  {
+   "count": 20,
+   "value": "KR"
+  },
+  {
+   "count": 11,
+   "value": "NL"
+  },
+  {
+   "count": 10,
+   "value": "AE"
+  },
+  {
+   "count": 10,
+   "value": "SN"
+  },
+  {
+   "count": 9,
+   "value": "UZ"
+  },
+  {
+   "count": 7,
+   "value": "CH"
+  },
+  {
+   "count": 6,
+   "value": "IN"
+  },
+  {
+   "count": 5,
+   "value": "BR"
+  },
+  {
+   "count": 5,
+   "value": "EG"
+  },
+  {
+   "count": 5,
+   "value": "PL"
+  },
+  {
+   "count": 4,
+   "value": "AU"
+  },
+  {
+   "count": 4,
+   "value": "BF"
+  },
+  {
+   "count": 3,
+   "value": "JO"
+  },
+  {
+   "count": 2,
+   "value": "IL"
+  },
+  {
+   "count": 1,
+   "value": "BH"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "CM"
+  },
+  {
+   "count": 1,
+   "value": "DK"
+  },
+  {
+   "count": 1,
+   "value": "DO"
+  },
+  {
+   "count": 1,
+   "value": "FR"
+  },
+  {
+   "count": 1,
+   "value": "JM"
+  },
+  {
+   "count": 1,
+   "value": "PR"
+  },
+  {
+   "count": 1,
+   "value": "QA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 14405,
+   "value": "as37492"
+  },
+  {
+   "count": 2390,
+   "value": "as4760"
+  },
+  {
+   "count": 1029,
+   "value": "as37693"
+  },
+  {
+   "count": 668,
+   "value": "as63949"
+  },
+  {
+   "count": 433,
+   "value": "as55990"
+  },
+  {
+   "count": 333,
+   "value": "as45102"
+  },
+  {
+   "count": 327,
+   "value": "as4775"
+  },
+  {
+   "count": 217,
+   "value": "as37963"
+  },
+  {
+   "count": 198,
+   "value": "as29571"
+  },
+  {
+   "count": 197,
+   "value": "as20294"
+  },
+  {
+   "count": 98,
+   "value": "as50010"
+  },
+  {
+   "count": 85,
+   "value": "as18001"
+  },
+  {
+   "count": 55,
+   "value": "as12091"
+  },
+  {
+   "count": 55,
+   "value": "as20011"
+  },
+  {
+   "count": 50,
+   "value": "as132199"
+  },
+  {
+   "count": 49,
+   "value": "as27759"
+  },
+  {
+   "count": 40,
+   "value": "4760"
+  },
+  {
+   "count": 39,
+   "value": "as59706"
+  },
+  {
+   "count": 36,
+   "value": "as37340"
+  },
+  {
+   "count": 31,
+   "value": "37492"
+  },
+  {
+   "count": 19,
+   "value": "as398823"
+  },
+  {
+   "count": 16,
+   "value": "as10474"
+  },
+  {
+   "count": 15,
+   "value": "as9009"
+  },
+  {
+   "count": 14,
+   "value": "as44244"
+  },
+  {
+   "count": 13,
+   "value": "63949"
+  },
+  {
+   "count": 13,
+   "value": "as45960"
+  },
+  {
+   "count": 11,
+   "value": "as36994"
+  },
+  {
+   "count": 10,
+   "value": "as136907"
+  },
+  {
+   "count": 10,
+   "value": "as55490"
+  },
+  {
+   "count": 10,
+   "value": "as8346"
+  },
+  {
+   "count": 9,
+   "value": "as5713"
+  },
+  {
+   "count": 8,
+   "value": "37693"
+  },
+  {
+   "count": 7,
+   "value": "as20473"
+  },
+  {
+   "count": 7,
+   "value": "as58519"
+  },
+  {
+   "count": 6,
+   "value": "55990"
+  },
+  {
+   "count": 5,
+   "value": "20011"
+  },
+  {
+   "count": 5,
+   "value": "as36873"
+  },
+  {
+   "count": 5,
+   "value": "as37611"
+  },
+  {
+   "count": 5,
+   "value": "as984"
+  },
+  {
+   "count": 4,
+   "value": "as36935"
+  },
+  {
+   "count": 4,
+   "value": "as37577"
+  },
+  {
+   "count": 3,
+   "value": "37340"
+  },
+  {
+   "count": 3,
+   "value": "4775"
+  },
+  {
+   "count": 3,
+   "value": "as197207"
+  },
+  {
+   "count": 3,
+   "value": "as29975"
+  },
+  {
+   "count": 3,
+   "value": "as43754"
+  },
+  {
+   "count": 3,
+   "value": "as8697"
+  },
+  {
+   "count": 2,
+   "value": "29571"
+  },
+  {
+   "count": 2,
+   "value": "37963"
+  },
+  {
+   "count": 2,
+   "value": "45102"
+  },
+  {
+   "count": 2,
+   "value": "as17621"
+  },
+  {
+   "count": 2,
+   "value": "as17924"
+  },
+  {
+   "count": 2,
+   "value": "as4847"
+  },
+  {
+   "count": 1,
+   "value": "20294"
+  },
+  {
+   "count": 1,
+   "value": "20473"
+  },
+  {
+   "count": 1,
+   "value": "29848"
+  },
+  {
+   "count": 1,
+   "value": "36935"
+  },
+  {
+   "count": 1,
+   "value": "6400"
+  },
+  {
+   "count": 1,
+   "value": "as10396"
+  },
+  {
+   "count": 1,
+   "value": "as10429"
+  },
+  {
+   "count": 1,
+   "value": "as154177"
+  },
+  {
+   "count": 1,
+   "value": "as16637"
+  },
+  {
+   "count": 1,
+   "value": "as20001"
+  },
+  {
+   "count": 1,
+   "value": "as20382"
+  },
+  {
+   "count": 1,
+   "value": "as203953"
+  },
+  {
+   "count": 1,
+   "value": "as206388"
+  },
+  {
+   "count": 1,
+   "value": "as20940"
+  },
+  {
+   "count": 1,
+   "value": "as210644"
+  },
+  {
+   "count": 1,
+   "value": "as28142"
+  },
+  {
+   "count": 1,
+   "value": "as2856"
+  },
+  {
+   "count": 1,
+   "value": "as31549"
+  },
+  {
+   "count": 1,
+   "value": "as3352"
+  },
+  {
+   "count": 1,
+   "value": "as34369"
+  },
+  {
+   "count": 1,
+   "value": "as36912"
+  },
+  {
+   "count": 1,
+   "value": "as37457"
+  },
+  {
+   "count": 1,
+   "value": "as39501"
+  },
+  {
+   "count": 1,
+   "value": "as400194"
+  },
+  {
+   "count": 1,
+   "value": "as4134"
+  },
+  {
+   "count": 1,
+   "value": "as46375"
+  },
+  {
+   "count": 1,
+   "value": "as4837"
+  },
+  {
+   "count": 1,
+   "value": "as51375"
+  },
+  {
+   "count": 1,
+   "value": "as6079"
+  },
+  {
+   "count": 1,
+   "value": "as61112"
+  },
+  {
+   "count": 1,
+   "value": "as7018"
+  },
+  {
+   "count": 1,
+   "value": "as9381"
+  }
+ ],
+ "ports": [
+  {
+   "count": 14910,
+   "value": 7547
+  },
+  {
+   "count": 3038,
+   "value": 5400
+  },
+  {
+   "count": 1037,
+   "value": 51005
+  },
+  {
+   "count": 214,
+   "value": 50805
+  },
+  {
+   "count": 108,
+   "value": 7676
+  },
+  {
+   "count": 4,
+   "value": 102
+  },
+  {
+   "count": 4,
+   "value": 400
+  },
+  {
+   "count": 4,
+   "value": 5246
+  },
+  {
+   "count": 4,
+   "value": 5251
+  },
+  {
+   "count": 4,
+   "value": 6020
+  },
+  {
+   "count": 4,
+   "value": 7548
+  },
+  {
+   "count": 4,
+   "value": 8025
+  },
+  {
+   "count": 4,
+   "value": 8383
+  },
+  {
+   "count": 4,
+   "value": 8446
+  },
+  {
+   "count": 4,
+   "value": 8549
+  },
+  {
+   "count": 4,
+   "value": 8594
+  },
+  {
+   "count": 4,
+   "value": 9758
+  },
+  {
+   "count": 4,
+   "value": 12559
+  },
+  {
+   "count": 4,
+   "value": 18181
+  },
+  {
+   "count": 4,
+   "value": 21314
+  },
+  {
+   "count": 3,
+   "value": 1224
+  },
+  {
+   "count": 3,
+   "value": 1883
+  },
+  {
+   "count": 3,
+   "value": 2008
+  },
+  {
+   "count": 3,
+   "value": 2200
+  },
+  {
+   "count": 3,
+   "value": 3115
+  },
+  {
+   "count": 3,
+   "value": 3130
+  },
+  {
+   "count": 3,
+   "value": 3137
+  },
+  {
+   "count": 3,
+   "value": 3443
+  },
+  {
+   "count": 3,
+   "value": 3510
+  },
+  {
+   "count": 3,
+   "value": 3541
+  },
+  {
+   "count": 3,
+   "value": 3780
+  },
+  {
+   "count": 3,
+   "value": 4848
+  },
+  {
+   "count": 3,
+   "value": 5249
+  },
+  {
+   "count": 3,
+   "value": 5252
+  },
+  {
+   "count": 3,
+   "value": 5433
+  },
+  {
+   "count": 3,
+   "value": 5640
+  },
+  {
+   "count": 3,
+   "value": 5991
+  },
+  {
+   "count": 3,
+   "value": 6002
+  },
+  {
+   "count": 3,
+   "value": 7081
+  },
+  {
+   "count": 3,
+   "value": 7082
+  },
+  {
+   "count": 3,
+   "value": 7090
+  },
+  {
+   "count": 3,
+   "value": 7349
+  },
+  {
+   "count": 3,
+   "value": 8000
+  },
+  {
+   "count": 3,
+   "value": 8011
+  },
+  {
+   "count": 3,
+   "value": 8018
+  },
+  {
+   "count": 3,
+   "value": 8023
+  },
+  {
+   "count": 3,
+   "value": 8029
+  },
+  {
+   "count": 3,
+   "value": 8139
+  },
+  {
+   "count": 3,
+   "value": 8159
+  },
+  {
+   "count": 3,
+   "value": 8178
+  },
+  {
+   "count": 3,
+   "value": 8222
+  },
+  {
+   "count": 3,
+   "value": 8409
+  },
+  {
+   "count": 3,
+   "value": 8413
+  },
+  {
+   "count": 3,
+   "value": 8578
+  },
+  {
+   "count": 3,
+   "value": 8728
+  },
+  {
+   "count": 3,
+   "value": 8840
+  },
+  {
+   "count": 3,
+   "value": 8889
+  },
+  {
+   "count": 3,
+   "value": 9022
+  },
+  {
+   "count": 3,
+   "value": 9057
+  },
+  {
+   "count": 3,
+   "value": 9098
+  },
+  {
+   "count": 3,
+   "value": 9510
+  },
+  {
+   "count": 3,
+   "value": 9885
+  },
+  {
+   "count": 3,
+   "value": 9922
+  },
+  {
+   "count": 3,
+   "value": 11300
+  },
+  {
+   "count": 3,
+   "value": 12108
+  },
+  {
+   "count": 3,
+   "value": 12130
+  },
+  {
+   "count": 3,
+   "value": 12169
+  },
+  {
+   "count": 3,
+   "value": 12243
+  },
+  {
+   "count": 3,
+   "value": 12249
+  },
+  {
+   "count": 3,
+   "value": 12281
+  },
+  {
+   "count": 3,
+   "value": 12328
+  },
+  {
+   "count": 3,
+   "value": 12358
+  },
+  {
+   "count": 3,
+   "value": 12397
+  },
+  {
+   "count": 3,
+   "value": 12478
+  },
+  {
+   "count": 3,
+   "value": 14407
+  },
+  {
+   "count": 3,
+   "value": 16888
+  },
+  {
+   "count": 3,
+   "value": 16992
+  },
+  {
+   "count": 3,
+   "value": 17774
+  },
+  {
+   "count": 3,
+   "value": 17778
+  },
+  {
+   "count": 3,
+   "value": 18040
+  },
+  {
+   "count": 3,
+   "value": 18085
+  },
+  {
+   "count": 3,
+   "value": 18113
+  },
+  {
+   "count": 3,
+   "value": 22082
+  },
+  {
+   "count": 3,
+   "value": 30003
+  },
+  {
+   "count": 3,
+   "value": 30113
+  },
+  {
+   "count": 3,
+   "value": 31337
+  },
+  {
+   "count": 3,
+   "value": 42901
+  },
+  {
+   "count": 3,
+   "value": 47080
+  },
+  {
+   "count": 2,
+   "value": 2
+  },
+  {
+   "count": 2,
+   "value": 15
+  },
+  {
+   "count": 2,
+   "value": 82
+  },
+  {
+   "count": 2,
+   "value": 113
+  },
+  {
+   "count": 2,
+   "value": 234
+  },
+  {
+   "count": 2,
+   "value": 443
+  },
+  {
+   "count": 2,
+   "value": 447
+  },
+  {
+   "count": 2,
+   "value": 451
+  },
+  {
+   "count": 2,
+   "value": 452
+  },
+  {
+   "count": 2,
+   "value": 485
+  },
+  {
+   "count": 2,
+   "value": 953
+  },
+  {
+   "count": 2,
+   "value": 993
+  }
+ ],
+ "orgs": [],
+ "name": "CWMP-Agent (Orange Tunisie)"
+}

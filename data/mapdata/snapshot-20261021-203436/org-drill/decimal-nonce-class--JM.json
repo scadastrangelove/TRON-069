@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:JM",
+ "total": 4036,
+ "taken": "2026-10-18T08:08:04+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 4036,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 4036,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3980,
+   "value": "as30689"
+  },
+  {
+   "count": 24,
+   "value": "as10292"
+  },
+  {
+   "count": 17,
+   "value": "as11139"
+  },
+  {
+   "count": 12,
+   "value": "30689"
+  },
+  {
+   "count": 3,
+   "value": "as6639"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3997,
+   "value": "Cable and Wireless Jamaica"
+  },
+  {
+   "count": 36,
+   "value": "FLOW"
+  },
+  {
+   "count": 3,
+   "value": "Cable & Wireless (Cayman Islands) Ltd."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "JM"
+}

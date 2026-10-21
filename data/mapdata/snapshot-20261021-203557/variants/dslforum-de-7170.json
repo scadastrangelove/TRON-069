@@ -1,0 +1,112 @@
+{
+ "dork": "\"DSLForum CPE Management\" country:DE port:7170",
+ "total": 43687,
+ "taken": "2026-10-21T21:30:21+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 43687,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 10,
+   "covered": 43687,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 43687,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 43687,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 43687,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 42541,
+   "value": "as6805"
+  },
+  {
+   "count": 1143,
+   "value": "6805"
+  },
+  {
+   "count": 3,
+   "value": "as3320"
+  }
+ ],
+ "ports": [
+  {
+   "count": 43687,
+   "value": 7170
+  }
+ ],
+ "orgs": [
+  {
+   "count": 16311,
+   "value": "NCC"
+  },
+  {
+   "count": 10742,
+   "value": "Telefonica O2 Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 6889,
+   "value": "Telefonica Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 6833,
+   "value": "Telefonica Germany GmbH & Co.OHG"
+  },
+  {
+   "count": 1488,
+   "value": "NCC#2006071591"
+  },
+  {
+   "count": 674,
+   "value": "NCC # 2008040527"
+  },
+  {
+   "count": 506,
+   "value": "NCC # 2008114512"
+  },
+  {
+   "count": 239,
+   "value": "NCC#2008114512"
+  },
+  {
+   "count": 3,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 2,
+   "value": "This space is statically assigned"
+  }
+ ],
+ "id": "dslforum-de-7170",
+ "parent": "dt-speedport-sdk",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "DSLForum · DE:7170",
+  "ru": "DSLForum · DE:7170",
+  "es": "DSLForum · DE:7170",
+  "zh": "DSLForum · DE:7170"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "dslforum-cpe-management"
+ },
+ "denominator": null
+}

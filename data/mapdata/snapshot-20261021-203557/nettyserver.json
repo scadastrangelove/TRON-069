@@ -1,0 +1,53 @@
+{
+ "dork": "\"NettyServer\" port:7547",
+ "total": 32115,
+ "taken": "2026-10-21T20:36:25+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 32115,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 30605,
+   "remainder": 1510
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 32115,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 32115,
+   "value": "IT"
+  }
+ ],
+ "asn": [
+  {
+   "count": 30241,
+   "value": "as1267"
+  },
+  {
+   "count": 189,
+   "value": "as24608"
+  },
+  {
+   "count": 175,
+   "value": "1267"
+  }
+ ],
+ "ports": [
+  {
+   "count": 32115,
+   "value": 7547
+  }
+ ],
+ "orgs": [],
+ "name": "NettyServer"
+}

@@ -1,0 +1,53 @@
+{
+ "dork": "\"authenticate@cwmp\" country:DE",
+ "total": 83,
+ "taken": "2026-10-21T20:39:16+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 83,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 83,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 68,
+   "value": "as21413"
+  },
+  {
+   "count": 14,
+   "value": "as57353"
+  },
+  {
+   "count": 1,
+   "value": "as35244"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 68,
+   "value": "Envia Tel GmbH"
+  },
+  {
+   "count": 14,
+   "value": "Vitroconnect Subscriber Pool 1"
+  },
+  {
+   "count": 1,
+   "value": "DHCP Customers"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "DE"
+}

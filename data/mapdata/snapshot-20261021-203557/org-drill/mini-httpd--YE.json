@@ -1,0 +1,53 @@
+{
+ "dork": "\"mini_httpd\" country:YE",
+ "total": 42,
+ "taken": "2026-10-21T21:09:38+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 42,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 42,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 40,
+   "value": "as30873"
+  },
+  {
+   "count": 2,
+   "value": "30873"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 20,
+   "value": "Public Telecommunication Corporation"
+  },
+  {
+   "count": 16,
+   "value": "PTC-YemenNet Public Telecommunication Corporation"
+  },
+  {
+   "count": 3,
+   "value": "YemenNet ADSL POOL"
+  },
+  {
+   "count": 3,
+   "value": "YemenNet ADSL Pool"
+  }
+ ],
+ "line": "mini_httpd (all ports)",
+ "line_id": "mini-httpd",
+ "cc": "YE"
+}

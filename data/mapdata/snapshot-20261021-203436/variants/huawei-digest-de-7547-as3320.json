@@ -1,0 +1,67 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:DE port:7547 asn:AS3320",
+ "total": 46282,
+ "taken": "2026-10-18T08:25:22+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 46282,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 46282,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 46282,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 46282,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 46282,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 46282,
+   "value": "as3320"
+  }
+ ],
+ "ports": [
+  {
+   "count": 46282,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 46282,
+   "value": "Deutsche Telekom AG"
+  }
+ ],
+ "id": "huawei-digest-de-7547-as3320",
+ "parent": "huaweihomegateway",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "Huawei Digest · DE · 7547 · Deutsche Telekom AS3320",
+  "en": "Huawei Digest · DE · 7547 · Deutsche Telekom AS3320",
+  "es": "Huawei Digest · DE · 7547 · Deutsche Telekom AS3320",
+  "zh": "Huawei Digest · DE · 7547 · Deutsche Telekom AS3320"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

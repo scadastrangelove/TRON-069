@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:WF",
+ "total": 21,
+ "taken": "2026-10-21T20:58:59+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 18,
+   "remainder": 3
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 21,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 20,
+   "value": "as45879"
+  },
+  {
+   "count": 1,
+   "value": "45879"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4,
+   "value": "Broadband ADSL Pool 1 - Futuna islands"
+  },
+  {
+   "count": 4,
+   "value": "Broadband ADSL Pool 6 - Wallis islands"
+  },
+  {
+   "count": 3,
+   "value": "Broadband ADSL 128"
+  },
+  {
+   "count": 3,
+   "value": "Broadband Wifi Pool 1 - Wallis islands"
+  },
+  {
+   "count": 2,
+   "value": "ADSL CLIENT WITH FIXED IP - Wallis Island"
+  },
+  {
+   "count": 1,
+   "value": "Broadband ADSL Pool 5 - Wallis islands"
+  },
+  {
+   "count": 1,
+   "value": "Broadband ADSL Pool 8 - Wallis islands"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "WF"
+}

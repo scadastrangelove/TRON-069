@@ -1,0 +1,172 @@
+{
+ "dork": "\"RomPager/4.07\" asn:AS37963,37963,AS45102,45102,AS135377,135377,AS55990,55990,AS136907,136907,AS58519,58519 port:9022",
+ "total": 8089,
+ "taken": "2026-10-21T21:30:38+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 10,
+   "covered": 8089,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 12,
+   "covered": 8089,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 8089,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 8089,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 8047,
+   "value": "CN"
+  },
+  {
+   "count": 31,
+   "value": "SG"
+  },
+  {
+   "count": 2,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "HK"
+  },
+  {
+   "count": 2,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "AE"
+  },
+  {
+   "count": 1,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "KR"
+  },
+  {
+   "count": 1,
+   "value": "PH"
+  },
+  {
+   "count": 1,
+   "value": "TH"
+  }
+ ],
+ "asn": [
+  {
+   "count": 7763,
+   "value": "as37963"
+  },
+  {
+   "count": 309,
+   "value": "37963"
+  },
+  {
+   "count": 7,
+   "value": "as135377"
+  },
+  {
+   "count": 4,
+   "value": "as55990"
+  },
+  {
+   "count": 3,
+   "value": "as136907"
+  },
+  {
+   "count": 2,
+   "value": "as45102"
+  },
+  {
+   "count": 1,
+   "value": "as58519"
+  }
+ ],
+ "ports": [
+  {
+   "count": 8089,
+   "value": 9022
+  }
+ ],
+ "orgs": [
+  {
+   "count": 6188,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 1865,
+   "value": "Aliyun Computing Co.LTD"
+  },
+  {
+   "count": 10,
+   "value": "Hangzhou Alibaba Advertising Co.,Ltd."
+  },
+  {
+   "count": 6,
+   "value": "Zhejiang Taobao Network Co.,Ltd"
+  },
+  {
+   "count": 5,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 5,
+   "value": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED"
+  },
+  {
+   "count": 4,
+   "value": "Zhejiang Ant Small And Micro Financial Services"
+  },
+  {
+   "count": 2,
+   "value": "UCLOUD"
+  },
+  {
+   "count": 1,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 1,
+   "value": "HUAWEI INTERNATIONAL PTE. LTD."
+  },
+  {
+   "count": 1,
+   "value": "Huawei-Cloud-HK"
+  },
+  {
+   "count": 1,
+   "value": "Huawei-Cloud-SG"
+  }
+ ],
+ "id": "rompager-407-cloud-9022",
+ "parent": "rompager",
+ "group": "legacy-http",
+ "label": {
+  "en": "4.07 · cloud cohort on 9022",
+  "ru": "4.07 · облачная выборка на 9022",
+  "es": "4.07 · cohorte en la nube en 9022",
+  "zh": "4.07 · 云网络组，端口 9022"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "honeypots"
+ },
+ "denominator": "rompager-407-all"
+}

@@ -1,0 +1,691 @@
+{
+ "dork": "\"CPE-SERVER/1.0\" port:7170",
+ "total": 1343624,
+ "taken": "2026-10-21T21:29:37+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 10,
+   "covered": 1343624,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 1343392,
+   "remainder": 232
+  },
+  "asn": {
+   "values_returned": 49,
+   "covered": 1342343,
+   "remainder": 1281
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1343624,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1330571,
+   "value": "IT"
+  },
+  {
+   "count": 13044,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "DK"
+  },
+  {
+   "count": 1,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "MA"
+  },
+  {
+   "count": 1,
+   "value": "RO"
+  },
+  {
+   "count": 1,
+   "value": "TN"
+  },
+  {
+   "count": 1,
+   "value": "UA"
+  },
+  {
+   "count": 1,
+   "value": "US"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1263319,
+   "value": "as3269"
+  },
+  {
+   "count": 25700,
+   "value": "as213677"
+  },
+  {
+   "count": 19112,
+   "value": "as8612"
+  },
+  {
+   "count": 16849,
+   "value": "3269"
+  },
+  {
+   "count": 8760,
+   "value": "as210218"
+  },
+  {
+   "count": 6385,
+   "value": "as31263"
+  },
+  {
+   "count": 1004,
+   "value": "as16232"
+  },
+  {
+   "count": 440,
+   "value": "213677"
+  },
+  {
+   "count": 228,
+   "value": "as20580"
+  },
+  {
+   "count": 165,
+   "value": "210218"
+  },
+  {
+   "count": 127,
+   "value": "8612"
+  },
+  {
+   "count": 107,
+   "value": "as202613"
+  },
+  {
+   "count": 25,
+   "value": "as1267"
+  },
+  {
+   "count": 17,
+   "value": "16232"
+  },
+  {
+   "count": 17,
+   "value": "31263"
+  },
+  {
+   "count": 12,
+   "value": "20580"
+  },
+  {
+   "count": 11,
+   "value": "as20746"
+  },
+  {
+   "count": 9,
+   "value": "as202870"
+  },
+  {
+   "count": 8,
+   "value": "as29449"
+  },
+  {
+   "count": 7,
+   "value": "as206617"
+  },
+  {
+   "count": 5,
+   "value": "as6503"
+  },
+  {
+   "count": 4,
+   "value": "as209529"
+  },
+  {
+   "count": 3,
+   "value": "as210129"
+  },
+  {
+   "count": 2,
+   "value": "as199536"
+  },
+  {
+   "count": 2,
+   "value": "as30722"
+  },
+  {
+   "count": 2,
+   "value": "as9026"
+  },
+  {
+   "count": 1,
+   "value": "1267"
+  },
+  {
+   "count": 1,
+   "value": "202613"
+  },
+  {
+   "count": 1,
+   "value": "as132934"
+  },
+  {
+   "count": 1,
+   "value": "as197075"
+  },
+  {
+   "count": 1,
+   "value": "as198128"
+  },
+  {
+   "count": 1,
+   "value": "as201602"
+  },
+  {
+   "count": 1,
+   "value": "as207054"
+  },
+  {
+   "count": 1,
+   "value": "as213972"
+  },
+  {
+   "count": 1,
+   "value": "as2609"
+  },
+  {
+   "count": 1,
+   "value": "as3302"
+  },
+  {
+   "count": 1,
+   "value": "as35617"
+  },
+  {
+   "count": 1,
+   "value": "as36903"
+  },
+  {
+   "count": 1,
+   "value": "as39120"
+  },
+  {
+   "count": 1,
+   "value": "as41644"
+  },
+  {
+   "count": 1,
+   "value": "as41720"
+  },
+  {
+   "count": 1,
+   "value": "as44092"
+  },
+  {
+   "count": 1,
+   "value": "as49924"
+  },
+  {
+   "count": 1,
+   "value": "as50886"
+  },
+  {
+   "count": 1,
+   "value": "as5398"
+  },
+  {
+   "count": 1,
+   "value": "as5602"
+  },
+  {
+   "count": 1,
+   "value": "as58039"
+  },
+  {
+   "count": 1,
+   "value": "as63949"
+  },
+  {
+   "count": 1,
+   "value": "as6849"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1343624,
+   "value": 7170
+  }
+ ],
+ "orgs": [
+  {
+   "count": 442723,
+   "value": "Telecom Italia S.p.A."
+  },
+  {
+   "count": 344483,
+   "value": "Telecom Italia S.p.A. TIN EASY LITE"
+  },
+  {
+   "count": 24569,
+   "value": "Fibercop S.p.A."
+  },
+  {
+   "count": 18356,
+   "value": "NAS DHCP Pool BERGAMO"
+  },
+  {
+   "count": 16559,
+   "value": "NAS DHCP Pool ALESSANDRIA"
+  },
+  {
+   "count": 16227,
+   "value": "SHELLNET SOCIETA' IN ACCOMANDITA PER AZIONI DI SHELLNET GP S.R.L."
+  },
+  {
+   "count": 15253,
+   "value": "NAS DHCP Pool Bolzano"
+  },
+  {
+   "count": 11607,
+   "value": "NAS DHCP Pool Perugia"
+  },
+  {
+   "count": 11451,
+   "value": "NAS DHCP Pool Palermo"
+  },
+  {
+   "count": 11383,
+   "value": "NAS DHCP Pool Pisa"
+  },
+  {
+   "count": 11198,
+   "value": "NAS DHCP Pool NOLA"
+  },
+  {
+   "count": 11142,
+   "value": "NAS DHCP Pool CATANZARO"
+  },
+  {
+   "count": 10952,
+   "value": "NAS DHCP Pool Pescara"
+  },
+  {
+   "count": 10911,
+   "value": "NAS DHCP Pool Brescia"
+  },
+  {
+   "count": 10609,
+   "value": "NAS DHCP Pool NAPOLI"
+  },
+  {
+   "count": 10243,
+   "value": "TIM SB FTTX"
+  },
+  {
+   "count": 10240,
+   "value": "NAS DHCP Pool CATANIA"
+  },
+  {
+   "count": 10214,
+   "value": "NAS DHCP Pool Firenze"
+  },
+  {
+   "count": 10176,
+   "value": "NAS DHCP Pool MODENA"
+  },
+  {
+   "count": 9669,
+   "value": "NAS DHCP Pool BARI"
+  },
+  {
+   "count": 9557,
+   "value": "Open Fiber S.P.A."
+  },
+  {
+   "count": 8556,
+   "value": "NAS DHCP Pool VENEZIA"
+  },
+  {
+   "count": 8394,
+   "value": "NAS DHCP Pool BOLZANO"
+  },
+  {
+   "count": 8315,
+   "value": "NAS DHCP Pool BRESCIA"
+  },
+  {
+   "count": 8283,
+   "value": "NAS DHCP Pool SAVONA"
+  },
+  {
+   "count": 8178,
+   "value": "NAS DHCP Pool TRIESTE"
+  },
+  {
+   "count": 8158,
+   "value": "NAS DHCP Pool VERONA"
+  },
+  {
+   "count": 8073,
+   "value": "NAS DHCP Pool COMO"
+  },
+  {
+   "count": 7836,
+   "value": "NAS DHCP Pool ANCONA"
+  },
+  {
+   "count": 7688,
+   "value": "NAS DHCP Pool GENOVA"
+  },
+  {
+   "count": 7585,
+   "value": "NAS DHCP Pool PADOVA"
+  },
+  {
+   "count": 7131,
+   "value": "NAS DHCP Pool TORINO"
+  },
+  {
+   "count": 6776,
+   "value": "NAS DHCP Pool Milano"
+  },
+  {
+   "count": 6610,
+   "value": "NAS DHCP Pool Padova"
+  },
+  {
+   "count": 6423,
+   "value": "Telecom Italia S.p.A"
+  },
+  {
+   "count": 6400,
+   "value": "MYNET S.R.L."
+  },
+  {
+   "count": 6295,
+   "value": "NAS DHCP Pool Genova"
+  },
+  {
+   "count": 6280,
+   "value": "NAS DHCP Pool Venezia"
+  },
+  {
+   "count": 6242,
+   "value": "NAS DHCP Pool TATANTO"
+  },
+  {
+   "count": 6118,
+   "value": "NAS DHCP Pool Rimini"
+  },
+  {
+   "count": 5961,
+   "value": "NAS DHCP Pool Taranto"
+  },
+  {
+   "count": 5907,
+   "value": "NAS DHCP Pool FIRENZE"
+  },
+  {
+   "count": 5842,
+   "value": "NAS DHCP Pool Roma"
+  },
+  {
+   "count": 5835,
+   "value": "NAS DHCP Pool Catania"
+  },
+  {
+   "count": 5746,
+   "value": "NAS DHCP Pool RIMINI"
+  },
+  {
+   "count": 5692,
+   "value": "NAS DHCP Pool PESCARA"
+  },
+  {
+   "count": 5657,
+   "value": "NAS DHCP Pool Como"
+  },
+  {
+   "count": 5595,
+   "value": "NAS DHCP Pool Bologna"
+  },
+  {
+   "count": 5573,
+   "value": "NAS DHCP Pool CAGLIARI"
+  },
+  {
+   "count": 5505,
+   "value": "NAS DHCP Pool Napoli"
+  },
+  {
+   "count": 5503,
+   "value": "NAS DHCP Pool PERUGIA"
+  },
+  {
+   "count": 5457,
+   "value": "NAS DHCP Pool MILANO POP 2"
+  },
+  {
+   "count": 5453,
+   "value": "NAS DHCP Pool Savona"
+  },
+  {
+   "count": 5448,
+   "value": "NAS DHCP Pool Catanzaro"
+  },
+  {
+   "count": 5323,
+   "value": "NAS DHCP Pool Roma pop2"
+  },
+  {
+   "count": 5313,
+   "value": "NAS DHCP Pool Verona"
+  },
+  {
+   "count": 5301,
+   "value": "NAS DHCP Pool ROMA"
+  },
+  {
+   "count": 5256,
+   "value": "NAS DHCP Pool ROMA-POP2"
+  },
+  {
+   "count": 5241,
+   "value": "NAS DHCP Pool Bari"
+  },
+  {
+   "count": 5096,
+   "value": "NAS DHCP Pool Modena"
+  },
+  {
+   "count": 5056,
+   "value": "NAS DHCP Pool Milano pop2"
+  },
+  {
+   "count": 5051,
+   "value": "NAS DHCP Pool Torino"
+  },
+  {
+   "count": 5043,
+   "value": "NAS DHCP Pool Cagliari"
+  },
+  {
+   "count": 4990,
+   "value": "Telecom Italia S.p.A.IPTV Platform"
+  },
+  {
+   "count": 4803,
+   "value": "NAS DHCP Pool MILANO"
+  },
+  {
+   "count": 4800,
+   "value": "NAS DHCP Pool Ancona"
+  },
+  {
+   "count": 4734,
+   "value": "NAS DHCP Pool BOLOGNA"
+  },
+  {
+   "count": 4662,
+   "value": "NAS DHCP Pool Trieste"
+  },
+  {
+   "count": 4550,
+   "value": "NAS DHCP Pool PISA"
+  },
+  {
+   "count": 4514,
+   "value": "NAS DHCP Pool Nola"
+  },
+  {
+   "count": 3881,
+   "value": "NAS DHCP Pool PALERMO"
+  },
+  {
+   "count": 2583,
+   "value": "NAS DHCP POOL"
+  },
+  {
+   "count": 2327,
+   "value": "NAS DHCP Pool MILANO 2"
+  },
+  {
+   "count": 1845,
+   "value": "Tiscali Italia SpA"
+  },
+  {
+   "count": 1705,
+   "value": "NAS DHCP Pool"
+  },
+  {
+   "count": 1021,
+   "value": "Telecom Italia Mobile"
+  },
+  {
+   "count": 935,
+   "value": "Telecom Italia S.p.A. VDC-RTG"
+  },
+  {
+   "count": 927,
+   "value": "Tiscali Italia S.P.A."
+  },
+  {
+   "count": 649,
+   "value": "EE Limited"
+  },
+  {
+   "count": 637,
+   "value": "Telecom Italia Spa FTTx"
+  },
+  {
+   "count": 516,
+   "value": "Telecom Italia S.p.A. IPTV"
+  },
+  {
+   "count": 270,
+   "value": "Telecom Italia IDC - ISP&VAS MNGT"
+  },
+  {
+   "count": 107,
+   "value": "Aruba S.p.A. Broadband Pool BNG"
+  },
+  {
+   "count": 93,
+   "value": "E@sy.ip service in OSPF Area 11"
+  },
+  {
+   "count": 23,
+   "value": "WIND TRE S.P.A."
+  },
+  {
+   "count": 14,
+   "value": "Tiscali MVNO service"
+  },
+  {
+   "count": 10,
+   "value": "Systel di urrai pierangelo"
+  },
+  {
+   "count": 8,
+   "value": "Centro multimediale montiferru"
+  },
+  {
+   "count": 7,
+   "value": "Amia verona S.p.A."
+  },
+  {
+   "count": 7,
+   "value": "Augusto camicioli"
+  },
+  {
+   "count": 7,
+   "value": "Neomedia S.r.l."
+  },
+  {
+   "count": 7,
+   "value": "Quasar sistemi S.r.l."
+  },
+  {
+   "count": 6,
+   "value": "DIMENSIONE Srl"
+  },
+  {
+   "count": 6,
+   "value": "Tcn telecomunicazioni S.r.l."
+  },
+  {
+   "count": 6,
+   "value": "Tecnolink S.r.l."
+  },
+  {
+   "count": 5,
+   "value": "Clac sas di cacciagrano l. & c."
+  },
+  {
+   "count": 5,
+   "value": "Finegil editoriale S.p.A."
+  },
+  {
+   "count": 5,
+   "value": "Flynter Networking srl"
+  },
+  {
+   "count": 5,
+   "value": "Gruppo trade S.r.l."
+  },
+  {
+   "count": 5,
+   "value": "N.t.s. S.r.l."
+  }
+ ],
+ "id": "fact-cpe-server-1-0-72f2536beb",
+ "parent": "cpe-server-1-0",
+ "group": "facts",
+ "label": {
+  "ru": "порт-карман 7170",
+  "en": "Port 7170 subset",
+  "es": "Subconjunto del puerto 7170",
+  "zh": "端口 7170 子集"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

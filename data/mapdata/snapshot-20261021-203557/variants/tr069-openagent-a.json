@@ -1,0 +1,1031 @@
+{
+ "dork": "\"Apache/2.0.40 (Red Hat Linux)\" \"DigAuth\"",
+ "total": 5658,
+ "taken": "2026-10-21T21:28:41+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 39,
+   "covered": 5658,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 5497,
+   "remainder": 161
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 5641,
+   "remainder": 17
+  },
+  "port": {
+   "values_returned": 6,
+   "covered": 5658,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2061,
+   "value": "VN"
+  },
+  {
+   "count": 1429,
+   "value": "FR"
+  },
+  {
+   "count": 995,
+   "value": "ID"
+  },
+  {
+   "count": 365,
+   "value": "KH"
+  },
+  {
+   "count": 317,
+   "value": "PH"
+  },
+  {
+   "count": 58,
+   "value": "SE"
+  },
+  {
+   "count": 51,
+   "value": "UA"
+  },
+  {
+   "count": 43,
+   "value": "MZ"
+  },
+  {
+   "count": 41,
+   "value": "FI"
+  },
+  {
+   "count": 41,
+   "value": "TH"
+  },
+  {
+   "count": 39,
+   "value": "KZ"
+  },
+  {
+   "count": 35,
+   "value": "TR"
+  },
+  {
+   "count": 30,
+   "value": "HT"
+  },
+  {
+   "count": 24,
+   "value": "BR"
+  },
+  {
+   "count": 17,
+   "value": "DK"
+  },
+  {
+   "count": 16,
+   "value": "IT"
+  },
+  {
+   "count": 16,
+   "value": "ZA"
+  },
+  {
+   "count": 15,
+   "value": "PL"
+  },
+  {
+   "count": 8,
+   "value": "US"
+  },
+  {
+   "count": 6,
+   "value": "CZ"
+  },
+  {
+   "count": 6,
+   "value": "GB"
+  },
+  {
+   "count": 5,
+   "value": "AT"
+  },
+  {
+   "count": 5,
+   "value": "JP"
+  },
+  {
+   "count": 4,
+   "value": "ES"
+  },
+  {
+   "count": 4,
+   "value": "TW"
+  },
+  {
+   "count": 3,
+   "value": "BE"
+  },
+  {
+   "count": 3,
+   "value": "CO"
+  },
+  {
+   "count": 3,
+   "value": "EC"
+  },
+  {
+   "count": 3,
+   "value": "NL"
+  },
+  {
+   "count": 2,
+   "value": "CH"
+  },
+  {
+   "count": 2,
+   "value": "CN"
+  },
+  {
+   "count": 2,
+   "value": "GR"
+  },
+  {
+   "count": 2,
+   "value": "LT"
+  },
+  {
+   "count": 2,
+   "value": "LV"
+  },
+  {
+   "count": 1,
+   "value": "AM"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "HU"
+  },
+  {
+   "count": 1,
+   "value": "PT"
+  },
+  {
+   "count": 1,
+   "value": "SK"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1878,
+   "value": "as7552"
+  },
+  {
+   "count": 1231,
+   "value": "as5410"
+  },
+  {
+   "count": 752,
+   "value": "as7713"
+  },
+  {
+   "count": 342,
+   "value": "as38623"
+  },
+  {
+   "count": 289,
+   "value": "as132199"
+  },
+  {
+   "count": 189,
+   "value": "as63859"
+  },
+  {
+   "count": 138,
+   "value": "as16347"
+  },
+  {
+   "count": 114,
+   "value": "as24086"
+  },
+  {
+   "count": 53,
+   "value": "7552"
+  },
+  {
+   "count": 47,
+   "value": "7713"
+  },
+  {
+   "count": 45,
+   "value": "as15895"
+  },
+  {
+   "count": 36,
+   "value": "as37342"
+  },
+  {
+   "count": 30,
+   "value": "as45758"
+  },
+  {
+   "count": 30,
+   "value": "as57013"
+  },
+  {
+   "count": 29,
+   "value": "as16086"
+  },
+  {
+   "count": 27,
+   "value": "as52260"
+  },
+  {
+   "count": 26,
+   "value": "as9299"
+  },
+  {
+   "count": 25,
+   "value": "as44034"
+  },
+  {
+   "count": 24,
+   "value": "as208363"
+  },
+  {
+   "count": 18,
+   "value": "38623"
+  },
+  {
+   "count": 17,
+   "value": "5410"
+  },
+  {
+   "count": 17,
+   "value": "as15897"
+  },
+  {
+   "count": 17,
+   "value": "as3301"
+  },
+  {
+   "count": 15,
+   "value": "as16135"
+  },
+  {
+   "count": 14,
+   "value": "as16232"
+  },
+  {
+   "count": 13,
+   "value": "as8434"
+  },
+  {
+   "count": 11,
+   "value": "as1257"
+  },
+  {
+   "count": 11,
+   "value": "as37611"
+  },
+  {
+   "count": 10,
+   "value": "as23693"
+  },
+  {
+   "count": 10,
+   "value": "as28270"
+  },
+  {
+   "count": 9,
+   "value": "as133481"
+  },
+  {
+   "count": 8,
+   "value": "as9158"
+  },
+  {
+   "count": 7,
+   "value": "as12912"
+  },
+  {
+   "count": 7,
+   "value": "as35283"
+  },
+  {
+   "count": 7,
+   "value": "as53127"
+  },
+  {
+   "count": 6,
+   "value": "as1759"
+  },
+  {
+   "count": 6,
+   "value": "as719"
+  },
+  {
+   "count": 5,
+   "value": "as45903"
+  },
+  {
+   "count": 5,
+   "value": "as5617"
+  },
+  {
+   "count": 5,
+   "value": "as8368"
+  },
+  {
+   "count": 4,
+   "value": "15895"
+  },
+  {
+   "count": 4,
+   "value": "24086"
+  },
+  {
+   "count": 4,
+   "value": "37342"
+  },
+  {
+   "count": 4,
+   "value": "as23673"
+  },
+  {
+   "count": 4,
+   "value": "as25540"
+  },
+  {
+   "count": 4,
+   "value": "as51997"
+  },
+  {
+   "count": 4,
+   "value": "as9605"
+  },
+  {
+   "count": 3,
+   "value": "as21299"
+  },
+  {
+   "count": 3,
+   "value": "as22368"
+  },
+  {
+   "count": 3,
+   "value": "as25139"
+  },
+  {
+   "count": 3,
+   "value": "as28006"
+  },
+  {
+   "count": 3,
+   "value": "as3352"
+  },
+  {
+   "count": 3,
+   "value": "as3462"
+  },
+  {
+   "count": 3,
+   "value": "as45543"
+  },
+  {
+   "count": 3,
+   "value": "as5432"
+  },
+  {
+   "count": 3,
+   "value": "as8374"
+  },
+  {
+   "count": 2,
+   "value": "45758"
+  },
+  {
+   "count": 2,
+   "value": "52260"
+  },
+  {
+   "count": 2,
+   "value": "57013"
+  },
+  {
+   "count": 2,
+   "value": "63859"
+  },
+  {
+   "count": 2,
+   "value": "as10474"
+  },
+  {
+   "count": 2,
+   "value": "as13036"
+  },
+  {
+   "count": 2,
+   "value": "as16019"
+  },
+  {
+   "count": 2,
+   "value": "as20978"
+  },
+  {
+   "count": 2,
+   "value": "as28210"
+  },
+  {
+   "count": 2,
+   "value": "as29247"
+  },
+  {
+   "count": 2,
+   "value": "as30848"
+  },
+  {
+   "count": 2,
+   "value": "as3303"
+  },
+  {
+   "count": 2,
+   "value": "as3308"
+  },
+  {
+   "count": 2,
+   "value": "as4775"
+  },
+  {
+   "count": 2,
+   "value": "as51265"
+  },
+  {
+   "count": 2,
+   "value": "as5610"
+  },
+  {
+   "count": 2,
+   "value": "as7602"
+  },
+  {
+   "count": 2,
+   "value": "as8562"
+  },
+  {
+   "count": 2,
+   "value": "as8737"
+  },
+  {
+   "count": 1,
+   "value": "1257"
+  },
+  {
+   "count": 1,
+   "value": "20011"
+  },
+  {
+   "count": 1,
+   "value": "20978"
+  },
+  {
+   "count": 1,
+   "value": "25540"
+  },
+  {
+   "count": 1,
+   "value": "3352"
+  },
+  {
+   "count": 1,
+   "value": "37611"
+  },
+  {
+   "count": 1,
+   "value": "4134"
+  },
+  {
+   "count": 1,
+   "value": "44034"
+  },
+  {
+   "count": 1,
+   "value": "as1136"
+  },
+  {
+   "count": 1,
+   "value": "as13194"
+  },
+  {
+   "count": 1,
+   "value": "as137266"
+  },
+  {
+   "count": 1,
+   "value": "as138119"
+  },
+  {
+   "count": 1,
+   "value": "as14593"
+  },
+  {
+   "count": 1,
+   "value": "as15962"
+  },
+  {
+   "count": 1,
+   "value": "as198335"
+  },
+  {
+   "count": 1,
+   "value": "as20011"
+  },
+  {
+   "count": 1,
+   "value": "as207147"
+  },
+  {
+   "count": 1,
+   "value": "as212174"
+  },
+  {
+   "count": 1,
+   "value": "as213155"
+  },
+  {
+   "count": 1,
+   "value": "as24158"
+  },
+  {
+   "count": 1,
+   "value": "as24173"
+  },
+  {
+   "count": 1,
+   "value": "as24492"
+  },
+  {
+   "count": 1,
+   "value": "as2514"
+  },
+  {
+   "count": 1,
+   "value": "as263032"
+  },
+  {
+   "count": 1,
+   "value": "as267293"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3024,
+   "value": 7547
+  },
+  {
+   "count": 972,
+   "value": 8099
+  },
+  {
+   "count": 752,
+   "value": 51200
+  },
+  {
+   "count": 496,
+   "value": 51201
+  },
+  {
+   "count": 413,
+   "value": 51005
+  },
+  {
+   "count": 1,
+   "value": 2121
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1692,
+   "value": "Viettel Group"
+  },
+  {
+   "count": 633,
+   "value": "Pool for Broadband DSL customers"
+  },
+  {
+   "count": 619,
+   "value": "PT TELKOM INDONESIA"
+  },
+  {
+   "count": 266,
+   "value": "VIETTEL (CAMBODIA) PTE., LTD."
+  },
+  {
+   "count": 249,
+   "value": "Bouygues Telecom SA"
+  },
+  {
+   "count": 171,
+   "value": "Bouygues Telecom Division Mobile"
+  },
+  {
+   "count": 128,
+   "value": "PT TELKOM INDONESIA Menara Multimedia Lt.7 Jl. Kebon sirih No.12 JAKARTA"
+  },
+  {
+   "count": 117,
+   "value": "Dai IP cho dich vu ADSL DGN+NAN"
+  },
+  {
+   "count": 113,
+   "value": "Bouygues Telecom Fixe and Mobile Division"
+  },
+  {
+   "count": 108,
+   "value": "PT. Eka Mas Republik"
+  },
+  {
+   "count": 105,
+   "value": "Dai IP su dung cho mang khach hang FTTH o HaNoi"
+  },
+  {
+   "count": 77,
+   "value": "GBB VISAYAS"
+  },
+  {
+   "count": 76,
+   "value": "INHERENT ADISTA SAS"
+  },
+  {
+   "count": 73,
+   "value": "Dai IP cho dich vu ADSL tai HCM"
+  },
+  {
+   "count": 50,
+   "value": "VIETTEL (CAMBODIA) PTE, LTD"
+  },
+  {
+   "count": 45,
+   "value": "GLBB_IP_POOL"
+  },
+  {
+   "count": 43,
+   "value": "ADSL HNI"
+  },
+  {
+   "count": 42,
+   "value": "Kyivstar GSM"
+  },
+  {
+   "count": 36,
+   "value": "GBB-MAKATI-IP-POOL"
+  },
+  {
+   "count": 33,
+   "value": "GBB MAKATI"
+  },
+  {
+   "count": 32,
+   "value": "Eurasia-Star LLP"
+  },
+  {
+   "count": 30,
+   "value": "Admin"
+  },
+  {
+   "count": 29,
+   "value": "DNA Oyj"
+  },
+  {
+   "count": 29,
+   "value": "Télécommunications de Haití (Teleco)"
+  },
+  {
+   "count": 29,
+   "value": "VIETTEL (CAMBODIA) PTE, LTD."
+  },
+  {
+   "count": 27,
+   "value": "GBB-VISMIN-IP-POOL"
+  },
+  {
+   "count": 27,
+   "value": "Pool for retail DSL customers"
+  },
+  {
+   "count": 22,
+   "value": "3 Customer dynamic address pool"
+  },
+  {
+   "count": 22,
+   "value": "Asia Pacific Network Information Center, Pty. Ltd."
+  },
+  {
+   "count": 21,
+   "value": "CellhireFrance Cellhire France SARL"
+  },
+  {
+   "count": 19,
+   "value": "Triple T Broadband Public Company Limited"
+  },
+  {
+   "count": 18,
+   "value": "PT Telekomunikasi Indonesia"
+  },
+  {
+   "count": 18,
+   "value": "Pool for retail FTTH customers"
+  },
+  {
+   "count": 18,
+   "value": "Telekomunikasi Indonesia (PT)"
+  },
+  {
+   "count": 17,
+   "value": "ADISTA SAS"
+  },
+  {
+   "count": 17,
+   "value": "Telia Network Services"
+  },
+  {
+   "count": 15,
+   "value": "TURKCELL INTERNET"
+  },
+  {
+   "count": 15,
+   "value": "VIETTEL (CAMBODIA) PTE., LTD"
+  },
+  {
+   "count": 14,
+   "value": "Telecom Italia Mobile"
+  },
+  {
+   "count": 13,
+   "value": "ADVANCED WIRELESS NETWORK COMPANY LIMITED"
+  },
+  {
+   "count": 13,
+   "value": "Dai IP cho dich vu ADSL HNI"
+  },
+  {
+   "count": 13,
+   "value": "PT.TELKOM INDONESIA"
+  },
+  {
+   "count": 13,
+   "value": "UNYC SAS"
+  },
+  {
+   "count": 12,
+   "value": "GBB SAN JUAN"
+  },
+  {
+   "count": 12,
+   "value": "NETWORK ASSIGNED IP ADDRESS"
+  },
+  {
+   "count": 12,
+   "value": "Pool for Cable customers"
+  },
+  {
+   "count": 11,
+   "value": "GBB-VISAYAS-IP-POOL"
+  },
+  {
+   "count": 10,
+   "value": "Globe Telecom (GMCR,INC)"
+  },
+  {
+   "count": 10,
+   "value": "HOME_DSL"
+  },
+  {
+   "count": 10,
+   "value": "Movitel, SA"
+  },
+  {
+   "count": 10,
+   "value": "PT. Telekomunikasi Selular (Telkomsel) Indonesia"
+  },
+  {
+   "count": 10,
+   "value": "Philippine Long Distance Telephone Co."
+  },
+  {
+   "count": 10,
+   "value": "Pool for Enterprise customers"
+  },
+  {
+   "count": 10,
+   "value": "Telenor Sverige AB"
+  },
+  {
+   "count": 9,
+   "value": "AIS Fibre"
+  },
+  {
+   "count": 9,
+   "value": "GBB-SJN-IP-POOL"
+  },
+  {
+   "count": 9,
+   "value": "Karisma Citra Bahari"
+  },
+  {
+   "count": 8,
+   "value": "Alares Cabo Servicos de Telecomunicacoes S.A."
+  },
+  {
+   "count": 8,
+   "value": "DSL POOL"
+  },
+  {
+   "count": 8,
+   "value": "PT Rebdila Borusia"
+  },
+  {
+   "count": 8,
+   "value": "Telenor A/S"
+  },
+  {
+   "count": 7,
+   "value": "Mobile Services"
+  },
+  {
+   "count": 7,
+   "value": "Networth Telecom SAS"
+  },
+  {
+   "count": 7,
+   "value": "Pool for Broadband FTTH customers"
+  },
+  {
+   "count": 7,
+   "value": "VB Telecom Com. e Serv. de Info Ltda"
+  },
+  {
+   "count": 6,
+   "value": "AdditionalIP range for 3G service of Viettel in Ha Noi"
+  },
+  {
+   "count": 6,
+   "value": "CV. Demen"
+  },
+  {
+   "count": 6,
+   "value": "Elisa Oyj"
+  },
+  {
+   "count": 6,
+   "value": "PT. Bakrie Telecom Tbk"
+  },
+  {
+   "count": 6,
+   "value": "Telia Finland Oyj"
+  },
+  {
+   "count": 6,
+   "value": "Vodafone Turkey GPRS address pool"
+  },
+  {
+   "count": 5,
+   "value": "CMC Telecom Infrastructure Company"
+  },
+  {
+   "count": 5,
+   "value": "Globe Telecom/Innove Communication"
+  },
+  {
+   "count": 5,
+   "value": "PT Rohim Khoirul Cipta Sentosa"
+  },
+  {
+   "count": 5,
+   "value": "xDSL Serveurcom ISP"
+  },
+  {
+   "count": 4,
+   "value": "AFRIHOST SP (PTY) LTD - AFRIHOST SP (PTY) LTD"
+  },
+  {
+   "count": 4,
+   "value": "Cogetel Ltd, Online ISP, Cambodia"
+  },
+  {
+   "count": 4,
+   "value": "Destiny France Partenaires SAS"
+  },
+  {
+   "count": 4,
+   "value": "Dimension Data"
+  },
+  {
+   "count": 4,
+   "value": "GENERIC CUSTOMER AND INFRASTRUCTURE NETWORK"
+  },
+  {
+   "count": 4,
+   "value": "Golden Telecom LLC"
+  },
+  {
+   "count": 4,
+   "value": "LLP Asket"
+  },
+  {
+   "count": 4,
+   "value": "NETWORK ASSIGNED DSL (SSG-REDBACK CEBU) Ip pool"
+  },
+  {
+   "count": 4,
+   "value": "Orange Mobile"
+  },
+  {
+   "count": 4,
+   "value": "PT. DEARMA PINDO"
+  },
+  {
+   "count": 4,
+   "value": "Pool for Broadband DSL Customers"
+  },
+  {
+   "count": 4,
+   "value": "Serveurcom - Network"
+  },
+  {
+   "count": 4,
+   "value": "Tele2 Sverige AB"
+  },
+  {
+   "count": 4,
+   "value": "Vodafone Telekomunikasyon A.S."
+  },
+  {
+   "count": 4,
+   "value": "Vodafone Turkey 3G IP Pool 188-1"
+  },
+  {
+   "count": 3,
+   "value": "\"Kyivstar\" PJSC"
+  },
+  {
+   "count": 3,
+   "value": "AFRIHOST SP (PTY) LTD"
+  },
+  {
+   "count": 3,
+   "value": "Afrinic"
+  },
+  {
+   "count": 3,
+   "value": "CORPORACION NACIONAL DE TELECOMUNICACIONES - CNT EP"
+  },
+  {
+   "count": 3,
+   "value": "CV. Adelanos Mandiri"
+  },
+  {
+   "count": 3,
+   "value": "CV. SEPTUA MAJUPE"
+  },
+  {
+   "count": 3,
+   "value": "Cellhire France SARL"
+  },
+  {
+   "count": 3,
+   "value": "Cv Aldo Tinodo"
+  },
+  {
+   "count": 3,
+   "value": "Kar-Tel LLC"
+  },
+  {
+   "count": 3,
+   "value": "NTT DOCOMO,INC."
+  }
+ ],
+ "id": "tr069-openagent-a",
+ "parent": "tr069-client",
+ "group": "tr069-family",
+ "label": {
+  "ru": "Openagent: подсемейство A",
+  "en": "Openagent: subfamily A",
+  "es": "Openagent: subfamilia A",
+  "zh": "Openagent：子族 A"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

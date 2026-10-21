@@ -1,0 +1,103 @@
+{
+ "dork": "\"CWMP-Agent\" country:TN",
+ "total": 15460,
+ "taken": "2026-10-21T21:29:49+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 15460,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 6,
+   "covered": 15460,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 15460,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 2,
+   "covered": 15460,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 15460,
+   "value": "TN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 14390,
+   "value": "as37492"
+  },
+  {
+   "count": 1031,
+   "value": "as37693"
+  },
+  {
+   "count": 31,
+   "value": "37492"
+  },
+  {
+   "count": 8,
+   "value": "37693"
+  }
+ ],
+ "ports": [
+  {
+   "count": 14421,
+   "value": 7547
+  },
+  {
+   "count": 1039,
+   "value": 51005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 13965,
+   "value": "Orange Tunisie - Orange Tunisie"
+  },
+  {
+   "count": 892,
+   "value": "OOREDOO TUNISIE SA - OOREDOO TUNISIE SA"
+  },
+  {
+   "count": 386,
+   "value": "ATI - Agence Tunisienne Internet"
+  },
+  {
+   "count": 93,
+   "value": "SMARTPHONE"
+  },
+  {
+   "count": 63,
+   "value": "Orange Tunisie Smartphone Customer"
+  },
+  {
+   "count": 61,
+   "value": "ooredooTN"
+  }
+ ],
+ "id": "fact-cwmp-agent-orange-tunisie-55b1ab5cd8",
+ "parent": "cwmp-agent-orange-tunisie",
+ "group": "facts",
+ "label": {
+  "ru": "карман Orange Tunisie",
+  "en": "Orange Tunisie subset",
+  "es": "Subconjunto Orange Tunisie",
+  "zh": "Orange Tunisie 子集"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

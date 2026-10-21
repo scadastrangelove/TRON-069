@@ -1,6 +1,6 @@
 # Method: passive TR-069/CWMP measurement
 
-Public edition, reviewed 16 October 2026. This document distinguishes aggregate
+Public edition, reviewed 21 October 2026. This document distinguishes aggregate
 collection from the earlier research process. The current collector uses Shodan
 Count only. Earlier investigations also inspected cached banners, host records,
 public source code and firmware locally; those raw materials are not distributed.
@@ -33,6 +33,18 @@ The core set uses the all-port `HuaweiHomeGateway` query and excludes its
 port-7547 subset. This keeps auxiliary-port matches in the default view without
 adding the subset a second time. Some other queries intentionally retain a port
 condition as part of their fingerprint; each query records its exact scope.
+
+RomPager and mini_httpd are all-port HTTP component populations. Their `mixed`
+role includes management interfaces, other HTTP services and possible emulation.
+Both remain available for explicit map selection and are excluded from the core
+TR-069 sum. Their port and version queries are separate research slices.
+
+The [legacy HTTP study](LEGACY-HTTP.md#honeypots) records suspected honeypot
+contamination and a reproducible cloud-ASN cohort. The atlas preserves raw totals,
+cohort counts and counts outside that cohort. Cloud membership is a screening
+rule; the residual is not a verified count of physical CPE. Port distribution and
+banner similarity provide additional evidence. The collector does not actively
+test for honeypots or vulnerability.
 
 ## 2. Iterative subtraction
 

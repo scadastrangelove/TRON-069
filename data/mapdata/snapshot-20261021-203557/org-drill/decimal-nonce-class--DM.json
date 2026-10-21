@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:DM",
+ "total": 161,
+ "taken": "2026-10-21T21:16:57+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 161,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 161,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 161,
+   "value": "as11139"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 62,
+   "value": "Cable & Wireless (Barbados) Limited"
+  },
+  {
+   "count": 43,
+   "value": "Cable & Wireless Dominica"
+  },
+  {
+   "count": 33,
+   "value": "Marpin2k4"
+  },
+  {
+   "count": 23,
+   "value": "Cable & Wireless Antigua and Barbuda Ltd"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "DM"
+}

@@ -1,0 +1,75 @@
+{
+ "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" !\"DigAuth\"",
+ "total": 4,
+ "taken": "2026-10-21T21:29:46+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 4,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 3,
+   "covered": 4,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 4,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 4,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 4,
+   "value": "TW"
+  }
+ ],
+ "asn": [
+  {
+   "count": 4,
+   "value": "as3462"
+  }
+ ],
+ "ports": [
+  {
+   "count": 4,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Chunghwa Telecom Co.,Ltd."
+  },
+  {
+   "count": 1,
+   "value": "Chunghwa Telecom Data Communication Business Group"
+  },
+  {
+   "count": 1,
+   "value": "Data Communication Business Group,"
+  }
+ ],
+ "id": "fact-digauth-fca6d4f2c9",
+ "parent": "digauth",
+ "group": "facts",
+ "label": {
+  "ru": "fake-Apache ребренд (Vivo BR)",
+  "en": "Rebranded fake Apache (Vivo BR)",
+  "es": "Apache falso con otra marca (Vivo BR)",
+  "zh": "改名后的伪 Apache（Vivo BR）"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

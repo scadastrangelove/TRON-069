@@ -1,0 +1,84 @@
+{
+ "dork": "\"TR069 client CLI Server\" country:RS",
+ "total": 137,
+ "taken": "2026-10-21T21:30:27+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 137,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 4,
+   "covered": 137,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 137,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 137,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 137,
+   "value": "RS"
+  }
+ ],
+ "asn": [
+  {
+   "count": 132,
+   "value": "as8400"
+  },
+  {
+   "count": 5,
+   "value": "8400"
+  }
+ ],
+ "ports": [
+  {
+   "count": 137,
+   "value": 1234
+  }
+ ],
+ "orgs": [
+  {
+   "count": 68,
+   "value": "TELEKOM SRBIJA, ADSL users"
+  },
+  {
+   "count": 50,
+   "value": "TELEKOM SRBIJA a.d."
+  },
+  {
+   "count": 15,
+   "value": "Telekom Srbija, ADSL users"
+  },
+  {
+   "count": 4,
+   "value": "TELEKOM SRBIJA"
+  }
+ ],
+ "id": "cli-serbia",
+ "parent": "tr069-client-cli-server-netcore",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "CLI · Serbia",
+  "ru": "CLI · Сербия",
+  "es": "CLI · Serbia",
+  "zh": "CLI · 塞尔维亚"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "cli-build-classes"
+ },
+ "denominator": null
+}

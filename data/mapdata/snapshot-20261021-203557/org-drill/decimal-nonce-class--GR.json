@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:GR",
+ "total": 26,
+ "taken": "2026-10-21T21:17:13+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 26,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 26,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 24,
+   "value": "as6799"
+  },
+  {
+   "count": 1,
+   "value": "6799"
+  },
+  {
+   "count": 1,
+   "value": "as8248"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 16,
+   "value": "Multiprotocol Service Provider to other ISP's and End Users"
+  },
+  {
+   "count": 4,
+   "value": "Ote SA (Hellenic Telecommunications Organisation)"
+  },
+  {
+   "count": 2,
+   "value": "HELLENIC TELECOMMUNICATIONS ORGANIZATION"
+  },
+  {
+   "count": 2,
+   "value": "OTE-DIA-CUSTOMERS"
+  },
+  {
+   "count": 1,
+   "value": "ATHENS"
+  },
+  {
+   "count": 1,
+   "value": "Computer Technology Institute and Press \"Diophantus\""
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "GR"
+}

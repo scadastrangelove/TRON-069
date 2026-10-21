@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PK",
+ "total": 4,
+ "taken": "2026-10-21T21:17:26+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 4,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 4,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as131275"
+  },
+  {
+   "count": 1,
+   "value": "as138172"
+  },
+  {
+   "count": 1,
+   "value": "as139879"
+  },
+  {
+   "count": 1,
+   "value": "as9541"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "BOOM INFO TECH (SMC-PVT) LTD"
+  },
+  {
+   "count": 1,
+   "value": "Cyber Internet Services (Private) Limited"
+  },
+  {
+   "count": 1,
+   "value": "Galaxy Technology (Pvt.) Ltd"
+  },
+  {
+   "count": 1,
+   "value": "SHARP TELECOM (PRIVATE) LIMITED"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PK"
+}

@@ -1,0 +1,61 @@
+{
+ "dork": "\"cwmpd\" opaque country:KE",
+ "total": 72,
+ "taken": "2026-10-18T08:15:24+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 72,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 72,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 69,
+   "value": "as37061"
+  },
+  {
+   "count": 2,
+   "value": "37061"
+  },
+  {
+   "count": 1,
+   "value": "as33771"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 45,
+   "value": "For Safaricom KENYA Enterprise Business Unit"
+  },
+  {
+   "count": 16,
+   "value": "For Converged services in Eastern Region"
+  },
+  {
+   "count": 4,
+   "value": "For Converged services Coast"
+  },
+  {
+   "count": 4,
+   "value": "Safaricom Limited"
+  },
+  {
+   "count": 3,
+   "value": "Our PS core GGSN pool"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "KE"
+}

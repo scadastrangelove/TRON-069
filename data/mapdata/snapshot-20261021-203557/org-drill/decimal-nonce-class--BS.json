@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:BS",
+ "total": 512,
+ "taken": "2026-10-21T21:16:48+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 512,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 512,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 511,
+   "value": "as8014"
+  },
+  {
+   "count": 1,
+   "value": "8014"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 476,
+   "value": "The Bahamas Telecommunications Company, Ltd."
+  },
+  {
+   "count": 21,
+   "value": "Karib Cable"
+  },
+  {
+   "count": 14,
+   "value": "Cable & Wireless (Barbados) Limited"
+  },
+  {
+   "count": 1,
+   "value": "Columbus Networks USA, Inc."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "BS"
+}

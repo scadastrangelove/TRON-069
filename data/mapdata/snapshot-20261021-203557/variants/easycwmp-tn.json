@@ -1,0 +1,107 @@
+{
+ "dork": "\"realm@easycwmp\" country:TN",
+ "total": 20113,
+ "taken": "2026-10-21T21:29:22+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 20113,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 8,
+   "covered": 20113,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 20113,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 20113,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 20113,
+   "value": "TN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 20032,
+   "value": "as37492"
+  },
+  {
+   "count": 69,
+   "value": "37492"
+  },
+  {
+   "count": 11,
+   "value": "as327934"
+  },
+  {
+   "count": 1,
+   "value": "327934"
+  }
+ ],
+ "ports": [
+  {
+   "count": 20113,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 12099,
+   "value": "Orange Tunisie - Orange Tunisie"
+  },
+  {
+   "count": 7820,
+   "value": "ATI - Agence Tunisienne Internet"
+  },
+  {
+   "count": 140,
+   "value": "Flybox"
+  },
+  {
+   "count": 37,
+   "value": "Dungle"
+  },
+  {
+   "count": 7,
+   "value": "Smartphone"
+  },
+  {
+   "count": 6,
+   "value": "NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom) - SOCIETE NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom)"
+  },
+  {
+   "count": 3,
+   "value": "SOCIETE NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom)"
+  },
+  {
+   "count": 1,
+   "value": "LTE-3G Tunisia Telecom internet"
+  }
+ ],
+ "id": "easycwmp-tn",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "Тунис",
+  "en": "Tunisia",
+  "es": "Túnez",
+  "zh": "突尼斯"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

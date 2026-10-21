@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:BE",
+ "total": 10,
+ "taken": "2026-10-18T07:33:00+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 10,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 10,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as50083"
+  },
+  {
+   "count": 5,
+   "value": "as9031"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 5,
+   "value": "Hermes Telecom BVBA"
+  },
+  {
+   "count": 4,
+   "value": "EDPNET Belgium BV"
+  },
+  {
+   "count": 1,
+   "value": "Orange Belgium SA"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "BE"
+}

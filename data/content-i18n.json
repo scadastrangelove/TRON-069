@@ -991,5 +991,89 @@
     "ru": "Линия считает совпадения заголовка страницы администрирования, а не уязвимые серверы или управляемые CPE.",
     "es": "Esta línea cuenta títulos de páginas de administración, no servidores afectados ni CPE gestionados.",
     "zh": "本线路统计管理页面标题匹配，不统计受影响服务器或受管 CPE。"
+  },
+  "HTTP component / mixed services": {
+    "en": "HTTP component / mixed services",
+    "ru": "HTTP-компонент / разные сервисы",
+    "es": "Componente HTTP / servicios diversos",
+    "zh": "HTTP 组件 / 混合服务"
+  },
+  "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.": {
+    "en": "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.",
+    "ru": "Совпадения HTTP-компонента на всех портах показаны отдельно от суммы основных сигнатур TR-069. Срезы по портам и версиям могут пересекаться с другими линиями атласа.",
+    "es": "Las coincidencias del componente HTTP en todos los puertos se muestran por separado de la suma de firmas principales TR-069. Los cortes por puerto y versión pueden solaparse con otras líneas.",
+    "zh": "所有端口的 HTTP 组件匹配与 TR-069 核心指纹总数分开统计。端口及版本切片可能与其他条目重叠。"
+  },
+  "RomPager 4.07 is associated with Misfortune Cookie (CVE-2014-9222). Firmware backports can retain the version string; patch status requires device-specific evidence.": {
+    "en": "RomPager 4.07 is associated with Misfortune Cookie (CVE-2014-9222). Firmware backports can retain the version string; patch status requires device-specific evidence.",
+    "ru": "RomPager 4.07 связан с Misfortune Cookie (CVE-2014-9222). Исправления в прошивке могут сохранять строку версии; статус патча требует проверки конкретного устройства.",
+    "es": "RomPager 4.07 está asociado a Misfortune Cookie (CVE-2014-9222). Los parches de firmware pueden conservar la versión; el estado del parche requiere evidencia del dispositivo.",
+    "zh": "RomPager 4.07 与 Misfortune Cookie（CVE-2014-9222）相关。固件回移补丁可能保留版本字符串，补丁状态需设备级证据。"
+  },
+  "mini_httpd is a general HTTP server used in CPE management interfaces and other services. A server marker alone does not identify an ACS, CWMP or TR-064 endpoint.": {
+    "en": "mini_httpd is a general HTTP server used in CPE management interfaces and other services. A server marker alone does not identify an ACS, CWMP or TR-064 endpoint.",
+    "ru": "mini_httpd — HTTP-сервер, используемый в интерфейсах управления CPE и других сервисах. Один маркер сервера не определяет ACS, CWMP или TR-064.",
+    "es": "mini_httpd es un servidor HTTP utilizado en interfaces de gestión de CPE y otros servicios. Su marcador por sí solo no identifica ACS, CWMP o TR-064.",
+    "zh": "mini_httpd 是用于 CPE 管理界面及其他服务的通用 HTTP 服务器。仅凭服务器标记无法确认 ACS、CWMP 或 TR-064。"
+  },
+  "The reported Aliyun sample combines a port-9022 concentration, a long tail of unusual ports and 99 identical banners in 100 records. These support suspected honeypot contamination.": {
+    "en": "The reported Aliyun sample combines a port-9022 concentration, a long tail of unusual ports and 99 identical banners in 100 records. These support suspected honeypot contamination.",
+    "ru": "В исследованной выборке Aliyun сочетаются концентрация на 9022, длинный хвост необычных портов и 99 одинаковых баннеров из 100. Это признаки вероятной примеси ханипотов.",
+    "es": "La muestra reportada de Aliyun combina concentración en 9022, numerosos puertos inusuales y 99 banners idénticos de 100. Son indicios de posibles honeypots.",
+    "zh": "报告的 Aliyun 样本同时呈现端口 9022 集中、异常端口长尾和 100 条记录中 99 条相同横幅，支持疑似蜜罐混入的判断。"
+  },
+  "Measurement quality · worldwide": {
+    "en": "Measurement quality · worldwide",
+    "ru": "Качество измерения · весь мир",
+    "es": "Calidad de medición · mundial",
+    "zh": "测量质量 · 全球"
+  },
+  "Raw matches": {
+    "en": "Raw matches",
+    "ru": "Все совпадения",
+    "es": "Coincidencias sin filtrar",
+    "zh": "原始匹配"
+  },
+  "Selected cloud networks": {
+    "en": "Selected cloud networks",
+    "ru": "Выбранные облачные сети",
+    "es": "Redes de nube seleccionadas",
+    "zh": "所选云网络"
+  },
+  "Outside these cloud networks": {
+    "en": "Outside these cloud networks",
+    "ru": "Вне этих облачных сетей",
+    "es": "Fuera de estas redes de nube",
+    "zh": "这些云网络之外"
+  },
+  "RomPager 4.07 · all ports": {
+    "en": "RomPager 4.07 · all ports",
+    "ru": "RomPager 4.07 · все порты",
+    "es": "RomPager 4.07 · todos los puertos",
+    "zh": "RomPager 4.07 · 所有端口"
+  },
+  "mini_httpd · all versions, all ports": {
+    "en": "mini_httpd · all versions, all ports",
+    "ru": "mini_httpd · все версии, все порты",
+    "es": "mini_httpd · todas las versiones y puertos",
+    "zh": "mini_httpd · 所有版本及端口"
+  },
+  "The cloud cohort flags likely sensor contamination. Counts outside it still include unclassified services; they are not a verified device census. See the port slices below, including cloud matches on 7547.": {
+    "en": "The cloud cohort flags likely sensor contamination. Counts outside it still include unclassified services; they are not a verified device census. See the port slices below, including cloud matches on 7547.",
+    "ru": "Облачная выборка выделяет вероятную примесь сенсоров. За её пределами остаются неклассифицированные сервисы; это не перепись подтверждённых устройств. Ниже доступны портовые срезы, включая облачные совпадения на 7547.",
+    "es": "La cohorte de nube señala una probable mezcla de sensores. Fuera de ella quedan servicios sin clasificar; no es un censo de dispositivos verificados. Los cortes inferiores incluyen coincidencias de nube en 7547.",
+    "zh": "云网络组提示可能混入传感器。组外仍有未分类服务，不能视为已确认设备总数。下方端口切片包含 7547 上的云网络匹配。"
+  },
+  "The same cloud networks are collected as a reference cohort for mini_httpd. The RomPager banner-sample evidence does not classify these mini_httpd services as honeypots.": {
+    "en": "The same cloud networks are collected as a reference cohort for mini_httpd. The RomPager banner-sample evidence does not classify these mini_httpd services as honeypots.",
+    "ru": "Те же облачные сети собраны для сравнения mini_httpd. Исследование баннеров RomPager не подтверждает наличие ханипотов среди этих сервисов mini_httpd.",
+    "es": "Las mismas redes de nube forman una cohorte de referencia de mini_httpd. La evidencia de banners RomPager no clasifica estos servicios mini_httpd como honeypots.",
+    "zh": "相同云网络作为 mini_httpd 的参考组。RomPager 横幅样本证据不能将这些 mini_httpd 服务判定为蜜罐。"
+  },
+  "These worldwide counts use independent Shodan queries and can differ slightly as the index changes.": {
+    "en": "These worldwide counts use independent Shodan queries and can differ slightly as the index changes.",
+    "ru": "Эти глобальные счётчики получены отдельными запросами Shodan и могут немного расходиться при обновлении индекса.",
+    "es": "Estos recuentos mundiales usan consultas Shodan independientes y pueden diferir ligeramente al actualizarse el índice.",
+    "zh": "这些全球计数来自独立的 Shodan 查询，索引更新时可能略有差异。"
   }
 }

@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:KY",
+ "total": 272,
+ "taken": "2026-10-21T21:16:52+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 272,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 272,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 272,
+   "value": "as6639"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 194,
+   "value": "Cable & Wireless (Cayman Islands) Ltd."
+  },
+  {
+   "count": 36,
+   "value": "Vodafone Americas"
+  },
+  {
+   "count": 28,
+   "value": "Cable and Wireless LTD -Cayman"
+  },
+  {
+   "count": 14,
+   "value": "Cable and Wireless Jamaica"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "KY"
+}

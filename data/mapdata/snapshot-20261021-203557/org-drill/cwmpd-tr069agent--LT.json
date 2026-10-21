@@ -1,0 +1,45 @@
+{
+ "dork": "\"cwmpd\" opaque country:LT",
+ "total": 5,
+ "taken": "2026-10-21T21:21:53+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as13194"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Bite Lietuva"
+  },
+  {
+   "count": 1,
+   "value": "Bite Latvija"
+  },
+  {
+   "count": 1,
+   "value": "UAB \"Bite Lietuva\""
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "LT"
+}

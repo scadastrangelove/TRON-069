@@ -1,0 +1,789 @@
+{
+ "dork": "\"realtek.com.tw\"",
+ "total": 29930,
+ "taken": "2026-10-21T20:36:12+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 36,
+   "covered": 29930,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 29740,
+   "remainder": 190
+  },
+  "port": {
+   "values_returned": 53,
+   "covered": 29930,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 11523,
+   "value": "CN"
+  },
+  {
+   "count": 9266,
+   "value": "ES"
+  },
+  {
+   "count": 3173,
+   "value": "TW"
+  },
+  {
+   "count": 2107,
+   "value": "ZA"
+  },
+  {
+   "count": 1025,
+   "value": "MA"
+  },
+  {
+   "count": 968,
+   "value": "VN"
+  },
+  {
+   "count": 858,
+   "value": "RU"
+  },
+  {
+   "count": 293,
+   "value": "CZ"
+  },
+  {
+   "count": 209,
+   "value": "BR"
+  },
+  {
+   "count": 186,
+   "value": "UA"
+  },
+  {
+   "count": 93,
+   "value": "IN"
+  },
+  {
+   "count": 47,
+   "value": "IR"
+  },
+  {
+   "count": 45,
+   "value": "CL"
+  },
+  {
+   "count": 35,
+   "value": "MZ"
+  },
+  {
+   "count": 15,
+   "value": "HK"
+  },
+  {
+   "count": 15,
+   "value": "LB"
+  },
+  {
+   "count": 12,
+   "value": "AR"
+  },
+  {
+   "count": 10,
+   "value": "DZ"
+  },
+  {
+   "count": 9,
+   "value": "CA"
+  },
+  {
+   "count": 5,
+   "value": "AL"
+  },
+  {
+   "count": 5,
+   "value": "TH"
+  },
+  {
+   "count": 5,
+   "value": "VE"
+  },
+  {
+   "count": 4,
+   "value": "BG"
+  },
+  {
+   "count": 4,
+   "value": "GE"
+  },
+  {
+   "count": 3,
+   "value": "CY"
+  },
+  {
+   "count": 3,
+   "value": "US"
+  },
+  {
+   "count": 2,
+   "value": "PL"
+  },
+  {
+   "count": 2,
+   "value": "PT"
+  },
+  {
+   "count": 1,
+   "value": "AU"
+  },
+  {
+   "count": 1,
+   "value": "IT"
+  },
+  {
+   "count": 1,
+   "value": "RS"
+  },
+  {
+   "count": 1,
+   "value": "SG"
+  },
+  {
+   "count": 1,
+   "value": "SY"
+  },
+  {
+   "count": 1,
+   "value": "TR"
+  },
+  {
+   "count": 1,
+   "value": "UZ"
+  },
+  {
+   "count": 1,
+   "value": "ZW"
+  }
+ ],
+ "asn": [
+  {
+   "count": 11272,
+   "value": "as4837"
+  },
+  {
+   "count": 8875,
+   "value": "as15704"
+  },
+  {
+   "count": 2269,
+   "value": "as18049"
+  },
+  {
+   "count": 2037,
+   "value": "as37457"
+  },
+  {
+   "count": 984,
+   "value": "as36903"
+  },
+  {
+   "count": 800,
+   "value": "as18403"
+  },
+  {
+   "count": 548,
+   "value": "as131602"
+  },
+  {
+   "count": 462,
+   "value": "as12714"
+  },
+  {
+   "count": 273,
+   "value": "as16246"
+  },
+  {
+   "count": 251,
+   "value": "4837"
+  },
+  {
+   "count": 176,
+   "value": "as12389"
+  },
+  {
+   "count": 158,
+   "value": "as205715"
+  },
+  {
+   "count": 150,
+   "value": "as9416"
+  },
+  {
+   "count": 131,
+   "value": "as7552"
+  },
+  {
+   "count": 122,
+   "value": "15704"
+  },
+  {
+   "count": 89,
+   "value": "as7482"
+  },
+  {
+   "count": 62,
+   "value": "as43885"
+  },
+  {
+   "count": 61,
+   "value": "as268192"
+  },
+  {
+   "count": 56,
+   "value": "as28840"
+  },
+  {
+   "count": 54,
+   "value": "as4780"
+  },
+  {
+   "count": 45,
+   "value": "as12338"
+  },
+  {
+   "count": 42,
+   "value": "as133982"
+  },
+  {
+   "count": 39,
+   "value": "36903"
+  },
+  {
+   "count": 33,
+   "value": "as34700"
+  },
+  {
+   "count": 32,
+   "value": "as37342"
+  },
+  {
+   "count": 31,
+   "value": "as39608"
+  },
+  {
+   "count": 30,
+   "value": "as49332"
+  },
+  {
+   "count": 29,
+   "value": "as273309"
+  },
+  {
+   "count": 28,
+   "value": "as14117"
+  },
+  {
+   "count": 27,
+   "value": "18403"
+  },
+  {
+   "count": 25,
+   "value": "as48437"
+  },
+  {
+   "count": 24,
+   "value": "as202103"
+  },
+  {
+   "count": 22,
+   "value": "as24560"
+  },
+  {
+   "count": 22,
+   "value": "as3462"
+  },
+  {
+   "count": 20,
+   "value": "37457"
+  },
+  {
+   "count": 19,
+   "value": "as20011"
+  },
+  {
+   "count": 19,
+   "value": "as44244"
+  },
+  {
+   "count": 17,
+   "value": "12714"
+  },
+  {
+   "count": 16,
+   "value": "as14259"
+  },
+  {
+   "count": 16,
+   "value": "as262601"
+  },
+  {
+   "count": 16,
+   "value": "as43754"
+  },
+  {
+   "count": 15,
+   "value": "12389"
+  },
+  {
+   "count": 15,
+   "value": "as31133"
+  },
+  {
+   "count": 14,
+   "value": "as266979"
+  },
+  {
+   "count": 14,
+   "value": "as37611"
+  },
+  {
+   "count": 12,
+   "value": "as16732"
+  },
+  {
+   "count": 12,
+   "value": "as265097"
+  },
+  {
+   "count": 11,
+   "value": "as50512"
+  },
+  {
+   "count": 11,
+   "value": "as50543"
+  },
+  {
+   "count": 11,
+   "value": "as58224"
+  },
+  {
+   "count": 11,
+   "value": "as9924"
+  },
+  {
+   "count": 10,
+   "value": "as15640"
+  },
+  {
+   "count": 9,
+   "value": "18049"
+  },
+  {
+   "count": 9,
+   "value": "as135188"
+  },
+  {
+   "count": 9,
+   "value": "as36947"
+  },
+  {
+   "count": 8,
+   "value": "as17809"
+  },
+  {
+   "count": 8,
+   "value": "as41096"
+  },
+  {
+   "count": 8,
+   "value": "as52633"
+  },
+  {
+   "count": 7,
+   "value": "28840"
+  },
+  {
+   "count": 7,
+   "value": "as138754"
+  },
+  {
+   "count": 6,
+   "value": "as263355"
+  },
+  {
+   "count": 6,
+   "value": "as39435"
+  },
+  {
+   "count": 6,
+   "value": "as57026"
+  },
+  {
+   "count": 6,
+   "value": "as61904"
+  },
+  {
+   "count": 6,
+   "value": "as9269"
+  },
+  {
+   "count": 5,
+   "value": "as13188"
+  },
+  {
+   "count": 5,
+   "value": "as273438"
+  },
+  {
+   "count": 5,
+   "value": "as41682"
+  },
+  {
+   "count": 5,
+   "value": "as48847"
+  },
+  {
+   "count": 5,
+   "value": "as52898"
+  },
+  {
+   "count": 5,
+   "value": "as8048"
+  },
+  {
+   "count": 5,
+   "value": "as9829"
+  },
+  {
+   "count": 4,
+   "value": "as16010"
+  },
+  {
+   "count": 4,
+   "value": "as18182"
+  },
+  {
+   "count": 4,
+   "value": "as23969"
+  },
+  {
+   "count": 4,
+   "value": "as24634"
+  },
+  {
+   "count": 4,
+   "value": "as262868"
+  },
+  {
+   "count": 4,
+   "value": "as41911"
+  },
+  {
+   "count": 4,
+   "value": "as42003"
+  },
+  {
+   "count": 4,
+   "value": "as45899"
+  },
+  {
+   "count": 4,
+   "value": "as57070"
+  },
+  {
+   "count": 4,
+   "value": "as8427"
+  },
+  {
+   "count": 3,
+   "value": "37342"
+  },
+  {
+   "count": 3,
+   "value": "7552"
+  },
+  {
+   "count": 3,
+   "value": "as12768"
+  },
+  {
+   "count": 3,
+   "value": "as21453"
+  },
+  {
+   "count": 3,
+   "value": "as22423"
+  },
+  {
+   "count": 3,
+   "value": "as29231"
+  },
+  {
+   "count": 3,
+   "value": "as31246"
+  },
+  {
+   "count": 3,
+   "value": "as37172"
+  },
+  {
+   "count": 3,
+   "value": "as37680"
+  },
+  {
+   "count": 3,
+   "value": "as4760"
+  },
+  {
+   "count": 3,
+   "value": "as52907"
+  },
+  {
+   "count": 3,
+   "value": "as5504"
+  },
+  {
+   "count": 3,
+   "value": "as5610"
+  },
+  {
+   "count": 3,
+   "value": "as56433"
+  },
+  {
+   "count": 3,
+   "value": "as7311"
+  },
+  {
+   "count": 3,
+   "value": "as8359"
+  },
+  {
+   "count": 2,
+   "value": "131602"
+  },
+  {
+   "count": 2,
+   "value": "133982"
+  }
+ ],
+ "ports": [
+  {
+   "count": 24557,
+   "value": 7547
+  },
+  {
+   "count": 2106,
+   "value": 7676
+  },
+  {
+   "count": 1132,
+   "value": 6264
+  },
+  {
+   "count": 1024,
+   "value": 51005
+  },
+  {
+   "count": 167,
+   "value": 4999
+  },
+  {
+   "count": 96,
+   "value": 50003
+  },
+  {
+   "count": 95,
+   "value": 50004
+  },
+  {
+   "count": 86,
+   "value": 50005
+  },
+  {
+   "count": 80,
+   "value": 50006
+  },
+  {
+   "count": 71,
+   "value": 50007
+  },
+  {
+   "count": 55,
+   "value": 50008
+  },
+  {
+   "count": 49,
+   "value": 8080
+  },
+  {
+   "count": 45,
+   "value": 50002
+  },
+  {
+   "count": 39,
+   "value": 50009
+  },
+  {
+   "count": 33,
+   "value": 50010
+  },
+  {
+   "count": 31,
+   "value": 9999
+  },
+  {
+   "count": 26,
+   "value": 50070
+  },
+  {
+   "count": 24,
+   "value": 30005
+  },
+  {
+   "count": 24,
+   "value": 50011
+  },
+  {
+   "count": 23,
+   "value": 50100
+  },
+  {
+   "count": 21,
+   "value": 50050
+  },
+  {
+   "count": 17,
+   "value": 50012
+  },
+  {
+   "count": 16,
+   "value": 50013
+  },
+  {
+   "count": 12,
+   "value": 50022
+  },
+  {
+   "count": 10,
+   "value": 50107
+  },
+  {
+   "count": 9,
+   "value": 50014
+  },
+  {
+   "count": 9,
+   "value": 50101
+  },
+  {
+   "count": 8,
+   "value": 50102
+  },
+  {
+   "count": 6,
+   "value": 50042
+  },
+  {
+   "count": 6,
+   "value": 50104
+  },
+  {
+   "count": 6,
+   "value": 50160
+  },
+  {
+   "count": 5,
+   "value": 50106
+  },
+  {
+   "count": 4,
+   "value": 1800
+  },
+  {
+   "count": 4,
+   "value": 50103
+  },
+  {
+   "count": 4,
+   "value": 50105
+  },
+  {
+   "count": 4,
+   "value": 50113
+  },
+  {
+   "count": 3,
+   "value": 50080
+  },
+  {
+   "count": 3,
+   "value": 50122
+  },
+  {
+   "count": 2,
+   "value": 25
+  },
+  {
+   "count": 2,
+   "value": 50073
+  },
+  {
+   "count": 2,
+   "value": 50085
+  },
+  {
+   "count": 2,
+   "value": 50112
+  },
+  {
+   "count": 2,
+   "value": 50202
+  },
+  {
+   "count": 1,
+   "value": 2
+  },
+  {
+   "count": 1,
+   "value": 1024
+  },
+  {
+   "count": 1,
+   "value": 3443
+  },
+  {
+   "count": 1,
+   "value": 5800
+  },
+  {
+   "count": 1,
+   "value": 45005
+  },
+  {
+   "count": 1,
+   "value": 50051
+  },
+  {
+   "count": 1,
+   "value": 50150
+  },
+  {
+   "count": 1,
+   "value": 50181
+  },
+  {
+   "count": 1,
+   "value": 50254
+  },
+  {
+   "count": 1,
+   "value": 57547
+  }
+ ],
+ "orgs": [],
+ "name": "Realtek SDK"
+}

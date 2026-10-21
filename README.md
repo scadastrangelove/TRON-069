@@ -32,9 +32,12 @@ built from dated Shodan aggregates. Explore the map, compare implementations,
 inspect operator slices and follow each research observation to its source.
 The interface supports English, Spanish, Chinese and Russian.
 
-**Current collection: 18 October 2026.** 53 signature lines, 2,473 country–line
-operator slices, 102 research queries and 48 additional observations. Collection
-ran from 06:47:14 to 08:25:52 UTC; individual results retain their own timestamps.
+**Current collection: 21 October 2026.** 55 signature lines,
+2,766 country–line operator slices, 131 research queries and
+48 additional observations. Full collection ran from 20:35:57 to
+21:31:01 UTC; individual results retain their own timestamps.
+RomPager and mini_httpd cover all ports. [Cloud-network cohorts](LEGACY-HTTP.md#honeypots)
+make suspected honeypot contamination visible alongside the raw component counts.
 These are search matches, not a census of unique devices or vulnerable systems.
 
 ## Bring Your Own TR-069
@@ -198,6 +201,7 @@ catalog schema. The reviewed operator aliases and groups are maintained in
 | [data/project-news.json](data/project-news.json) | Dated developments with supporting files |
 | [data/wanted.json](data/wanted.json) | Community firmware searches, evidence gaps, review status and translations; generates WANTED.md |
 | [data/attribution-evidence.json](data/attribution-evidence.json) | Direct public code and firmware anchors, pinned commits, matching markers and file hashes; generates [ATTRIBUTIONS.md](ATTRIBUTIONS.md) |
+| [LEGACY-HTTP.md](LEGACY-HTTP.md) | RomPager, mini_httpd, all-port slices and suspected honeypots |
 | [TR-PARK-REGISTRY.md](TR-PARK-REGISTRY.md) | Human-readable registry from the current collection |
 
 Each response records its query, UTC collection time and run ID. Completed fresh

@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PA",
+ "total": 10868,
+ "taken": "2026-10-21T21:16:37+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 10868,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 10868,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 10847,
+   "value": "as11556"
+  },
+  {
+   "count": 20,
+   "value": "11556"
+  },
+  {
+   "count": 1,
+   "value": "as18809"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 6424,
+   "value": "Cable & Wireless Panama"
+  },
+  {
+   "count": 4443,
+   "value": "Claro Panamá S.A."
+  },
+  {
+   "count": 1,
+   "value": "Interdotnet Panama"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PA"
+}

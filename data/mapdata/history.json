@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "timezone": "UTC",
- "latest_complete": "snapshot-20261018-064713",
+ "latest_complete": "snapshot-20261021-203557",
  "snapshots": [
   {
    "snapshot": "snapshot-20261008-1451",
@@ -231,6 +231,78 @@
    "research_queries": {
     "expected": 102,
     "completed": 102,
+    "pending": 0
+   }
+  },
+  {
+   "snapshot": "snapshot-20261021-202740",
+   "status": "complete",
+   "started_at": "2026-10-21T20:27:50+00:00",
+   "completed_at": "2026-10-21T20:33:52+00:00",
+   "updated_at": "2026-10-21T20:33:52+00:00",
+   "source_snapshot": "data/mapdata/snapshot-20261018-064713",
+   "mode": "full",
+   "errors": 0,
+   "lines": 55,
+   "operator_pairs": {
+    "scope": "selected",
+    "expected": 295,
+    "completed": 295,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 29,
+    "completed": 29,
+    "pending": 0
+   }
+  },
+  {
+   "snapshot": "snapshot-20261021-203436",
+   "status": "complete",
+   "started_at": "2026-10-21T20:34:37+00:00",
+   "completed_at": "2026-10-21T20:35:09+00:00",
+   "updated_at": "2026-10-21T20:35:09+00:00",
+   "source_snapshot": "data/mapdata/snapshot-20261021-202740",
+   "mode": "queries-only",
+   "errors": 0,
+   "lines": 55,
+   "operator_pairs": {
+    "scope": "skipped",
+    "expected": 0,
+    "completed": 0,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 29,
+    "completed": 29,
+    "pending": 0
+   }
+  },
+  {
+   "snapshot": "snapshot-20261021-203557",
+   "status": "complete",
+   "started_at": "2026-10-21T20:35:57+00:00",
+   "completed_at": "2026-10-21T21:31:01+00:00",
+   "updated_at": "2026-10-21T21:31:01+00:00",
+   "source_snapshot": null,
+   "mode": "full",
+   "errors": 0,
+   "lines": 55,
+   "operator_pairs": {
+    "scope": "all",
+    "expected": 2766,
+    "completed": 2766,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 131,
+    "completed": 131,
     "pending": 0
    }
   }

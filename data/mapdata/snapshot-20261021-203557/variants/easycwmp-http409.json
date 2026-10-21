@@ -1,0 +1,127 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 409 Conflict\"",
+ "total": 10,
+ "taken": "2026-10-21T21:29:20+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 10,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 7,
+   "covered": 10,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 8,
+   "covered": 10,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 10,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 8,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  }
+ ],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as13977"
+  },
+  {
+   "count": 2,
+   "value": "as6536"
+  },
+  {
+   "count": 1,
+   "value": "as11776"
+  },
+  {
+   "count": 1,
+   "value": "as13807"
+  },
+  {
+   "count": 1,
+   "value": "as206067"
+  },
+  {
+   "count": 1,
+   "value": "as393856"
+  },
+  {
+   "count": 1,
+   "value": "as5645"
+  },
+  {
+   "count": 1,
+   "value": "as6300"
+  }
+ ],
+ "ports": [
+  {
+   "count": 10,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Fidium"
+  },
+  {
+   "count": 2,
+   "value": "CityNet"
+  },
+  {
+   "count": 1,
+   "value": "Breezeline"
+  },
+  {
+   "count": 1,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Mobile Broadband Service"
+  },
+  {
+   "count": 1,
+   "value": "Rightfiber"
+  },
+  {
+   "count": 1,
+   "value": "TekSavvy Solutions Inc."
+  }
+ ],
+ "id": "easycwmp-http409",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "HTTP 409: широкий контрольный запрос",
+  "en": "HTTP 409: broad control query",
+  "es": "HTTP 409: consulta de control amplia",
+  "zh": "HTTP 409：宽泛对照查询"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

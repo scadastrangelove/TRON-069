@@ -1,0 +1,72 @@
+{
+ "dork": "realm=\"Gateway\" country:CA port:10001",
+ "total": 3,
+ "taken": "2026-10-21T21:30:25+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 3,
+   "value": "CA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as577"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3,
+   "value": 10001
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Bell Mobility Cellular"
+  },
+  {
+   "count": 1,
+   "value": "Bell Canada"
+  }
+ ],
+ "id": "gateway-ca-10001",
+ "parent": "gateway-realm",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "Gateway · CA:10001",
+  "ru": "Gateway · CA:10001",
+  "es": "Gateway · CA:10001",
+  "zh": "Gateway · CA:10001"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "gateway-port-scopes"
+ },
+ "denominator": null
+}

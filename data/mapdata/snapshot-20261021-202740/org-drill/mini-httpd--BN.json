@@ -1,0 +1,41 @@
+{
+ "dork": "\"mini_httpd\" country:BN",
+ "total": 2,
+ "taken": "2026-10-21T20:32:54+00:00",
+ "run_id": "5ed61d4a-0087-495c-89f5-bc7f13569445",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as10094"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "FTTH - Fiber-To-The-Home"
+  },
+  {
+   "count": 1,
+   "value": "Unified National Networks"
+  }
+ ],
+ "line": "mini_httpd (all ports)",
+ "line_id": "mini-httpd",
+ "cc": "BN"
+}

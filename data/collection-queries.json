@@ -1750,6 +1750,536 @@
         "anchor": "cli-build-classes"
       },
       "overlap": "possible"
+    },
+    {
+      "id": "rompager-407-all",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\"",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "RomPager 4.07 · all ports",
+        "ru": "RomPager 4.07 · все порты",
+        "es": "RomPager 4.07 · todos los puertos",
+        "zh": "RomPager 4.07 · 所有端口"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "rompager-407-cloud-all",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" asn:AS37963,37963,AS45102,45102,AS135377,135377,AS55990,55990,AS136907,136907,AS58519,58519",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · cloud cohort: suspected honeypot contamination",
+        "ru": "4.07 · облачная выборка: вероятная примесь ханипотов",
+        "es": "4.07 · cohorte en la nube: posibles honeypots",
+        "zh": "4.07 · 云网络组：疑似蜜罐混入"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-407-outside-cloud",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" -asn:AS37963,37963 -asn:AS45102,45102 -asn:AS135377,135377 -asn:AS55990,55990 -asn:AS136907,136907 -asn:AS58519,58519",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · outside the selected cloud ASNs",
+        "ru": "4.07 · вне выбранных облачных ASN",
+        "es": "4.07 · fuera de los ASN de nube seleccionados",
+        "zh": "4.07 · 所选云 ASN 之外"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-407-aliyun",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" asn:AS37963,37963,AS45102,45102",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · Alibaba / Aliyun networks",
+        "ru": "4.07 · сети Alibaba / Aliyun",
+        "es": "4.07 · redes Alibaba / Aliyun",
+        "zh": "4.07 · Alibaba / Aliyun 网络"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-407-ucloud",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" asn:AS135377,135377",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · UCloud network",
+        "ru": "4.07 · сеть UCloud",
+        "es": "4.07 · red UCloud",
+        "zh": "4.07 · UCloud 网络"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-407-huawei",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" asn:AS55990,55990,AS136907,136907,AS58519,58519",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · Huawei cloud networks",
+        "ru": "4.07 · облачные сети Huawei",
+        "es": "4.07 · redes de nube Huawei",
+        "zh": "4.07 · 华为云网络"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-407-7547",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" port:7547",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · port 7547",
+        "ru": "4.07 · порт 7547",
+        "es": "4.07 · puerto 7547",
+        "zh": "4.07 · 端口 7547"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-407-cloud-7547",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" asn:AS37963,37963,AS45102,45102,AS135377,135377,AS55990,55990,AS136907,136907,AS58519,58519 port:7547",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · cloud cohort on 7547",
+        "ru": "4.07 · облачная выборка на 7547",
+        "es": "4.07 · cohorte en la nube en 7547",
+        "zh": "4.07 · 云网络组，端口 7547"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-407-cloud-9022",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager/4.07\" asn:AS37963,37963,AS45102,45102,AS135377,135377,AS55990,55990,AS136907,136907,AS58519,58519 port:9022",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "4.07 · cloud cohort on 9022",
+        "ru": "4.07 · облачная выборка на 9022",
+        "es": "4.07 · cohorte en la nube en 9022",
+        "zh": "4.07 · 云网络组，端口 9022"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible",
+      "denominator": "rompager-407-all"
+    },
+    {
+      "id": "rompager-port-80",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager\" port:80",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 80",
+        "ru": "Все версии · порт 80",
+        "es": "Todas las versiones · puerto 80",
+        "zh": "所有版本 · 端口 80"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "rompager-port-443",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager\" port:443",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 443",
+        "ru": "Все версии · порт 443",
+        "es": "Todas las versiones · puerto 443",
+        "zh": "所有版本 · 端口 443"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "rompager-port-7547",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager\" port:7547",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 7547",
+        "ru": "Все версии · порт 7547",
+        "es": "Todas las versiones · puerto 7547",
+        "zh": "所有版本 · 端口 7547"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "rompager-port-7548",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager\" port:7548",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 7548",
+        "ru": "Все версии · порт 7548",
+        "es": "Todas las versiones · puerto 7548",
+        "zh": "所有版本 · 端口 7548"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "rompager-port-30005",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager\" port:30005",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 30005",
+        "ru": "Все версии · порт 30005",
+        "es": "Todas las versiones · puerto 30005",
+        "zh": "所有版本 · 端口 30005"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "rompager-port-51007",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager\" port:51007",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 51007",
+        "ru": "Все версии · порт 51007",
+        "es": "Todas las versiones · puerto 51007",
+        "zh": "所有版本 · 端口 51007"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "rompager-port-9022",
+      "parent": "rompager",
+      "group": "legacy-http",
+      "query": "\"RomPager\" port:9022",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 9022",
+        "ru": "Все версии · порт 9022",
+        "es": "Todas las versiones · puerto 9022",
+        "zh": "所有版本 · 端口 9022"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-80",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:80",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 80",
+        "ru": "Все версии · порт 80",
+        "es": "Todas las versiones · puerto 80",
+        "zh": "所有版本 · 端口 80"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-443",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:443",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 443",
+        "ru": "Все версии · порт 443",
+        "es": "Todas las versiones · puerto 443",
+        "zh": "所有版本 · 端口 443"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-7547",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:7547",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 7547",
+        "ru": "Все версии · порт 7547",
+        "es": "Todas las versiones · puerto 7547",
+        "zh": "所有版本 · 端口 7547"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-7548",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:7548",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 7548",
+        "ru": "Все версии · порт 7548",
+        "es": "Todas las versiones · puerto 7548",
+        "zh": "所有版本 · 端口 7548"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-8080",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:8080",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 8080",
+        "ru": "Все версии · порт 8080",
+        "es": "Todas las versiones · puerto 8080",
+        "zh": "所有版本 · 端口 8080"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-8081",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:8081",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 8081",
+        "ru": "Все версии · порт 8081",
+        "es": "Todas las versiones · puerto 8081",
+        "zh": "所有版本 · 端口 8081"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-9080",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:9080",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 9080",
+        "ru": "Все версии · порт 9080",
+        "es": "Todas las versiones · puerto 9080",
+        "zh": "所有版本 · 端口 9080"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-30005",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:30005",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 30005",
+        "ru": "Все версии · порт 30005",
+        "es": "Todas las versiones · puerto 30005",
+        "zh": "所有版本 · 端口 30005"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-51005",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:51005",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 51005",
+        "ru": "Все версии · порт 51005",
+        "es": "Todas las versiones · puerto 51005",
+        "zh": "所有版本 · 端口 51005"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-port-58000",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" port:58000",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "All versions · port 58000",
+        "ru": "Все версии · порт 58000",
+        "es": "Todas las versiones · puerto 58000",
+        "zh": "所有版本 · 端口 58000"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-cloud-all",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" asn:AS37963,37963,AS45102,45102,AS135377,135377,AS55990,55990,AS136907,136907,AS58519,58519",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "Cloud-network reference cohort",
+        "ru": "Контрольная выборка облачных сетей",
+        "es": "Cohorte de referencia en redes de nube",
+        "zh": "云网络参考组"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-outside-cloud",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd\" -asn:AS37963,37963 -asn:AS45102,45102 -asn:AS135377,135377 -asn:AS55990,55990 -asn:AS136907,136907 -asn:AS58519,58519",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "Outside the selected cloud ASNs",
+        "ru": "Вне выбранных облачных ASN",
+        "es": "Fuera de los ASN de nube seleccionados",
+        "zh": "所选云 ASN 之外"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "mini-httpd-1-19-all",
+      "parent": "mini-httpd",
+      "group": "legacy-http",
+      "query": "\"mini_httpd/1.19\"",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "mini_httpd 1.19 · all ports",
+        "ru": "mini_httpd 1.19 · все порты",
+        "es": "mini_httpd 1.19 · todos los puertos",
+        "zh": "mini_httpd 1.19 · 所有端口"
+      },
+      "source": {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      "overlap": "possible"
     }
   ]
 }

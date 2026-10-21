@@ -1,0 +1,127 @@
+{
+ "dork": "\"realm@easycwmp\" org:\"Fidium\"",
+ "total": 305925,
+ "taken": "2026-10-21T21:29:25+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 305925,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 305925,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 16,
+   "covered": 305925,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 305925,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 305925,
+   "value": "US"
+  }
+ ],
+ "asn": [
+  {
+   "count": 240007,
+   "value": "as13977"
+  },
+  {
+   "count": 32747,
+   "value": "as6300"
+  },
+  {
+   "count": 18608,
+   "value": "as14051"
+  },
+  {
+   "count": 5593,
+   "value": "as12042"
+  },
+  {
+   "count": 3566,
+   "value": "as13333"
+  },
+  {
+   "count": 2963,
+   "value": "as5742"
+  },
+  {
+   "count": 1215,
+   "value": "as13672"
+  },
+  {
+   "count": 492,
+   "value": "13977"
+  },
+  {
+   "count": 324,
+   "value": "as22647"
+  },
+  {
+   "count": 198,
+   "value": "as14671"
+  },
+  {
+   "count": 130,
+   "value": "6300"
+  },
+  {
+   "count": 52,
+   "value": "14051"
+  },
+  {
+   "count": 11,
+   "value": "5742"
+  },
+  {
+   "count": 9,
+   "value": "12042"
+  },
+  {
+   "count": 8,
+   "value": "13333"
+  },
+  {
+   "count": 2,
+   "value": "22647"
+  }
+ ],
+ "ports": [
+  {
+   "count": 305925,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 305925,
+   "value": "Fidium"
+  }
+ ],
+ "id": "fact-easycwmp-vanilla-52fb7670ac",
+ "parent": "easycwmp-vanilla",
+ "group": "facts",
+ "label": {
+  "ru": "карман Fidium/Consolidated",
+  "en": "Fidium/Consolidated subset",
+  "es": "Subconjunto Fidium/Consolidated",
+  "zh": "Fidium/Consolidated 子集"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

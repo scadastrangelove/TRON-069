@@ -1,0 +1,71 @@
+{
+ "dork": "\"realm@easycwmp\" org:\"Google Fiber\"",
+ "total": 41788,
+ "taken": "2026-10-21T21:29:24+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 41788,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 41788,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 41788,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 41788,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 41788,
+   "value": "US"
+  }
+ ],
+ "asn": [
+  {
+   "count": 41737,
+   "value": "as16591"
+  },
+  {
+   "count": 51,
+   "value": "16591"
+  }
+ ],
+ "ports": [
+  {
+   "count": 41788,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 41788,
+   "value": "Google Fiber Inc."
+  }
+ ],
+ "id": "fact-easycwmp-vanilla-9f594b9dba",
+ "parent": "easycwmp-vanilla",
+ "group": "facts",
+ "label": {
+  "ru": "карман Google Fiber",
+  "en": "Google Fiber subset",
+  "es": "Subconjunto Google Fiber",
+  "zh": "Google Fiber 子集"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

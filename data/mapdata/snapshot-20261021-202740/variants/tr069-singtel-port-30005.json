@@ -1,0 +1,135 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:SG port:30005",
+ "total": 115290,
+ "taken": "2026-10-18T08:25:31+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 115290,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 11,
+   "covered": 115290,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 8,
+   "covered": 115290,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 115290,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 115290,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 103462,
+   "value": "as9506"
+  },
+  {
+   "count": 6602,
+   "value": "as3758"
+  },
+  {
+   "count": 4026,
+   "value": "as135600"
+  },
+  {
+   "count": 978,
+   "value": "9506"
+  },
+  {
+   "count": 82,
+   "value": "3758"
+  },
+  {
+   "count": 65,
+   "value": "135600"
+  },
+  {
+   "count": 42,
+   "value": "as984"
+  },
+  {
+   "count": 33,
+   "value": "as17561"
+  }
+ ],
+ "ports": [
+  {
+   "count": 115290,
+   "value": 30005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 75360,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 27686,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 5754,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 2750,
+   "value": "Whiz Communications Pte Ltd"
+  },
+  {
+   "count": 1772,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 1333,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 346,
+   "value": "SingTel Mobile"
+  },
+  {
+   "count": 206,
+   "value": "SingNet BroadBand Network Singapore Telecommunications LTD"
+  },
+  {
+   "count": 56,
+   "value": "Cloud Innovation Ltd"
+  },
+  {
+   "count": 22,
+   "value": "Octopus Web Solution LLC"
+  },
+  {
+   "count": 5,
+   "value": "OCTOPUS WEB SOLUTION INC"
+  }
+ ],
+ "id": "tr069-singtel-port-30005",
+ "parent": "tr069-client",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "TR069 Client · Singtel / SG · 30005",
+  "en": "TR069 Client · Singtel / SG · 30005",
+  "es": "TR069 Client · Singtel / SG · 30005",
+  "zh": "TR069 Client · Singtel / SG · 30005"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

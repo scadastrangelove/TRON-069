@@ -82,7 +82,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
     'const W=1320,H=600,svg=$("#world"); let newsIndex=0,newsPaused=false;const newsMotion={matches:false};',
     ...['facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
       'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dNodeBox','dNodePort','dConnection','dPaintConnections','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
-      'sourcesHtml','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
+      'sourcesHtml','measurementQualityHtml','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
       'newsText','newsImportant','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews','renderWanted','renderTabVisibility'].map(fn),
@@ -148,6 +148,32 @@ test('overview-count-scopes', 'Worldwide port and signature counts remain distin
   expect(c.element('#sliceSub').textContent.includes(date), 'Slice date must show the calendar date');
   for(const lang of ['en','ru','es','zh'])c.run(`LANG=${JSON.stringify(lang)};renderOverview();`);
   return `Port baseline ${data.denominators.park.total}; core ${coreTotal}; selection scoped separately`;
+});
+test('legacy-http-quality', 'HTTP component totals and cloud cohorts remain separate, dated and historical', () => {
+  const c=context();
+  for(const slug of ['rompager','mini-httpd']) {
+    expect(data.excluded.includes(slug), `${slug} entered the core TR-069 total`);
+    expect(data.lines[slug].service==='mixed'&&!data.lines[slug].dork.includes('port:'), `${slug} lost its all-port scope`);
+    for(const lang of ['en','ru','es','zh']) {
+      c.run(`LANG=${JSON.stringify(lang)};S.lines=new Set([${JSON.stringify(slug)}]);refreshTest();renderInspector();`);
+      const html=c.element('#inspector').innerHTML;
+      expect(html.includes('measurement-quality')&&!html.includes('undefined'), `Missing quality card: ${slug}/${lang}`);
+      if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(html), `Russian fallback: ${slug}/${lang}`);
+    }
+    const quality=data.meta.lines[slug].quality;
+    for(const key of ['cohort','outside']) {
+      const record=data.variants[slug].find(v=>v.id===quality[key]);
+      expect(record?.taken&&record.dork.includes('asn:'), `Missing reproducible ${slug}/${key} count`);
+    }
+  }
+  const old=JSON.parse(fs.readFileSync(path.join(root,'atlas/snapshots/20261018-064713.json'),'utf8'));
+  const historical=context({hash:'#lang=en&lines=rompager',payload:{...data,...old}});
+  historical.run('urlRead();refreshTest();renderInspector();');
+  const html=historical.run('measurementQualityHtml("rompager")');
+  const missing=historical.run('t("fact_not_collected")');
+  expect(html.split(missing).length-1===3, 'Historical quality card borrowed current counts or showed zero');
+  expect(!html.includes('2026-10-21T'), 'Current collection timestamp leaked into history');
+  return 'All-port mixed lines excluded from core; cloud cohorts localized; old dates remain uncollected';
 });
 test('ecosystem-views', 'Filters, neighborhoods and shared graph state preserve evidence scope', () => {
   const c=context({hash:'#lang=es&tab=ecosystem&eco_node=gateway&eco_focus=gateway&eco_hyp=1&eco_depth=2'});

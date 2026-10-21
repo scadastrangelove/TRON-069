@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:AE",
+ "total": 635,
+ "taken": "2026-10-18T08:08:39+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 635,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 635,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 621,
+   "value": "as5384"
+  },
+  {
+   "count": 11,
+   "value": "5384"
+  },
+  {
+   "count": 2,
+   "value": "as15802"
+  },
+  {
+   "count": 1,
+   "value": "as8966"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 567,
+   "value": "Emirates Telecommunications Corporation"
+  },
+  {
+   "count": 64,
+   "value": "EMIRATES TELECOMMUNICATIONS GROUP COMPANY (ETISALAT GROUP) PJSC"
+  },
+  {
+   "count": 2,
+   "value": "Emirates Integrated Telecommunications Company PJSC (EITC-DU)"
+  },
+  {
+   "count": 1,
+   "value": "Al Muadaa Internet"
+  },
+  {
+   "count": 1,
+   "value": "Capitol"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "AE"
+}

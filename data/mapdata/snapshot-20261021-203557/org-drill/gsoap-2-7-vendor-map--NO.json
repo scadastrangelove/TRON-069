@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:NO",
+ "total": 38,
+ "taken": "2026-10-21T20:58:45+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 38,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 38,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 38,
+   "value": "as2116"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 23,
+   "value": "GlobalConnect-AS2116 GLOBALCONNECT"
+  },
+  {
+   "count": 15,
+   "value": "GLOBALCONNECT AS"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "NO"
+}

@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:BB",
+ "total": 196,
+ "taken": "2026-10-21T21:16:55+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 196,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 196,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 168,
+   "value": "as14813"
+  },
+  {
+   "count": 24,
+   "value": "as11139"
+  },
+  {
+   "count": 4,
+   "value": "14813"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 186,
+   "value": "Cable & Wireless (Barbados) Limited"
+  },
+  {
+   "count": 7,
+   "value": "Columbus Telecommunications (Barbados) Limited"
+  },
+  {
+   "count": 3,
+   "value": "Level 3 Parent, LLC"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "BB"
+}

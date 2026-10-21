@@ -258,6 +258,8 @@ main{max-width:1800px;margin:0 auto;padding:22px clamp(14px,3vw,44px) 40px}
 .ovcard p{font-size:11px;color:var(--muted);line-height:1.6;margin:5px 0 9px}
 .cmpgrid{display:grid;gap:9px}
 .scopewarn{font-size:10.5px;color:var(--amber-ink);background:var(--amber-bg);border:1px solid var(--amber-line);padding:9px 11px;border-radius:9px;line-height:1.6;margin-top:12px}
+.measurement-quality{margin:12px 0;padding:12px;border:1px solid var(--amber-line);border-left:3px solid var(--amber-ink);border-radius:10px;background:var(--amber-bg)}
+.measurement-quality h3{margin:0 0 5px}.measurement-quality .krow{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--amber-line)}.measurement-quality .nm{flex:1;min-width:0}.measurement-quality .n{white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}.measurement-quality p{font-size:11px;line-height:1.55;margin:8px 0}.measurement-quality .note{overflow-wrap:anywhere;border:0;padding:0;margin:4px 0;font-size:10px;line-height:1.5}
 
 /* ── нижняя сетка ───────────────────────── */
 .bottom{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:18px;margin-top:18px}
@@ -2005,6 +2007,13 @@ function variantHtml(slug){
   <a class="btn ghost" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(v.dork)}">↗ Shodan</a></details>`;
  }).join("")+(pending.length?`<h3>${t("pending_queries")}</h3><p class="note">${t("pending_scope")}</p>`+pending.map(q=>`<details class="variant-card"><summary>${esc(ecoText(q.label))} · ${t("fact_not_collected")}</summary><div class="note"><code>${esc(q.query)}</code></div>${sourcesHtml([q.source])}<a class="btn ghost" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(q.query)}">↗ Shodan</a></details>`).join(""):"");
 }
+function measurementQualityHtml(slug){
+ const quality=DATA.meta.lines[slug]?.quality;
+ if(!quality)return "";
+ const variants=DATA.variants?.[slug]||[];
+ const records=[quality.population?variants.find(v=>v.id===quality.population):(DATA.lines[slug]?.collection_status==="ok"?DATA.lines[slug]:null),...['cohort','outside'].map(key=>variants.find(v=>v.id===quality[key]))];
+ return `<section class="measurement-quality"><h3>${esc(loc(quality.title))}</h3><p class="note">${esc(loc(quality.scope))}</p>${records.map((record,i)=>`<div class="krow"><span class="nm">${esc(loc(quality.labels[i]))}${record?.taken?`<small class="note" style="display:block">${esc(record.taken)}</small>`:""}</span><span class="n">${record?new Intl.NumberFormat(LANG).format(record.total):t('fact_not_collected')}</span></div>`).join('')}<p>${esc(loc(quality.note))}</p><p class="note">${esc(loc('These worldwide counts use independent Shodan queries and can differ slightly as the index changes.'))}</p>${sourcesHtml([{file:'LEGACY-HTTP.md',anchor:'honeypots'}])}</section>`;
+}
 function attributionEvidenceHtml(slug){
  const item=(DATA.attributions?.items||[]).find(item=>item.lines.includes(slug));
  if(!item)return "";
@@ -2024,9 +2033,10 @@ function renderInspector(){
   <h2>${esc(L.name)} <span style="font-weight:400;color:var(--faint)">· ${esc(ccName(cc))}</span></h2>
   <div class="subtitle">${esc(loc(M(slug).vendor||""))} ${badgeHtml(slug)} ${serviceBadge(slug)}</div><div class="note">${t("collected_at")}: ${esc(drill?.taken||L.taken||t("fact_not_collected"))}</div>
   ${attributionEvidenceHtml(slug)}
+  ${measurementQualityHtml(slug)}
   ${!geoPass(cc)?`<div class="scopewarn">${t("outside_slice")}</div>`:""}
   <div class="bignum num">${fmt(L.collection_status==="ok"?n:null)} <small>${t("pair_in")}</small></div>
-  <div class="krow"><span class="nm">${t("pair_share")}</span><span class="n">${ident&&L.service!=="acs"?Math.round(100*n/ident)+"%":"—"}</span></div>
+  <div class="krow"><span class="nm">${t("pair_share")}</span><span class="n">${!DATA.excluded.includes(slug)&&ident?Math.round(100*n/ident)+"%":"—"}</span></div>
   <div class="krow"><span class="nm">${t("pair_glob")}</span><span class="n">${fmtF(L.total)}</span></div>
   ${drill?`${coverageNote(drill)}<h3>${t("s_ops")}</h3><div class="klist">${(()=>{const m=new Map();for(const o of drill.orgs){const nz=normOrg(o.value,cc);m.set(nz,(m.get(nz)||0)+o.count);}return[...m.entries()].sort((a,b2)=>b2[1]-a[1]).map(([nz,n])=>`<div class="krow"><span class="nm">${esc(loc(nz))}</span><span class="n">${fmtF(n)}</span></div>`).join("");})()}</div><h3>ASN</h3><div class="portrow">${drill.asn.map(a=>`<span class="pchip">${a.value}: ${fmtF(a.count)}</span>`).join("")}</div>`:`<div class="scopewarn">${t("no_org_data")}</div>`}
   <div class="actrow"><a class="btn primary" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent(L.dork+" country:"+cc)}">↗ Shodan</a><button class="btn ghost" data-copy="${esc(L.dork+" country:"+cc)}">${t("copy")}</button></div>`;
@@ -2047,7 +2057,7 @@ function renderInspector(){
   <div class="krow"><span class="nm">${t("cty_silent")}</span><span class="n">${silent==null?"—":silent+"%"}</span></div>
   ${httpShareReason(cc)?`<p class="note">${esc(httpShareReason(cc))}</p>`:""}
   <h3>${t("cty_lines")}</h3><div class="klist">
-  ${Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,12).map(([s,n])=>`<button class="krow" data-pair="${esc(s)}"><i class="sw" style="background:${lineColor(s)}"></i><span class="nm">${esc(DATA.lines[s].name)}</span><span class="n">${fmtF(n)}${ident?" · "+Math.round(100*n/ident)+"%":""}</span></button>`).join("")}
+  ${Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,12).map(([s,n])=>`<button class="krow" data-pair="${esc(s)}"><i class="sw" style="background:${lineColor(s)}"></i><span class="nm">${esc(DATA.lines[s].name)}</span><span class="n">${fmtF(n)}${!DATA.excluded.includes(s)&&ident?" · "+Math.round(100*n/ident)+"%":""}</span></button>`).join("")}
   </div>`:`<div class="note">${t("no_country_data")}</div>`}
   ${orgs?`${coverageNote(DATA.orgdrill[drillSlug+"--"+cc])}<h3>${t("cty_ops")}</h3><div class="klist">${orgs.slice(0,7).map(o=>`<div class="krow"><span class="nm">${esc(loc(o.value))}</span><span class="n">${fmtF(o.count)}</span></div>`).join("")}</div>`:""}
   <div class="actrow"><a class="btn primary" target="_blank" rel="noopener" href="https://www.shodan.io/search?query=${encodeURIComponent((S.lines.size===1?DATA.lines[[...S.lines][0]].dork:"port:7547")+" country:"+cc)}">↗ Shodan</a><button class="btn ghost" data-copy="${esc((S.lines.size===1?DATA.lines[[...S.lines][0]].dork:"port:7547")+" country:"+cc)}">${t("copy")}</button></div>`;
@@ -2061,6 +2071,7 @@ function renderInspector(){
   <h2>${esc(L.name)}</h2>
   <div class="subtitle">${esc(loc(m.vendor||""))} · ${esc(loc(m.role||""))} ${badgeHtml(slug)} ${serviceBadge(slug)} · ${t("line_hint")}</div>
   <div class="bignum num">${fmt(L.collection_status==="ok"?inSlice.total:null)} <small>${t("line_in")} ${fmtF(L.total)}</small></div><div class="note">${t("collected_at")}: ${esc(L.taken||t("fact_not_collected"))}</div>
+  ${measurementQualityHtml(slug)}
   ${L.ports&&L.ports.length?`<h3>${t("s_ports")}</h3><div class="portrow">${L.ports.map(p=>`<span class="pchip">${p.value}: ${fmtF(p.count)}</span>`).join("")}</div>`:""}
   ${m.findings&&m.findings.length?`<h3>${t("s_find")}</h3>${m.findings.map(f=>`<div class="note">${esc(loc(f))}</div>`).join("")}`:""}
   ${m.anomalies&&m.anomalies.length?`<h3>${t("s_anom")}</h3>${m.anomalies.map(f=>`<div class="note anom">${esc(loc(f))}</div>`).join("")}`:""}

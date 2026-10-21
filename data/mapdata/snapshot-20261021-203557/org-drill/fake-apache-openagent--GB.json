@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" country:GB",
+ "total": 4,
+ "taken": "2026-10-21T21:26:53+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as63859"
+  },
+  {
+   "count": 1,
+   "value": "as5607"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "PT. Eka Mas Republik"
+  },
+  {
+   "count": 1,
+   "value": "Sky UK Limited"
+  }
+ ],
+ "line": "fake-Apache openagent",
+ "line_id": "fake-apache-openagent",
+ "cc": "GB"
+}

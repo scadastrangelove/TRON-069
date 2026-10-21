@@ -22,6 +22,8 @@ IDENT_EXCLUDE = {
     'sky-ee-tr069-http-server', 'windtre-tr069-http-server', 'sagemcom',
     'genieacs-admin-ui', 'openacs', 'axiros', 'magticom-gsoap',
     'decimal-nonce-class', 'mini-web-server-1-0-zte-corp',
+    # Generic HTTP component populations include services outside CWMP.
+    'rompager', 'mini-httpd',
 }
 
 def read(path):

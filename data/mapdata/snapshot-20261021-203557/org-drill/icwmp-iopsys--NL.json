@@ -1,0 +1,69 @@
+{
+ "dork": "\"authenticate@cwmp\" country:NL",
+ "total": 8,
+ "taken": "2026-10-21T20:39:24+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 8,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 7,
+   "remainder": 1
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as34612"
+  },
+  {
+   "count": 2,
+   "value": "as31615"
+  },
+  {
+   "count": 1,
+   "value": "31615"
+  },
+  {
+   "count": 1,
+   "value": "as59395"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "MatrixData PPPoE"
+  },
+  {
+   "count": 2,
+   "value": "Pool for internet users"
+  },
+  {
+   "count": 1,
+   "value": "Matrix Groep B.V."
+  },
+  {
+   "count": 1,
+   "value": "Odido Netherlands B.V."
+  },
+  {
+   "count": 1,
+   "value": "Pool for mobile users"
+  },
+  {
+   "count": 1,
+   "value": "Southern Communications Ltd"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "NL"
+}

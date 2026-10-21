@@ -1,0 +1,760 @@
+{
+ "dork": "\"mini_httpd\" port:58000",
+ "total": 404,
+ "taken": "2026-10-21T20:33:48+00:00",
+ "run_id": "5ed61d4a-0087-495c-89f5-bc7f13569445",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 10,
+   "covered": 404,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 394,
+   "remainder": 10
+  },
+  "asn": {
+   "values_returned": 66,
+   "covered": 404,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 404,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 393,
+   "value": "RU"
+  },
+  {
+   "count": 2,
+   "value": "JP"
+  },
+  {
+   "count": 2,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "CH"
+  },
+  {
+   "count": 1,
+   "value": "CN"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 36,
+   "value": "as12768"
+  },
+  {
+   "count": 31,
+   "value": "as42682"
+  },
+  {
+   "count": 18,
+   "value": "as41668"
+  },
+  {
+   "count": 16,
+   "value": "as42116"
+  },
+  {
+   "count": 16,
+   "value": "as50512"
+  },
+  {
+   "count": 14,
+   "value": "as34533"
+  },
+  {
+   "count": 14,
+   "value": "as41727"
+  },
+  {
+   "count": 14,
+   "value": "as50543"
+  },
+  {
+   "count": 13,
+   "value": "as41786"
+  },
+  {
+   "count": 13,
+   "value": "as56330"
+  },
+  {
+   "count": 12,
+   "value": "as39435"
+  },
+  {
+   "count": 12,
+   "value": "as41682"
+  },
+  {
+   "count": 12,
+   "value": "as51570"
+  },
+  {
+   "count": 12,
+   "value": "as52207"
+  },
+  {
+   "count": 10,
+   "value": "as42683"
+  },
+  {
+   "count": 9,
+   "value": "as50498"
+  },
+  {
+   "count": 9,
+   "value": "as57026"
+  },
+  {
+   "count": 8,
+   "value": "as41661"
+  },
+  {
+   "count": 8,
+   "value": "as41754"
+  },
+  {
+   "count": 8,
+   "value": "as50542"
+  },
+  {
+   "count": 8,
+   "value": "as51035"
+  },
+  {
+   "count": 8,
+   "value": "as51604"
+  },
+  {
+   "count": 8,
+   "value": "as51819"
+  },
+  {
+   "count": 7,
+   "value": "as41843"
+  },
+  {
+   "count": 7,
+   "value": "as43478"
+  },
+  {
+   "count": 6,
+   "value": "as34590"
+  },
+  {
+   "count": 5,
+   "value": "as56420"
+  },
+  {
+   "count": 5,
+   "value": "as57044"
+  },
+  {
+   "count": 5,
+   "value": "as57378"
+  },
+  {
+   "count": 4,
+   "value": "as39028"
+  },
+  {
+   "count": 4,
+   "value": "as56377"
+  },
+  {
+   "count": 4,
+   "value": "as59713"
+  },
+  {
+   "count": 4,
+   "value": "as63949"
+  },
+  {
+   "count": 3,
+   "value": "34533"
+  },
+  {
+   "count": 3,
+   "value": "51570"
+  },
+  {
+   "count": 3,
+   "value": "51604"
+  },
+  {
+   "count": 3,
+   "value": "as51645"
+  },
+  {
+   "count": 2,
+   "value": "as16509"
+  },
+  {
+   "count": 2,
+   "value": "as49048"
+  },
+  {
+   "count": 2,
+   "value": "as8359"
+  },
+  {
+   "count": 1,
+   "value": "12768"
+  },
+  {
+   "count": 1,
+   "value": "41786"
+  },
+  {
+   "count": 1,
+   "value": "41843"
+  },
+  {
+   "count": 1,
+   "value": "42682"
+  },
+  {
+   "count": 1,
+   "value": "42683"
+  },
+  {
+   "count": 1,
+   "value": "50498"
+  },
+  {
+   "count": 1,
+   "value": "51035"
+  },
+  {
+   "count": 1,
+   "value": "56330"
+  },
+  {
+   "count": 1,
+   "value": "57378"
+  },
+  {
+   "count": 1,
+   "value": "as12389"
+  },
+  {
+   "count": 1,
+   "value": "as12714"
+  },
+  {
+   "count": 1,
+   "value": "as15673"
+  },
+  {
+   "count": 1,
+   "value": "as200463"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as20807"
+  },
+  {
+   "count": 1,
+   "value": "as21365"
+  },
+  {
+   "count": 1,
+   "value": "as22773"
+  },
+  {
+   "count": 1,
+   "value": "as30881"
+  },
+  {
+   "count": 1,
+   "value": "as35807"
+  },
+  {
+   "count": 1,
+   "value": "as39775"
+  },
+  {
+   "count": 1,
+   "value": "as45102"
+  },
+  {
+   "count": 1,
+   "value": "as4657"
+  },
+  {
+   "count": 1,
+   "value": "as48524"
+  },
+  {
+   "count": 1,
+   "value": "as50544"
+  },
+  {
+   "count": 1,
+   "value": "as56981"
+  },
+  {
+   "count": 1,
+   "value": "as9808"
+  }
+ ],
+ "ports": [
+  {
+   "count": 404,
+   "value": 58000
+  }
+ ],
+ "orgs": [
+  {
+   "count": 42,
+   "value": "JSC \"ER-Telecom Holding\""
+  },
+  {
+   "count": 20,
+   "value": "JSC \"ER-Telecom Holding\" Nizhny Novgorod"
+  },
+  {
+   "count": 15,
+   "value": "JSC \"ER-Telecom Holding\" Barnaul Branch"
+  },
+  {
+   "count": 13,
+   "value": "JSC \"ER-Telecom Holding\" Samara Branch"
+  },
+  {
+   "count": 12,
+   "value": "JSC \"ER-Telecom Holding\" Naberezhnye Chelny branch"
+  },
+  {
+   "count": 11,
+   "value": "JSC \"ER-Telecom Holding\" Kazan' Branch"
+  },
+  {
+   "count": 11,
+   "value": "JSC \"ER-Telecom Holding\" Kirov Branch"
+  },
+  {
+   "count": 11,
+   "value": "JSC \"ER-Telecom Holding\" Kurgan Branch"
+  },
+  {
+   "count": 11,
+   "value": "JSC \"ER-Telecom Holding\" Yoshkar-Ola Branch"
+  },
+  {
+   "count": 10,
+   "value": "JSC \"ER-Telecom Holding\" Saratov Branch"
+  },
+  {
+   "count": 10,
+   "value": "JSC \"ER-Telecom Holding\" Tula Branch"
+  },
+  {
+   "count": 10,
+   "value": "JSC \"ER-Telecom Holding\" Volgograd Branch"
+  },
+  {
+   "count": 9,
+   "value": "JSC \"ER-Telecom Holding\" Saint-Petersburg Branch"
+  },
+  {
+   "count": 9,
+   "value": "JSC \"ER-Telecom Holding\" Tyumen' branch"
+  },
+  {
+   "count": 8,
+   "value": "JSC \"ER-Telecom Holding\" Ufa Branch"
+  },
+  {
+   "count": 8,
+   "value": "JSC \"ER-Telecom Holding\" Voronezh Branch"
+  },
+  {
+   "count": 7,
+   "value": "JSC \"ER-Telecom Holding\" Lipetsk Branch"
+  },
+  {
+   "count": 7,
+   "value": "JSC \"ER-Telecom Holding\" Omsk Branch"
+  },
+  {
+   "count": 7,
+   "value": "JSC \"ER-Telecom Holding\" Orenburg branch"
+  },
+  {
+   "count": 7,
+   "value": "JSC \"ER-Telecom Holding\" Yaroslavl' Branch"
+  },
+  {
+   "count": 6,
+   "value": "JSC \"ER-Telecom Holding\" Chelyabinsk Branch"
+  },
+  {
+   "count": 6,
+   "value": "JSC \"ER-Telecom Holding\" Novosibirsk branch"
+  },
+  {
+   "count": 6,
+   "value": "JSC \"ER-Telecom Holding\" Yekaterinburg Branch"
+  },
+  {
+   "count": 5,
+   "value": "JSC \"ER-Telecom Holding\" Penza Branch"
+  },
+  {
+   "count": 5,
+   "value": "JSC \"ER-Telecom Holding\" Rostov-na-Donu Branch"
+  },
+  {
+   "count": 5,
+   "value": "JSC ER-Telecom Perm'"
+  },
+  {
+   "count": 4,
+   "value": "JSC \"ER-Telecom Holding\" Bryansk Branch"
+  },
+  {
+   "count": 4,
+   "value": "JSC \"ER-Telecom Holding\" Cheboksary Branch"
+  },
+  {
+   "count": 4,
+   "value": "JSC \"ER-Telecom Holding\" Izhevsk branch"
+  },
+  {
+   "count": 4,
+   "value": "JSC \"ER-Telecom Holding\" Ul'yanovsk Branch"
+  },
+  {
+   "count": 4,
+   "value": "JSC ER-Telecom Holding"
+  },
+  {
+   "count": 4,
+   "value": "JSC ER-Telecom Holding Kazan' branch"
+  },
+  {
+   "count": 4,
+   "value": "Linode"
+  },
+  {
+   "count": 3,
+   "value": "CJSC Company ER-Telecom Nizhny Novgorod"
+  },
+  {
+   "count": 3,
+   "value": "CJSC Company Telemax Naberezhnye Chelny"
+  },
+  {
+   "count": 3,
+   "value": "CJSC ER-Telecom Holding Cheboksary branch"
+  },
+  {
+   "count": 3,
+   "value": "CJSC ER-Telecom Holding Lipetsk branch"
+  },
+  {
+   "count": 3,
+   "value": "CJSC ER-Telecom Holding Nizhny Novgorod branch"
+  },
+  {
+   "count": 3,
+   "value": "JSC \"ER-Telecom Holding\" Kursk Branch"
+  },
+  {
+   "count": 3,
+   "value": "Perspectiva Ltd."
+  },
+  {
+   "count": 2,
+   "value": "CJSC Company ER-Telecom"
+  },
+  {
+   "count": 2,
+   "value": "CJSC Company ER-Telecom Kazan'"
+  },
+  {
+   "count": 2,
+   "value": "CJSC Company ER-Telecom Saratov"
+  },
+  {
+   "count": 2,
+   "value": "CJSC Company ER-Telecom Yoshkar-Ola"
+  },
+  {
+   "count": 2,
+   "value": "CJSC ER-Telecom Company Samara"
+  },
+  {
+   "count": 2,
+   "value": "CJSC ER-Telecom Holding Magnitogorsk branch"
+  },
+  {
+   "count": 2,
+   "value": "CJSC ER-Telecom Holding Penza branch"
+  },
+  {
+   "count": 2,
+   "value": "CJSC ER-Telecom Holding Samara branch"
+  },
+  {
+   "count": 2,
+   "value": "CJSC ER-Telecom Holding Tula branch"
+  },
+  {
+   "count": 2,
+   "value": "CJSC ER-Telecom Holding Volgograd branch"
+  },
+  {
+   "count": 2,
+   "value": "CJSC ER-Telecom Holding Yekaterinburg branch"
+  },
+  {
+   "count": 2,
+   "value": "JSC \"ER-Telecom Holding\" Ryazan' Branch"
+  },
+  {
+   "count": 2,
+   "value": "JSC Company ER-Telecom Chelyabinsk"
+  },
+  {
+   "count": 2,
+   "value": "JSC ER-Telecom Holding Kurgan branch"
+  },
+  {
+   "count": 1,
+   "value": "Alibaba Cloud (Singapore) Private Limited"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Switzerland"
+  },
+  {
+   "count": 1,
+   "value": "Amazon.com, Inc."
+  },
+  {
+   "count": 1,
+   "value": "CJSC Company ER-Telecom Izhevsk"
+  },
+  {
+   "count": 1,
+   "value": "CJSC Company ER-Telecom Tyumen'"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Bryansk branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Izhevsk branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Kirov branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Kurgan branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Kursk branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Naberezhnye Chelny branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Omsk branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Rostov-na-Donu branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Ryazan' branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Tver' branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Tyumen' branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Holding Yaroslavl' branch"
+  },
+  {
+   "count": 1,
+   "value": "CJSC ER-Telecom Perm PPPoE individual customers"
+  },
+  {
+   "count": 1,
+   "value": "China Mobile Communications Group Co., Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Cox Communications Inc."
+  },
+  {
+   "count": 1,
+   "value": "JSC \"ER-Telecom Holding\" Irkutsk Branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC \"ER-Telecom Holding\" Krasnoyarsk Branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC \"ER-Telecom Holding\" Magnitogorsk Branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC \"ER-Telecom Holding\" Tomsk Branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC \"ER-Telecom Holding\" Tver' Branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Barnaul branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Cheboksary branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Kirov branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Magnitogorsk branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Nizhny Novgorod branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Novosibirsk branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Penza branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Saratov branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Ufa branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC ER-Telecom Holding Yoshkar-Ola branch"
+  },
+  {
+   "count": 1,
+   "value": "LLC \"HyperNet\""
+  },
+  {
+   "count": 1,
+   "value": "LLC firm \"Letkom\""
+  },
+  {
+   "count": 1,
+   "value": "LTD \"Olympus NSP\""
+  },
+  {
+   "count": 1,
+   "value": "MTS PJSC"
+  },
+  {
+   "count": 1,
+   "value": "Multiservice Cable Networks Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Net By Net Holding LLC"
+  },
+  {
+   "count": 1,
+   "value": "Network Slolution Provider Olympus NSP"
+  },
+  {
+   "count": 1,
+   "value": "Nlink Telecommunications LLC"
+  },
+  {
+   "count": 1,
+   "value": "Olympus NSP Ltd"
+  },
+  {
+   "count": 1,
+   "value": "PJSC \"Mobile TeleSystems\""
+  },
+  {
+   "count": 1,
+   "value": "PJSC Rostelecom"
+  }
+ ],
+ "id": "mini-httpd-port-58000",
+ "parent": "mini-httpd",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 58000",
+  "ru": "Все версии · порт 58000",
+  "es": "Todas las versiones · puerto 58000",
+  "zh": "所有版本 · 端口 58000"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "mini-httpd"
+ },
+ "denominator": null
+}

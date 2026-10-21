@@ -1,0 +1,49 @@
+{
+ "dork": "\"authenticate@cwmp\" country:BR",
+ "total": 140,
+ "taken": "2026-10-18T06:50:35+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 140,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 140,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 135,
+   "value": "as26615"
+  },
+  {
+   "count": 3,
+   "value": "as26599"
+  },
+  {
+   "count": 2,
+   "value": "26615"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 137,
+   "value": "TIM S/A"
+  },
+  {
+   "count": 3,
+   "value": "TELEFÔNICA BRASIL S.A"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "BR"
+}

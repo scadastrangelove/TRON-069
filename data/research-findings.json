@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-10-15",
+  "reviewed": "2026-10-21",
   "edition": "public",
   "findings": [
     {
@@ -714,6 +714,23 @@
         "findings",
         "sources"
       ]
+    },
+    {
+      "id": "legacy-http-all-ports",
+      "status": "included-qualified",
+      "lines": [
+        "rompager",
+        "mini-httpd"
+      ],
+      "source": "LEGACY-HTTP.md",
+      "news_id": "legacy-http-all-ports",
+      "summary": "All-port HTTP component populations with separate port, version and cloud-network counts; suspected honeypot evidence retained without converting residual counts to verified devices.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources",
+        "queries"
+      ]
     }
   ],
   "line_sources": {
@@ -1415,6 +1432,26 @@
       },
       {
         "file": "METHOD.md"
+      }
+    ],
+    "rompager": [
+      {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "rompager"
+      },
+      {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
+      }
+    ],
+    "mini-httpd": [
+      {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "mini-httpd"
+      },
+      {
+        "file": "LEGACY-HTTP.md",
+        "anchor": "honeypots"
       }
     ]
   },
@@ -2163,7 +2200,36 @@
     "gateway-ca-10001",
     "cli-port-1234",
     "cli-serbia",
-    "cli-as8400"
+    "cli-as8400",
+    "rompager-407-all",
+    "rompager-407-cloud-all",
+    "rompager-407-outside-cloud",
+    "rompager-407-aliyun",
+    "rompager-407-ucloud",
+    "rompager-407-huawei",
+    "rompager-407-7547",
+    "rompager-407-cloud-7547",
+    "rompager-407-cloud-9022",
+    "rompager-port-80",
+    "rompager-port-443",
+    "rompager-port-7547",
+    "rompager-port-7548",
+    "rompager-port-30005",
+    "rompager-port-51007",
+    "rompager-port-9022",
+    "mini-httpd-port-80",
+    "mini-httpd-port-443",
+    "mini-httpd-port-7547",
+    "mini-httpd-port-7548",
+    "mini-httpd-port-8080",
+    "mini-httpd-port-8081",
+    "mini-httpd-port-9080",
+    "mini-httpd-port-30005",
+    "mini-httpd-port-51005",
+    "mini-httpd-port-58000",
+    "mini-httpd-cloud-all",
+    "mini-httpd-outside-cloud",
+    "mini-httpd-1-19-all"
   ],
   "withheld": [
     {

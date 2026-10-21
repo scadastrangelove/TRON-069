@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:KY",
+ "total": 277,
+ "taken": "2026-10-18T08:09:08+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 277,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 277,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 276,
+   "value": "as6639"
+  },
+  {
+   "count": 1,
+   "value": "as16437"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 161,
+   "value": "Cable & Wireless (Cayman Islands) Ltd."
+  },
+  {
+   "count": 56,
+   "value": "Cable and Wireless LTD -Cayman"
+  },
+  {
+   "count": 36,
+   "value": "Vodafone Americas"
+  },
+  {
+   "count": 23,
+   "value": "Cable and Wireless Jamaica"
+  },
+  {
+   "count": 1,
+   "value": "Infinity Broadband Ltd"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "KY"
+}

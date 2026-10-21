@@ -1,0 +1,61 @@
+{
+ "dork": "\"authenticate@cwmp\" country:DE",
+ "total": 84,
+ "taken": "2026-10-18T06:50:36+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 84,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 81,
+   "remainder": 3
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 65,
+   "value": "as21413"
+  },
+  {
+   "count": 15,
+   "value": "as57353"
+  },
+  {
+   "count": 1,
+   "value": "as35244"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 65,
+   "value": "Envia Tel GmbH"
+  },
+  {
+   "count": 13,
+   "value": "Vitroconnect Subscriber Pool 1"
+  },
+  {
+   "count": 3,
+   "value": "Antennengemeinschaften ERZNET AG"
+  },
+  {
+   "count": 2,
+   "value": "vitroconnect GmbH"
+  },
+  {
+   "count": 1,
+   "value": "DHCP Customers"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "DE"
+}

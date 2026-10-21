@@ -1,0 +1,669 @@
+{
+ "dork": "\"DigAuth\"",
+ "total": 28932,
+ "taken": "2026-10-18T06:47:26+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 49,
+   "covered": 28932,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 28336,
+   "remainder": 596
+  },
+  "port": {
+   "values_returned": 10,
+   "covered": 28932,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 17630,
+   "value": "BR"
+  },
+  {
+   "count": 2626,
+   "value": "TH"
+  },
+  {
+   "count": 2601,
+   "value": "PH"
+  },
+  {
+   "count": 2070,
+   "value": "VN"
+  },
+  {
+   "count": 1542,
+   "value": "ID"
+  },
+  {
+   "count": 1372,
+   "value": "FR"
+  },
+  {
+   "count": 373,
+   "value": "KH"
+  },
+  {
+   "count": 155,
+   "value": "CO"
+  },
+  {
+   "count": 82,
+   "value": "JO"
+  },
+  {
+   "count": 58,
+   "value": "SE"
+  },
+  {
+   "count": 51,
+   "value": "UA"
+  },
+  {
+   "count": 41,
+   "value": "FI"
+  },
+  {
+   "count": 38,
+   "value": "KZ"
+  },
+  {
+   "count": 37,
+   "value": "MZ"
+  },
+  {
+   "count": 37,
+   "value": "TR"
+  },
+  {
+   "count": 24,
+   "value": "EC"
+  },
+  {
+   "count": 24,
+   "value": "HT"
+  },
+  {
+   "count": 20,
+   "value": "US"
+  },
+  {
+   "count": 17,
+   "value": "ZA"
+  },
+  {
+   "count": 16,
+   "value": "DK"
+  },
+  {
+   "count": 15,
+   "value": "CN"
+  },
+  {
+   "count": 15,
+   "value": "IT"
+  },
+  {
+   "count": 14,
+   "value": "GB"
+  },
+  {
+   "count": 14,
+   "value": "PL"
+  },
+  {
+   "count": 6,
+   "value": "CZ"
+  },
+  {
+   "count": 6,
+   "value": "ES"
+  },
+  {
+   "count": 6,
+   "value": "JP"
+  },
+  {
+   "count": 4,
+   "value": "AR"
+  },
+  {
+   "count": 4,
+   "value": "AT"
+  },
+  {
+   "count": 4,
+   "value": "IR"
+  },
+  {
+   "count": 4,
+   "value": "TW"
+  },
+  {
+   "count": 3,
+   "value": "BE"
+  },
+  {
+   "count": 3,
+   "value": "NL"
+  },
+  {
+   "count": 2,
+   "value": "CH"
+  },
+  {
+   "count": 2,
+   "value": "GR"
+  },
+  {
+   "count": 2,
+   "value": "LA"
+  },
+  {
+   "count": 2,
+   "value": "LV"
+  },
+  {
+   "count": 1,
+   "value": "AM"
+  },
+  {
+   "count": 1,
+   "value": "AU"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "DO"
+  },
+  {
+   "count": 1,
+   "value": "HU"
+  },
+  {
+   "count": 1,
+   "value": "LT"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "PT"
+  },
+  {
+   "count": 1,
+   "value": "SK"
+  },
+  {
+   "count": 1,
+   "value": "TN"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 4863,
+   "value": "as262673"
+  },
+  {
+   "count": 4666,
+   "value": "as28220"
+  },
+  {
+   "count": 1892,
+   "value": "as7552"
+  },
+  {
+   "count": 1794,
+   "value": "as132199"
+  },
+  {
+   "count": 1323,
+   "value": "as23969"
+  },
+  {
+   "count": 1186,
+   "value": "as5410"
+  },
+  {
+   "count": 1050,
+   "value": "as52974"
+  },
+  {
+   "count": 819,
+   "value": "as131090"
+  },
+  {
+   "count": 772,
+   "value": "as9299"
+  },
+  {
+   "count": 764,
+   "value": "as262992"
+  },
+  {
+   "count": 751,
+   "value": "as7713"
+  },
+  {
+   "count": 698,
+   "value": "as63859"
+  },
+  {
+   "count": 664,
+   "value": "as53088"
+  },
+  {
+   "count": 536,
+   "value": "as28210"
+  },
+  {
+   "count": 532,
+   "value": "as28667"
+  },
+  {
+   "count": 403,
+   "value": "as45758"
+  },
+  {
+   "count": 366,
+   "value": "as61917"
+  },
+  {
+   "count": 352,
+   "value": "as262659"
+  },
+  {
+   "count": 347,
+   "value": "as38623"
+  },
+  {
+   "count": 263,
+   "value": "as28258"
+  },
+  {
+   "count": 250,
+   "value": "as262480"
+  },
+  {
+   "count": 242,
+   "value": "28220"
+  },
+  {
+   "count": 227,
+   "value": "as22689"
+  },
+  {
+   "count": 221,
+   "value": "as262481"
+  },
+  {
+   "count": 179,
+   "value": "262673"
+  },
+  {
+   "count": 167,
+   "value": "as262773"
+  },
+  {
+   "count": 165,
+   "value": "as53184"
+  },
+  {
+   "count": 129,
+   "value": "as16347"
+  },
+  {
+   "count": 127,
+   "value": "as10299"
+  },
+  {
+   "count": 120,
+   "value": "as28202"
+  },
+  {
+   "count": 118,
+   "value": "as268669"
+  },
+  {
+   "count": 109,
+   "value": "as24086"
+  },
+  {
+   "count": 94,
+   "value": "as268104"
+  },
+  {
+   "count": 93,
+   "value": "as53097"
+  },
+  {
+   "count": 80,
+   "value": "as262509"
+  },
+  {
+   "count": 75,
+   "value": "as28287"
+  },
+  {
+   "count": 72,
+   "value": "as263252"
+  },
+  {
+   "count": 72,
+   "value": "as61701"
+  },
+  {
+   "count": 71,
+   "value": "as48832"
+  },
+  {
+   "count": 71,
+   "value": "as53080"
+  },
+  {
+   "count": 69,
+   "value": "as267293"
+  },
+  {
+   "count": 59,
+   "value": "as23693"
+  },
+  {
+   "count": 54,
+   "value": "7552"
+  },
+  {
+   "count": 53,
+   "value": "as263072"
+  },
+  {
+   "count": 49,
+   "value": "as262903"
+  },
+  {
+   "count": 47,
+   "value": "7713"
+  },
+  {
+   "count": 46,
+   "value": "as262671"
+  },
+  {
+   "count": 45,
+   "value": "as15895"
+  },
+  {
+   "count": 44,
+   "value": "as263332"
+  },
+  {
+   "count": 43,
+   "value": "as61725"
+  },
+  {
+   "count": 40,
+   "value": "as267385"
+  },
+  {
+   "count": 38,
+   "value": "as267085"
+  },
+  {
+   "count": 37,
+   "value": "262992"
+  },
+  {
+   "count": 37,
+   "value": "52974"
+  },
+  {
+   "count": 37,
+   "value": "as266044"
+  },
+  {
+   "count": 36,
+   "value": "as266502"
+  },
+  {
+   "count": 34,
+   "value": "as28270"
+  },
+  {
+   "count": 34,
+   "value": "as52571"
+  },
+  {
+   "count": 30,
+   "value": "28210"
+  },
+  {
+   "count": 30,
+   "value": "as16086"
+  },
+  {
+   "count": 30,
+   "value": "as37342"
+  },
+  {
+   "count": 29,
+   "value": "as263864"
+  },
+  {
+   "count": 29,
+   "value": "as57013"
+  },
+  {
+   "count": 28,
+   "value": "as262700"
+  },
+  {
+   "count": 27,
+   "value": "as262272"
+  },
+  {
+   "count": 26,
+   "value": "as44034"
+  },
+  {
+   "count": 24,
+   "value": "28667"
+  },
+  {
+   "count": 24,
+   "value": "53088"
+  },
+  {
+   "count": 24,
+   "value": "as263405"
+  },
+  {
+   "count": 24,
+   "value": "as28241"
+  },
+  {
+   "count": 23,
+   "value": "131090"
+  },
+  {
+   "count": 23,
+   "value": "as208363"
+  },
+  {
+   "count": 23,
+   "value": "as22368"
+  },
+  {
+   "count": 23,
+   "value": "as28006"
+  },
+  {
+   "count": 21,
+   "value": "38623"
+  },
+  {
+   "count": 21,
+   "value": "as52260"
+  },
+  {
+   "count": 20,
+   "value": "23969"
+  },
+  {
+   "count": 20,
+   "value": "45758"
+  },
+  {
+   "count": 20,
+   "value": "as264009"
+  },
+  {
+   "count": 19,
+   "value": "as262794"
+  },
+  {
+   "count": 17,
+   "value": "5410"
+  },
+  {
+   "count": 17,
+   "value": "as15897"
+  },
+  {
+   "count": 16,
+   "value": "as16135"
+  },
+  {
+   "count": 16,
+   "value": "as268395"
+  },
+  {
+   "count": 16,
+   "value": "as3301"
+  },
+  {
+   "count": 15,
+   "value": "as266586"
+  },
+  {
+   "count": 15,
+   "value": "as28669"
+  },
+  {
+   "count": 15,
+   "value": "as53171"
+  },
+  {
+   "count": 14,
+   "value": "61917"
+  },
+  {
+   "count": 13,
+   "value": "as16232"
+  },
+  {
+   "count": 13,
+   "value": "as262881"
+  },
+  {
+   "count": 13,
+   "value": "as263097"
+  },
+  {
+   "count": 13,
+   "value": "as4775"
+  },
+  {
+   "count": 12,
+   "value": "9299"
+  },
+  {
+   "count": 12,
+   "value": "as263297"
+  },
+  {
+   "count": 12,
+   "value": "as8434"
+  },
+  {
+   "count": 11,
+   "value": "262659"
+  },
+  {
+   "count": 11,
+   "value": "as1257"
+  },
+  {
+   "count": 11,
+   "value": "as268613"
+  },
+  {
+   "count": 11,
+   "value": "as37611"
+  }
+ ],
+ "ports": [
+  {
+   "count": 17422,
+   "value": 8081
+  },
+  {
+   "count": 8720,
+   "value": 7547
+  },
+  {
+   "count": 976,
+   "value": 8099
+  },
+  {
+   "count": 722,
+   "value": 51200
+  },
+  {
+   "count": 481,
+   "value": 51201
+  },
+  {
+   "count": 400,
+   "value": 51005
+  },
+  {
+   "count": 206,
+   "value": 7548
+  },
+  {
+   "count": 2,
+   "value": 8080
+  },
+  {
+   "count": 2,
+   "value": 30005
+  },
+  {
+   "count": 1,
+   "value": 2121
+  }
+ ],
+ "orgs": [],
+ "name": "DigAuth"
+}

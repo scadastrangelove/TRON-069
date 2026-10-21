@@ -1,0 +1,96 @@
+{
+ "dork": "realm=\"Gateway\" country:GB port:1024",
+ "total": 5868,
+ "taken": "2026-10-18T08:25:46+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 5868,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 5,
+   "covered": 5868,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 5868,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 5868,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 5868,
+   "value": "GB"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5744,
+   "value": "as5378"
+  },
+  {
+   "count": 107,
+   "value": "5378"
+  },
+  {
+   "count": 15,
+   "value": "as25310"
+  },
+  {
+   "count": 2,
+   "value": "25310"
+  }
+ ],
+ "ports": [
+  {
+   "count": 5868,
+   "value": 1024
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3975,
+   "value": "Dynamic IP Addresses"
+  },
+  {
+   "count": 1839,
+   "value": "Vodafone Limited"
+  },
+  {
+   "count": 32,
+   "value": "Vodafone Wholesale Broadband"
+  },
+  {
+   "count": 20,
+   "value": "Fixed IP (Static)"
+  },
+  {
+   "count": 2,
+   "value": "Dynamic IP pool"
+  }
+ ],
+ "id": "gateway-gb-1024",
+ "parent": "gateway-realm",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "Gateway · GB:1024",
+  "ru": "Gateway · GB:1024",
+  "es": "Gateway · GB:1024",
+  "zh": "Gateway · GB:1024"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "gateway-port-scopes"
+ },
+ "denominator": null
+}

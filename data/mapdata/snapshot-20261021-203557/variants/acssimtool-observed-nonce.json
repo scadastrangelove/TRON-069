@@ -1,0 +1,47 @@
+{
+ "dork": "\"acssimtool\" \"VHVlIE5vdiAyOCAxMzo0Nzo1MCAyMDA2MS4xLjEuMTI1\"",
+ "total": 0,
+ "taken": "2026-10-21T21:30:18+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [],
+ "ports": [],
+ "orgs": [],
+ "id": "acssimtool-observed-nonce",
+ "parent": "acssimtool",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "ACSSimTool: nonce из сохранённой выборки",
+  "en": "ACSSimTool: nonce from the saved sample",
+  "es": "ACSSimTool: nonce de la muestra guardada",
+  "zh": "ACSSimTool：已保存样本中的 nonce"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": "fact-acssimtool-27af6cfcf2"
+}

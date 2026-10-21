@@ -1282,6 +1282,74 @@
           "file": "METHOD.md"
         }
       ]
+    },
+    "rompager": {
+      "badge": "class",
+      "vendor": "Allegro Software",
+      "role": "HTTP component / mixed services",
+      "findings": [
+        "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.",
+        "RomPager 4.07 is associated with Misfortune Cookie (CVE-2014-9222). Firmware backports can retain the version string; patch status requires device-specific evidence."
+      ],
+      "anomalies": [
+        "The reported Aliyun sample combines a port-9022 concentration, a long tail of unusual ports and 99 identical banners in 100 records. These support suspected honeypot contamination."
+      ],
+      "sources": [
+        {
+          "file": "LEGACY-HTTP.md",
+          "anchor": "rompager"
+        },
+        {
+          "file": "LEGACY-HTTP.md",
+          "anchor": "honeypots"
+        }
+      ],
+      "quality": {
+        "title": "Measurement quality · worldwide",
+        "scope": "RomPager 4.07 · all ports",
+        "population": "rompager-407-all",
+        "cohort": "rompager-407-cloud-all",
+        "outside": "rompager-407-outside-cloud",
+        "labels": [
+          "Raw matches",
+          "Selected cloud networks",
+          "Outside these cloud networks"
+        ],
+        "note": "The cloud cohort flags likely sensor contamination. Counts outside it still include unclassified services; they are not a verified device census. See the port slices below, including cloud matches on 7547."
+      }
+    },
+    "mini-httpd": {
+      "badge": "class",
+      "vendor": "ACME Labs",
+      "role": "HTTP component / mixed services",
+      "findings": [
+        "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.",
+        "mini_httpd is a general HTTP server used in CPE management interfaces and other services. A server marker alone does not identify an ACS, CWMP or TR-064 endpoint."
+      ],
+      "anomalies": [],
+      "sources": [
+        {
+          "file": "LEGACY-HTTP.md",
+          "anchor": "mini-httpd"
+        },
+        {
+          "file": "LEGACY-HTTP.md",
+          "anchor": "honeypots"
+        }
+      ],
+      "quality": {
+        "title": "Measurement quality · worldwide",
+        "scope": "mini_httpd · all versions, all ports",
+        "population": null,
+        "cohort": "mini-httpd-cloud-all",
+        "outside": "mini-httpd-outside-cloud",
+        "labels": [
+          "Raw matches",
+          "Selected cloud networks",
+          "Outside these cloud networks"
+        ],
+        "note": "The same cloud networks are collected as a reference cohort for mini_httpd. The RomPager banner-sample evidence does not classify these mini_httpd services as honeypots."
+      }
     }
   }
 }

@@ -1,0 +1,53 @@
+{
+ "dork": "\"authenticate@cwmp\" country:AX",
+ "total": 29,
+ "taken": "2026-10-21T20:39:21+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 29,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 29,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 28,
+   "value": "as3238"
+  },
+  {
+   "count": 1,
+   "value": "as200134"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 23,
+   "value": "Residential broadband access, DHCP addressing."
+  },
+  {
+   "count": 4,
+   "value": "ALCOM"
+  },
+  {
+   "count": 1,
+   "value": "Alands Telekommunikation Ab"
+  },
+  {
+   "count": 1,
+   "value": "IP-Connect AB"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "AX"
+}

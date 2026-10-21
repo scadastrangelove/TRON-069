@@ -1,0 +1,79 @@
+{
+ "dork": "\"NettyServer\" country:IT",
+ "total": 31345,
+ "taken": "2026-10-18T08:25:17+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 31345,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 2,
+   "covered": 31345,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 29252,
+   "remainder": 2093
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 31345,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 31345,
+   "value": "IT"
+  }
+ ],
+ "asn": [
+  {
+   "count": 28579,
+   "value": "as1267"
+  },
+  {
+   "count": 473,
+   "value": "as24608"
+  },
+  {
+   "count": 200,
+   "value": "1267"
+  }
+ ],
+ "ports": [
+  {
+   "count": 31345,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 28779,
+   "value": "WIND TRE S.P.A."
+  },
+  {
+   "count": 2566,
+   "value": "UMTS Company"
+  }
+ ],
+ "id": "fact-nettyserver-b44e80cd32",
+ "parent": "nettyserver",
+ "group": "facts",
+ "label": {
+  "en": "NettyServer Italy slice",
+  "ru": "Срез NettyServer в Италии",
+  "es": "Corte NettyServer en Italia",
+  "zh": "意大利 NettyServer 切片"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": null
+}

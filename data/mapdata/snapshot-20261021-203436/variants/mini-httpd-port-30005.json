@@ -1,0 +1,268 @@
+{
+ "dork": "\"mini_httpd\" port:30005",
+ "total": 35,
+ "taken": "2026-10-21T20:35:03+00:00",
+ "run_id": "96b31fae-60b9-49bb-95c1-caf6753f362f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 18,
+   "covered": 35,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 18,
+   "covered": 35,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 17,
+   "covered": 34,
+   "remainder": 1
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 35,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 8,
+   "value": "US"
+  },
+  {
+   "count": 4,
+   "value": "CN"
+  },
+  {
+   "count": 3,
+   "value": "JP"
+  },
+  {
+   "count": 3,
+   "value": "SG"
+  },
+  {
+   "count": 2,
+   "value": "FR"
+  },
+  {
+   "count": 2,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "IT"
+  },
+  {
+   "count": 1,
+   "value": "AE"
+  },
+  {
+   "count": 1,
+   "value": "CH"
+  },
+  {
+   "count": 1,
+   "value": "CL"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "KR"
+  },
+  {
+   "count": 1,
+   "value": "MY"
+  },
+  {
+   "count": 1,
+   "value": "NL"
+  },
+  {
+   "count": 1,
+   "value": "RU"
+  },
+  {
+   "count": 1,
+   "value": "TW"
+  },
+  {
+   "count": 1,
+   "value": "VN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 9,
+   "value": "as63949"
+  },
+  {
+   "count": 5,
+   "value": "as16509"
+  },
+  {
+   "count": 3,
+   "value": "as37963"
+  },
+  {
+   "count": 3,
+   "value": "as45102"
+  },
+  {
+   "count": 2,
+   "value": "as9009"
+  },
+  {
+   "count": 1,
+   "value": "14061"
+  },
+  {
+   "count": 1,
+   "value": "63949"
+  },
+  {
+   "count": 1,
+   "value": "9009"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as18419"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as22773"
+  },
+  {
+   "count": 1,
+   "value": "as28099"
+  },
+  {
+   "count": 1,
+   "value": "as36007"
+  },
+  {
+   "count": 1,
+   "value": "as55990"
+  },
+  {
+   "count": 1,
+   "value": "as57169"
+  },
+  {
+   "count": 1,
+   "value": "as7552"
+  }
+ ],
+ "ports": [
+  {
+   "count": 35,
+   "value": 30005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 6,
+   "value": "Linode"
+  },
+  {
+   "count": 4,
+   "value": "EDIS GmbH"
+  },
+  {
+   "count": 3,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 3,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 3,
+   "value": "Amazon.com, Inc."
+  },
+  {
+   "count": 2,
+   "value": "Akamai Technologies, Inc."
+  },
+  {
+   "count": 2,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 2,
+   "value": "Linode, LLC"
+  },
+  {
+   "count": 1,
+   "value": "A100 ROW GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services France"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Italy"
+  },
+  {
+   "count": 1,
+   "value": "Chief Telecom Inc."
+  },
+  {
+   "count": 1,
+   "value": "Cox Communications Inc."
+  },
+  {
+   "count": 1,
+   "value": "EDIS Infrastructure in Chile"
+  },
+  {
+   "count": 1,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 1,
+   "value": "Kamatera, Inc."
+  },
+  {
+   "count": 1,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Viettel Group"
+  }
+ ],
+ "id": "mini-httpd-port-30005",
+ "parent": "mini-httpd",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 30005",
+  "ru": "Все версии · порт 30005",
+  "es": "Todas las versiones · puerto 30005",
+  "zh": "所有版本 · 端口 30005"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "mini-httpd"
+ },
+ "denominator": null
+}

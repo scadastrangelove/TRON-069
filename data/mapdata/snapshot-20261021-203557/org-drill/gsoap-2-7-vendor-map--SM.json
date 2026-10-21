@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:SM",
+ "total": 20,
+ "taken": "2026-10-21T20:59:00+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 20,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 20,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 20,
+   "value": "as15433"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 18,
+   "value": "Telecom Italia San Marino S.p.A"
+  },
+  {
+   "count": 2,
+   "value": "Telecom Italia San Marino S.p.A. is the International"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "SM"
+}

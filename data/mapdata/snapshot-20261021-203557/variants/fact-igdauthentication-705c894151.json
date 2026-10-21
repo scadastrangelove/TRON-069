@@ -1,0 +1,79 @@
+{
+ "dork": "port:49501 \"IgdAuthentication\"",
+ "total": 204794,
+ "taken": "2026-10-21T21:29:43+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 204794,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 3,
+   "covered": 204794,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 204794,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 204794,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 204794,
+   "value": "PL"
+  }
+ ],
+ "asn": [
+  {
+   "count": 202815,
+   "value": "as9141"
+  },
+  {
+   "count": 1979,
+   "value": "9141"
+  }
+ ],
+ "ports": [
+  {
+   "count": 204794,
+   "value": 49501
+  }
+ ],
+ "orgs": [
+  {
+   "count": 201161,
+   "value": "P4 Sp. z o.o."
+  },
+  {
+   "count": 3270,
+   "value": "UPC Polska Sp. z o.o."
+  },
+  {
+   "count": 363,
+   "value": "Liberty Global B.V."
+  }
+ ],
+ "id": "fact-igdauthentication-705c894151",
+ "parent": "igdauthentication",
+ "group": "facts",
+ "label": {
+  "ru": "экология порта 49501",
+  "en": "Port 49501 distribution",
+  "es": "Distribución del puerto 49501",
+  "zh": "端口 49501 分布"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

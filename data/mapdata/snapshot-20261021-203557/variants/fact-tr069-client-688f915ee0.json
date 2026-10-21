@@ -1,0 +1,75 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" org:\"SpaceX\"",
+ "total": 38,
+ "taken": "2026-10-21T21:29:29+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 38,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 38,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 38,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 38,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 36,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "RW"
+  }
+ ],
+ "asn": [
+  {
+   "count": 38,
+   "value": "as14593"
+  }
+ ],
+ "ports": [
+  {
+   "count": 38,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 38,
+   "value": "SpaceX Services, Inc."
+  }
+ ],
+ "id": "fact-tr069-client-688f915ee0",
+ "parent": "tr069-client",
+ "group": "facts",
+ "label": {
+  "en": "SpaceX organization slice",
+  "ru": "Срез организации SpaceX",
+  "es": "Corte de organización SpaceX",
+  "zh": "SpaceX 组织切片"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

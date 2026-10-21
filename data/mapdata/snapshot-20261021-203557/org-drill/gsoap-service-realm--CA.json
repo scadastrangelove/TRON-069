@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 opaque \"gSOAP Service\" country:CA",
+ "total": 2,
+ "taken": "2026-10-21T21:23:08+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as19016"
+  },
+  {
+   "count": 1,
+   "value": "as5645"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "TekSavvy Solutions, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Westman Communications Group"
+  }
+ ],
+ "line": "gSOAP Service realm",
+ "line_id": "gsoap-service-realm",
+ "cc": "CA"
+}

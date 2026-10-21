@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:VG",
+ "total": 82,
+ "taken": "2026-10-18T08:09:48+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 82,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 82,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 82,
+   "value": "as11139"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 28,
+   "value": "Cable & Wiresles Tortola"
+  },
+  {
+   "count": 20,
+   "value": "Cable & Wireless Antigua and Barbuda Ltd"
+  },
+  {
+   "count": 14,
+   "value": "Cable & Wireless (Barbados) Limited"
+  },
+  {
+   "count": 11,
+   "value": "Cable and Wireless Jamaica"
+  },
+  {
+   "count": 9,
+   "value": "Cable and Wireless Tortola"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "VG"
+}

@@ -1,0 +1,41 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:CY",
+ "total": 1039,
+ "taken": "2026-10-18T07:11:29+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 1,
+   "covered": 1039,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 1039,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1008,
+   "value": "as35432"
+  },
+  {
+   "count": 31,
+   "value": "35432"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1039,
+   "value": "Cablenet Communication Systems plc"
+  }
+ ],
+ "line": "TR069 Client",
+ "line_id": "tr069-client",
+ "cc": "CY"
+}

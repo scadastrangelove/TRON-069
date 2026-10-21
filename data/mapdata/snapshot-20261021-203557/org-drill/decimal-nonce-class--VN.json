@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:VN",
+ "total": 321,
+ "taken": "2026-10-21T21:16:50+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 321,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 321,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 306,
+   "value": "as7552"
+  },
+  {
+   "count": 12,
+   "value": "as24086"
+  },
+  {
+   "count": 3,
+   "value": "7552"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 254,
+   "value": "Viettel Group"
+  },
+  {
+   "count": 23,
+   "value": "Dai IP cho dich vu ADSL DGN+NAN"
+  },
+  {
+   "count": 21,
+   "value": "Dai IP su dung cho mang khach hang FTTH o HaNoi"
+  },
+  {
+   "count": 15,
+   "value": "Dai IP cho dich vu ADSL tai HCM"
+  },
+  {
+   "count": 6,
+   "value": "ADSL HNI"
+  },
+  {
+   "count": 2,
+   "value": "Dai IP cho dich vu ADSL HNI"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "VN"
+}

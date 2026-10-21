@@ -1,0 +1,112 @@
+{
+ "dork": "\"DSLForum CPE Management\" country:SG port:8085",
+ "total": 1843,
+ "taken": "2026-10-18T08:25:44+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 1843,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 8,
+   "covered": 1843,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 1843,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1843,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1843,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1696,
+   "value": "as9506"
+  },
+  {
+   "count": 88,
+   "value": "as3758"
+  },
+  {
+   "count": 54,
+   "value": "9506"
+  },
+  {
+   "count": 3,
+   "value": "3758"
+  },
+  {
+   "count": 2,
+   "value": "as55430"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1843,
+   "value": 8085
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1339,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 374,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 78,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 25,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 14,
+   "value": "SingNet BroadBand Network Singapore Telecommunications LTD"
+  },
+  {
+   "count": 11,
+   "value": "SingTel Mobile"
+  },
+  {
+   "count": 1,
+   "value": "StarHub Cable Vision Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Starhub Ltd."
+  }
+ ],
+ "id": "dslforum-sg-8085",
+ "parent": "dt-speedport-sdk",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "DSLForum · SG:8085",
+  "ru": "DSLForum · SG:8085",
+  "es": "DSLForum · SG:8085",
+  "zh": "DSLForum · SG:8085"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "dslforum-cpe-management"
+ },
+ "denominator": null
+}

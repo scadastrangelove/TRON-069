@@ -1,0 +1,61 @@
+{
+ "dork": "\"cwmpd\" opaque country:TR",
+ "total": 36,
+ "taken": "2026-10-18T08:15:30+00:00",
+ "run_id": "f4498430-a2b7-4001-8cd2-f73b86e0c92b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 36,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 34,
+   "remainder": 2
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 30,
+   "value": "as16135"
+  },
+  {
+   "count": 3,
+   "value": "16135"
+  },
+  {
+   "count": 1,
+   "value": "as200040"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 18,
+   "value": "TURKCELL INTERNET"
+  },
+  {
+   "count": 12,
+   "value": "Turkcell Iletisim Hizmetleri A.S"
+  },
+  {
+   "count": 3,
+   "value": "Ankara GPRS (2G-3G)"
+  },
+  {
+   "count": 2,
+   "value": "Ankara GPRS (2G-3G)-MGB"
+  },
+  {
+   "count": 1,
+   "value": "NETGIGABIT ILETISIM HIZMETLERI LTD. STI."
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "TR"
+}

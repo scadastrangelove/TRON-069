@@ -1,0 +1,73 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:ES",
+ "total": 125,
+ "taken": "2026-10-21T21:17:02+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 125,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 125,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 112,
+   "value": "as205715"
+  },
+  {
+   "count": 6,
+   "value": "as12946"
+  },
+  {
+   "count": 6,
+   "value": "as35394"
+  },
+  {
+   "count": 1,
+   "value": "as200845"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 89,
+   "value": "Fitel Network S.L."
+  },
+  {
+   "count": 20,
+   "value": "CoProSys a.s."
+  },
+  {
+   "count": 6,
+   "value": "TeleCable"
+  },
+  {
+   "count": 4,
+   "value": "Televideo Novelda, S.A.U."
+  },
+  {
+   "count": 3,
+   "value": "FITEL NETWORKS S.L."
+  },
+  {
+   "count": 2,
+   "value": "Cable Aireworld S.A.U."
+  },
+  {
+   "count": 1,
+   "value": "AVATEL TELECOM, SA"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "ES"
+}

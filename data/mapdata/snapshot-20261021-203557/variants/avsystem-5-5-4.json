@@ -1,0 +1,67 @@
+{
+ "dork": "\"avsystem-libcwmp/5.5.4\"",
+ "total": 34,
+ "taken": "2026-10-21T21:29:10+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 34,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 34,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 34,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 34,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 34,
+   "value": "IL"
+  }
+ ],
+ "asn": [
+  {
+   "count": 34,
+   "value": "as12400"
+  }
+ ],
+ "ports": [
+  {
+   "count": 34,
+   "value": 4567
+  }
+ ],
+ "orgs": [
+  {
+   "count": 34,
+   "value": "Partner Communications Ltd."
+  }
+ ],
+ "id": "avsystem-5-5-4",
+ "parent": "avsystem-libcwmp",
+ "group": "avsystem-versions",
+ "label": {
+  "ru": "Версия 5.5.4",
+  "en": "Version 5.5.4",
+  "es": "Versión 5.5.4",
+  "zh": "版本 5.5.4"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": "avsystem-total"
+}

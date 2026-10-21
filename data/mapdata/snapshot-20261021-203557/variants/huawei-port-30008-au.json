@@ -1,0 +1,119 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:30008 country:AU",
+ "total": 7196,
+ "taken": "2026-10-21T21:28:54+00:00",
+ "run_id": "cf290960-28ad-4447-8879-94c8805cde78",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 7196,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 9,
+   "covered": 7196,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 7196,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 7196,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 7196,
+   "value": "AU"
+  }
+ ],
+ "asn": [
+  {
+   "count": 6961,
+   "value": "as7545"
+  },
+  {
+   "count": 228,
+   "value": "7545"
+  },
+  {
+   "count": 4,
+   "value": "as4739"
+  },
+  {
+   "count": 1,
+   "value": "as2764"
+  },
+  {
+   "count": 1,
+   "value": "as7600"
+  },
+  {
+   "count": 1,
+   "value": "as9443"
+  }
+ ],
+ "ports": [
+  {
+   "count": 7196,
+   "value": 30008
+  }
+ ],
+ "orgs": [
+  {
+   "count": 4328,
+   "value": "TPG Internet Pty Ltd"
+  },
+  {
+   "count": 2197,
+   "value": "iiNet Limited"
+  },
+  {
+   "count": 600,
+   "value": "TPG Internet Pty Ltd."
+  },
+  {
+   "count": 61,
+   "value": "AAPT Limited"
+  },
+  {
+   "count": 5,
+   "value": "POWERTEL LIMITED"
+  },
+  {
+   "count": 2,
+   "value": "Powertel Internet Service Provider"
+  },
+  {
+   "count": 1,
+   "value": "NBN, Private IP, IPWAN, MPLS & ADSL broadband technologies"
+  },
+  {
+   "count": 1,
+   "value": "Salient Enterprises Pty Ltd t/a Interworx Technologies Pty Ltd Level 1, 10 Barolin St, Bundaberg, QLD 4670"
+  },
+  {
+   "count": 1,
+   "value": "Vocus Australia"
+  }
+ ],
+ "id": "huawei-port-30008-au",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 30008 · AU",
+  "en": "CR port 30008 · AU",
+  "es": "Puerto CR 30008 · AU",
+  "zh": "CR 端口 30008 · AU"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}
