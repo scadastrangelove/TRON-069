@@ -1,10 +1,10 @@
 {
   "target": "atlas/tr-atlas.html",
-  "sourceSha256": "c532f6cf77de8b4fbacddd5fcb81ea5ae8bbd423276592ab6bb3d14e841cc7ba",
-  "snapshot": "20261010-102121",
-  "testedAt": "2026-10-10T14:05:43.910Z",
+  "sourceSha256": "74d803c0f105bea08b6d5352321085704f794bdbff966cae3df5ecccf52e503b",
+  "snapshot": "20261021-203557",
+  "testedAt": "2026-10-22T06:23:43.212Z",
   "method": "Offline source-function tests with inert output sinks; no browser rendering",
-  "pass": 47,
+  "pass": 68,
   "fail": 0,
   "results": [
     {
@@ -12,6 +12,101 @@
       "description": "Application JavaScript parses",
       "status": "PASS",
       "evidence": "Parsed"
+    },
+    {
+      "id": "daily-snapshot-picker",
+      "description": "One best snapshot per day; archived shared links retain exact dates",
+      "status": "PASS",
+      "evidence": [
+        "20261021-203557",
+        "20261018-064713",
+        "20261015-201645",
+        "20261013-160503",
+        "20261012-145337",
+        "20261010-102121",
+        "20261008-2227"
+      ]
+    },
+    {
+      "id": "snapshot-filter-roundtrip",
+      "description": "Date selection preserves map, language, registry and network filters in the URL",
+      "status": "PASS",
+      "evidence": "Snapshot URL, repeated organization parameters, language and both views survive"
+    },
+    {
+      "id": "historical-uncollected-line",
+      "description": "New signatures remain selected on old dates without importing current counts",
+      "status": "PASS",
+      "evidence": "Filter kept, unavailable counts marked, absent line excluded from measured totals"
+    },
+    {
+      "id": "overview-count-scopes",
+      "description": "Worldwide port and signature counts remain distinct from a filtered map selection",
+      "status": "PASS",
+      "evidence": "Port baseline 35150924; all lines 28544546; selection scoped separately"
+    },
+    {
+      "id": "legacy-http-quality",
+      "description": "HTTP component totals and cloud cohorts remain separate, dated and historical",
+      "status": "PASS",
+      "evidence": "All-port mixed lines visible by default; cloud cohorts localized; old dates remain uncollected"
+    },
+    {
+      "id": "ecosystem-views",
+      "description": "Filters, neighborhoods and shared graph state preserve evidence scope",
+      "status": "PASS",
+      "evidence": "Valid filters and share state; invalid IDs rejected"
+    },
+    {
+      "id": "ecosystem-localization",
+      "description": "All graph cards render in four languages with dated map counts",
+      "status": "PASS",
+      "evidence": "Node and edge cards translated; counts use the selected snapshot"
+    },
+    {
+      "id": "network-combinations",
+      "description": "Country-scoped operator aliases preserve many-to-many observations",
+      "status": "PASS",
+      "evidence": "WindTre branches, exact aliases, group membership and country boundaries verified"
+    },
+    {
+      "id": "network-roles-evidence",
+      "description": "Service roles and ACS evidence retain their original scope",
+      "status": "PASS",
+      "evidence": "CPE and ACS separated; operator and interop evidence not propagated"
+    },
+    {
+      "id": "matrix-coverage",
+      "description": "Matrix distinguishes zero, truncated tail, uncollected and measured cells",
+      "status": "PASS",
+      "evidence": "All four measurement states verified"
+    },
+    {
+      "id": "network-map-roundtrip",
+      "description": "Exact raw organization selections survive map URLs without broadening or double counting",
+      "status": "PASS",
+      "evidence": {
+        "exact": 420033,
+        "withAlias": 420033
+      }
+    },
+    {
+      "id": "network-share-localization",
+      "description": "Graph and matrix links restore filters, selection and four languages",
+      "status": "PASS",
+      "evidence": "Shared state, graph, matrix, sources and translations verified"
+    },
+    {
+      "id": "network-exploration",
+      "description": "Node expansion keeps the graph context, country scope and exact records",
+      "status": "PASS",
+      "evidence": "Expansion reveals real neighbors without replacing filters; URLs preserve it"
+    },
+    {
+      "id": "network-layout-and-flows",
+      "description": "Layouts retain measurements, pinned nodes and country-scoped operator identities",
+      "status": "PASS",
+      "evidence": "Stable finite layout; original weights and country-scoped flow edges"
     },
     {
       "id": "source-links",
@@ -23,46 +118,49 @@
       "id": "snapshot",
       "description": "All embedded lines match their source snapshot",
       "status": "PASS",
-      "evidence": "{\"lines\":52,\"mismatches\":[]}"
+      "evidence": "{\"lines\":55,\"mismatches\":[]}"
     },
     {
       "id": "observation-counts",
       "description": "Observation counts and dates come from exact collected queries",
       "status": "PASS",
       "evidence": {
-        "collected": 39,
+        "collected": 48,
         "missing": 0
       }
     },
     {
       "id": "http-bounds",
-      "description": "HTTP counts stay within port 7547 denominators",
+      "description": "Inconsistent source counts remain intact and never produce negative shares",
       "status": "PASS",
-      "evidence": "[]"
+      "evidence": {
+        "inconsistentCountries": [],
+        "sourceCountsPreserved": true
+      }
     },
     {
-      "id": "ident",
-      "description": "Default country sums equal embedded ident",
+      "id": "query-totals",
+      "description": "Default country sums equal all embedded line-query counts",
       "status": "PASS",
-      "evidence": "{\"total\":21517651,\"countries\":215,\"mismatches\":[]}"
+      "evidence": "{\"total\":28544130,\"countries\":219,\"mismatches\":[]}"
     },
     {
       "id": "line-country-sweep",
       "description": "Every line and country filter preserves source counts",
       "status": "PASS",
-      "evidence": "2457 line-country cases"
+      "evidence": "2766 line-country cases"
     },
     {
       "id": "region-country",
       "description": "Selecting Italy inside Europe narrows the slice to Italy",
       "status": "PASS",
-      "evidence": "{\"italy\":1932665,\"combined\":1932665,\"countries\":1}"
+      "evidence": "{\"italy\":2366006,\"combined\":2366006,\"countries\":1}"
     },
     {
       "id": "operator-counts",
       "description": "Operator filter uses selected operator facet counts",
       "status": "PASS",
-      "evidence": "{\"actual\":8902,\"expected\":8902,\"ratio\":1}"
+      "evidence": "{\"actual\":10488,\"expected\":10488,\"ratio\":1}"
     },
     {
       "id": "operator-normalization",
@@ -71,16 +169,25 @@
       "evidence": "{\"raw\":\"WAVE RESIDENTIAL DSL SERVICE\",\"actual\":\"JT (Jersey)\",\"expected\":\"JT (Jersey)\"}"
     },
     {
-      "id": "disjoint-overlap",
-      "description": "Default core selection excludes a documented overlapping nonce class",
+      "id": "all-lines-and-overlaps",
+      "description": "Default selection includes every collected line, including overlapping slices",
       "status": "PASS",
-      "evidence": "{\"included\":[\"sercomm-cpe-authentication\"],\"classCount\":30821,\"evidence\":[\"Decimal authentication-response pattern; a response class, not a vendor attribution.\"]}"
+      "evidence": {
+        "lines": 55,
+        "total": 28544130
+      }
+    },
+    {
+      "id": "role-presets-and-query-kinds",
+      "description": "Role presets and query-kind badges survive filtering, translation and old snapshots",
+      "status": "PASS",
+      "evidence": "Four role presets, all-line reset, 4-language badges and historical missing counts"
     },
     {
       "id": "facet-coverage",
       "description": "Operator drill retains the coverage metadata required to explain its truncated tail",
       "status": "PASS",
-      "evidence": "{\"embeddedFields\":[\"dork\",\"total\",\"taken\",\"run_id\",\"collection_status\",\"requested_facets\",\"facet_meta\",\"countries\",\"asn\",\"ports\",\"orgs\",\"line\",\"line_id\",\"cc\"],\"sumTopOrgs\":204009}"
+      "evidence": "{\"embeddedFields\":[\"dork\",\"total\",\"taken\",\"run_id\",\"collection_status\",\"requested_facets\",\"facet_meta\",\"countries\",\"asn\",\"ports\",\"orgs\",\"line\",\"line_id\",\"cc\"],\"sumTopOrgs\":237800}"
     },
     {
       "id": "geo-html",
@@ -104,7 +211,7 @@
       "id": "language-url",
       "description": "URL roundtrip preserves language",
       "status": "PASS",
-      "evidence": "#lang=es"
+      "evidence": "#lang=es&snapshot=20261021-203557"
     },
     {
       "id": "language-priority",
@@ -128,7 +235,7 @@
       "id": "chips",
       "description": "Selection labels contain translated text, not source fragments",
       "status": "PASS",
-      "evidence": "nothing selected — core signature set"
+      "evidence": "all lines in this snapshot"
     },
     {
       "id": "pair-title",
@@ -140,13 +247,13 @@
       "id": "pair-outside-selection",
       "description": "Visible dimmed map pairs keep their real count in inspector",
       "status": "PASS",
-      "evidence": "{\"displayed\":\"1.45M\",\"source\":1446069}"
+      "evidence": "{\"displayed\":\"1.54M\",\"source\":1542418}"
     },
     {
       "id": "lines-in-slice",
       "description": "In-slice line table respects selected country",
       "status": "PASS",
-      "evidence": "{\"actual\":49034,\"expected\":49034}"
+      "evidence": "{\"actual\":58961,\"expected\":58961}"
     },
     {
       "id": "top-countries",
@@ -176,7 +283,7 @@
       "id": "operator-search",
       "description": "Quick search finds collected operators outside the first twelve",
       "status": "PASS",
-      "evidence": "[{\"kind\":\"org\",\"id\":\"Blue Stream\",\"t\":\"Blue Stream\",\"n\":\"8.9k\",\"sub\":\"operator\"}]"
+      "evidence": "[{\"kind\":\"org\",\"id\":\"Blue Stream\",\"t\":\"Blue Stream\",\"n\":\"10.5k\",\"sub\":\"operator\"}]"
     },
     {
       "id": "svg-coordinates",
@@ -200,7 +307,7 @@
       "id": "country-picker-coverage",
       "description": "Country selector can discover countries present outside the 7547 denominator",
       "status": "PASS",
-      "evidence": "[\"YE\",\"FJ\",\"LC\",\"GW\",\"VU\"]"
+      "evidence": "[\"YE\",\"FJ\",\"LC\",\"VU\",\"GW\",\"CF\",\"PW\"]"
     },
     {
       "id": "geo-duplicates",
@@ -215,22 +322,22 @@
       "evidence": "JSON blob generated"
     },
     {
-      "id": "no-runtime-fetch",
-      "description": "HTML has no external runtime scripts or automatic network requests",
+      "id": "snapshot-only-fetch",
+      "description": "Only the selected same-origin archive can be fetched at runtime",
       "status": "PASS",
-      "evidence": "No external scripts, fetch, XHR, or WebSocket"
+      "evidence": "One allowlisted snapshot request; the embedded date needs no network"
     },
     {
       "id": "all-locales-content",
       "description": "All line inspectors, registry, observations and methodology render without Russian fallback in EN/ES/ZH",
       "status": "PASS",
-      "evidence": "165 localized sections/inspectors"
+      "evidence": "174 localized sections/inspectors"
     },
     {
       "id": "operator-shortcuts",
       "description": "Suggested largest line stays within the selected operator data",
       "status": "PASS",
-      "evidence": "{\"title\":\"Largest line:  IgdAuthentication\",\"why\":\"8.9k matches — start here\",\"val\":\"8.9k\",\"act\":{\"t\":\"solo\",\"slug\":\"igdauthentication\"}}"
+      "evidence": "{\"title\":\"Largest line:  IgdAuthentication\",\"why\":\"10.5k matches — start here\",\"val\":\"10.5k\",\"act\":{\"t\":\"solo\",\"slug\":\"igdauthentication\"}}"
     },
     {
       "id": "invalid-cell",
@@ -246,11 +353,12 @@
     },
     {
       "id": "service-classification",
-      "description": "ACS roles are explicit and excluded from the core set",
+      "description": "ACS roles are explicit and included in the default map",
       "status": "PASS",
       "evidence": {
         "acs": [
           "axiros",
+          "freeacs",
           "genieacs-admin-ui",
           "openacs",
           "telefonica-cwmpweb"
@@ -264,15 +372,15 @@
       "description": "Research variants stay outside map sums and render in all languages",
       "status": "PASS",
       "evidence": {
-        "rendered": 372,
-        "total": 21517651
+        "rendered": 524,
+        "total": 28544130
       }
     },
     {
       "id": "news-locales",
       "description": "Every news item renders in all four languages without Russian fallback outside RU",
       "status": "PASS",
-      "evidence": "22 news items × 4 languages"
+      "evidence": "42 news items × 4 languages"
     },
     {
       "id": "news-navigation",
@@ -284,7 +392,7 @@
       "id": "manifesto-first",
       "description": "Manifesto leads the news list and initial ticker, with readable paragraphs and tool links",
       "status": "PASS",
-      "evidence": "Pinned first card and ticker; three paragraphs; two HTTPS project links"
+      "evidence": "Manifesto, public disclosures and major research, then ordinary news; matching ticker emphasis"
     },
     {
       "id": "news-pause",
@@ -293,16 +401,52 @@
       "evidence": "All six pause conditions respected"
     },
     {
+      "id": "independent-index-comparison",
+      "description": "FOFA comparison stays fixed across snapshot and map filters",
+      "status": "PASS",
+      "evidence": "Independent dated source, no map filtering"
+    },
+    {
+      "id": "pending-fingerprint-queries",
+      "description": "New variant queries are uncollected rather than zero in older snapshots",
+      "status": "PASS",
+      "evidence": "All four DSLForum follow-ups visible without inferred counts"
+    },
+    {
+      "id": "comparison-localization",
+      "description": "Comparison and pending queries have all four translations",
+      "status": "PASS",
+      "evidence": "en / ru / es / zh"
+    },
+    {
+      "id": "wanted-localization-and-links",
+      "description": "Community searches render in four languages with distinct prefilled issues",
+      "status": "PASS",
+      "evidence": "All languages, per-card form targets and HTML escaping verified"
+    },
+    {
+      "id": "attribution-evidence",
+      "description": "Pinned code and firmware anchors render across languages and retain editorial scope",
+      "status": "PASS",
+      "evidence": "Five components, six lines, four languages, direct pinned links and file hashes"
+    },
+    {
+      "id": "wanted-navigation",
+      "description": "Wanted tab and map filters survive snapshot changes; unrelated panels hide",
+      "status": "PASS",
+      "evidence": "Wanted deep link, snapshot navigation and return to map"
+    },
+    {
       "id": "export-operator-total",
       "description": "Export preserves the filtered operator count and coverage scope",
       "status": "PASS",
-      "evidence": "{\"snapshot\":\"20261010-102121\",\"selection\":{\"lines\":[\"igdauthentication\"],\"geo\":[\"c:US\"],\"orgs\":[\"Blue Stream\"]},\"unit\":\"Shodan query matches\",\"operatorScope\":\"collected top-N facets\",\"unknownCountry\":null,\"countries\":{\"US\":{\"base\":8902,\"lines\":{\"igdauthentication\":8902}}}}"
+      "evidence": "{\"snapshot\":\"20261021-203557\",\"selection\":{\"lines\":[\"igdauthentication\"],\"geo\":[\"c:US\"],\"orgs\":[\"Blue Stream\"]},\"unit\":\"Shodan query matches\",\"operatorScope\":\"collected top-N facets\",\"unknownCountry\":null,\"countries\":{\"US\":{\"base\":10488,\"lines\":{\"igdauthentication\":10488}}}}"
     },
     {
       "id": "csv-format",
       "description": "CSV uses quoted fields and CRLF with the selected operator count",
       "status": "PASS",
-      "evidence": "\"cc\";\"country\";\"IgdAuthentication\";\"park_7547\"\r\n\"US\";\"United States\";\"8902\";\"5206749\""
+      "evidence": "\"cc\";\"country\";\"IgdAuthentication\";\"park_7547\"\r\n\"US\";\"United States\";\"10488\";\"5311498\""
     }
   ]
 }

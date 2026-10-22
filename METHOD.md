@@ -24,20 +24,24 @@ CPE, ACS, mixed and unknown are separate service roles. A shared HTTP toolkit
 signature can span multiple roles. A 404 response alone does not establish a role.
 
 The overview shows two independent worldwide measurements: all Shodan matches
-on port 7547, and the sum of the core signature queries across their stated port
-scopes. The map's selection counter sums signature matches with known geography
-after filters. Unknown geography is listed separately. Neither signature counter
-is the entire port-7547 population; the two overview values must not be added.
+on port 7547, and the sum of every collected line query across its stated port
+scope. The default map includes every collected line, including ACS, overlapping
+slices and broad HTTP components. Its counter sums query matches with known
+geography after filters; unknown geography is listed separately. Query overlap
+can count the same host multiple times. Neither sum is a unique-device census,
+and the two overview values must not be added.
 
-The core set uses the all-port `HuaweiHomeGateway` query and excludes its
-port-7547 subset. This keeps auxiliary-port matches in the default view without
-adding the subset a second time. Some other queries intentionally retain a port
-condition as part of their fingerprint; each query records its exact scope.
+Role filters select CPE, ACS, mixed or unknown roles. Query-kind badges distinguish
+families, subfamilies, HTTP components, query slices, management interfaces and
+other signatures. These editorial labels describe the query or code lineage;
+they do not establish disjoint populations. Slice badges name the parent query
+where the subset relationship is known. For example, both the all-port
+`HuaweiHomeGateway` query and its port-7547 slice are visible by default.
 
 RomPager and mini_httpd are all-port HTTP component populations. Their `mixed`
 role includes management interfaces, other HTTP services and possible emulation.
-Both remain available for explicit map selection and are excluded from the core
-TR-069 sum. Their port and version queries are separate research slices.
+Their port and version queries remain separate research slices, outside map sums
+unless registered as lines themselves.
 
 The [legacy HTTP study](LEGACY-HTTP.md#honeypots) records suspected honeypot
 contamination and a reproducible cloud-ASN cohort. The atlas preserves raw totals,

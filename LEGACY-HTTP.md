@@ -2,7 +2,7 @@
 
 Reviewed: 21 October 2026. Public fingerprint research; aggregate Shodan Count data only.
 
-The atlas collects both components on **all indexed ports**. Each is a `mixed` service line: embedded management interfaces, other HTTP applications and emulated services can share the same marker. The two populations are excluded from the core TR-069 signature sum. Selecting either line shows its own country and operator distribution.
+The atlas collects both components on **all indexed ports**. Each is a `mixed` service line: embedded management interfaces, other HTTP applications and emulated services can share the same marker. Both populations are included in the default map and labelled as HTTP components. The aggregate counts query matches and can count a host more than once. Selecting either line shows its own country and operator distribution.
 
 The [query catalog](data/collection-queries.json) contains version, port and cloud-network slices. Every result retains its exact query and collection time. Country/operator facets describe indexed services; they do not deduplicate physical devices. The full October 21 snapshot collects every registry line and research query afresh. Earlier incremental passes on the same date are retained in history with their original timestamps and query plans.
 

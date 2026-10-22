@@ -17,14 +17,6 @@ from wanted import read_wanted, render_wanted
 from attribution import read_attributions, render_attributions
 
 ROOT = Path(__file__).resolve().parent.parent
-IDENT_EXCLUDE = {
-    'huaweihomegateway-cr-slice', 'gsoap-2-7-vendor-map', 'gsoap-2-8-vendor-map',
-    'sky-ee-tr069-http-server', 'windtre-tr069-http-server', 'sagemcom',
-    'genieacs-admin-ui', 'openacs', 'axiros', 'magticom-gsoap',
-    'decimal-nonce-class', 'mini-web-server-1-0-zte-corp',
-    # Generic HTTP component populations include services outside CWMP.
-    'rompager', 'mini-httpd',
-}
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8'))
@@ -273,6 +265,13 @@ def build_data(snapshot):
         services = {slug:r['service'] for slug,r in registry.items()}
     if any(s not in ('cpe','acs','mixed','unknown') for s in services.values()):
         raise ValueError('Invalid service classification')
+    for slug in registry:
+        kind = meta['lines'].get(slug, {}).get('query_kind')
+        if kind not in ('family', 'subfamily', 'http-component', 'slice', 'interface', 'signature'):
+            raise ValueError(f'Invalid query kind: {slug}')
+        parent = meta['lines'][slug].get('query_parent')
+        if parent and (parent not in registry or parent == slug):
+            raise ValueError(f'Invalid query parent: {slug}')
     current_facts = read(ROOT/'data/mapdata/facts.json')
     facts = manifest.get('plan', {}).get('facts')
     if facts is None:
@@ -286,8 +285,7 @@ def build_data(snapshot):
         raise ValueError(f'Unknown fact line IDs: {sorted(unknown_facts)}')
     facts = collected_facts(facts, snapshot, read_optional)
     refresh_fact_commentary(facts, current_facts)
-    excluded = IDENT_EXCLUDE | {s for s,kind in services.items() if kind == 'acs'}
-    lines, ident = {}, {}
+    lines, query_totals = {}, {}
     excluded_files = {'manifest.json', 'denominator-park.json', 'denominator-http.json', 'stickers.json'}
     actual_files = {f.name for f in snapshot.glob('*.json')} - excluded_files
     expected_files = {row['file'] for row in manifest['lines']} - excluded_files
@@ -308,9 +306,8 @@ def build_data(snapshot):
             taken=rec.get('taken'), collection_status=rec['collection_status'],
             facet_meta=rec.get('facet_meta', {}),
             unknown_country=max(0, rec['total'] - sum(countries.values())))
-        if f.stem not in excluded:
-            for cc, n in countries.items():
-                ident[cc] = ident.get(cc, 0) + n
+        for cc, n in countries.items():
+            query_totals[cc] = query_totals.get(cc, 0) + n
     denominators = {k: read(snapshot / f'denominator-{k}.json') for k in ('park', 'http')}
     if any(rec.get('collection_status') != 'ok' for rec in denominators.values()):
         raise ValueError('Incomplete denominator')
@@ -326,8 +323,8 @@ def build_data(snapshot):
     data = {
         'snapshot': snapshot.name.removeprefix('snapshot-'),
         **{k: {c['value']: c['count'] for c in v['countries']} for k,v in denominators.items()},
-        'denominators': denominators, 'ident': ident, 'lines': lines,
-        'excluded': sorted(excluded), 'orgdrill': orgdrill,
+        'denominators': denominators, 'queryTotals': query_totals, 'lines': lines,
+        'orgdrill': orgdrill,
         'variants': read_variants(snapshot, manifest, lines),
         'collection': manifest.get('org_drill'),
         'stickers': read(snapshot/'stickers.json') if (snapshot/'stickers.json').exists() else {},
@@ -363,8 +360,7 @@ def read_query_catalog(registry):
             for q in catalog['queries']]
 
 
-SNAPSHOT_FIELDS = ('snapshot', 'park', 'http', 'denominators', 'ident', 'lines',
-                   'excluded', 'orgdrill', 'variants', 'collection', 'stickers', 'facts')
+SNAPSHOT_FIELDS = ('snapshot', 'park', 'http', 'denominators', 'queryTotals', 'lines', 'orgdrill', 'variants', 'collection', 'stickers', 'facts')
 
 
 def daily_snapshots(archives):

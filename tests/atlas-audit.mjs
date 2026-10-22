@@ -80,7 +80,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
     'let SLICE, SLICE_FULL, GEOT; const selCountries=()=>[...S.geo].filter(t=>t.startsWith("c:")).map(t=>t.slice(2));',
     'const insp=$("#inspector"),kkL=$("#kkList"); let kkItems=[],kkSel=0,toastT=null;',
     'const W=1320,H=600,svg=$("#world"); let newsIndex=0,newsPaused=false;const newsMotion={matches:false};',
-    ...['facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
+    ...['selectRole','queryTypeLabel','queryBadges','facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
       'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dNodeBox','dNodePort','dConnection','dPaintConnections','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
       'sourcesHtml','measurementQualityHtml','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
@@ -128,18 +128,18 @@ test('historical-uncollected-line', 'New signatures remain selected on old dates
   const c=context({hash:'#lang=en&lines=freeacs&geo=c:IT&org=raw%3ABlue+Stream',payload:{...data,...old}});
   c.run('urlRead();refreshTest();renderSnapshotPicker();renderLegend();renderInspector();urlWrite()');
   expect(c.run('S.lines.has("freeacs")&&S.geo.has("c:IT")&&S.orgs.size===1'),'Unavailable filter discarded');
-  expect(c.run('DATA.lines["freeacs"].total===null&&!DISJOINT.includes("freeacs")'),'Missing line gained a current count');
+  expect(c.run('DATA.lines["freeacs"].total===null&&!DEFAULT_LINES.includes("freeacs")'),'Missing line gained a current count');
   expect(c.element('#sliceSum').textContent==='—'&&!c.element('#snapshotStatus').hidden,'Missing data shown as zero');
   expect(c.element('#snapshotStatus').textContent.includes('not collected'),'Missing collection note');
   expect(!c.element('#inspector').innerHTML.includes('undefined'),'Invalid historical inspector');
-  return 'Filter kept, unavailable counts marked, absent line excluded from the core';
+  return 'Filter kept, unavailable counts marked, absent line excluded from measured totals';
 });
 test('overview-count-scopes', 'Worldwide port and signature counts remain distinct from a filtered map selection', () => {
   const c=context();
-  const coreTotal=Object.entries(data.lines).filter(([slug])=>!data.excluded.includes(slug)).reduce((sum,[,line])=>sum+line.total,0);
+  const allTotal=Object.values(data.lines).reduce((sum,line)=>sum+line.total,0);
   c.run('refreshTest();renderOverview();renderLegend();');
   expect(c.element('#overviewPark').title===new Intl.NumberFormat('en').format(data.denominators.park.total), 'Port baseline lost');
-  expect(c.element('#overviewSignatures').title===new Intl.NumberFormat('en').format(coreTotal), 'Core total must include unknown geography');
+  expect(c.element('#overviewSignatures').title===new Intl.NumberFormat('en').format(allTotal), 'All-line total must include unknown geography');
   const allSignatures=c.element('#overviewSignatures').textContent;
   c.run('S.lines=new Set(["huaweihomegateway"]);S.geo.add("c:US");refreshTest();renderOverview();renderLegend();');
   expect(c.run('SLICE.total')===data.lines.huaweihomegateway.countries.US, 'Filtered Huawei slice differs from all-port query');
@@ -147,12 +147,12 @@ test('overview-count-scopes', 'Worldwide port and signature counts remain distin
   const date=data.snapshot.slice(0,8).replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3');
   expect(c.element('#sliceSub').textContent.includes(date), 'Slice date must show the calendar date');
   for(const lang of ['en','ru','es','zh'])c.run(`LANG=${JSON.stringify(lang)};renderOverview();`);
-  return `Port baseline ${data.denominators.park.total}; core ${coreTotal}; selection scoped separately`;
+  return `Port baseline ${data.denominators.park.total}; all lines ${allTotal}; selection scoped separately`;
 });
 test('legacy-http-quality', 'HTTP component totals and cloud cohorts remain separate, dated and historical', () => {
   const c=context();
   for(const slug of ['rompager','mini-httpd']) {
-    expect(data.excluded.includes(slug), `${slug} entered the core TR-069 total`);
+    expect(c.run("DEFAULT_LINES").includes(slug), `${slug} absent from default map`);
     expect(data.lines[slug].service==='mixed'&&!data.lines[slug].dork.includes('port:'), `${slug} lost its all-port scope`);
     for(const lang of ['en','ru','es','zh']) {
       c.run(`LANG=${JSON.stringify(lang)};S.lines=new Set([${JSON.stringify(slug)}]);refreshTest();renderInspector();`);
@@ -173,7 +173,7 @@ test('legacy-http-quality', 'HTTP component totals and cloud cohorts remain sepa
   const missing=historical.run('t("fact_not_collected")');
   expect(html.split(missing).length-1===3, 'Historical quality card borrowed current counts or showed zero');
   expect(!html.includes('2026-10-21T'), 'Current collection timestamp leaked into history');
-  return 'All-port mixed lines excluded from core; cloud cohorts localized; old dates remain uncollected';
+  return 'All-port mixed lines visible by default; cloud cohorts localized; old dates remain uncollected';
 });
 test('ecosystem-views', 'Filters, neighborhoods and shared graph state preserve evidence scope', () => {
   const c=context({hash:'#lang=es&tab=ecosystem&eco_node=gateway&eco_focus=gateway&eco_hyp=1&eco_depth=2'});
@@ -369,9 +369,9 @@ test('http-bounds', 'Inconsistent source counts remain intact and never produce 
   }
   return {inconsistentCountries:bad.map(([cc])=>cc),sourceCountsPreserved:true};
 });
-test('ident', 'Default country sums equal embedded ident', () => {
+test('query-totals', 'Default country sums equal all embedded line-query counts', () => {
   const c=context(); const actual=c.run('computeSlice()');
-  const bad=[...actual.ccs].filter(([cc,v])=>v.base!==data.ident[cc]);
+  const bad=[...actual.ccs].filter(([cc,v])=>v.base!==data.queryTotals[cc]);
   return expect(!bad.length,JSON.stringify({total:actual.total,countries:actual.ccs.size,mismatches:bad}));
 });
 test('line-country-sweep', 'Every line and country filter preserves source counts', () => {
@@ -397,10 +397,46 @@ test('operator-normalization', 'Specific Jersey operator is not captured by a ge
   const c=context();const actual=c.run('normOrg("WAVE RESIDENTIAL DSL SERVICE")');
   return expect(actual==='JT (Jersey)',JSON.stringify({raw:'WAVE RESIDENTIAL DSL SERVICE',actual,expected:'JT (Jersey)'}));
 });
-test('disjoint-overlap', 'Default core selection excludes a documented overlapping nonce class', () => {
-  const c=context();const selected=c.run('DISJOINT');
-  return expect(!(selected.includes('decimal-nonce-class')&&selected.includes('sercomm-cpe-authentication')),
-    JSON.stringify({included:selected.filter(s=>['decimal-nonce-class','sercomm-cpe-authentication'].includes(s)),classCount:data.lines['decimal-nonce-class'].total,evidence:data.meta.lines['decimal-nonce-class'].findings}));
+test('all-lines-and-overlaps', 'Default selection includes every collected line, including overlapping slices', () => {
+  const c=context();c.run('refreshTest();facetBtnState();renderLegend();');
+  const selected=c.run('DEFAULT_LINES');
+  expect(selected.length===Object.keys(data.lines).length,'Default line count differs from collected catalog');
+  for(const slug of ['decimal-nonce-class','sercomm-cpe-authentication','huaweihomegateway','huaweihomegateway-cr-slice','rompager','mini-httpd','genieacs-admin-ui'])
+    expect(selected.includes(slug),`Default selection lost ${slug}`);
+  const expected=Object.values(data.lines).reduce((sum,line)=>sum+Object.values(line.countries).reduce((a,b)=>a+b,0),0);
+  expect(c.run('SLICE.total')===expected,'Default sum must retain overlapping query matches');
+  expect(c.element('#fv-lines').innerHTML===`All lines · ${selected.length}`,'Filter label lost full count');
+  expect(html.includes('data-i18n="overlap_note"'),'Overlap explanation missing next to counts');
+  expect(!Object.hasOwn(data,'excluded'),'Obsolete exclusions are still exported');
+  return {lines:selected.length,total:expected};
+});
+test('role-presets-and-query-kinds', 'Role presets and query-kind badges survive filtering, translation and old snapshots', () => {
+  const c=context();
+  for(const role of ['cpe','acs','mixed','unknown']) {
+    const expected=Object.keys(data.lines).filter(slug=>data.lines[slug].service===role);
+    c.run(`selectRole(${JSON.stringify(role)});refreshTest();urlWrite();urlRead();`);
+    expect(JSON.stringify([...c.run('S.lines')].sort())===JSON.stringify(expected.sort()),`Wrong role selection: ${role}`);
+    const total=expected.reduce((sum,slug)=>sum+Object.values(data.lines[slug].countries).reduce((a,b)=>a+b,0),0);
+    expect(c.run('computeSlice().total')===total,`Role total differs: ${role}`);
+  }
+  c.run('selectRole("all");refreshTest();');
+  expect(c.run('S.lines.size===0&&SLICE.lines.size===DEFAULT_LINES.length'),'All-lines reset lost lines');
+  for(const lang of ['en','ru','es','zh']) {
+    c.run(`LANG=${JSON.stringify(lang)};`);
+    for(const slug of Object.keys(data.lines)) {
+      const badges=c.run(`queryBadges(${JSON.stringify(slug)})`);
+      expect(!badges.includes('undefined')&&!badges.includes('query_'),'Missing query-kind translation');
+      if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(badges),'Russian fallback in query badges');
+    }
+    expect(c.run('queryBadges("rompager")').includes('suspected'),'RomPager warning absent');
+    expect(!c.run('queryBadges("mini-httpd")').includes('suspected'),'Reference cloud cohort incorrectly labelled honeypot');
+    expect(c.run('queryTypeLabel("huaweihomegateway-cr-slice")').includes('HuaweiHomeGateway'),'Slice parent missing');
+  }
+  const old=JSON.parse(fs.readFileSync(path.join(root,'atlas/snapshots/20261018-064713.json'),'utf8'));
+  const historic=context({payload:{...data,...old}});historic.run('selectRole("mixed");refreshTest();urlWrite();urlRead();');
+  expect(historic.run('S.lines.has("rompager")&&DATA.lines.rompager.total===null'),'Old snapshot lost filter or imported a current count');
+  expect(historic.run('queryBadges("rompager")').includes('http-component'),'Old snapshot lost editorial query-kind badge');
+  return 'Four role presets, all-line reset, 4-language badges and historical missing counts';
 });
 test('facet-coverage', 'Operator drill retains the coverage metadata required to explain its truncated tail', () => {
   const cell=data.orgdrill['igdauthentication--US'];
@@ -485,7 +521,7 @@ test('copy-dork', 'Country copy action matches the adjacent Shodan link query', 
 test('map-all-countries', 'Every country with line data has a map anchor', () => {
   const geo=new Set(data.geo.features.map(f=>f.properties.cc));
   const c=context();const micro=c.run('Object.keys(MICRO)');micro.forEach(cc=>geo.add(cc));
-  const missing=Object.entries(data.ident).filter(([cc,n])=>n>0&&!geo.has(cc));
+  const missing=Object.entries(data.queryTotals).filter(([cc,n])=>n>0&&!geo.has(cc));
   return expect(!missing.length,JSON.stringify(missing));
 });
 test('country-picker-coverage', 'Country selector can discover countries present outside the 7547 denominator', () => {
@@ -533,7 +569,6 @@ test('operator-shortcuts', 'Suggested largest line stays within the selected ope
   const directory=path.join(root,'data/mapdata',`snapshot-${data.snapshot}`,'org-drill');
   for(const file of fs.readdirSync(directory).filter(file=>file.endsWith('.json'))) {
     const slug=file.slice(0,-5).split('--')[0];
-    if(data.excluded.includes(slug))continue;
     const record=JSON.parse(fs.readFileSync(path.join(directory,file),'utf8'));
     const count=record.orgs.filter(org=>org.value==='Blue Stream').reduce((sum,org)=>sum+org.count,0);
     totals.set(slug,(totals.get(slug)||0)+count);
@@ -557,10 +592,10 @@ test('state-roundtrip', 'A shared URL restores multiple operators, geography, pa
   const after=c.run('JSON.stringify({lines:[...S.lines],geo:[...S.geo],orgs:[...S.orgs],cell:S.cell,mode:S.mode,tab:S.tab})');
   return expect(before===after,after);
 });
-test('service-classification', 'ACS roles are explicit and excluded from the core set', () => {
+test('service-classification', 'ACS roles are explicit and included in the default map', () => {
  const c=context();const acs=Object.keys(data.lines).filter(s=>data.lines[s].service==='acs');
  expect(acs.length>=4, 'Expected existing ACS lines plus Telefónica');
- expect(acs.every(s=>!c.run('DISJOINT').includes(s)), 'ACS entered core sum');
+ expect(acs.every(s=>c.run('DEFAULT_LINES').includes(s)), 'ACS missing from default sum');
  c.element('#regService').value='acs';c.run('renderRegistry()');
  const rows=c.element('#regBody').innerHTML;
  expect(acs.every(s=>rows.includes('data-slug="'+s+'"')), 'ACS filter lost a line');
@@ -580,7 +615,7 @@ test('variant-counts', 'Research variants stay outside map sums and render in al
   }
  }
  expect(rendered>0,'No collected variants');
- expect(total===c.run('computeSlice().total'),'Variants changed core sum');
+ expect(total===c.run('computeSlice().total'),'Variants changed registered-line sum');
  return {rendered,total};
 });
 test('news-locales', 'Every news item renders in all four languages without Russian fallback outside RU', () => {

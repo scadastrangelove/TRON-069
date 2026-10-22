@@ -998,12 +998,6 @@
     "es": "Componente HTTP / servicios diversos",
     "zh": "HTTP 组件 / 混合服务"
   },
-  "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.": {
-    "en": "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.",
-    "ru": "Совпадения HTTP-компонента на всех портах показаны отдельно от суммы основных сигнатур TR-069. Срезы по портам и версиям могут пересекаться с другими линиями атласа.",
-    "es": "Las coincidencias del componente HTTP en todos los puertos se muestran por separado de la suma de firmas principales TR-069. Los cortes por puerto y versión pueden solaparse con otras líneas.",
-    "zh": "所有端口的 HTTP 组件匹配与 TR-069 核心指纹总数分开统计。端口及版本切片可能与其他条目重叠。"
-  },
   "RomPager 4.07 is associated with Misfortune Cookie (CVE-2014-9222). Firmware backports can retain the version string; patch status requires device-specific evidence.": {
     "en": "RomPager 4.07 is associated with Misfortune Cookie (CVE-2014-9222). Firmware backports can retain the version string; patch status requires device-specific evidence.",
     "ru": "RomPager 4.07 связан с Misfortune Cookie (CVE-2014-9222). Исправления в прошивке могут сохранять строку версии; статус патча требует проверки конкретного устройства.",
@@ -1075,5 +1069,11 @@
     "ru": "Эти глобальные счётчики получены отдельными запросами Shodan и могут немного расходиться при обновлении индекса.",
     "es": "Estos recuentos mundiales usan consultas Shodan independientes y pueden diferir ligeramente al actualizarse el índice.",
     "zh": "这些全球计数来自独立的 Shodan 查询，索引更新时可能略有差异。"
+  },
+  "All-port HTTP component queries include management interfaces, other HTTP services and possible emulation. They are included in the default view; port and version slices may overlap other atlas lines.": {
+    "en": "All-port HTTP component queries include management interfaces, other HTTP services and possible emulation. They are included in the default view; port and version slices may overlap other atlas lines.",
+    "ru": "Запросы HTTP-компонентов на всех портах охватывают интерфейсы управления, другие HTTP-сервисы и возможную эмуляцию. Они включены в общий вид; срезы по портам и версиям могут пересекаться с другими линиями атласа.",
+    "es": "Las consultas de componentes HTTP en todos los puertos incluyen interfaces de gestión, otros servicios HTTP y posible emulación. Aparecen en la vista inicial; los recortes por puerto y versión pueden solaparse con otras líneas.",
+    "zh": "全端口 HTTP 组件查询涵盖管理界面、其他 HTTP 服务及可能的模拟服务。默认视图包含这些线路；端口和版本切片可能与其他线路重叠。"
   }
 }

@@ -37,7 +37,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "icwmp-iopsys": {
       "badge": "proven",
@@ -58,7 +59,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "huaweihomegateway": {
       "badge": "proven",
@@ -91,7 +93,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "huaweihomegateway-cr-slice": {
       "badge": "proven",
@@ -124,7 +127,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "slice",
+      "query_parent": "huaweihomegateway"
     },
     "tr069-http-server": {
       "badge": "proven",
@@ -156,7 +161,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "gsoap-park": {
       "badge": "hypothesis",
@@ -199,7 +205,8 @@
           "file": "FINGERPRINTS.md",
           "anchor": "matching-precedence"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "rdk-b-ccsptr069pa": {
       "badge": "proven",
@@ -223,7 +230,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "tr069-client": {
       "badge": "proven",
@@ -252,7 +260,8 @@
           "file": "NOTES.md",
           "anchor": "section-9.33"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "igdauthentication": {
       "badge": "proven",
@@ -278,7 +287,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "easycwmp-vanilla": {
       "badge": "proven",
@@ -304,7 +314,8 @@
         {
           "file": "FINGERPRINTS.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "askeycwmp-askey": {
       "badge": "proven",
@@ -329,7 +340,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "centurylink-lighttpd": {
       "badge": "hypothesis",
@@ -353,7 +365,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "sercomm-cpe-authentication": {
       "badge": "proven",
@@ -375,7 +388,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "windtre-tr069-http-server": {
       "badge": "class",
@@ -401,7 +415,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "slice",
+      "query_parent": "tr069-http-server"
     },
     "zte": {
       "badge": "proven",
@@ -429,7 +445,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "sagemcom": {
       "badge": "proven",
@@ -461,7 +478,8 @@
           "file": "FINGERPRINTS.md",
           "anchor": "matching-precedence"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "dt-speedport-sdk": {
       "badge": "class",
@@ -493,7 +511,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "charter-anti-scan-404": {
       "badge": "class",
@@ -514,7 +533,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "yapsieworld": {
       "badge": "anonymous",
@@ -534,7 +554,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "sky-ee-tr069-http-server": {
       "badge": "class",
@@ -560,7 +581,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "slice",
+      "query_parent": "tr069-http-server"
     },
     "gateway-realm": {
       "badge": "anonymous",
@@ -588,7 +611,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "ti-cpe-authentication": {
       "badge": "proven",
@@ -609,7 +633,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "nettyserver": {
       "badge": "hypothesis",
@@ -630,7 +655,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "digauth": {
       "badge": "proven",
@@ -656,7 +682,8 @@
           "file": "NOTES.md",
           "anchor": "section-9.33"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "realtek-sdk": {
       "badge": "proven",
@@ -681,7 +708,8 @@
           "file": "FINGERPRINTS.md",
           "anchor": "matching-precedence"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "kt-cems": {
       "badge": "proven",
@@ -705,7 +733,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "magticom-gsoap": {
       "badge": "proven",
@@ -725,7 +754,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "slice",
+      "query_parent": "gsoap-park"
     },
     "qacafe-cdrouter-test-realm": {
       "badge": "proven",
@@ -745,7 +776,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature",
+      "findings": []
     },
     "cwmpd-tr069agent": {
       "badge": "proven",
@@ -766,7 +799,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "cwmp-agent-orange-tunisie": {
       "badge": "proven",
@@ -788,7 +822,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature",
+      "findings": []
     },
     "acssimtool": {
       "badge": "class",
@@ -809,7 +845,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "arris-cpe-authentication": {
       "badge": "proven",
@@ -829,7 +866,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "gsoap-service-realm": {
       "badge": "class",
@@ -846,7 +884,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature",
+      "findings": []
     },
     "cwmp-lancom": {
       "badge": "proven",
@@ -866,7 +906,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "avsystem-libcwmp": {
       "badge": "proven",
@@ -887,7 +928,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "family"
     },
     "junk-realms": {
       "badge": "class",
@@ -907,7 +949,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "genieacs-admin-ui": {
       "badge": "proven",
@@ -928,7 +971,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "interface"
     },
     "meig-meigsmart-com": {
       "badge": "proven",
@@ -949,7 +993,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "tr069-client-cli-server-netcore": {
       "badge": "proven",
@@ -976,7 +1021,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "interface"
     },
     "ruijie-cpe": {
       "badge": "proven",
@@ -996,7 +1042,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "openacs": {
       "badge": "proven",
@@ -1016,7 +1063,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "axiros": {
       "badge": "proven",
@@ -1036,7 +1084,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "easycwmp-fork-ecntcwmp": {
       "badge": "proven",
@@ -1057,7 +1106,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "subfamily",
+      "query_family": "easycwmp"
     },
     "easycwmp-fork-leanoacs": {
       "badge": "proven",
@@ -1077,7 +1128,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "subfamily",
+      "query_family": "easycwmp"
     },
     "easycwmp-fork-ltecpe": {
       "badge": "proven",
@@ -1097,7 +1150,9 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "subfamily",
+      "query_family": "easycwmp"
     },
     "gsoap-2-7-vendor-map": {
       "badge": "class",
@@ -1120,7 +1175,10 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "slice",
+      "query_parent": "gsoap-park",
+      "findings": []
     },
     "gsoap-2-8-vendor-map": {
       "badge": "class",
@@ -1143,7 +1201,10 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "slice",
+      "query_parent": "gsoap-park",
+      "findings": []
     },
     "fake-apache-openagent": {
       "badge": "proven",
@@ -1170,7 +1231,8 @@
           "file": "NOTES.md",
           "anchor": "section-9.33"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "decimal-nonce-class": {
       "badge": "class",
@@ -1191,7 +1253,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "mini-web-server-1-0-zte-corp": {
       "badge": "proven",
@@ -1212,7 +1275,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "interface"
     },
     "cwmp-server": {
       "badge": "anonymous",
@@ -1237,7 +1301,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "signature"
     },
     "telefonica-cwmpweb": {
       "badge": "proven",
@@ -1259,7 +1324,8 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "interface"
     },
     "freeacs": {
       "badge": "class",
@@ -1281,14 +1347,15 @@
         {
           "file": "METHOD.md"
         }
-      ]
+      ],
+      "query_kind": "interface"
     },
     "rompager": {
       "badge": "class",
       "vendor": "Allegro Software",
       "role": "HTTP component / mixed services",
       "findings": [
-        "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.",
+        "All-port HTTP component queries include management interfaces, other HTTP services and possible emulation. They are included in the default view; port and version slices may overlap other atlas lines.",
         "RomPager 4.07 is associated with Misfortune Cookie (CVE-2014-9222). Firmware backports can retain the version string; patch status requires device-specific evidence."
       ],
       "anomalies": [
@@ -1315,15 +1382,17 @@
           "Selected cloud networks",
           "Outside these cloud networks"
         ],
-        "note": "The cloud cohort flags likely sensor contamination. Counts outside it still include unclassified services; they are not a verified device census. See the port slices below, including cloud matches on 7547."
-      }
+        "note": "The cloud cohort flags likely sensor contamination. Counts outside it still include unclassified services; they are not a verified device census. See the port slices below, including cloud matches on 7547.",
+        "suspected_honeypots": true
+      },
+      "query_kind": "http-component"
     },
     "mini-httpd": {
       "badge": "class",
       "vendor": "ACME Labs",
       "role": "HTTP component / mixed services",
       "findings": [
-        "All-port HTTP component matches are shown separately from the core TR-069 signature sum. Port and version slices may overlap other atlas lines.",
+        "All-port HTTP component queries include management interfaces, other HTTP services and possible emulation. They are included in the default view; port and version slices may overlap other atlas lines.",
         "mini_httpd is a general HTTP server used in CPE management interfaces and other services. A server marker alone does not identify an ACS, CWMP or TR-064 endpoint."
       ],
       "anomalies": [],
@@ -1349,7 +1418,8 @@
           "Outside these cloud networks"
         ],
         "note": "The same cloud networks are collected as a reference cohort for mini_httpd. The RomPager banner-sample evidence does not classify these mini_httpd services as honeypots."
-      }
+      },
+      "query_kind": "http-component"
     }
   }
 }

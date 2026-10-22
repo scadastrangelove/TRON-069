@@ -75,9 +75,10 @@ The private research checkout and its old Git history are not part of this repos
 ## What the numbers mean
 
 - Each line has an exact query and a service role: CPE, ACS, mixed or unknown.
-  Dedicated ACS lines are excluded from the default signature sum.
+  All collected lines are shown by default; role filters select the desired scope.
 - Queries, variants, port slices and related component families can overlap.
-  Removing known overlaps does not prove the remaining sum is disjoint.
+  The counter sums selected query matches and can count the same host more than once.
+  Badges distinguish families, subfamilies, HTTP components, slices and interfaces.
 - The `port:7547` denominator covers that port. Some signature queries cover all
   ports; their totals are not directly comparable with that denominator.
 - Country is Shodan IP geolocation. An organization label describes the indexed
