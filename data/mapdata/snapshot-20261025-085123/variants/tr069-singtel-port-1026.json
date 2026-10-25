@@ -1,0 +1,103 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:SG port:1026",
+ "total": 4139,
+ "taken": "2026-10-25T09:47:31+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 4139,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 6,
+   "covered": 4139,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 4139,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 4139,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 4139,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 3875,
+   "value": "as9506"
+  },
+  {
+   "count": 220,
+   "value": "as3758"
+  },
+  {
+   "count": 33,
+   "value": "9506"
+  },
+  {
+   "count": 6,
+   "value": "as135600"
+  },
+  {
+   "count": 5,
+   "value": "3758"
+  }
+ ],
+ "ports": [
+  {
+   "count": 4139,
+   "value": 1026
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2699,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 1121,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 200,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 109,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 6,
+   "value": "Whiz Communications Pte Ltd"
+  },
+  {
+   "count": 4,
+   "value": "SingTel Mobile"
+  }
+ ],
+ "id": "tr069-singtel-port-1026",
+ "parent": "tr069-client",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "TR069 Client · Singtel / SG · 1026",
+  "en": "TR069 Client · Singtel / SG · 1026",
+  "es": "TR069 Client · Singtel / SG · 1026",
+  "zh": "TR069 Client · Singtel / SG · 1026"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

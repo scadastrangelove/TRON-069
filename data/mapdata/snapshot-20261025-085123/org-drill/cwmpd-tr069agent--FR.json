@@ -1,0 +1,53 @@
+{
+ "dork": "\"cwmpd\" opaque country:FR",
+ "total": 23,
+ "taken": "2026-10-25T09:38:50+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 23,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 23,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 19,
+   "value": "as35077"
+  },
+  {
+   "count": 3,
+   "value": "as39271"
+  },
+  {
+   "count": 1,
+   "value": "as5410"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 19,
+   "value": "Netwo SAS"
+  },
+  {
+   "count": 3,
+   "value": "Internet Services"
+  },
+  {
+   "count": 1,
+   "value": "Pool for Broadband DSL customers"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "FR"
+}

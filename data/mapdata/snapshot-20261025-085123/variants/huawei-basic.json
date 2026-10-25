@@ -1,0 +1,995 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\"",
+ "total": 33019,
+ "taken": "2026-10-25T09:46:23+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 30,
+   "covered": 33019,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 78,
+   "covered": 33019,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 28,
+   "covered": 33018,
+   "remainder": 1
+  },
+  "port": {
+   "values_returned": 100,
+   "covered": 32691,
+   "remainder": 328
+  }
+ },
+ "countries": [
+  {
+   "count": 22805,
+   "value": "DE"
+  },
+  {
+   "count": 7208,
+   "value": "SA"
+  },
+  {
+   "count": 2085,
+   "value": "PT"
+  },
+  {
+   "count": 349,
+   "value": "MD"
+  },
+  {
+   "count": 102,
+   "value": "US"
+  },
+  {
+   "count": 75,
+   "value": "IN"
+  },
+  {
+   "count": 59,
+   "value": "JP"
+  },
+  {
+   "count": 42,
+   "value": "AR"
+  },
+  {
+   "count": 36,
+   "value": "EG"
+  },
+  {
+   "count": 34,
+   "value": "GB"
+  },
+  {
+   "count": 33,
+   "value": "IE"
+  },
+  {
+   "count": 30,
+   "value": "AU"
+  },
+  {
+   "count": 26,
+   "value": "BR"
+  },
+  {
+   "count": 24,
+   "value": "HK"
+  },
+  {
+   "count": 21,
+   "value": "ZA"
+  },
+  {
+   "count": 14,
+   "value": "MX"
+  },
+  {
+   "count": 12,
+   "value": "TR"
+  },
+  {
+   "count": 11,
+   "value": "CA"
+  },
+  {
+   "count": 10,
+   "value": "TH"
+  },
+  {
+   "count": 8,
+   "value": "SG"
+  },
+  {
+   "count": 6,
+   "value": "IT"
+  },
+  {
+   "count": 5,
+   "value": "ID"
+  },
+  {
+   "count": 5,
+   "value": "IL"
+  },
+  {
+   "count": 5,
+   "value": "SE"
+  },
+  {
+   "count": 4,
+   "value": "CH"
+  },
+  {
+   "count": 3,
+   "value": "FR"
+  },
+  {
+   "count": 3,
+   "value": "KR"
+  },
+  {
+   "count": 2,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "CZ"
+  },
+  {
+   "count": 1,
+   "value": "IR"
+  }
+ ],
+ "asn": [
+  {
+   "count": 22321,
+   "value": "as3320"
+  },
+  {
+   "count": 7088,
+   "value": "as25019"
+  },
+  {
+   "count": 2034,
+   "value": "as2860"
+  },
+  {
+   "count": 482,
+   "value": "3320"
+  },
+  {
+   "count": 346,
+   "value": "as31252"
+  },
+  {
+   "count": 230,
+   "value": "as16509"
+  },
+  {
+   "count": 209,
+   "value": "as8075"
+  },
+  {
+   "count": 125,
+   "value": "25019"
+  },
+  {
+   "count": 42,
+   "value": "2860"
+  },
+  {
+   "count": 38,
+   "value": "as22927"
+  },
+  {
+   "count": 28,
+   "value": "as24835"
+  },
+  {
+   "count": 12,
+   "value": "as47331"
+  },
+  {
+   "count": 10,
+   "value": "as1897"
+  },
+  {
+   "count": 9,
+   "value": "as8151"
+  },
+  {
+   "count": 8,
+   "value": "24835"
+  },
+  {
+   "count": 7,
+   "value": "16509"
+  },
+  {
+   "count": 5,
+   "value": "8075"
+  },
+  {
+   "count": 4,
+   "value": "22927"
+  },
+  {
+   "count": 4,
+   "value": "as14618"
+  },
+  {
+   "count": 4,
+   "value": "as26599"
+  },
+  {
+   "count": 3,
+   "value": "31252"
+  },
+  {
+   "count": 3,
+   "value": "as6805"
+  },
+  {
+   "count": 1,
+   "value": "6805"
+  },
+  {
+   "count": 1,
+   "value": "as11427"
+  },
+  {
+   "count": 1,
+   "value": "as196735"
+  },
+  {
+   "count": 1,
+   "value": "as2514"
+  },
+  {
+   "count": 1,
+   "value": "as265611"
+  },
+  {
+   "count": 1,
+   "value": "as58224"
+  }
+ ],
+ "ports": [
+  {
+   "count": 32196,
+   "value": 7547
+  },
+  {
+   "count": 361,
+   "value": 8081
+  },
+  {
+   "count": 4,
+   "value": 51005
+  },
+  {
+   "count": 3,
+   "value": 80
+  },
+  {
+   "count": 3,
+   "value": 443
+  },
+  {
+   "count": 3,
+   "value": 8080
+  },
+  {
+   "count": 2,
+   "value": 84
+  },
+  {
+   "count": 2,
+   "value": 444
+  },
+  {
+   "count": 2,
+   "value": 1935
+  },
+  {
+   "count": 2,
+   "value": 1962
+  },
+  {
+   "count": 2,
+   "value": 2423
+  },
+  {
+   "count": 2,
+   "value": 4443
+  },
+  {
+   "count": 2,
+   "value": 4782
+  },
+  {
+   "count": 2,
+   "value": 5640
+  },
+  {
+   "count": 2,
+   "value": 5918
+  },
+  {
+   "count": 2,
+   "value": 5984
+  },
+  {
+   "count": 2,
+   "value": 6512
+  },
+  {
+   "count": 2,
+   "value": 7634
+  },
+  {
+   "count": 2,
+   "value": 8154
+  },
+  {
+   "count": 2,
+   "value": 8333
+  },
+  {
+   "count": 2,
+   "value": 9090
+  },
+  {
+   "count": 2,
+   "value": 10477
+  },
+  {
+   "count": 2,
+   "value": 12144
+  },
+  {
+   "count": 2,
+   "value": 16992
+  },
+  {
+   "count": 2,
+   "value": 18040
+  },
+  {
+   "count": 2,
+   "value": 18078
+  },
+  {
+   "count": 2,
+   "value": 18112
+  },
+  {
+   "count": 2,
+   "value": 20040
+  },
+  {
+   "count": 2,
+   "value": 20512
+  },
+  {
+   "count": 2,
+   "value": 21234
+  },
+  {
+   "count": 2,
+   "value": 21262
+  },
+  {
+   "count": 2,
+   "value": 22084
+  },
+  {
+   "count": 2,
+   "value": 51106
+  },
+  {
+   "count": 1,
+   "value": 15
+  },
+  {
+   "count": 1,
+   "value": 21
+  },
+  {
+   "count": 1,
+   "value": 22
+  },
+  {
+   "count": 1,
+   "value": 23
+  },
+  {
+   "count": 1,
+   "value": 53
+  },
+  {
+   "count": 1,
+   "value": 70
+  },
+  {
+   "count": 1,
+   "value": 79
+  },
+  {
+   "count": 1,
+   "value": 81
+  },
+  {
+   "count": 1,
+   "value": 93
+  },
+  {
+   "count": 1,
+   "value": 102
+  },
+  {
+   "count": 1,
+   "value": 104
+  },
+  {
+   "count": 1,
+   "value": 139
+  },
+  {
+   "count": 1,
+   "value": 221
+  },
+  {
+   "count": 1,
+   "value": 225
+  },
+  {
+   "count": 1,
+   "value": 234
+  },
+  {
+   "count": 1,
+   "value": 264
+  },
+  {
+   "count": 1,
+   "value": 440
+  },
+  {
+   "count": 1,
+   "value": 452
+  },
+  {
+   "count": 1,
+   "value": 465
+  },
+  {
+   "count": 1,
+   "value": 491
+  },
+  {
+   "count": 1,
+   "value": 548
+  },
+  {
+   "count": 1,
+   "value": 636
+  },
+  {
+   "count": 1,
+   "value": 646
+  },
+  {
+   "count": 1,
+   "value": 685
+  },
+  {
+   "count": 1,
+   "value": 800
+  },
+  {
+   "count": 1,
+   "value": 823
+  },
+  {
+   "count": 1,
+   "value": 873
+  },
+  {
+   "count": 1,
+   "value": 990
+  },
+  {
+   "count": 1,
+   "value": 993
+  },
+  {
+   "count": 1,
+   "value": 1023
+  },
+  {
+   "count": 1,
+   "value": 1025
+  },
+  {
+   "count": 1,
+   "value": 1099
+  },
+  {
+   "count": 1,
+   "value": 1153
+  },
+  {
+   "count": 1,
+   "value": 1193
+  },
+  {
+   "count": 1,
+   "value": 1200
+  },
+  {
+   "count": 1,
+   "value": 1224
+  },
+  {
+   "count": 1,
+   "value": 1234
+  },
+  {
+   "count": 1,
+   "value": 1235
+  },
+  {
+   "count": 1,
+   "value": 1249
+  },
+  {
+   "count": 1,
+   "value": 1250
+  },
+  {
+   "count": 1,
+   "value": 1400
+  },
+  {
+   "count": 1,
+   "value": 1444
+  },
+  {
+   "count": 1,
+   "value": 1554
+  },
+  {
+   "count": 1,
+   "value": 1911
+  },
+  {
+   "count": 1,
+   "value": 1925
+  },
+  {
+   "count": 1,
+   "value": 1970
+  },
+  {
+   "count": 1,
+   "value": 1987
+  },
+  {
+   "count": 1,
+   "value": 2002
+  },
+  {
+   "count": 1,
+   "value": 2100
+  },
+  {
+   "count": 1,
+   "value": 2134
+  },
+  {
+   "count": 1,
+   "value": 2154
+  },
+  {
+   "count": 1,
+   "value": 2222
+  },
+  {
+   "count": 1,
+   "value": 2443
+  },
+  {
+   "count": 1,
+   "value": 2444
+  },
+  {
+   "count": 1,
+   "value": 2480
+  },
+  {
+   "count": 1,
+   "value": 2570
+  },
+  {
+   "count": 1,
+   "value": 2602
+  },
+  {
+   "count": 1,
+   "value": 2761
+  },
+  {
+   "count": 1,
+   "value": 2762
+  },
+  {
+   "count": 1,
+   "value": 3050
+  },
+  {
+   "count": 1,
+   "value": 3052
+  },
+  {
+   "count": 1,
+   "value": 3069
+  },
+  {
+   "count": 1,
+   "value": 3078
+  },
+  {
+   "count": 1,
+   "value": 3084
+  },
+  {
+   "count": 1,
+   "value": 3088
+  },
+  {
+   "count": 1,
+   "value": 3119
+  },
+  {
+   "count": 1,
+   "value": 3139
+  }
+ ],
+ "orgs": [
+  {
+   "count": 22803,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 1925,
+   "value": "NOS COMUNICACOES, S.A."
+  },
+  {
+   "count": 1299,
+   "value": "STC, Jeddah Residential Fixed-Broadband"
+  },
+  {
+   "count": 1133,
+   "value": "STC, Dammam Residential Fixed-Broadband"
+  },
+  {
+   "count": 1055,
+   "value": "STC, Riyadh Residential Fixed-Broadband"
+  },
+  {
+   "count": 897,
+   "value": "Saudi Telecom Company JSC"
+  },
+  {
+   "count": 426,
+   "value": "STC, Madinah Residential Fixed-Broadband"
+  },
+  {
+   "count": 332,
+   "value": "STC, Riyadh-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 312,
+   "value": "STC, Jeddah-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 269,
+   "value": "STC, Khobar Residential Fixed-Broadband"
+  },
+  {
+   "count": 254,
+   "value": "STC, Al-Qassim Residential Fixed-Broadband"
+  },
+  {
+   "count": 226,
+   "value": "SC STARNET SRL"
+  },
+  {
+   "count": 214,
+   "value": "Microsoft Corporation"
+  },
+  {
+   "count": 161,
+   "value": "NOS COMUNICACOES S.A."
+  },
+  {
+   "count": 142,
+   "value": "STC, Al Qassim Residential Fixed-Broadband"
+  },
+  {
+   "count": 136,
+   "value": "STC, Khamis Mushait Residential Fixed-Broadband"
+  },
+  {
+   "count": 127,
+   "value": "STC, Madinah Residential-Fixed-Broadband"
+  },
+  {
+   "count": 123,
+   "value": "StarNet Solutii SRL"
+  },
+  {
+   "count": 121,
+   "value": "STC, Madinah ResidentialFixed-Broadband"
+  },
+  {
+   "count": 116,
+   "value": "STC, Dammam-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 100,
+   "value": "STC, Khamis Mushait-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 95,
+   "value": "STC, Khamis Mushait Residential-Fixed-Broadband"
+  },
+  {
+   "count": 93,
+   "value": "STC, Residential Fixed-Broadband"
+  },
+  {
+   "count": 85,
+   "value": "STC, Riyadh Residential Fixed-broadband"
+  },
+  {
+   "count": 84,
+   "value": "STC, Riyadh Residential-Fixed-Broadband"
+  },
+  {
+   "count": 71,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 59,
+   "value": "STC, Residential Fixed Broadband"
+  },
+  {
+   "count": 42,
+   "value": "Telefonica de Argentina"
+  },
+  {
+   "count": 35,
+   "value": "Amazon Data Services India"
+  },
+  {
+   "count": 31,
+   "value": "Amazon.com, Inc."
+  },
+  {
+   "count": 29,
+   "value": "STC, Madinah -Residential-Fixed-Broadband"
+  },
+  {
+   "count": 26,
+   "value": "STC, Makkah Residential Fixed-Broadband"
+  },
+  {
+   "count": 25,
+   "value": "Vodafone Data - Vodafone Data"
+  },
+  {
+   "count": 24,
+   "value": "Amazon Data Services Hong Kong"
+  },
+  {
+   "count": 22,
+   "value": "Amazon Data Services Osaka"
+  },
+  {
+   "count": 20,
+   "value": "STC, Khobar-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 11,
+   "value": "Vodafone Data"
+  },
+  {
+   "count": 10,
+   "value": "Amazon Data Services Canada"
+  },
+  {
+   "count": 8,
+   "value": "Uninet S.A. de C.V."
+  },
+  {
+   "count": 5,
+   "value": "A100 ROW Inc"
+  },
+  {
+   "count": 5,
+   "value": "Amazon Data Services Sweden"
+  },
+  {
+   "count": 5,
+   "value": "Infrastructure"
+  },
+  {
+   "count": 4,
+   "value": "Amazon Data Services Australia"
+  },
+  {
+   "count": 4,
+   "value": "Amazon Data Services Jakarta"
+  },
+  {
+   "count": 4,
+   "value": "Amazon Data Services Mexico"
+  },
+  {
+   "count": 4,
+   "value": "Amazon Data Services Singapore"
+  },
+  {
+   "count": 4,
+   "value": "TELEFÔNICA BRASIL S.A"
+  },
+  {
+   "count": 3,
+   "value": "AWS Asia Pacific (Seoul) Region"
+  },
+  {
+   "count": 3,
+   "value": "Amazon Data Services Northern Virginia"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Corporate Services Pty Ltd"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Data Services France"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Data Services Italy"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Data Services South Africa"
+  },
+  {
+   "count": 2,
+   "value": "NCC"
+  },
+  {
+   "count": 2,
+   "value": "STC, Madinah-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 2,
+   "value": "TT ADSL-TTnet-aci-static"
+  },
+  {
+   "count": 2,
+   "value": "Turk Telekom ADSL-TT net"
+  },
+  {
+   "count": 1,
+   "value": "ADSL-MET-Acibadem-Static Pool"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Brazil"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Japan"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services NoVa"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services UK"
+  },
+  {
+   "count": 1,
+   "value": "Charter Communications Inc"
+  },
+  {
+   "count": 1,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Iran Information Technology Company PJSC"
+  },
+  {
+   "count": 1,
+   "value": "JON.CZ - BLANSKO - Customers - Dynamic - SEBROV2"
+  },
+  {
+   "count": 1,
+   "value": "STC, Residential Fixed Wireless-Access"
+  },
+  {
+   "count": 1,
+   "value": "Server Hosting Service (NTTPCCommunications,Inc.)"
+  },
+  {
+   "count": 1,
+   "value": "TT ADSL-ISP static_gay"
+  },
+  {
+   "count": 1,
+   "value": "TT ADSL-TTnet-200K_2"
+  },
+  {
+   "count": 1,
+   "value": "TT ADSL-TTnet_ dynamic_ulus"
+  },
+  {
+   "count": 1,
+   "value": "TT ADSL-TTnet_dynamic_aci"
+  },
+  {
+   "count": 1,
+   "value": "TT ADSL-TTnet_static_aci"
+  },
+  {
+   "count": 1,
+   "value": "TT ADSL-TTnet_static_gay"
+  },
+  {
+   "count": 1,
+   "value": "Telefonica Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 1,
+   "value": "Telefonica O2 Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 1,
+   "value": "Telefonos del Noroeste, S.A. de C.V."
+  },
+  {
+   "count": 1,
+   "value": "Turk Telekom ADSL-TT net_dynamic"
+  }
+ ],
+ "id": "huawei-basic",
+ "parent": "huaweihomegateway",
+ "group": "huawei-auth",
+ "label": {
+  "ru": "Ответы Basic",
+  "en": "Basic responses",
+  "es": "Respuestas Basic",
+  "zh": "Basic 响应"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

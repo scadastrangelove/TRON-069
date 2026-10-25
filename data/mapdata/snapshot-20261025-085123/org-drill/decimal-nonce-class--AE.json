@@ -1,0 +1,69 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:AE",
+ "total": 459,
+ "taken": "2026-10-25T09:34:12+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 459,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 459,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 447,
+   "value": "as5384"
+  },
+  {
+   "count": 11,
+   "value": "5384"
+  },
+  {
+   "count": 1,
+   "value": "as15802"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 401,
+   "value": "Emirates Telecommunications Corporation"
+  },
+  {
+   "count": 53,
+   "value": "EMIRATES TELECOMMUNICATIONS GROUP COMPANY (ETISALAT GROUP) PJSC"
+  },
+  {
+   "count": 1,
+   "value": "Al Muadaa Internet"
+  },
+  {
+   "count": 1,
+   "value": "Barjeel Securities LLC"
+  },
+  {
+   "count": 1,
+   "value": "Capitol"
+  },
+  {
+   "count": 1,
+   "value": "Emirates Integrated Telecommunications Company PJSC (EITC-DU)"
+  },
+  {
+   "count": 1,
+   "value": "Emirates Internet"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "AE"
+}

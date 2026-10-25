@@ -1,0 +1,53 @@
+{
+ "dork": "\"Server: cwmp server\" country:AL",
+ "total": 561,
+ "taken": "2026-10-25T09:31:55+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 561,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 561,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 552,
+   "value": "as35047"
+  },
+  {
+   "count": 9,
+   "value": "35047"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 357,
+   "value": "Abissnet PPPoE Pool"
+  },
+  {
+   "count": 134,
+   "value": "Business Static Pool"
+  },
+  {
+   "count": 35,
+   "value": "Abissnet sh.a."
+  },
+  {
+   "count": 35,
+   "value": "Business Customers"
+  }
+ ],
+ "line": "cwmp server",
+ "line_id": "cwmp-server",
+ "cc": "AL"
+}

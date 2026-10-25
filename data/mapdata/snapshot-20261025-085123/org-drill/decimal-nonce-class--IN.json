@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:IN",
+ "total": 5,
+ "taken": "2026-10-25T09:34:46+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as17488"
+  },
+  {
+   "count": 1,
+   "value": "as132923"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as45916"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "HATHWAY CABLE AND DATACOM LIMITED"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Gtpl Dcpl Private Limited"
+  },
+  {
+   "count": 1,
+   "value": "Vihaan Telecommunication Pvt. Ltd."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "IN"
+}

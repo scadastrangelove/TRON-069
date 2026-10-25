@@ -1,0 +1,1547 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" \"qop=\"",
+ "total": 924282,
+ "taken": "2026-10-25T09:46:02+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 129,
+   "covered": 924278,
+   "remainder": 4
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 866012,
+   "remainder": 58270
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 873929,
+   "remainder": 50353
+  },
+  "port": {
+   "values_returned": 45,
+   "covered": 924282,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 273946,
+   "value": "MA"
+  },
+  {
+   "count": 198394,
+   "value": "CA"
+  },
+  {
+   "count": 122733,
+   "value": "US"
+  },
+  {
+   "count": 118226,
+   "value": "SG"
+  },
+  {
+   "count": 41693,
+   "value": "BR"
+  },
+  {
+   "count": 34281,
+   "value": "PR"
+  },
+  {
+   "count": 30937,
+   "value": "SA"
+  },
+  {
+   "count": 21839,
+   "value": "TN"
+  },
+  {
+   "count": 19772,
+   "value": "GB"
+  },
+  {
+   "count": 6380,
+   "value": "IN"
+  },
+  {
+   "count": 5795,
+   "value": "IM"
+  },
+  {
+   "count": 4093,
+   "value": "TW"
+  },
+  {
+   "count": 3286,
+   "value": "KW"
+  },
+  {
+   "count": 3154,
+   "value": "IT"
+  },
+  {
+   "count": 2793,
+   "value": "EE"
+  },
+  {
+   "count": 2413,
+   "value": "XK"
+  },
+  {
+   "count": 2314,
+   "value": "AU"
+  },
+  {
+   "count": 2166,
+   "value": "GR"
+  },
+  {
+   "count": 2151,
+   "value": "PH"
+  },
+  {
+   "count": 2099,
+   "value": "NZ"
+  },
+  {
+   "count": 2055,
+   "value": "RS"
+  },
+  {
+   "count": 1691,
+   "value": "TR"
+  },
+  {
+   "count": 1632,
+   "value": "CR"
+  },
+  {
+   "count": 1472,
+   "value": "NL"
+  },
+  {
+   "count": 1421,
+   "value": "MX"
+  },
+  {
+   "count": 1222,
+   "value": "TH"
+  },
+  {
+   "count": 1203,
+   "value": "PS"
+  },
+  {
+   "count": 1190,
+   "value": "AT"
+  },
+  {
+   "count": 1108,
+   "value": "FI"
+  },
+  {
+   "count": 1071,
+   "value": "CY"
+  },
+  {
+   "count": 1022,
+   "value": "SE"
+  },
+  {
+   "count": 1000,
+   "value": "DK"
+  },
+  {
+   "count": 980,
+   "value": "QA"
+  },
+  {
+   "count": 856,
+   "value": "KE"
+  },
+  {
+   "count": 678,
+   "value": "NO"
+  },
+  {
+   "count": 611,
+   "value": "ID"
+  },
+  {
+   "count": 554,
+   "value": "PY"
+  },
+  {
+   "count": 489,
+   "value": "AR"
+  },
+  {
+   "count": 480,
+   "value": "LB"
+  },
+  {
+   "count": 474,
+   "value": "JP"
+  },
+  {
+   "count": 445,
+   "value": "SL"
+  },
+  {
+   "count": 438,
+   "value": "ZA"
+  },
+  {
+   "count": 386,
+   "value": "TV"
+  },
+  {
+   "count": 269,
+   "value": "OM"
+  },
+  {
+   "count": 262,
+   "value": "HU"
+  },
+  {
+   "count": 248,
+   "value": "JM"
+  },
+  {
+   "count": 209,
+   "value": "CO"
+  },
+  {
+   "count": 199,
+   "value": "GA"
+  },
+  {
+   "count": 187,
+   "value": "IS"
+  },
+  {
+   "count": 154,
+   "value": "JO"
+  },
+  {
+   "count": 153,
+   "value": "EC"
+  },
+  {
+   "count": 152,
+   "value": "LT"
+  },
+  {
+   "count": 147,
+   "value": "ES"
+  },
+  {
+   "count": 115,
+   "value": "AM"
+  },
+  {
+   "count": 108,
+   "value": "UA"
+  },
+  {
+   "count": 107,
+   "value": "IR"
+  },
+  {
+   "count": 88,
+   "value": "HK"
+  },
+  {
+   "count": 79,
+   "value": "BT"
+  },
+  {
+   "count": 61,
+   "value": "LV"
+  },
+  {
+   "count": 57,
+   "value": "AZ"
+  },
+  {
+   "count": 53,
+   "value": "RW"
+  },
+  {
+   "count": 53,
+   "value": "WF"
+  },
+  {
+   "count": 46,
+   "value": "LI"
+  },
+  {
+   "count": 43,
+   "value": "CN"
+  },
+  {
+   "count": 39,
+   "value": "BG"
+  },
+  {
+   "count": 39,
+   "value": "NI"
+  },
+  {
+   "count": 36,
+   "value": "NP"
+  },
+  {
+   "count": 29,
+   "value": "LR"
+  },
+  {
+   "count": 29,
+   "value": "PK"
+  },
+  {
+   "count": 24,
+   "value": "NE"
+  },
+  {
+   "count": 21,
+   "value": "LK"
+  },
+  {
+   "count": 20,
+   "value": "BF"
+  },
+  {
+   "count": 20,
+   "value": "WS"
+  },
+  {
+   "count": 17,
+   "value": "CI"
+  },
+  {
+   "count": 17,
+   "value": "RO"
+  },
+  {
+   "count": 16,
+   "value": "UG"
+  },
+  {
+   "count": 12,
+   "value": "EH"
+  },
+  {
+   "count": 12,
+   "value": "FR"
+  },
+  {
+   "count": 12,
+   "value": "LU"
+  },
+  {
+   "count": 11,
+   "value": "PT"
+  },
+  {
+   "count": 11,
+   "value": "SI"
+  },
+  {
+   "count": 11,
+   "value": "SK"
+  },
+  {
+   "count": 10,
+   "value": "AE"
+  },
+  {
+   "count": 9,
+   "value": "KR"
+  },
+  {
+   "count": 9,
+   "value": "TG"
+  },
+  {
+   "count": 9,
+   "value": "UY"
+  },
+  {
+   "count": 8,
+   "value": "BE"
+  },
+  {
+   "count": 7,
+   "value": "DE"
+  },
+  {
+   "count": 7,
+   "value": "EG"
+  },
+  {
+   "count": 7,
+   "value": "KH"
+  },
+  {
+   "count": 7,
+   "value": "MY"
+  },
+  {
+   "count": 7,
+   "value": "PL"
+  },
+  {
+   "count": 6,
+   "value": "BA"
+  },
+  {
+   "count": 6,
+   "value": "ZW"
+  },
+  {
+   "count": 5,
+   "value": "CZ"
+  },
+  {
+   "count": 5,
+   "value": "MG"
+  },
+  {
+   "count": 4,
+   "value": "CK"
+  },
+  {
+   "count": 4,
+   "value": "MK"
+  },
+  {
+   "count": 4,
+   "value": "MW"
+  },
+  {
+   "count": 4,
+   "value": "NG"
+  },
+  {
+   "count": 4,
+   "value": "UZ"
+  },
+  {
+   "count": 3,
+   "value": "CL"
+  },
+  {
+   "count": 3,
+   "value": "CW"
+  },
+  {
+   "count": 3,
+   "value": "GL"
+  },
+  {
+   "count": 3,
+   "value": "IQ"
+  },
+  {
+   "count": 3,
+   "value": "KZ"
+  },
+  {
+   "count": 3,
+   "value": "LA"
+  },
+  {
+   "count": 3,
+   "value": "MT"
+  },
+  {
+   "count": 2,
+   "value": "AL"
+  },
+  {
+   "count": 2,
+   "value": "AW"
+  },
+  {
+   "count": 2,
+   "value": "CG"
+  },
+  {
+   "count": 2,
+   "value": "CH"
+  },
+  {
+   "count": 2,
+   "value": "PA"
+  },
+  {
+   "count": 1,
+   "value": "AX"
+  },
+  {
+   "count": 1,
+   "value": "BD"
+  },
+  {
+   "count": 1,
+   "value": "BH"
+  },
+  {
+   "count": 1,
+   "value": "BS"
+  },
+  {
+   "count": 1,
+   "value": "DO"
+  },
+  {
+   "count": 1,
+   "value": "IL"
+  },
+  {
+   "count": 1,
+   "value": "JE"
+  },
+  {
+   "count": 1,
+   "value": "MD"
+  },
+  {
+   "count": 1,
+   "value": "ME"
+  },
+  {
+   "count": 1,
+   "value": "MU"
+  },
+  {
+   "count": 1,
+   "value": "PE"
+  },
+  {
+   "count": 1,
+   "value": "RU"
+  },
+  {
+   "count": 1,
+   "value": "TJ"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  },
+  {
+   "count": 1,
+   "value": "VN"
+  },
+  {
+   "count": 1,
+   "value": "ZM"
+  }
+ ],
+ "asn": [
+  {
+   "count": 264205,
+   "value": "as36903"
+  },
+  {
+   "count": 142129,
+   "value": "as1403"
+  },
+  {
+   "count": 105597,
+   "value": "as9506"
+  },
+  {
+   "count": 33823,
+   "value": "as10396"
+  },
+  {
+   "count": 30610,
+   "value": "as25019"
+  },
+  {
+   "count": 23964,
+   "value": "as40029"
+  },
+  {
+   "count": 14289,
+   "value": "as397142"
+  },
+  {
+   "count": 12033,
+   "value": "as37693"
+  },
+  {
+   "count": 11672,
+   "value": "as7794"
+  },
+  {
+   "count": 11407,
+   "value": "as20135"
+  },
+  {
+   "count": 11400,
+   "value": "as21949"
+  },
+  {
+   "count": 10674,
+   "value": "as206347"
+  },
+  {
+   "count": 8291,
+   "value": "as33548"
+  },
+  {
+   "count": 7898,
+   "value": "as12183"
+  },
+  {
+   "count": 7392,
+   "value": "as210874"
+  },
+  {
+   "count": 7113,
+   "value": "as3758"
+  },
+  {
+   "count": 6679,
+   "value": "as394838"
+  },
+  {
+   "count": 6670,
+   "value": "as37705"
+  },
+  {
+   "count": 6604,
+   "value": "as27338"
+  },
+  {
+   "count": 5998,
+   "value": "as28220"
+  },
+  {
+   "count": 5753,
+   "value": "as13122"
+  },
+  {
+   "count": 5746,
+   "value": "as6713"
+  },
+  {
+   "count": 5080,
+   "value": "as262673"
+  },
+  {
+   "count": 4790,
+   "value": "as33136"
+  },
+  {
+   "count": 4673,
+   "value": "as135600"
+  },
+  {
+   "count": 3950,
+   "value": "as27699"
+  },
+  {
+   "count": 3864,
+   "value": "36903"
+  },
+  {
+   "count": 3247,
+   "value": "as35847"
+  },
+  {
+   "count": 3194,
+   "value": "as25921"
+  },
+  {
+   "count": 3177,
+   "value": "as42961"
+  },
+  {
+   "count": 2912,
+   "value": "as26599"
+  },
+  {
+   "count": 2905,
+   "value": "as1267"
+  },
+  {
+   "count": 2813,
+   "value": "as42689"
+  },
+  {
+   "count": 2733,
+   "value": "as2586"
+  },
+  {
+   "count": 2629,
+   "value": "as32444"
+  },
+  {
+   "count": 2444,
+   "value": "as7738"
+  },
+  {
+   "count": 2413,
+   "value": "as393684"
+  },
+  {
+   "count": 2342,
+   "value": "as11722"
+  },
+  {
+   "count": 2320,
+   "value": "as8661"
+  },
+  {
+   "count": 2285,
+   "value": "as35432"
+  },
+  {
+   "count": 2233,
+   "value": "as812"
+  },
+  {
+   "count": 2115,
+   "value": "as24560"
+  },
+  {
+   "count": 2114,
+   "value": "as11847"
+  },
+  {
+   "count": 2092,
+   "value": "as54696"
+  },
+  {
+   "count": 2090,
+   "value": "as394868"
+  },
+  {
+   "count": 2053,
+   "value": "as8771"
+  },
+  {
+   "count": 1989,
+   "value": "as397545"
+  },
+  {
+   "count": 1963,
+   "value": "as400202"
+  },
+  {
+   "count": 1954,
+   "value": "as131596"
+  },
+  {
+   "count": 1943,
+   "value": "as15065"
+  },
+  {
+   "count": 1914,
+   "value": "as134674"
+  },
+  {
+   "count": 1868,
+   "value": "as22051"
+  },
+  {
+   "count": 1846,
+   "value": "as8167"
+  },
+  {
+   "count": 1809,
+   "value": "as29974"
+  },
+  {
+   "count": 1683,
+   "value": "as11727"
+  },
+  {
+   "count": 1682,
+   "value": "as132199"
+  },
+  {
+   "count": 1585,
+   "value": "as45763"
+  },
+  {
+   "count": 1570,
+   "value": "as22423"
+  },
+  {
+   "count": 1549,
+   "value": "as17306"
+  },
+  {
+   "count": 1493,
+   "value": "as6128"
+  },
+  {
+   "count": 1465,
+   "value": "as262992"
+  },
+  {
+   "count": 1454,
+   "value": "as1241"
+  },
+  {
+   "count": 1415,
+   "value": "as5607"
+  },
+  {
+   "count": 1391,
+   "value": "as131611"
+  },
+  {
+   "count": 1353,
+   "value": "as13999"
+  },
+  {
+   "count": 1316,
+   "value": "as28210"
+  },
+  {
+   "count": 1292,
+   "value": "as34984"
+  },
+  {
+   "count": 1276,
+   "value": "as394468"
+  },
+  {
+   "count": 1270,
+   "value": "as36316"
+  },
+  {
+   "count": 1214,
+   "value": "as20318"
+  },
+  {
+   "count": 1177,
+   "value": "as18881"
+  },
+  {
+   "count": 1175,
+   "value": "as12605"
+  },
+  {
+   "count": 1170,
+   "value": "as12975"
+  },
+  {
+   "count": 1159,
+   "value": "as53338"
+  },
+  {
+   "count": 1098,
+   "value": "as52974"
+  },
+  {
+   "count": 1092,
+   "value": "as14543"
+  },
+  {
+   "count": 1091,
+   "value": "as62682"
+  },
+  {
+   "count": 1027,
+   "value": "as37492"
+  },
+  {
+   "count": 995,
+   "value": "as262241"
+  },
+  {
+   "count": 973,
+   "value": "as39699"
+  },
+  {
+   "count": 917,
+   "value": "as270814"
+  },
+  {
+   "count": 832,
+   "value": "as48728"
+  },
+  {
+   "count": 814,
+   "value": "as30444"
+  },
+  {
+   "count": 809,
+   "value": "9506"
+  },
+  {
+   "count": 799,
+   "value": "as37671"
+  },
+  {
+   "count": 790,
+   "value": "as52871"
+  },
+  {
+   "count": 783,
+   "value": "as131090"
+  },
+  {
+   "count": 753,
+   "value": "as46320"
+  },
+  {
+   "count": 744,
+   "value": "as53088"
+  },
+  {
+   "count": 711,
+   "value": "as11287"
+  },
+  {
+   "count": 660,
+   "value": "as174"
+  },
+  {
+   "count": 648,
+   "value": "as26077"
+  },
+  {
+   "count": 646,
+   "value": "as25472"
+  },
+  {
+   "count": 640,
+   "value": "as397332"
+  },
+  {
+   "count": 639,
+   "value": "as2609"
+  },
+  {
+   "count": 619,
+   "value": "as32212"
+  },
+  {
+   "count": 618,
+   "value": "as10958"
+  },
+  {
+   "count": 615,
+   "value": "as5071"
+  },
+  {
+   "count": 613,
+   "value": "as3308"
+  },
+  {
+   "count": 613,
+   "value": "as6167"
+  }
+ ],
+ "ports": [
+  {
+   "count": 753826,
+   "value": 7547
+  },
+  {
+   "count": 118230,
+   "value": 30005
+  },
+  {
+   "count": 16957,
+   "value": 51005
+  },
+  {
+   "count": 16687,
+   "value": 8081
+  },
+  {
+   "count": 8463,
+   "value": 1024
+  },
+  {
+   "count": 4840,
+   "value": 3005
+  },
+  {
+   "count": 2373,
+   "value": 7548
+  },
+  {
+   "count": 2148,
+   "value": 8084
+  },
+  {
+   "count": 428,
+   "value": 8082
+  },
+  {
+   "count": 67,
+   "value": 7080
+  },
+  {
+   "count": 49,
+   "value": 57547
+  },
+  {
+   "count": 40,
+   "value": 58000
+  },
+  {
+   "count": 33,
+   "value": 5400
+  },
+  {
+   "count": 24,
+   "value": 1025
+  },
+  {
+   "count": 22,
+   "value": 10301
+  },
+  {
+   "count": 17,
+   "value": 60996
+  },
+  {
+   "count": 10,
+   "value": 80
+  },
+  {
+   "count": 9,
+   "value": 8080
+  },
+  {
+   "count": 9,
+   "value": 30000
+  },
+  {
+   "count": 6,
+   "value": 30001
+  },
+  {
+   "count": 6,
+   "value": 30003
+  },
+  {
+   "count": 4,
+   "value": 9090
+  },
+  {
+   "count": 4,
+   "value": 37757
+  },
+  {
+   "count": 3,
+   "value": 930
+  },
+  {
+   "count": 3,
+   "value": 7000
+  },
+  {
+   "count": 3,
+   "value": 7676
+  },
+  {
+   "count": 2,
+   "value": 8091
+  },
+  {
+   "count": 2,
+   "value": 30002
+  },
+  {
+   "count": 1,
+   "value": 1457
+  },
+  {
+   "count": 1,
+   "value": 2081
+  },
+  {
+   "count": 1,
+   "value": 3106
+  },
+  {
+   "count": 1,
+   "value": 3307
+  },
+  {
+   "count": 1,
+   "value": 3388
+  },
+  {
+   "count": 1,
+   "value": 3389
+  },
+  {
+   "count": 1,
+   "value": 3390
+  },
+  {
+   "count": 1,
+   "value": 3500
+  },
+  {
+   "count": 1,
+   "value": 5135
+  },
+  {
+   "count": 1,
+   "value": 6779
+  },
+  {
+   "count": 1,
+   "value": 8001
+  },
+  {
+   "count": 1,
+   "value": 8553
+  },
+  {
+   "count": 1,
+   "value": 9002
+  },
+  {
+   "count": 1,
+   "value": 20208
+  },
+  {
+   "count": 1,
+   "value": 25001
+  },
+  {
+   "count": 1,
+   "value": 50996
+  },
+  {
+   "count": 1,
+   "value": 53200
+  }
+ ],
+ "orgs": [
+  {
+   "count": 120087,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 103459,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 97238,
+   "value": "EBOX"
+  },
+  {
+   "count": 73393,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 64377,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 40799,
+   "value": "MarocTelecomASDL"
+  },
+  {
+   "count": 33657,
+   "value": "Puerto Rico Telephone Company"
+  },
+  {
+   "count": 31554,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 24551,
+   "value": "Navigata Communications Limited"
+  },
+  {
+   "count": 17645,
+   "value": "STC, Jeddah Residential Fixed-Broadband"
+  },
+  {
+   "count": 15481,
+   "value": "Novus Entertainment Inc."
+  },
+  {
+   "count": 13149,
+   "value": "Primus Telecommunications Canada Inc."
+  },
+  {
+   "count": 12599,
+   "value": "ATI - Agence Tunisienne Internet"
+  },
+  {
+   "count": 11698,
+   "value": "Execulink Telecom Inc."
+  },
+  {
+   "count": 11412,
+   "value": "Beanfield Technologies Inc."
+  },
+  {
+   "count": 8634,
+   "value": "TELEFÔNICA BRASIL S.A"
+  },
+  {
+   "count": 7695,
+   "value": "Unwired Broadband, LLC"
+  },
+  {
+   "count": 7484,
+   "value": "ADSL_Maroc_telecom"
+  },
+  {
+   "count": 7395,
+   "value": "Alares Cabo Servicos de Telecomunicacoes S.A."
+  },
+  {
+   "count": 7278,
+   "value": "VERO S.A"
+  },
+  {
+   "count": 6680,
+   "value": "Pulse"
+  },
+  {
+   "count": 6372,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 5283,
+   "value": "B2B2C Inc"
+  },
+  {
+   "count": 5025,
+   "value": "Residential ADSL - Manx Telecom"
+  },
+  {
+   "count": 4916,
+   "value": "GoNetSpeed"
+  },
+  {
+   "count": 4800,
+   "value": "Ozark Fiber, LLC"
+  },
+  {
+   "count": 4737,
+   "value": "Millennium Telcom LLC"
+  },
+  {
+   "count": 4653,
+   "value": "Windstream Communications LLC"
+  },
+  {
+   "count": 4339,
+   "value": "V tal"
+  },
+  {
+   "count": 4310,
+   "value": "OOREDOO TUNISIE SA - OOREDOO TUNISIE SA"
+  },
+  {
+   "count": 3931,
+   "value": "MIPPS INC."
+  },
+  {
+   "count": 3904,
+   "value": "Box Broadband Limited"
+  },
+  {
+   "count": 3894,
+   "value": "TOPNET"
+  },
+  {
+   "count": 3256,
+   "value": "Ezee Fiber"
+  },
+  {
+   "count": 3207,
+   "value": "Whiz Communications Pte Ltd"
+  },
+  {
+   "count": 3199,
+   "value": "LUS Fiber"
+  },
+  {
+   "count": 2998,
+   "value": "WIND TRE S.P.A."
+  },
+  {
+   "count": 2884,
+   "value": "Mobile Telecommunications Company K.S.C.P."
+  },
+  {
+   "count": 2524,
+   "value": "Saudi Telecom Company JSC"
+  },
+  {
+   "count": 2485,
+   "value": "STC, Madinah Residential Fixed-Broadband"
+  },
+  {
+   "count": 2404,
+   "value": "Telekomi i Kosovës"
+  },
+  {
+   "count": 2304,
+   "value": "Cablenet Communication Systems plc"
+  },
+  {
+   "count": 2166,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 2088,
+   "value": "Foothills Broadband, LLC"
+  },
+  {
+   "count": 2045,
+   "value": "YUnet International d.o.o."
+  },
+  {
+   "count": 2033,
+   "value": "Rogers Communications Canada Inc."
+  },
+  {
+   "count": 2028,
+   "value": "Greenlight Networks, LLC"
+  },
+  {
+   "count": 2011,
+   "value": "Wessex Internet Limited"
+  },
+  {
+   "count": 1885,
+   "value": "Bristol Tennessee Essential Services"
+  },
+  {
+   "count": 1805,
+   "value": "Wightman Telecom"
+  },
+  {
+   "count": 1736,
+   "value": "STC, Jeddah-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 1625,
+   "value": "Slic Network Solutions, Inc"
+  },
+  {
+   "count": 1599,
+   "value": "Opticomm Co Pty Ltd"
+  },
+  {
+   "count": 1596,
+   "value": "Taiwan Broadband Communication"
+  },
+  {
+   "count": 1587,
+   "value": "City Wide Communications Inc."
+  },
+  {
+   "count": 1577,
+   "value": "STC, Riyadh Residential Fixed-Broadband"
+  },
+  {
+   "count": 1547,
+   "value": "JAB Wireless, INC."
+  },
+  {
+   "count": 1542,
+   "value": "Bruce Telecom"
+  },
+  {
+   "count": 1468,
+   "value": "Glide Student & Residential Limited"
+  },
+  {
+   "count": 1417,
+   "value": "Sky UK Limited"
+  },
+  {
+   "count": 1378,
+   "value": "GIGA MAIS FIBRA TELECOMUNICACOES S.A."
+  },
+  {
+   "count": 1355,
+   "value": "Mega Cable, S.A. de C.V."
+  },
+  {
+   "count": 1308,
+   "value": "San Da Cable TV Co., LTD."
+  },
+  {
+   "count": 1276,
+   "value": "Wave Wireless LLC"
+  },
+  {
+   "count": 1247,
+   "value": "Cable network clients"
+  },
+  {
+   "count": 1142,
+   "value": "Anthem Broadband"
+  },
+  {
+   "count": 1132,
+   "value": "Static IP Services"
+  },
+  {
+   "count": 1126,
+   "value": "Henet Telecomunicacoes Ltda"
+  },
+  {
+   "count": 1095,
+   "value": "Hillbilly Wireless INC."
+  },
+  {
+   "count": 1092,
+   "value": "SRT Communications, Inc."
+  },
+  {
+   "count": 1064,
+   "value": "STC, Madinah-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 1021,
+   "value": "ADSL LLU POOLS"
+  },
+  {
+   "count": 995,
+   "value": "COOPERATIVA DE ELECTRIFICACION RURAL DE ALFARO RUIZ R.L."
+  },
+  {
+   "count": 990,
+   "value": "Municipality of the County of Pictou"
+  },
+  {
+   "count": 977,
+   "value": "Internet Utilities NA LLC"
+  },
+  {
+   "count": 977,
+   "value": "Palestine Telecommunications Company (PALTEL)"
+  },
+  {
+   "count": 941,
+   "value": "TATA PLAY BROADBAND PRIVATE LIMITED"
+  },
+  {
+   "count": 933,
+   "value": "ZAAZ PROVEDOR DE INTERNET E TELECOMUNICACOES LTDA"
+  },
+  {
+   "count": 923,
+   "value": "IAM"
+  },
+  {
+   "count": 897,
+   "value": "Level 3 Parent, LLC"
+  },
+  {
+   "count": 896,
+   "value": "Tata Play Broadband Private Limited"
+  },
+  {
+   "count": 872,
+   "value": "Cable Customers"
+  },
+  {
+   "count": 867,
+   "value": "Superonline Iletisim Hizmetleri A.S."
+  },
+  {
+   "count": 848,
+   "value": "Orange Tunisie - Orange Tunisie"
+  },
+  {
+   "count": 831,
+   "value": "Verizon Business"
+  },
+  {
+   "count": 824,
+   "value": "Purple Cow Internet Inc"
+  },
+  {
+   "count": 776,
+   "value": "STC, Residential Fixed Broadband"
+  },
+  {
+   "count": 765,
+   "value": "FORNET COMUNICACOES LTDA"
+  },
+  {
+   "count": 764,
+   "value": "10 Fl. 72. CAT TELECOM TOWER Bangrak Bangkok Thailand"
+  },
+  {
+   "count": 764,
+   "value": "CTAL"
+  },
+  {
+   "count": 740,
+   "value": "INFRA-AW"
+  },
+  {
+   "count": 737,
+   "value": "TASCOM TELECOMUNICAÇÕES LTDA"
+  },
+  {
+   "count": 708,
+   "value": "MarocTelecom4G"
+  },
+  {
+   "count": 655,
+   "value": "Charter Communications Inc"
+  },
+  {
+   "count": 652,
+   "value": "City of Anacortes"
+  },
+  {
+   "count": 635,
+   "value": "Nextlink Broadband"
+  },
+  {
+   "count": 618,
+   "value": "Royell Communications, Inc."
+  },
+  {
+   "count": 592,
+   "value": "CABO SERVICOS DE TELECOMUNICACOES LTDA"
+  },
+  {
+   "count": 588,
+   "value": "BOLT Fiber Optic Services"
+  },
+  {
+   "count": 566,
+   "value": "Voafibra Comunicacao"
+  }
+ ],
+ "id": "tr069-qop",
+ "parent": "tr069-client",
+ "group": "tr069-family",
+ "label": {
+  "ru": "Ответы с маркером qop",
+  "en": "Responses with a qop marker",
+  "es": "Respuestas con marcador qop",
+  "zh": "含 qop 标记的响应"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

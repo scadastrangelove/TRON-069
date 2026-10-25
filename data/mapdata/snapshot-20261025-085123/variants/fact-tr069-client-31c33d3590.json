@@ -1,0 +1,695 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:SG",
+ "total": 213194,
+ "taken": "2026-10-25T09:46:57+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 213194,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 34,
+   "covered": 213194,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 26,
+   "covered": 213194,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 100,
+   "covered": 212886,
+   "remainder": 308
+  }
+ },
+ "countries": [
+  {
+   "count": 213194,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 192845,
+   "value": "as9506"
+  },
+  {
+   "count": 13165,
+   "value": "as3758"
+  },
+  {
+   "count": 4617,
+   "value": "as135600"
+  },
+  {
+   "count": 1671,
+   "value": "9506"
+  },
+  {
+   "count": 275,
+   "value": "as55430"
+  },
+  {
+   "count": 199,
+   "value": "as63949"
+  },
+  {
+   "count": 120,
+   "value": "3758"
+  },
+  {
+   "count": 85,
+   "value": "as45102"
+  },
+  {
+   "count": 63,
+   "value": "135600"
+  },
+  {
+   "count": 55,
+   "value": "as14061"
+  },
+  {
+   "count": 31,
+   "value": "as9009"
+  },
+  {
+   "count": 20,
+   "value": "as4773"
+  },
+  {
+   "count": 17,
+   "value": "as20473"
+  },
+  {
+   "count": 9,
+   "value": "63949"
+  },
+  {
+   "count": 6,
+   "value": "as984"
+  },
+  {
+   "count": 4,
+   "value": "as17561"
+  },
+  {
+   "count": 2,
+   "value": "14061"
+  },
+  {
+   "count": 2,
+   "value": "20473"
+  },
+  {
+   "count": 1,
+   "value": "45102"
+  },
+  {
+   "count": 1,
+   "value": "4773"
+  },
+  {
+   "count": 1,
+   "value": "55430"
+  },
+  {
+   "count": 1,
+   "value": "9009"
+  },
+  {
+   "count": 1,
+   "value": "as18106"
+  },
+  {
+   "count": 1,
+   "value": "as23856"
+  },
+  {
+   "count": 1,
+   "value": "as55415"
+  },
+  {
+   "count": 1,
+   "value": "as9226"
+  }
+ ],
+ "ports": [
+  {
+   "count": 117850,
+   "value": 30005
+  },
+  {
+   "count": 43867,
+   "value": 1024
+  },
+  {
+   "count": 34890,
+   "value": 1025
+  },
+  {
+   "count": 6870,
+   "value": 30002
+  },
+  {
+   "count": 4139,
+   "value": 1026
+  },
+  {
+   "count": 2805,
+   "value": 1027
+  },
+  {
+   "count": 1182,
+   "value": 1028
+  },
+  {
+   "count": 746,
+   "value": 1029
+  },
+  {
+   "count": 345,
+   "value": 7547
+  },
+  {
+   "count": 49,
+   "value": 57547
+  },
+  {
+   "count": 6,
+   "value": 8001
+  },
+  {
+   "count": 5,
+   "value": 7001
+  },
+  {
+   "count": 5,
+   "value": 10001
+  },
+  {
+   "count": 3,
+   "value": 5601
+  },
+  {
+   "count": 3,
+   "value": 7779
+  },
+  {
+   "count": 3,
+   "value": 8002
+  },
+  {
+   "count": 3,
+   "value": 8081
+  },
+  {
+   "count": 3,
+   "value": 8083
+  },
+  {
+   "count": 3,
+   "value": 18182
+  },
+  {
+   "count": 2,
+   "value": 143
+  },
+  {
+   "count": 2,
+   "value": 285
+  },
+  {
+   "count": 2,
+   "value": 1195
+  },
+  {
+   "count": 2,
+   "value": 3390
+  },
+  {
+   "count": 2,
+   "value": 4282
+  },
+  {
+   "count": 2,
+   "value": 5003
+  },
+  {
+   "count": 2,
+   "value": 5454
+  },
+  {
+   "count": 2,
+   "value": 5555
+  },
+  {
+   "count": 2,
+   "value": 7548
+  },
+  {
+   "count": 2,
+   "value": 8015
+  },
+  {
+   "count": 2,
+   "value": 8068
+  },
+  {
+   "count": 2,
+   "value": 8444
+  },
+  {
+   "count": 2,
+   "value": 8467
+  },
+  {
+   "count": 2,
+   "value": 8605
+  },
+  {
+   "count": 2,
+   "value": 8880
+  },
+  {
+   "count": 2,
+   "value": 9002
+  },
+  {
+   "count": 2,
+   "value": 9016
+  },
+  {
+   "count": 2,
+   "value": 9184
+  },
+  {
+   "count": 2,
+   "value": 9398
+  },
+  {
+   "count": 2,
+   "value": 11401
+  },
+  {
+   "count": 2,
+   "value": 12146
+  },
+  {
+   "count": 2,
+   "value": 12322
+  },
+  {
+   "count": 2,
+   "value": 12436
+  },
+  {
+   "count": 2,
+   "value": 16010
+  },
+  {
+   "count": 2,
+   "value": 17779
+  },
+  {
+   "count": 2,
+   "value": 27017
+  },
+  {
+   "count": 2,
+   "value": 33344
+  },
+  {
+   "count": 2,
+   "value": 35241
+  },
+  {
+   "count": 1,
+   "value": 11
+  },
+  {
+   "count": 1,
+   "value": 15
+  },
+  {
+   "count": 1,
+   "value": 19
+  },
+  {
+   "count": 1,
+   "value": 70
+  },
+  {
+   "count": 1,
+   "value": 81
+  },
+  {
+   "count": 1,
+   "value": 82
+  },
+  {
+   "count": 1,
+   "value": 88
+  },
+  {
+   "count": 1,
+   "value": 89
+  },
+  {
+   "count": 1,
+   "value": 96
+  },
+  {
+   "count": 1,
+   "value": 400
+  },
+  {
+   "count": 1,
+   "value": 441
+  },
+  {
+   "count": 1,
+   "value": 685
+  },
+  {
+   "count": 1,
+   "value": 800
+  },
+  {
+   "count": 1,
+   "value": 833
+  },
+  {
+   "count": 1,
+   "value": 853
+  },
+  {
+   "count": 1,
+   "value": 888
+  },
+  {
+   "count": 1,
+   "value": 992
+  },
+  {
+   "count": 1,
+   "value": 1031
+  },
+  {
+   "count": 1,
+   "value": 1032
+  },
+  {
+   "count": 1,
+   "value": 1181
+  },
+  {
+   "count": 1,
+   "value": 1188
+  },
+  {
+   "count": 1,
+   "value": 1249
+  },
+  {
+   "count": 1,
+   "value": 1400
+  },
+  {
+   "count": 1,
+   "value": 1522
+  },
+  {
+   "count": 1,
+   "value": 1926
+  },
+  {
+   "count": 1,
+   "value": 1956
+  },
+  {
+   "count": 1,
+   "value": 1958
+  },
+  {
+   "count": 1,
+   "value": 2010
+  },
+  {
+   "count": 1,
+   "value": 2049
+  },
+  {
+   "count": 1,
+   "value": 2080
+  },
+  {
+   "count": 1,
+   "value": 2111
+  },
+  {
+   "count": 1,
+   "value": 2154
+  },
+  {
+   "count": 1,
+   "value": 2202
+  },
+  {
+   "count": 1,
+   "value": 2224
+  },
+  {
+   "count": 1,
+   "value": 2259
+  },
+  {
+   "count": 1,
+   "value": 2363
+  },
+  {
+   "count": 1,
+   "value": 2559
+  },
+  {
+   "count": 1,
+   "value": 2806
+  },
+  {
+   "count": 1,
+   "value": 3001
+  },
+  {
+   "count": 1,
+   "value": 3018
+  },
+  {
+   "count": 1,
+   "value": 3042
+  },
+  {
+   "count": 1,
+   "value": 3067
+  },
+  {
+   "count": 1,
+   "value": 3082
+  },
+  {
+   "count": 1,
+   "value": 3093
+  },
+  {
+   "count": 1,
+   "value": 3102
+  },
+  {
+   "count": 1,
+   "value": 3106
+  },
+  {
+   "count": 1,
+   "value": 3107
+  },
+  {
+   "count": 1,
+   "value": 3146
+  },
+  {
+   "count": 1,
+   "value": 3151
+  },
+  {
+   "count": 1,
+   "value": 3156
+  },
+  {
+   "count": 1,
+   "value": 3157
+  },
+  {
+   "count": 1,
+   "value": 3168
+  },
+  {
+   "count": 1,
+   "value": 3173
+  }
+ ],
+ "orgs": [
+  {
+   "count": 131703,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 59833,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 11535,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 4356,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 3038,
+   "value": "Whiz Communications Pte Ltd"
+  },
+  {
+   "count": 1638,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 194,
+   "value": "SingNET EVOLVE Broadband"
+  },
+  {
+   "count": 173,
+   "value": "StarHub Cable Vision Ltd"
+  },
+  {
+   "count": 120,
+   "value": "Linode"
+  },
+  {
+   "count": 109,
+   "value": "SingTel Mobile"
+  },
+  {
+   "count": 82,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 82,
+   "value": "Starhub Ltd."
+  },
+  {
+   "count": 73,
+   "value": "Linode, LLC"
+  },
+  {
+   "count": 71,
+   "value": "SingNet BroadBand Network Singapore Telecommunications LTD"
+  },
+  {
+   "count": 57,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 30,
+   "value": "EDIS GmbH"
+  },
+  {
+   "count": 17,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 15,
+   "value": "StarHub-Ltd-NGNBN-Services"
+  },
+  {
+   "count": 12,
+   "value": "M1 Ltd"
+  },
+  {
+   "count": 10,
+   "value": "Akamai Technologies, Inc."
+  },
+  {
+   "count": 9,
+   "value": "Cloud Innovation Ltd"
+  },
+  {
+   "count": 9,
+   "value": "M1 LIMITED"
+  },
+  {
+   "count": 6,
+   "value": "StarHub Internet Pte Ltd"
+  },
+  {
+   "count": 4,
+   "value": "Alibaba Cloud (Singapore) Private Limited"
+  },
+  {
+   "count": 4,
+   "value": "Octopus Web Solution LLC"
+  },
+  {
+   "count": 3,
+   "value": "Akamai Connected Cloud / Linode"
+  },
+  {
+   "count": 2,
+   "value": "139.162.0.0/16"
+  },
+  {
+   "count": 2,
+   "value": "EDIS Infrastructure in Singapore"
+  },
+  {
+   "count": 2,
+   "value": "Vultr Holdings, LLC"
+  },
+  {
+   "count": 1,
+   "value": "1-Net Singapore Pte Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Marina Bay Sands Pte Ltd"
+  },
+  {
+   "count": 1,
+   "value": "OCTOPUS WEB SOLUTION INC"
+  },
+  {
+   "count": 1,
+   "value": "SPTEL PTE. LTD."
+  },
+  {
+   "count": 1,
+   "value": "Viewqwest Pte Ltd"
+  }
+ ],
+ "id": "fact-tr069-client-31c33d3590",
+ "parent": "tr069-client",
+ "group": "facts",
+ "label": {
+  "ru": "Срез Singtel; прежняя связь с Huawei пересмотрена",
+  "en": "Singtel slice; earlier Huawei association revised",
+  "es": "Corte Singtel; asociación anterior con Huawei revisada",
+  "zh": "Singtel 子集；已修订早先与 Huawei 的关联"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,127 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8081 country:NZ",
+ "total": 102532,
+ "taken": "2026-10-25T09:46:09+00:00",
+ "run_id": "92b6d335-1986-49e9-85b5-8f753c0fbf4d",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 102532,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 9,
+   "covered": 102532,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 8,
+   "covered": 101614,
+   "remainder": 918
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 102532,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 102532,
+   "value": "NZ"
+  }
+ ],
+ "asn": [
+  {
+   "count": 101108,
+   "value": "as4771"
+  },
+  {
+   "count": 500,
+   "value": "4771"
+  },
+  {
+   "count": 1,
+   "value": "132857"
+  },
+  {
+   "count": 1,
+   "value": "9500"
+  },
+  {
+   "count": 1,
+   "value": "as134220"
+  },
+  {
+   "count": 1,
+   "value": "as18159"
+  },
+  {
+   "count": 1,
+   "value": "as45177"
+  },
+  {
+   "count": 1,
+   "value": "as9500"
+  }
+ ],
+ "ports": [
+  {
+   "count": 102532,
+   "value": 8081
+  }
+ ],
+ "orgs": [
+  {
+   "count": 79712,
+   "value": "Spark New Zealand Trading Ltd"
+  },
+  {
+   "count": 22306,
+   "value": "Spark New Zealand Trading Limited"
+  },
+  {
+   "count": 506,
+   "value": "SPARK NEW ZEALAND TRADING LIMITED"
+  },
+  {
+   "count": 2,
+   "value": "Dynamic allocations"
+  },
+  {
+   "count": 2,
+   "value": "Spark NZ Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Devoli NZ Broadband customers"
+  },
+  {
+   "count": 1,
+   "value": "FULL FLAVOUR LIMITED"
+  },
+  {
+   "count": 1,
+   "value": "Static Allocation Netspeed Misc"
+  },
+  {
+   "count": 1,
+   "value": "UFONE Next Generation Services Broadband"
+  }
+ ],
+ "id": "huawei-port-8081-nz",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8081 · NZ",
+  "en": "CR port 8081 · NZ",
+  "es": "Puerto CR 8081 · NZ",
+  "zh": "CR 端口 8081 · NZ"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}
