@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"HuaweiHomeGateway\" country:JE",
+ "total": 511,
+ "taken": "2026-10-29T20:17:02+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 511,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 511,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 511,
+   "value": "as13208"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 508,
+   "value": "HomeNet Limited residential broadband customers"
+  },
+  {
+   "count": 3,
+   "value": "Newtel Limited"
+  }
+ ],
+ "line": "HuaweiHomeGateway CR slice",
+ "line_id": "huaweihomegateway-cr-slice",
+ "cc": "JE"
+}

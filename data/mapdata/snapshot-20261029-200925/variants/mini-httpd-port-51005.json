@@ -1,0 +1,232 @@
+{
+ "dork": "\"mini_httpd\" port:51005",
+ "total": 36,
+ "taken": "2026-10-29T21:05:27+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 14,
+   "covered": 36,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 17,
+   "covered": 36,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 13,
+   "covered": 36,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 36,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 13,
+   "value": "US"
+  },
+  {
+   "count": 5,
+   "value": "CN"
+  },
+  {
+   "count": 5,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "AU"
+  },
+  {
+   "count": 2,
+   "value": "JP"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "FR"
+  },
+  {
+   "count": 1,
+   "value": "IE"
+  },
+  {
+   "count": 1,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "RU"
+  },
+  {
+   "count": 1,
+   "value": "SG"
+  },
+  {
+   "count": 1,
+   "value": "VN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 14,
+   "value": "as63949"
+  },
+  {
+   "count": 5,
+   "value": "as22773"
+  },
+  {
+   "count": 4,
+   "value": "as16509"
+  },
+  {
+   "count": 2,
+   "value": "as20473"
+  },
+  {
+   "count": 2,
+   "value": "as37963"
+  },
+  {
+   "count": 2,
+   "value": "as55990"
+  },
+  {
+   "count": 1,
+   "value": "37963"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as24086"
+  },
+  {
+   "count": 1,
+   "value": "as39020"
+  },
+  {
+   "count": 1,
+   "value": "as396948"
+  },
+  {
+   "count": 1,
+   "value": "as45102"
+  },
+  {
+   "count": 1,
+   "value": "as57169"
+  }
+ ],
+ "ports": [
+  {
+   "count": 36,
+   "value": 51005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 7,
+   "value": "Linode"
+  },
+  {
+   "count": 6,
+   "value": "Linode, LLC"
+  },
+  {
+   "count": 5,
+   "value": "Cox Communications Inc."
+  },
+  {
+   "count": 2,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 2,
+   "value": "EDIS GmbH"
+  },
+  {
+   "count": 2,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 2,
+   "value": "Vultr Holdings, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Akamai Technologies, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Alibaba Cloud (Singapore) Private Limited"
+  },
+  {
+   "count": 1,
+   "value": "Aliyun Computing Co.LTD"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Corporate Services Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Australia"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services France"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Kamatera, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Viettel Group"
+  }
+ ],
+ "id": "mini-httpd-port-51005",
+ "parent": "mini-httpd",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 51005",
+  "ru": "Все версии · порт 51005",
+  "es": "Todas las versiones · puerto 51005",
+  "zh": "所有版本 · 端口 51005"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "mini-httpd"
+ },
+ "denominator": null
+}

@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.8\" country:HK",
+ "total": 52,
+ "taken": "2026-10-29T20:45:30+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 52,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 52,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 50,
+   "value": "as271951"
+  },
+  {
+   "count": 1,
+   "value": "271951"
+  },
+  {
+   "count": 1,
+   "value": "as271907"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 51,
+   "value": "4NET"
+  },
+  {
+   "count": 1,
+   "value": "Cogent Communications, LLC"
+  }
+ ],
+ "line": "gSOAP/2.8 vendor map",
+ "line_id": "gsoap-2-8-vendor-map",
+ "cc": "HK"
+}

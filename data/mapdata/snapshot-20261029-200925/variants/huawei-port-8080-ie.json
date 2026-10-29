@@ -1,0 +1,119 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8080 country:IE",
+ "total": 10920,
+ "taken": "2026-10-29T21:03:22+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 10920,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 8,
+   "covered": 10920,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 10920,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 10920,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 10920,
+   "value": "IE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5986,
+   "value": "as2110"
+  },
+  {
+   "count": 4793,
+   "value": "as5466"
+  },
+  {
+   "count": 71,
+   "value": "2110"
+  },
+  {
+   "count": 62,
+   "value": "5466"
+  },
+  {
+   "count": 3,
+   "value": "as15502"
+  },
+  {
+   "count": 3,
+   "value": "as5607"
+  },
+  {
+   "count": 2,
+   "value": "as25441"
+  }
+ ],
+ "ports": [
+  {
+   "count": 10920,
+   "value": 8080
+  }
+ ],
+ "orgs": [
+  {
+   "count": 6057,
+   "value": "Enet Communications LIMITED"
+  },
+  {
+   "count": 2647,
+   "value": "Eircom"
+  },
+  {
+   "count": 1296,
+   "value": "Eircom Limited"
+  },
+  {
+   "count": 912,
+   "value": "eircom Ltd"
+  },
+  {
+   "count": 3,
+   "value": "Sky UK Limited"
+  },
+  {
+   "count": 2,
+   "value": "Imagine Communications Group Limited"
+  },
+  {
+   "count": 2,
+   "value": "Vodafone ISP"
+  },
+  {
+   "count": 1,
+   "value": "Vodafone Ireland Limited"
+  }
+ ],
+ "id": "huawei-port-8080-ie",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8080 · IE",
+  "en": "CR port 8080 · IE",
+  "es": "Puerto CR 8080 · IE",
+  "zh": "CR 端口 8080 · IE"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

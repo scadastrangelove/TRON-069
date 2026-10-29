@@ -1,0 +1,891 @@
+{
+ "dork": "\"realm@easycwmp\" port:30005",
+ "total": 13049,
+ "taken": "2026-10-29T21:03:54+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 30,
+   "covered": 13049,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 12987,
+   "remainder": 62
+  },
+  "asn": {
+   "values_returned": 79,
+   "covered": 13049,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 13049,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 8856,
+   "value": "KZ"
+  },
+  {
+   "count": 1038,
+   "value": "AR"
+  },
+  {
+   "count": 674,
+   "value": "US"
+  },
+  {
+   "count": 521,
+   "value": "NZ"
+  },
+  {
+   "count": 493,
+   "value": "FR"
+  },
+  {
+   "count": 345,
+   "value": "ES"
+  },
+  {
+   "count": 272,
+   "value": "GE"
+  },
+  {
+   "count": 192,
+   "value": "PL"
+  },
+  {
+   "count": 164,
+   "value": "GB"
+  },
+  {
+   "count": 141,
+   "value": "EG"
+  },
+  {
+   "count": 116,
+   "value": "MV"
+  },
+  {
+   "count": 109,
+   "value": "ZA"
+  },
+  {
+   "count": 43,
+   "value": "AE"
+  },
+  {
+   "count": 15,
+   "value": "NA"
+  },
+  {
+   "count": 15,
+   "value": "SI"
+  },
+  {
+   "count": 13,
+   "value": "NG"
+  },
+  {
+   "count": 7,
+   "value": "VN"
+  },
+  {
+   "count": 6,
+   "value": "MX"
+  },
+  {
+   "count": 4,
+   "value": "CA"
+  },
+  {
+   "count": 4,
+   "value": "GQ"
+  },
+  {
+   "count": 4,
+   "value": "HR"
+  },
+  {
+   "count": 3,
+   "value": "AO"
+  },
+  {
+   "count": 3,
+   "value": "EC"
+  },
+  {
+   "count": 2,
+   "value": "AM"
+  },
+  {
+   "count": 2,
+   "value": "GN"
+  },
+  {
+   "count": 2,
+   "value": "KE"
+  },
+  {
+   "count": 2,
+   "value": "MY"
+  },
+  {
+   "count": 1,
+   "value": "BS"
+  },
+  {
+   "count": 1,
+   "value": "IQ"
+  },
+  {
+   "count": 1,
+   "value": "TT"
+  }
+ ],
+ "asn": [
+  {
+   "count": 8793,
+   "value": "as9198"
+  },
+  {
+   "count": 519,
+   "value": "as17705"
+  },
+  {
+   "count": 427,
+   "value": "as13692"
+  },
+  {
+   "count": 306,
+   "value": "as52307"
+  },
+  {
+   "count": 272,
+   "value": "as16010"
+  },
+  {
+   "count": 267,
+   "value": "as30801"
+  },
+  {
+   "count": 211,
+   "value": "as6739"
+  },
+  {
+   "count": 209,
+   "value": "as39886"
+  },
+  {
+   "count": 192,
+   "value": "as41023"
+  },
+  {
+   "count": 165,
+   "value": "as11815"
+  },
+  {
+   "count": 161,
+   "value": "as40198"
+  },
+  {
+   "count": 135,
+   "value": "as24863"
+  },
+  {
+   "count": 115,
+   "value": "as24016"
+  },
+  {
+   "count": 109,
+   "value": "as27983"
+  },
+  {
+   "count": 99,
+   "value": "as59953"
+  },
+  {
+   "count": 96,
+   "value": "as201704"
+  },
+  {
+   "count": 89,
+   "value": "as52271"
+  },
+  {
+   "count": 73,
+   "value": "as264856"
+  },
+  {
+   "count": 69,
+   "value": "as27813"
+  },
+  {
+   "count": 68,
+   "value": "as28038"
+  },
+  {
+   "count": 66,
+   "value": "as20011"
+  },
+  {
+   "count": 65,
+   "value": "as215000"
+  },
+  {
+   "count": 59,
+   "value": "9198"
+  },
+  {
+   "count": 58,
+   "value": "as14232"
+  },
+  {
+   "count": 53,
+   "value": "as265792"
+  },
+  {
+   "count": 42,
+   "value": "as15802"
+  },
+  {
+   "count": 32,
+   "value": "as23418"
+  },
+  {
+   "count": 31,
+   "value": "as30119"
+  },
+  {
+   "count": 22,
+   "value": "as263736"
+  },
+  {
+   "count": 20,
+   "value": "as52436"
+  },
+  {
+   "count": 19,
+   "value": "as205718"
+  },
+  {
+   "count": 18,
+   "value": "as33763"
+  },
+  {
+   "count": 17,
+   "value": "as329039"
+  },
+  {
+   "count": 16,
+   "value": "as12430"
+  },
+  {
+   "count": 15,
+   "value": "as204645"
+  },
+  {
+   "count": 13,
+   "value": "as37457"
+  },
+  {
+   "count": 11,
+   "value": "as58056"
+  },
+  {
+   "count": 10,
+   "value": "as37308"
+  },
+  {
+   "count": 8,
+   "value": "as37611"
+  },
+  {
+   "count": 7,
+   "value": "as131429"
+  },
+  {
+   "count": 6,
+   "value": "24863"
+  },
+  {
+   "count": 6,
+   "value": "as26223"
+  },
+  {
+   "count": 6,
+   "value": "as28378"
+  },
+  {
+   "count": 6,
+   "value": "as394326"
+  },
+  {
+   "count": 4,
+   "value": "as15128"
+  },
+  {
+   "count": 4,
+   "value": "as20115"
+  },
+  {
+   "count": 4,
+   "value": "as22724"
+  },
+  {
+   "count": 4,
+   "value": "as34594"
+  },
+  {
+   "count": 4,
+   "value": "as34779"
+  },
+  {
+   "count": 4,
+   "value": "as37529"
+  },
+  {
+   "count": 4,
+   "value": "as50482"
+  },
+  {
+   "count": 2,
+   "value": "17705"
+  },
+  {
+   "count": 2,
+   "value": "39886"
+  },
+  {
+   "count": 2,
+   "value": "52307"
+  },
+  {
+   "count": 2,
+   "value": "6739"
+  },
+  {
+   "count": 2,
+   "value": "as208997"
+  },
+  {
+   "count": 2,
+   "value": "as328029"
+  },
+  {
+   "count": 2,
+   "value": "as37141"
+  },
+  {
+   "count": 2,
+   "value": "as37282"
+  },
+  {
+   "count": 2,
+   "value": "as37305"
+  },
+  {
+   "count": 2,
+   "value": "as399079"
+  },
+  {
+   "count": 2,
+   "value": "as52388"
+  },
+  {
+   "count": 2,
+   "value": "as55482"
+  },
+  {
+   "count": 1,
+   "value": "11815"
+  },
+  {
+   "count": 1,
+   "value": "15802"
+  },
+  {
+   "count": 1,
+   "value": "201704"
+  },
+  {
+   "count": 1,
+   "value": "24016"
+  },
+  {
+   "count": 1,
+   "value": "27983"
+  },
+  {
+   "count": 1,
+   "value": "as11845"
+  },
+  {
+   "count": 1,
+   "value": "as15146"
+  },
+  {
+   "count": 1,
+   "value": "as32709"
+  },
+  {
+   "count": 1,
+   "value": "as328471"
+  },
+  {
+   "count": 1,
+   "value": "as33470"
+  },
+  {
+   "count": 1,
+   "value": "as37564"
+  },
+  {
+   "count": 1,
+   "value": "as37688"
+  },
+  {
+   "count": 1,
+   "value": "as393422"
+  },
+  {
+   "count": 1,
+   "value": "as393474"
+  },
+  {
+   "count": 1,
+   "value": "as49571"
+  },
+  {
+   "count": 1,
+   "value": "as61478"
+  }
+ ],
+ "ports": [
+  {
+   "count": 13049,
+   "value": 30005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 6517,
+   "value": "JSC Kazakhtelecom"
+  },
+  {
+   "count": 672,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 450,
+   "value": "JSC Kazakhtelecom, Almaty Affiliate"
+  },
+  {
+   "count": 356,
+   "value": "JSC Kazakhtelecom, Taldykorgan"
+  },
+  {
+   "count": 327,
+   "value": "JSC Kazakhtelecom, Karaganda Affiliate"
+  },
+  {
+   "count": 267,
+   "value": "OZONE SAS"
+  },
+  {
+   "count": 248,
+   "value": "JSC Kazakhtelecom, Kazakhstan Online Backbone"
+  },
+  {
+   "count": 245,
+   "value": "InSPire Net Ltd"
+  },
+  {
+   "count": 245,
+   "value": "JSC Kazakhtelecom,"
+  },
+  {
+   "count": 241,
+   "value": "Douglas FastNet"
+  },
+  {
+   "count": 211,
+   "value": "Nomotech SAS"
+  },
+  {
+   "count": 188,
+   "value": "Cooperativa Telefonica de V.G.G. Ltda."
+  },
+  {
+   "count": 173,
+   "value": "JSC Kazakhtelecom, Kostanay Affiliate"
+  },
+  {
+   "count": 170,
+   "value": "Agencja Rozwoju Regionalnego ARREKS SA"
+  },
+  {
+   "count": 153,
+   "value": "MAGTCION"
+  },
+  {
+   "count": 131,
+   "value": "Link Egypt (Link.NET) - Link Egypt (Link.NET)"
+  },
+  {
+   "count": 116,
+   "value": "Focusinfocom | Raajje Online (ROL)"
+  },
+  {
+   "count": 114,
+   "value": "UBS ADSL range"
+  },
+  {
+   "count": 99,
+   "value": "Purefibre Internet Ltd."
+  },
+  {
+   "count": 98,
+   "value": "Clientes de cablemodems"
+  },
+  {
+   "count": 96,
+   "value": "JSC Kazakhtelecom, Astana Affiliate"
+  },
+  {
+   "count": 89,
+   "value": "Coop. Energía Elect. y Otros Servicios Las Varillas"
+  },
+  {
+   "count": 80,
+   "value": "VODAFONE ONO, S.A."
+  },
+  {
+   "count": 75,
+   "value": "Almaty"
+  },
+  {
+   "count": 75,
+   "value": "Red Intercable Digital S.A."
+  },
+  {
+   "count": 68,
+   "value": "SAN LUIS CTV S.A."
+  },
+  {
+   "count": 66,
+   "value": "JSC Kazakhtelecom, Aktobe Affiliate"
+  },
+  {
+   "count": 65,
+   "value": "Country Connect Ltd."
+  },
+  {
+   "count": 58,
+   "value": "Cooperativa Telefónica Pinamar Ltda."
+  },
+  {
+   "count": 56,
+   "value": "Magticom"
+  },
+  {
+   "count": 54,
+   "value": "Dimension Data"
+  },
+  {
+   "count": 53,
+   "value": "Usina Popular Cooperativa"
+  },
+  {
+   "count": 51,
+   "value": "Student City Prepaid Internet"
+  },
+  {
+   "count": 49,
+   "value": "Electrica Sollerense SAU"
+  },
+  {
+   "count": 49,
+   "value": "JSC Kazakhtelecom, Akmola Affiliate"
+  },
+  {
+   "count": 48,
+   "value": "VALL DE SOLLER TELECOMUNICACIONS SLU"
+  },
+  {
+   "count": 47,
+   "value": "MAGTICOM"
+  },
+  {
+   "count": 45,
+   "value": "JSC Kazakhtelecom, Pavlodar Affiliate"
+  },
+  {
+   "count": 41,
+   "value": "ZAMBIAZZO SERGIO MARTIN (ELISARED)"
+  },
+  {
+   "count": 39,
+   "value": "UFB PPPoE Range"
+  },
+  {
+   "count": 38,
+   "value": "JSC Kazakhtelecom, Taldykorgan, Metro Ethernet Network"
+  },
+  {
+   "count": 36,
+   "value": "JSC Kazakhtelecom, Zhambyl Affiliate"
+  },
+  {
+   "count": 35,
+   "value": "Meridiano83 TV"
+  },
+  {
+   "count": 35,
+   "value": "ONO_HFC"
+  },
+  {
+   "count": 32,
+   "value": "Teledifusora S.A."
+  },
+  {
+   "count": 32,
+   "value": "The Darien Telephone Co. Inc."
+  },
+  {
+   "count": 31,
+   "value": "Plumas Sierra Telecommunications"
+  },
+  {
+   "count": 28,
+   "value": "JSC Kazakhtelecom, East Kazakhstan Affiliate"
+  },
+  {
+   "count": 28,
+   "value": "Marlborough Networks"
+  },
+  {
+   "count": 23,
+   "value": "Emirates Integrated Telecommunications Company PJSC (EITC-DU)"
+  },
+  {
+   "count": 23,
+   "value": "JSC Kazakhtelecom, Astana Affiliate, Metro Ethernet Network"
+  },
+  {
+   "count": 22,
+   "value": "AGENCJA ROZWOJU REGIONALNEGO \"ARREKS\" Sp z.o.o"
+  },
+  {
+   "count": 20,
+   "value": "Cable Televisora Color"
+  },
+  {
+   "count": 20,
+   "value": "Emirates Integrated Telecommunications Company PJSC"
+  },
+  {
+   "count": 19,
+   "value": "ALCORT INGENIERIA Y ASESORIA S.L."
+  },
+  {
+   "count": 19,
+   "value": "SUPPORT S.R.L"
+  },
+  {
+   "count": 19,
+   "value": "Shymkent"
+  },
+  {
+   "count": 17,
+   "value": "Prepaid Internet"
+  },
+  {
+   "count": 16,
+   "value": "VODAFONE ESPANA S.A.U."
+  },
+  {
+   "count": 16,
+   "value": "webmaster@matinetworks.net"
+  },
+  {
+   "count": 15,
+   "value": "LINK CONNECT SERVICES (PTY) LTD"
+  },
+  {
+   "count": 13,
+   "value": "Support Internet"
+  },
+  {
+   "count": 12,
+   "value": "Paratus Telecommunications Limited"
+  },
+  {
+   "count": 11,
+   "value": "KRS Networks"
+  },
+  {
+   "count": 11,
+   "value": "MagticomAS Magticom Ltd."
+  },
+  {
+   "count": 10,
+   "value": "Inspire ADSL Ranges"
+  },
+  {
+   "count": 10,
+   "value": "JSC Kazakhtelecom, North Kazakhstan Affiliate"
+  },
+  {
+   "count": 10,
+   "value": "Karaganda"
+  },
+  {
+   "count": 10,
+   "value": "abonnes RTVC Stiring-Wendel"
+  },
+  {
+   "count": 9,
+   "value": "Broadband"
+  },
+  {
+   "count": 9,
+   "value": "Link Egypt (Link.NET)"
+  },
+  {
+   "count": 8,
+   "value": "AFRIHOST SP (PTY) LTD"
+  },
+  {
+   "count": 8,
+   "value": "Steam Broadcasting and Communications Limited - Steam Broadcasting and Communications Limited"
+  },
+  {
+   "count": 7,
+   "value": "Dimensiondata Broadband Consumer"
+  },
+  {
+   "count": 7,
+   "value": "JSC Kazakhtelecom, Atyrau Affiliate"
+  },
+  {
+   "count": 7,
+   "value": "Tel: +27 12 3523661"
+  },
+  {
+   "count": 6,
+   "value": "Dial-up Nationwide"
+  },
+  {
+   "count": 6,
+   "value": "Route 66 Broadband LLC"
+  },
+  {
+   "count": 6,
+   "value": "Silver Star Communications"
+  },
+  {
+   "count": 6,
+   "value": "TV Rey de Occidente, S.A. de C.V."
+  },
+  {
+   "count": 6,
+   "value": "Telecom Argentina S.A."
+  },
+  {
+   "count": 6,
+   "value": "Telkom SA Ltd. - Telkom SA Ltd."
+  },
+  {
+   "count": 5,
+   "value": "Astana"
+  },
+  {
+   "count": 5,
+   "value": "Mobifone Corporation"
+  },
+  {
+   "count": 5,
+   "value": "Paratus Telecommunications Limited - Paratus Telecommunications Limited"
+  },
+  {
+   "count": 4,
+   "value": "Charter Communications LLC"
+  },
+  {
+   "count": 4,
+   "value": "Comwave Telecom Inc."
+  },
+  {
+   "count": 4,
+   "value": "Dimension Data - Dimension Data"
+  },
+  {
+   "count": 4,
+   "value": "ENES REGIE MUNICIPALE D'ELECTRICITE DE CREUTZWALD"
+  },
+  {
+   "count": 4,
+   "value": "Gestora de Infraestructuras de Telecomunicaciones de Guinea Ecuatorial"
+  },
+  {
+   "count": 4,
+   "value": "OT - Optima Telekom d.d."
+  },
+  {
+   "count": 4,
+   "value": "Qostanai"
+  },
+  {
+   "count": 3,
+   "value": "T-2, d.o.o."
+  },
+  {
+   "count": 2,
+   "value": "COOLLINK"
+  },
+  {
+   "count": 2,
+   "value": "Caucasus Online LLC"
+  },
+  {
+   "count": 2,
+   "value": "ETI SA - ETI SA"
+  },
+  {
+   "count": 2,
+   "value": "Frontier Optical Networks Ltd - Frontier Optical Networks Ltd"
+  },
+  {
+   "count": 2,
+   "value": "ICN INTERNET KOMUNIKATSION TSANTSER LLC"
+  },
+  {
+   "count": 2,
+   "value": "JSC Kazakhtelecom, Astna Affiliate"
+  },
+  {
+   "count": 2,
+   "value": "Karagandy"
+  }
+ ],
+ "id": "easycwmp-port30005",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "Порт 30005",
+  "en": "Port 30005",
+  "es": "Puerto 30005",
+  "zh": "端口 30005"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

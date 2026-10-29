@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PK",
+ "total": 5,
+ "taken": "2026-10-29T20:51:19+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as138172"
+  },
+  {
+   "count": 1,
+   "value": "as139879"
+  },
+  {
+   "count": 1,
+   "value": "as9541"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "BOOM INFO TECH (SMC-PVT) LTD"
+  },
+  {
+   "count": 1,
+   "value": "Cyber Internet Services (Private) Limited"
+  },
+  {
+   "count": 1,
+   "value": "Galaxy Technology (Pvt.) Ltd"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PK"
+}

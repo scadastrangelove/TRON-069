@@ -1,0 +1,67 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\" country:DE asn:AS3320",
+ "total": 24214,
+ "taken": "2026-10-29T21:04:30+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 24214,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 24214,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 24214,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 24214,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 24214,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 24214,
+   "value": "as3320"
+  }
+ ],
+ "ports": [
+  {
+   "count": 24214,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 24214,
+   "value": "Deutsche Telekom AG"
+  }
+ ],
+ "id": "huawei-basic-de-as3320",
+ "parent": "huaweihomegateway",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "Huawei Basic · DE · Deutsche Telekom AS3320",
+  "en": "Huawei Basic · DE · Deutsche Telekom AS3320",
+  "es": "Huawei Basic · DE · Deutsche Telekom AS3320",
+  "zh": "Huawei Basic · DE · Deutsche Telekom AS3320"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

@@ -32,10 +32,10 @@ built from dated Shodan aggregates. Explore the map, compare implementations,
 inspect operator slices and follow each research observation to its source.
 The interface supports English, Spanish, Chinese and Russian.
 
-**Current collection: 25 October 2026.** 55 signature lines,
-2,779 country–line operator slices, 131 research queries and
-48 additional observations. Full collection ran from 08:51:23 to
-09:48:27 UTC; individual results retain their own timestamps.
+**Current collection: 29 October 2026.** 55 signature lines,
+2,797 country–line operator slices, 131 research queries and
+48 additional observations. Full collection ran from 20:09:25 to
+21:05:33 UTC; individual results retain their own timestamps.
 RomPager and mini_httpd cover all ports. [Cloud-network cohorts](LEGACY-HTTP.md#honeypots)
 make suspected honeypot contamination visible alongside the raw component counts.
 These are search matches, not a census of unique devices or vulnerable systems.

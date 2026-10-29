@@ -1,0 +1,149 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 404\" org:\"Charter Communications\"",
+ "total": 119553,
+ "taken": "2026-10-29T20:10:16+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 119553,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 25,
+   "covered": 119553,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 119553,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 119551,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "BD"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 21773,
+   "value": "as20001"
+  },
+  {
+   "count": 18758,
+   "value": "as10796"
+  },
+  {
+   "count": 17867,
+   "value": "as11427"
+  },
+  {
+   "count": 16263,
+   "value": "as11426"
+  },
+  {
+   "count": 12970,
+   "value": "as11351"
+  },
+  {
+   "count": 11939,
+   "value": "as12271"
+  },
+  {
+   "count": 9411,
+   "value": "as33363"
+  },
+  {
+   "count": 8828,
+   "value": "as20115"
+  },
+  {
+   "count": 444,
+   "value": "as22516"
+  },
+  {
+   "count": 392,
+   "value": "as33588"
+  },
+  {
+   "count": 255,
+   "value": "as10838"
+  },
+  {
+   "count": 128,
+   "value": "as20231"
+  },
+  {
+   "count": 99,
+   "value": "33363"
+  },
+  {
+   "count": 82,
+   "value": "as11955"
+  },
+  {
+   "count": 76,
+   "value": "20115"
+  },
+  {
+   "count": 69,
+   "value": "20001"
+  },
+  {
+   "count": 50,
+   "value": "11426"
+  },
+  {
+   "count": 38,
+   "value": "10796"
+  },
+  {
+   "count": 35,
+   "value": "11427"
+  },
+  {
+   "count": 35,
+   "value": "12271"
+  },
+  {
+   "count": 32,
+   "value": "11351"
+  },
+  {
+   "count": 5,
+   "value": "22516"
+  },
+  {
+   "count": 2,
+   "value": "33588"
+  },
+  {
+   "count": 1,
+   "value": "11955"
+  },
+  {
+   "count": 1,
+   "value": "as271904"
+  }
+ ],
+ "ports": [
+  {
+   "count": 119553,
+   "value": 7547
+  }
+ ],
+ "orgs": [],
+ "name": "Charter anti-scan 404"
+}

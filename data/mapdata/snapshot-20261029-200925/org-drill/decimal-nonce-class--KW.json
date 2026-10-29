@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:KW",
+ "total": 195,
+ "taken": "2026-10-29T20:50:49+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 195,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 195,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 194,
+   "value": "as42961"
+  },
+  {
+   "count": 1,
+   "value": "42961"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 182,
+   "value": "Mobile Telecommunications Company K.S.C.P."
+  },
+  {
+   "count": 13,
+   "value": "ZAIN KW"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "KW"
+}

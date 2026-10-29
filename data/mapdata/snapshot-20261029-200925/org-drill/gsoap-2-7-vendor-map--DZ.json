@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:DZ",
+ "total": 2459,
+ "taken": "2026-10-29T20:31:14+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 2459,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 2459,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2459,
+   "value": "as36947"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1559,
+   "value": "Telecom Algeria"
+  },
+  {
+   "count": 826,
+   "value": "Telecom Algeria - Telecom Algeria"
+  },
+  {
+   "count": 74,
+   "value": "ALGTEL"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "DZ"
+}

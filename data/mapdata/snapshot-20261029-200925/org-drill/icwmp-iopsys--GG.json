@@ -1,0 +1,61 @@
+{
+ "dork": "\"authenticate@cwmp\" country:GG",
+ "total": 331,
+ "taken": "2026-10-29T20:12:44+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 331,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 331,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 313,
+   "value": "as8681"
+  },
+  {
+   "count": 18,
+   "value": "as8680"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 156,
+   "value": "WAVE RESIDENTIAL DSL SERVICE"
+  },
+  {
+   "count": 90,
+   "value": "JT (Jersey) Limited"
+  },
+  {
+   "count": 67,
+   "value": "Wave Telecom Resi Broadband"
+  },
+  {
+   "count": 10,
+   "value": "BB"
+  },
+  {
+   "count": 6,
+   "value": "SURE-International-Limited Sure (Guernsey) Limited"
+  },
+  {
+   "count": 2,
+   "value": "GSY BB"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "GG"
+}

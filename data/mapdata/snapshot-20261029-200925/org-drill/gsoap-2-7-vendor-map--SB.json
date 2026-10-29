@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:SB",
+ "total": 5,
+ "taken": "2026-10-29T20:33:02+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 1,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as45891"
+  },
+  {
+   "count": 2,
+   "value": "as134525"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 5,
+   "value": "Solomon Telekom Co Ltd"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "SB"
+}

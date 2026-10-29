@@ -1,0 +1,53 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:AM",
+ "total": 113,
+ "taken": "2026-10-29T20:27:06+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 113,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 113,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 112,
+   "value": "as12297"
+  },
+  {
+   "count": 1,
+   "value": "as210147"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 55,
+   "value": "VDSL-FTTB Service Dynamic pool"
+  },
+  {
+   "count": 29,
+   "value": "VDSL-FTTB Service Static pool"
+  },
+  {
+   "count": 28,
+   "value": "Telecom Armenia OJSC"
+  },
+  {
+   "count": 1,
+   "value": "am-ispsupport ISP SUPPORT LLC"
+  }
+ ],
+ "line": "TR069 Client",
+ "line_id": "tr069-client",
+ "cc": "AM"
+}

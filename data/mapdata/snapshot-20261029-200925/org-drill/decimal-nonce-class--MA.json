@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:MA",
+ "total": 56,
+ "taken": "2026-10-29T20:51:04+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 56,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 56,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 53,
+   "value": "as36903"
+  },
+  {
+   "count": 2,
+   "value": "as6713"
+  },
+  {
+   "count": 1,
+   "value": "36903"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 25,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 18,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 12,
+   "value": "MarocTelecomASDL"
+  },
+  {
+   "count": 1,
+   "value": "MT-MPLS"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "MA"
+}

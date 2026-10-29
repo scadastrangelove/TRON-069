@@ -1,0 +1,49 @@
+{
+ "dork": "\"mini_httpd\" country:GP",
+ "total": 3,
+ "taken": "2026-10-29T20:44:15+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as3215"
+  },
+  {
+   "count": 1,
+   "value": "as21351"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "LNPAP656 Pointe a Pitre Bloc 1"
+  },
+  {
+   "count": 1,
+   "value": "Mediaserv"
+  },
+  {
+   "count": 1,
+   "value": "Orange S.A."
+  }
+ ],
+ "line": "mini_httpd (all ports)",
+ "line_id": "mini-httpd",
+ "cc": "GP"
+}

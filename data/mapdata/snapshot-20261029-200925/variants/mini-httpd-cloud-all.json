@@ -1,0 +1,632 @@
+{
+ "dork": "\"mini_httpd\" asn:AS37963,37963,AS45102,45102,AS135377,135377,AS55990,55990,AS136907,136907,AS58519,58519",
+ "total": 40411,
+ "taken": "2026-10-29T21:05:29+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 15,
+   "covered": 40411,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 21,
+   "covered": 40411,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 9,
+   "covered": 40411,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 100,
+   "covered": 31501,
+   "remainder": 8910
+  }
+ },
+ "countries": [
+  {
+   "count": 37267,
+   "value": "CN"
+  },
+  {
+   "count": 855,
+   "value": "SG"
+  },
+  {
+   "count": 658,
+   "value": "TH"
+  },
+  {
+   "count": 247,
+   "value": "ID"
+  },
+  {
+   "count": 200,
+   "value": "US"
+  },
+  {
+   "count": 194,
+   "value": "PH"
+  },
+  {
+   "count": 187,
+   "value": "DE"
+  },
+  {
+   "count": 142,
+   "value": "MY"
+  },
+  {
+   "count": 138,
+   "value": "GB"
+  },
+  {
+   "count": 135,
+   "value": "JP"
+  },
+  {
+   "count": 124,
+   "value": "HK"
+  },
+  {
+   "count": 121,
+   "value": "KR"
+  },
+  {
+   "count": 101,
+   "value": "AE"
+  },
+  {
+   "count": 41,
+   "value": "ZA"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  }
+ ],
+ "asn": [
+  {
+   "count": 32389,
+   "value": "as37963"
+  },
+  {
+   "count": 4623,
+   "value": "as55990"
+  },
+  {
+   "count": 2529,
+   "value": "as45102"
+  },
+  {
+   "count": 461,
+   "value": "as136907"
+  },
+  {
+   "count": 313,
+   "value": "37963"
+  },
+  {
+   "count": 42,
+   "value": "as58519"
+  },
+  {
+   "count": 27,
+   "value": "55990"
+  },
+  {
+   "count": 23,
+   "value": "45102"
+  },
+  {
+   "count": 4,
+   "value": "136907"
+  }
+ ],
+ "ports": [
+  {
+   "count": 23986,
+   "value": 70
+  },
+  {
+   "count": 3564,
+   "value": 777
+  },
+  {
+   "count": 3232,
+   "value": 222
+  },
+  {
+   "count": 24,
+   "value": 10000
+  },
+  {
+   "count": 13,
+   "value": 19
+  },
+  {
+   "count": 11,
+   "value": 443
+  },
+  {
+   "count": 11,
+   "value": 4840
+  },
+  {
+   "count": 11,
+   "value": 8020
+  },
+  {
+   "count": 10,
+   "value": 6070
+  },
+  {
+   "count": 9,
+   "value": 80
+  },
+  {
+   "count": 9,
+   "value": 83
+  },
+  {
+   "count": 9,
+   "value": 400
+  },
+  {
+   "count": 9,
+   "value": 806
+  },
+  {
+   "count": 9,
+   "value": 3157
+  },
+  {
+   "count": 9,
+   "value": 5555
+  },
+  {
+   "count": 9,
+   "value": 8446
+  },
+  {
+   "count": 9,
+   "value": 9200
+  },
+  {
+   "count": 9,
+   "value": 12103
+  },
+  {
+   "count": 9,
+   "value": 12482
+  },
+  {
+   "count": 9,
+   "value": 18081
+  },
+  {
+   "count": 8,
+   "value": 119
+  },
+  {
+   "count": 8,
+   "value": 440
+  },
+  {
+   "count": 8,
+   "value": 987
+  },
+  {
+   "count": 8,
+   "value": 995
+  },
+  {
+   "count": 8,
+   "value": 2002
+  },
+  {
+   "count": 8,
+   "value": 2375
+  },
+  {
+   "count": 8,
+   "value": 3056
+  },
+  {
+   "count": 8,
+   "value": 3524
+  },
+  {
+   "count": 8,
+   "value": 3530
+  },
+  {
+   "count": 8,
+   "value": 5596
+  },
+  {
+   "count": 8,
+   "value": 5995
+  },
+  {
+   "count": 8,
+   "value": 9118
+  },
+  {
+   "count": 8,
+   "value": 12158
+  },
+  {
+   "count": 7,
+   "value": 13
+  },
+  {
+   "count": 7,
+   "value": 15
+  },
+  {
+   "count": 7,
+   "value": 37
+  },
+  {
+   "count": 7,
+   "value": 97
+  },
+  {
+   "count": 7,
+   "value": 143
+  },
+  {
+   "count": 7,
+   "value": 1234
+  },
+  {
+   "count": 7,
+   "value": 3500
+  },
+  {
+   "count": 7,
+   "value": 3780
+  },
+  {
+   "count": 7,
+   "value": 5135
+  },
+  {
+   "count": 7,
+   "value": 5905
+  },
+  {
+   "count": 7,
+   "value": 7443
+  },
+  {
+   "count": 7,
+   "value": 8076
+  },
+  {
+   "count": 7,
+   "value": 8112
+  },
+  {
+   "count": 7,
+   "value": 8578
+  },
+  {
+   "count": 7,
+   "value": 8866
+  },
+  {
+   "count": 7,
+   "value": 9090
+  },
+  {
+   "count": 7,
+   "value": 9160
+  },
+  {
+   "count": 7,
+   "value": 9168
+  },
+  {
+   "count": 7,
+   "value": 9183
+  },
+  {
+   "count": 7,
+   "value": 9306
+  },
+  {
+   "count": 7,
+   "value": 9869
+  },
+  {
+   "count": 7,
+   "value": 12295
+  },
+  {
+   "count": 7,
+   "value": 12902
+  },
+  {
+   "count": 7,
+   "value": 14104
+  },
+  {
+   "count": 7,
+   "value": 15040
+  },
+  {
+   "count": 7,
+   "value": 20121
+  },
+  {
+   "count": 7,
+   "value": 20256
+  },
+  {
+   "count": 7,
+   "value": 21250
+  },
+  {
+   "count": 7,
+   "value": 21272
+  },
+  {
+   "count": 7,
+   "value": 21295
+  },
+  {
+   "count": 7,
+   "value": 21323
+  },
+  {
+   "count": 7,
+   "value": 21515
+  },
+  {
+   "count": 7,
+   "value": 30023
+  },
+  {
+   "count": 7,
+   "value": 53400
+  },
+  {
+   "count": 6,
+   "value": 311
+  },
+  {
+   "count": 6,
+   "value": 953
+  },
+  {
+   "count": 6,
+   "value": 1447
+  },
+  {
+   "count": 6,
+   "value": 1457
+  },
+  {
+   "count": 6,
+   "value": 1935
+  },
+  {
+   "count": 6,
+   "value": 2067
+  },
+  {
+   "count": 6,
+   "value": 3541
+  },
+  {
+   "count": 6,
+   "value": 4502
+  },
+  {
+   "count": 6,
+   "value": 5567
+  },
+  {
+   "count": 6,
+   "value": 5594
+  },
+  {
+   "count": 6,
+   "value": 6622
+  },
+  {
+   "count": 6,
+   "value": 7434
+  },
+  {
+   "count": 6,
+   "value": 7980
+  },
+  {
+   "count": 6,
+   "value": 8009
+  },
+  {
+   "count": 6,
+   "value": 8080
+  },
+  {
+   "count": 6,
+   "value": 8140
+  },
+  {
+   "count": 6,
+   "value": 8145
+  },
+  {
+   "count": 6,
+   "value": 8158
+  },
+  {
+   "count": 6,
+   "value": 8166
+  },
+  {
+   "count": 6,
+   "value": 8402
+  },
+  {
+   "count": 6,
+   "value": 8445
+  },
+  {
+   "count": 6,
+   "value": 8549
+  },
+  {
+   "count": 6,
+   "value": 8580
+  },
+  {
+   "count": 6,
+   "value": 9013
+  },
+  {
+   "count": 6,
+   "value": 9022
+  },
+  {
+   "count": 6,
+   "value": 9152
+  },
+  {
+   "count": 6,
+   "value": 9159
+  },
+  {
+   "count": 6,
+   "value": 9164
+  },
+  {
+   "count": 6,
+   "value": 9222
+  },
+  {
+   "count": 6,
+   "value": 9252
+  },
+  {
+   "count": 6,
+   "value": 9310
+  },
+  {
+   "count": 6,
+   "value": 9410
+  },
+  {
+   "count": 6,
+   "value": 9480
+  }
+ ],
+ "orgs": [
+  {
+   "count": 24836,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 7821,
+   "value": "Aliyun Computing Co.LTD"
+  },
+  {
+   "count": 4075,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 1485,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 896,
+   "value": "Alibaba Cloud (Singapore) Private Limited"
+  },
+  {
+   "count": 389,
+   "value": "Beijing Teletron Telecom Engineering Co., Ltd."
+  },
+  {
+   "count": 294,
+   "value": "Huawei Cloud Thailand Region"
+  },
+  {
+   "count": 228,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Co.,Ltd)"
+  },
+  {
+   "count": 65,
+   "value": "21/F, Ciputra World 1 (DBS Tower), JalanProf. DR. Satrio Kav 3-5, Jakarta 12940, Indonesia"
+  },
+  {
+   "count": 65,
+   "value": "Huawei Cloud Hongkong Region"
+  },
+  {
+   "count": 51,
+   "value": "Westendstrabe 28, 60325 Frankfurt am Main"
+  },
+  {
+   "count": 35,
+   "value": "Huawei Cloud Singapore Region"
+  },
+  {
+   "count": 32,
+   "value": "Shiodome Sumitomo Blog 1-9-2 TOKYO"
+  },
+  {
+   "count": 29,
+   "value": "Zhejiang Taobao Network Co.,Ltd"
+  },
+  {
+   "count": 23,
+   "value": "Hangzhou Alibaba Advertising Co.,Ltd."
+  },
+  {
+   "count": 18,
+   "value": "Huawei Cloud South Africa Region"
+  },
+  {
+   "count": 18,
+   "value": "Huawei South Africa Clouds"
+  },
+  {
+   "count": 18,
+   "value": "Huawei Thailand Clouds"
+  },
+  {
+   "count": 16,
+   "value": "Zhejiang Ant Small And Micro Financial Services"
+  },
+  {
+   "count": 12,
+   "value": "Huawei Cloud Thailand POP"
+  },
+  {
+   "count": 5,
+   "value": "Huawei Cloud SouthAfrica Region"
+  }
+ ],
+ "id": "mini-httpd-cloud-all",
+ "parent": "mini-httpd",
+ "group": "legacy-http",
+ "label": {
+  "en": "Cloud-network reference cohort",
+  "ru": "Контрольная выборка облачных сетей",
+  "es": "Cohorte de referencia en redes de nube",
+  "zh": "云网络参考组"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "honeypots"
+ },
+ "denominator": null
+}

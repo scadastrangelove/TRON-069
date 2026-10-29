@@ -1,0 +1,605 @@
+{
+ "dork": "port:7547 opaque \"dirname\"",
+ "total": 4056,
+ "taken": "2026-10-29T20:09:52+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 42,
+   "covered": 4056,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 4021,
+   "remainder": 35
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 4056,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2004,
+   "value": "TH"
+  },
+  {
+   "count": 594,
+   "value": "MA"
+  },
+  {
+   "count": 549,
+   "value": "IR"
+  },
+  {
+   "count": 162,
+   "value": "IT"
+  },
+  {
+   "count": 133,
+   "value": "AR"
+  },
+  {
+   "count": 129,
+   "value": "TN"
+  },
+  {
+   "count": 113,
+   "value": "ES"
+  },
+  {
+   "count": 53,
+   "value": "SY"
+  },
+  {
+   "count": 45,
+   "value": "SZ"
+  },
+  {
+   "count": 44,
+   "value": "BR"
+  },
+  {
+   "count": 34,
+   "value": "OM"
+  },
+  {
+   "count": 29,
+   "value": "LK"
+  },
+  {
+   "count": 27,
+   "value": "TW"
+  },
+  {
+   "count": 26,
+   "value": "LY"
+  },
+  {
+   "count": 23,
+   "value": "IN"
+  },
+  {
+   "count": 13,
+   "value": "CN"
+  },
+  {
+   "count": 13,
+   "value": "KW"
+  },
+  {
+   "count": 10,
+   "value": "SE"
+  },
+  {
+   "count": 9,
+   "value": "LA"
+  },
+  {
+   "count": 6,
+   "value": "CO"
+  },
+  {
+   "count": 5,
+   "value": "BO"
+  },
+  {
+   "count": 5,
+   "value": "DZ"
+  },
+  {
+   "count": 3,
+   "value": "AM"
+  },
+  {
+   "count": 3,
+   "value": "AU"
+  },
+  {
+   "count": 2,
+   "value": "BD"
+  },
+  {
+   "count": 2,
+   "value": "BG"
+  },
+  {
+   "count": 2,
+   "value": "DE"
+  },
+  {
+   "count": 2,
+   "value": "MR"
+  },
+  {
+   "count": 2,
+   "value": "PL"
+  },
+  {
+   "count": 2,
+   "value": "ZA"
+  },
+  {
+   "count": 1,
+   "value": "AE"
+  },
+  {
+   "count": 1,
+   "value": "BE"
+  },
+  {
+   "count": 1,
+   "value": "BT"
+  },
+  {
+   "count": 1,
+   "value": "ET"
+  },
+  {
+   "count": 1,
+   "value": "FI"
+  },
+  {
+   "count": 1,
+   "value": "HK"
+  },
+  {
+   "count": 1,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "NC"
+  },
+  {
+   "count": 1,
+   "value": "NO"
+  },
+  {
+   "count": 1,
+   "value": "PA"
+  },
+  {
+   "count": 1,
+   "value": "SN"
+  },
+  {
+   "count": 1,
+   "value": "VN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1962,
+   "value": "as23969"
+  },
+  {
+   "count": 584,
+   "value": "as36903"
+  },
+  {
+   "count": 455,
+   "value": "as58224"
+  },
+  {
+   "count": 160,
+   "value": "as3269"
+  },
+  {
+   "count": 111,
+   "value": "as12946"
+  },
+  {
+   "count": 98,
+   "value": "as2609"
+  },
+  {
+   "count": 53,
+   "value": "as29256"
+  },
+  {
+   "count": 47,
+   "value": "as17069"
+  },
+  {
+   "count": 45,
+   "value": "as19711"
+  },
+  {
+   "count": 33,
+   "value": "as28885"
+  },
+  {
+   "count": 33,
+   "value": "as43754"
+  },
+  {
+   "count": 29,
+   "value": "as9329"
+  },
+  {
+   "count": 27,
+   "value": "as22927"
+  },
+  {
+   "count": 26,
+   "value": "as3462"
+  },
+  {
+   "count": 26,
+   "value": "as45758"
+  },
+  {
+   "count": 25,
+   "value": "as327934"
+  },
+  {
+   "count": 24,
+   "value": "as21003"
+  },
+  {
+   "count": 22,
+   "value": "as11815"
+  },
+  {
+   "count": 21,
+   "value": "as16322"
+  },
+  {
+   "count": 16,
+   "value": "as42337"
+  },
+  {
+   "count": 12,
+   "value": "as3225"
+  },
+  {
+   "count": 11,
+   "value": "23969"
+  },
+  {
+   "count": 11,
+   "value": "as52481"
+  },
+  {
+   "count": 10,
+   "value": "as266813"
+  },
+  {
+   "count": 9,
+   "value": "as131267"
+  },
+  {
+   "count": 7,
+   "value": "as197343"
+  },
+  {
+   "count": 7,
+   "value": "as4134"
+  },
+  {
+   "count": 6,
+   "value": "as25124"
+  },
+  {
+   "count": 6,
+   "value": "as267508"
+  },
+  {
+   "count": 6,
+   "value": "as6713"
+  },
+  {
+   "count": 5,
+   "value": "as262161"
+  },
+  {
+   "count": 5,
+   "value": "as27845"
+  },
+  {
+   "count": 5,
+   "value": "as31245"
+  },
+  {
+   "count": 5,
+   "value": "as36947"
+  },
+  {
+   "count": 5,
+   "value": "as39466"
+  },
+  {
+   "count": 5,
+   "value": "as4808"
+  },
+  {
+   "count": 4,
+   "value": "36903"
+  },
+  {
+   "count": 4,
+   "value": "as17488"
+  },
+  {
+   "count": 4,
+   "value": "as262189"
+  },
+  {
+   "count": 4,
+   "value": "as28573"
+  },
+  {
+   "count": 3,
+   "value": "58224"
+  },
+  {
+   "count": 3,
+   "value": "as1257"
+  },
+  {
+   "count": 3,
+   "value": "as131090"
+  },
+  {
+   "count": 3,
+   "value": "as134540"
+  },
+  {
+   "count": 3,
+   "value": "as269630"
+  },
+  {
+   "count": 3,
+   "value": "as271590"
+  },
+  {
+   "count": 2,
+   "value": "21003"
+  },
+  {
+   "count": 2,
+   "value": "as12912"
+  },
+  {
+   "count": 2,
+   "value": "as138524"
+  },
+  {
+   "count": 2,
+   "value": "as1653"
+  },
+  {
+   "count": 2,
+   "value": "as24033"
+  },
+  {
+   "count": 2,
+   "value": "as24309"
+  },
+  {
+   "count": 2,
+   "value": "as262865"
+  },
+  {
+   "count": 2,
+   "value": "as264701"
+  },
+  {
+   "count": 2,
+   "value": "as267124"
+  },
+  {
+   "count": 2,
+   "value": "as268669"
+  },
+  {
+   "count": 2,
+   "value": "as269328"
+  },
+  {
+   "count": 2,
+   "value": "as269813"
+  },
+  {
+   "count": 2,
+   "value": "as270579"
+  },
+  {
+   "count": 2,
+   "value": "as2857"
+  },
+  {
+   "count": 2,
+   "value": "as28665"
+  },
+  {
+   "count": 2,
+   "value": "as29518"
+  },
+  {
+   "count": 2,
+   "value": "as29544"
+  },
+  {
+   "count": 2,
+   "value": "as49847"
+  },
+  {
+   "count": 2,
+   "value": "as50821"
+  },
+  {
+   "count": 2,
+   "value": "as52474"
+  },
+  {
+   "count": 2,
+   "value": "as7303"
+  },
+  {
+   "count": 1,
+   "value": "27845"
+  },
+  {
+   "count": 1,
+   "value": "28885"
+  },
+  {
+   "count": 1,
+   "value": "3225"
+  },
+  {
+   "count": 1,
+   "value": "3269"
+  },
+  {
+   "count": 1,
+   "value": "327934"
+  },
+  {
+   "count": 1,
+   "value": "39466"
+  },
+  {
+   "count": 1,
+   "value": "7303"
+  },
+  {
+   "count": 1,
+   "value": "as10029"
+  },
+  {
+   "count": 1,
+   "value": "as10429"
+  },
+  {
+   "count": 1,
+   "value": "as13113"
+  },
+  {
+   "count": 1,
+   "value": "as132923"
+  },
+  {
+   "count": 1,
+   "value": "as13306"
+  },
+  {
+   "count": 1,
+   "value": "as133304"
+  },
+  {
+   "count": 1,
+   "value": "as133633"
+  },
+  {
+   "count": 1,
+   "value": "as134325"
+  },
+  {
+   "count": 1,
+   "value": "as135792"
+  },
+  {
+   "count": 1,
+   "value": "as137872"
+  },
+  {
+   "count": 1,
+   "value": "as151690"
+  },
+  {
+   "count": 1,
+   "value": "as153252"
+  },
+  {
+   "count": 1,
+   "value": "as1759"
+  },
+  {
+   "count": 1,
+   "value": "as17665"
+  },
+  {
+   "count": 1,
+   "value": "as18024"
+  },
+  {
+   "count": 1,
+   "value": "as18049"
+  },
+  {
+   "count": 1,
+   "value": "as18809"
+  },
+  {
+   "count": 1,
+   "value": "as204834"
+  },
+  {
+   "count": 1,
+   "value": "as2119"
+  },
+  {
+   "count": 1,
+   "value": "as24560"
+  },
+  {
+   "count": 1,
+   "value": "as24757"
+  },
+  {
+   "count": 1,
+   "value": "as262427"
+  },
+  {
+   "count": 1,
+   "value": "as262600"
+  },
+  {
+   "count": 1,
+   "value": "as262808"
+  },
+  {
+   "count": 1,
+   "value": "as263151"
+  },
+  {
+   "count": 1,
+   "value": "as264295"
+  }
+ ],
+ "ports": [
+  {
+   "count": 4056,
+   "value": 7547
+  }
+ ],
+ "orgs": [],
+ "name": "junk realms"
+}

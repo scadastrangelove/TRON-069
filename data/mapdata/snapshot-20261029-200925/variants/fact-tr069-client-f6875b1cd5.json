@@ -1,0 +1,175 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" org:\"Charter Communications\"",
+ "total": 588380,
+ "taken": "2026-10-29T21:04:01+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 2,
+   "covered": 588380,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 3,
+   "covered": 588380,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 25,
+   "covered": 588380,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 588380,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 588377,
+   "value": "US"
+  },
+  {
+   "count": 3,
+   "value": "BD"
+  }
+ ],
+ "asn": [
+  {
+   "count": 157222,
+   "value": "as20115"
+  },
+  {
+   "count": 87635,
+   "value": "as11427"
+  },
+  {
+   "count": 81848,
+   "value": "as20001"
+  },
+  {
+   "count": 76000,
+   "value": "as10796"
+  },
+  {
+   "count": 51718,
+   "value": "as11426"
+  },
+  {
+   "count": 42999,
+   "value": "as11351"
+  },
+  {
+   "count": 39675,
+   "value": "as33363"
+  },
+  {
+   "count": 34842,
+   "value": "as12271"
+  },
+  {
+   "count": 9223,
+   "value": "as33588"
+  },
+  {
+   "count": 4882,
+   "value": "as22516"
+  },
+  {
+   "count": 843,
+   "value": "as10838"
+  },
+  {
+   "count": 347,
+   "value": "as20231"
+  },
+  {
+   "count": 261,
+   "value": "33363"
+  },
+  {
+   "count": 229,
+   "value": "as11955"
+  },
+  {
+   "count": 200,
+   "value": "20115"
+  },
+  {
+   "count": 106,
+   "value": "20001"
+  },
+  {
+   "count": 87,
+   "value": "10796"
+  },
+  {
+   "count": 78,
+   "value": "11427"
+  },
+  {
+   "count": 64,
+   "value": "11426"
+  },
+  {
+   "count": 50,
+   "value": "11351"
+  },
+  {
+   "count": 49,
+   "value": "12271"
+  },
+  {
+   "count": 7,
+   "value": "22516"
+  },
+  {
+   "count": 7,
+   "value": "33588"
+  },
+  {
+   "count": 7,
+   "value": "as19643"
+  },
+  {
+   "count": 1,
+   "value": "as16787"
+  }
+ ],
+ "ports": [
+  {
+   "count": 588380,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 389313,
+   "value": "Charter Communications Inc"
+  },
+  {
+   "count": 180410,
+   "value": "Charter Communications LLC"
+  },
+  {
+   "count": 18657,
+   "value": "Charter Communications, Inc"
+  }
+ ],
+ "id": "fact-tr069-client-f6875b1cd5",
+ "parent": "tr069-client",
+ "group": "facts",
+ "label": {
+  "ru": "карман Charter/Spectrum",
+  "en": "Charter/Spectrum subset",
+  "es": "Subconjunto Charter/Spectrum",
+  "zh": "Charter/Spectrum 子集"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,71 @@
+{
+ "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" !\"DigAuth\"",
+ "total": 3,
+ "taken": "2026-10-29T21:04:17+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 3,
+   "value": "TW"
+  }
+ ],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as3462"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Chunghwa Telecom Data Communication Business Group"
+  },
+  {
+   "count": 1,
+   "value": "Data Communication Business Group,"
+  }
+ ],
+ "id": "fact-digauth-fca6d4f2c9",
+ "parent": "digauth",
+ "group": "facts",
+ "label": {
+  "ru": "fake-Apache ребренд (Vivo BR)",
+  "en": "Rebranded fake Apache (Vivo BR)",
+  "es": "Apache falso con otra marca (Vivo BR)",
+  "zh": "改名后的伪 Apache（Vivo BR）"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

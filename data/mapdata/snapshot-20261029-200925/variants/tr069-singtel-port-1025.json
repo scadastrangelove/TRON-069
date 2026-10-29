@@ -1,0 +1,115 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:SG port:1025",
+ "total": 36094,
+ "taken": "2026-10-29T21:04:35+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 36094,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 8,
+   "covered": 36094,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 36094,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 36094,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 36094,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 33773,
+   "value": "as9506"
+  },
+  {
+   "count": 2077,
+   "value": "as3758"
+  },
+  {
+   "count": 142,
+   "value": "9506"
+  },
+  {
+   "count": 93,
+   "value": "as135600"
+  },
+  {
+   "count": 7,
+   "value": "3758"
+  },
+  {
+   "count": 2,
+   "value": "as55430"
+  }
+ ],
+ "ports": [
+  {
+   "count": 36094,
+   "value": 1025
+  }
+ ],
+ "orgs": [
+  {
+   "count": 22702,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 10384,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 1993,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 904,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 63,
+   "value": "Whiz Communications Pte Ltd"
+  },
+  {
+   "count": 30,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 16,
+   "value": "SingNET EVOLVE Broadband"
+  },
+  {
+   "count": 2,
+   "value": "StarHub Cable Vision Ltd"
+  }
+ ],
+ "id": "tr069-singtel-port-1025",
+ "parent": "tr069-client",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "TR069 Client · Singtel / SG · 1025",
+  "en": "TR069 Client · Singtel / SG · 1025",
+  "es": "TR069 Client · Singtel / SG · 1025",
+  "zh": "TR069 Client · Singtel / SG · 1025"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

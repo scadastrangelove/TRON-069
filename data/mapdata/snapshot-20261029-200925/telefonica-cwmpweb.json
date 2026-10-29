@@ -1,0 +1,49 @@
+{
+ "dork": "\"cwmpWeb\" \"main.acs.telefonica.net\"",
+ "total": 700,
+ "taken": "2026-10-29T20:10:24+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 700,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 700,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 700,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 700,
+   "value": "ES"
+  }
+ ],
+ "asn": [
+  {
+   "count": 691,
+   "value": "as3352"
+  },
+  {
+   "count": 9,
+   "value": "3352"
+  }
+ ],
+ "ports": [
+  {
+   "count": 700,
+   "value": 7547
+  }
+ ],
+ "orgs": [],
+ "name": "Telefónica cwmpWeb"
+}

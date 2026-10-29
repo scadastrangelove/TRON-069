@@ -1,0 +1,235 @@
+{
+ "dork": "\"GenieACS-Version: 1.3\"",
+ "total": 44,
+ "taken": "2026-10-29T21:04:22+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 8,
+   "covered": 44,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 17,
+   "covered": 44,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 17,
+   "covered": 44,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 4,
+   "covered": 44,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 30,
+   "value": "BR"
+  },
+  {
+   "count": 3,
+   "value": "AL"
+  },
+  {
+   "count": 3,
+   "value": "XK"
+  },
+  {
+   "count": 2,
+   "value": "DE"
+  },
+  {
+   "count": 2,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "CN"
+  },
+  {
+   "count": 1,
+   "value": "PH"
+  }
+ ],
+ "asn": [
+  {
+   "count": 25,
+   "value": "as263009"
+  },
+  {
+   "count": 2,
+   "value": "as14061"
+  },
+  {
+   "count": 2,
+   "value": "as210003"
+  },
+  {
+   "count": 2,
+   "value": "as59402"
+  },
+  {
+   "count": 1,
+   "value": "as140389"
+  },
+  {
+   "count": 1,
+   "value": "as205244"
+  },
+  {
+   "count": 1,
+   "value": "as206262"
+  },
+  {
+   "count": 1,
+   "value": "as208286"
+  },
+  {
+   "count": 1,
+   "value": "as210693"
+  },
+  {
+   "count": 1,
+   "value": "as262422"
+  },
+  {
+   "count": 1,
+   "value": "as263987"
+  },
+  {
+   "count": 1,
+   "value": "as264929"
+  },
+  {
+   "count": 1,
+   "value": "as266498"
+  },
+  {
+   "count": 1,
+   "value": "as269439"
+  },
+  {
+   "count": 1,
+   "value": "as38760"
+  },
+  {
+   "count": 1,
+   "value": "as4134"
+  },
+  {
+   "count": 1,
+   "value": "as9299"
+  }
+ ],
+ "ports": [
+  {
+   "count": 40,
+   "value": 3000
+  },
+  {
+   "count": 2,
+   "value": 443
+  },
+  {
+   "count": 1,
+   "value": 1244
+  },
+  {
+   "count": 1,
+   "value": 3333
+  }
+ ],
+ "orgs": [
+  {
+   "count": 25,
+   "value": "FORTE TELECOM LTDA."
+  },
+  {
+   "count": 2,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 2,
+   "value": "SkyElbasan SKY ELBASAN sh.p.k"
+  },
+  {
+   "count": 2,
+   "value": "Virocom Limited"
+  },
+  {
+   "count": 1,
+   "value": "Anderson Gustavo Neves Gomes - ME"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET Guangdong province network"
+  },
+  {
+   "count": 1,
+   "value": "E. DA SILVA PROVEDORES DE TELECOMUNICAÇÕES EIRELI"
+  },
+  {
+   "count": 1,
+   "value": "Firstcom NEXT-TV SHPK"
+  },
+  {
+   "count": 1,
+   "value": "KosovaNet Kamenicanet sh.p.k"
+  },
+  {
+   "count": 1,
+   "value": "MAXINET SOLUCOES TECNOLOGICAS LTDA"
+  },
+  {
+   "count": 1,
+   "value": "Max tv SH. P. K"
+  },
+  {
+   "count": 1,
+   "value": "PT Fasma Multi Solusindo"
+  },
+  {
+   "count": 1,
+   "value": "PT Media Sarana Akses"
+  },
+  {
+   "count": 1,
+   "value": "Philippine Long Distance Telephone Co."
+  },
+  {
+   "count": 1,
+   "value": "Prizren-Business-Clients"
+  },
+  {
+   "count": 1,
+   "value": "TECNET TELECOM LTDA"
+  },
+  {
+   "count": 1,
+   "value": "UNIVERSO FIBER COMUNICACAO MULTIMIDIA"
+  }
+ ],
+ "id": "fact-genieacs-admin-ui-c56def127c",
+ "parent": "genieacs-admin-ui",
+ "group": "facts",
+ "label": {
+  "ru": "версии 1.3.x",
+  "en": "Versions 1.3.x",
+  "es": "Versiones 1.3.x",
+  "zh": "版本 1.3.x"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

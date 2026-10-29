@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:CA",
+ "total": 5,
+ "taken": "2026-10-29T20:51:16+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as1403"
+  },
+  {
+   "count": 1,
+   "value": "as21949"
+  },
+  {
+   "count": 1,
+   "value": "as855"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Primus Telecommunications Canada Inc."
+  },
+  {
+   "count": 1,
+   "value": "Beanfield Technologies Inc."
+  },
+  {
+   "count": 1,
+   "value": "Bell Canada"
+  },
+  {
+   "count": 1,
+   "value": "EBOX"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "CA"
+}

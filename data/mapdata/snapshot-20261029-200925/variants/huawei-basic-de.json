@@ -1,0 +1,107 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\" country:DE",
+ "total": 24459,
+ "taken": "2026-10-29T21:03:31+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 24459,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 6,
+   "covered": 24459,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 24459,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 3,
+   "covered": 24459,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 24459,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 24215,
+   "value": "as3320"
+  },
+  {
+   "count": 239,
+   "value": "3320"
+  },
+  {
+   "count": 3,
+   "value": "as6805"
+  },
+  {
+   "count": 2,
+   "value": "as16509"
+  }
+ ],
+ "ports": [
+  {
+   "count": 24457,
+   "value": 7547
+  },
+  {
+   "count": 1,
+   "value": 10324
+  },
+  {
+   "count": 1,
+   "value": 11434
+  }
+ ],
+ "orgs": [
+  {
+   "count": 24454,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 1,
+   "value": "A100 ROW GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 1,
+   "value": "NCC"
+  },
+  {
+   "count": 1,
+   "value": "Telefonica Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 1,
+   "value": "Telefonica O2 Germany GmbH & Co. OHG"
+  }
+ ],
+ "id": "huawei-basic-de",
+ "parent": "huaweihomegateway",
+ "group": "huawei-auth",
+ "label": {
+  "ru": "Ответы Basic · DE",
+  "en": "Basic responses · DE",
+  "es": "Respuestas Basic · DE",
+  "zh": "Basic 响应 · DE"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,163 @@
+{
+ "dork": "\"CWMP-Agent\" country:HK",
+ "total": 2385,
+ "taken": "2026-10-29T21:04:19+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 2385,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 9,
+   "covered": 2385,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 2385,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 11,
+   "covered": 2385,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2385,
+   "value": "HK"
+  }
+ ],
+ "asn": [
+  {
+   "count": 2353,
+   "value": "as4760"
+  },
+  {
+   "count": 20,
+   "value": "4760"
+  },
+  {
+   "count": 4,
+   "value": "as45102"
+  },
+  {
+   "count": 3,
+   "value": "as136907"
+  },
+  {
+   "count": 2,
+   "value": "as17924"
+  },
+  {
+   "count": 2,
+   "value": "as61112"
+  },
+  {
+   "count": 1,
+   "value": "as9381"
+  }
+ ],
+ "ports": [
+  {
+   "count": 2375,
+   "value": 5400
+  },
+  {
+   "count": 1,
+   "value": 843
+  },
+  {
+   "count": 1,
+   "value": 5903
+  },
+  {
+   "count": 1,
+   "value": 7547
+  },
+  {
+   "count": 1,
+   "value": 8457
+  },
+  {
+   "count": 1,
+   "value": 10380
+  },
+  {
+   "count": 1,
+   "value": 12292
+  },
+  {
+   "count": 1,
+   "value": 12521
+  },
+  {
+   "count": 1,
+   "value": 16096
+  },
+  {
+   "count": 1,
+   "value": 30003
+  },
+  {
+   "count": 1,
+   "value": 46267
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1477,
+   "value": "Hong Kong Telecommunications (HKT) Limited Mass Internet"
+  },
+  {
+   "count": 352,
+   "value": "PCCW Global (HK) Limited"
+  },
+  {
+   "count": 327,
+   "value": "HKT Limited"
+  },
+  {
+   "count": 217,
+   "value": "Hong Kong Telecommunications (HKT) Limited"
+  },
+  {
+   "count": 4,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 3,
+   "value": "Huawei Cloud Hongkong Region"
+  },
+  {
+   "count": 2,
+   "value": "AkileCloud AKILE LTD"
+  },
+  {
+   "count": 2,
+   "value": "Smartone Mobile communications Limited"
+  },
+  {
+   "count": 1,
+   "value": "HKBN Enterprise Solutions HK Limited"
+  }
+ ],
+ "id": "fact-cwmp-agent-orange-tunisie-c0ffddf421",
+ "parent": "cwmp-agent-orange-tunisie",
+ "group": "facts",
+ "label": {
+  "ru": "карман HKT/PCCW HK (порт 5400)",
+  "en": "HKT/PCCW HK subset (port 5400)",
+  "es": "Subconjunto HKT/PCCW HK (puerto 5400)",
+  "zh": "HKT/PCCW HK 子集（端口 5400）"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

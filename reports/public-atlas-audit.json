@@ -1,8 +1,8 @@
 {
   "target": "atlas/tr-atlas.html",
-  "sourceSha256": "dc8e2de0cdfa328cee17553c9097cc804ca2243056b7d7ad77e70941782ba4c3",
-  "snapshot": "20261025-085123",
-  "testedAt": "2026-10-25T09:49:39.225Z",
+  "sourceSha256": "866c57f0bffd0ed2f1149e1bb44a40b5252efbb299b4ee9c0a9ba30ab9536ab7",
+  "snapshot": "20261029-200925",
+  "testedAt": "2026-10-29T21:06:41.401Z",
   "method": "Offline source-function tests with inert output sinks; no browser rendering",
   "pass": 68,
   "fail": 0,
@@ -18,6 +18,7 @@
       "description": "One best snapshot per day; archived shared links retain exact dates",
       "status": "PASS",
       "evidence": [
+        "20261029-200925",
         "20261025-085123",
         "20261021-203557",
         "20261018-064713",
@@ -44,7 +45,7 @@
       "id": "overview-count-scopes",
       "description": "Worldwide port and signature counts remain distinct from a filtered map selection",
       "status": "PASS",
-      "evidence": "Port baseline 34900877; all lines 28311745; selection scoped separately"
+      "evidence": "Port baseline 35871014; all lines 29477899; selection scoped separately"
     },
     {
       "id": "legacy-http-quality",
@@ -87,8 +88,8 @@
       "description": "Exact raw organization selections survive map URLs without broadening or double counting",
       "status": "PASS",
       "evidence": {
-        "exact": 419670,
-        "withAlias": 419670
+        "exact": 437007,
+        "withAlias": 437007
       }
     },
     {
@@ -143,25 +144,25 @@
       "id": "query-totals",
       "description": "Default country sums equal all embedded line-query counts",
       "status": "PASS",
-      "evidence": "{\"total\":28311320,\"countries\":218,\"mismatches\":[]}"
+      "evidence": "{\"total\":29477429,\"countries\":218,\"mismatches\":[]}"
     },
     {
       "id": "line-country-sweep",
       "description": "Every line and country filter preserves source counts",
       "status": "PASS",
-      "evidence": "2779 line-country cases"
+      "evidence": "2797 line-country cases"
     },
     {
       "id": "region-country",
       "description": "Selecting Italy inside Europe narrows the slice to Italy",
       "status": "PASS",
-      "evidence": "{\"italy\":2211792,\"combined\":2211792,\"countries\":1}"
+      "evidence": "{\"italy\":2417089,\"combined\":2417089,\"countries\":1}"
     },
     {
       "id": "operator-counts",
       "description": "Operator filter uses selected operator facet counts",
       "status": "PASS",
-      "evidence": "{\"actual\":10562,\"expected\":10562,\"ratio\":1}"
+      "evidence": "{\"actual\":11177,\"expected\":11177,\"ratio\":1}"
     },
     {
       "id": "operator-normalization",
@@ -175,7 +176,7 @@
       "status": "PASS",
       "evidence": {
         "lines": 55,
-        "total": 28311320
+        "total": 29477429
       }
     },
     {
@@ -188,7 +189,7 @@
       "id": "facet-coverage",
       "description": "Operator drill retains the coverage metadata required to explain its truncated tail",
       "status": "PASS",
-      "evidence": "{\"embeddedFields\":[\"dork\",\"total\",\"taken\",\"run_id\",\"collection_status\",\"requested_facets\",\"facet_meta\",\"countries\",\"asn\",\"ports\",\"orgs\",\"line\",\"line_id\",\"cc\"],\"sumTopOrgs\":240511}"
+      "evidence": "{\"embeddedFields\":[\"dork\",\"total\",\"taken\",\"run_id\",\"collection_status\",\"requested_facets\",\"facet_meta\",\"countries\",\"asn\",\"ports\",\"orgs\",\"line\",\"line_id\",\"cc\"],\"sumTopOrgs\":256530}"
     },
     {
       "id": "geo-html",
@@ -212,7 +213,7 @@
       "id": "language-url",
       "description": "URL roundtrip preserves language",
       "status": "PASS",
-      "evidence": "#lang=es&snapshot=20261025-085123"
+      "evidence": "#lang=es&snapshot=20261029-200925"
     },
     {
       "id": "language-priority",
@@ -248,13 +249,13 @@
       "id": "pair-outside-selection",
       "description": "Visible dimmed map pairs keep their real count in inspector",
       "status": "PASS",
-      "evidence": "{\"displayed\":\"1.38M\",\"source\":1379233}"
+      "evidence": "{\"displayed\":\"1.56M\",\"source\":1560291}"
     },
     {
       "id": "lines-in-slice",
       "description": "In-slice line table respects selected country",
       "status": "PASS",
-      "evidence": "{\"actual\":60212,\"expected\":60212}"
+      "evidence": "{\"actual\":63829,\"expected\":63829}"
     },
     {
       "id": "top-countries",
@@ -284,7 +285,7 @@
       "id": "operator-search",
       "description": "Quick search finds collected operators outside the first twelve",
       "status": "PASS",
-      "evidence": "[{\"kind\":\"org\",\"id\":\"Blue Stream\",\"t\":\"Blue Stream\",\"n\":\"10.6k\",\"sub\":\"operator\"}]"
+      "evidence": "[{\"kind\":\"org\",\"id\":\"Blue Stream\",\"t\":\"Blue Stream\",\"n\":\"11.2k\",\"sub\":\"operator\"}]"
     },
     {
       "id": "svg-coordinates",
@@ -308,7 +309,7 @@
       "id": "country-picker-coverage",
       "description": "Country selector can discover countries present outside the 7547 denominator",
       "status": "PASS",
-      "evidence": "[\"YE\",\"FJ\",\"VU\",\"GW\",\"CF\",\"PW\"]"
+      "evidence": "[\"YE\",\"LC\",\"VU\",\"GW\",\"CF\"]"
     },
     {
       "id": "geo-duplicates",
@@ -338,7 +339,7 @@
       "id": "operator-shortcuts",
       "description": "Suggested largest line stays within the selected operator data",
       "status": "PASS",
-      "evidence": "{\"title\":\"Largest line:  IgdAuthentication\",\"why\":\"10.6k matches — start here\",\"val\":\"10.6k\",\"act\":{\"t\":\"solo\",\"slug\":\"igdauthentication\"}}"
+      "evidence": "{\"title\":\"Largest line:  IgdAuthentication\",\"why\":\"11.2k matches — start here\",\"val\":\"11.2k\",\"act\":{\"t\":\"solo\",\"slug\":\"igdauthentication\"}}"
     },
     {
       "id": "invalid-cell",
@@ -374,7 +375,7 @@
       "status": "PASS",
       "evidence": {
         "rendered": 524,
-        "total": 28311320
+        "total": 29477429
       }
     },
     {
@@ -441,13 +442,13 @@
       "id": "export-operator-total",
       "description": "Export preserves the filtered operator count and coverage scope",
       "status": "PASS",
-      "evidence": "{\"snapshot\":\"20261025-085123\",\"selection\":{\"lines\":[\"igdauthentication\"],\"geo\":[\"c:US\"],\"orgs\":[\"Blue Stream\"]},\"unit\":\"Shodan query matches\",\"operatorScope\":\"collected top-N facets\",\"unknownCountry\":null,\"countries\":{\"US\":{\"base\":10562,\"lines\":{\"igdauthentication\":10562}}}}"
+      "evidence": "{\"snapshot\":\"20261029-200925\",\"selection\":{\"lines\":[\"igdauthentication\"],\"geo\":[\"c:US\"],\"orgs\":[\"Blue Stream\"]},\"unit\":\"Shodan query matches\",\"operatorScope\":\"collected top-N facets\",\"unknownCountry\":null,\"countries\":{\"US\":{\"base\":11177,\"lines\":{\"igdauthentication\":11177}}}}"
     },
     {
       "id": "csv-format",
       "description": "CSV uses quoted fields and CRLF with the selected operator count",
       "status": "PASS",
-      "evidence": "\"cc\";\"country\";\"IgdAuthentication\";\"park_7547\"\r\n\"US\";\"United States\";\"10562\";\"5279868\""
+      "evidence": "\"cc\";\"country\";\"IgdAuthentication\";\"park_7547\"\r\n\"US\";\"United States\";\"11177\";\"5340868\""
     }
   ]
 }

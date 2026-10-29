@@ -1,0 +1,57 @@
+{
+ "dork": "\"mini_httpd\" country:MU",
+ "total": 269,
+ "taken": "2026-10-29T20:42:58+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 269,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 269,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 259,
+   "value": "as30999"
+  },
+  {
+   "count": 8,
+   "value": "30999"
+  },
+  {
+   "count": 2,
+   "value": "as37622"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 240,
+   "value": "EMTEL LIMITED - EMTEL LIMITED"
+  },
+  {
+   "count": 21,
+   "value": "EMTEL"
+  },
+  {
+   "count": 6,
+   "value": "EMTEL LIMITED"
+  },
+  {
+   "count": 2,
+   "value": "using for MTML dial up clients-fwp"
+  }
+ ],
+ "line": "mini_httpd (all ports)",
+ "line_id": "mini-httpd",
+ "cc": "MU"
+}

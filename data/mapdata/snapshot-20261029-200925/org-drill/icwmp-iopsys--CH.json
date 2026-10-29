@@ -1,0 +1,73 @@
+{
+ "dork": "\"authenticate@cwmp\" country:CH",
+ "total": 1626,
+ "taken": "2026-10-29T20:12:40+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 1626,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 1626,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1622,
+   "value": "as3303"
+  },
+  {
+   "count": 2,
+   "value": "3303"
+  },
+  {
+   "count": 1,
+   "value": "as25375"
+  },
+  {
+   "count": 1,
+   "value": "as8758"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 753,
+   "value": "Bluewin is an LIR and ISP in Switzerland."
+  },
+  {
+   "count": 294,
+   "value": "Swisscom (Schweiz) AG"
+  },
+  {
+   "count": 286,
+   "value": "Swisscom (Schweiz) AG is an LIR and ISP in Switzerland."
+  },
+  {
+   "count": 176,
+   "value": "Swisscom (Schweiz) AG is an internet service provider in CH."
+  },
+  {
+   "count": 115,
+   "value": "Swisscom AG is a full service provider in CH"
+  },
+  {
+   "count": 1,
+   "value": "Leunet AG Frauenfeld"
+  },
+  {
+   "count": 1,
+   "value": "iway FTTH Lite Exhange Region Bern/Fribourg"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "CH"
+}

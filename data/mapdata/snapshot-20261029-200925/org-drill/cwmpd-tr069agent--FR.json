@@ -1,0 +1,65 @@
+{
+ "dork": "\"cwmpd\" opaque country:FR",
+ "total": 26,
+ "taken": "2026-10-29T20:55:06+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 26,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 26,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 19,
+   "value": "as35077"
+  },
+  {
+   "count": 4,
+   "value": "as39271"
+  },
+  {
+   "count": 2,
+   "value": "as5410"
+  },
+  {
+   "count": 1,
+   "value": "as12322"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 19,
+   "value": "Netwo SAS"
+  },
+  {
+   "count": 4,
+   "value": "Internet Services"
+  },
+  {
+   "count": 1,
+   "value": "Bouygues Telecom SA"
+  },
+  {
+   "count": 1,
+   "value": "Free SAS"
+  },
+  {
+   "count": 1,
+   "value": "Pool for Broadband DSL customers"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "FR"
+}

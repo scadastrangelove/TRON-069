@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:KH",
+ "total": 5,
+ "taken": "2026-10-29T20:51:18+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as38623"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "VIETTEL (CAMBODIA) PTE., LTD."
+  },
+  {
+   "count": 1,
+   "value": "VIETTEL (CAMBODIA) PTE, LTD"
+  },
+  {
+   "count": 1,
+   "value": "VIETTEL (CAMBODIA) PTE., LTD"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "KH"
+}

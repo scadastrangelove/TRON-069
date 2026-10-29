@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:CL",
+ "total": 4190,
+ "taken": "2026-10-29T20:50:35+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 4190,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 4190,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 4181,
+   "value": "as22047"
+  },
+  {
+   "count": 9,
+   "value": "22047"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4188,
+   "value": "VTR BANDA ANCHA S.A."
+  },
+  {
+   "count": 2,
+   "value": "CLARO CHILE S.A."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "CL"
+}

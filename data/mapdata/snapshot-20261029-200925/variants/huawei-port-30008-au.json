@@ -1,0 +1,111 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:30008 country:AU",
+ "total": 7284,
+ "taken": "2026-10-29T21:03:24+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 7284,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 7,
+   "covered": 7284,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 7284,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 7284,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 7284,
+   "value": "AU"
+  }
+ ],
+ "asn": [
+  {
+   "count": 7134,
+   "value": "as7545"
+  },
+  {
+   "count": 141,
+   "value": "7545"
+  },
+  {
+   "count": 5,
+   "value": "as4739"
+  },
+  {
+   "count": 2,
+   "value": "as7600"
+  },
+  {
+   "count": 1,
+   "value": "as2764"
+  },
+  {
+   "count": 1,
+   "value": "as9443"
+  }
+ ],
+ "ports": [
+  {
+   "count": 7284,
+   "value": 30008
+  }
+ ],
+ "orgs": [
+  {
+   "count": 5026,
+   "value": "TPG Internet Pty Ltd"
+  },
+  {
+   "count": 2249,
+   "value": "iiNet Limited"
+  },
+  {
+   "count": 5,
+   "value": "TPG Internet Pty Ltd."
+  },
+  {
+   "count": 1,
+   "value": "EscapeNet Pty Ltd - Phone 1300 135 235"
+  },
+  {
+   "count": 1,
+   "value": "NBN, Private IP, IPWAN, MPLS & ADSL broadband technologies"
+  },
+  {
+   "count": 1,
+   "value": "Salient Enterprises Pty Ltd t/a Interworx Technologies Pty Ltd Level 1, 10 Barolin St, Bundaberg, QLD 4670"
+  },
+  {
+   "count": 1,
+   "value": "Vocus Australia"
+  }
+ ],
+ "id": "huawei-port-30008-au",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 30008 · AU",
+  "en": "CR port 30008 · AU",
+  "es": "Puerto CR 30008 · AU",
+  "zh": "CR 端口 30008 · AU"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

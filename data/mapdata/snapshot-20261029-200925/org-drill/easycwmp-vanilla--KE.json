@@ -1,0 +1,45 @@
+{
+ "dork": "\"realm@easycwmp\" country:KE",
+ "total": 42,
+ "taken": "2026-10-29T20:34:41+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 42,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 42,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 40,
+   "value": "as33771"
+  },
+  {
+   "count": 2,
+   "value": "as37305"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 40,
+   "value": "Our PS core GGSN pool"
+  },
+  {
+   "count": 2,
+   "value": "Frontier Optical Networks Ltd - Frontier Optical Networks Ltd"
+  }
+ ],
+ "line": "easycwmp vanilla",
+ "line_id": "easycwmp-vanilla",
+ "cc": "KE"
+}

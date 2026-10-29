@@ -1,0 +1,53 @@
+{
+ "dork": "\"cwmpd\" opaque country:PT",
+ "total": 12,
+ "taken": "2026-10-29T20:55:17+00:00",
+ "run_id": "3c5041af-1a05-4637-af4b-2d0956721d0f",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 12,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 12,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 10,
+   "value": "as2860"
+  },
+  {
+   "count": 1,
+   "value": "as12353"
+  },
+  {
+   "count": 1,
+   "value": "as42863"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 10,
+   "value": "NOS COMUNICACOES, S.A."
+  },
+  {
+   "count": 1,
+   "value": "GPRS"
+  },
+  {
+   "count": 1,
+   "value": "MEO Mobile Customers"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "PT"
+}
