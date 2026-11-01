@@ -647,7 +647,7 @@
       ],
       "source": "FINGERPRINTS.md",
       "news_id": "dslforum-operator-scopes",
-      "summary": "DT Speedport SDK is renamed DSLForum CPE Management. The stable ID is retained. New country/port queries cover DE:7547, DE:7170, SG:8085 and GB:8085. The supplier remains unresolved; a generic Apache label and an RFC example do not identify it.",
+      "summary": "DT Speedport SDK is renamed DSLForum CPE Management. The stable ID is retained. New country/port queries cover DE:7547, DE:7170, SG:8085 and GB:8085. The supplier remains unresolved; a generic Apache label and an RFC example do not identify it. An all-port Apache-branded HTTP 401 query and reviewed Date-header template variation are documented separately.",
       "atlas": [
         "news",
         "findings",
@@ -1004,6 +1004,10 @@
       {
         "file": "NOTES.md",
         "anchor": "section-9.44"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "apache-response-profiles"
       }
     ],
     "charter-anti-scan-404": [
@@ -2125,6 +2129,20 @@
           "anchor": "cli-build-classes"
         }
       ]
+    },
+    {
+      "parent": "dt-speedport-sdk",
+      "query": "\"DSLForum CPE Management\" \"Server: Apache\" http.status:401",
+      "collection_ref": {
+        "kind": "variant",
+        "id": "dslforum-apache-401"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "apache-response-profiles"
+        }
+      ]
     }
   ],
   "catalog_query_ids": [
@@ -2221,6 +2239,7 @@
     "westell-secure-port-7547",
     "easycwmp-opaque-spacex",
     "acssimtool-observed-nonce",
+    "dslforum-apache-401",
     "dslforum-de-7547",
     "dslforum-de-7170",
     "dslforum-sg-8085",

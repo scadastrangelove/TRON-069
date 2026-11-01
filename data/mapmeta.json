@@ -499,7 +499,8 @@
         "opaque 5ccc069c… is the literal RFC 2617 §3.5 example. The claimed shared SDK with ACSSimTool was withdrawn on review, 2026-10-08",
         "Observed contexts span DE:7547, DE:7170, SG:8085 and legacy GB:8085. Operator and port scopes have separate collection queries.",
         "The name no longer implies a Deutsche Telekom SDK. The stable ID and historical query counts are preserved.",
-        "Askey is a firmware research lead from the public WPSplinter model/operator catalog. The DSLForum supplier remains unresolved until the exact CR response template is matched."
+        "Askey is a firmware research lead from the public WPSplinter model/operator catalog. The DSLForum supplier remains unresolved until the exact CR response template is matched.",
+        "Apache-branded HTTP 401 responses have a separate all-port query. Saved DSLForum samples include templates with and without Date; this variation does not resolve the supplier."
       ],
       "overlaps": [
         {
@@ -525,6 +526,10 @@
         {
           "file": "NOTES.md",
           "anchor": "section-9.44"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "apache-response-profiles"
         }
       ],
       "query_kind": "signature"

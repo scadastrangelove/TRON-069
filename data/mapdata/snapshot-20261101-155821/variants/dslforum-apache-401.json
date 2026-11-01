@@ -1,0 +1,1084 @@
+{
+ "dork": "\"DSLForum CPE Management\" \"Server: Apache\" http.status:401",
+ "total": 76385,
+ "taken": "2026-11-01T15:58:26+00:00",
+ "run_id": "a77828f9-a5b9-4897-9139-9accf88262af",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 13,
+   "covered": 76385,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 76380,
+   "remainder": 5
+  },
+  "asn": {
+   "values_returned": 45,
+   "covered": 76385,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 100,
+   "covered": 65125,
+   "remainder": 11260
+  }
+ },
+ "countries": [
+  {
+   "count": 62181,
+   "value": "DE"
+  },
+  {
+   "count": 12122,
+   "value": "GB"
+  },
+  {
+   "count": 1751,
+   "value": "NL"
+  },
+  {
+   "count": 183,
+   "value": "ES"
+  },
+  {
+   "count": 60,
+   "value": "CA"
+  },
+  {
+   "count": 32,
+   "value": "AU"
+  },
+  {
+   "count": 27,
+   "value": "MX"
+  },
+  {
+   "count": 13,
+   "value": "US"
+  },
+  {
+   "count": 8,
+   "value": "AE"
+  },
+  {
+   "count": 3,
+   "value": "RU"
+  },
+  {
+   "count": 2,
+   "value": "IT"
+  },
+  {
+   "count": 2,
+   "value": "TW"
+  },
+  {
+   "count": 1,
+   "value": "CN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 48363,
+   "value": "as6805"
+  },
+  {
+   "count": 13807,
+   "value": "as3320"
+  },
+  {
+   "count": 10863,
+   "value": "as2856"
+  },
+  {
+   "count": 1747,
+   "value": "as1136"
+  },
+  {
+   "count": 576,
+   "value": "as5089"
+  },
+  {
+   "count": 248,
+   "value": "as56478"
+  },
+  {
+   "count": 156,
+   "value": "as12479"
+  },
+  {
+   "count": 144,
+   "value": "as207995"
+  },
+  {
+   "count": 98,
+   "value": "as58273"
+  },
+  {
+   "count": 93,
+   "value": "as13285"
+  },
+  {
+   "count": 51,
+   "value": "as25310"
+  },
+  {
+   "count": 31,
+   "value": "as1221"
+  },
+  {
+   "count": 27,
+   "value": "as15704"
+  },
+  {
+   "count": 27,
+   "value": "as8151"
+  },
+  {
+   "count": 21,
+   "value": "as7992"
+  },
+  {
+   "count": 20,
+   "value": "as11260"
+  },
+  {
+   "count": 19,
+   "value": "as56329"
+  },
+  {
+   "count": 15,
+   "value": "as398721"
+  },
+  {
+   "count": 12,
+   "value": "as6871"
+  },
+  {
+   "count": 11,
+   "value": "as13037"
+  },
+  {
+   "count": 8,
+   "value": "as5384"
+  },
+  {
+   "count": 6,
+   "value": "as21804"
+  },
+  {
+   "count": 4,
+   "value": "as11290"
+  },
+  {
+   "count": 4,
+   "value": "as8881"
+  },
+  {
+   "count": 3,
+   "value": "as12312"
+  },
+  {
+   "count": 3,
+   "value": "as12355"
+  },
+  {
+   "count": 3,
+   "value": "as41354"
+  },
+  {
+   "count": 3,
+   "value": "as57112"
+  },
+  {
+   "count": 2,
+   "value": "as18988"
+  },
+  {
+   "count": 2,
+   "value": "as31655"
+  },
+  {
+   "count": 2,
+   "value": "as5607"
+  },
+  {
+   "count": 2,
+   "value": "as57353"
+  },
+  {
+   "count": 2,
+   "value": "as577"
+  },
+  {
+   "count": 1,
+   "value": "as12695"
+  },
+  {
+   "count": 1,
+   "value": "as17809"
+  },
+  {
+   "count": 1,
+   "value": "as22423"
+  },
+  {
+   "count": 1,
+   "value": "as29319"
+  },
+  {
+   "count": 1,
+   "value": "as3209"
+  },
+  {
+   "count": 1,
+   "value": "as3216"
+  },
+  {
+   "count": 1,
+   "value": "as3462"
+  },
+  {
+   "count": 1,
+   "value": "as35224"
+  },
+  {
+   "count": 1,
+   "value": "as396338"
+  },
+  {
+   "count": 1,
+   "value": "as5769"
+  },
+  {
+   "count": 1,
+   "value": "as7545"
+  },
+  {
+   "count": 1,
+   "value": "as812"
+  }
+ ],
+ "ports": [
+  {
+   "count": 48364,
+   "value": 7170
+  },
+  {
+   "count": 13909,
+   "value": 7547
+  },
+  {
+   "count": 542,
+   "value": 9000
+  },
+  {
+   "count": 256,
+   "value": 9003
+  },
+  {
+   "count": 188,
+   "value": 50805
+  },
+  {
+   "count": 176,
+   "value": 9004
+  },
+  {
+   "count": 134,
+   "value": 9009
+  },
+  {
+   "count": 129,
+   "value": 9005
+  },
+  {
+   "count": 105,
+   "value": 9006
+  },
+  {
+   "count": 75,
+   "value": 9007
+  },
+  {
+   "count": 67,
+   "value": 9008
+  },
+  {
+   "count": 40,
+   "value": 9010
+  },
+  {
+   "count": 37,
+   "value": 9011
+  },
+  {
+   "count": 27,
+   "value": 9013
+  },
+  {
+   "count": 26,
+   "value": 3005
+  },
+  {
+   "count": 25,
+   "value": 9012
+  },
+  {
+   "count": 23,
+   "value": 1024
+  },
+  {
+   "count": 21,
+   "value": 4282
+  },
+  {
+   "count": 19,
+   "value": 8112
+  },
+  {
+   "count": 19,
+   "value": 9014
+  },
+  {
+   "count": 17,
+   "value": 2222
+  },
+  {
+   "count": 16,
+   "value": 4782
+  },
+  {
+   "count": 16,
+   "value": 5938
+  },
+  {
+   "count": 16,
+   "value": 11371
+  },
+  {
+   "count": 16,
+   "value": 20547
+  },
+  {
+   "count": 16,
+   "value": 55555
+  },
+  {
+   "count": 15,
+   "value": 1911
+  },
+  {
+   "count": 15,
+   "value": 1962
+  },
+  {
+   "count": 15,
+   "value": 2008
+  },
+  {
+   "count": 15,
+   "value": 8200
+  },
+  {
+   "count": 15,
+   "value": 9051
+  },
+  {
+   "count": 14,
+   "value": 1080
+  },
+  {
+   "count": 14,
+   "value": 1224
+  },
+  {
+   "count": 14,
+   "value": 3268
+  },
+  {
+   "count": 14,
+   "value": 5900
+  },
+  {
+   "count": 14,
+   "value": 8008
+  },
+  {
+   "count": 14,
+   "value": 10909
+  },
+  {
+   "count": 14,
+   "value": 55442
+  },
+  {
+   "count": 13,
+   "value": 1965
+  },
+  {
+   "count": 13,
+   "value": 3269
+  },
+  {
+   "count": 13,
+   "value": 4064
+  },
+  {
+   "count": 13,
+   "value": 4567
+  },
+  {
+   "count": 13,
+   "value": 5901
+  },
+  {
+   "count": 13,
+   "value": 7657
+  },
+  {
+   "count": 13,
+   "value": 8069
+  },
+  {
+   "count": 13,
+   "value": 9761
+  },
+  {
+   "count": 12,
+   "value": 1400
+  },
+  {
+   "count": 12,
+   "value": 1935
+  },
+  {
+   "count": 12,
+   "value": 2082
+  },
+  {
+   "count": 12,
+   "value": 3551
+  },
+  {
+   "count": 12,
+   "value": 5000
+  },
+  {
+   "count": 12,
+   "value": 5025
+  },
+  {
+   "count": 12,
+   "value": 8010
+  },
+  {
+   "count": 12,
+   "value": 9080
+  },
+  {
+   "count": 12,
+   "value": 9160
+  },
+  {
+   "count": 12,
+   "value": 9295
+  },
+  {
+   "count": 12,
+   "value": 9600
+  },
+  {
+   "count": 12,
+   "value": 11211
+  },
+  {
+   "count": 11,
+   "value": 1741
+  },
+  {
+   "count": 11,
+   "value": 2154
+  },
+  {
+   "count": 11,
+   "value": 3001
+  },
+  {
+   "count": 11,
+   "value": 3333
+  },
+  {
+   "count": 11,
+   "value": 4664
+  },
+  {
+   "count": 11,
+   "value": 4949
+  },
+  {
+   "count": 11,
+   "value": 5357
+  },
+  {
+   "count": 11,
+   "value": 5432
+  },
+  {
+   "count": 11,
+   "value": 6653
+  },
+  {
+   "count": 11,
+   "value": 6664
+  },
+  {
+   "count": 11,
+   "value": 7989
+  },
+  {
+   "count": 11,
+   "value": 8000
+  },
+  {
+   "count": 11,
+   "value": 9090
+  },
+  {
+   "count": 11,
+   "value": 9191
+  },
+  {
+   "count": 11,
+   "value": 49153
+  },
+  {
+   "count": 11,
+   "value": 52311
+  },
+  {
+   "count": 10,
+   "value": 1925
+  },
+  {
+   "count": 10,
+   "value": 2003
+  },
+  {
+   "count": 10,
+   "value": 2404
+  },
+  {
+   "count": 10,
+   "value": 3310
+  },
+  {
+   "count": 10,
+   "value": 4369
+  },
+  {
+   "count": 10,
+   "value": 4500
+  },
+  {
+   "count": 10,
+   "value": 4899
+  },
+  {
+   "count": 10,
+   "value": 5269
+  },
+  {
+   "count": 10,
+   "value": 5435
+  },
+  {
+   "count": 10,
+   "value": 8334
+  },
+  {
+   "count": 10,
+   "value": 8575
+  },
+  {
+   "count": 10,
+   "value": 9800
+  },
+  {
+   "count": 10,
+   "value": 18081
+  },
+  {
+   "count": 10,
+   "value": 20000
+  },
+  {
+   "count": 10,
+   "value": 21025
+  },
+  {
+   "count": 9,
+   "value": 1249
+  },
+  {
+   "count": 9,
+   "value": 1599
+  },
+  {
+   "count": 9,
+   "value": 2086
+  },
+  {
+   "count": 9,
+   "value": 2375
+  },
+  {
+   "count": 9,
+   "value": 3541
+  },
+  {
+   "count": 9,
+   "value": 4063
+  },
+  {
+   "count": 9,
+   "value": 4506
+  },
+  {
+   "count": 9,
+   "value": 5005
+  },
+  {
+   "count": 9,
+   "value": 5800
+  },
+  {
+   "count": 9,
+   "value": 5985
+  },
+  {
+   "count": 9,
+   "value": 6001
+  }
+ ],
+ "orgs": [
+  {
+   "count": 21433,
+   "value": "NCC"
+  },
+  {
+   "count": 13807,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 11817,
+   "value": "Telefonica O2 Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 7651,
+   "value": "Telefonica Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 7460,
+   "value": "Telefonica Germany GmbH & Co.OHG"
+  },
+  {
+   "count": 4049,
+   "value": "IP pools"
+  },
+  {
+   "count": 1640,
+   "value": "IP Pools"
+  },
+  {
+   "count": 1639,
+   "value": "Customers"
+  },
+  {
+   "count": 1305,
+   "value": "BT-Central-Plus"
+  },
+  {
+   "count": 824,
+   "value": "Single Static IP Addresses"
+  },
+  {
+   "count": 809,
+   "value": "Central + migration to 21CN"
+  },
+  {
+   "count": 564,
+   "value": "Single Static IP addresses"
+  },
+  {
+   "count": 490,
+   "value": "Virgin Media Limited"
+  },
+  {
+   "count": 445,
+   "value": "BT Group Broadband"
+  },
+  {
+   "count": 417,
+   "value": "BT Infrastructure Layer"
+  },
+  {
+   "count": 248,
+   "value": "Hyperoptic Ltd"
+  },
+  {
+   "count": 188,
+   "value": "British Telecommunications Limited"
+  },
+  {
+   "count": 154,
+   "value": "Orange PCS GPRS Services"
+  },
+  {
+   "count": 144,
+   "value": "LF Holdco 2 Limited"
+  },
+  {
+   "count": 136,
+   "value": "Orange GPRS Service"
+  },
+  {
+   "count": 128,
+   "value": "BT-CENTRAL-PLUS"
+  },
+  {
+   "count": 112,
+   "value": "EE Limited"
+  },
+  {
+   "count": 98,
+   "value": "Gomshall Globals"
+  },
+  {
+   "count": 88,
+   "value": "Customer Dynamic IPs"
+  },
+  {
+   "count": 56,
+   "value": "KPN B.V."
+  },
+  {
+   "count": 53,
+   "value": "INFONET Services Corporation"
+  },
+  {
+   "count": 52,
+   "value": "Customer"
+  },
+  {
+   "count": 51,
+   "value": "Vodafone Limited"
+  },
+  {
+   "count": 45,
+   "value": "BT-ADSL-LNS"
+  },
+  {
+   "count": 43,
+   "value": "DONCASTER"
+  },
+  {
+   "count": 38,
+   "value": "MIDDLESBROUGH"
+  },
+  {
+   "count": 36,
+   "value": "Addresses IP for Home clients"
+  },
+  {
+   "count": 31,
+   "value": "Telstra Limited"
+  },
+  {
+   "count": 30,
+   "value": "Ya.com Internet Factory"
+  },
+  {
+   "count": 20,
+   "value": "Cogeco Connexion Inc."
+  },
+  {
+   "count": 19,
+   "value": "Uninet S.A. de C.V."
+  },
+  {
+   "count": 18,
+   "value": "ORange ADSL User"
+  },
+  {
+   "count": 18,
+   "value": "Orange S.A."
+  },
+  {
+   "count": 17,
+   "value": "Gigaclear Customers"
+  },
+  {
+   "count": 17,
+   "value": "XTRA TELECOM S.A."
+  },
+  {
+   "count": 12,
+   "value": "Orange Espagne SA"
+  },
+  {
+   "count": 11,
+   "value": "Orange Spain Network"
+  },
+  {
+   "count": 11,
+   "value": "Zen Internet Ltd"
+  },
+  {
+   "count": 10,
+   "value": "OXIO"
+  },
+  {
+   "count": 9,
+   "value": "Persona Communications Inc."
+  },
+  {
+   "count": 8,
+   "value": "Gestión de direccionamiento UniNet"
+  },
+  {
+   "count": 7,
+   "value": "Emirates Telecommunications Corporation"
+  },
+  {
+   "count": 6,
+   "value": "Access Communications  Co-operative Limited"
+  },
+  {
+   "count": 6,
+   "value": "EastLink"
+  },
+  {
+   "count": 5,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 5,
+   "value": "ORange FTTH User"
+  },
+  {
+   "count": 5,
+   "value": "Orange FTTH User"
+  },
+  {
+   "count": 5,
+   "value": "TELFORD"
+  },
+  {
+   "count": 5,
+   "value": "TalkTalk Communications Limited"
+  },
+  {
+   "count": 5,
+   "value": "Uni2 IP Data Network"
+  },
+  {
+   "count": 4,
+   "value": "Addresses IP for ADSL customers"
+  },
+  {
+   "count": 4,
+   "value": "BT-ADSL"
+  },
+  {
+   "count": 4,
+   "value": "Cogeco Connexion inc"
+  },
+  {
+   "count": 3,
+   "value": "1&1 Versatel GmbH"
+  },
+  {
+   "count": 3,
+   "value": "HeLi NET Telekommunikation GmbH & Co."
+  },
+  {
+   "count": 3,
+   "value": "Jazztel triple play services"
+  },
+  {
+   "count": 3,
+   "value": "WWW Ibercom Net"
+  },
+  {
+   "count": 3,
+   "value": "ecotel communication ag"
+  },
+  {
+   "count": 3,
+   "value": "its-tg ITS Technology Group Limited"
+  },
+  {
+   "count": 2,
+   "value": "Altima Telecom"
+  },
+  {
+   "count": 2,
+   "value": "Bluewater TV Cable, Limited"
+  },
+  {
+   "count": 2,
+   "value": "City West Cable & Telephone Corp."
+  },
+  {
+   "count": 2,
+   "value": "Dial-up and ADSL pool"
+  },
+  {
+   "count": 2,
+   "value": "Direcciones IP clientes ABI"
+  },
+  {
+   "count": 2,
+   "value": "Fiber Services B.V."
+  },
+  {
+   "count": 2,
+   "value": "Gamma Telecom Limited"
+  },
+  {
+   "count": 2,
+   "value": "Gigaclear Limited"
+  },
+  {
+   "count": 2,
+   "value": "Jazztel Triple Play Services"
+  },
+  {
+   "count": 2,
+   "value": "Sky UK Limited"
+  },
+  {
+   "count": 2,
+   "value": "This space is statically assigned"
+  },
+  {
+   "count": 2,
+   "value": "WWW Ibercom SL"
+  },
+  {
+   "count": 2,
+   "value": "XFERA Moviles S.A."
+  },
+  {
+   "count": 2,
+   "value": "freenet DLS GmbH"
+  },
+  {
+   "count": 1,
+   "value": "1&1 Telecom GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Addresses IP for Mobile clients GGSN MAdrid/Meneses"
+  },
+  {
+   "count": 1,
+   "value": "Addresses IP for corporate ABI clients"
+  },
+  {
+   "count": 1,
+   "value": "Bell Canada"
+  },
+  {
+   "count": 1,
+   "value": "Bell DSL Internet Quebec"
+  },
+  {
+   "count": 1,
+   "value": "COGECO COMMUNICATIONS INC."
+  },
+  {
+   "count": 1,
+   "value": "Chunghwa Telecom Data Communication Business Group"
+  },
+  {
+   "count": 1,
+   "value": "Delta Cable Communications Ltd."
+  },
+  {
+   "count": 1,
+   "value": "EMIRATES TELECOMMUNICATIONS GROUP COMPANY (ETISALAT GROUP) PJSC"
+  },
+  {
+   "count": 1,
+   "value": "Fiber Groep B.V. IPoE Pool"
+  },
+  {
+   "count": 1,
+   "value": "Global Telecommunication Service Provider"
+  },
+  {
+   "count": 1,
+   "value": "Informational-measuring systems Ltd."
+  },
+  {
+   "count": 1,
+   "value": "Markdale Cable T.V."
+  },
+  {
+   "count": 1,
+   "value": "Netts.ru FTTB pool"
+  },
+  {
+   "count": 1,
+   "value": "OrangeCorporate ABI User"
+  },
+  {
+   "count": 1,
+   "value": "PJSC \"Vimpelcom\""
+  },
+  {
+   "count": 1,
+   "value": "PLINQ BV"
+  },
+  {
+   "count": 1,
+   "value": "People's Tel Limited Partnership"
+  },
+  {
+   "count": 1,
+   "value": "Rogers Communications Canada Inc."
+  },
+  {
+   "count": 1,
+   "value": "Uni2 IP Data Network IP fijas"
+  },
+  {
+   "count": 1,
+   "value": "Usuarios UMTS y GPRS Ulises"
+  },
+  {
+   "count": 1,
+   "value": "Vee TIME Corp."
+  }
+ ],
+ "id": "dslforum-apache-401",
+ "parent": "dt-speedport-sdk",
+ "group": "http-response-profiles",
+ "label": {
+  "en": "DSLForum · Apache banner · HTTP 401 · all ports",
+  "ru": "DSLForum · баннер Apache · HTTP 401 · все порты",
+  "es": "DSLForum · banner Apache · HTTP 401 · todos los puertos",
+  "zh": "DSLForum · Apache 横幅 · HTTP 401 · 所有端口"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "apache-response-profiles"
+ },
+ "denominator": null
+}

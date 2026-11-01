@@ -1,0 +1,131 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:DE",
+ "total": 48254,
+ "taken": "2026-11-01T10:16:43+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 48254,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 8,
+   "covered": 48254,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 48254,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 6,
+   "covered": 48254,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 48254,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 47710,
+   "value": "as3320"
+  },
+  {
+   "count": 523,
+   "value": "as50670"
+  },
+  {
+   "count": 11,
+   "value": "as396982"
+  },
+  {
+   "count": 8,
+   "value": "as206355"
+  },
+  {
+   "count": 2,
+   "value": "as44034"
+  }
+ ],
+ "ports": [
+  {
+   "count": 48244,
+   "value": 7547
+  },
+  {
+   "count": 3,
+   "value": 80
+  },
+  {
+   "count": 2,
+   "value": 1024
+  },
+  {
+   "count": 2,
+   "value": 1025
+  },
+  {
+   "count": 2,
+   "value": 30005
+  },
+  {
+   "count": 1,
+   "value": 7548
+  }
+ ],
+ "orgs": [
+  {
+   "count": 47709,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 359,
+   "value": "VTEL HOLDINGS LIMITED/JORDAN CO."
+  },
+  {
+   "count": 115,
+   "value": "Company 64d34520KumHKEDa"
+  },
+  {
+   "count": 49,
+   "value": "Private Customer"
+  },
+  {
+   "count": 11,
+   "value": "Google LLC"
+  },
+  {
+   "count": 8,
+   "value": "UAB Simurgh"
+  },
+  {
+   "count": 2,
+   "value": "3 Customer dynamic address pool"
+  },
+  {
+   "count": 1,
+   "value": "Telekom Deutschland GmbH"
+  }
+ ],
+ "id": "huawei-digest-de",
+ "parent": "huaweihomegateway",
+ "group": "huawei-auth",
+ "label": {
+  "ru": "Ответы Digest · DE",
+  "en": "Digest responses · DE",
+  "es": "Respuestas Digest · DE",
+  "zh": "Digest 响应 · DE"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

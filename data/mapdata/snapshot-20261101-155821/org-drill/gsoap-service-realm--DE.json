@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 opaque \"gSOAP Service\" country:DE",
+ "total": 15,
+ "taken": "2026-11-01T10:10:19+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 15,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 15,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 14,
+   "value": "as44034"
+  },
+  {
+   "count": 1,
+   "value": "as58141"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 14,
+   "value": "3 Customer dynamic address pool"
+  },
+  {
+   "count": 1,
+   "value": "IPONE IP-ONE B.V."
+  }
+ ],
+ "line": "gSOAP Service realm",
+ "line_id": "gsoap-service-realm",
+ "cc": "DE"
+}

@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:GR",
+ "total": 13,
+ "taken": "2026-11-01T10:01:04+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 13,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 13,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 13,
+   "value": "as6799"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 12,
+   "value": "Multiprotocol Service Provider to other ISP's and End Users"
+  },
+  {
+   "count": 1,
+   "value": "OTE-DIA-CUSTOMERS"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "GR"
+}

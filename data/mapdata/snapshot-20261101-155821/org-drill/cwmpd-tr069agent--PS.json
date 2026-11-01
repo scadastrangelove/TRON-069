@@ -1,0 +1,57 @@
+{
+ "dork": "\"cwmpd\" opaque country:PS",
+ "total": 1791,
+ "taken": "2026-11-01T10:08:08+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 1791,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 1791,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1496,
+   "value": "as12754"
+  },
+  {
+   "count": 295,
+   "value": "as47253"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1496,
+   "value": "Coolnet New Communication Provider"
+  },
+  {
+   "count": 248,
+   "value": "BNET-NETWORK"
+  },
+  {
+   "count": 24,
+   "value": "BCI Telecommunication & Advanced Technology Company"
+  },
+  {
+   "count": 14,
+   "value": "BSA-ADSL Customer - ASR2"
+  },
+  {
+   "count": 9,
+   "value": "ADSL-Static"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "PS"
+}

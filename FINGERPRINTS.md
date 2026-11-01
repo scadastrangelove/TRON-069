@@ -92,6 +92,29 @@ resolve the supplier. The previous shared-SDK inference from the constant
 alone remains withdrawn. The [cross-index note](CROSS-INDEX.md#follow-ups)
 records the research counts separately from current Shodan measurements.
 
+<a id="apache-response-profiles"></a>
+## Apache-branded response profiles
+
+The `dslforum-apache-401` collection variant combines the DSLForum realm text,
+`Server: Apache` text and HTTP status 401 across all ports. Country, organization,
+ASN and port facets describe this subset of the existing DSLForum line. Search
+terms can also match composite banners; this is a response-query cohort, not
+proof of Apache httpd, a hardware supplier or a separate device population.
+
+The 1 November 2026 review of the saved classifier corpus found two DSLForum
+responses without `Date` and one with it. All three inspected openagent/DigAuth
+responses carried `Date`. These small regression samples establish template
+variation, not fleet-wide percentages. The Works Systems attribution is grounded
+in [source and response-template evidence](DEANON-TR069CLIENT.md), independently
+of the Date header.
+
+Header-profile analysis must parse complete saved header blocks, retain header
+order and distinguish an absent field from an incomplete capture. Body content
+may be stored separately from Shodan's banner text. Neither a missing Date text
+search term nor a missing captured body establishes the corresponding wire
+behavior. The all-port Count query is collected daily; header-presence profiles
+remain a separate sample-analysis task.
+
 <a id="gateway-port-scopes"></a>
 ## Gateway realm on alternate ports
 

@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:BT",
+ "total": 4,
+ "taken": "2026-11-01T09:41:15+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 4,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as141680"
+  },
+  {
+   "count": 1,
+   "value": "as132894"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "SuperNet Infocomm"
+  },
+  {
+   "count": 1,
+   "value": "Sigma Internet Service"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "BT"
+}

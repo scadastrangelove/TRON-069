@@ -1,0 +1,891 @@
+{
+ "dork": "\"avsystem-libcwmp\"",
+ "total": 6504,
+ "taken": "2026-11-01T10:16:44+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 29,
+   "covered": 6504,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 99,
+   "covered": 6504,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 67,
+   "covered": 6504,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 15,
+   "covered": 6504,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 4506,
+   "value": "CH"
+  },
+  {
+   "count": 949,
+   "value": "DK"
+  },
+  {
+   "count": 702,
+   "value": "SE"
+  },
+  {
+   "count": 135,
+   "value": "PT"
+  },
+  {
+   "count": 73,
+   "value": "IL"
+  },
+  {
+   "count": 58,
+   "value": "QA"
+  },
+  {
+   "count": 17,
+   "value": "DE"
+  },
+  {
+   "count": 14,
+   "value": "US"
+  },
+  {
+   "count": 12,
+   "value": "GB"
+  },
+  {
+   "count": 5,
+   "value": "NL"
+  },
+  {
+   "count": 4,
+   "value": "ZA"
+  },
+  {
+   "count": 3,
+   "value": "IT"
+  },
+  {
+   "count": 3,
+   "value": "NO"
+  },
+  {
+   "count": 2,
+   "value": "AU"
+  },
+  {
+   "count": 2,
+   "value": "BA"
+  },
+  {
+   "count": 2,
+   "value": "CN"
+  },
+  {
+   "count": 2,
+   "value": "ES"
+  },
+  {
+   "count": 2,
+   "value": "HR"
+  },
+  {
+   "count": 2,
+   "value": "LT"
+  },
+  {
+   "count": 2,
+   "value": "RS"
+  },
+  {
+   "count": 1,
+   "value": "AF"
+  },
+  {
+   "count": 1,
+   "value": "AT"
+  },
+  {
+   "count": 1,
+   "value": "BD"
+  },
+  {
+   "count": 1,
+   "value": "CZ"
+  },
+  {
+   "count": 1,
+   "value": "FR"
+  },
+  {
+   "count": 1,
+   "value": "HU"
+  },
+  {
+   "count": 1,
+   "value": "PL"
+  },
+  {
+   "count": 1,
+   "value": "SI"
+  },
+  {
+   "count": 1,
+   "value": "TR"
+  }
+ ],
+ "asn": [
+  {
+   "count": 4503,
+   "value": "as3303"
+  },
+  {
+   "count": 1622,
+   "value": "as44034"
+  },
+  {
+   "count": 124,
+   "value": "as2860"
+  },
+  {
+   "count": 73,
+   "value": "as12400"
+  },
+  {
+   "count": 57,
+   "value": "as8781"
+  },
+  {
+   "count": 12,
+   "value": "as8473"
+  },
+  {
+   "count": 11,
+   "value": "as58273"
+  },
+  {
+   "count": 10,
+   "value": "as198726"
+  },
+  {
+   "count": 10,
+   "value": "as3301"
+  },
+  {
+   "count": 8,
+   "value": "as15457"
+  },
+  {
+   "count": 5,
+   "value": "as1257"
+  },
+  {
+   "count": 3,
+   "value": "as7922"
+  },
+  {
+   "count": 2,
+   "value": "as11426"
+  },
+  {
+   "count": 2,
+   "value": "as11492"
+  },
+  {
+   "count": 2,
+   "value": "as1897"
+  },
+  {
+   "count": 2,
+   "value": "as204020"
+  },
+  {
+   "count": 2,
+   "value": "as29518"
+  },
+  {
+   "count": 2,
+   "value": "as42560"
+  },
+  {
+   "count": 2,
+   "value": "as4812"
+  },
+  {
+   "count": 2,
+   "value": "as6079"
+  },
+  {
+   "count": 2,
+   "value": "as7545"
+  },
+  {
+   "count": 2,
+   "value": "as8400"
+  },
+  {
+   "count": 2,
+   "value": "as8434"
+  },
+  {
+   "count": 1,
+   "value": "as10796"
+  },
+  {
+   "count": 1,
+   "value": "as1136"
+  },
+  {
+   "count": 1,
+   "value": "as11845"
+  },
+  {
+   "count": 1,
+   "value": "as12322"
+  },
+  {
+   "count": 1,
+   "value": "as12338"
+  },
+  {
+   "count": 1,
+   "value": "as12479"
+  },
+  {
+   "count": 1,
+   "value": "as133157"
+  },
+  {
+   "count": 1,
+   "value": "as15435"
+  },
+  {
+   "count": 1,
+   "value": "as15600"
+  },
+  {
+   "count": 1,
+   "value": "as16135"
+  },
+  {
+   "count": 1,
+   "value": "as16342"
+  },
+  {
+   "count": 1,
+   "value": "as198282"
+  },
+  {
+   "count": 1,
+   "value": "as20011"
+  },
+  {
+   "count": 1,
+   "value": "as20115"
+  },
+  {
+   "count": 1,
+   "value": "as201838"
+  },
+  {
+   "count": 1,
+   "value": "as204672"
+  },
+  {
+   "count": 1,
+   "value": "as206557"
+  },
+  {
+   "count": 1,
+   "value": "as211559"
+  },
+  {
+   "count": 1,
+   "value": "as2116"
+  },
+  {
+   "count": 1,
+   "value": "as21334"
+  },
+  {
+   "count": 1,
+   "value": "as21508"
+  },
+  {
+   "count": 1,
+   "value": "as23473"
+  },
+  {
+   "count": 1,
+   "value": "as29286"
+  },
+  {
+   "count": 1,
+   "value": "as31726"
+  },
+  {
+   "count": 1,
+   "value": "as3212"
+  },
+  {
+   "count": 1,
+   "value": "as3269"
+  },
+  {
+   "count": 1,
+   "value": "as3292"
+  },
+  {
+   "count": 1,
+   "value": "as3320"
+  },
+  {
+   "count": 1,
+   "value": "as33796"
+  },
+  {
+   "count": 1,
+   "value": "as33915"
+  },
+  {
+   "count": 1,
+   "value": "as34244"
+  },
+  {
+   "count": 1,
+   "value": "as35244"
+  },
+  {
+   "count": 1,
+   "value": "as35518"
+  },
+  {
+   "count": 1,
+   "value": "as37457"
+  },
+  {
+   "count": 1,
+   "value": "as37611"
+  },
+  {
+   "count": 1,
+   "value": "as39647"
+  },
+  {
+   "count": 1,
+   "value": "as42541"
+  },
+  {
+   "count": 1,
+   "value": "as42580"
+  },
+  {
+   "count": 1,
+   "value": "as42707"
+  },
+  {
+   "count": 1,
+   "value": "as44092"
+  },
+  {
+   "count": 1,
+   "value": "as45178"
+  },
+  {
+   "count": 1,
+   "value": "as51184"
+  },
+  {
+   "count": 1,
+   "value": "as7016"
+  },
+  {
+   "count": 1,
+   "value": "as8764"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3412,
+   "value": 1024
+  },
+  {
+   "count": 1648,
+   "value": 8081
+  },
+  {
+   "count": 865,
+   "value": 1025
+  },
+  {
+   "count": 254,
+   "value": 7547
+  },
+  {
+   "count": 135,
+   "value": 1026
+  },
+  {
+   "count": 73,
+   "value": 4567
+  },
+  {
+   "count": 48,
+   "value": 1027
+  },
+  {
+   "count": 29,
+   "value": 8082
+  },
+  {
+   "count": 20,
+   "value": 1028
+  },
+  {
+   "count": 15,
+   "value": 1029
+  },
+  {
+   "count": 1,
+   "value": 3390
+  },
+  {
+   "count": 1,
+   "value": 4443
+  },
+  {
+   "count": 1,
+   "value": 5002
+  },
+  {
+   "count": 1,
+   "value": 9000
+  },
+  {
+   "count": 1,
+   "value": 9092
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2269,
+   "value": "Bluewin is an LIR and ISP in Switzerland."
+  },
+  {
+   "count": 1618,
+   "value": "3 Customer dynamic address pool"
+  },
+  {
+   "count": 1022,
+   "value": "Swisscom (Schweiz) AG is an LIR and ISP in Switzerland."
+  },
+  {
+   "count": 499,
+   "value": "Swisscom (Schweiz) AG is an internet service provider in CH."
+  },
+  {
+   "count": 365,
+   "value": "Swisscom (Schweiz) AG"
+  },
+  {
+   "count": 348,
+   "value": "Swisscom AG is a full service provider in CH"
+  },
+  {
+   "count": 126,
+   "value": "NOS COMUNICACOES, S.A."
+  },
+  {
+   "count": 70,
+   "value": "Partner Communications Ltd."
+  },
+  {
+   "count": 11,
+   "value": "Wemaconnect GmbH"
+  },
+  {
+   "count": 9,
+   "value": "Ooredoo Q.S.C."
+  },
+  {
+   "count": 8,
+   "value": "Telia Network Services"
+  },
+  {
+   "count": 8,
+   "value": "nos madeira comunicacoes s.a"
+  },
+  {
+   "count": 7,
+   "value": "MOBILE-BROADBAND-POOL"
+  },
+  {
+   "count": 6,
+   "value": "QTEL-ADSL-POOL"
+  },
+  {
+   "count": 5,
+   "value": "Bahnhof AB"
+  },
+  {
+   "count": 5,
+   "value": "Broadband for the Rural North Limited."
+  },
+  {
+   "count": 5,
+   "value": "Comcast Cable Communications, LLC"
+  },
+  {
+   "count": 5,
+   "value": "KTC-BRAS-POOL-6"
+  },
+  {
+   "count": 4,
+   "value": "ADSLPOOL"
+  },
+  {
+   "count": 4,
+   "value": "APC-BRAS-POOL-6"
+  },
+  {
+   "count": 4,
+   "value": "Dynamic corporate network"
+  },
+  {
+   "count": 4,
+   "value": "WAC-BRAS-POOL-6"
+  },
+  {
+   "count": 3,
+   "value": "Albury Globals"
+  },
+  {
+   "count": 3,
+   "value": "Cellucar subscribers for GGSN"
+  },
+  {
+   "count": 3,
+   "value": "Charter Communications Inc"
+  },
+  {
+   "count": 3,
+   "value": "Chilworth Globals"
+  },
+  {
+   "count": 3,
+   "value": "Dynamic private network"
+  },
+  {
+   "count": 3,
+   "value": "HUAWEI-BRAS-ADSLPOOL"
+  },
+  {
+   "count": 3,
+   "value": "WBC-BRAS-POOL"
+  },
+  {
+   "count": 3,
+   "value": "WBC-BRAS-POOL-6"
+  },
+  {
+   "count": 2,
+   "value": "3 Customer static address pool"
+  },
+  {
+   "count": 2,
+   "value": "3 Customer static addresses"
+  },
+  {
+   "count": 2,
+   "value": "BUSINESS-DSL-POOL-10"
+  },
+  {
+   "count": 2,
+   "value": "Bredband2 Customer"
+  },
+  {
+   "count": 2,
+   "value": "Fenice Telekom Grupa d.o.o."
+  },
+  {
+   "count": 2,
+   "value": "In case of improper use, please mail <abuse@tele2.com>"
+  },
+  {
+   "count": 2,
+   "value": "Mobile Services"
+  },
+  {
+   "count": 2,
+   "value": "TELEKOM SRBIJA a.d."
+  },
+  {
+   "count": 2,
+   "value": "Telia Company AB"
+  },
+  {
+   "count": 1,
+   "value": "2Connect Telecommunications Infrastructure & Network Services Ltd."
+  },
+  {
+   "count": 1,
+   "value": "AFRIHOST SP (PTY) LTD"
+  },
+  {
+   "count": 1,
+   "value": "BOLIGNET-AARHUS F.M.B.A."
+  },
+  {
+   "count": 1,
+   "value": "BUSINESS-DSL-POOL-11"
+  },
+  {
+   "count": 1,
+   "value": "BUSINESS-DSL-POOL-12"
+  },
+  {
+   "count": 1,
+   "value": "Barsan Global Logistics B.V."
+  },
+  {
+   "count": 1,
+   "value": "Broadband Network Services"
+  },
+  {
+   "count": 1,
+   "value": "CABLE MODEM CUSTOMERS (CPE)"
+  },
+  {
+   "count": 1,
+   "value": "CABLE ONE"
+  },
+  {
+   "count": 1,
+   "value": "CABLE ONE, INC."
+  },
+  {
+   "count": 1,
+   "value": "CHINANET SHANGHAI PROVINCE NETWORK"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET shanghai province network"
+  },
+  {
+   "count": 1,
+   "value": "Cable-NET"
+  },
+  {
+   "count": 1,
+   "value": "Charter Communications LLC"
+  },
+  {
+   "count": 1,
+   "value": "Community Fibre Limited"
+  },
+  {
+   "count": 1,
+   "value": "DELTA Fiber Nederland B.V."
+  },
+  {
+   "count": 1,
+   "value": "DHCP Customers"
+  },
+  {
+   "count": 1,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 1,
+   "value": "Dimension Data"
+  },
+  {
+   "count": 1,
+   "value": "Eltele"
+  },
+  {
+   "count": 1,
+   "value": "FTTH-POOL-12"
+  },
+  {
+   "count": 1,
+   "value": "FTTH-POOL-13"
+  },
+  {
+   "count": 1,
+   "value": "FTTH-POOL-14"
+  },
+  {
+   "count": 1,
+   "value": "FTTH-POOL-7"
+  },
+  {
+   "count": 1,
+   "value": "Fiberby ApS"
+  },
+  {
+   "count": 1,
+   "value": "Firefly Solution"
+  },
+  {
+   "count": 1,
+   "value": "Fonira Telekom GmbH"
+  },
+  {
+   "count": 1,
+   "value": "For all abuse issues, please contact abuse@rcn.com"
+  },
+  {
+   "count": 1,
+   "value": "Free SAS"
+  },
+  {
+   "count": 1,
+   "value": "GGSNET"
+  },
+  {
+   "count": 1,
+   "value": "Global Telecommunication Service Provider"
+  },
+  {
+   "count": 1,
+   "value": "GlobalConnect-AS2116 GLOBALCONNECT"
+  },
+  {
+   "count": 1,
+   "value": "HAL Service SpA"
+  },
+  {
+   "count": 1,
+   "value": "KPN B.V."
+  },
+  {
+   "count": 1,
+   "value": "Ownit Broadband"
+  },
+  {
+   "count": 1,
+   "value": "PAVLOV MEDIA INC"
+  },
+  {
+   "count": 1,
+   "value": "RCN"
+  },
+  {
+   "count": 1,
+   "value": "Swisscom is an LIR and ISP in Switzerland."
+  },
+  {
+   "count": 1,
+   "value": "TDC Holding A/S"
+  },
+  {
+   "count": 1,
+   "value": "TELEMACH SYSTEM"
+  },
+  {
+   "count": 1,
+   "value": "TPG Internet Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "TURKCELL INTERNET"
+  },
+  {
+   "count": 1,
+   "value": "Tele2 Lithuania"
+  },
+  {
+   "count": 1,
+   "value": "Telecom Italia S.p.A."
+  },
+  {
+   "count": 1,
+   "value": "Telefiber AS"
+  },
+  {
+   "count": 1,
+   "value": "Telenor Sverige AB"
+  },
+  {
+   "count": 1,
+   "value": "Teleservice Bredband Skane AB"
+  },
+  {
+   "count": 1,
+   "value": "Telia Lietuva, AB"
+  },
+  {
+   "count": 1,
+   "value": "Telkom SA Ltd. - Telkom SA Ltd."
+  },
+  {
+   "count": 1,
+   "value": "Toya sp. z o.o."
+  },
+  {
+   "count": 1,
+   "value": "Uni2 IP Data Network"
+  },
+  {
+   "count": 1,
+   "value": "Vox Telecom Ltd - Vox Telecom Ltd"
+  },
+  {
+   "count": 1,
+   "value": "WAC-BRAS-POOL"
+  },
+  {
+   "count": 1,
+   "value": "Xenosite ISP Subnets for XSDSL customers"
+  },
+  {
+   "count": 1,
+   "value": "e-Quest IT-diensten B.V."
+  },
+  {
+   "count": 1,
+   "value": "iiNet Limited"
+  },
+  {
+   "count": 1,
+   "value": "nos açores comunicacoes s.a."
+  },
+  {
+   "count": 1,
+   "value": "roshantdca"
+  },
+  {
+   "count": 1,
+   "value": "sasag Kabelkommunikation AG"
+  },
+  {
+   "count": 1,
+   "value": "vodafoneqa-ISP Vodafone Qatar P.Q.S.C"
+  }
+ ],
+ "id": "avsystem-total",
+ "parent": "avsystem-libcwmp",
+ "group": "avsystem-versions",
+ "label": {
+  "ru": "Все версии AVSystem",
+  "en": "All AVSystem versions",
+  "es": "Todas las versiones AVSystem",
+  "zh": "AVSystem 全部版本"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,696 @@
+{
+ "dork": "\"RomPager\" port:7548",
+ "total": 6673,
+ "taken": "2026-11-01T10:18:32+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 27,
+   "covered": 6673,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 6588,
+   "remainder": 85
+  },
+  "asn": {
+   "values_returned": 33,
+   "covered": 6673,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 6673,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 6543,
+   "value": "IR"
+  },
+  {
+   "count": 34,
+   "value": "CN"
+  },
+  {
+   "count": 22,
+   "value": "EG"
+  },
+  {
+   "count": 11,
+   "value": "US"
+  },
+  {
+   "count": 8,
+   "value": "IN"
+  },
+  {
+   "count": 7,
+   "value": "AM"
+  },
+  {
+   "count": 7,
+   "value": "GB"
+  },
+  {
+   "count": 6,
+   "value": "JP"
+  },
+  {
+   "count": 5,
+   "value": "SG"
+  },
+  {
+   "count": 5,
+   "value": "ZA"
+  },
+  {
+   "count": 4,
+   "value": "ES"
+  },
+  {
+   "count": 3,
+   "value": "AU"
+  },
+  {
+   "count": 3,
+   "value": "KR"
+  },
+  {
+   "count": 2,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "AE"
+  },
+  {
+   "count": 1,
+   "value": "HK"
+  },
+  {
+   "count": 1,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "IE"
+  },
+  {
+   "count": 1,
+   "value": "IL"
+  },
+  {
+   "count": 1,
+   "value": "JM"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "NL"
+  },
+  {
+   "count": 1,
+   "value": "PH"
+  },
+  {
+   "count": 1,
+   "value": "SE"
+  },
+  {
+   "count": 1,
+   "value": "TH"
+  },
+  {
+   "count": 1,
+   "value": "TR"
+  },
+  {
+   "count": 1,
+   "value": "TW"
+  }
+ ],
+ "asn": [
+  {
+   "count": 6390,
+   "value": "as58224"
+  },
+  {
+   "count": 59,
+   "value": "as39308"
+  },
+  {
+   "count": 28,
+   "value": "as16509"
+  },
+  {
+   "count": 24,
+   "value": "as37963"
+  },
+  {
+   "count": 22,
+   "value": "as24863"
+  },
+  {
+   "count": 17,
+   "value": "as43754"
+  },
+  {
+   "count": 16,
+   "value": "as135377"
+  },
+  {
+   "count": 16,
+   "value": "as1756"
+  },
+  {
+   "count": 14,
+   "value": "as47262"
+  },
+  {
+   "count": 11,
+   "value": "as16322"
+  },
+  {
+   "count": 11,
+   "value": "as206065"
+  },
+  {
+   "count": 10,
+   "value": "as42337"
+  },
+  {
+   "count": 7,
+   "value": "as55990"
+  },
+  {
+   "count": 6,
+   "value": "as136907"
+  },
+  {
+   "count": 6,
+   "value": "as63949"
+  },
+  {
+   "count": 4,
+   "value": "as62196"
+  },
+  {
+   "count": 3,
+   "value": "as197343"
+  },
+  {
+   "count": 3,
+   "value": "as20473"
+  },
+  {
+   "count": 3,
+   "value": "as48431"
+  },
+  {
+   "count": 3,
+   "value": "as58519"
+  },
+  {
+   "count": 3,
+   "value": "as60627"
+  },
+  {
+   "count": 2,
+   "value": "as14618"
+  },
+  {
+   "count": 2,
+   "value": "as39466"
+  },
+  {
+   "count": 2,
+   "value": "as41856"
+  },
+  {
+   "count": 2,
+   "value": "as48944"
+  },
+  {
+   "count": 2,
+   "value": "as51074"
+  },
+  {
+   "count": 1,
+   "value": "as31549"
+  },
+  {
+   "count": 1,
+   "value": "as39074"
+  },
+  {
+   "count": 1,
+   "value": "as44285"
+  },
+  {
+   "count": 1,
+   "value": "as45102"
+  },
+  {
+   "count": 1,
+   "value": "as57169"
+  },
+  {
+   "count": 1,
+   "value": "as8151"
+  },
+  {
+   "count": 1,
+   "value": "as9009"
+  }
+ ],
+ "ports": [
+  {
+   "count": 6673,
+   "value": 7548
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3172,
+   "value": "Telecommunication Company of Tehran"
+  },
+  {
+   "count": 1032,
+   "value": "Iran Telecommunication Company PJS"
+  },
+  {
+   "count": 386,
+   "value": "ADSL for pool users"
+  },
+  {
+   "count": 288,
+   "value": "Iran Information Technology Company PJSC"
+  },
+  {
+   "count": 144,
+   "value": "Telecommunication Company of Khorasan Razavi for ADSL users"
+  },
+  {
+   "count": 114,
+   "value": "Telecommunication Company of Khorasan Razavi"
+  },
+  {
+   "count": 111,
+   "value": "mokhaberat khorasan razavi"
+  },
+  {
+   "count": 108,
+   "value": "Telecommunication Company of Gilan"
+  },
+  {
+   "count": 99,
+   "value": "Telecommunication Company of Khouzestan"
+  },
+  {
+   "count": 80,
+   "value": "khouzestan Telecommunication co"
+  },
+  {
+   "count": 67,
+   "value": "Telecommunication Company of Kordestan"
+  },
+  {
+   "count": 60,
+   "value": "Telecommunication Company of Yazd"
+  },
+  {
+   "count": 58,
+   "value": "Telecommunication Company of Khorasan"
+  },
+  {
+   "count": 45,
+   "value": "Telecommunication Company of Boushehr"
+  },
+  {
+   "count": 44,
+   "value": "Telecommunication Company of Mazandaran"
+  },
+  {
+   "count": 36,
+   "value": "telecommunication of sistan& balouchestan(for ADSL)"
+  },
+  {
+   "count": 34,
+   "value": "Telecommunication Company of Alborz"
+  },
+  {
+   "count": 31,
+   "value": "IP FOR ADSL USERS"
+  },
+  {
+   "count": 29,
+   "value": "Telecommunication Company of Hamedan"
+  },
+  {
+   "count": 25,
+   "value": "Guilan Telecommunication Company temporary"
+  },
+  {
+   "count": 24,
+   "value": "Area no 6-1 partition"
+  },
+  {
+   "count": 23,
+   "value": "Telecommunication Company of Kermanshah"
+  },
+  {
+   "count": 23,
+   "value": "Telecommunication Company of Khorasan Jonoubi"
+  },
+  {
+   "count": 23,
+   "value": "Telecommunication Company of Khorasan Shomali"
+  },
+  {
+   "count": 22,
+   "value": "telecommunication of south khorasan"
+  },
+  {
+   "count": 19,
+   "value": "Andishe Sabz Khazar IP Block"
+  },
+  {
+   "count": 18,
+   "value": "Link Egypt (Link.NET)"
+  },
+  {
+   "count": 17,
+   "value": "ADSL Kurdestan movaghat"
+  },
+  {
+   "count": 17,
+   "value": "Asiatech Data Transmission Co."
+  },
+  {
+   "count": 16,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 16,
+   "value": "BUSHEHR temporary TELECOM CO for ADSL users"
+  },
+  {
+   "count": 16,
+   "value": "Shiraz Hamyar Co."
+  },
+  {
+   "count": 15,
+   "value": "Esfahan Telecom ADSL"
+  },
+  {
+   "count": 14,
+   "value": "Telecommunication Company of Azarbayejan Gharbi"
+  },
+  {
+   "count": 14,
+   "value": "mashhad dsl"
+  },
+  {
+   "count": 13,
+   "value": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED"
+  },
+  {
+   "count": 12,
+   "value": "Andishe Sabz Khazar ADSL Zones"
+  },
+  {
+   "count": 11,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 11,
+   "value": "Dadeh Gostar Asr Novin P.J.S. Co."
+  },
+  {
+   "count": 11,
+   "value": "Ertebatat Dorboord Fars (Lamerd 1899)"
+  },
+  {
+   "count": 11,
+   "value": "Telecommunication Company Of North Khorasan for ADSL users"
+  },
+  {
+   "count": 10,
+   "value": "Andishe Sabz Khazar ADSL Users"
+  },
+  {
+   "count": 10,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 10,
+   "value": "IMS Project"
+  },
+  {
+   "count": 10,
+   "value": "telecommunication Of west Azarbayjan ADSL"
+  },
+  {
+   "count": 9,
+   "value": "mokhaberat razavi"
+  },
+  {
+   "count": 8,
+   "value": "Aliyun Computing Co.LTD"
+  },
+  {
+   "count": 8,
+   "value": "BUSHEHR TELECOM CO for ADSL users"
+  },
+  {
+   "count": 8,
+   "value": "HamaraSystem Co."
+  },
+  {
+   "count": 7,
+   "value": "ADSL Kurdestan 7179"
+  },
+  {
+   "count": 7,
+   "value": "Farahoosh ( 2015 )"
+  },
+  {
+   "count": 7,
+   "value": "Internet Provider for ADSL users"
+  },
+  {
+   "count": 7,
+   "value": "Telecommunication Company of Azarbayejan Sharghi"
+  },
+  {
+   "count": 7,
+   "value": "adsl khorasan jonoubi"
+  },
+  {
+   "count": 6,
+   "value": "ADSL ip pool, KHORASAN Telecommunication CO."
+  },
+  {
+   "count": 6,
+   "value": "ANDISHE SABZ KHAZAR CO. P.J.S."
+  },
+  {
+   "count": 6,
+   "value": "Andishe Sabz Khazar"
+  },
+  {
+   "count": 6,
+   "value": "Dorbord Evaz (2039)"
+  },
+  {
+   "count": 6,
+   "value": "Hamara System Tabriz Engineering Company"
+  },
+  {
+   "count": 6,
+   "value": "Hamyar Net Co."
+  },
+  {
+   "count": 6,
+   "value": "Tose'h Fanavari Ertebabat Pasargad Arian Co. PJS"
+  },
+  {
+   "count": 6,
+   "value": "for ADSL users IN South Khorasan"
+  },
+  {
+   "count": 5,
+   "value": "Arax Lamerd (1961)"
+  },
+  {
+   "count": 5,
+   "value": "FANAPTELECOM Whole customers network address space assignment"
+  },
+  {
+   "count": 5,
+   "value": "Telecommunication Company Of Kordestan"
+  },
+  {
+   "count": 5,
+   "value": "Telecommunication Company of Mazandaran for ADSL users"
+  },
+  {
+   "count": 5,
+   "value": "Telecommunication Company of Qom"
+  },
+  {
+   "count": 4,
+   "value": "Azin Kiya Firoozabad (1967)"
+  },
+  {
+   "count": 4,
+   "value": "Dadeh Pardazan Avaye Bandar Company"
+  },
+  {
+   "count": 4,
+   "value": "Guilan Telecommunication Company"
+  },
+  {
+   "count": 4,
+   "value": "Link Egypt (Link.NET) - Link Egypt (Link.NET)"
+  },
+  {
+   "count": 4,
+   "value": "Linode"
+  },
+  {
+   "count": 4,
+   "value": "Rayan Ravesh Sena Ltd"
+  },
+  {
+   "count": 4,
+   "value": "Telecommunication Company of Kordestan 7179"
+  },
+  {
+   "count": 4,
+   "value": "mokhaberat ostan booshehr for ADSL users"
+  },
+  {
+   "count": 3,
+   "value": "ADSL Kordestan"
+  },
+  {
+   "count": 3,
+   "value": "Al Nafetha Computers & Requisites Trading LLC"
+  },
+  {
+   "count": 3,
+   "value": "Amazon.com, Inc."
+  },
+  {
+   "count": 3,
+   "value": "Guilan University"
+  },
+  {
+   "count": 3,
+   "value": "ICP COMPNY"
+  },
+  {
+   "count": 3,
+   "value": "Maxnet xDSL Network (Tabriz)"
+  },
+  {
+   "count": 3,
+   "value": "Qazvin Telecomonicatin co."
+  },
+  {
+   "count": 3,
+   "value": "Rayankadeh Apadana Company Ltd"
+  },
+  {
+   "count": 3,
+   "value": "Telecommunication Company of Kohkelouyeh va Boyerahmad"
+  },
+  {
+   "count": 3,
+   "value": "Telecommunication Company of Kohkilouyeh va Boyerahmad"
+  },
+  {
+   "count": 3,
+   "value": "Telecommunication Company of Semnan"
+  },
+  {
+   "count": 3,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 3,
+   "value": "Toloe Rayaneh Loghman"
+  },
+  {
+   "count": 3,
+   "value": "UCLOUD"
+  },
+  {
+   "count": 3,
+   "value": "adsl birjand jonoubi"
+  },
+  {
+   "count": 3,
+   "value": "telecommunication of kermanshah for ADSL users"
+  },
+  {
+   "count": 2,
+   "value": "A100 ROW Inc"
+  },
+  {
+   "count": 2,
+   "value": "Ahang Rayan Malayer Co. LTD"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Data Services Australia"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Data Services Canada"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Data Services Northern Virginia"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Data Services Osaka"
+  },
+  {
+   "count": 2,
+   "value": "AndishehSabzKhazar"
+  },
+  {
+   "count": 2,
+   "value": "BUSHEHR mokhaberat for ADSL users"
+  },
+  {
+   "count": 2,
+   "value": "Dorbord Fars ( khafr 1983 )"
+  }
+ ],
+ "id": "rompager-port-7548",
+ "parent": "rompager",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 7548",
+  "ru": "Все версии · порт 7548",
+  "es": "Todas las versiones · puerto 7548",
+  "zh": "所有版本 · 端口 7548"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "rompager"
+ },
+ "denominator": null
+}

@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.8\" country:SV",
+ "total": 256,
+ "taken": "2026-11-01T09:56:01+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 256,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 256,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 252,
+   "value": "as27773"
+  },
+  {
+   "count": 4,
+   "value": "as14754"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 242,
+   "value": "MILLICOM CABLE EL SALVADOR S.A. DE C.V."
+  },
+  {
+   "count": 9,
+   "value": "AMNET TEL y cia S en C de C.V."
+  },
+  {
+   "count": 4,
+   "value": "CTE S.A. de C.V."
+  },
+  {
+   "count": 1,
+   "value": "AMNET US LLC"
+  }
+ ],
+ "line": "gSOAP/2.8 vendor map",
+ "line_id": "gsoap-2-8-vendor-map",
+ "cc": "SV"
+}

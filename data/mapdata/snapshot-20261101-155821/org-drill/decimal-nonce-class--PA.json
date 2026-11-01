@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PA",
+ "total": 7515,
+ "taken": "2026-11-01T10:00:29+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 7515,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 7515,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 7515,
+   "value": "as11556"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4224,
+   "value": "Cable & Wireless Panama"
+  },
+  {
+   "count": 3291,
+   "value": "Claro Panamá S.A."
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PA"
+}

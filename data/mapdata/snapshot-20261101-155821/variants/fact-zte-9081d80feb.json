@@ -1,0 +1,215 @@
+{
+ "dork": "\"ZXHN H108N\"",
+ "total": 23,
+ "taken": "2026-11-01T10:17:06+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 9,
+   "covered": 23,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 12,
+   "covered": 23,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 10,
+   "covered": 23,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 10,
+   "covered": 23,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 11,
+   "value": "RU"
+  },
+  {
+   "count": 4,
+   "value": "EG"
+  },
+  {
+   "count": 2,
+   "value": "CN"
+  },
+  {
+   "count": 1,
+   "value": "DZ"
+  },
+  {
+   "count": 1,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "JP"
+  },
+  {
+   "count": 1,
+   "value": "UA"
+  },
+  {
+   "count": 1,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 11,
+   "value": "as12389"
+  },
+  {
+   "count": 4,
+   "value": "as8452"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as36947"
+  },
+  {
+   "count": 1,
+   "value": "as37963"
+  },
+  {
+   "count": 1,
+   "value": "as55990"
+  },
+  {
+   "count": 1,
+   "value": "as63949"
+  },
+  {
+   "count": 1,
+   "value": "as6849"
+  },
+  {
+   "count": 1,
+   "value": "as8048"
+  }
+ ],
+ "ports": [
+  {
+   "count": 11,
+   "value": 23
+  },
+  {
+   "count": 4,
+   "value": 1723
+  },
+  {
+   "count": 1,
+   "value": 80
+  },
+  {
+   "count": 1,
+   "value": 1433
+  },
+  {
+   "count": 1,
+   "value": 3541
+  },
+  {
+   "count": 1,
+   "value": 5172
+  },
+  {
+   "count": 1,
+   "value": 8889
+  },
+  {
+   "count": 1,
+   "value": 51235
+  },
+  {
+   "count": 1,
+   "value": 52869
+  },
+  {
+   "count": 1,
+   "value": 62023
+  }
+ ],
+ "orgs": [
+  {
+   "count": 10,
+   "value": "OJSC \"Sibirtelecom\""
+  },
+  {
+   "count": 3,
+   "value": "For Internet Abuse & Spam reports : admins@tedata.net"
+  },
+  {
+   "count": 1,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 1,
+   "value": "CANTV Servicios, Venezuela"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "E-mail for SPAM and abuse postmaster@ukrtelecom.ua"
+  },
+  {
+   "count": 1,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 1,
+   "value": "Linode"
+  },
+  {
+   "count": 1,
+   "value": "OJSC \"Rostelecom\""
+  },
+  {
+   "count": 1,
+   "value": "TE Data"
+  },
+  {
+   "count": 1,
+   "value": "Telecom Algeria - Telecom Algeria"
+  },
+  {
+   "count": 1,
+   "value": "The Constant Company, LLC"
+  }
+ ],
+ "id": "fact-zte-9081d80feb",
+ "parent": "zte",
+ "group": "facts",
+ "label": {
+  "ru": "telnet-баннеры ZXHN",
+  "en": "ZXHN Telnet banners",
+  "es": "Banners Telnet ZXHN",
+  "zh": "ZXHN Telnet 横幅"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

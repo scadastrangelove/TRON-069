@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:KZ",
+ "total": 4,
+ "taken": "2026-11-01T10:01:16+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 4,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 4,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as57013"
+  },
+  {
+   "count": 1,
+   "value": "as21299"
+  },
+  {
+   "count": 1,
+   "value": "as51997"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Eurasia-Star LLP"
+  },
+  {
+   "count": 1,
+   "value": "Kar-Tel LLC"
+  },
+  {
+   "count": 1,
+   "value": "LLP Asket"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "KZ"
+}

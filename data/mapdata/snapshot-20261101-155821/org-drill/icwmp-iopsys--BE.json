@@ -1,0 +1,45 @@
+{
+ "dork": "\"authenticate@cwmp\" country:BE",
+ "total": 3,
+ "taken": "2026-11-01T09:20:46+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as196755"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "Customer DSL Static GoPlus Profile"
+  },
+  {
+   "count": 1,
+   "value": "SEWAN SAS"
+  },
+  {
+   "count": 1,
+   "value": "Sewan Belgium SA"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "BE"
+}

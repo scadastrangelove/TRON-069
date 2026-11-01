@@ -1590,6 +1590,24 @@
       "denominator": "fact-acssimtool-27af6cfcf2"
     },
     {
+      "id": "dslforum-apache-401",
+      "parent": "dt-speedport-sdk",
+      "group": "http-response-profiles",
+      "query": "\"DSLForum CPE Management\" \"Server: Apache\" http.status:401",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "DSLForum · Apache banner · HTTP 401 · all ports",
+        "ru": "DSLForum · баннер Apache · HTTP 401 · все порты",
+        "es": "DSLForum · banner Apache · HTTP 401 · todos los puertos",
+        "zh": "DSLForum · Apache 横幅 · HTTP 401 · 所有端口"
+      },
+      "source": {
+        "file": "FINGERPRINTS.md",
+        "anchor": "apache-response-profiles"
+      },
+      "overlap": "possible"
+    },
+    {
       "id": "dslforum-de-7547",
       "parent": "dt-speedport-sdk",
       "group": "fingerprint-followup",

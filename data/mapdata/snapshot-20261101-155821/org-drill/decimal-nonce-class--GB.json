@@ -1,0 +1,69 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:GB",
+ "total": 94,
+ "taken": "2026-11-01T10:00:51+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 94,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 94,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 90,
+   "value": "as57793"
+  },
+  {
+   "count": 2,
+   "value": "as2856"
+  },
+  {
+   "count": 2,
+   "value": "as8851"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 50,
+   "value": "thirteenten 1310 Limited"
+  },
+  {
+   "count": 34,
+   "value": "1310 Limited"
+  },
+  {
+   "count": 6,
+   "value": "Hampshire Broadband Ltd"
+  },
+  {
+   "count": 1,
+   "value": "BT-Central-Plus"
+  },
+  {
+   "count": 1,
+   "value": "Eclipse Static ADSL Pool"
+  },
+  {
+   "count": 1,
+   "value": "IP pools"
+  },
+  {
+   "count": 1,
+   "value": "KCOM Group Limited"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "GB"
+}

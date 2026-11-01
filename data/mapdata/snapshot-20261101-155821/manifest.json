@@ -1,0 +1,1977 @@
+{
+ "taken": "20261101-155821",
+ "started_at": "2026-11-01T15:58:23+00:00",
+ "source": "Shodan /shodan/host/count",
+ "timezone": "UTC",
+ "plan": {
+  "version": 1,
+  "id": "a77828f9-a5b9-4897-9139-9accf88262af",
+  "snapshot_time": "20261101-155821",
+  "created_at": "2026-11-01T15:58:21+00:00",
+  "source_snapshot": "data/mapdata/snapshot-20261101-091700",
+  "mode": "full",
+  "options": {
+   "drill_lines": 0,
+   "drill_countries": 0,
+   "org_limit": 100,
+   "asn_limit": 100,
+   "skip_drill": false,
+   "skip_stickers": true,
+   "skip_variants": false,
+   "queries_only": false,
+   "refresh_base": false,
+   "only": [],
+   "query_group": [
+    "http-response-profiles"
+   ]
+  },
+  "selected": [
+   "acssimtool",
+   "arris-cpe-authentication",
+   "askeycwmp-askey",
+   "avsystem-libcwmp",
+   "axiros",
+   "centurylink-lighttpd",
+   "charter-anti-scan-404",
+   "cpe-server-1-0",
+   "cwmp-agent-orange-tunisie",
+   "cwmp-lancom",
+   "cwmp-server",
+   "cwmpd-tr069agent",
+   "decimal-nonce-class",
+   "digauth",
+   "dt-speedport-sdk",
+   "easycwmp-fork-ecntcwmp",
+   "easycwmp-fork-leanoacs",
+   "easycwmp-fork-ltecpe",
+   "easycwmp-vanilla",
+   "fake-apache-openagent",
+   "freeacs",
+   "gateway-realm",
+   "genieacs-admin-ui",
+   "gsoap-2-7-vendor-map",
+   "gsoap-2-8-vendor-map",
+   "gsoap-park",
+   "gsoap-service-realm",
+   "huaweihomegateway",
+   "huaweihomegateway-cr-slice",
+   "icwmp-iopsys",
+   "igdauthentication",
+   "junk-realms",
+   "kt-cems",
+   "magticom-gsoap",
+   "meig-meigsmart-com",
+   "mini-httpd",
+   "mini-web-server-1-0-zte-corp",
+   "nettyserver",
+   "openacs",
+   "qacafe-cdrouter-test-realm",
+   "rdk-b-ccsptr069pa",
+   "realtek-sdk",
+   "rompager",
+   "ruijie-cpe",
+   "sagemcom",
+   "sercomm-cpe-authentication",
+   "sky-ee-tr069-http-server",
+   "telefonica-cwmpweb",
+   "ti-cpe-authentication",
+   "tr069-client",
+   "tr069-client-cli-server-netcore",
+   "tr069-http-server",
+   "windtre-tr069-http-server",
+   "yapsieworld",
+   "zte"
+  ],
+  "base_jobs": [
+   {
+    "id": "icwmp-iopsys",
+    "name": "icwmp (iopsys)",
+    "query": "\"authenticate@cwmp\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "tr069-http-server",
+    "name": "tr069 http server",
+    "query": "\"tr069 http server\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "gsoap-park",
+    "name": "gSOAP park",
+    "query": "\"Server: gSOAP\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "rdk-b-ccsptr069pa",
+    "name": "RDK-B CcspTr069Pa",
+    "query": "\"Cisco_CCSP_CWMP_TCPCR\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "tr069-client",
+    "name": "TR069 Client",
+    "query": "\"TR069 client TCP connection request Server\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "igdauthentication",
+    "name": "IgdAuthentication",
+    "query": "\"IgdAuthentication\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "easycwmp-vanilla",
+    "name": "easycwmp vanilla",
+    "query": "\"realm@easycwmp\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "huaweihomegateway",
+    "name": "HuaweiHomeGateway",
+    "query": "\"HuaweiHomeGateway\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "sagemcom",
+    "name": "Sagemcom",
+    "query": "\"Sagemcom TR-069\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "zte",
+    "name": "ZTE",
+    "query": "\"cpe@zte.com\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "digauth",
+    "name": "DigAuth",
+    "query": "\"DigAuth\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "yapsieworld",
+    "name": "YapsieWorld",
+    "query": "\"YapsieWorld\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "magticom-gsoap",
+    "name": "Magticom gSOAP",
+    "query": "port:6264 gSOAP",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "realtek-sdk",
+    "name": "Realtek SDK",
+    "query": "\"realtek.com.tw\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "cwmpd-tr069agent",
+    "name": "cwmpd / TR069Agent",
+    "query": "\"cwmpd\" opaque",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "dt-speedport-sdk",
+    "name": "DSLForum CPE Management",
+    "query": "\"DSLForum CPE Management\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "acssimtool",
+    "name": "ACSSimTool",
+    "query": "\"ACSSimTool\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "avsystem-libcwmp",
+    "name": "avsystem-libcwmp",
+    "query": "\"avsystem-libcwmp\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "gsoap-service-realm",
+    "name": "gSOAP Service realm",
+    "query": "port:7547 opaque \"gSOAP Service\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "easycwmp-fork-ecntcwmp",
+    "name": "easycwmp fork: ecntcwmp",
+    "query": "\"realm@ecntcwmp\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "easycwmp-fork-leanoacs",
+    "name": "easycwmp fork: leanoacs",
+    "query": "\"realm@leanoacs\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "easycwmp-fork-ltecpe",
+    "name": "easycwmp fork: ltecpe",
+    "query": "\"realm@ltecpe\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "ruijie-cpe",
+    "name": "RUIJIE-CPE",
+    "query": "\"RUIJIE-CPE\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "junk-realms",
+    "name": "junk realms",
+    "query": "port:7547 opaque \"dirname\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "nettyserver",
+    "name": "NettyServer",
+    "query": "\"NettyServer\" port:7547",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "genieacs-admin-ui",
+    "name": "GenieACS admin-UI",
+    "query": "http.title:\"GenieACS\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "openacs",
+    "name": "openacs",
+    "query": "\"openacs\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "axiros",
+    "name": "Axiros",
+    "query": "\"Axiros\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "freeacs",
+    "name": "FreeACS Web",
+    "query": "http.title:\"FreeACS\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "askeycwmp-askey",
+    "name": "ASKEYCWMP (Askey)",
+    "query": "port:7547 ASKEYCWMP",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "meig-meigsmart-com",
+    "name": "MEiG (meigsmart.com)",
+    "query": "\"www.meigsmart.com\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "kt-cems",
+    "name": "KT CEMS",
+    "query": "\"ktcems.com\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "qacafe-cdrouter-test-realm",
+    "name": "qacafe (CDRouter test realm)",
+    "query": "\"qacafe\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "cpe-server-1-0",
+    "name": "CPE-SERVER/1.0",
+    "query": "\"CPE-SERVER/1.0\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "huaweihomegateway-cr-slice",
+    "name": "HuaweiHomeGateway CR slice",
+    "query": "port:7547 \"HuaweiHomeGateway\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "centurylink-lighttpd",
+    "name": "CenturyLink lighttpd",
+    "query": "port:7547 country:US lighttpd",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "arris-cpe-authentication",
+    "name": "Arris CPE Authentication",
+    "query": "\"Arris CPE Authentication\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "sky-ee-tr069-http-server",
+    "name": "Sky/EE tr069-http-server",
+    "query": "port:7547 country:GB \"tr069 http server\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "ti-cpe-authentication",
+    "name": "TI CPE Authentication",
+    "query": "\"TI CPE Authentication\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "gateway-realm",
+    "name": "Gateway realm",
+    "query": "port:7170 realm=\"Gateway\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "windtre-tr069-http-server",
+    "name": "WindTre tr069-http-server",
+    "query": "port:7547 country:IT \"tr069 http server\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "gsoap-2-7-vendor-map",
+    "name": "gSOAP/2.7 vendor map",
+    "query": "port:7547 \"Server: gSOAP/2.7\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "gsoap-2-8-vendor-map",
+    "name": "gSOAP/2.8 vendor map",
+    "query": "port:7547 \"Server: gSOAP/2.8\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "sercomm-cpe-authentication",
+    "name": "Sercomm CPE Authentication",
+    "query": "\"Sercomm CPE Authentication\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "charter-anti-scan-404",
+    "name": "Charter anti-scan 404",
+    "query": "port:7547 \"HTTP/1.1 404\" org:\"Charter Communications\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "cwmp-agent-orange-tunisie",
+    "name": "CWMP-Agent (Orange Tunisie)",
+    "query": "\"CWMP-Agent\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "cwmp-lancom",
+    "name": "CWMP@Lancom",
+    "query": "port:7547 \"CWMP@Lancom\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "tr069-client-cli-server-netcore",
+    "name": "TR069 client CLI Server (Netcore)",
+    "query": "\"TR069 client CLI Server\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "mini-web-server-1-0-zte-corp",
+    "name": "Mini web server 1.0 ZTE corp",
+    "query": "\"Mini web server 1.0 ZTE corp\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "fake-apache-openagent",
+    "name": "fake-Apache openagent",
+    "query": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "decimal-nonce-class",
+    "name": "decimal-nonce class",
+    "query": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "cwmp-server",
+    "name": "cwmp server",
+    "query": "\"Server: cwmp server\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "telefonica-cwmpweb",
+    "name": "Telefónica cwmpWeb",
+    "query": "\"cwmpWeb\" \"main.acs.telefonica.net\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "rompager",
+    "name": "RomPager (all ports)",
+    "query": "\"RomPager\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "mini-httpd",
+    "name": "mini_httpd (all ports)",
+    "query": "\"mini_httpd\"",
+    "facets": "country:250,asn:100,port:100"
+   },
+   {
+    "id": "denominator-park",
+    "name": "denominator-park",
+    "query": "port:7547",
+    "facets": "country:250"
+   },
+   {
+    "id": "denominator-http",
+    "name": "denominator-http",
+    "query": "port:7547 HTTP",
+    "facets": "country:250"
+   }
+  ],
+  "queries": [
+   {
+    "id": "dslforum-apache-401",
+    "parent": "dt-speedport-sdk",
+    "group": "http-response-profiles",
+    "query": "\"DSLForum CPE Management\" \"Server: Apache\" http.status:401",
+    "facets": "country:250,org:100,asn:100,port:100",
+    "label": {
+     "en": "DSLForum · Apache banner · HTTP 401 · all ports",
+     "ru": "DSLForum · баннер Apache · HTTP 401 · все порты",
+     "es": "DSLForum · banner Apache · HTTP 401 · todos los puertos",
+     "zh": "DSLForum · Apache 横幅 · HTTP 401 · 所有端口"
+    },
+    "source": {
+     "file": "FINGERPRINTS.md",
+     "anchor": "apache-response-profiles"
+    },
+    "overlap": "possible"
+   }
+  ],
+  "interval": 1.1,
+  "facts": {
+   "easycwmp-vanilla": [
+    {
+     "label": "Family by opaque constant (all forks)",
+     "dork": "\"328458fab28345ae87ab3210a8513b14eff452a2\"",
+     "count": 1157673,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "easycwmp-opaque"
+     },
+     "historical_count": 1061404,
+     "taken": "2026-11-01T10:16:54+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/easycwmp-opaque.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Google Fiber subset",
+     "dork": "\"realm@easycwmp\" org:\"Google Fiber\"",
+     "count": 43726,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-easycwmp-vanilla-9f594b9dba"
+     },
+     "historical_count": 39027,
+     "taken": "2026-11-01T10:17:03+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-easycwmp-vanilla-9f594b9dba.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Fidium/Consolidated subset",
+     "dork": "\"realm@easycwmp\" org:\"Fidium\"",
+     "count": 326126,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-easycwmp-vanilla-52fb7670ac"
+     },
+     "historical_count": 241762,
+     "taken": "2026-11-01T10:17:04+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-easycwmp-vanilla-52fb7670ac.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "zte": [
+    {
+     "label": "Mini web server 2005 interfaces",
+     "dork": "\"Mini web server 1.0 ZTE corp\"",
+     "count": 111786,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "base",
+      "id": "mini-web-server-1-0-zte-corp"
+     },
+     "historical_count": 75685,
+     "taken": "2026-11-01T09:17:56+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "mini-web-server-1-0-zte-corp.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "ZTE web server 2015 interfaces",
+     "dork": "\"ZTE web server 1.0 ZTE corp 2015\"",
+     "count": 136333,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-zte-f8413c63e8"
+     },
+     "historical_count": 116028,
+     "taken": "2026-11-01T10:17:05+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-zte-f8413c63e8.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "ZXHN Telnet banners",
+     "dork": "\"ZXHN H108N\"",
+     "count": 23,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-zte-9081d80feb"
+     },
+     "historical_count": 15,
+     "taken": "2026-11-01T10:17:06+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-zte-9081d80feb.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "huaweihomegateway-cr-slice": [
+    {
+     "label": "First-pass analysis, 2026-10-10 (DEANON-HUAWEI-CR.md)",
+     "dork": "port:7547 \"HuaweiHomeGateway\"",
+     "count": 2900740,
+     "note": "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
+     "collection_ref": {
+      "kind": "base",
+      "id": "huaweihomegateway-cr-slice"
+     },
+     "historical_count": 2645752,
+     "taken": "2026-11-01T09:17:40+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-HUAWEI-CR.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "huaweihomegateway-cr-slice.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Auxiliary ports by operator (context for model research)",
+     "dork": "\"HuaweiHomeGateway\" port:8081",
+     "count": 109666,
+     "note": "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "huawei-port-8081"
+     },
+     "historical_count": 101168,
+     "taken": "2026-11-01T10:16:21+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-HUAWEI-CR.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/huawei-port-8081.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "CR server ports outside 7547 (2026-10-10 correction: the same 401 authentication service, not web interfaces)",
+     "dork": "\"HuaweiHomeGateway\" !port:7547",
+     "count": 249265,
+     "note": "Auxiliary-port samples show the same authentication response pattern as the 7547 slice, not a blanket web-interface population.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-huaweihomegateway-cr-slice-2f12144216"
+     },
+     "historical_count": 223650,
+     "taken": "2026-11-01T10:17:07+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-HUAWEI-CR.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-huaweihomegateway-cr-slice-2f12144216.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "tr069-client": [
+    {
+     "label": "TR069 Client component-family evidence",
+     "dork": "\"TR069 client TCP connection request Server\"",
+     "count": 1785233,
+     "note": "Works Systems OneAgent TR component attribution is confirmed by public binary templates, build metadata and source copyrights. Device OEM attribution requires separate evidence.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "tr069-total"
+     },
+     "historical_count": 1671226,
+     "taken": "2026-11-01T10:16:07+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/tr069-total.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "SpaceX organization slice",
+     "dork": "\"TR069 client TCP connection request Server\" org:\"SpaceX\"",
+     "count": 40,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-client-688f915ee0"
+     },
+     "historical_count": 31,
+     "taken": "2026-11-01T10:17:08+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-client-688f915ee0.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Charter/Spectrum subset",
+     "dork": "\"TR069 client TCP connection request Server\" org:\"Charter Communications\"",
+     "count": 588142,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-client-f6875b1cd5"
+     },
+     "historical_count": 584394,
+     "taken": "2026-11-01T10:17:10+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-client-f6875b1cd5.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Hong Kong subset",
+     "dork": "\"TR069 client TCP connection request Server\" country:HK",
+     "count": 192,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-client-b49109396c"
+     },
+     "historical_count": 146,
+     "taken": "2026-11-01T10:17:11+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-client-b49109396c.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Singtel slice; earlier Huawei association revised",
+     "dork": "\"TR069 client TCP connection request Server\" country:SG",
+     "count": 230634,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-client-31c33d3590"
+     },
+     "historical_count": 195389,
+     "taken": "2026-11-01T10:17:12+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-client-31c33d3590.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Brazilian DigAuth bridge response",
+     "dork": "\"TR069 client TCP connection request Server\" port:8081 country:BR",
+     "count": 15260,
+     "note": "Works Systems OneAgent TR component attribution is confirmed by public binary templates, build metadata and source copyrights. Device OEM attribution requires separate evidence.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-client-6d6092e15e"
+     },
+     "historical_count": null,
+     "taken": "2026-11-01T10:17:13+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-client-6d6092e15e.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Subfamily census, 2026-10-10 (host/count)",
+     "dork": "\"TR069 client TCP connection request Server\"",
+     "count": 1785233,
+     "note": "Works Systems OneAgent TR component attribution is confirmed by public binary templates, build metadata and source copyrights. Device OEM attribution requires separate evidence.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "tr069-total"
+     },
+     "historical_count": 1655404,
+     "taken": "2026-11-01T10:16:07+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/tr069-total.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Singtel-aux: co-hosting with a ZTE component",
+     "dork": "\"TR069 client TCP connection request Server\" port:1024 country:SG",
+     "count": 45016,
+     "note": "Works Systems OneAgent TR component attribution is confirmed by public binary templates, build metadata and source copyrights. Device OEM attribution requires separate evidence.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-client-dab033692e"
+     },
+     "historical_count": null,
+     "taken": "2026-11-01T10:17:14+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-client-dab033692e.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "cpe-server-1-0": [
+    {
+     "label": "Port 7170 subset",
+     "dork": "\"CPE-SERVER/1.0\" port:7170",
+     "count": 1408825,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-cpe-server-1-0-72f2536beb"
+     },
+     "historical_count": 1256195,
+     "taken": "2026-11-01T10:17:15+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-cpe-server-1-0-72f2536beb.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Port 58000 subset",
+     "dork": "\"CPE-SERVER/1.0\" port:58000",
+     "count": 724641,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-cpe-server-1-0-37a6d1be75"
+     },
+     "historical_count": 612083,
+     "taken": "2026-11-01T10:17:17+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-cpe-server-1-0-37a6d1be75.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "tr069-http-server": [
+    {
+     "label": "Default realm tp-link.com.cn",
+     "dork": "\"tp-link.com.cn\"",
+     "count": 2460,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-http-server-92e5f81d26"
+     },
+     "historical_count": 2404,
+     "taken": "2026-11-01T10:17:18+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-http-server-92e5f81d26.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "TPG/iiNet AU subset",
+     "dork": "\"tr069 http server\" country:AU",
+     "count": 704733,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-http-server-7d56d5efd4"
+     },
+     "historical_count": 637801,
+     "taken": "2026-11-01T10:17:19+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-http-server-7d56d5efd4.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Archer VR1600v web interface",
+     "dork": "http.title:\"Archer VR1600v\"",
+     "count": 0,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-tr069-http-server-4c0fd1e05a"
+     },
+     "historical_count": 0,
+     "taken": "2026-11-01T10:17:20+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-tr069-http-server-4c0fd1e05a.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "igdauthentication": [
+    {
+     "label": "Port 30005 distribution",
+     "dork": "port:30005 \"IgdAuthentication\"",
+     "count": 509823,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-igdauthentication-06e8a31fc9"
+     },
+     "historical_count": 394173,
+     "taken": "2026-11-01T10:17:21+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-IGDAUTH.md",
+       "anchor": "public-evidence"
+      },
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-igdauthentication-06e8a31fc9.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Port 49501 distribution",
+     "dork": "port:49501 \"IgdAuthentication\"",
+     "count": 221624,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-igdauthentication-705c894151"
+     },
+     "historical_count": 194738,
+     "taken": "2026-11-01T10:17:22+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-IGDAUTH.md",
+       "anchor": "public-evidence"
+      },
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-igdauthentication-705c894151.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "askeycwmp-askey": [
+    {
+     "label": "Vivo BR subset",
+     "dork": "port:7547 ASKEYCWMP country:BR",
+     "count": 721718,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-askeycwmp-askey-df50c6a787"
+     },
+     "historical_count": 604232,
+     "taken": "2026-11-01T10:17:23+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-askeycwmp-askey-df50c6a787.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "digauth": [
+    {
+     "label": "Fake Apache with DigAuth",
+     "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" \"DigAuth\"",
+     "count": 3146,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-digauth-6045097ebd"
+     },
+     "historical_count": 2941,
+     "taken": "2026-11-01T10:17:25+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-digauth-6045097ebd.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Rebranded fake Apache (Vivo BR)",
+     "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" !\"DigAuth\"",
+     "count": 3,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-digauth-fca6d4f2c9"
+     },
+     "historical_count": 5,
+     "taken": "2026-11-01T10:17:26+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-digauth-fca6d4f2c9.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Related openagent component patterns",
+     "dork": "\"TR069 client TCP connection request Server\" port:8081",
+     "count": 15908,
+     "note": "Source-template evidence supports an openagent-related component family; OEM carriers remain unresolved.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-digauth-1a85eb598a"
+     },
+     "historical_count": null,
+     "taken": "2026-11-01T10:17:27+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "DEANON-TR069CLIENT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-digauth-1a85eb598a.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "cwmp-agent-orange-tunisie": [
+    {
+     "label": "HKT/PCCW HK subset (port 5400)",
+     "dork": "\"CWMP-Agent\" country:HK",
+     "count": 2462,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-cwmp-agent-orange-tunisie-c0ffddf421"
+     },
+     "historical_count": 2023,
+     "taken": "2026-11-01T10:17:28+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-cwmp-agent-orange-tunisie-c0ffddf421.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Orange Tunisie subset",
+     "dork": "\"CWMP-Agent\" country:TN",
+     "count": 17331,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-cwmp-agent-orange-tunisie-55b1ab5cd8"
+     },
+     "historical_count": 13791,
+     "taken": "2026-11-01T10:17:33+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-cwmp-agent-orange-tunisie-55b1ab5cd8.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "genieacs-admin-ui": [
+    {
+     "label": "Versions 1.2.x",
+     "dork": "\"GenieACS-Version: 1.2\"",
+     "count": 3936,
+     "note": "Version markers are counted separately; a banner does not establish vulnerability.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-genieacs-admin-ui-0365d63da7"
+     },
+     "historical_count": 3216,
+     "taken": "2026-11-01T10:17:34+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-genieacs-admin-ui-0365d63da7.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Versions 1.3.x",
+     "dork": "\"GenieACS-Version: 1.3\"",
+     "count": 45,
+     "note": "Version markers are counted separately; a banner does not establish vulnerability.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-genieacs-admin-ui-c56def127c"
+     },
+     "historical_count": 34,
+     "taken": "2026-11-01T10:17:35+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-genieacs-admin-ui-c56def127c.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "sercomm-cpe-authentication": [
+    {
+     "label": "Vodacom ENS ZA subset",
+     "dork": "\"Sercomm CPE Authentication\" country:ZA",
+     "count": 60521,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-sercomm-cpe-authentication-89f1d6e85b"
+     },
+     "historical_count": 53735,
+     "taken": "2026-11-01T10:17:36+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "NOTES.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-sercomm-cpe-authentication-89f1d6e85b.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "acssimtool": [
+    {
+     "label": "ACSSimTool realm census",
+     "dork": "\"acssimtool\"",
+     "count": 11074,
+     "note": "A public reimplementation does not identify the original vendor or deployed credentials.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-acssimtool-27af6cfcf2"
+     },
+     "historical_count": 11160,
+     "taken": "2026-11-01T10:17:37+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "ACS-HUNT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-acssimtool-27af6cfcf2.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "nettyserver": [
+    {
+     "label": "NettyServer Italy slice",
+     "dork": "\"NettyServer\" country:IT",
+     "count": 36745,
+     "note": "Italy-focused Basic-authentication signature; the WindTre platform association remains a hypothesis.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-nettyserver-b44e80cd32"
+     },
+     "historical_count": 30415,
+     "taken": "2026-11-01T10:17:38+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "ACS-HUNT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-nettyserver-b44e80cd32.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "avsystem-libcwmp": [
+    {
+     "label": "Version distribution from the Server header",
+     "dork": "\"avsystem-libcwmp/5.7.9\"",
+     "count": 4659,
+     "note": "Version markers are counted separately; a banner does not establish vulnerability.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "avsystem-5-7-9"
+     },
+     "historical_count": 4913,
+     "taken": "2026-11-01T10:16:45+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "ACS-HUNT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/avsystem-5-7-9.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "gateway-realm": [
+    {
+     "label": "Round 4: Technicolor cwmpd research (attribution under review)",
+     "dork": "port:7170 realm=\"Gateway\"",
+     "count": 44477,
+     "note": "The port-7170 slice is associated with TIM. Technicolor and ADB remain candidates; the inspected image does not close attribution.",
+     "collection_ref": {
+      "kind": "base",
+      "id": "gateway-realm"
+     },
+     "historical_count": 32749,
+     "taken": "2026-11-01T09:17:46+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "ACS-HUNT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "gateway-realm.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Gateway on port 7170: Telecom Italia / TIM operator",
+     "dork": "port:7170 realm=\"Gateway\"",
+     "count": 44477,
+     "note": "The port-7170 slice is associated with TIM. Technicolor and ADB remain candidates; the inspected image does not close attribution.",
+     "collection_ref": {
+      "kind": "base",
+      "id": "gateway-realm"
+     },
+     "historical_count": 32749,
+     "taken": "2026-11-01T09:17:46+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "ACS-HUNT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "gateway-realm.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Gateway · GB:1024",
+     "dork": "realm=\"Gateway\" country:GB port:1024",
+     "count": 7472,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "gateway-gb-1024"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:11+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "gateway-port-scopes"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/gateway-gb-1024.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "Gateway · CA:10001",
+     "dork": "realm=\"Gateway\" country:CA port:10001",
+     "count": 3,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "gateway-ca-10001"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:12+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "gateway-port-scopes"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/gateway-ca-10001.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "cwmp-server": [
+    {
+     "label": "Operator profile; vendor remains unknown",
+     "dork": "\"cwmp server\"",
+     "count": 90204,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "fact-cwmp-server-70ae9dea51"
+     },
+     "historical_count": 84418,
+     "taken": "2026-11-01T10:17:40+00:00",
+     "collection_status": "ok",
+     "sources": [
+      {
+       "file": "ACS-HUNT.md"
+      }
+     ],
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/fact-cwmp-server-70ae9dea51.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "dt-speedport-sdk": [
+    {
+     "label": "DSLForum · DE:7547",
+     "dork": "\"DSLForum CPE Management\" country:DE port:7547",
+     "count": 13805,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "dslforum-de-7547"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:05+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "dslforum-cpe-management"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/dslforum-de-7547.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "DSLForum · DE:7170",
+     "dork": "\"DSLForum CPE Management\" country:DE port:7170",
+     "count": 48130,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "dslforum-de-7170"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:06+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "dslforum-cpe-management"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/dslforum-de-7170.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "DSLForum · SG:8085",
+     "dork": "\"DSLForum CPE Management\" country:SG port:8085",
+     "count": 1867,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "dslforum-sg-8085"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:07+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "dslforum-cpe-management"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/dslforum-sg-8085.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "DSLForum · GB:8085",
+     "dork": "\"DSLForum CPE Management\" country:GB port:8085",
+     "count": 470,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "dslforum-gb-8085"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:08+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "dslforum-cpe-management"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/dslforum-gb-8085.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ],
+   "tr069-client-cli-server-netcore": [
+    {
+     "label": "CLI · default port 1234",
+     "dork": "\"TR069 client CLI Server\" port:1234",
+     "count": 1830,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "cli-port-1234"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:13+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "cli-build-classes"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/cli-port-1234.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "CLI · Serbia",
+     "dork": "\"TR069 client CLI Server\" country:RS",
+     "count": 133,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "cli-serbia"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:14+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "cli-build-classes"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/cli-serbia.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    },
+    {
+     "label": "CLI · Telekom Srbija / AS8400",
+     "dork": "\"TR069 client CLI Server\" asn:AS8400",
+     "count": 133,
+     "note": "Dated query matches; overlapping variants are not independent device populations.",
+     "collection_ref": {
+      "kind": "variant",
+      "id": "cli-as8400"
+     },
+     "collection_status": "ok",
+     "taken": "2026-11-01T10:18:16+00:00",
+     "sources": [
+      {
+       "file": "FINGERPRINTS.md",
+       "anchor": "cli-build-classes"
+      }
+     ],
+     "historical_count": null,
+     "collection_source": {
+      "snapshot": "snapshot-20261101-091700",
+      "file": "variants/cli-as8400.json",
+      "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a"
+     }
+    }
+   ]
+  }
+ },
+ "source_snapshot": "data/mapdata/snapshot-20261101-091700",
+ "collector_mode": "full",
+ "status": "complete",
+ "updated_at": "2026-11-01T15:58:26+00:00",
+ "requests_this_run": 1,
+ "errors": 0,
+ "failures": {},
+ "lines": [
+  {
+   "name": "icwmp (iopsys)",
+   "file": "icwmp-iopsys.json",
+   "collection_status": "ok",
+   "total": 3556465
+  },
+  {
+   "name": "tr069 http server",
+   "file": "tr069-http-server.json",
+   "collection_status": "ok",
+   "total": 2152515
+  },
+  {
+   "name": "gSOAP park",
+   "file": "gsoap-park.json",
+   "collection_status": "ok",
+   "total": 2016946
+  },
+  {
+   "name": "RDK-B CcspTr069Pa",
+   "file": "rdk-b-ccsptr069pa.json",
+   "collection_status": "ok",
+   "total": 1941673
+  },
+  {
+   "name": "TR069 Client",
+   "file": "tr069-client.json",
+   "collection_status": "ok",
+   "total": 1785081
+  },
+  {
+   "name": "IgdAuthentication",
+   "file": "igdauthentication.json",
+   "collection_status": "ok",
+   "total": 1764489
+  },
+  {
+   "name": "easycwmp vanilla",
+   "file": "easycwmp-vanilla.json",
+   "collection_status": "ok",
+   "total": 1084316
+  },
+  {
+   "name": "HuaweiHomeGateway",
+   "file": "huaweihomegateway.json",
+   "collection_status": "ok",
+   "total": 3149908
+  },
+  {
+   "name": "Sagemcom",
+   "file": "sagemcom.json",
+   "collection_status": "ok",
+   "total": 218991
+  },
+  {
+   "name": "ZTE",
+   "file": "zte.json",
+   "collection_status": "ok",
+   "total": 280196
+  },
+  {
+   "name": "DigAuth",
+   "file": "digauth.json",
+   "collection_status": "ok",
+   "total": 27431
+  },
+  {
+   "name": "YapsieWorld",
+   "file": "yapsieworld.json",
+   "collection_status": "ok",
+   "total": 76857
+  },
+  {
+   "name": "Magticom gSOAP",
+   "file": "magticom-gsoap.json",
+   "collection_status": "ok",
+   "total": 30273
+  },
+  {
+   "name": "Realtek SDK",
+   "file": "realtek-sdk.json",
+   "collection_status": "ok",
+   "total": 31153
+  },
+  {
+   "name": "cwmpd / TR069Agent",
+   "file": "cwmpd-tr069agent.json",
+   "collection_status": "ok",
+   "total": 22076
+  },
+  {
+   "name": "DSLForum CPE Management",
+   "file": "dt-speedport-sdk.json",
+   "collection_status": "ok",
+   "total": 129183
+  },
+  {
+   "name": "ACSSimTool",
+   "file": "acssimtool.json",
+   "collection_status": "ok",
+   "total": 11072
+  },
+  {
+   "name": "avsystem-libcwmp",
+   "file": "avsystem-libcwmp.json",
+   "collection_status": "ok",
+   "total": 6502
+  },
+  {
+   "name": "gSOAP Service realm",
+   "file": "gsoap-service-realm.json",
+   "collection_status": "ok",
+   "total": 7569
+  },
+  {
+   "name": "easycwmp fork: ecntcwmp",
+   "file": "easycwmp-fork-ecntcwmp.json",
+   "collection_status": "ok",
+   "total": 68877
+  },
+  {
+   "name": "easycwmp fork: leanoacs",
+   "file": "easycwmp-fork-leanoacs.json",
+   "collection_status": "ok",
+   "total": 4592
+  },
+  {
+   "name": "easycwmp fork: ltecpe",
+   "file": "easycwmp-fork-ltecpe.json",
+   "collection_status": "ok",
+   "total": 91
+  },
+  {
+   "name": "RUIJIE-CPE",
+   "file": "ruijie-cpe.json",
+   "collection_status": "ok",
+   "total": 474
+  },
+  {
+   "name": "junk realms",
+   "file": "junk-realms.json",
+   "collection_status": "ok",
+   "total": 4131
+  },
+  {
+   "name": "NettyServer",
+   "file": "nettyserver.json",
+   "collection_status": "ok",
+   "total": 36747
+  },
+  {
+   "name": "GenieACS admin-UI",
+   "file": "genieacs-admin-ui.json",
+   "collection_status": "ok",
+   "total": 4294
+  },
+  {
+   "name": "openacs",
+   "file": "openacs.json",
+   "collection_status": "ok",
+   "total": 17
+  },
+  {
+   "name": "Axiros",
+   "file": "axiros.json",
+   "collection_status": "ok",
+   "total": 6
+  },
+  {
+   "name": "FreeACS Web",
+   "file": "freeacs.json",
+   "collection_status": "ok",
+   "total": 6
+  },
+  {
+   "name": "ASKEYCWMP (Askey)",
+   "file": "askeycwmp-askey.json",
+   "collection_status": "ok",
+   "total": 782930
+  },
+  {
+   "name": "MEiG (meigsmart.com)",
+   "file": "meig-meigsmart-com.json",
+   "collection_status": "ok",
+   "total": 3002
+  },
+  {
+   "name": "KT CEMS",
+   "file": "kt-cems.json",
+   "collection_status": "ok",
+   "total": 25961
+  },
+  {
+   "name": "qacafe (CDRouter test realm)",
+   "file": "qacafe-cdrouter-test-realm.json",
+   "collection_status": "ok",
+   "total": 22770
+  },
+  {
+   "name": "CPE-SERVER/1.0",
+   "file": "cpe-server-1-0.json",
+   "collection_status": "ok",
+   "total": 3964632
+  },
+  {
+   "name": "HuaweiHomeGateway CR slice",
+   "file": "huaweihomegateway-cr-slice.json",
+   "collection_status": "ok",
+   "total": 2900740
+  },
+  {
+   "name": "CenturyLink lighttpd",
+   "file": "centurylink-lighttpd.json",
+   "collection_status": "ok",
+   "total": 454464
+  },
+  {
+   "name": "Arris CPE Authentication",
+   "file": "arris-cpe-authentication.json",
+   "collection_status": "ok",
+   "total": 8743
+  },
+  {
+   "name": "Sky/EE tr069-http-server",
+   "file": "sky-ee-tr069-http-server.json",
+   "collection_status": "ok",
+   "total": 68470
+  },
+  {
+   "name": "TI CPE Authentication",
+   "file": "ti-cpe-authentication.json",
+   "collection_status": "ok",
+   "total": 40508
+  },
+  {
+   "name": "Gateway realm",
+   "file": "gateway-realm.json",
+   "collection_status": "ok",
+   "total": 44477
+  },
+  {
+   "name": "WindTre tr069-http-server",
+   "file": "windtre-tr069-http-server.json",
+   "collection_status": "ok",
+   "total": 298363
+  },
+  {
+   "name": "gSOAP/2.7 vendor map",
+   "file": "gsoap-2-7-vendor-map.json",
+   "collection_status": "ok",
+   "total": 1302495
+  },
+  {
+   "name": "gSOAP/2.8 vendor map",
+   "file": "gsoap-2-8-vendor-map.json",
+   "collection_status": "ok",
+   "total": 110417
+  },
+  {
+   "name": "Sercomm CPE Authentication",
+   "file": "sercomm-cpe-authentication.json",
+   "collection_status": "ok",
+   "total": 331630
+  },
+  {
+   "name": "Charter anti-scan 404",
+   "file": "charter-anti-scan-404.json",
+   "collection_status": "ok",
+   "total": 124036
+  },
+  {
+   "name": "CWMP-Agent (Orange Tunisie)",
+   "file": "cwmp-agent-orange-tunisie.json",
+   "collection_status": "ok",
+   "total": 23555
+  },
+  {
+   "name": "CWMP@Lancom",
+   "file": "cwmp-lancom.json",
+   "collection_status": "ok",
+   "total": 6544
+  },
+  {
+   "name": "TR069 client CLI Server (Netcore)",
+   "file": "tr069-client-cli-server-netcore.json",
+   "collection_status": "ok",
+   "total": 1830
+  },
+  {
+   "name": "Mini web server 1.0 ZTE corp",
+   "file": "mini-web-server-1-0-zte-corp.json",
+   "collection_status": "ok",
+   "total": 111786
+  },
+  {
+   "name": "fake-Apache openagent",
+   "file": "fake-apache-openagent.json",
+   "collection_status": "ok",
+   "total": 3149
+  },
+  {
+   "name": "decimal-nonce class",
+   "file": "decimal-nonce-class.json",
+   "collection_status": "ok",
+   "total": 30065
+  },
+  {
+   "name": "cwmp server",
+   "file": "cwmp-server.json",
+   "collection_status": "ok",
+   "total": 90199
+  },
+  {
+   "name": "Telefónica cwmpWeb",
+   "file": "telefonica-cwmpweb.json",
+   "collection_status": "ok",
+   "total": 635
+  },
+  {
+   "name": "RomPager (all ports)",
+   "file": "rompager.json",
+   "collection_status": "ok",
+   "total": 447478
+  },
+  {
+   "name": "mini_httpd (all ports)",
+   "file": "mini-httpd.json",
+   "collection_status": "ok",
+   "total": 196763
+  },
+  {
+   "name": "denominator-park",
+   "file": "denominator-park.json",
+   "collection_status": "ok",
+   "total": 36169583
+  },
+  {
+   "name": "denominator-http",
+   "file": "denominator-http.json",
+   "collection_status": "ok",
+   "total": 24704675
+  }
+ ],
+ "org_drill": {
+  "scope": "all",
+  "expected": 2792,
+  "completed": 2792,
+  "pending": 0,
+  "org_limit": 100,
+  "asn_limit": 100
+ },
+ "variants": {
+  "expected": 1,
+  "completed": 1,
+  "pending": 0
+ },
+ "completed_at": "2026-11-01T15:58:26+00:00"
+}
