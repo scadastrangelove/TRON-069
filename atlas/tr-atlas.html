@@ -41,24 +41,25 @@ h1,h2,h3,p{margin:0}
 .brandmark i{width:11px;height:11px;border-radius:3.5px;background:#7a63ea}
 .brandmark i:nth-child(2){background:#8fb8ff}.brandmark i:nth-child(3){background:#6fd0c8}.brandmark i:nth-child(4){background:#e3d9fb}
 .brand small{display:block;font-size:9px;letter-spacing:.6px;color:var(--muted);margin-top:3px;font-weight:540}
-nav.tabs{display:flex;gap:4px;height:100%}
-.nav{position:relative;color:var(--muted);padding:0 13px;font-size:12.5px;font-weight:540;display:flex;align-items:center;gap:7px;border-radius:8px}
+nav.tabs{display:flex;gap:4px;height:100%;flex-shrink:0}
+.nav{white-space:nowrap;flex-shrink:0;position:relative;color:var(--muted);padding:0 13px;font-size:12.5px;font-weight:540;display:flex;align-items:center;gap:7px;border-radius:8px}
 .nav:hover{color:var(--ink);background:#f0f3fb}
 .nav.active{color:var(--ink);font-weight:660}
 .nav.active:after{content:"";position:absolute;bottom:0;left:10px;right:10px;height:3px;border-radius:3px 3px 0 0;background:var(--accent)}
 .nav .cnt{font-size:10px;background:var(--accent-soft);color:#7d68d8;padding:2px 7px;border-radius:20px;font-weight:640}
-.topright{margin-left:auto;display:flex;align-items:center;gap:12px}
-.snapshot{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:22px;padding:7px 13px;font:10.5px ui-monospace,monospace;color:var(--muted);letter-spacing:.6px}
+.topright{flex-shrink:0;margin-left:auto;display:flex;align-items:center;gap:12px}
+.snapshot{white-space:nowrap;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:22px;padding:7px 13px;font:10.5px ui-monospace,monospace;color:var(--muted);letter-spacing:.6px}
 .snapshot select{max-width:100%;min-width:0;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;cursor:pointer;padding:0 2px;outline-offset:5px}
 .snapshot:focus-within{border-color:var(--accent)}
 .snapshot-status{margin:12px 28px;padding:12px 16px;border:1px solid var(--accent-line);border-radius:12px;background:var(--accent-soft);color:var(--ink);font-size:12px;line-height:1.5}
-.snapshot i{width:6px;height:6px;border-radius:50%;background:#3fae96;box-shadow:0 0 0 3px #3fae9622}
-.kbtn{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 11px;font-size:12px;color:var(--muted)}
+.snapshot i{flex-shrink:0;width:6px;height:6px;border-radius:50%;background:#3fae96;box-shadow:0 0 0 3px #3fae9622}
+.kbtn{white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 11px;font-size:12px;color:var(--muted)}
 .kbtn:hover{border-color:var(--accent-line);color:var(--accent);background:var(--accent-soft)}
-.langbar{display:flex;gap:2px;border:1px solid var(--line);border-radius:9px;padding:2px;background:#fff}
-.langbtn{font-size:10.5px;font-weight:640;color:var(--muted);padding:5px 8px;border-radius:7px}
+.langbar{flex-shrink:0;display:flex;gap:2px;border:1px solid var(--line);border-radius:9px;padding:2px;background:#fff}
+.langbtn{white-space:nowrap;flex-shrink:0;font-size:10.5px;font-weight:640;color:var(--muted);padding:5px 8px;border-radius:7px}
 .langbtn.on{background:var(--accent);color:#fff}
 .langbtn:not(.on):hover{background:var(--accent-soft);color:var(--accent)}
+.search-icon{display:none;width:18px;height:18px}
 .kbtn kbd{font:10.5px ui-monospace,monospace;border:1px solid var(--line2);border-bottom-width:2px;border-radius:5px;padding:1px 5px;background:#f6f8fc;color:var(--faint)}
 .iconbtn{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;color:var(--muted);font-size:17px}
 .iconbtn:hover{background:var(--accent-soft);color:var(--accent)}
@@ -191,7 +192,7 @@ main{max-width:1800px;margin:0 auto;padding:22px clamp(14px,3vw,44px) 40px}
 .tooltip .row b{color:var(--ink2);font-weight:600}
 
 /* легенда линеек */
-.legendbar{border-top:1px solid var(--line2);background:#fdfdfeb0;padding:12px 18px;display:flex;align-items flex-start;gap:14px;align-items:center}
+.legendbar{border-top:1px solid var(--line2);background:#fdfdfeb0;padding:12px 18px;display:flex;gap:14px;align-items:center}
 .lgcap{font:600 9.5px ui-monospace,monospace;letter-spacing:1.6px;color:var(--faint);text-transform:uppercase;white-space:nowrap;padding-top:5px}
 .lgcap small{display:block;font:400 9.5px Inter,sans-serif;letter-spacing:0;text-transform:none;color:#a4b1c8;margin-top:4px}
 .lgitems{display:flex;flex-wrap:wrap;gap:5px;flex:1;max-height:96px;overflow:hidden;min-width:0}
@@ -442,12 +443,14 @@ dialog b{color:var(--ink)}
 #tab-wanted .wanted-credit{font-size:12px;line-height:1.7;color:var(--muted);max-width:950px}
 @media(max-width:760px){.wanted-hero{grid-template-columns:1fr;padding:20px;gap:20px}.wanted-hero h2{font-size:27px}.wanted-guide{border-left:0;border-top:1px solid var(--accent-line);padding:18px 0 0}.wanted-grid{grid-template-columns:1fr}.wanted-card{padding:20px}.wanted-actions .btn{min-height:44px}.wanted-other{padding:20px}}
 
-/* ── адаптив ───────────────────────────── */
+/* Keep navigation labels intact; wrap control groups before the header gets crowded. */
+@media(max-width:1480px){
+ .topbar{position:static;flex-wrap:wrap;height:auto;gap:10px;padding:10px 20px}
+ nav.tabs{height:40px}.nav{padding:0 10px}
+ .facets{top:0}.chipsrow{position:static}
+}
 @media(max-width:1280px){
  .workspace{grid-template-columns:minmax(0,1fr) 330px}
- .topbar{position:static;flex-wrap:wrap;height:auto;gap:10px;padding:10px 20px}
- nav.tabs{height:34px}.nav{padding:0 10px}
- .facets{top:0}.chipsrow{position:static}
 }
 @media(max-width:1080px){
  .workspace{grid-template-columns:minmax(0,1fr)}
@@ -460,16 +463,19 @@ dialog b{color:var(--ink)}
  .facets{top:0}
  .chipsrow{top:56px}
  nav.tabs{width:100%;height:auto;flex-wrap:wrap}
- .nav{padding:7px 8px;font-size:11px}
+ .nav{min-height:44px;justify-content:center;padding:7px 9px;font-size:12px}
  .brand small{display:none}
- .topright{margin-left:0;gap:6px;flex-wrap:wrap}
- .snapshot{white-space:nowrap;font-size:9px;padding:6px 8px}
+ .topright{width:100%;min-width:0;margin-left:0;gap:6px;flex-wrap:wrap}
+ .snapshot{min-height:44px;font-size:10px;padding:6px 8px}
+ .snapshot select{min-height:30px}
+ .topright .kbtn,.topright .iconbtn{min-width:44px;min-height:44px}
  .langbar{flex-shrink:0}
- .langbtn{white-space:nowrap;padding:5px 7px}
+ .langbtn{min-width:44px;min-height:44px;padding:5px 7px}
  .panel,.panel.right{position:fixed;top:130px;left:12px;right:12px;width:auto;max-width:none}
  .plist{max-height:min(316px,50vh)}
  .nav .cnt{display:none}
- .kbtn span{display:none}
+ .kbtn span,.kbtn kbd{display:none}
+ .kbtn .search-icon{display:block}
  .facets{gap:7px}
  .fbtn{flex:1;min-width:120px}
  .kpis{gap:16px}.kpi{padding-right:14px;min-width:78px}.kpi strong{font-size:20px}
@@ -573,7 +579,12 @@ dialog b{color:var(--ink)}
  html,body{overflow-x:hidden}
  main{overflow-x:hidden}
  .mapcard,.card{min-width:0;max-width:100vw}
- .legendbar{overflow-x:auto}
+ .legendbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}
+ .lgcap{grid-column:1/-1;white-space:normal}
+ .slice-summary{grid-column:1/-1}
+ .lgitems{grid-column:1/-1}
+ .lgmore,.lgclear{min-height:44px;justify-self:start}
+ .lgclear{justify-self:end}
  .filtersX{display:none}
  .lgchip{max-width:44vw}
  .lgchip .nm{max-width:26vw;min-width:0;flex:1}
@@ -595,7 +606,7 @@ dialog b{color:var(--ink)}
  </nav>
  <div class="topright">
   <label class="snapshot"><i aria-hidden="true"></i><select id="snapshotSelect" data-i18n-aria="snapshot_choose" data-i18n-title="snapshot_choose"></select></label>
-  <button class="kbtn" id="kkOpen" data-i18n-title="search" title="Быстрый поиск"><span data-i18n="search">Поиск</span><kbd>⌘K</kbd></button>
+  <button class="kbtn" id="kkOpen" data-i18n-title="search" data-i18n-aria="search" title="Быстрый поиск"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><span data-i18n="search">Поиск</span><kbd>⌘K</kbd></button>
  <span class="langbar" role="group" aria-label="Language" data-i18n-aria="language">
   <button class="langbtn" data-lang="en">EN</button><button class="langbtn" data-lang="zh">中文</button><button class="langbtn" data-lang="es">ES</button><button class="langbtn" data-lang="ru">RU</button>
  </span>
@@ -684,7 +695,7 @@ dialog b{color:var(--ink)}
   </div>
   <div class="legendbar">
    <div class="lgcap"><span data-i18n="light">Лёгкий срез</span><small data-i18n="light_hint">клик — вкл/выкл · ⌥ — только она</small></div>
-   <div style="min-width:150px"><div class="note" data-i18n="slice_matches"></div><b class="num" id="sliceSum" style="font-size:16px"></b><p class="note count-scope" data-i18n="overlap_note"></p><div class="num" id="sliceSub" style="font-size:10.5px;color:var(--muted);margin-top:3px"></div></div>
+   <div class="slice-summary" style="min-width:150px"><div class="note" data-i18n="slice_matches"></div><b class="num" id="sliceSum" style="font-size:16px"></b><p class="note count-scope" data-i18n="overlap_note"></p><div class="num" id="sliceSub" style="font-size:10.5px;color:var(--muted);margin-top:3px"></div></div>
    <div class="lgitems" id="lgItems"></div>
    <button class="lgmore" id="lgMore"></button>
    <button class="lgclear" id="lgClear" hidden data-i18n="remove_selection"></button>
