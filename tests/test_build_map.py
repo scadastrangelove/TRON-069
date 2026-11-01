@@ -304,7 +304,7 @@ class BuildTests(unittest.TestCase):
         manifesto = next(item for item in news if item['id'] == 'tron-069-manifesto')
         self.assertTrue(manifesto['pinned'])
         newer = copy.deepcopy(next(item for item in news if not item.get('pinned')
-                                   and not item.get('important') and item['kind'] != 'disclosure'))
+                                   and not item.get('important') and item['kind'] not in ('disclosure', 'fleet')))
         newer.update(id='future-news', date='2099-01-01')
         disclosure = copy.deepcopy(newer)
         disclosure.update(id='future-disclosure', kind='disclosure')
@@ -332,6 +332,7 @@ class BuildTests(unittest.TestCase):
             with patch.object(builder, 'read', return_value=invalid):
                 with self.assertRaisesRegex(ValueError, message):
                     builder.read_news()
+
         invalid = copy.deepcopy(news)
         invalid[1]['important'] = 'true'
         with patch.object(builder, 'read', return_value=invalid):
@@ -343,6 +344,27 @@ class BuildTests(unittest.TestCase):
             with patch.object(builder, 'read', return_value=invalid):
                 with self.assertRaisesRegex(ValueError, 'Invalid news link'):
                     builder.read_news()
+
+    def test_fleet_news_requires_primary_links_and_valid_relations(self):
+        news = builder.read_news()
+        fleet = [item for item in news if item['kind'] == 'fleet']
+        self.assertEqual(len(fleet), 5)
+        with (ROOT/'registry.csv').open() as stream:
+            lines = {r['id'] for r in csv.DictReader(stream)}
+        operators = builder.read_operators()
+        builder.validate_news_relations(news, lines, operators)
+        for related in ({'lines':['missing-line']}, {'operators':['missing-operator']},
+                        {'countries':['Belgium']}, {'countries':['BE','BE']}, {'lines':'gsoap-park'},
+                        {'unexpected':[]}):
+            bad = copy.deepcopy(fleet[0])
+            bad['related'] = related
+            with self.subTest(related=related), self.assertRaises(ValueError):
+                builder.validate_news_relations([bad], lines, operators)
+        bad = copy.deepcopy(fleet[0])
+        bad['links'] = []
+        with patch.object(builder, 'read', return_value=[bad]):
+            with self.assertRaisesRegex(ValueError, 'Missing news evidence'):
+                builder.read_news()
 
     def test_all_lines_keep_huawei_and_its_overlapping_7547_slice(self):
         snapshot = self.snapshot()

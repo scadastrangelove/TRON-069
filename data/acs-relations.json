@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-10-11",
+  "reviewed": "2026-11-01",
   "nodes": [
     {
       "id": "easycwmp",
@@ -183,6 +183,29 @@
         "es": "Plataforma de gestión CPE. Un despliegue concreto no identifica el ACS de todos los dispositivos ZTE.",
         "zh": "CPE 管理平台。某个已知部署不能确定所有 ZTE 设备使用的 ACS。"
       }
+    },
+    {
+      "id": "imagine",
+      "kind": "operator",
+      "name": "Imagine",
+      "operator": "imagine",
+      "description": {
+        "en": "Irish FTTH and fixed wireless operator.",
+        "ru": "Ирландский оператор FTTH и фиксированного беспроводного доступа.",
+        "es": "Operador irlandés de FTTH y acceso inalámbrico fijo.",
+        "zh": "爱尔兰 FTTH 与固定无线接入运营商。"
+      }
+    },
+    {
+      "id": "avsystem-ump",
+      "kind": "acs",
+      "name": "AVSystem UMP",
+      "description": {
+        "en": "TR-069 Auto Configuration Server.",
+        "ru": "Сервер автоконфигурации TR-069.",
+        "es": "Servidor de autoconfiguración TR-069.",
+        "zh": "TR-069 自动配置服务器。"
+      }
     }
   ],
   "edges": [
@@ -364,6 +387,27 @@
         {
           "url": "https://www.zte.com.cn/global/about/news/mifibra-partners-with-zte-to-complete-the-commercial-deployment-of-smart-cloud-platform.html",
           "title": "ZTE · MiFibra deployment"
+        }
+      ]
+    },
+    {
+      "id": "imagine-avsystem-ump",
+      "source": "imagine",
+      "target": "avsystem-ump",
+      "kind": "deployment",
+      "status": "documented",
+      "reviewed": "2026-11-01",
+      "observed": "2026-10-23",
+      "summary": {
+        "en": "Imagine operates AVSystem UMP as its central TR-069 ACS for FTTH and 5G FWA CPE.",
+        "ru": "Imagine использует AVSystem UMP как центральный TR-069 ACS для CPE в FTTH и 5G FWA.",
+        "es": "Imagine utiliza AVSystem UMP como ACS TR-069 central para CPE de FTTH y 5G FWA.",
+        "zh": "Imagine 使用 AVSystem UMP 作为 FTTH 与 5G FWA CPE 的中央 TR-069 ACS。"
+      },
+      "sources": [
+        {
+          "url": "https://avsystem.com/news/imagine-deploys-avsystems-unified-management-platform-across-its-fibre-and-5g-network",
+          "title": "AVSystem · Imagine deployment · 2026-10-23"
         }
       ]
     }

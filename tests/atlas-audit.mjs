@@ -47,7 +47,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
     if (!elements.has(selector)) elements.set(selector, {
       innerHTML: '', textContent: '', value: '', hidden: false, style: {setProperty(){}}, dataset: {},
       classList: { add() {}, remove() {}, toggle() {} },
-      focus() {},
+      focus() {}, scrollIntoView() {},
       attrs: {}, setAttribute(key,value){this.attrs[key]=value;}, matches(){return false;}, contains(){return false;},
       createSVGPoint() { return {x:0,y:0,matrixTransform(matrix) { return {x:this.x*matrix.scale,y:(this.y-matrix.offsetY)*matrix.scale}; }}; },
       getScreenCTM() { return {inverse:()=>({scale:2,offsetY:150})}; },
@@ -85,7 +85,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
       'sourcesHtml','measurementQualityHtml','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
-      'newsText','newsImportant','newsDate','renderNewsTicker','renderNews','newsStep','shouldRotateNews','renderWanted','renderTabVisibility'].map(fn),
+      'newsText','newsImportant','newsDate','newsSelection','newsRelations','relatedNewsItems','newsHref','renderRelatedNews','renderNewsTicker','renderNews','newsStep','shouldRotateNews','focusNews','openNewsItem','renderWanted','renderTabVisibility'].map(fn),
     'function refreshTest(){SLICE=computeSlice();SLICE_FULL=computeSlice(true);GEOT=lineGeoTotals();}',
     'DNcur=new Intl.DisplayNames([LANG],{type:"region"});'
   ];
@@ -652,6 +652,51 @@ test('manifesto-first', 'Manifesto leads the news list and initial ticker, with 
   c.run(`newsIndex=${firstOrdinary};renderNewsTicker()`);
   expect(c.element('#newsTicker').dataset.priority==='standard'&&c.element('#newsKicker').textContent===c.run('t("news_title")'),'Ticker keeps stale emphasis');
   return 'Manifesto, public disclosures and major research, then ordinary news; matching ticker emphasis';
+});
+test('related-news-selection', 'Related stories use explicit line, country and exact operator links, newest first', () => {
+  const c=context();
+  expect(!c.run('newsSelection().active')&&c.run('relatedNewsItems().length')===0,'Default map has implicit news matches');
+  c.run('S.lines.add("gsoap-park");renderNews()');
+  expect(c.element('#relatedNewsGrid').innerHTML.includes('lines=gsoap-park'),'Preview href uses stale URL filters');
+  expect(c.run('relatedNewsItems()[0].item.id')==='gsoap-same-version-different-bytes','Latest component story missing');
+  expect(c.element('#relatedNewsGrid').innerHTML.includes('data-news-open="gsoap-same-version-different-bytes"'),'Component preview missing');
+  expect(!c.run('relatedNewsItems().some(r=>r.item.id==="wpsplinter-broadcom-operator-cpe")'),'Unrelated Broadcom story leaks into gSOAP');
+  c.run('S.lines.clear();S.geo.add("c:BE")');
+  expect(c.run('relatedNewsItems().some(r=>r.item.id==="wpsplinter-broadcom-operator-cpe")'),'Country association missing');
+  c.run('S.geo.clear();S.orgs.add("Orange Belgium SA")');
+  expect(c.run('relatedNewsItems().some(r=>r.item.id==="wpsplinter-broadcom-operator-cpe")'),'Operator alias missing');
+  c.run('S.geo.add("c:FR")');
+  expect(!c.run('newsSelection().operators.has("orange-belgium")'),'Operator match ignores country');
+  c.run('S.geo.clear();S.orgs.clear();S.orgs.add("raw:Imagine Communications Group Limited")');
+  expect(c.run('relatedNewsItems()[0].item.id')==='imagine-avsystem-acs','Raw operator alias missing');
+  c.run('S.orgs.clear();S.cell={cc:"IE",slug:"gsoap-park"}');
+  expect(c.run('relatedNewsItems().length')>=2,'Pair did not retain component and country context');
+  const dates=c.run('relatedNewsItems().map(r=>r.item.date)');
+  expect(dates.every((date,i)=>!i||dates[i-1]>=date),'Related news not chronological');
+  c.run('S.cell=null;S.lines.add("qacafe-cdrouter-test-realm");renderNews()');
+  // An empty editorial list must never produce unrelated suggestions.
+  c.run('DATA.news=[];renderRelatedNews()');
+  expect(!c.element('#relatedNewsEmpty').hidden&&!c.element('#relatedNews').hidden,'Empty state missing');
+  return 'Component, country, scoped alias, raw alias, pair, ordering and empty state';
+});
+test('news-deep-links', 'Story navigation preserves map filters, date and language in a shareable URL', () => {
+  const c=context({hash:'#lang=es&snapshot='+data.snapshot+'&lines=gsoap-park&geo=c:IE'});
+  c.run('urlRead();openNewsItem("gsoap-same-version-different-bytes")');
+  let params=new URLSearchParams(c.sandbox.location.hash.slice(1));
+  for(const [key,value] of Object.entries({lang:'es',snapshot:data.snapshot,lines:'gsoap-park',geo:'c:IE',tab:'news',news:'gsoap-same-version-different-bytes'}))expect(params.get(key)===value,'Lost '+key);
+  c.run('S.newsId="";S.lines.clear();S.geo.clear();urlRead();renderNews()');
+  expect(c.run('S.newsId')==='gsoap-same-version-different-bytes','Reload lost selected story');
+  expect(c.element('#newsGrid').innerHTML.includes('news-selected'),'Selected card is not highlighted');
+  c.run('S.newsFilter="fleet";S.newsId="";renderNews()');
+  expect((c.element('#newsGrid').innerHTML.match(/<article /g)||[]).length===data.news.filter(n=>n.kind==='fleet').length,'Fleet filter wrong');
+  c.run('S.newsFilter="related";renderNews()');
+  expect(!c.element('#newsGrid').innerHTML.includes('id="news-tron-069-manifesto"'),'Unrelated manifesto leaks into scoped list');
+  for(const lang of ['ru','en','es','zh']){
+    c.run(`LANG=${JSON.stringify(lang)};DNcur=new Intl.DisplayNames([LANG],{type:"region"});renderNews()`);
+    if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(c.element('#relatedNewsGrid').innerHTML),'Russian fallback in '+lang+' previews');
+  }
+  c.sandbox.location.hash='#tab=news&news=unknown';c.run('urlRead()');expect(c.run('S.newsId')==='','Unknown story accepted');
+  return 'Deep link, retained selection, reload, filters and four preview languages';
 });
 test('news-pause', 'News rotation stops on pause, reduced motion, hidden tab, hover and keyboard focus', () => {
   const c=context();expect(c.run('shouldRotateNews()'),'Rotation disabled unexpectedly');

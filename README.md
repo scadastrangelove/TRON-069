@@ -32,6 +32,22 @@ built from dated Shodan aggregates. Explore the map, compare implementations,
 inspect operator slices and follow each research observation to its source.
 The interface supports English, Spanish, Chinese and Russian.
 
+News includes project updates and public research about the fleet. Selecting a
+component, operator or country shows the three latest linked stories in the
+map inspector. Open a story without losing the map filters, language or collection date;
+its URL can be shared directly. The news page has Project, Fleet and Related
+filters. News remains current when viewing historical measurements.
+
+Edit `data/project-news.json` to add stories. Supply `title` and `body` in all four
+languages, a publication date, and primary-source `links` for `kind: "fleet"`.
+Optional `related.lines` uses registry IDs, `related.operators` uses IDs from
+`data/operator-catalog.json`, and `related.countries` uses two-letter country
+codes. Relationships are editorial context, not vulnerability counts. Matching
+uses any explicitly linked selected entity and shows the reason; it does not
+infer vulnerability from a shared country, vendor or HTTP banner. Operator
+aliases are exact and country-scoped. `important: true` highlights a story;
+the manifesto remains first in the full feed.
+
 **Current collection: 29 October 2026.** 55 signature lines,
 2,797 country–line operator slices, 131 research queries and
 48 additional observations. Full collection ran from 20:09:25 to

@@ -392,6 +392,29 @@ dialog b{color:var(--ink)}
 .news-links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:12px;color:var(--accent)}
 .news-links a{text-decoration:underline;text-underline-offset:3px}
 .news-card:focus{outline:2px solid var(--accent);outline-offset:3px}
+.news-card.news-selected{outline:2px solid var(--accent);outline-offset:3px}
+.news-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.news-filters button[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.related-news{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#f8faff}
+.related-news-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.related-news-head h3{font-size:14px;margin:0 0 4px}
+.related-news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.related-news-card{display:flex;flex-direction:column;gap:8px;min-width:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;text-decoration:none}
+.related-news-card:hover,.related-news-card:focus-visible{border-color:var(--accent);outline:2px solid var(--accent-soft)}
+.related-news-card.important{border-left:3px solid #b87720;background:#fffaf0}
+.related-news-card time{font:10px ui-monospace,monospace;color:var(--muted)}
+.related-news-card strong{font-size:12px;line-height:1.5;color:var(--ink)}
+.news-relations{font-size:11px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}
+.news-card .news-relations{margin-top:12px}
+.inspector .related-news{margin-top:12px;padding:10px;background:#f8faff}
+.inspector .related-news-head{gap:6px;flex-wrap:wrap}
+.inspector .related-news-head h3{margin:0;color:var(--ink2);letter-spacing:.4px}
+.inspector .related-news-head button{padding:4px 0;font-size:10px}
+.inspector .related-news-grid{grid-template-columns:1fr;gap:7px}
+.inspector .related-news-card{padding:8px;gap:4px}
+.inspector .related-news-card>span.note{display:none}
+.inspector .related-news-card .news-relations{font-size:10px}
+@media(max-width:760px){.related-news-grid{grid-template-columns:1fr}.related-news-head{align-items:start;flex-wrap:wrap}.related-news-card{min-height:44px}.news-filters button{min-height:44px}}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:760px){.news-ticker{flex-wrap:wrap;gap:8px;padding:12px}.news-headline{order:3;flex-basis:100%;min-height:54px;align-items:start;flex-direction:column;gap:6px}.news-headline span{white-space:normal;line-height:1.55}.news-controls{margin-left:auto}.news-grid{grid-template-columns:1fr}.news-card{padding:18px}.news-header{align-items:start;flex-direction:column}.news-all{font-size:10px}}
 
@@ -782,6 +805,13 @@ dialog b{color:var(--ink)}
 
 <section id="tab-news" hidden>
  <div class="news-header"><div><div class="eyebrow" data-i18n="news_eyebrow">PROJECT LOG</div><h2 data-i18n="news_title">Project news</h2><p data-i18n="news_intro"></p></div><button class="btn" id="newsBack" data-i18n="news_back"></button></div>
+ <div class="news-filters" id="newsFilters" role="group" data-i18n-aria="news_title">
+  <button class="btn" data-news-filter="all" data-i18n="news_filter_all"></button>
+  <button class="btn" data-news-filter="project" data-i18n="news_filter_project"></button>
+  <button class="btn" data-news-filter="fleet" data-i18n="news_filter_fleet"></button>
+  <button class="btn" data-news-filter="related" data-i18n="news_filter_related"></button>
+ </div>
+ <p class="note" id="newsEmpty" data-i18n="news_related_empty" hidden></p>
  <div class="news-grid" id="newsGrid"></div>
 </section>
 
@@ -1193,7 +1223,7 @@ function lineCount(slug,cc){
 }
 /* состояние */
 const S = { lines:new Set(), geo:new Set(), orgs:new Set(), mode:"clouds",
- cell:null, sort:{key:"base",dir:-1}, ccq:"", shown:60, tab:"map",
+ cell:null, sort:{key:"base",dir:-1}, ccq:"", shown:60, tab:"map", newsId:"", newsFilter:"all",
  lgExpanded:false, lgHover:null, hovCc:null };
 let openPanel=null, inspCollapsed=false;
 
@@ -1220,6 +1250,10 @@ function urlWrite(push=false){
  if(S.mode!=="clouds")p.set("mode",S.mode);
  if(S.cell)p.set("cell",S.cell.cc+","+S.cell.slug);
  if(S.tab!=="map")p.set("tab",S.tab);
+ if(S.tab==="news"){
+  if(S.newsId)p.set("news",S.newsId);
+  if(S.newsFilter!=="all")p.set("news_filter",S.newsFilter);
+ }
  if(S.tab==="ecosystem"){
   p.set("eco_view",E.view);
   if(DS.view!=="graph")p.set("net_view",DS.view);
@@ -1277,6 +1311,9 @@ function urlRead(){
  try{const expanded=JSON.parse((p.get("net_expand")||"[]").slice(0,12000));if(Array.isArray(expanded))for(const entry of expanded.slice(0,8)){if(Array.isArray(entry)&&typeof entry[0]==="string"&&dNodeInfo(entry[0])&&Number.isInteger(entry[1])&&!DS.expanded.some(e=>e[0]===entry[0]))DS.expanded.push([entry[0],Math.max(8,Math.min(32,entry[1]))]);}}catch(e){}
 
  S.tab=["map","registry","findings","ecosystem","news","wanted"].includes(p.get("tab"))?p.get("tab"):"map";
+ S.newsId=S.tab==="news"&&(DATA.news||[]).some(n=>n.id===p.get("news"))?p.get("news"):"";
+ S.newsFilter=["fleet","project","related"].includes(p.get("news_filter"))?p.get("news_filter"):"all";
+ if(S.newsId)S.newsFilter="all";
 }
 
 /* срез */
@@ -2116,6 +2153,11 @@ function renderInspector(){
   <div class="sc-grid" style="margin-top:14px" id="scPanel"></div>
   <div class="scopewarn">${t("warn_slice")}</div>`;
  }
+ h=h.replace("</h2>",`</h2><section class="related-news" id="relatedNews" aria-labelledby="relatedNewsTitle" hidden>
+  <div class="related-news-head"><div><h3 id="relatedNewsTitle">${esc(t("news_related"))}</h3></div><button class="btn ghost" id="newsRelatedAll" data-news-related-all>${esc(t("news_all_related"))}</button></div>
+  <div class="related-news-grid" id="relatedNewsGrid"></div>
+  <p class="note" id="relatedNewsEmpty" hidden>${esc(t("news_related_empty"))}</p>
+ </section>`);
  insp.innerHTML=h;
  insp.scrollTop=0;
  const ic=insp.querySelector("#inspCollapse");if(ic)ic.onclick=toggleInsp;
@@ -2291,7 +2333,7 @@ function renderTabVisibility(){
  for(const id of ["#atlasIntro","#facetsRow","#chipsRow"])$(id).hidden=["news","ecosystem","wanted"].includes(S.tab);
  $("#modeNote").hidden=["news","ecosystem","wanted"].includes(S.tab)||S.mode!=="http";
 }
-function switchTab(t){S.tab=t;renderTabVisibility();if(t==="ecosystem")renderEcosystem();urlWrite();}
+function switchTab(t){S.tab=t;if(t!=="news")S.newsId="";renderTabVisibility();if(t==="ecosystem")renderEcosystem();urlWrite();}
 $$(".nav").forEach(b=>b.onclick=()=>{switchTab(b.dataset.tab);window.scrollTo({top:0,behavior:"auto"});});
 $("#brandHome").onclick=e=>{e.preventDefault();switchTab("map");};
 
@@ -2792,9 +2834,69 @@ function renderNewsTicker(){
  $("#newsPause").disabled=newsMotion.matches||items.length<2;
  $("#newsPrev").disabled=$("#newsNext").disabled=items.length<2;
 }
+function newsSelection(){
+ const lines=new Set(S.cell?[S.cell.slug]:S.lines),countries=new Set(S.cell?[S.cell.cc]:[]);
+ if(!S.cell)for(const token of S.geo){
+  if(token.startsWith('c:'))countries.add(token.slice(2));
+  if(token.startsWith('r:'))for(const [cc,region] of Object.entries(CC2REG))if(region===token.slice(2))countries.add(cc);
+ }
+ const operators=new Set();
+ for(const op of DATA.operatorCatalog.operators){
+  if(countries.size&&!countries.has(op.country))continue;
+  const names=new Set([op.name,...op.aliases,...op.aliases.map(a=>normOrg(a,op.country))].map(s=>s.toLowerCase()));
+  if([...S.orgs].some(s=>names.has((s.startsWith('raw:')?s.slice(4):s).toLowerCase())))operators.add(op.id);
+ }
+ return {lines,countries,operators,active:!!(S.cell||S.lines.size||S.geo.size||S.orgs.size)};
+}
+function newsRelations(item,selection=null){
+ const related=item.related||{},out=[];
+ for(const id of related.lines||[])if(!selection||selection.lines.has(id))out.push(t('news_line')+': '+DATA.lines[id].name);
+ for(const id of related.operators||[])if(!selection||selection.operators.has(id))out.push(t('news_operator')+': '+DATA.operatorCatalog.operators.find(op=>op.id===id).name);
+ for(const cc of related.countries||[])if(!selection||selection.countries.has(cc))out.push(t('news_country')+': '+ccName(cc));
+ return out;
+}
+function relatedNewsItems(){
+ const selection=newsSelection();
+ if(!selection.active)return [];
+ return (DATA.news||[]).map(item=>({item,reasons:newsRelations(item,selection)})).filter(row=>row.reasons.length).sort((a,b)=>b.item.date.localeCompare(a.item.date)||a.item.id.localeCompare(b.item.id));
+}
+function newsHref(id){
+ const p=new URLSearchParams(location.hash.slice(1));
+ // Rendering precedes urlWrite during map updates; links must use the new selection.
+ for(const key of ['lines','geo','org','orgs','cell','mode'])p.delete(key);
+ if(S.lines.size)p.set('lines',[...S.lines].join(','));
+ if(S.geo.size)p.set('geo',[...S.geo].join(','));
+ for(const org of S.orgs)p.append('org',org);
+ if(S.cell)p.set('cell',S.cell.cc+','+S.cell.slug);
+ if(S.mode!=='clouds')p.set('mode',S.mode);
+ p.set('lang',LANG);p.set('snapshot',DATA.snapshot);p.set('tab','news');p.set('news',id);p.delete('news_filter');
+ return '#'+p.toString();
+}
+function renderRelatedNews(){
+ const rows=relatedNewsItems(),selection=newsSelection();
+ $('#relatedNews').hidden=!selection.active;
+ $('#relatedNewsEmpty').hidden=!!rows.length;
+ $('#newsRelatedAll').hidden=!rows.length;
+ $('#relatedNewsGrid').innerHTML=rows.slice(0,3).map(({item,reasons})=>`<a class="related-news-card${newsImportant(item)?' important':''}" data-news-open="${esc(item.id)}" href="${esc(newsHref(item.id))}"><time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><strong>${esc(newsText(item,'title'))}</strong><span class="news-relations" title="${esc(reasons.join(' · '))}">${esc(reasons.slice(0,3).join(' · '))}</span><span class="note">${esc(t('news_open'))} →</span></a>`).join('');
+}
 function renderNews(){
- $("#newsGrid").innerHTML=(DATA.news||[]).map(item=>`<article class="news-card${newsImportant(item)?" important":""}" id="news-${esc(item.id)}" tabindex="-1"><div class="news-meta">${item.pinned?`<span class="news-pin">${esc(t("news_pinned"))}</span>`:""}${newsImportant(item)?`<span class="news-important">${esc(t("news_important"))}</span>`:""}<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span class="news-tag">${t("news_kind_"+item.kind)}</span></div><h3>${esc(newsText(item,"title"))}</h3>${newsText(item,"body").split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join("")}${item.links?.length?`<div class="news-links">${item.links.map(link=>`<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join("")}</div>`:""}${sourcesHtml(item.evidence)}${item.view==="ecosystem"?`<div class="actrow"><button class="btn soft" data-eco-news>${t("eco_news_link")}</button></div>`:""}${item.view==="wanted"?`<div class="actrow"><button class="btn soft" data-wanted-open>${t("wanted_news_link")}</button></div>`:""}</article>`).join("");
+ let items=DATA.news||[];
+ if(S.newsFilter==='related')items=relatedNewsItems().map(row=>row.item);
+ else if(S.newsFilter!=='all')items=items.filter(item=>(item.kind==='fleet')===(S.newsFilter==='fleet'));
+ $$('#newsFilters button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.newsFilter===S.newsFilter)));
+ $('#newsEmpty').hidden=!!items.length;
+ $('#newsGrid').innerHTML=items.map(item=>`<article class="news-card${newsImportant(item)?' important':''}${S.newsId===item.id?' news-selected':''}" id="news-${esc(item.id)}" tabindex="-1"><div class="news-meta">${item.pinned?`<span class="news-pin">${esc(t('news_pinned'))}</span>`:''}${newsImportant(item)?`<span class="news-important">${esc(t('news_important'))}</span>`:''}<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span class="news-tag">${esc(t('news_kind_'+item.kind))}</span></div><h3>${esc(newsText(item,'title'))}</h3>${newsText(item,'body').split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join('')}${newsRelations(item).length?`<div class="news-relations">${esc(t('news_related_to'))}: ${esc(newsRelations(item).join(' · '))}</div>`:''}${item.links?.length?`<div class="news-links">${item.links.map(link=>`<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join('')}</div>`:''}${sourcesHtml(item.evidence)}<div class="news-links"><a data-news-open="${esc(item.id)}" href="${esc(newsHref(item.id))}">${esc(t('news_permalink'))} ↗</a></div>${item.view==='ecosystem'?`<div class="actrow"><button class="btn soft" ${item.ecosystem_node?`data-eco-open="${esc(item.ecosystem_node)}"`:"data-eco-news"}>${t('eco_news_link')}</button></div>`:''}${item.view==='wanted'?`<div class="actrow"><button class="btn soft" data-wanted-open>${t('wanted_news_link')}</button></div>`:''}</article>`).join('');
  renderNewsTicker();
+ renderRelatedNews();
+}
+function focusNews(){
+ if(S.tab!=='news'||!S.newsId)return;
+ const card=$('#news-'+S.newsId);
+ if(card){card.scrollIntoView({block:'center',behavior:'auto'});card.focus({preventScroll:true});}
+}
+function openNewsItem(id){
+ if(!(DATA.news||[]).some(item=>item.id===id))return;
+ S.tab='news';S.newsId=id;S.newsFilter='all';renderNews();renderTabVisibility();urlWrite(true);focusNews();
 }
 function newsStep(delta,announce){
  newsIndex+=delta;renderNewsTicker();
@@ -2804,10 +2906,21 @@ $("#newsPrev").onclick=()=>newsStep(-1,true);
 $("#newsNext").onclick=()=>newsStep(1,true);
 $("#newsPause").onclick=()=>{newsPaused=!newsPaused;renderNewsTicker();};
 function openNews(focusItem){
- switchTab("news");
- if(focusItem){const card=$("#news-"+DATA.news[newsIndex].id);card.scrollIntoView({block:"center"});card.focus({preventScroll:true});}
- else $("#tab-news").scrollIntoView({block:"start"});
+ if(focusItem){openNewsItem(DATA.news[newsIndex].id);return;}
+ S.newsId="";S.newsFilter="all";renderNews();switchTab("news");$("#tab-news").scrollIntoView({block:"start"});
 }
+$("#newsFilters").onclick=e=>{
+ const button=e.target.closest('[data-news-filter]');if(!button)return;
+ S.newsId="";S.newsFilter=button.dataset.newsFilter;renderNews();urlWrite(true);
+};
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-news-related-all]')){
+  S.tab="news";S.newsId="";S.newsFilter="related";renderNews();renderTabVisibility();urlWrite(true);$("#tab-news").scrollIntoView({block:"start"});return;
+ }
+ const link=e.target.closest('[data-news-open]');
+ if(!link||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button>0)return;
+ e.preventDefault();openNewsItem(link.dataset.newsOpen);
+});
 $("#newsHeadline").onclick=()=>openNews(true);
 $("#newsAll").onclick=()=>openNews(false);
 $("#newsBack").onclick=()=>{switchTab("map");$("#newsAll").focus();};
@@ -2933,12 +3046,12 @@ document.addEventListener("keydown",e=>{
 });
 urlRead();switchTab(S.tab);try{DNcur=new Intl.DisplayNames([LANG==="zh"?"zh-Hans":LANG],{type:"region"});}catch(e){}
 applyStaticI18N();$$(".langbtn").forEach(b2=>{b2.classList.toggle("on",b2.dataset.lang===LANG);b2.onclick=()=>setLang(b2.dataset.lang);});
-refreshAll();
+refreshAll();focusNews();
 window.addEventListener("resize",()=>{scaleStatics();});
 $('#snapshotSelect').onchange=e=>chooseSnapshot(e.target.value);
 window.addEventListener("hashchange",()=>{
  if(snapshotTarget()!==DATA.snapshot){location.reload();return;}
- urlRead();setLang(LANG);switchTab(S.tab);
+ urlRead();setLang(LANG);switchTab(S.tab);focusNews();
 });
 
 })();

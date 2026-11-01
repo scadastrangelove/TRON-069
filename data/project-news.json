@@ -1,5 +1,184 @@
 [
   {
+    "id": "gsoap-same-version-different-bytes",
+    "date": "2026-10-27",
+    "kind": "fleet",
+    "important": true,
+    "title": {
+      "en": "gSOAP 2.8.144: same version, different bytes",
+      "ru": "gSOAP 2.8.144: версия та же, код другой",
+      "es": "gSOAP 2.8.144: misma versión, bytes distintos",
+      "zh": "gSOAP 2.8.144：版本相同，代码不同"
+    },
+    "body": {
+      "en": "Fuzze.rs reproduced heap corruption in a gSOAP client. The public 2.8.144 archive was then found to contain different code under the same version number; the replacement blocks the tested overflow. A version banner cannot distinguish these builds. The report demonstrates memory corruption and denial of service.",
+      "ru": "Fuzze.rs воспроизвели повреждение памяти в клиенте gSOAP. Публичный архив 2.8.144 оказался заменён без смены версии; новый код блокирует проверенное переполнение. По баннеру эти сборки не различить. Исследование подтверждает повреждение памяти и отказ в обслуживании.",
+      "es": "Fuzze.rs reprodujo corrupción de memoria en un cliente gSOAP. El archivo público 2.8.144 fue sustituido sin cambiar la versión; el nuevo código bloquea el desbordamiento probado. El banner no permite distinguir ambas compilaciones. El informe demuestra corrupción de memoria y denegación de servicio.",
+      "zh": "Fuzze.rs 在 gSOAP 客户端复现了内存破坏。公开的 2.8.144 源码包在版本号不变的情况下被替换，新代码阻止了测试中的溢出。版本横幅无法区分这两种构建。报告证实了内存破坏与拒绝服务。"
+    },
+    "links": [
+      {
+        "label": "Fuzze.rs · Same Version, Different Bytes",
+        "url": "https://fuzze.rs/blog/gsoap-same-version-different-bytes"
+      }
+    ],
+    "related": {
+      "lines": [
+        "gsoap-park",
+        "gsoap-service-realm",
+        "gsoap-2-7-vendor-map",
+        "gsoap-2-8-vendor-map",
+        "magticom-gsoap"
+      ]
+    }
+  },
+  {
+    "id": "wpsplinter-broadcom-operator-cpe",
+    "date": "2026-10-16",
+    "kind": "fleet",
+    "important": true,
+    "title": {
+      "en": "WPSplinter: a shared Broadcom component in operator CPE",
+      "ru": "WPSplinter: общий Broadcom-компонент в операторских CPE",
+      "es": "WPSplinter: un componente Broadcom compartido en CPE de operadores",
+      "zh": "WPSplinter：运营商 CPE 中共用的 Broadcom 组件"
+    },
+    "body": {
+      "en": "Quentin Kaiser demonstrated code execution over nearby Wi-Fi in legacy Broadcom WPS Monitor, without knowing the network key. Demonstrations include Orange Belgium’s Askey TCG3000 and Proximus BBOX 3V+. In an October 20 update, he reported that Proximus had disabled WPS across its BBOX fleet. The public project includes firmware fingerprints, YARA rules and a model/operator table covering TP-Link VR1600, ZTE and Zyxel devices. This concerns the Wi-Fi surface of these CPE; affected firmware must be checked against the source list.",
+      "ru": "Quentin Kaiser показал выполнение кода через Wi-Fi в старом Broadcom WPS Monitor: атакующему в радиусе сети не нужен её пароль. Среди демонстраций — Askey TCG3000 у Orange Belgium и BBOX 3V+ у Proximus. В обновлении от 20 октября исследователь сообщил, что Proximus отключил WPS на всём парке BBOX. Опубликованы fingerprints прошивок, YARA-правила и таблица моделей и операторов, включая TP-Link VR1600, устройства ZTE и Zyxel. Речь о Wi-Fi-поверхности этих CPE; затронутые прошивки сверяются со списком исследования.",
+      "es": "Quentin Kaiser demostró ejecución de código por Wi-Fi desde las proximidades en el antiguo Broadcom WPS Monitor, sin conocer la clave de red. Las demostraciones incluyen Askey TCG3000 de Orange Belgium y BBOX 3V+ de Proximus. En la actualización del 20 de octubre informó de que Proximus había desactivado WPS en su flota BBOX. El proyecto publica huellas de firmware, reglas YARA y una tabla de modelos y operadores con TP-Link VR1600 y equipos ZTE y Zyxel. Se trata de la superficie Wi-Fi de estos CPE; las versiones afectadas se consultan en la lista original.",
+      "zh": "Quentin Kaiser 演示了旧版 Broadcom WPS Monitor 中的代码执行：攻击者只需处于 Wi-Fi 覆盖范围，无需知道网络密码。演示设备包括 Orange Belgium 的 Askey TCG3000 和 Proximus 的 BBOX 3V+。在 10 月 20 日的更新中，他报告 Proximus 已在全部 BBOX 设备上禁用 WPS。项目公开了固件指纹、YARA 规则及型号与运营商对照表，涵盖 TP-Link VR1600、ZTE 和 Zyxel 设备。这涉及 CPE 的 Wi-Fi 攻击面；具体受影响固件应以原始清单为准。"
+    },
+    "links": [
+      {
+        "label": "Quentin Kaiser · WPSplinter",
+        "url": "https://quentinkaiser.be/security/2026/10/16/one-parser-two-bugs/"
+      },
+      {
+        "label": "WPSplinter · Device catalog",
+        "url": "https://qkaiser.github.io/broadcom-wps/"
+      },
+      {
+        "label": "WPSplinter · Fingerprints and YARA",
+        "url": "https://github.com/qkaiser/broadcom-wps/"
+      }
+    ],
+    "related": {
+      "lines": [
+        "askeycwmp-askey",
+        "sagemcom",
+        "tr069-http-server",
+        "zte",
+        "cpe-server-1-0",
+        "igdauthentication",
+        "centurylink-lighttpd"
+      ],
+      "operators": [
+        "orange-belgium",
+        "proximus",
+        "centurylink"
+      ],
+      "countries": [
+        "BE",
+        "AU",
+        "US",
+        "VN"
+      ]
+    }
+  },
+  {
+    "id": "zyxel-october-cpe-fixes",
+    "date": "2026-10-20",
+    "kind": "fleet",
+    "important": false,
+    "title": {
+      "en": "Zyxel: October fixes for CPE and ONTs",
+      "ru": "Zyxel: октябрьские исправления CPE и ONT",
+      "es": "Zyxel: correcciones de octubre para CPE y ONT",
+      "zh": "Zyxel：10 月 CPE 与 ONT 安全修复"
+    },
+    "body": {
+      "en": "Zyxel’s October 6 advisory addresses CVE-2023-20820 in the MediaTek SDK: an authenticated administrator could execute commands through the Wi-Fi SSID field. Zyxel says it had received no proactive notification from MediaTek before the researcher identified affected Zyxel products. The October 20 advisory covers CVE-2026-12489, an authenticated privilege escalation in the Data Access Layer. Both include firmware tables; customized ISP models are handled separately. The atlas link is vendor context for Zyxel CPE, with model and firmware scope defined by the advisories.",
+      "ru": "Бюллетень Zyxel от 6 октября описывает исправление CVE-2023-20820 в MediaTek SDK: аутентифицированный администратор мог выполнять команды через поле Wi-Fi SSID. Zyxel сообщает, что не получал предварительного уведомления от MediaTek до обнаружения затронутых устройств исследователем. Бюллетень от 20 октября касается CVE-2026-12489 — повышения привилегий аутентифицированным пользователем в Data Access Layer. В обоих приведены таблицы прошивок; заказные модели ISP рассматриваются отдельно. Связь с атласом — вендорский контекст Zyxel CPE; модели и версии определяются бюллетенями.",
+      "es": "El aviso de Zyxel del 6 de octubre corrige CVE-2023-20820 en el SDK de MediaTek: un administrador autenticado podía ejecutar comandos mediante el campo Wi-Fi SSID. Zyxel indica que MediaTek no le notificó previamente antes de que el investigador identificara productos Zyxel afectados. El aviso del 20 de octubre aborda CVE-2026-12489, una elevación de privilegios autenticada en Data Access Layer. Ambos incluyen tablas de firmware; los modelos personalizados para ISP se gestionan aparte. La relación con el atlas es el fabricante de los CPE Zyxel; los avisos delimitan los modelos y versiones.",
+      "zh": "Zyxel 10 月 6 日的公告修复了 MediaTek SDK 中的 CVE-2023-20820：已认证管理员可通过 Wi-Fi SSID 字段执行命令。Zyxel 表示，在研究人员确认其产品受影响之前，未收到 MediaTek 的主动通知。10 月 20 日的公告涉及 CVE-2026-12489，即 Data Access Layer 中已认证用户的权限提升。两份公告均列出固件版本；ISP 定制型号另行处理。与图谱的关联是 Zyxel CPE 厂商背景，具体型号和版本范围由公告界定。"
+    },
+    "links": [
+      {
+        "label": "Zyxel · CVE-2023-20820 · 2026-10-06",
+        "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-command-injection-vulnerability-in-the-wifi-ssid-field-of-certain-dsl-ethernet-cpe-fiber-onts-and-wireless-extenders-10-06-2026"
+      },
+      {
+        "label": "Zyxel · CVE-2026-12489 · 2026-10-20",
+        "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-incorrect-authorization-vulnerability-in-the-dal-of-certain-5g-nr-cpe-dsl-ethernet-cpe-fiber-onts-and-wireless-extenders-10-20-2026"
+      }
+    ],
+    "related": {
+      "lines": [
+        "igdauthentication"
+      ]
+    }
+  },
+  {
+    "id": "imagine-avsystem-acs",
+    "date": "2026-10-23",
+    "kind": "fleet",
+    "important": false,
+    "title": {
+      "en": "Imagine deploys AVSystem UMP across fibre and 5G",
+      "ru": "Imagine переводит оптический и 5G-парк на AVSystem UMP",
+      "es": "Imagine despliega AVSystem UMP en fibra y 5G",
+      "zh": "Imagine 在光纤与 5G 网络部署 AVSystem UMP"
+    },
+    "body": {
+      "en": "Irish operator Imagine deployed AVSystem UMP as its central TR-069 ACS on its own infrastructure. It manages residential and business CPE across FTTH and 5G fixed wireless access. This documents the operator–ACS relationship; the CPE client library is unspecified.",
+      "ru": "Ирландский оператор Imagine развернул AVSystem UMP как центральный TR-069 ACS на собственной инфраструктуре. Платформа управляет домашними и корпоративными CPE в FTTH и фиксированном 5G-доступе. Это публичное подтверждение связи «оператор — ACS»; клиентская библиотека CPE не указана.",
+      "es": "El operador irlandés Imagine desplegó AVSystem UMP como ACS TR-069 central en infraestructura propia. Gestiona CPE residenciales y empresariales en FTTH y acceso inalámbrico fijo 5G. El anuncio documenta la relación operador–ACS; no especifica la biblioteca cliente del CPE.",
+      "zh": "爱尔兰运营商 Imagine 在自有基础设施上部署 AVSystem UMP 作为中央 TR-069 ACS，管理 FTTH 和 5G 固定无线接入网络中的家庭及企业 CPE。公告确认了运营商与 ACS 的关系，但未说明 CPE 客户端库。"
+    },
+    "links": [
+      {
+        "label": "AVSystem · Imagine deployment",
+        "url": "https://avsystem.com/news/imagine-deploys-avsystems-unified-management-platform-across-its-fibre-and-5g-network"
+      }
+    ],
+    "related": {
+      "operators": [
+        "imagine"
+      ],
+      "countries": [
+        "IE"
+      ]
+    },
+    "view": "ecosystem",
+    "ecosystem_node": "imagine"
+  },
+  {
+    "id": "totolink-tr069-configuration",
+    "date": "2026-10-20",
+    "kind": "fleet",
+    "important": false,
+    "title": {
+      "en": "TOTOLINK X2000R: overflow in the TR-069 configuration page",
+      "ru": "TOTOLINK X2000R: переполнение в настройках TR-069",
+      "es": "TOTOLINK X2000R: desbordamiento en la configuración TR-069",
+      "zh": "TOTOLINK X2000R：TR-069 配置页面中的溢出"
+    },
+    "body": {
+      "en": "Cisco Talos published CVE-2026-9869: a stack overflow in the X2000R web interface’s TR-069 configuration handler can lead to code execution after authentication. Talos identifies the tested firmware as V1.0.0-B20250421.1327. The issue is in the web administration surface. No atlas signature has yet been tied to this exact model and build.",
+      "ru": "Cisco Talos опубликовал CVE-2026-9869: переполнение стека в обработчике настройки TR-069 веб-интерфейса X2000R позволяет выполнить код после аутентификации. Проверена прошивка V1.0.0-B20250421.1327. Уязвимость относится к поверхности веб-администрирования. Связь точной модели и сборки с конкретной сигнатурой атласа пока не установлена.",
+      "es": "Cisco Talos publicó CVE-2026-9869: un desbordamiento de pila en el controlador de configuración TR-069 de la interfaz web del X2000R permite ejecutar código tras autenticarse. La versión probada es V1.0.0-B20250421.1327. El fallo pertenece a la administración web. Todavía no se ha vinculado una firma del atlas con este modelo y compilación exactos.",
+      "zh": "Cisco Talos 公开了 CVE-2026-9869：X2000R 网页界面的 TR-069 配置处理函数存在栈溢出，可在认证后导致代码执行。测试固件版本为 V1.0.0-B20250421.1327。问题位于网页管理界面。目前尚未将该具体型号及构建与图谱中的某条指纹建立对应关系。"
+    },
+    "links": [
+      {
+        "label": "Cisco Talos · TALOS-2026-2431",
+        "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2431"
+      }
+    ],
+    "related": {}
+  },
+  {
     "id": "legacy-http-all-ports",
     "date": "2026-10-21",
     "kind": "research",
@@ -19,7 +198,13 @@
       {
         "file": "LEGACY-HTTP.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "mini-httpd",
+        "rompager"
+      ]
+    }
   },
   {
     "id": "genieacs-public-advisories",
@@ -55,7 +240,12 @@
         "label": "GenieACS · PR #423",
         "url": "https://github.com/genieacs/genieacs/pull/423"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "genieacs-admin-ui"
+      ]
+    }
   },
   {
     "id": "iopsys-icwmp-fixes",
@@ -84,7 +274,12 @@
         "label": "icwmp · devel",
         "url": "https://dev.iopsys.eu/bbf/icwmp/-/commits/devel"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "icwmp-iopsys"
+      ]
+    }
   },
   {
     "id": "snapshot-20261018",
@@ -234,7 +429,12 @@
         "file": "FINGERPRINTS.md",
         "anchor": "cli-build-classes"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "tr069-client-cli-server-netcore"
+      ]
+    }
   },
   {
     "id": "gateway-alternate-ports",
@@ -257,7 +457,12 @@
         "file": "FINGERPRINTS.md",
         "anchor": "gateway-port-scopes"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "gateway-realm"
+      ]
+    }
   },
   {
     "id": "dslforum-operator-scopes",
@@ -280,7 +485,12 @@
         "file": "FINGERPRINTS.md",
         "anchor": "dslforum-cpe-management"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "dt-speedport-sdk"
+      ]
+    }
   },
   {
     "id": "igdauth-broadcom-tr69c",
@@ -303,7 +513,12 @@
         "file": "DEANON-IGDAUTH.md",
         "anchor": "public-evidence"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "igdauthentication"
+      ]
+    }
   },
   {
     "id": "works-systems-oneagent-attribution",
@@ -330,7 +545,14 @@
         "file": "NOTES.md",
         "anchor": "section-9.33"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "digauth",
+        "fake-apache-openagent",
+        "tr069-client"
+      ]
+    }
   },
   {
     "id": "zte-huawei-second-image",
@@ -356,7 +578,15 @@
       {
         "file": "DEANON-HUAWEI-CR.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "cpe-server-1-0",
+        "huaweihomegateway",
+        "huaweihomegateway-cr-slice",
+        "zte"
+      ]
+    }
   },
   {
     "id": "openagent-subfamily-fingerprints",
@@ -382,7 +612,14 @@
         "file": "TR-PARK-REGISTRY.md",
         "anchor": "tr069-client"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "digauth",
+        "fake-apache-openagent",
+        "tr069-client"
+      ]
+    }
   },
   {
     "id": "usp-transport-fingerprints",
@@ -453,7 +690,16 @@
         "file": "ACS-INTEGRATION-EVIDENCE.md"
       }
     ],
-    "view": "ecosystem"
+    "view": "ecosystem",
+    "related": {
+      "lines": [
+        "easycwmp-vanilla",
+        "gateway-realm",
+        "genieacs-admin-ui",
+        "icwmp-iopsys",
+        "rdk-b-ccsptr069pa"
+      ]
+    }
   },
   {
     "id": "acs-firmware-evidence",
@@ -581,7 +827,18 @@
       {
         "file": "DEANON-TR069CLIENT.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "acssimtool",
+        "cpe-server-1-0",
+        "cwmp-server",
+        "dt-speedport-sdk",
+        "gateway-realm",
+        "tr069-client",
+        "tr069-client-cli-server-netcore"
+      ]
+    }
   },
   {
     "id": "obuspa-banner-research",
@@ -634,7 +891,14 @@
       {
         "file": "ACS-HUNT.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "cwmp-server",
+        "nettyserver",
+        "telefonica-cwmpweb"
+      ]
+    }
   },
   {
     "id": "full-operator-collector",
@@ -706,7 +970,14 @@
       {
         "file": "data/mapmeta.json"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "digauth",
+        "fake-apache-openagent",
+        "tr069-client"
+      ]
+    }
   },
   {
     "id": "slice-quality",
@@ -780,7 +1051,16 @@
       {
         "file": "data/mapdata/facts.json"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "easycwmp-fork-ecntcwmp",
+        "easycwmp-fork-leanoacs",
+        "easycwmp-fork-ltecpe",
+        "easycwmp-vanilla",
+        "tr069-client"
+      ]
+    }
   },
   {
     "id": "explorer-v3",
@@ -826,7 +1106,16 @@
         "file": "NOTES.md",
         "anchor": "section-9.17"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "cpe-server-1-0",
+        "cwmp-agent-orange-tunisie",
+        "mini-web-server-1-0-zte-corp",
+        "tr069-http-server",
+        "zte"
+      ]
+    }
   },
   {
     "id": "collector-added",
@@ -894,7 +1183,13 @@
       {
         "file": "DEANON-HUAWEI-CR.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "huaweihomegateway",
+        "huaweihomegateway-cr-slice"
+      ]
+    }
   },
   {
     "id": "version-counts-qualified",
@@ -916,7 +1211,13 @@
       {
         "file": "ACS-HUNT.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "avsystem-libcwmp",
+        "genieacs-admin-ui"
+      ]
+    }
   },
   {
     "id": "integrator-network-limits",
@@ -938,7 +1239,13 @@
       {
         "file": "NOTES.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "easycwmp-vanilla",
+        "tr069-client"
+      ]
+    }
   },
   {
     "id": "bounded-negative-checks",
@@ -966,7 +1273,14 @@
       {
         "file": "NONCE-PATHOLOGY.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "decimal-nonce-class",
+        "gsoap-park",
+        "huaweihomegateway-cr-slice"
+      ]
+    }
   },
   {
     "id": "active-fingerprint-results",
@@ -988,7 +1302,12 @@
       {
         "file": "FINGERPRINTS.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "easycwmp-vanilla"
+      ]
+    }
   },
   {
     "id": "specific-signatures-before-toolkit",
@@ -1017,7 +1336,14 @@
       {
         "file": "ACS-HUNT.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "gsoap-park",
+        "realtek-sdk",
+        "sagemcom"
+      ]
+    }
   },
   {
     "id": "freeacs-public-disclosure",
@@ -1050,6 +1376,11 @@
         "label": "Public disclosure tracker",
         "url": "https://github.com/scadastrangelove/rust-in-peace/blob/main/DISCLOSURES-PUBLIC.md"
       }
-    ]
+    ],
+    "related": {
+      "lines": [
+        "freeacs"
+      ]
+    }
   }
 ]

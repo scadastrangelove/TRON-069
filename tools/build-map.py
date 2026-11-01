@@ -52,7 +52,7 @@ def read_news():
             raise ValueError('Invalid or duplicate news ID')
         ids.add(item['id'])
         date.fromisoformat(item['date'])
-        if item['kind'] not in ('atlas', 'research', 'data', 'disclosure'):
+        if item['kind'] not in ('atlas', 'research', 'data', 'disclosure', 'fleet'):
             raise ValueError('Unknown news category')
         if item.get('view') not in (None, 'ecosystem', 'wanted'):
             raise ValueError('Unknown news view')
@@ -70,9 +70,9 @@ def read_news():
             if any(not isinstance(item[field].get(lang), str) or not item[field][lang].strip()
                    for lang in ('ru', 'en', 'es', 'zh')):
                 raise ValueError(f'Missing news translation: {item["id"]}/{field}')
-        if not item.get('evidence'):
+        if not item.get('evidence') and not (item['kind'] == 'fleet' and item.get('links')):
             raise ValueError(f'Missing news evidence: {item["id"]}')
-        for evidence in item['evidence']:
+        for evidence in item.get('evidence', []):
             path = (ROOT/evidence['file']).resolve()
             if not path.is_relative_to(ROOT) or not path.is_file():
                 raise ValueError(f'Invalid news evidence file: {item["id"]}')
@@ -84,11 +84,27 @@ def read_news():
         item['date']), reverse=True)
 
 
+def validate_news_relations(news, lines, operators):
+    operator_ids = {op['id'] for op in operators['operators']}
+    for item in news:
+        related = item.get('related', {})
+        if not isinstance(related, dict) or set(related) - {'lines', 'operators', 'countries'}:
+            raise ValueError(f'Invalid news relations: {item["id"]}')
+        for key, values in related.items():
+            if (not isinstance(values, list) or any(not isinstance(v, str) for v in values)
+                    or len(set(values)) != len(values)):
+                raise ValueError(f'Invalid news relations: {item["id"]}/{key}')
+            allowed = set(lines) if key == 'lines' else operator_ids if key == 'operators' else None
+            if any(v not in allowed if allowed is not None else not re.fullmatch('[A-Z]{2}', v)
+                   for v in values):
+                raise ValueError(f'Unknown news relation: {item["id"]}/{key}')
+
+
 def validate_sources(data):
     references = [s for m in data['meta']['lines'].values() for s in m.get('sources', [])]
     references += [s for items in data['facts'].values() for f in items for s in f.get('sources', [])]
     references += [v['source'] for items in data['variants'].values() for v in items if v.get('source')]
-    references += [s for n in data['news'] for s in n['evidence']]
+    references += [s for n in data['news'] for s in n.get('evidence', [])]
     references += [q['source'] for q in data.get('queryCatalog', [])]
     references += [s for item in data.get('wanted', {}).get('items', []) for s in item['sources']]
     references += [s for item in data.get('attributions', {}).get('items', []) for s in item['sources']]
@@ -341,6 +357,10 @@ def build_data(snapshot):
         'attributions': read_attributions(ROOT, registry),
     }
     validate_translations(data)
+    validate_news_relations(data['news'], registry, data['operatorCatalog'])
+    for item in data['news']:
+        if item.get('ecosystem_node') and item['ecosystem_node'] not in {n['id'] for n in data['ecosystem']['nodes']}:
+            raise ValueError(f'Unknown news ecosystem node: {item["id"]}')
     validate_sources(data)
     return data
 
