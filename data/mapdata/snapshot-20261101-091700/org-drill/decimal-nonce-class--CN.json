@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:CN",
+ "total": 8,
+ "taken": "2026-11-01T10:01:08+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 8,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 8,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as4837"
+  },
+  {
+   "count": 2,
+   "value": "as4134"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "China Unicom Shandong Province Network"
+  },
+  {
+   "count": 3,
+   "value": "China Unicom Shandong province network"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET Guangdong province network"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET YUNNAN PROVINCE NETWORK"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "CN"
+}

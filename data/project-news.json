@@ -33,6 +33,53 @@
     }
   },
   {
+    "id": "broadcom-sdk-management-wifi",
+    "date": "2026-11-01",
+    "kind": "research",
+    "title": {
+      "en": "Broadcom SDK: management and Wi-Fi on one platform",
+      "ru": "Broadcom SDK: управление и Wi-Fi на одной платформе",
+      "es": "Broadcom SDK: gestión y Wi-Fi en una plataforma",
+      "zh": "Broadcom SDK：同一平台上的管理与 Wi-Fi"
+    },
+    "body": {
+      "en": "TRON-069 compared its firmware findings with Quentin Kaiser’s public WPSplinter catalog. Inspected ZyXEL C1000Z/C1100Z trees contain Broadcom CMS tr69c alongside Broadcom WPS Monitor, linking management and Wi-Fi components in the sampled platform. Askey model/operator references provide new firmware leads for the unresolved DSLForum response class. These links describe software composition; the atlas retains its existing attribution statuses and dated query counts.",
+      "ru": "TRON-069 сопоставил результаты анализа прошивок с публичным каталогом WPSplinter Quentin Kaiser. В исследованных деревьях ZyXEL C1000Z/C1100Z рядом с Broadcom CMS tr69c находится Broadcom WPS Monitor — связь компонентов управления и Wi-Fi на изученной платформе. Каталог моделей Askey и операторов даёт новые ориентиры для поиска прошивок неатрибутированного класса DSLForum. Эти связи описывают состав ПО; статусы атрибуции и датированные счётчики запросов сохраняются.",
+      "es": "TRON-069 comparó sus hallazgos de firmware con el catálogo público WPSplinter de Quentin Kaiser. Los árboles ZyXEL C1000Z/C1100Z examinados contienen Broadcom CMS tr69c junto a Broadcom WPS Monitor, vinculando gestión y Wi-Fi en la plataforma estudiada. Las referencias de modelos Askey y operadores aportan nuevas pistas de firmware para la clase DSLForum aún sin atribuir. Estas relaciones describen la composición del software; se mantienen los estados de atribución y los recuentos fechados de consultas.",
+      "zh": "TRON-069 将固件分析结果与 Quentin Kaiser 的公开 WPSplinter 目录进行了对照。已检查的 ZyXEL C1000Z/C1100Z 固件树同时包含 Broadcom CMS tr69c 和 Broadcom WPS Monitor，关联了受检平台的管理与 Wi-Fi 组件。Askey 型号与运营商资料为尚未归属的 DSLForum 响应类别提供了新的固件线索。这些关联描述软件组成；现有归属状态和带日期的查询计数保持各自含义。"
+    },
+    "evidence": [
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.44"
+      }
+    ],
+    "links": [
+      {
+        "label": "Quentin Kaiser · WPSplinter model/operator catalog",
+        "url": "https://github.com/qkaiser/broadcom-wps/blob/039b1514e063f71b671531606b2d33a1eb3bb6eb/README.md#affected-devices"
+      }
+    ],
+    "related": {
+      "lines": [
+        "igdauthentication",
+        "centurylink-lighttpd",
+        "askeycwmp-askey",
+        "dt-speedport-sdk"
+      ],
+      "operators": [
+        "centurylink",
+        "orange-belgium"
+      ],
+      "countries": [
+        "US",
+        "DE",
+        "BE",
+        "ES"
+      ]
+    }
+  },
+  {
     "id": "wpsplinter-broadcom-operator-cpe",
     "date": "2026-10-16",
     "kind": "fleet",

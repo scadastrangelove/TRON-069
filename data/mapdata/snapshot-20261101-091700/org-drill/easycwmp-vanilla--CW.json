@@ -1,0 +1,45 @@
+{
+ "dork": "\"realm@easycwmp\" country:CW",
+ "total": 4352,
+ "taken": "2026-11-01T09:41:49+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 4352,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 4352,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 4351,
+   "value": "as11081"
+  },
+  {
+   "count": 1,
+   "value": "as11139"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4351,
+   "value": "United Telecommunication Services (UTS)"
+  },
+  {
+   "count": 1,
+   "value": "Cogent Communications, LLC"
+  }
+ ],
+ "line": "easycwmp vanilla",
+ "line_id": "easycwmp-vanilla",
+ "cc": "CW"
+}

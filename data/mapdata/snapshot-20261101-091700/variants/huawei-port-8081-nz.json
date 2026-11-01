@@ -1,0 +1,123 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8081 country:NZ",
+ "total": 106442,
+ "taken": "2026-11-01T10:16:22+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 106442,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 9,
+   "covered": 106442,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 106442,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 106442,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 106442,
+   "value": "NZ"
+  }
+ ],
+ "asn": [
+  {
+   "count": 106436,
+   "value": "as4771"
+  },
+  {
+   "count": 1,
+   "value": "as132857"
+  },
+  {
+   "count": 1,
+   "value": "as134220"
+  },
+  {
+   "count": 1,
+   "value": "as18159"
+  },
+  {
+   "count": 1,
+   "value": "as45177"
+  },
+  {
+   "count": 1,
+   "value": "as55872"
+  },
+  {
+   "count": 1,
+   "value": "as9500"
+  }
+ ],
+ "ports": [
+  {
+   "count": 106442,
+   "value": 8081
+  }
+ ],
+ "orgs": [
+  {
+   "count": 83186,
+   "value": "Spark New Zealand Trading Ltd"
+  },
+  {
+   "count": 23248,
+   "value": "Spark New Zealand Trading Limited"
+  },
+  {
+   "count": 2,
+   "value": "Spark NZ Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Devoli NZ Broadband customers"
+  },
+  {
+   "count": 1,
+   "value": "Dynamic allocations"
+  },
+  {
+   "count": 1,
+   "value": "FULL FLAVOUR LIMITED"
+  },
+  {
+   "count": 1,
+   "value": "One New Zealand Group Limited"
+  },
+  {
+   "count": 1,
+   "value": "Static Allocation Netspeed Misc"
+  },
+  {
+   "count": 1,
+   "value": "UFONE Next Generation Services Broadband"
+  }
+ ],
+ "id": "huawei-port-8081-nz",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8081 · NZ",
+  "en": "CR port 8081 · NZ",
+  "es": "Puerto CR 8081 · NZ",
+  "zh": "CR 端口 8081 · NZ"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

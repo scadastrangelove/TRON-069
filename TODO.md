@@ -40,6 +40,10 @@ Reviewed 16 October 2026. This file records status, not instructions to run scan
 - [ ] Validate any hardware-model interpretation of Huawei operator slices.
 - [ ] Expand evaluation using a labeled holdout independent of discovery samples.
 - [ ] Investigate transport-level signatures for obuspa without claiming absence.
+- [ ] Test the Askey lead for the DSLForum response class using the model
+  references in [NOTES §9.44](NOTES.md#section-9.44). Record a public firmware
+  source, version and binary hash; compare the exact CR realm and response
+  template. A model listing or WPS component match does not close attribution.
 - [ ] Review newly found versions before adding them to the query catalog.
 
 ## Publication scope

@@ -1,0 +1,53 @@
+{
+ "dork": "\"mini_httpd\" country:NC",
+ "total": 7,
+ "taken": "2026-11-01T09:52:19+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 7,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 7,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as56055"
+  },
+  {
+   "count": 1,
+   "value": "as56089"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4,
+   "value": "MLS static pool"
+  },
+  {
+   "count": 1,
+   "value": "MLS dynamic pool"
+  },
+  {
+   "count": 1,
+   "value": "MLS statik"
+  },
+  {
+   "count": 1,
+   "value": "OFFRATEL AP"
+  }
+ ],
+ "line": "mini_httpd (all ports)",
+ "line_id": "mini-httpd",
+ "cc": "NC"
+}

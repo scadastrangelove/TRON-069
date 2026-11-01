@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 opaque \"gSOAP Service\" country:GU",
+ "total": 5,
+ "taken": "2026-11-01T10:10:24+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as3605"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Guam Cablevision, LLC."
+  },
+  {
+   "count": 1,
+   "value": "EC Communications, LLC."
+  },
+  {
+   "count": 1,
+   "value": "Kuentos Communications, Inc."
+  }
+ ],
+ "line": "gSOAP Service realm",
+ "line_id": "gsoap-service-realm",
+ "cc": "GU"
+}

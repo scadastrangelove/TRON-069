@@ -1,0 +1,67 @@
+{
+ "dork": "port:49501 \"IgdAuthentication\"",
+ "total": 221624,
+ "taken": "2026-11-01T10:17:22+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 221624,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 221624,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 221624,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 221624,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 221624,
+   "value": "PL"
+  }
+ ],
+ "asn": [
+  {
+   "count": 221624,
+   "value": "as9141"
+  }
+ ],
+ "ports": [
+  {
+   "count": 221624,
+   "value": 49501
+  }
+ ],
+ "orgs": [
+  {
+   "count": 221624,
+   "value": "P4 Sp. z o.o."
+  }
+ ],
+ "id": "fact-igdauthentication-705c894151",
+ "parent": "igdauthentication",
+ "group": "facts",
+ "label": {
+  "ru": "экология порта 49501",
+  "en": "Port 49501 distribution",
+  "es": "Distribución del puerto 49501",
+  "zh": "端口 49501 分布"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

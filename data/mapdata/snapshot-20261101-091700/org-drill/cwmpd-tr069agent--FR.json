@@ -1,0 +1,61 @@
+{
+ "dork": "\"cwmpd\" opaque country:FR",
+ "total": 25,
+ "taken": "2026-11-01T10:08:30+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 25,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 25,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 19,
+   "value": "as35077"
+  },
+  {
+   "count": 4,
+   "value": "as39271"
+  },
+  {
+   "count": 1,
+   "value": "as12322"
+  },
+  {
+   "count": 1,
+   "value": "as5410"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 19,
+   "value": "Netwo SAS"
+  },
+  {
+   "count": 4,
+   "value": "Internet Services"
+  },
+  {
+   "count": 1,
+   "value": "Bouygues Telecom SA"
+  },
+  {
+   "count": 1,
+   "value": "Free SAS"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "FR"
+}

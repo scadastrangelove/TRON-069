@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:HU",
+ "total": 3,
+ "taken": "2026-11-01T10:01:20+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as12301"
+  },
+  {
+   "count": 1,
+   "value": "as5483"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "2Connect Telecommunications Infrastructure & Network Services Ltd."
+  },
+  {
+   "count": 1,
+   "value": "Customers using dynamic IP"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "HU"
+}

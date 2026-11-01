@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-10-21",
+  "reviewed": "2026-11-01",
   "edition": "public",
   "findings": [
     {
@@ -731,6 +731,23 @@
         "sources",
         "queries"
       ]
+    },
+    {
+      "id": "broadcom-sdk-management-wifi",
+      "status": "included-qualified",
+      "lines": [
+        "igdauthentication",
+        "askeycwmp-askey",
+        "dt-speedport-sdk"
+      ],
+      "source": "NOTES.md",
+      "news_id": "broadcom-sdk-management-wifi",
+      "summary": "Component co-presence in inspected ZyXEL firmware and external Askey model/operator references. DSLForum attribution remains unresolved; no fleet vulnerability classification.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
     }
   ],
   "line_sources": {
@@ -864,6 +881,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.44"
       }
     ],
     "easycwmp-vanilla": [
@@ -891,6 +912,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.44"
       }
     ],
     "centurylink-lighttpd": [
@@ -975,6 +1000,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.44"
       }
     ],
     "charter-anti-scan-404": [

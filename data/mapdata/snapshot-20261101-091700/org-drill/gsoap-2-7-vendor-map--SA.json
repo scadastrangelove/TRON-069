@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:SA",
+ "total": 176,
+ "taken": "2026-11-01T09:40:12+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 176,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 176,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 172,
+   "value": "as35819"
+  },
+  {
+   "count": 4,
+   "value": "as25019"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 172,
+   "value": "Broadband IP Range"
+  },
+  {
+   "count": 2,
+   "value": "STC, Dammam Residential Fixed-Broadband"
+  },
+  {
+   "count": 1,
+   "value": "STC, Dammam-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 1,
+   "value": "STC, Riyadh Residential Fixed-Broadband"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "SA"
+}

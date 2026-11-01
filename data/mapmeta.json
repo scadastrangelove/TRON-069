@@ -269,7 +269,8 @@
       "role": "CPE CR",
       "findings": [
         "Realm, challenge parameter order and fixed opaque marker match the public VMG1312-B10A tr69c binary. Pinned source, SHA-256 and offsets are in the dossier.",
-        "The attribution identifies a software component. The same response does not identify every device manufacturer or model."
+        "The attribution identifies a software component. The same response does not identify every device manufacturer or model.",
+        "Inspected ZyXEL C1000Z/C1100Z firmware trees contain both Broadcom CMS tr69c and Broadcom WPS Monitor: management and Wi-Fi components on the same sampled platform."
       ],
       "anomalies": [],
       "sources": [
@@ -286,6 +287,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.44"
         }
       ],
       "query_kind": "signature"
@@ -323,7 +328,8 @@
       "role": "CPE CR",
       "findings": [
         "Server: ASKEY_CWMP_Client V1.2.2",
-        "Vivo BR = 591k ( Telefônica Brasil)"
+        "Vivo BR = 591k ( Telefônica Brasil)",
+        "The public WPSplinter catalog links Askey TCG3000 and RTF3505VW models to operators, providing additional firmware references for platform research."
       ],
       "anomalies": [
         "No opaque: missed by Digest/opaque-based discovery",
@@ -339,6 +345,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.44"
         }
       ],
       "query_kind": "signature"
@@ -488,7 +498,8 @@
       "findings": [
         "opaque 5ccc069c… is the literal RFC 2617 §3.5 example. The claimed shared SDK with ACSSimTool was withdrawn on review, 2026-10-08",
         "Observed contexts span DE:7547, DE:7170, SG:8085 and legacy GB:8085. Operator and port scopes have separate collection queries.",
-        "The name no longer implies a Deutsche Telekom SDK. The stable ID and historical query counts are preserved."
+        "The name no longer implies a Deutsche Telekom SDK. The stable ID and historical query counts are preserved.",
+        "Askey is a firmware research lead from the public WPSplinter model/operator catalog. The DSLForum supplier remains unresolved until the exact CR response template is matched."
       ],
       "overlaps": [
         {
@@ -510,6 +521,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.44"
         }
       ],
       "query_kind": "signature"

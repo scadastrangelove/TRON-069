@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"CWMP@Lancom\" country:NL",
+ "total": 6,
+ "taken": "2026-11-01T10:10:35+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as39647"
+  },
+  {
+   "count": 1,
+   "value": "as28685"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "VoIP-Operator Access Infrastructure"
+  },
+  {
+   "count": 2,
+   "value": "Enreach Netherlands B.V."
+  },
+  {
+   "count": 1,
+   "value": "KPN B.V."
+  }
+ ],
+ "line": "CWMP@Lancom",
+ "line_id": "cwmp-lancom",
+ "cc": "NL"
+}

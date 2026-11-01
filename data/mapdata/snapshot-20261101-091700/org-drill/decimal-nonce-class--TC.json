@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:TC",
+ "total": 50,
+ "taken": "2026-11-01T10:01:00+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 50,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 50,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 50,
+   "value": "as22933"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 40,
+   "value": "Cable and Wireless, Turks and Caicos"
+  },
+  {
+   "count": 7,
+   "value": "FLOW"
+  },
+  {
+   "count": 3,
+   "value": "Cable & Wireless (Barbados) Limited"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "TC"
+}

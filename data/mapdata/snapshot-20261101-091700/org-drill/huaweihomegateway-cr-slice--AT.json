@@ -1,0 +1,53 @@
+{
+ "dork": "port:7547 \"HuaweiHomeGateway\" country:AT",
+ "total": 213,
+ "taken": "2026-11-01T09:25:04+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 213,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 213,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 148,
+   "value": "as8562"
+  },
+  {
+   "count": 65,
+   "value": "as8447"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 140,
+   "value": "A1 Telekom Austria AG"
+  },
+  {
+   "count": 36,
+   "value": "MobilePools"
+  },
+  {
+   "count": 26,
+   "value": "Dial-in-pools"
+  },
+  {
+   "count": 11,
+   "value": "Static Pool"
+  }
+ ],
+ "line": "HuaweiHomeGateway CR slice",
+ "line_id": "huaweihomegateway-cr-slice",
+ "cc": "AT"
+}

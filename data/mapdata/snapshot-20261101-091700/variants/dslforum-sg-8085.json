@@ -1,0 +1,96 @@
+{
+ "dork": "\"DSLForum CPE Management\" country:SG port:8085",
+ "total": 1867,
+ "taken": "2026-11-01T10:18:07+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 1867,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 6,
+   "covered": 1867,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 1867,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1867,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1867,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1772,
+   "value": "as9506"
+  },
+  {
+   "count": 93,
+   "value": "as3758"
+  },
+  {
+   "count": 2,
+   "value": "as55430"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1867,
+   "value": 8085
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1261,
+   "value": "SingNET Broadband"
+  },
+  {
+   "count": 452,
+   "value": "SingNet Pte Ltd"
+  },
+  {
+   "count": 119,
+   "value": "SINGTEL BUSINESS INTERNET"
+  },
+  {
+   "count": 33,
+   "value": "Singapore Telecommunications Ltd, Magix Services"
+  },
+  {
+   "count": 1,
+   "value": "StarHub Cable Vision Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Starhub Ltd."
+  }
+ ],
+ "id": "dslforum-sg-8085",
+ "parent": "dt-speedport-sdk",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "DSLForum · SG:8085",
+  "ru": "DSLForum · SG:8085",
+  "es": "DSLForum · SG:8085",
+  "zh": "DSLForum · SG:8085"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "dslforum-cpe-management"
+ },
+ "denominator": null
+}

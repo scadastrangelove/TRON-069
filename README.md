@@ -48,10 +48,10 @@ infer vulnerability from a shared country, vendor or HTTP banner. Operator
 aliases are exact and country-scoped. `important: true` highlights a story;
 the manifesto remains first in the full feed.
 
-**Current collection: 29 October 2026.** 55 signature lines,
-2,797 country–line operator slices, 131 research queries and
-48 additional observations. Full collection ran from 20:09:25 to
-21:05:33 UTC; individual results retain their own timestamps.
+**Current collection: 1 November 2026.** 55 signature lines,
+2,792 country–line operator slices, 131 research queries and
+48 additional observations. Full collection ran from 09:17:00 to
+10:33:58 UTC, including retries; individual results retain their own timestamps.
 RomPager and mini_httpd cover all ports. [Cloud-network cohorts](LEGACY-HTTP.md#honeypots)
 make suspected honeypot contamination visible alongside the raw component counts.
 These are search matches, not a census of unique devices or vulnerable systems.

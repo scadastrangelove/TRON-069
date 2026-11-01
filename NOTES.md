@@ -372,3 +372,28 @@ The DSLForum-realm family has a different response template and retains an
 unresolved supplier. The atlas now calls it DSLForum CPE Management, preserving
 its stable ID and historical measurements. Operator/port follow-ups are recorded
 in [FINGERPRINTS.md](FINGERPRINTS.md#dslforum-cpe-management).
+
+<a id="section-9.44"></a>
+## 9.44. Broadcom SDK across management and Wi-Fi interfaces — November 1
+
+Quentin Kaiser's public [WPSplinter catalog](https://github.com/qkaiser/broadcom-wps/blob/039b1514e063f71b671531606b2d33a1eb3bb6eb/README.md#affected-devices)
+provides model, firmware and operator references for Broadcom-based CPE.
+TRON-069 uses these references to compare software platforms and choose
+firmware for attribution research.
+
+The inspected ZyXEL C1000Z and C1100Z trees contain the attributed Broadcom
+CMS tr69c client alongside Broadcom WPS Monitor. The reported static-rule
+matches add an independent component-identification signal. The observed
+relationship is between TR-069 connection-request and Wi-Fi components in
+these firmware trees; Shodan measurements remain counts of CR-query matches.
+
+The catalog also lists Askey TCG3000 for Orange Belgium/VOO, RTF3505VW for
+Movistar/Telefónica, and Speedport W 723V Typ A (RTV1645VW-E83) for Deutsche
+Telekom. These are external model/operator references. Askey is a firmware
+research lead for the unresolved DSLForum response class. Attribution still
+requires the exact realm and response template in a sourced CR binary;
+operator overlap or WPS component identification alone does not establish it.
+
+Public cards describe software composition and evidence scope. Binary-level
+rule results and operational material remain outside this repository; the
+atlas does not assign vulnerability status to models, operators or map points.

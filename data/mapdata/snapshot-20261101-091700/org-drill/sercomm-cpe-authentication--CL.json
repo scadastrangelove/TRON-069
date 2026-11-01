@@ -1,0 +1,41 @@
+{
+ "dork": "\"Sercomm CPE Authentication\" country:CL",
+ "total": 53400,
+ "taken": "2026-11-01T09:46:55+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 53400,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 53400,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 53400,
+   "value": "as22047"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 53384,
+   "value": "VTR BANDA ANCHA S.A."
+  },
+  {
+   "count": 16,
+   "value": "CLARO CHILE S.A."
+  }
+ ],
+ "line": "Sercomm CPE Authentication",
+ "line_id": "sercomm-cpe-authentication",
+ "cc": "CL"
+}

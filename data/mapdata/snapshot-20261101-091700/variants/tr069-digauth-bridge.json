@@ -1,0 +1,939 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" \"DigAuth\"",
+ "total": 19341,
+ "taken": "2026-11-01T10:16:16+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 17,
+   "covered": 19341,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 19112,
+   "remainder": 229
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 19198,
+   "remainder": 143
+  },
+  "port": {
+   "values_returned": 5,
+   "covered": 19341,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 15875,
+   "value": "BR"
+  },
+  {
+   "count": 1978,
+   "value": "PH"
+  },
+  {
+   "count": 639,
+   "value": "TH"
+  },
+  {
+   "count": 586,
+   "value": "ID"
+  },
+  {
+   "count": 133,
+   "value": "CO"
+  },
+  {
+   "count": 82,
+   "value": "JO"
+  },
+  {
+   "count": 14,
+   "value": "US"
+  },
+  {
+   "count": 8,
+   "value": "GB"
+  },
+  {
+   "count": 6,
+   "value": "AR"
+  },
+  {
+   "count": 6,
+   "value": "EC"
+  },
+  {
+   "count": 4,
+   "value": "IR"
+  },
+  {
+   "count": 3,
+   "value": "AU"
+  },
+  {
+   "count": 3,
+   "value": "LA"
+  },
+  {
+   "count": 1,
+   "value": "DO"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "MY"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5389,
+   "value": "as262673"
+  },
+  {
+   "count": 2622,
+   "value": "as28220"
+  },
+  {
+   "count": 1521,
+   "value": "as132199"
+  },
+  {
+   "count": 1197,
+   "value": "as52974"
+  },
+  {
+   "count": 860,
+   "value": "as53088"
+  },
+  {
+   "count": 641,
+   "value": "as262992"
+  },
+  {
+   "count": 590,
+   "value": "as28210"
+  },
+  {
+   "count": 521,
+   "value": "as63859"
+  },
+  {
+   "count": 442,
+   "value": "as131090"
+  },
+  {
+   "count": 439,
+   "value": "as9299"
+  },
+  {
+   "count": 414,
+   "value": "as28667"
+  },
+  {
+   "count": 392,
+   "value": "as61917"
+  },
+  {
+   "count": 370,
+   "value": "as262659"
+  },
+  {
+   "count": 275,
+   "value": "as28258"
+  },
+  {
+   "count": 247,
+   "value": "as262480"
+  },
+  {
+   "count": 231,
+   "value": "as262481"
+  },
+  {
+   "count": 219,
+   "value": "as22689"
+  },
+  {
+   "count": 174,
+   "value": "as262773"
+  },
+  {
+   "count": 173,
+   "value": "as45758"
+  },
+  {
+   "count": 171,
+   "value": "as53184"
+  },
+  {
+   "count": 138,
+   "value": "as268669"
+  },
+  {
+   "count": 134,
+   "value": "as28202"
+  },
+  {
+   "count": 129,
+   "value": "as268104"
+  },
+  {
+   "count": 111,
+   "value": "as10299"
+  },
+  {
+   "count": 93,
+   "value": "as53097"
+  },
+  {
+   "count": 91,
+   "value": "as53080"
+  },
+  {
+   "count": 89,
+   "value": "as267293"
+  },
+  {
+   "count": 86,
+   "value": "as28287"
+  },
+  {
+   "count": 83,
+   "value": "as262509"
+  },
+  {
+   "count": 79,
+   "value": "as263252"
+  },
+  {
+   "count": 71,
+   "value": "as48832"
+  },
+  {
+   "count": 69,
+   "value": "as61701"
+  },
+  {
+   "count": 61,
+   "value": "as23693"
+  },
+  {
+   "count": 53,
+   "value": "as263072"
+  },
+  {
+   "count": 51,
+   "value": "as262671"
+  },
+  {
+   "count": 48,
+   "value": "as262903"
+  },
+  {
+   "count": 47,
+   "value": "as267385"
+  },
+  {
+   "count": 46,
+   "value": "as266502"
+  },
+  {
+   "count": 43,
+   "value": "as266044"
+  },
+  {
+   "count": 42,
+   "value": "as61725"
+  },
+  {
+   "count": 41,
+   "value": "as263332"
+  },
+  {
+   "count": 36,
+   "value": "as267085"
+  },
+  {
+   "count": 35,
+   "value": "as52571"
+  },
+  {
+   "count": 34,
+   "value": "as262444"
+  },
+  {
+   "count": 31,
+   "value": "as262272"
+  },
+  {
+   "count": 31,
+   "value": "as262700"
+  },
+  {
+   "count": 26,
+   "value": "as263864"
+  },
+  {
+   "count": 26,
+   "value": "as28241"
+  },
+  {
+   "count": 24,
+   "value": "as263405"
+  },
+  {
+   "count": 24,
+   "value": "as7713"
+  },
+  {
+   "count": 22,
+   "value": "as28270"
+  },
+  {
+   "count": 21,
+   "value": "as22368"
+  },
+  {
+   "count": 21,
+   "value": "as28669"
+  },
+  {
+   "count": 19,
+   "value": "as264009"
+  },
+  {
+   "count": 18,
+   "value": "as262794"
+  },
+  {
+   "count": 18,
+   "value": "as268395"
+  },
+  {
+   "count": 17,
+   "value": "as23969"
+  },
+  {
+   "count": 16,
+   "value": "as53171"
+  },
+  {
+   "count": 15,
+   "value": "as262881"
+  },
+  {
+   "count": 15,
+   "value": "as269517"
+  },
+  {
+   "count": 15,
+   "value": "as4775"
+  },
+  {
+   "count": 13,
+   "value": "as263097"
+  },
+  {
+   "count": 13,
+   "value": "as263297"
+  },
+  {
+   "count": 11,
+   "value": "as262427"
+  },
+  {
+   "count": 11,
+   "value": "as266445"
+  },
+  {
+   "count": 11,
+   "value": "as266586"
+  },
+  {
+   "count": 10,
+   "value": "as265929"
+  },
+  {
+   "count": 10,
+   "value": "as268613"
+  },
+  {
+   "count": 10,
+   "value": "as47887"
+  },
+  {
+   "count": 10,
+   "value": "as53085"
+  },
+  {
+   "count": 9,
+   "value": "as264299"
+  },
+  {
+   "count": 8,
+   "value": "as263015"
+  },
+  {
+   "count": 7,
+   "value": "as264328"
+  },
+  {
+   "count": 7,
+   "value": "as266388"
+  },
+  {
+   "count": 7,
+   "value": "as61942"
+  },
+  {
+   "count": 6,
+   "value": "as265152"
+  },
+  {
+   "count": 6,
+   "value": "as266211"
+  },
+  {
+   "count": 6,
+   "value": "as52817"
+  },
+  {
+   "count": 5,
+   "value": "as264275"
+  },
+  {
+   "count": 5,
+   "value": "as270083"
+  },
+  {
+   "count": 5,
+   "value": "as28006"
+  },
+  {
+   "count": 5,
+   "value": "as53191"
+  },
+  {
+   "count": 4,
+   "value": "as138524"
+  },
+  {
+   "count": 4,
+   "value": "as262612"
+  },
+  {
+   "count": 4,
+   "value": "as263032"
+  },
+  {
+   "count": 4,
+   "value": "as263532"
+  },
+  {
+   "count": 4,
+   "value": "as265369"
+  },
+  {
+   "count": 4,
+   "value": "as265928"
+  },
+  {
+   "count": 4,
+   "value": "as266363"
+  },
+  {
+   "count": 4,
+   "value": "as268750"
+  },
+  {
+   "count": 4,
+   "value": "as268976"
+  },
+  {
+   "count": 4,
+   "value": "as269267"
+  },
+  {
+   "count": 4,
+   "value": "as28257"
+  },
+  {
+   "count": 4,
+   "value": "as58224"
+  },
+  {
+   "count": 3,
+   "value": "as263847"
+  },
+  {
+   "count": 3,
+   "value": "as264013"
+  },
+  {
+   "count": 3,
+   "value": "as264204"
+  },
+  {
+   "count": 3,
+   "value": "as266216"
+  },
+  {
+   "count": 3,
+   "value": "as266224"
+  },
+  {
+   "count": 3,
+   "value": "as266341"
+  }
+ ],
+ "ports": [
+  {
+   "count": 15682,
+   "value": 8081
+  },
+  {
+   "count": 3452,
+   "value": 7547
+  },
+  {
+   "count": 202,
+   "value": 7548
+  },
+  {
+   "count": 3,
+   "value": 8080
+  },
+  {
+   "count": 2,
+   "value": 30005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 7417,
+   "value": "VERO S.A"
+  },
+  {
+   "count": 3368,
+   "value": "Alares Cabo Servicos de Telecomunicacoes S.A."
+  },
+  {
+   "count": 1197,
+   "value": "Henet Telecomunicacoes Ltda"
+  },
+  {
+   "count": 860,
+   "value": "FORNET COMUNICACOES LTDA"
+  },
+  {
+   "count": 592,
+   "value": "GIGA MAIS FIBRA TELECOMUNICACOES S.A."
+  },
+  {
+   "count": 434,
+   "value": "10 Fl. 72. CAT TELECOM TOWER Bangrak Bangkok Thailand"
+  },
+  {
+   "count": 392,
+   "value": "NETMAIS TELECOM"
+  },
+  {
+   "count": 335,
+   "value": "GLBB_IP_POOL"
+  },
+  {
+   "count": 271,
+   "value": "GBB-VISMIN-IP-POOL"
+  },
+  {
+   "count": 247,
+   "value": "CONNECT10 INTERNET EIRELI"
+  },
+  {
+   "count": 220,
+   "value": "GBB VISAYAS"
+  },
+  {
+   "count": 219,
+   "value": "SERCOMTEL S/A TELECOMUNICACOES"
+  },
+  {
+   "count": 183,
+   "value": "PT. Eka Mas Republik"
+  },
+  {
+   "count": 181,
+   "value": "GBB-MAKATI-IP-POOL"
+  },
+  {
+   "count": 177,
+   "value": "HOME_DSL"
+  },
+  {
+   "count": 174,
+   "value": "PROXXIMA TELECOMUNICACOES SA"
+  },
+  {
+   "count": 174,
+   "value": "Philippine Long Distance Telephone Co."
+  },
+  {
+   "count": 159,
+   "value": "NETWORK ASSIGNED IP ADDRESS"
+  },
+  {
+   "count": 138,
+   "value": "MUNDOGIGA TELECOM LTDA"
+  },
+  {
+   "count": 134,
+   "value": "MASTER S/A"
+  },
+  {
+   "count": 129,
+   "value": "G7NET SERVICOS DE INTERNET EIRELI"
+  },
+  {
+   "count": 119,
+   "value": "ADVANCED WIRELESS NETWORK COMPANY LIMITED"
+  },
+  {
+   "count": 101,
+   "value": "GBB-VISAYAS-IP-POOL"
+  },
+  {
+   "count": 95,
+   "value": "EMPRESAS MUNICIPALES DE CALI E.I.C.E. E.S.P."
+  },
+  {
+   "count": 94,
+   "value": "GBB MAKATI"
+  },
+  {
+   "count": 93,
+   "value": "Superip Telecomunicações LTDA"
+  },
+  {
+   "count": 89,
+   "value": "Castrum Servicos Especializados ltda"
+  },
+  {
+   "count": 79,
+   "value": "GIGASAT SERVIÇOS DE PROCESSAMENTOS DE DADOS LTDA"
+  },
+  {
+   "count": 71,
+   "value": "Asia Pacific Network Information Center, Pty. Ltd."
+  },
+  {
+   "count": 69,
+   "value": "NARCELIO L DE SOUZA - ME"
+  },
+  {
+   "count": 61,
+   "value": "PT. Telekomunikasi Selular (Telkomsel) Indonesia"
+  },
+  {
+   "count": 58,
+   "value": "Triple T Broadband Public Company Limited"
+  },
+  {
+   "count": 51,
+   "value": "Globe Telecom (GMCR,INC)"
+  },
+  {
+   "count": 48,
+   "value": "Tubaron Telecom"
+  },
+  {
+   "count": 47,
+   "value": "MEGA NET RIO"
+  },
+  {
+   "count": 46,
+   "value": "TimerNet Telecom"
+  },
+  {
+   "count": 42,
+   "value": "AZEVEDO PROVEDOR DE INTERNET LTDA"
+  },
+  {
+   "count": 42,
+   "value": "GBB-SJN-IP-POOL"
+  },
+  {
+   "count": 40,
+   "value": "Karisma Citra Bahari"
+  },
+  {
+   "count": 40,
+   "value": "PLDT_MGOC10Ki01_DHCP"
+  },
+  {
+   "count": 39,
+   "value": "PT Rohim Khoirul Cipta Sentosa"
+  },
+  {
+   "count": 36,
+   "value": "Broadband Service"
+  },
+  {
+   "count": 35,
+   "value": "DSL POOL"
+  },
+  {
+   "count": 35,
+   "value": "G2G COM PROD ELETRO E SERV LTDA"
+  },
+  {
+   "count": 34,
+   "value": "XTURBO PROVEDOR DE INTERNET LTDA"
+  },
+  {
+   "count": 29,
+   "value": "PLDT_SPCHME60i01_DHCP"
+  },
+  {
+   "count": 25,
+   "value": "DATA CENTER LINNKE TELECOMUNICACOES LTDA - EPP"
+  },
+  {
+   "count": 24,
+   "value": "CV. Demen"
+  },
+  {
+   "count": 23,
+   "value": "PT. DEARMA PINDO"
+  },
+  {
+   "count": 22,
+   "value": "CV. Fajar Anugerah"
+  },
+  {
+   "count": 22,
+   "value": "NTT America, Inc."
+  },
+  {
+   "count": 21,
+   "value": "Nicnet S.A."
+  },
+  {
+   "count": 21,
+   "value": "PT Sari Indah Teguh"
+  },
+  {
+   "count": 21,
+   "value": "PT TELKOM INDONESIA"
+  },
+  {
+   "count": 20,
+   "value": "GBB SAN JUAN"
+  },
+  {
+   "count": 19,
+   "value": "INFIX TELECOM LTDA"
+  },
+  {
+   "count": 18,
+   "value": "G7 MS EIRELI - ME"
+  },
+  {
+   "count": 16,
+   "value": "EMCALI - RANGOS FIJOS PPPoE /32"
+  },
+  {
+   "count": 16,
+   "value": "Netfi serviços de comunicações ltda epp"
+  },
+  {
+   "count": 15,
+   "value": "ARIKI SOLUCOES EM TECNOLOGIA"
+  },
+  {
+   "count": 15,
+   "value": "NETWORK ASSIGNED DSL (SSG-REDBACK CEBU) Ip pool"
+  },
+  {
+   "count": 15,
+   "value": "SPACENET PROVEDOR TELECOM LTDA"
+  },
+  {
+   "count": 13,
+   "value": "PT Mora Telematika Indonesia TBK"
+  },
+  {
+   "count": 13,
+   "value": "PT Rebdila Borusia"
+  },
+  {
+   "count": 13,
+   "value": "Zain Data-Jordan"
+  },
+  {
+   "count": 12,
+   "value": "VN INFRAESTRUTURA DE REDES LTDA."
+  },
+  {
+   "count": 11,
+   "value": "Cv Aldo Tinodo"
+  },
+  {
+   "count": 11,
+   "value": "Invista Net Provedor de Acesso Ltda"
+  },
+  {
+   "count": 11,
+   "value": "NetBig Telecomunicaçoes Ltda"
+  },
+  {
+   "count": 11,
+   "value": "PT Tiara Gading Jaya"
+  },
+  {
+   "count": 11,
+   "value": "TELEBUCARAMANGA S.A. E.S.P."
+  },
+  {
+   "count": 10,
+   "value": "AL-HADATHEH LIL-ITISALAT WA AL-TECHNOLOGIA CO."
+  },
+  {
+   "count": 10,
+   "value": "COLOMBIA TELECOMUNICACIONES S.A. ESP BIC"
+  },
+  {
+   "count": 10,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 10,
+   "value": "GBB-CEB-IP-POOL"
+  },
+  {
+   "count": 10,
+   "value": "Invista Net Telecom Ltda"
+  },
+  {
+   "count": 9,
+   "value": "TOT Public Company Limited"
+  },
+  {
+   "count": 8,
+   "value": "G7 Telecom Ltda"
+  },
+  {
+   "count": 8,
+   "value": "National Telecom Public Company Limited 7 Fl. 72. CAT TELECOM TOWER Bangrak Bangkok Thailand"
+  },
+  {
+   "count": 8,
+   "value": "PT Surya Bifa Mandiri"
+  },
+  {
+   "count": 8,
+   "value": "Zain-Jo Jordanian mobile phone services Ltd"
+  },
+  {
+   "count": 7,
+   "value": "CV. SEPTUA MAJUPE"
+  },
+  {
+   "count": 7,
+   "value": "Eclipse Telecom"
+  },
+  {
+   "count": 7,
+   "value": "PT. Bakrie Telecom Tbk"
+  },
+  {
+   "count": 7,
+   "value": "TURBONET TELECOM LTDA"
+  },
+  {
+   "count": 7,
+   "value": "ZAZ NATAL"
+  },
+  {
+   "count": 6,
+   "value": "CORPORACION NACIONAL DE TELECOMUNICACIONES - CNT EP"
+  },
+  {
+   "count": 6,
+   "value": "GERACAO NET"
+  },
+  {
+   "count": 6,
+   "value": "NEWCENTER TELECOM"
+  },
+  {
+   "count": 6,
+   "value": "PT. RODO REJEKI MANDIRI"
+  },
+  {
+   "count": 6,
+   "value": "TOT Public Company Limited Bangkok"
+  },
+  {
+   "count": 6,
+   "value": "WIP TELECOM MULTIMIDIA EIRELI - ME"
+  },
+  {
+   "count": 5,
+   "value": "CV. Adelanos Mandiri"
+  },
+  {
+   "count": 5,
+   "value": "PT. DELIMA CAHAYA ABADI"
+  },
+  {
+   "count": 5,
+   "value": "ROLIM NET TECNOLOGIA LTDA"
+  },
+  {
+   "count": 5,
+   "value": "SEA TELECOM LTDA"
+  },
+  {
+   "count": 5,
+   "value": "VAVCOM S.R.L."
+  },
+  {
+   "count": 4,
+   "value": "+Net & Telecom"
+  },
+  {
+   "count": 4,
+   "value": "C-ComTelecom Servios Ltda-ME"
+  },
+  {
+   "count": 4,
+   "value": "CONCEITOS NET SERVICOS DE COMUNICACAO E MULTIMIDIA"
+  }
+ ],
+ "id": "tr069-digauth-bridge",
+ "parent": "tr069-client",
+ "group": "tr069-family",
+ "label": {
+  "ru": "Мост к DigAuth",
+  "en": "DigAuth bridge",
+  "es": "Vínculo con DigAuth",
+  "zh": "与 DigAuth 的关联"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

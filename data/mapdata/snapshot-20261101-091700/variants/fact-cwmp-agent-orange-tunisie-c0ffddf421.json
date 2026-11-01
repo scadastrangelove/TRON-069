@@ -1,0 +1,199 @@
+{
+ "dork": "\"CWMP-Agent\" country:HK",
+ "total": 2462,
+ "taken": "2026-11-01T10:17:28+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 2462,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 10,
+   "covered": 2462,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 2462,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 19,
+   "covered": 2462,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2462,
+   "value": "HK"
+  }
+ ],
+ "asn": [
+  {
+   "count": 2441,
+   "value": "as4760"
+  },
+  {
+   "count": 11,
+   "value": "as45102"
+  },
+  {
+   "count": 4,
+   "value": "as136907"
+  },
+  {
+   "count": 2,
+   "value": "as17924"
+  },
+  {
+   "count": 2,
+   "value": "as61112"
+  },
+  {
+   "count": 1,
+   "value": "as9304"
+  },
+  {
+   "count": 1,
+   "value": "as9381"
+  }
+ ],
+ "ports": [
+  {
+   "count": 2444,
+   "value": 5400
+  },
+  {
+   "count": 1,
+   "value": 843
+  },
+  {
+   "count": 1,
+   "value": 3115
+  },
+  {
+   "count": 1,
+   "value": 3791
+  },
+  {
+   "count": 1,
+   "value": 5903
+  },
+  {
+   "count": 1,
+   "value": 6561
+  },
+  {
+   "count": 1,
+   "value": 7547
+  },
+  {
+   "count": 1,
+   "value": 8139
+  },
+  {
+   "count": 1,
+   "value": 8455
+  },
+  {
+   "count": 1,
+   "value": 8457
+  },
+  {
+   "count": 1,
+   "value": 9734
+  },
+  {
+   "count": 1,
+   "value": 10380
+  },
+  {
+   "count": 1,
+   "value": 12106
+  },
+  {
+   "count": 1,
+   "value": 12292
+  },
+  {
+   "count": 1,
+   "value": 21254
+  },
+  {
+   "count": 1,
+   "value": 21311
+  },
+  {
+   "count": 1,
+   "value": 30112
+  },
+  {
+   "count": 1,
+   "value": 42443
+  },
+  {
+   "count": 1,
+   "value": 46267
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1517,
+   "value": "Hong Kong Telecommunications (HKT) Limited Mass Internet"
+  },
+  {
+   "count": 358,
+   "value": "PCCW Global (HK) Limited"
+  },
+  {
+   "count": 339,
+   "value": "HKT Limited"
+  },
+  {
+   "count": 227,
+   "value": "Hong Kong Telecommunications (HKT) Limited"
+  },
+  {
+   "count": 11,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 4,
+   "value": "Huawei Cloud Hongkong Region"
+  },
+  {
+   "count": 2,
+   "value": "AkileCloud AKILE LTD"
+  },
+  {
+   "count": 2,
+   "value": "Smartone Mobile communications Limited"
+  },
+  {
+   "count": 1,
+   "value": "HGC Global Communications Limited"
+  },
+  {
+   "count": 1,
+   "value": "HKBN Enterprise Solutions HK Limited"
+  }
+ ],
+ "id": "fact-cwmp-agent-orange-tunisie-c0ffddf421",
+ "parent": "cwmp-agent-orange-tunisie",
+ "group": "facts",
+ "label": {
+  "ru": "карман HKT/PCCW HK (порт 5400)",
+  "en": "HKT/PCCW HK subset (port 5400)",
+  "es": "Subconjunto HKT/PCCW HK (puerto 5400)",
+  "zh": "HKT/PCCW HK 子集（端口 5400）"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

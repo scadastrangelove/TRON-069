@@ -1,0 +1,171 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8080",
+ "total": 10736,
+ "taken": "2026-11-01T10:16:29+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 6,
+   "covered": 10736,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 13,
+   "covered": 10736,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 10,
+   "covered": 10736,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 10736,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 10731,
+   "value": "IE"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  },
+  {
+   "count": 1,
+   "value": "IS"
+  },
+  {
+   "count": 1,
+   "value": "MD"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "NZ"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5962,
+   "value": "as2110"
+  },
+  {
+   "count": 4761,
+   "value": "as5466"
+  },
+  {
+   "count": 3,
+   "value": "as15502"
+  },
+  {
+   "count": 3,
+   "value": "as5607"
+  },
+  {
+   "count": 2,
+   "value": "as25441"
+  },
+  {
+   "count": 1,
+   "value": "as12969"
+  },
+  {
+   "count": 1,
+   "value": "as13285"
+  },
+  {
+   "count": 1,
+   "value": "as31252"
+  },
+  {
+   "count": 1,
+   "value": "as4771"
+  },
+  {
+   "count": 1,
+   "value": "as8151"
+  }
+ ],
+ "ports": [
+  {
+   "count": 10736,
+   "value": 8080
+  }
+ ],
+ "orgs": [
+  {
+   "count": 5962,
+   "value": "Enet Communications LIMITED"
+  },
+  {
+   "count": 2594,
+   "value": "Eircom"
+  },
+  {
+   "count": 1267,
+   "value": "Eircom Limited"
+  },
+  {
+   "count": 900,
+   "value": "eircom Ltd"
+  },
+  {
+   "count": 3,
+   "value": "Sky UK Limited"
+  },
+  {
+   "count": 2,
+   "value": "Imagine Communications Group Limited"
+  },
+  {
+   "count": 2,
+   "value": "Vodafone ISP"
+  },
+  {
+   "count": 1,
+   "value": "Customer Dynamic IPs"
+  },
+  {
+   "count": 1,
+   "value": "Gestión de direccionamiento UniNet"
+  },
+  {
+   "count": 1,
+   "value": "Ljosleidarinn ehf"
+  },
+  {
+   "count": 1,
+   "value": "Spark New Zealand Trading Limited"
+  },
+  {
+   "count": 1,
+   "value": "StarNet Solutii SRL"
+  },
+  {
+   "count": 1,
+   "value": "Vodafone Ireland Limited"
+  }
+ ],
+ "id": "huawei-port-8080",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8080",
+  "en": "CR port 8080",
+  "es": "Puerto CR 8080",
+  "zh": "CR 端口 8080"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

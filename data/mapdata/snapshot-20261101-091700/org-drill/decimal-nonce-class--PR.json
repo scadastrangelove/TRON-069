@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:PR",
+ "total": 1890,
+ "taken": "2026-11-01T10:00:32+00:00",
+ "run_id": "ed7c0445-e3f5-4e39-9c9e-49ecb4fbb54a",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 1890,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 1890,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1886,
+   "value": "as14638"
+  },
+  {
+   "count": 4,
+   "value": "as22581"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1885,
+   "value": "Liberty Communications of Puerto Rico LLC"
+  },
+  {
+   "count": 5,
+   "value": "Broadband VI, LLC"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "PR"
+}
