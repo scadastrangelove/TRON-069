@@ -337,7 +337,7 @@ class BuildTests(unittest.TestCase):
         manifesto = next(item for item in news if item['id'] == 'tron-069-manifesto')
         self.assertTrue(manifesto['pinned'])
         newer = copy.deepcopy(next(item for item in news if not item.get('pinned')
-                                   and not item.get('important') and item['kind'] not in ('disclosure', 'fleet')))
+                                   and not item.get('important') and item['kind'] not in ('disclosure', 'fleet', 'investigation')))
         newer.update(id='future-news', date='2099-01-01')
         disclosure = copy.deepcopy(newer)
         disclosure.update(id='future-disclosure', kind='disclosure')
@@ -347,14 +347,14 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(ordered[0]['id'], manifesto['id'])
         self.assertEqual(ordered[1]['id'], 'future-disclosure')
         first_ordinary = next(i for i, item in enumerate(ordered[1:], 1)
-                              if not item.get('important') and item['kind'] != 'disclosure')
+                              if not item.get('important') and item['kind'] not in ('disclosure', 'investigation'))
         self.assertEqual(ordered[first_ordinary]['id'], 'future-news')
         self.assertEqual({item['id'] for item in ordered[1:first_ordinary]},
                          {'future-disclosure'} | {item['id'] for item in news
-                             if not item.get('pinned') and (item.get('important') or item['kind'] == 'disclosure')})
+                             if not item.get('pinned') and (item.get('important') or item['kind'] in ('disclosure', 'investigation'))})
         for important in (True, False):
             dates = [item['date'] for item in ordered[1:]
-                     if (item.get('important', False) or item['kind'] == 'disclosure') == important]
+                     if (item.get('important', False) or item['kind'] in ('disclosure', 'investigation')) == important]
             self.assertEqual(dates, sorted(dates, reverse=True))
 
     def test_news_pin_and_external_links_are_validated(self):
@@ -380,7 +380,7 @@ class BuildTests(unittest.TestCase):
 
     def test_fleet_news_requires_primary_links_and_valid_relations(self):
         news = builder.read_news()
-        fleet = [item for item in news if item['kind'] == 'fleet']
+        fleet = [item for item in news if item['kind'] in ('fleet', 'investigation')]
         self.assertTrue(fleet, 'Expected fleet news to exercise validation')
         with (ROOT/'registry.csv').open() as stream:
             lines = {r['id'] for r in csv.DictReader(stream)}

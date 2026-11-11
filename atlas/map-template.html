@@ -2870,7 +2870,7 @@ document.addEventListener('click',e=>{
 let newsIndex=0,newsPaused=false;
 const newsMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
 function newsText(item,key){return item[key][LANG]||item[key].en;}
-function newsImportant(item){return !!item.important||item.kind==="disclosure";}
+function newsImportant(item){return !!item.important||['disclosure','investigation'].includes(item.kind);}
 function newsDate(value){return new Intl.DateTimeFormat(LANG,{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}).format(new Date(value+"T12:00:00Z"));}
 function renderNewsTicker(){
  const items=DATA.news||[];$("#newsTicker").hidden=!items.length;
@@ -2878,7 +2878,7 @@ function renderNewsTicker(){
  newsIndex=((newsIndex%items.length)+items.length)%items.length;
  const item=items[newsIndex];
  $("#newsTicker").dataset.priority=newsImportant(item)?"important":"standard";
- $("#newsKicker").textContent=t(newsImportant(item)?"news_important":"news_title");
+ $("#newsKicker").textContent=t(item.kind==='investigation'?'news_kind_investigation':newsImportant(item)?"news_important":"news_title");
  $("#newsHeadline").innerHTML=`<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span>${esc(newsText(item,"title"))}</span>`;
  const paused=newsPaused||newsMotion.matches;
  $("#newsPause").textContent=paused?"▶":"Ⅱ";

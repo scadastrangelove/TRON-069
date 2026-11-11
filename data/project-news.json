@@ -1,5 +1,61 @@
 [
   {
+    "id": "cisco-ccsp-changing-owners",
+    "date": "2026-11-12",
+    "kind": "investigation",
+    "title": {
+      "ru": "Cisco продала бизнес. HTTP-заголовок остался",
+      "en": "Cisco sold the business. The HTTP header stayed",
+      "es": "Cisco vendió el negocio. La cabecera HTTP se quedó",
+      "zh": "Cisco 卖掉了业务，HTTP 响应头留了下来"
+    },
+    "body": {
+      "ru": "Строка Cisco-CcspCwmpTcpCR/1.0 в операторских CPE привела нас к истории смены владельцев. В исходниках RDK tr069-protocol-agent 2.5.0 по-прежнему стоят этот Server и realm Cisco_CCSP_CWMP_TCPCR, рядом с copyright Cisco 2014 и RDK Management 2015.\n\nCCSP — Common Component Software Platform. По хронологии Technicolor, платформа появилась в 2010 году для шлюзов Cisco. В 2014-м Cisco передала код в основу RDK-B, включая TR-069. В ноябре 2015-го Technicolor купила Cisco Connected Devices вместе с командой CCSP. Это прямо написано на слайде RDK Global Summit 2021.\n\nУ бизнеса своя родословная: Scientific Atlanta перешла к Cisco в 2006 году, её продукты вошли в продажу Technicolor в 2015-м. В 2022-м Technicolor SA стала Vantiva; в 2024-м Vantiva приобрела и CommScope Home Networks.\n\nУ Rogers шлюзы XB6 и XB7 представлены вариантами Technicolor и ARRIS/CommScope. Один оператор, несколько поставщиков, общий программный компонент. Баннер позволяет установить происхождение кода; производителя конкретной коробки устанавливаем по отдельным доказательствам. Корпоративная история меняется быстрее строки в прошивке.",
+      "en": "The Cisco-CcspCwmpTcpCR/1.0 string in operator CPE led us through a succession of owners. RDK tr069-protocol-agent 2.5.0 still contains that Server header and the Cisco_CCSP_CWMP_TCPCR realm, alongside Cisco 2014 and RDK Management 2015 copyrights.\n\nCCSP means Common Component Software Platform. Technicolor’s timeline dates its first release for Cisco gateways to 2010. In 2014, Cisco contributed the code as a foundation for RDK-B, including TR-069. In November 2015, Technicolor acquired Cisco Connected Devices together with the CCSP team. The RDK Global Summit 2021 slides say so explicitly.\n\nThe business has its own lineage: Scientific Atlanta joined Cisco in 2006, and its products were included in the 2015 sale to Technicolor. Technicolor SA became Vantiva in 2022; Vantiva also acquired CommScope Home Networks in 2024.\n\nRogers lists both Technicolor and ARRIS/CommScope versions of its XB6 and XB7 gateways. One operator, several suppliers, a shared software component. The banner establishes code lineage; identifying the manufacturer of a particular box requires separate evidence. Corporate history moves faster than a string in firmware.",
+      "es": "La cadena Cisco-CcspCwmpTcpCR/1.0 en CPE de operadores nos llevó por una sucesión de propietarios. RDK tr069-protocol-agent 2.5.0 aún contiene esa cabecera Server y el realm Cisco_CCSP_CWMP_TCPCR, junto a los avisos de copyright de Cisco de 2014 y RDK Management de 2015.\n\nCCSP significa Common Component Software Platform. La cronología de Technicolor sitúa su primera versión para gateways Cisco en 2010. En 2014, Cisco aportó el código como base de RDK-B, incluido TR-069. En noviembre de 2015, Technicolor adquirió Cisco Connected Devices junto con el equipo de CCSP. Las diapositivas del RDK Global Summit 2021 lo indican expresamente.\n\nEl negocio tiene su propio linaje: Scientific Atlanta pasó a Cisco en 2006 y sus productos se incluyeron en la venta a Technicolor de 2015. Technicolor SA pasó a llamarse Vantiva en 2022; Vantiva también adquirió CommScope Home Networks en 2024.\n\nRogers ofrece versiones Technicolor y ARRIS/CommScope de sus gateways XB6 y XB7. Un operador, varios proveedores y un componente de software compartido. El banner permite establecer el linaje del código; identificar al fabricante de un equipo concreto requiere pruebas adicionales. La historia corporativa avanza más rápido que una cadena en el firmware.",
+      "zh": "运营商 CPE 中的 Cisco-CcspCwmpTcpCR/1.0 字符串，把我们带入了一段业务易主的历史。RDK tr069-protocol-agent 2.5.0 仍保留这个 Server 响应头和 Cisco_CCSP_CWMP_TCPCR realm，文件中同时列有 Cisco 2014 年和 RDK Management 2015 年的版权声明。\n\nCCSP 的全称是 Common Component Software Platform。Technicolor 的时间线显示，它于 2010 年首次发布，面向 Cisco 网关。2014 年，Cisco 贡献了包括 TR-069 在内的代码，作为 RDK-B 的基础。2015 年 11 月，Technicolor 收购 Cisco Connected Devices，CCSP 团队也一并转入。RDK Global Summit 2021 的幻灯片明确记载了这一点。\n\n业务也有自己的谱系：Scientific Atlanta 于 2006 年并入 Cisco，其产品包含在 2015 年售予 Technicolor 的业务中。Technicolor SA 于 2022 年更名为 Vantiva；2024 年，Vantiva 又收购了 CommScope Home Networks。\n\nRogers 的 XB6 和 XB7 网关均有 Technicolor 与 ARRIS/CommScope 版本。同一家运营商，多家供应商，共用的软件组件。横幅可以确认代码谱系，具体设备的制造商则需要独立证据。公司历史变化得比固件里的一行字符串还快。"
+    },
+    "links": [
+      {
+        "label": "Technicolor · RDK Global Summit 2021, slide 2",
+        "url": "https://f.hubspotusercontent40.net/hubfs/6235493/events%20and%20tradeshows/RDK%20Americas%20Summit/Technicolor%20RDK%20Firsts_RDK%20Global%20Summit%20Sep%202021.pdf#page=2"
+      },
+      {
+        "label": "Cisco · RDK contribution, 2014",
+        "url": "https://blogs.cisco.com/sp/cloud-first-rdk-application-framework-service-velocity"
+      },
+      {
+        "label": "RDK 2.5.0 · Server header",
+        "url": "https://github.com/rdkcentral/tr069-protocol-agent/blob/2.5.0/source-embedded/CcspCwmpTcpConnReqHandler/ccsp_cwmp_tcpcrho_auth.c#L2047"
+      },
+      {
+        "label": "Cisco · Scientific Atlanta acquisition, 2006",
+        "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2006/m02/cisco-systems-completes-acquisition-of-scientific-atlanta.html"
+      },
+      {
+        "label": "Cisco · Scientific Atlanta → Technicolor",
+        "url": "https://www.cisco.com/c/en/us/services/acquisitions/scientific-atlanta.html"
+      },
+      {
+        "label": "Technicolor → Vantiva, 2022",
+        "url": "https://www.globenewswire.com/news-release/2022/09/27/2523629/0/en/vantiva-technicolor-officially-becomes-vantiva.html"
+      },
+      {
+        "label": "CommScope Home Networks → Vantiva, 2024 · SEC",
+        "url": "https://www.sec.gov/Archives/edgar/data/1517228/000095017024004646/comm-ex99_1.htm"
+      },
+      {
+        "label": "Rogers · XB6 / XB7 suppliers",
+        "url": "https://www.rogers.com/support/safety-guides"
+      }
+    ],
+    "related": {
+      "lines": [
+        "rdk-b-ccsptr069pa"
+      ]
+    }
+  },
+  {
     "id": "rdkb-remote-syslog-fix",
     "date": "2026-10-12",
     "kind": "fleet",

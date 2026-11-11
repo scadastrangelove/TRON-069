@@ -53,7 +53,7 @@ def read_news():
             raise ValueError('Invalid or duplicate news ID')
         ids.add(item['id'])
         date.fromisoformat(item['date'])
-        if item['kind'] not in ('atlas', 'research', 'data', 'disclosure', 'fleet'):
+        if item['kind'] not in ('atlas', 'research', 'data', 'disclosure', 'fleet', 'investigation'):
             raise ValueError('Unknown news category')
         if item.get('view') not in (None, 'ecosystem', 'wanted'):
             raise ValueError('Unknown news view')
@@ -71,7 +71,7 @@ def read_news():
             if any(not isinstance(item[field].get(lang), str) or not item[field][lang].strip()
                    for lang in ('ru', 'en', 'es', 'zh')):
                 raise ValueError(f'Missing news translation: {item["id"]}/{field}')
-        if not item.get('evidence') and not (item['kind'] == 'fleet' and item.get('links')):
+        if not item.get('evidence') and not (item['kind'] in ('fleet', 'investigation') and item.get('links')):
             raise ValueError(f'Missing news evidence: {item["id"]}')
         for evidence in item.get('evidence', []):
             path = (ROOT/evidence['file']).resolve()
@@ -81,7 +81,7 @@ def read_news():
         raise ValueError('Only one news item may be pinned')
     return sorted(news, key=lambda item: (
         item.get('pinned', False),
-        item.get('important', False) or item['kind'] == 'disclosure',
+        item.get('important', False) or item['kind'] in ('disclosure', 'investigation'),
         item['date']), reverse=True)
 
 
