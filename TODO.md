@@ -1,6 +1,6 @@
 # Public project backlog
 
-Reviewed 16 October 2026. This file records status, not instructions to run scans.
+Reviewed 11 November 2026. This file records status, not instructions to run scans.
 
 ## Integrated
 
@@ -19,7 +19,7 @@ Reviewed 16 October 2026. This file records status, not instructions to run scan
 - [x] Add the dated FOFA comparison without merging its counts into Shodan totals.
 - [x] Rename the DSLForum response class; retain the stable line ID.
 - [x] Add DSLForum country/port, Gateway alternate-port and CLI follow-up queries.
-- [ ] Collect the nine new follow-ups in a fresh dated run; older snapshots correctly
+- [x] Collect the nine follow-ups in later dated runs; older snapshots correctly
   show them as uncollected.
 
 ## Open research
@@ -40,10 +40,23 @@ Reviewed 16 October 2026. This file records status, not instructions to run scan
 - [ ] Validate any hardware-model interpretation of Huawei operator slices.
 - [ ] Expand evaluation using a labeled holdout independent of discovery samples.
 - [ ] Investigate transport-level signatures for obuspa without claiming absence.
+- [x] Collect the DSLForum realm + Apache brand + 401 subset across all ports,
+  faceted by country/operator/ASN/port (`dslforum-apache-401`, first collected
+  1 November). The Count query does not measure Date presence.
+- [ ] Analyze saved DSLForum banners for Date presence/absence, header order, Server, realm, status
+  and body-capture completeness, with sample size, date and source per
+  result; track multi-product concatenated banners separately as likely
+  sensor markers. Public phrasing: "Apache in the banner: different
+  implementations and response profiles."
 - [ ] Test the Askey lead for the DSLForum response class using the model
   references in [NOTES §9.44](NOTES.md#section-9.44). Record a public firmware
   source, version and binary hash; compare the exact CR realm and response
   template. A model listing or WPS component match does not close attribution.
+- [x] Add all-port RomPager and mini_httpd lines, version/port slices and
+  possible sensor-contamination context (see LEGACY-HTTP.md).
+- [x] Record the Airties port-9080 CPE-management correction in ACS-HUNT.md;
+  the mini_httpd port-9080 slice is collected. A port alone does not identify
+  an Airties model or an ACS.
 - [ ] Review newly found versions before adding them to the query catalog.
 
 ## Publication scope
@@ -66,7 +79,12 @@ part of the public repository. Daily collection is supported but not scheduled.
   dominated by a Taiwanese cable operator and a large Indian carrier — a
   Taiwanese-vendor hypothesis is the current lead.
 - [x] Publish TP-Link handler software-lineage evidence; retain only fingerprint
-  attribution in the public edition.
+  attribution in the public edition. On 11 November, add the lineage to the
+  card, source catalog and four-language news, with the official image hash.
+- [x] Bring the ZTE handler-generation relationship and OpenACS query-quality
+  correction into the cards and news.
+- [ ] Record exact public revisions and binary hashes for the three-build
+  IgdAuthentication template comparison before extending its evidence card.
 - [ ] Check a WAN-exposed F670L banner (port 58000) for the opaque stub to
   decide whether the ZTE matcher should split by generation.
 - [x] Expand the passive IgdAuth sample and compare the marker format with SDK
@@ -94,6 +112,8 @@ part of the public repository. Daily collection is supported but not scheduled.
 - [x] Publish an English integration matrix and firmware-configuration summary.
 - [x] Add the general Bad CPE trust-boundary model and four-language news.
 - [ ] Record image hashes and redacted configuration excerpts for firmware-derived endpoints.
+- [ ] Source the Askey HGU → Telefónica ACS configuration lead with a public
+  URL, model/version and redacted excerpt before adding a graph edge.
 - [ ] Resolve Gateway/TIM component attribution and nld-acs.com ownership independently.
 - [ ] Find named operator deployments for RDK-B and GenieACS.
 - [ ] Add exact public sources for the BT community-log lead.

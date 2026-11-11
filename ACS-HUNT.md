@@ -26,8 +26,9 @@ catalog listing does not prove which implementation produces this response.
 
 The `/cwmpWeb` path and `main.acs.telefonica.net` cookie domain support attribution
 to a Telefónica ACS frontend. The historical query returned 1,483 matches, mostly
-in Spain, with gSOAP/2.7 and BIG-IP response markers. This is an ACS line and is
-excluded from the default CPE-oriented signature sum. No exploitability conclusion
+in Spain, with gSOAP/2.7 and BIG-IP response markers. The atlas labels this line
+ACS and includes it in the default all-lines selection; the CPE role filter
+excludes it. No exploitability conclusion
 or active test follows from the advertised toolkit version.
 
 ## acssimtool

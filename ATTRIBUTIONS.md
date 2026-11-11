@@ -175,3 +175,36 @@ Commit: `5f8082b38f43aecd232d9a4723ae5545811b7266`.
 SHA-256: `3b1877d457726ff84b6eb4bc79ca9592c2472072f677b5c0c7dd803470e67334`.
 
 Research: [NOTES.md](NOTES.md)
+
+<a id="tplink-works-openagent"></a>
+## TP-Link Archer VR1600v V2 · Works Systems openagent lineage
+
+The inspected Archer VR1600v V2 handler belongs to the Works Systems openagent code family. Corresponding function names and the 401 header template link it to the public GPL source.
+
+Reviewed: **2026-11-11**.
+
+Atlas lines: `tr069-http-server`.
+
+### [Archer VR1600v V2 · /usr/bin/cwmp (inside official firmware archive)](https://static.tp-link.com/upload/firmware/2026/202604/20260408/Archer_VR1600vV2_0.1.0_0.9.1_up_boot%28260317%29_2026-03-17_10.25.18.bin.zip)
+
+Type: firmware binary.
+
+Fingerprint: `tr069 http server @ 0x18c0c; Vary: accept-language @ 0x18cb8; Accept-Ranges: bytes @ 0x18ccf`.
+
+Version: `0.1.0 Build 260317 Rel.7757n`.
+
+SHA-256: `2aa70f71350cdc59606e3d10ef7b0ce25b85d1eedd3a4058f42ef6b45774fc28`.
+
+### [DIR-615 AthSDK · conn_req_server.c](https://github.com/nist/DIR-615/blob/272e8bbe56907d3d89e8409f4de1552b63055823/GPL_Source_Code/src/AthSDK/apps/openagent-2.0/src/tools/conn_req_server.c#L2)
+
+Type: source code.
+
+Fingerprint: `Works Systems, Inc.; Server: Apache/2.0.40 (Red Hat Linux)`.
+
+Version: `openagent-2.0`.
+
+Commit: `272e8bbe56907d3d89e8409f4de1552b63055823`.
+
+SHA-256: `7fff1cfcb61b21424aedf9eec8bcedf02cc701532c1a2ffa447cf8e2e8cb0f7c`.
+
+Research: [FINGERPRINTS.md](FINGERPRINTS.md#tplink-works-lineage) · [NOTES.md](NOTES.md#section-9.34)

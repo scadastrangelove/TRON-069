@@ -259,8 +259,10 @@ Two disassembly passes closed attribution questions. The older inspected ZTE
 generation's connection-request handler is one code family with the newer
 platform's (same challenge template literals; the visible fleet's banner
 matches the inspected binary's format string). The inspected TP-Link handler
-carries the Works Systems openagent software lineage — its function names and
-response template match the published GPL source. Nonce-generation mechanics
+carries the Works Systems openagent software lineage. Its camelCase function
+names correspond to underscored names in the published GPL source, and the
+401 response shares distinctive headers. The [public comparison](FINGERPRINTS.md#tplink-works-lineage)
+records the names, binary hash and offsets. Nonce-generation mechanics
 belong to the restricted census and are withheld from the public release pending
 disclosure. At that review, IgdAuthentication remained unattributed; the subsequent
 public binary evidence is recorded in section 9.41.
@@ -372,6 +374,18 @@ The DSLForum-realm family has a different response template and retains an
 unresolved supplier. The atlas now calls it DSLForum CPE Management, preserving
 its stable ID and historical measurements. Operator/port follow-ups are recorded
 in [FINGERPRINTS.md](FINGERPRINTS.md#dslforum-cpe-management).
+
+<a id="section-9.43"></a>
+## 9.43. OpenACS line reclassified — October 15
+
+A review of saved OpenACS responses found unconfigured/error-page services
+and unrelated software sharing a cookie marker. Hosting location alone does
+not establish whether a service is in production. The atlas's broad `"openacs"`
+Shodan query is unchanged; its count includes possible unrelated products and
+must not be presented as a count of production operator ACS deployments.
+The stricter product-plus-cookie rule belongs to the separate response matcher,
+not the public Count query. The card now explains this distinction instead of
+retaining a fixed historical host count.
 
 <a id="section-9.44"></a>
 ## 9.44. Broadcom SDK across management and Wi-Fi interfaces — November 1

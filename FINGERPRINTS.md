@@ -55,6 +55,76 @@ variant queries separate from parent lines. [METHOD.md](METHOD.md) explains
 overlap, sampling and attribution limits. No new vulnerability findings or their
 reproduction details are part of this public fingerprint collection.
 
+<a id="tplink-works-lineage"></a>
+## TP-Link handler and Works Systems openagent lineage
+
+Reviewed 11 November 2026. The `tr069 http server` signature has two attribution
+layers: an inspected TP-Link Archer VR1600v V2 firmware image anchors the device
+vendor, and its connection-request handler belongs to the Works Systems
+openagent code family. This extends the Works Systems component evidence beyond
+the separately identified [OneAgent TR family](DEANON-TR069CLIENT.md#public-evidence).
+
+The inspected `/usr/bin/cwmp` is a 124,256-byte MIPS binary with SHA-256
+`2aa70f71350cdc59606e3d10ef7b0ce25b85d1eedd3a4058f42ef6b45774fc28`.
+The [official V2 download page](https://www.tp-link.com/au/support/download/archer-vr1600v/v2/)
+provides build `0.1.0 Build 260317 Rel.7757n`. The attribution catalog links its
+archive; the hash above identifies the extracted client, not the archive.
+
+The [pinned openagent-2.0 source](https://github.com/nist/DIR-615/blob/272e8bbe56907d3d89e8409f4de1552b63055823/GPL_Source_Code/src/AthSDK/apps/openagent-2.0/src/tools/conn_req_server.c)
+carries the 2006–2007 Works Systems copyright. The public fingerprint comparison
+uses the following markers, alongside the recorded disassembly review:
+
+| TP-Link binary marker | File offset | Corresponding GPL source marker |
+| --- | --- | --- |
+| `tr069 http server` | `0x18c0c` | TP-Link response brand |
+| `verifyConnReq` | `0x18dcc` | `verify_conn_req` |
+| `parseFirstLine` | `0x18ddc` | `parse_first_line` |
+| `parseAuthorizationLine` | `0x18b08` | `parse_authorization_line` |
+| `Vary: accept-language` | `0x18cb8` | Same header in the 401 template |
+| `Accept-Ranges: bytes` | `0x18ccf` | Same header in the 401 template |
+
+The function names correspond after conversion from camelCase to underscores;
+they are not byte-identical spellings. The combined evidence identifies the
+handler lineage. A matching banner alone does not identify an Archer model or
+the OEM of every indexed endpoint.
+
+The main Shodan query remains `"tr069 http server"`, without a port restriction.
+It already includes matches on 7547, 58000, 7548, 8001 and other ports. Country
+and organization facets are collected in every full snapshot. Historical FOFA
+measurements remain in the [dated index comparison](CROSS-INDEX.md); they are
+not merged into Shodan counts. Country/operator and country/port observations
+do not by themselves establish a joint operator–port association.
+
+<a id="attribution-review-20261111"></a>
+## Attribution-to-atlas review — 11 November 2026
+
+The review reconciled the research notes with the public line cards, news and
+source catalog:
+
+| Finding | Atlas integration |
+| --- | --- |
+| TP-Link handler → Works Systems openagent | Vendor and component distinguished; reproducible evidence above, source catalog and four-language news |
+| ZTE handler generations | The code-lineage finding from [NOTES §9.34](NOTES.md#section-9.34) is now in both line cards |
+| OpenACS search quality | [NOTES §9.43](NOTES.md#section-9.43) explains unrelated/unconfigured services; removed the stale fixed count |
+| ACSSimTool deployment context | Country and organization evidence added with a fixed snapshot date; original supplier still unknown |
+| Broadcom CMS tr69c and WPS component co-presence | Already included in the IgdAuthentication card and 1 November news |
+| DSLForum Apache response profile | Count query already collected on 1 November; offline Date/header profiling remains a separate task |
+| RomPager and mini_httpd | All-port lines and port/version slices already present; see [legacy HTTP coverage](LEGACY-HTTP.md) |
+
+ACSSimTool's [1 November country facets](data/mapdata/snapshot-20261101-155821/acssimtool.json)
+include Spain, the United Kingdom, Australia and Thailand. The
+[Spain organization facets](data/mapdata/snapshot-20261101-155821/org-drill/acssimtool--ES.json)
+include Adamo. These describe indexed deployments; they do not identify the
+original software supplier.
+
+Two proposed additions still need a reproducible public evidence bundle before
+promotion: the three-build IgdAuthentication template comparison (exact source
+revisions and binary hashes), and the Askey HGU → Telefónica ACS relationship
+(model/version, public source and a redacted configuration excerpt). The first
+would extend an existing component attribution; the second would add a graph
+edge. The current records retain their existing evidence levels. Gateway/TIM
+and the Askey candidate for the DSLForum response class remain unresolved.
+
 <a id="matching-precedence"></a>
 ## Specific signatures and generic toolkit matches
 

@@ -49,7 +49,8 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('attributions', builder.SNAPSHOT_FIELDS)
         self.assertEqual({line for item in catalog['items'] for line in item['lines']},
                          {'tr069-client', 'digauth', 'fake-apache-openagent',
-                          'igdauthentication', 'easycwmp-vanilla', 'rdk-b-ccsptr069pa'})
+                          'igdauthentication', 'easycwmp-vanilla', 'rdk-b-ccsptr069pa',
+                          'tr069-http-server'})
         changes = [lambda d: d['items'].append(d['items'][0]),
                    lambda d: d['items'][0]['summary'].pop('zh'),
                    lambda d: d['items'][0].update(lines=['unknown-line']),

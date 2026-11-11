@@ -11,7 +11,8 @@
       "findings": [
         "CPE-SERVER and cpe@zte.com markers were found in the inspected ZTE H108N image; they can describe related endpoints.",
         "Operator and port associations support research slices, not hardware-model attribution.",
-        "Two inspected ZTE F670L firmware generations contain the cpe@zte.com realm and a default connection-request port of 58000. Operator NAT can hide such listeners from public indexing."
+        "Two inspected ZTE F670L firmware generations contain the cpe@zte.com realm and a default connection-request port of 58000. Operator NAT can hide such listeners from public indexing.",
+        "The inspected older and newer ZTE handlers share a response-template code lineage. This connects the sampled generations; the two query totals may overlap."
       ],
       "anomalies": [
         "A second line at Three UK: unusual outside Italy and Asia"
@@ -36,6 +37,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.34"
         }
       ],
       "query_kind": "family"
@@ -133,11 +138,12 @@
     },
     "tr069-http-server": {
       "badge": "proven",
-      "vendor": "TP-Link (IMAGE-PROVEN: /usr/bin/cwmp Archer VR1600v V2)",
+      "vendor": "TP-Link firmware anchor; Works Systems openagent lineage",
       "role": "CPE CR",
       "findings": [
         "The signature was found in an inspected TP-Link Archer VR1600v V2 image; firmware is not redistributed.",
-        "Response evidence does not establish a hardware model or exploitability."
+        "Response evidence does not establish a hardware model or exploitability.",
+        "The inspected Archer VR1600v V2 handler belongs to the Works Systems openagent code family. Corresponding function names and the 401 header template link it to the public GPL source."
       ],
       "anomalies": [],
       "overlaps": [
@@ -160,6 +166,14 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "tplink-works-lineage"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.34"
         }
       ],
       "query_kind": "family"
@@ -406,7 +420,8 @@
       "vendor": "—",
       "role": "CPE CR subset",
       "findings": [
-        "WindTre has five platforms: this, Netty, Yapsie, TR069-Client and Huawei"
+        "WindTre has five platforms: this, Netty, Yapsie, TR069-Client and Huawei",
+        "This query is a subset of tr069 http server. Its parent has a TP-Link firmware anchor and Works Systems openagent lineage; the subset does not independently identify a hardware model."
       ],
       "overlaps": [
         {
@@ -424,6 +439,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "tplink-works-lineage"
         }
       ],
       "query_kind": "slice",
@@ -435,7 +454,8 @@
       "role": "CPE CR (another generation)",
       "findings": [
         "CPE-SERVER and cpe@zte.com markers were found in the inspected ZTE H108N image; they can describe related endpoints.",
-        "Two inspected ZTE F670L firmware generations contain the cpe@zte.com realm and a default connection-request port of 58000. Operator NAT can hide such listeners from public indexing."
+        "Two inspected ZTE F670L firmware generations contain the cpe@zte.com realm and a default connection-request port of 58000. Operator NAT can hide such listeners from public indexing.",
+        "The inspected older and newer ZTE handlers share a response-template code lineage. This connects the sampled generations; the two query totals may overlap."
       ],
       "anomalies": [
         "Thailand: both TOT and AIS Fibre"
@@ -454,6 +474,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.34"
         }
       ],
       "query_kind": "family"
@@ -582,7 +606,8 @@
       "vendor": "—",
       "role": "CPE CR subset",
       "findings": [
-        "Australian stack in the UK"
+        "Australian stack in the UK",
+        "This query is a subset of tr069 http server. Its parent has a TP-Link firmware anchor and Works Systems openagent lineage; the subset does not independently identify a hardware model."
       ],
       "overlaps": [
         {
@@ -600,6 +625,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "tplink-works-lineage"
         }
       ],
       "query_kind": "slice",
@@ -851,7 +880,8 @@
       "vendor": "Original ACSSimTool vendor unknown",
       "role": "CPE CR",
       "findings": [
-        "A public reimplementation does not identify the original vendor or deployed credentials."
+        "A public reimplementation does not identify the original vendor or deployed credentials.",
+        "The 1 November 2026 country facets include Spain, the United Kingdom, Australia and Thailand. Spanish organization facets include Adamo; deployment geography does not identify the original component supplier."
       ],
       "anomalies": [],
       "sources": [
@@ -864,6 +894,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "attribution-review-20261111"
         }
       ],
       "query_kind": "signature"
@@ -1070,7 +1104,7 @@
       "vendor": "OpenACS",
       "role": "ACS",
       "findings": [
-        "12 hosts"
+        "The broad OpenACS query includes unconfigured services and unrelated products. Its matches are not a count of production operator ACS deployments."
       ],
       "sources": [
         {
@@ -1082,6 +1116,10 @@
         },
         {
           "file": "METHOD.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.43"
         }
       ],
       "query_kind": "signature"

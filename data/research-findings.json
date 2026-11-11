@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-11-01",
+  "reviewed": "2026-11-11",
   "edition": "public",
   "findings": [
     {
@@ -748,6 +748,69 @@
         "findings",
         "sources"
       ]
+    },
+    {
+      "id": "tplink-works-lineage",
+      "status": "included-qualified",
+      "lines": [
+        "tr069-http-server",
+        "windtre-tr069-http-server",
+        "sky-ee-tr069-http-server"
+      ],
+      "source": "FINGERPRINTS.md",
+      "news_id": "tplink-works-openagent-lineage",
+      "summary": "TP-Link image anchor plus Works Systems openagent lineage; normalized function names and response headers, with pinned source and extracted-file hash.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    },
+    {
+      "id": "zte-handler-lineage",
+      "status": "included-qualified",
+      "lines": [
+        "cpe-server-1-0",
+        "zte"
+      ],
+      "source": "NOTES.md",
+      "news_id": "attribution-review-20261111",
+      "summary": "Inspected ZTE handler generations share a response-template lineage; independent queries may overlap.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    },
+    {
+      "id": "openacs-query-quality",
+      "status": "included-qualified",
+      "lines": [
+        "openacs"
+      ],
+      "source": "NOTES.md",
+      "news_id": "attribution-review-20261111",
+      "summary": "Broad search includes unconfigured and unrelated services; no production fleet total inferred.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
+    },
+    {
+      "id": "acssimtool-deployment-context",
+      "status": "included-qualified",
+      "lines": [
+        "acssimtool"
+      ],
+      "source": "FINGERPRINTS.md",
+      "news_id": "attribution-review-20261111",
+      "summary": "Dated public country and organization facets; original vendor unresolved.",
+      "atlas": [
+        "news",
+        "findings",
+        "sources"
+      ]
     }
   ],
   "line_sources": {
@@ -765,6 +828,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.34"
       }
     ],
     "icwmp-iopsys": [
@@ -821,6 +888,14 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "tplink-works-lineage"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.34"
       }
     ],
     "gsoap-park": [
@@ -952,6 +1027,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "tplink-works-lineage"
       }
     ],
     "zte": [
@@ -968,6 +1047,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.34"
       }
     ],
     "sagemcom": [
@@ -1044,6 +1127,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "tplink-works-lineage"
       }
     ],
     "gateway-realm": [
@@ -1192,6 +1279,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "attribution-review-20261111"
       }
     ],
     "arris-cpe-authentication": [
@@ -1316,6 +1407,10 @@
       },
       {
         "file": "METHOD.md"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.43"
       }
     ],
     "axiros": [

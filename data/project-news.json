@@ -1,5 +1,77 @@
 [
   {
+    "id": "tplink-works-openagent-lineage",
+    "date": "2026-11-11",
+    "kind": "research",
+    "title": {
+      "en": "TP-Link: a Works Systems code lineage",
+      "ru": "TP-Link: кодовая линия Works Systems",
+      "es": "TP-Link: un linaje de código Works Systems",
+      "zh": "TP-Link：Works Systems 代码谱系"
+    },
+    "body": {
+      "en": "The tr069 http server card now distinguishes the TP-Link firmware anchor from its Works Systems openagent software lineage. The Archer VR1600v V2 client, corresponding GPL function names and shared 401 headers provide the evidence. The source catalog includes the official firmware archive, extracted-file hash and pinned GPL source. The Shodan query already covers all ports. This is another Works Systems-derived handler alongside OneAgent TR; it does not make every matching device an Archer.",
+      "ru": "Карточка tr069 http server теперь различает опорную прошивку TP-Link и происхождение кода от Works Systems openagent. Основания — клиент Archer VR1600v V2, соответствующие имена функций в GPL-исходнике и общие заголовки ответа 401. В каталог источников добавлены официальный архив прошивки, хеш извлечённого файла и ссылка на конкретную ревизию GPL-кода. Запрос Shodan уже охватывает все порты. Это ещё один обработчик семейства Works Systems рядом с OneAgent TR; совпадение сигнатуры не делает каждое устройство моделью Archer.",
+      "es": "La ficha tr069 http server distingue ahora el firmware de referencia TP-Link de su linaje Works Systems openagent. La evidencia combina el cliente Archer VR1600v V2, los nombres de funciones correspondientes en el código GPL y las cabeceras 401 compartidas. El catálogo enlaza el archivo oficial, el hash del binario extraído y una revisión fija del código GPL. La consulta Shodan ya abarca todos los puertos. Es otro handler derivado de Works Systems junto a OneAgent TR; una coincidencia no identifica cada dispositivo como un Archer.",
+      "zh": "tr069 http server 卡片现在区分 TP-Link 固件证据与 Works Systems openagent 软件谱系。证据包括 Archer VR1600v V2 客户端、GPL 源码中对应的函数名称及共同的 401 响应头。来源目录提供官方固件包、提取文件的哈希和固定版本的 GPL 源码。Shodan 查询已覆盖所有端口。这是 OneAgent TR 之外又一个源自 Works Systems 的处理程序；指纹匹配并不意味着每台设备都是 Archer。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "tplink-works-lineage"
+      }
+    ],
+    "related": {
+      "lines": [
+        "tr069-http-server",
+        "tr069-client",
+        "digauth",
+        "fake-apache-openagent",
+        "windtre-tr069-http-server",
+        "sky-ee-tr069-http-server"
+      ]
+    }
+  },
+  {
+    "id": "attribution-review-20261111",
+    "date": "2026-11-11",
+    "kind": "research",
+    "title": {
+      "en": "Attribution review: ZTE, OpenACS and ACSSimTool",
+      "ru": "Проверка атрибуции: ZTE, OpenACS и ACSSimTool",
+      "es": "Revisión de atribución: ZTE, OpenACS y ACSSimTool",
+      "zh": "归属复核：ZTE、OpenACS 与 ACSSimTool"
+    },
+    "body": {
+      "en": "Both ZTE cards now include the recorded code-lineage link between the inspected generations. OpenACS loses its stale fixed host count: broad search matches include unconfigured services and unrelated products. ACSSimTool gains dated deployment context from Shodan facets, while its original supplier remains unidentified.",
+      "ru": "В обе карточки ZTE перенесена установленная в исследовании связь кода изученных поколений. Из OpenACS убрано устаревшее фиксированное число хостов: широкий поиск включает ненастроенные сервисы и посторонние продукты. Для ACSSimTool добавлен датированный контекст развёртывания из фасетов Shodan; исходный поставщик компонента пока не установлен.",
+      "es": "Ambas fichas ZTE incorporan el vínculo de código registrado entre las generaciones inspeccionadas. OpenACS pierde su recuento fijo obsoleto: la búsqueda amplia incluye servicios sin configurar y productos ajenos. ACSSimTool incorpora el contexto de despliegue fechado de las facetas Shodan; su proveedor original sigue sin identificarse.",
+      "zh": "两张 ZTE 卡片现已纳入所检查代际之间已记录的代码联系。OpenACS 移除了过时的固定主机数：宽泛搜索包含未配置服务及无关产品。ACSSimTool 增加了来自 Shodan 分面的带日期部署背景，其原始供应商仍未确定。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "attribution-review-20261111"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.34"
+      },
+      {
+        "file": "NOTES.md",
+        "anchor": "section-9.43"
+      }
+    ],
+    "related": {
+      "lines": [
+        "cpe-server-1-0",
+        "zte",
+        "openacs",
+        "acssimtool"
+      ]
+    }
+  },
+  {
     "id": "gsoap-same-version-different-bytes",
     "date": "2026-10-27",
     "kind": "fleet",
