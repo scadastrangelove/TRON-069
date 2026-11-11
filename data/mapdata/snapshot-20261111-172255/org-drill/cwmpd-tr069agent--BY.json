@@ -1,0 +1,57 @@
+{
+ "dork": "\"cwmpd\" opaque country:BY",
+ "total": 6411,
+ "taken": "2026-11-11T18:24:02+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 6411,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 6411,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6403,
+   "value": "as25106"
+  },
+  {
+   "count": 6,
+   "value": "as42772"
+  },
+  {
+   "count": 2,
+   "value": "as31143"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 6403,
+   "value": "Mobile TeleSystems JLLC"
+  },
+  {
+   "count": 6,
+   "value": "Unitary enterprise A1"
+  },
+  {
+   "count": 1,
+   "value": "Belarusian-American joint venture \"Cosmos TV\", Ltd."
+  },
+  {
+   "count": 1,
+   "value": "JCLL \"Cosmos TV\""
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "BY"
+}

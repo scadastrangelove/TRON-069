@@ -1,0 +1,45 @@
+{
+ "dork": "\"mini_httpd\" country:BW",
+ "total": 3,
+ "taken": "2026-11-11T18:05:57+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as37711"
+  },
+  {
+   "count": 1,
+   "value": "as37395"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Sea Breeze (Pty) Ltd T/A Mega Internet"
+  },
+  {
+   "count": 1,
+   "value": "Abari Communications - Abari Communications"
+  }
+ ],
+ "line": "mini_httpd (all ports)",
+ "line_id": "mini-httpd",
+ "cc": "BW"
+}

@@ -1,0 +1,49 @@
+{
+ "dork": "\"mini_httpd\" country:RE",
+ "total": 6,
+ "taken": "2026-11-11T18:05:47+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as3215"
+  },
+  {
+   "count": 1,
+   "value": "as37002"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4,
+   "value": "Orange S.A."
+  },
+  {
+   "count": 1,
+   "value": "POP REU"
+  },
+  {
+   "count": 1,
+   "value": "Reunicable SAS - Reunicable SAS"
+  }
+ ],
+ "line": "mini_httpd (all ports)",
+ "line_id": "mini-httpd",
+ "cc": "RE"
+}

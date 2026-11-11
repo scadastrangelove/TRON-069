@@ -1,0 +1,69 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:IM",
+ "total": 7482,
+ "taken": "2026-11-11T17:45:18+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 8,
+   "covered": 7482,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 7482,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 7480,
+   "value": "as13122"
+  },
+  {
+   "count": 2,
+   "value": "as8680"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 6406,
+   "value": "Residential ADSL - Manx Telecom"
+  },
+  {
+   "count": 759,
+   "value": "Manx Telecom Trading Ltd"
+  },
+  {
+   "count": 288,
+   "value": "Licensed Provider"
+  },
+  {
+   "count": 13,
+   "value": "Corporate"
+  },
+  {
+   "count": 12,
+   "value": "Manx Telecom - ADSL - STATIC IP"
+  },
+  {
+   "count": 2,
+   "value": "ADSL - Static - Manx Telecom"
+  },
+  {
+   "count": 1,
+   "value": "SURE-International-Limited Sure (Guernsey) Limited"
+  },
+  {
+   "count": 1,
+   "value": "Sure IOM BB"
+  }
+ ],
+ "line": "TR069 Client",
+ "line_id": "tr069-client",
+ "cc": "IM"
+}

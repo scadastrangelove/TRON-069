@@ -15,6 +15,7 @@ from snapshot_history import snapshot_history, write_history
 from index_comparison import read_comparison
 from wanted import read_wanted, render_wanted
 from attribution import read_attributions, render_attributions
+from specimens import read_specimens, render_specimens
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -108,6 +109,7 @@ def validate_sources(data):
     references += [q['source'] for q in data.get('queryCatalog', [])]
     references += [s for item in data.get('wanted', {}).get('items', []) for s in item['sources']]
     references += [s for item in data.get('attributions', {}).get('items', []) for s in item['sources']]
+    references += [s for item in data.get('specimens', {}).get('items', []) for s in item['sources']]
     if data.get('comparison'):
         references.append(data['comparison']['source'])
     references += [s for e in data.get('ecosystem', {}).get('edges', [])
@@ -356,6 +358,7 @@ def build_data(snapshot):
         'wanted': read_wanted(ROOT, registry),
         'attributions': read_attributions(ROOT, registry),
     }
+    data['specimens'] = read_specimens(ROOT, registry, data['attributions'])
     validate_translations(data)
     validate_news_relations(data['news'], registry, data['operatorCatalog'])
     for item in data['news']:
@@ -445,6 +448,7 @@ def build(snapshot, output_root=ROOT):
         out.write_text(html, encoding='utf-8')
     (output_root/'WANTED.md').write_text(render_wanted(data['wanted']), encoding='utf-8')
     (output_root/'ATTRIBUTIONS.md').write_text(render_attributions(data['attributions']), encoding='utf-8')
+    (output_root/'SPECIMENS.md').write_text(render_specimens(data['specimens']), encoding='utf-8')
     print(f'Built both entry points: {len(data["lines"])} lines, {len(data["orgdrill"])} operator pairs, '
           f'{len(html.encode()):,} bytes each; {len(data["history"]["daily"])} daily choices, {len(archives)} archived snapshots')
     return data

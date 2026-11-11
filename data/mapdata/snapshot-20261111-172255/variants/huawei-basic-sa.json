@@ -1,0 +1,151 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\" country:SA",
+ "total": 7101,
+ "taken": "2026-11-11T18:32:26+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 7101,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 22,
+   "covered": 7101,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 7101,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 7101,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 7101,
+   "value": "SA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 7101,
+   "value": "as25019"
+  }
+ ],
+ "ports": [
+  {
+   "count": 7101,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1362,
+   "value": "STC, Jeddah Residential Fixed-Broadband"
+  },
+  {
+   "count": 1212,
+   "value": "STC, Dammam Residential Fixed-Broadband"
+  },
+  {
+   "count": 1151,
+   "value": "STC, Riyadh Residential Fixed-Broadband"
+  },
+  {
+   "count": 383,
+   "value": "STC, Madinah Residential Fixed-Broadband"
+  },
+  {
+   "count": 336,
+   "value": "STC, Riyadh-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 327,
+   "value": "Saudi Telecom Company JSC"
+  },
+  {
+   "count": 320,
+   "value": "STC, Jeddah-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 308,
+   "value": "STC, Khobar Residential Fixed-Broadband"
+  },
+  {
+   "count": 270,
+   "value": "STC, Al-Qassim Residential Fixed-Broadband"
+  },
+  {
+   "count": 198,
+   "value": "STC, Khamis Mushait Residential-Fixed-Broadband"
+  },
+  {
+   "count": 164,
+   "value": "STC, Khamis Mushait Residential Fixed-Broadband"
+  },
+  {
+   "count": 150,
+   "value": "STC, Al Qassim Residential Fixed-Broadband"
+  },
+  {
+   "count": 145,
+   "value": "STC, Madinah Residential-Fixed-Broadband"
+  },
+  {
+   "count": 127,
+   "value": "STC, Khamis Mushait-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 123,
+   "value": "STC, Riyadh Residential Fixed-broadband"
+  },
+  {
+   "count": 113,
+   "value": "STC, Madinah ResidentialFixed-Broadband"
+  },
+  {
+   "count": 109,
+   "value": "STC, Dammam-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 106,
+   "value": "STC, Residential Fixed-Broadband"
+  },
+  {
+   "count": 88,
+   "value": "STC, Riyadh Residential-Fixed-Broadband"
+  },
+  {
+   "count": 44,
+   "value": "STC, Khobar-Residential-Fixed-Broadband"
+  },
+  {
+   "count": 36,
+   "value": "STC, Makkah Residential Fixed-Broadband"
+  },
+  {
+   "count": 29,
+   "value": "STC, Madinah -Residential-Fixed-Broadband"
+  }
+ ],
+ "id": "huawei-basic-sa",
+ "parent": "huaweihomegateway",
+ "group": "huawei-auth",
+ "label": {
+  "ru": "Ответы Basic · SA",
+  "en": "Basic responses · SA",
+  "es": "Respuestas Basic · SA",
+  "zh": "Basic 响应 · SA"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:SZ",
+ "total": 6,
+ "taken": "2026-11-11T18:17:14+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as19711"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 5,
+   "value": "SWAZILAND PTC - SWAZILAND PTC"
+  },
+  {
+   "count": 1,
+   "value": "SWAZILAND PTC"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "SZ"
+}

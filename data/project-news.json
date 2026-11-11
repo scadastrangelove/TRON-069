@@ -1,5 +1,39 @@
 [
   {
+    "id": "research-specimens-20261111",
+    "date": "2026-11-11",
+    "kind": "research",
+    "view": "wanted",
+    "title": {
+      "en": "A catalog of research specimens",
+      "ru": "Каталог исследованных образцов",
+      "es": "Catálogo de muestras de investigación",
+      "zh": "研究样本目录"
+    },
+    "body": {
+      "en": "BYO TR-069 now lists 15 firmware, source-code and binary records. Each sample has its own result, evidence and remaining gaps. Verified component anchors sit alongside bounded negative results and unfinished extractions. TP-Link, Nokia and ASUS link to the Works Systems lineage; the ZyXEL samples link to Broadcom CMS. The TG789 image still does not identify the Gateway-realm fleet. Search by model or filter by result; related samples also appear in line cards.",
+      "ru": "В BYO TR-069 появился каталог из 15 записей о прошивках, исходниках и бинарниках. У каждого образца — свой результат, доказательства и недостающие материалы. Рядом с опорными артефактами компонентов сохранены ограниченные отрицательные результаты и незавершённые разборы. TP-Link, Nokia и ASUS связаны с линией Works Systems, образцы ZyXEL — с Broadcom CMS. Образ TG789 по-прежнему не устанавливает происхождение флота Gateway realm. Есть поиск по модели и фильтр результата; связанные образцы доступны и в карточках линий.",
+      "es": "BYO TR-069 incorpora 15 registros de firmware, código fuente y binarios. Cada muestra tiene su resultado, evidencia y lagunas pendientes. Las referencias de componentes conviven con resultados negativos acotados y extracciones incompletas. TP-Link, Nokia y ASUS se vinculan al linaje Works Systems; las muestras ZyXEL, a Broadcom CMS. La imagen TG789 sigue sin identificar la flota Gateway realm. Se puede buscar por modelo o filtrar por resultado; las muestras relacionadas también aparecen en las fichas de líneas.",
+      "zh": "BYO TR-069 新增 15 条固件、源码和二进制样本记录。每个样本分别列出结果、证据与缺失材料。已确认的组件证据、限定范围的阴性结果和未完成的提取一并保留。TP-Link、Nokia 和 ASUS 对应 Works Systems 谱系，ZyXEL 样本对应 Broadcom CMS。TG789 镜像仍不能确定 Gateway realm 设备群的来源。可按型号搜索或按结果筛选，相关样本也会显示在指纹线卡片中。"
+    },
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "specimen-review-20261111"
+      }
+    ],
+    "related": {
+      "lines": [
+        "tr069-http-server",
+        "tr069-client",
+        "igdauthentication",
+        "digauth",
+        "cpe-server-1-0",
+        "gateway-realm"
+      ]
+    }
+  },
+  {
     "id": "tplink-works-openagent-lineage",
     "date": "2026-11-11",
     "kind": "research",

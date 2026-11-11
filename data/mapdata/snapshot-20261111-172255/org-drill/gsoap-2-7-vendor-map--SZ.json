@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:SZ",
+ "total": 1133,
+ "taken": "2026-11-11T17:48:07+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 1133,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 1133,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1133,
+   "value": "as19711"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 748,
+   "value": "SWAZILAND PTC - SWAZILAND PTC"
+  },
+  {
+   "count": 348,
+   "value": "SWAZILAND PTC"
+  },
+  {
+   "count": 37,
+   "value": "SWAZINET"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "SZ"
+}

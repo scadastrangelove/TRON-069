@@ -1,0 +1,196 @@
+{
+ "dork": "\"mini_httpd\" port:51005",
+ "total": 34,
+ "taken": "2026-11-11T18:34:36+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 13,
+   "covered": 34,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 14,
+   "covered": 34,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 8,
+   "covered": 34,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 34,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 10,
+   "value": "US"
+  },
+  {
+   "count": 6,
+   "value": "CN"
+  },
+  {
+   "count": 4,
+   "value": "JP"
+  },
+  {
+   "count": 2,
+   "value": "AU"
+  },
+  {
+   "count": 2,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "KR"
+  },
+  {
+   "count": 2,
+   "value": "SG"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "DK"
+  },
+  {
+   "count": 1,
+   "value": "FR"
+  },
+  {
+   "count": 1,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "IE"
+  },
+  {
+   "count": 1,
+   "value": "IL"
+  }
+ ],
+ "asn": [
+  {
+   "count": 13,
+   "value": "as63949"
+  },
+  {
+   "count": 5,
+   "value": "as16509"
+  },
+  {
+   "count": 5,
+   "value": "as22773"
+  },
+  {
+   "count": 4,
+   "value": "as37963"
+  },
+  {
+   "count": 2,
+   "value": "as45102"
+  },
+  {
+   "count": 2,
+   "value": "as55990"
+  },
+  {
+   "count": 2,
+   "value": "as9009"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  }
+ ],
+ "ports": [
+  {
+   "count": 34,
+   "value": 51005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 7,
+   "value": "Linode"
+  },
+  {
+   "count": 5,
+   "value": "Cox Communications Inc."
+  },
+  {
+   "count": 4,
+   "value": "Linode, LLC"
+  },
+  {
+   "count": 2,
+   "value": "Akamai Technologies, Inc."
+  },
+  {
+   "count": 2,
+   "value": "Alibaba Cloud (Singapore) Private Limited"
+  },
+  {
+   "count": 2,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 2,
+   "value": "Aliyun Computing Co.LTD"
+  },
+  {
+   "count": 2,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 2,
+   "value": "EDIS GmbH"
+  },
+  {
+   "count": 2,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 1,
+   "value": "A100 ROW Inc"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Corporate Services Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services France"
+  },
+  {
+   "count": 1,
+   "value": "The Constant Company, LLC"
+  }
+ ],
+ "id": "mini-httpd-port-51005",
+ "parent": "mini-httpd",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 51005",
+  "ru": "Все версии · порт 51005",
+  "es": "Todas las versiones · puerto 51005",
+  "zh": "所有版本 · 端口 51005"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "mini-httpd"
+ },
+ "denominator": null
+}

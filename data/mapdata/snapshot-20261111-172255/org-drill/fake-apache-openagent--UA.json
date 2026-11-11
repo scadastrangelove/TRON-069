@@ -1,0 +1,45 @@
+{
+ "dork": "port:7547 \"Apache/2.0.40 (Red Hat Linux)\" country:UA",
+ "total": 2,
+ "taken": "2026-11-11T18:30:13+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as29013"
+  },
+  {
+   "count": 1,
+   "value": "as29443"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "PP Technical Company Mega"
+  },
+  {
+   "count": 1,
+   "value": "Telecommunication company \"Link Telecom\" LTD"
+  }
+ ],
+ "line": "fake-Apache openagent",
+ "line_id": "fake-apache-openagent",
+ "cc": "UA"
+}

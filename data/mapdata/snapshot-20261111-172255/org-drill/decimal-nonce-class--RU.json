@@ -1,0 +1,73 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:RU",
+ "total": 53,
+ "taken": "2026-11-11T18:16:57+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 7,
+   "covered": 53,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 4,
+   "covered": 53,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 46,
+   "value": "as12389"
+  },
+  {
+   "count": 4,
+   "value": "as25513"
+  },
+  {
+   "count": 2,
+   "value": "as12714"
+  },
+  {
+   "count": 1,
+   "value": "as8402"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 44,
+   "value": "OJSC Rostelecom Macroregional Branch South"
+  },
+  {
+   "count": 2,
+   "value": "Moscow Local Telephone Network (OAO MGTS)"
+  },
+  {
+   "count": 2,
+   "value": "Moscow Local Telephone Network (PJSC MGTS)"
+  },
+  {
+   "count": 2,
+   "value": "Net By Net Holding LLC"
+  },
+  {
+   "count": 1,
+   "value": "Broadband Connections Addresses Pool"
+  },
+  {
+   "count": 1,
+   "value": "PJSC Rostelecom"
+  },
+  {
+   "count": 1,
+   "value": "Static IP Poool for broadband customers"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "RU"
+}

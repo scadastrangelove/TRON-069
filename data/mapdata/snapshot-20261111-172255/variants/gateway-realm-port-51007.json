@@ -1,0 +1,47 @@
+{
+ "dork": "port:51007 realm=\"Gateway\"",
+ "total": 0,
+ "taken": "2026-11-11T18:33:43+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 0,
+   "covered": 0,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [],
+ "ports": [],
+ "orgs": [],
+ "id": "gateway-realm-port-51007",
+ "parent": "gateway-realm",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "Gateway · 51007: контроль порта из прошивки",
+  "en": "Gateway · 51007: firmware-port control query",
+  "es": "Gateway · 51007: consulta de control del puerto del firmware",
+  "zh": "Gateway · 51007：固件端口对照查询"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": null
+}

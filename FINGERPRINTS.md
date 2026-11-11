@@ -125,6 +125,24 @@ would extend an existing component attribution; the second would add a graph
 edge. The current records retain their existing evidence levels. Gateway/TIM
 and the Askey candidate for the DSLForum response class remain unresolved.
 
+<a id="specimen-review-20261111"></a>
+## Specimen inventory review — 11 November 2026
+
+[The specimen catalog](SPECIMENS.md) separates a sample's result from the
+completeness of its public evidence. Existing pinned sources and hashes are
+reused from the attribution catalog. Image findings documented in public
+research notes retain that provenance when the original download link or
+binary hash is still missing.
+
+The researcher's 11 November inventory also reports Sky SR102 as a tr69c
+comparison sample, EG8145V5 alongside HG8145V5, a partially parsed Arcadyan
+ARV7519RW22 BRN container, and a negative fingerprint search in one Speedport
+W723V firmware. These entries preserve reported leads and their missing
+metadata. They do not create new component attributions or model counts.
+For C1000Z/C1100Z, the published component-co-presence finding is retained;
+the additional identical-CR-template comparison needs exact source revisions
+and binary hashes. The Gateway/TIM question remains open.
+
 <a id="matching-precedence"></a>
 ## Specific signatures and generic toolkit matches
 

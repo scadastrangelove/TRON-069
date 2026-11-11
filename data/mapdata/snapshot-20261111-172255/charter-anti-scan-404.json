@@ -1,0 +1,105 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 404\" org:\"Charter Communications\"",
+ "total": 115015,
+ "taken": "2026-11-11T17:25:25+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 115015,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 14,
+   "covered": 115015,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 115015,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 115013,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "BD"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 20943,
+   "value": "as20001"
+  },
+  {
+   "count": 19055,
+   "value": "as10796"
+  },
+  {
+   "count": 17466,
+   "value": "as11427"
+  },
+  {
+   "count": 15426,
+   "value": "as11426"
+  },
+  {
+   "count": 12317,
+   "value": "as11351"
+  },
+  {
+   "count": 11834,
+   "value": "as12271"
+  },
+  {
+   "count": 8393,
+   "value": "as33363"
+  },
+  {
+   "count": 8303,
+   "value": "as20115"
+  },
+  {
+   "count": 490,
+   "value": "as22516"
+  },
+  {
+   "count": 368,
+   "value": "as33588"
+  },
+  {
+   "count": 266,
+   "value": "as10838"
+  },
+  {
+   "count": 101,
+   "value": "as20231"
+  },
+  {
+   "count": 52,
+   "value": "as11955"
+  },
+  {
+   "count": 1,
+   "value": "as271904"
+  }
+ ],
+ "ports": [
+  {
+   "count": 115015,
+   "value": 7547
+  }
+ ],
+ "orgs": [],
+ "name": "Charter anti-scan 404"
+}

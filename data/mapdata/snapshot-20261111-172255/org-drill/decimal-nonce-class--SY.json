@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:SY",
+ "total": 5,
+ "taken": "2026-11-11T18:17:18+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as29256"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Runnet ADSL Subscribers"
+  },
+  {
+   "count": 1,
+   "value": "Dial-UP LNS1"
+  },
+  {
+   "count": 1,
+   "value": "Dial-Up LNS3"
+  },
+  {
+   "count": 1,
+   "value": "Syrian Telecommunication Private Closed Joint Stock Company"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "SY"
+}

@@ -39,6 +39,7 @@ class BuildTests(unittest.TestCase):
         self.assertEqual((ROOT/'atlas/tr-atlas.html').read_bytes(), expected)
         self.assertEqual((self.root/'WANTED.md').read_bytes(), (ROOT/'WANTED.md').read_bytes())
         self.assertEqual((self.root/'ATTRIBUTIONS.md').read_bytes(), (ROOT/'ATTRIBUTIONS.md').read_bytes())
+        self.assertEqual((self.root/'SPECIMENS.md').read_bytes(), (ROOT/'SPECIMENS.md').read_bytes())
 
     def test_attribution_evidence_is_pinned_validated_and_editorial(self):
         import attribution
@@ -66,6 +67,37 @@ class BuildTests(unittest.TestCase):
             (self.root/'data/attribution-evidence.json').write_text(json.dumps(invalid))
             with self.assertRaises(ValueError):
                 attribution.read_attributions(self.root, registry)
+
+    def test_specimen_catalog_keeps_proof_and_gaps_separate(self):
+        import attribution
+        import specimens
+        with (ROOT/'registry.csv').open() as stream:
+            registry = {row['id']: row for row in csv.DictReader(stream)}
+        anchors = attribution.read_attributions(ROOT, registry)
+        catalog = specimens.read_specimens(ROOT, registry, anchors)
+        self.assertEqual((ROOT/'SPECIMENS.md').read_text(), specimens.render_specimens(catalog))
+        self.assertNotIn('specimens', builder.SNAPSHOT_FIELDS)
+        records = {item['id']: item for item in catalog['items']}
+        self.assertEqual(records['technicolor-tg789vac']['status'], 'negative')
+        self.assertEqual(records['sky-sr102']['status'], 'pending')
+        self.assertEqual(records['arcadyan-arv7519rw22']['status'], 'partial')
+        self.assertTrue(records['tplink-vr1600v-v2']['artifacts'][0]['sha256'])
+        (self.root/'data').mkdir()
+        changes = [lambda d: d['items'].append(d['items'][0]),
+                   lambda d: d['items'][0]['summary'].pop('zh'),
+                   lambda d: d['items'][0].update(lines=['absent']),
+                   lambda d: d['items'][0].update(status='vulnerable'),
+                   lambda d: d['items'][0].update(status='pending', missing=[]),
+                   lambda d: d['items'][0].update(artifact_refs=[]),
+                   lambda d: d['items'][0]['artifact_refs'][0].update(title='unknown'),
+                   lambda d: d['items'][0].update(files=[{'name':'/private/file','sha256':'a'*64}]),
+                   lambda d: d['items'][0].update(files=[{'name':'../file','sha256':'a'*64}])]
+        for change in changes:
+            data = json.loads((ROOT/'data/research-specimens.json').read_text())
+            change(data)
+            (self.root/'data/research-specimens.json').write_text(json.dumps(data))
+            with self.assertRaises(ValueError):
+                specimens.read_specimens(self.root, registry, anchors)
 
     def test_wanted_catalog_validation_and_editorial_scope(self):
         import csv

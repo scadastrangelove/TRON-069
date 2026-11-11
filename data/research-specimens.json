@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-11",
+  "items": [
+    {
+      "id": "tplink-vr1600v-v2",
+      "title": "TP-Link Archer VR1600v V2",
+      "kind": "image",
+      "status": "matched",
+      "verification": "reproduced",
+      "lines": [
+        "tr069-http-server"
+      ],
+      "version": "0.1.0 Build 260317 Rel.7757n",
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The extracted cwmp contains tr069 http server and the response-header markers of the Works Systems openagent lineage. The official archive was downloaded again and the extracted binary hash matched.",
+        "ru": "В извлечённом cwmp найдены tr069 http server и маркеры заголовков линии Works Systems openagent. Официальный архив скачан повторно; хеш извлечённого бинарника совпал.",
+        "es": "El cwmp extraído contiene tr069 http server y las cabeceras del linaje Works Systems openagent. Se descargó de nuevo el archivo oficial y coincidió el hash del binario extraído.",
+        "zh": "提取的 cwmp 包含 tr069 http server 及 Works Systems openagent 谱系的响应头标记。重新下载官方固件包后，提取文件的哈希一致。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "tplink-works-lineage"
+        }
+      ],
+      "missing": [],
+      "artifact_refs": [
+        {
+          "attribution": "tplink-works-openagent",
+          "title": "Archer VR1600v V2 · /usr/bin/cwmp (inside official firmware archive)"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "zte-h108n",
+      "title": "ZTE ZXHN H108N",
+      "kind": "image",
+      "status": "matched",
+      "verification": "documented",
+      "lines": [
+        "cpe-server-1-0",
+        "zte",
+        "mini-web-server-1-0-zte-corp"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The inspected httpd and cspd anchor CPE-SERVER/1.0 and cpe@zte.com. Local extracted-file hashes are recorded; the exact source archive and version still need a public citation.",
+        "ru": "Исследованные httpd и cspd подтверждают CPE-SERVER/1.0 и cpe@zte.com. Хеши извлечённых файлов записаны; точный архив и версия ещё требуют публичной ссылки.",
+        "es": "Los httpd y cspd inspeccionados confirman CPE-SERVER/1.0 y cpe@zte.com. Se registran los hashes extraídos; falta citar públicamente el archivo y la versión exactos.",
+        "zh": "所检查的 httpd 和 cspd 为 CPE-SERVER/1.0 与 cpe@zte.com 提供样本证据。已记录提取文件哈希，仍需补充确切固件包及版本的公开来源。"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.17"
+        }
+      ],
+      "missing": [
+        "source",
+        "version"
+      ],
+      "artifact_refs": [],
+      "files": [
+        {
+          "name": "bin/httpd",
+          "sha256": "ed2d28b7557ce5f4ced8d4ba46574e188953d383a075dd9e373da915160bfb91"
+        },
+        {
+          "name": "cspd",
+          "sha256": "951876f5be0b174f59e3e4d223f42ec94ca0d7036eb4ed4d11cc64c4f8eaddd1"
+        }
+      ]
+    },
+    {
+      "id": "zte-f670l",
+      "title": "ZTE F670L · V1.1 / V9.0",
+      "kind": "image",
+      "status": "matched",
+      "verification": "documented",
+      "lines": [
+        "zte",
+        "cpe-server-1-0"
+      ],
+      "version": "V1.1.20P3N4D / V9.0.11P1N36",
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "Two inspected generations contain cpe@zte.com and default CR port 58000. The separate search for the TR069 Client brand was negative in these artifacts. Both results can hold for the same firmware.",
+        "ru": "В двух изученных поколениях найдены cpe@zte.com и порт CR 58000 по умолчанию. Отдельный поиск бренда TR069 Client в этих файлах дал отрицательный результат. Оба результата относятся к одним образцам.",
+        "es": "Dos generaciones contienen cpe@zte.com y el puerto CR 58000 por defecto. La búsqueda independiente de la marca TR069 Client fue negativa en esos archivos. Ambos resultados corresponden a las mismas muestras.",
+        "zh": "两代受检固件包含 cpe@zte.com 及默认 CR 端口 58000。在这些文件中另行搜索 TR069 Client 品牌未找到匹配。同一固件可同时具有这两种结果。"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.31"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.34"
+        },
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ],
+      "missing": [
+        "source",
+        "hash"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "huawei-hg8145v5",
+      "title": "Huawei HG8145V5",
+      "kind": "image",
+      "status": "matched",
+      "verification": "documented",
+      "lines": [
+        "huaweihomegateway",
+        "huaweihomegateway-cr-slice"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The inspected image configures a CR listener on port 30005. This is a platform reference; the Huawei response does not identify every matching device model.",
+        "ru": "В исследованном образе настроен CR-слушатель на порту 30005. Это опорная платформа; ответ Huawei не устанавливает модель каждого совпавшего устройства.",
+        "es": "La imagen inspeccionada configura el servicio CR en el puerto 30005. Es una plataforma de referencia; la respuesta Huawei no identifica el modelo de cada coincidencia.",
+        "zh": "受检固件配置了端口 30005 上的 CR 服务。这是平台样本证据；Huawei 响应不能确认每个匹配设备的型号。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-HUAWEI-CR.md"
+        },
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.31"
+        }
+      ],
+      "missing": [
+        "source",
+        "version",
+        "hash"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "huawei-eg8145v5",
+      "title": "Huawei EG8145V5",
+      "kind": "image",
+      "status": "pending",
+      "verification": "reported",
+      "lines": [
+        "huaweihomegateway"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "Reported alongside HG8145V5. A separate EG8145V5 artifact has not been independently tied to the public fingerprint evidence.",
+        "ru": "Упомянут рядом с HG8145V5. Отдельный образец EG8145V5 пока не сопоставлен с публичными доказательствами фингерпринта.",
+        "es": "Se informó junto a HG8145V5. Todavía no se ha vinculado de forma independiente un archivo EG8145V5 a la evidencia pública de la huella.",
+        "zh": "该型号与 HG8145V5 一同被报告。目前尚未独立核验 EG8145V5 样本与公开指纹证据的对应关系。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "specimen-review-20261111"
+        }
+      ],
+      "missing": [
+        "source",
+        "version",
+        "hash",
+        "template"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "dir615-openagent",
+      "title": "D-Link DIR-615 · AthSDK GPL",
+      "kind": "source",
+      "status": "matched",
+      "verification": "reproduced",
+      "lines": [
+        "digauth",
+        "fake-apache-openagent",
+        "tr069-http-server"
+      ],
+      "version": "openagent-2.0",
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The GPL file carries the Works Systems 2006–2007 copyright and the connection-request response template. It anchors the earlier openagent branch.",
+        "ru": "GPL-файл содержит копирайт Works Systems 2006–2007 и шаблон ответа Connection Request. Это опорный источник ранней ветки openagent.",
+        "es": "El archivo GPL contiene el copyright Works Systems 2006–2007 y la plantilla Connection Request. Documenta la rama anterior de openagent.",
+        "zh": "GPL 文件包含 Works Systems 2006–2007 版权声明及连接请求响应模板，为早期 openagent 分支提供依据。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md",
+          "anchor": "public-evidence"
+        }
+      ],
+      "missing": [],
+      "artifact_refs": [
+        {
+          "attribution": "works-openagent",
+          "title": "DIR-615 AthSDK · conn_req_server.c"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "asus-oneagent",
+      "title": "ASUS asuswrt · OneAgent TR",
+      "kind": "source",
+      "status": "matched",
+      "verification": "reproduced",
+      "lines": [
+        "tr069-client"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "Copyright and build metadata name Works Systems OneAgent TR. A public prebuilt client supplies a corresponding 401 template; each artifact is pinned separately.",
+        "ru": "Копирайт и сборочные файлы называют Works Systems OneAgent TR. Публичный пребилд клиента даёт соответствующий шаблон 401; ревизия каждого файла закреплена отдельно.",
+        "es": "El copyright y los metadatos de compilación identifican Works Systems OneAgent TR. Un cliente precompilado público aporta la plantilla 401 correspondiente; cada archivo tiene su revisión fija.",
+        "zh": "版权与构建元数据标明 Works Systems OneAgent TR。公开预编译客户端提供对应的 401 模板，每个文件均固定到具体版本。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md",
+          "anchor": "public-evidence"
+        }
+      ],
+      "missing": [],
+      "artifact_refs": [
+        {
+          "attribution": "works-oneagent-tr",
+          "title": "ASUS asuswrt · tr.h"
+        },
+        {
+          "attribution": "works-oneagent-tr",
+          "title": "ASUS asuswrt · Makefile.DSL_ASUSWRT"
+        },
+        {
+          "attribution": "works-oneagent-tr",
+          "title": "ASUS asuswrt-merlin · prebuild/tr"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "technicolor-tg789vac",
+      "title": "Technicolor TG789vac · TIM",
+      "kind": "binary",
+      "status": "negative",
+      "verification": "documented",
+      "lines": [
+        "gateway-realm"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The inspected image used port 51007 and lacked the observed Gateway realm. It does not close attribution of the Gateway:7170 population. This is a binary review, not source-code proof.",
+        "ru": "Исследованный образ использовал порт 51007 и не содержал наблюдаемый realm Gateway. Он не закрывает атрибуцию выборки Gateway:7170. Это анализ бинарника, а не доказательство по исходникам.",
+        "es": "La imagen inspeccionada usaba el puerto 51007 y no contenía el realm Gateway observado. No resuelve la atribución de Gateway:7170. Es análisis binario, no prueba mediante código fuente.",
+        "zh": "受检固件使用端口 51007，未包含观测到的 Gateway realm。它不能确定 Gateway:7170 群体的归属。这是二进制分析，并非源码证明。"
+      },
+      "sources": [
+        {
+          "file": "ACS-HUNT.md"
+        },
+        {
+          "file": "ACS-URL-MINING.md"
+        }
+      ],
+      "missing": [
+        "source",
+        "version",
+        "hash"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "zyxel-vmg1312",
+      "title": "ZyXEL VMG1312-B10A",
+      "kind": "binary",
+      "status": "matched",
+      "verification": "reproduced",
+      "lines": [
+        "igdauthentication"
+      ],
+      "version": "1.00(AAJZ.14)C0",
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The public tr69c binary matches IgdAuthentication, the challenge parameter order and the fixed opaque marker. CMS symbols and library references identify the Broadcom component.",
+        "ru": "Публичный tr69c совпадает по IgdAuthentication, порядку параметров challenge и фиксированному opaque-маркеру. Символы CMS и ссылки на библиотеки определяют компонент Broadcom.",
+        "es": "El tr69c público coincide en IgdAuthentication, orden de parámetros y marcador opaque fijo. Los símbolos CMS y las referencias a bibliotecas identifican el componente Broadcom.",
+        "zh": "公开 tr69c 二进制在 IgdAuthentication、质询参数顺序及固定 opaque 标记上匹配。CMS 符号与库引用标识 Broadcom 组件。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-IGDAUTH.md",
+          "anchor": "public-evidence"
+        }
+      ],
+      "missing": [],
+      "artifact_refs": [
+        {
+          "attribution": "broadcom-cms-tr69c",
+          "title": "ZyXEL VMG1312-B10A · tr69c"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "zyxel-c1000z",
+      "title": "ZyXEL C1000Z · CenturyLink",
+      "kind": "binary",
+      "status": "matched",
+      "verification": "documented",
+      "lines": [
+        "igdauthentication"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The reviewed tree contains Broadcom CMS tr69c alongside WPS Monitor. The reported identical CR-template comparison still needs exact binary hashes and public revisions.",
+        "ru": "В изученном дереве присутствуют Broadcom CMS tr69c и WPS Monitor. Для сообщения об идентичном CR-шаблоне ещё нужны точные хеши бинарников и публичные ревизии.",
+        "es": "El árbol revisado contiene Broadcom CMS tr69c y WPS Monitor. La comparación informada de plantillas CR idénticas aún necesita hashes binarios y revisiones públicas exactos.",
+        "zh": "所检查的固件树同时含有 Broadcom CMS tr69c 与 WPS Monitor。已报告的相同 CR 模板对比仍需确切二进制哈希及公开版本。"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.44"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "specimen-review-20261111"
+        }
+      ],
+      "missing": [
+        "source",
+        "version",
+        "hash",
+        "template"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "zyxel-c1100z",
+      "title": "ZyXEL C1100Z · CenturyLink",
+      "kind": "binary",
+      "status": "matched",
+      "verification": "documented",
+      "lines": [
+        "igdauthentication"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The reviewed tree contains Broadcom CMS tr69c alongside WPS Monitor. The reported identical CR-template comparison still needs exact binary hashes and public revisions.",
+        "ru": "В изученном дереве присутствуют Broadcom CMS tr69c и WPS Monitor. Для сообщения об идентичном CR-шаблоне ещё нужны точные хеши бинарников и публичные ревизии.",
+        "es": "El árbol revisado contiene Broadcom CMS tr69c y WPS Monitor. La comparación informada de plantillas CR idénticas aún necesita hashes binarios y revisiones públicas exactos.",
+        "zh": "所检查的固件树同时含有 Broadcom CMS tr69c 与 WPS Monitor。已报告的相同 CR 模板对比仍需确切二进制哈希及公开版本。"
+      },
+      "sources": [
+        {
+          "file": "NOTES.md",
+          "anchor": "section-9.44"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "specimen-review-20261111"
+        }
+      ],
+      "missing": [
+        "source",
+        "version",
+        "hash",
+        "template"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "sky-sr102",
+      "title": "Sky SR102",
+      "kind": "binary",
+      "status": "pending",
+      "verification": "reported",
+      "lines": [
+        "igdauthentication"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "Reported as an additional carrier in the tr69c cross-comparison. The matching binary, revision and response template have not yet been supplied in the public evidence bundle.",
+        "ru": "Заявлен как дополнительный носитель в кросс-сверке tr69c. Совпавший бинарник, ревизия и шаблон ответа пока не представлены в публичном наборе доказательств.",
+        "es": "Se informó como portador adicional en la comparación de tr69c. El binario coincidente, la revisión y la plantilla de respuesta aún no figuran en la evidencia pública.",
+        "zh": "报告称其是 tr69c 交叉对比中的另一载体。对应二进制、版本及响应模板尚未纳入公开证据包。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "specimen-review-20261111"
+        }
+      ],
+      "missing": [
+        "source",
+        "version",
+        "hash",
+        "template"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "nokia-fastmile-32",
+      "title": "Nokia FastMile 5G Gateway 3.2",
+      "kind": "binary",
+      "status": "matched",
+      "verification": "reproduced",
+      "lines": [
+        "tr069-client"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The public tr_agent matches the complete OneAgent 401 template and contains Workssys identification strings. The dump revision and file hash are pinned.",
+        "ru": "Публичный tr_agent совпадает с полным шаблоном 401 OneAgent и содержит идентификационные строки Workssys. Ревизия дампа и хеш файла закреплены.",
+        "es": "El tr_agent público coincide con la plantilla 401 completa de OneAgent y contiene cadenas Workssys. La revisión del volcado y el hash están fijados.",
+        "zh": "公开 tr_agent 与 OneAgent 完整 401 模板匹配，并包含 Workssys 标识字符串。已固定转储版本及文件哈希。"
+      },
+      "sources": [
+        {
+          "file": "DEANON-TR069CLIENT.md",
+          "anchor": "public-evidence"
+        }
+      ],
+      "missing": [],
+      "artifact_refs": [
+        {
+          "attribution": "works-oneagent-tr",
+          "title": "Nokia FastMile 5G Gateway 3.2 · tr_agent"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "arcadyan-arv7519rw22",
+      "title": "Arcadyan ARV7519RW22 · Orange",
+      "kind": "container",
+      "status": "partial",
+      "verification": "reported",
+      "lines": [
+        "tr069-client"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The research report describes a parsed BRN container with the root filesystem still inaccessible. No CR signature match follows from the container structure.",
+        "ru": "В исследовательской записи разобрана структура контейнера BRN, но корневая файловая система осталась недоступна. Совпадение CR-сигнатуры по структуре контейнера не установлено.",
+        "es": "El informe describe un contenedor BRN analizado cuyo sistema raíz sigue inaccesible. Su estructura no establece una coincidencia de firma CR.",
+        "zh": "研究记录称已解析 BRN 容器结构，但根文件系统仍不可访问。容器结构不能证明 CR 指纹匹配。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "specimen-review-20261111"
+        },
+        {
+          "file": "DEANON-TR069CLIENT.md"
+        }
+      ],
+      "missing": [
+        "source",
+        "version",
+        "hash",
+        "template"
+      ],
+      "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "speedport-w723v",
+      "title": "Speedport W723V",
+      "kind": "image",
+      "status": "negative",
+      "verification": "reported",
+      "lines": [
+        "dt-speedport-sdk"
+      ],
+      "version": null,
+      "reviewed_at": "2026-11-11",
+      "summary": {
+        "en": "The research report says the sought fingerprint was absent in one inspected firmware. The hardware variant and exact release are not recorded here; this result cannot be extended to every W723V build.",
+        "ru": "По исследовательской записи искомый фингерпринт отсутствовал в одной проверенной прошивке. Аппаратный вариант и точный выпуск здесь не зафиксированы; результат не распространяется на все сборки W723V.",
+        "es": "Según el informe, la huella buscada no apareció en un firmware inspeccionado. Faltan la variante de hardware y la versión exacta; el resultado no se extiende a todas las compilaciones W723V.",
+        "zh": "研究记录称某个受检固件中未发现目标指纹。硬件变体及确切版本尚未记录，该结果不能推广到全部 W723V 构建。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "specimen-review-20261111"
+        }
+      ],
+      "missing": [
+        "source",
+        "variant",
+        "version",
+        "hash"
+      ],
+      "artifact_refs": [],
+      "files": []
+    }
+  ]
+}

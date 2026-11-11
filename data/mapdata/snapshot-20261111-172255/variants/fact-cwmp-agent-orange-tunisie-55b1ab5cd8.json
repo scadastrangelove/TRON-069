@@ -1,0 +1,91 @@
+{
+ "dork": "\"CWMP-Agent\" country:TN",
+ "total": 18236,
+ "taken": "2026-11-11T18:33:18+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 18236,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 5,
+   "covered": 18236,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 18236,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 2,
+   "covered": 18236,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 18236,
+   "value": "TN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 17032,
+   "value": "as37492"
+  },
+  {
+   "count": 1204,
+   "value": "as37693"
+  }
+ ],
+ "ports": [
+  {
+   "count": 17032,
+   "value": 7547
+  },
+  {
+   "count": 1204,
+   "value": 51005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 15618,
+   "value": "Orange Tunisie - Orange Tunisie"
+  },
+  {
+   "count": 1083,
+   "value": "OOREDOO TUNISIE SA - OOREDOO TUNISIE SA"
+  },
+  {
+   "count": 1081,
+   "value": "ATI - Agence Tunisienne Internet"
+  },
+  {
+   "count": 452,
+   "value": "ORANGE-"
+  },
+  {
+   "count": 2,
+   "value": "TUNISIANA"
+  }
+ ],
+ "id": "fact-cwmp-agent-orange-tunisie-55b1ab5cd8",
+ "parent": "cwmp-agent-orange-tunisie",
+ "group": "facts",
+ "label": {
+  "ru": "карман Orange Tunisie",
+  "en": "Orange Tunisie subset",
+  "es": "Subconjunto Orange Tunisie",
+  "zh": "Orange Tunisie 子集"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

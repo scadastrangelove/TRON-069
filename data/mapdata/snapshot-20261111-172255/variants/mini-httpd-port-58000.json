@@ -1,0 +1,596 @@
+{
+ "dork": "\"mini_httpd\" port:58000",
+ "total": 590,
+ "taken": "2026-11-11T18:34:37+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 11,
+   "covered": 590,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 65,
+   "covered": 590,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 59,
+   "covered": 590,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 590,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 574,
+   "value": "RU"
+  },
+  {
+   "count": 3,
+   "value": "CN"
+  },
+  {
+   "count": 3,
+   "value": "US"
+  },
+  {
+   "count": 2,
+   "value": "DE"
+  },
+  {
+   "count": 2,
+   "value": "GB"
+  },
+  {
+   "count": 1,
+   "value": "AU"
+  },
+  {
+   "count": 1,
+   "value": "HR"
+  },
+  {
+   "count": 1,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "JP"
+  },
+  {
+   "count": 1,
+   "value": "SE"
+  },
+  {
+   "count": 1,
+   "value": "SG"
+  }
+ ],
+ "asn": [
+  {
+   "count": 56,
+   "value": "as42682"
+  },
+  {
+   "count": 49,
+   "value": "as12768"
+  },
+  {
+   "count": 34,
+   "value": "as42116"
+  },
+  {
+   "count": 28,
+   "value": "as34533"
+  },
+  {
+   "count": 26,
+   "value": "as50543"
+  },
+  {
+   "count": 24,
+   "value": "as41668"
+  },
+  {
+   "count": 24,
+   "value": "as41727"
+  },
+  {
+   "count": 21,
+   "value": "as41682"
+  },
+  {
+   "count": 21,
+   "value": "as50498"
+  },
+  {
+   "count": 19,
+   "value": "as43478"
+  },
+  {
+   "count": 19,
+   "value": "as50512"
+  },
+  {
+   "count": 19,
+   "value": "as51570"
+  },
+  {
+   "count": 18,
+   "value": "as56330"
+  },
+  {
+   "count": 18,
+   "value": "as57044"
+  },
+  {
+   "count": 16,
+   "value": "as52207"
+  },
+  {
+   "count": 14,
+   "value": "as39435"
+  },
+  {
+   "count": 13,
+   "value": "as41661"
+  },
+  {
+   "count": 13,
+   "value": "as41786"
+  },
+  {
+   "count": 12,
+   "value": "as41843"
+  },
+  {
+   "count": 12,
+   "value": "as57378"
+  },
+  {
+   "count": 9,
+   "value": "as42683"
+  },
+  {
+   "count": 9,
+   "value": "as50542"
+  },
+  {
+   "count": 9,
+   "value": "as51035"
+  },
+  {
+   "count": 9,
+   "value": "as56377"
+  },
+  {
+   "count": 8,
+   "value": "as34590"
+  },
+  {
+   "count": 8,
+   "value": "as41754"
+  },
+  {
+   "count": 8,
+   "value": "as51604"
+  },
+  {
+   "count": 8,
+   "value": "as56420"
+  },
+  {
+   "count": 7,
+   "value": "as59713"
+  },
+  {
+   "count": 6,
+   "value": "as51819"
+  },
+  {
+   "count": 5,
+   "value": "as39028"
+  },
+  {
+   "count": 5,
+   "value": "as49048"
+  },
+  {
+   "count": 4,
+   "value": "as57026"
+  },
+  {
+   "count": 4,
+   "value": "as63949"
+  },
+  {
+   "count": 3,
+   "value": "as12714"
+  },
+  {
+   "count": 3,
+   "value": "as51645"
+  },
+  {
+   "count": 2,
+   "value": "as12389"
+  },
+  {
+   "count": 2,
+   "value": "as14061"
+  },
+  {
+   "count": 2,
+   "value": "as15640"
+  },
+  {
+   "count": 2,
+   "value": "as20473"
+  },
+  {
+   "count": 2,
+   "value": "as50544"
+  },
+  {
+   "count": 2,
+   "value": "as8359"
+  },
+  {
+   "count": 1,
+   "value": "as15774"
+  },
+  {
+   "count": 1,
+   "value": "as200463"
+  },
+  {
+   "count": 1,
+   "value": "as22773"
+  },
+  {
+   "count": 1,
+   "value": "as25467"
+  },
+  {
+   "count": 1,
+   "value": "as30881"
+  },
+  {
+   "count": 1,
+   "value": "as31200"
+  },
+  {
+   "count": 1,
+   "value": "as33934"
+  },
+  {
+   "count": 1,
+   "value": "as39775"
+  },
+  {
+   "count": 1,
+   "value": "as4134"
+  },
+  {
+   "count": 1,
+   "value": "as42708"
+  },
+  {
+   "count": 1,
+   "value": "as45102"
+  },
+  {
+   "count": 1,
+   "value": "as4657"
+  },
+  {
+   "count": 1,
+   "value": "as48524"
+  },
+  {
+   "count": 1,
+   "value": "as55990"
+  },
+  {
+   "count": 1,
+   "value": "as56981"
+  },
+  {
+   "count": 1,
+   "value": "as8369"
+  },
+  {
+   "count": 1,
+   "value": "as9808"
+  }
+ ],
+ "ports": [
+  {
+   "count": 590,
+   "value": 58000
+  }
+ ],
+ "orgs": [
+  {
+   "count": 65,
+   "value": "JSC \"ER-Telecom Holding\""
+  },
+  {
+   "count": 54,
+   "value": "JSC \"ER-Telecom Holding\" Nizhny Novgorod"
+  },
+  {
+   "count": 32,
+   "value": "JSC \"ER-Telecom Holding\" Naberezhnye Chelny branch"
+  },
+  {
+   "count": 28,
+   "value": "JSC \"ER-Telecom Holding\" Samara Branch"
+  },
+  {
+   "count": 26,
+   "value": "JSC \"ER-Telecom Holding\" Saratov Branch"
+  },
+  {
+   "count": 24,
+   "value": "JSC \"ER-Telecom Holding\" Kirov Branch"
+  },
+  {
+   "count": 22,
+   "value": "JSC \"ER-Telecom Holding\" Kazan' Branch"
+  },
+  {
+   "count": 21,
+   "value": "JSC \"ER-Telecom Holding\" Lipetsk Branch"
+  },
+  {
+   "count": 20,
+   "value": "JSC \"ER-Telecom Holding\" Tyumen' branch"
+  },
+  {
+   "count": 19,
+   "value": "JSC \"ER-Telecom Holding\" Barnaul Branch"
+  },
+  {
+   "count": 19,
+   "value": "JSC \"ER-Telecom Holding\" Novosibirsk branch"
+  },
+  {
+   "count": 18,
+   "value": "JSC \"ER-Telecom Holding\" Kurgan Branch"
+  },
+  {
+   "count": 17,
+   "value": "JSC \"ER-Telecom Holding\" Bryansk Branch"
+  },
+  {
+   "count": 16,
+   "value": "JSC \"ER-Telecom Holding\" Tula Branch"
+  },
+  {
+   "count": 14,
+   "value": "JSC \"ER-Telecom Holding\" Volgograd Branch"
+  },
+  {
+   "count": 13,
+   "value": "JSC \"ER-Telecom Holding\" Chelyabinsk Branch"
+  },
+  {
+   "count": 13,
+   "value": "JSC \"ER-Telecom Holding\" Yoshkar-Ola Branch"
+  },
+  {
+   "count": 12,
+   "value": "JSC \"ER-Telecom Holding\" Omsk Branch"
+  },
+  {
+   "count": 12,
+   "value": "JSC \"ER-Telecom Holding\" Rostov-na-Donu Branch"
+  },
+  {
+   "count": 9,
+   "value": "JSC \"ER-Telecom Holding\" Magnitogorsk Branch"
+  },
+  {
+   "count": 9,
+   "value": "JSC \"ER-Telecom Holding\" Saint-Petersburg Branch"
+  },
+  {
+   "count": 9,
+   "value": "JSC \"ER-Telecom Holding\" Ufa Branch"
+  },
+  {
+   "count": 9,
+   "value": "JSC \"ER-Telecom Holding\" Voronezh Branch"
+  },
+  {
+   "count": 8,
+   "value": "JSC \"ER-Telecom Holding\" Izhevsk branch"
+  },
+  {
+   "count": 8,
+   "value": "JSC \"ER-Telecom Holding\" Orenburg branch"
+  },
+  {
+   "count": 8,
+   "value": "JSC \"ER-Telecom Holding\" Penza Branch"
+  },
+  {
+   "count": 7,
+   "value": "JSC \"ER-Telecom Holding\" Kursk Branch"
+  },
+  {
+   "count": 6,
+   "value": "JSC \"ER-Telecom Holding\" Ryazan' Branch"
+  },
+  {
+   "count": 6,
+   "value": "JSC \"ER-Telecom Holding\" Yekaterinburg Branch"
+  },
+  {
+   "count": 6,
+   "value": "Perspectiva Ltd."
+  },
+  {
+   "count": 5,
+   "value": "JSC \"ER-Telecom Holding\" Tver' Branch"
+  },
+  {
+   "count": 5,
+   "value": "JSC \"ER-Telecom Holding\" Ul'yanovsk Branch"
+  },
+  {
+   "count": 5,
+   "value": "JSC \"ER-Telecom Holding\" Yaroslavl' Branch"
+  },
+  {
+   "count": 4,
+   "value": "JSC \"ER-Telecom Holding\" Cheboksary Branch"
+  },
+  {
+   "count": 4,
+   "value": "Linode"
+  },
+  {
+   "count": 3,
+   "value": "Net By Net Holding LLC"
+  },
+  {
+   "count": 2,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 2,
+   "value": "JSC \"ER-Telecom Holding\" Krasnoyarsk Branch"
+  },
+  {
+   "count": 2,
+   "value": "OJSC Rostelecom Macroregional Branch South"
+  },
+  {
+   "count": 2,
+   "value": "Single users interfaces"
+  },
+  {
+   "count": 2,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Alibaba Cloud (Singapore) Private Limited"
+  },
+  {
+   "count": 1,
+   "value": "CHINANET Sichuan province network"
+  },
+  {
+   "count": 1,
+   "value": "China Mobile Communications Group Co., Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Cox Communications Inc."
+  },
+  {
+   "count": 1,
+   "value": "EDIS GmbH"
+  },
+  {
+   "count": 1,
+   "value": "EDIS Infrastructure in Sweden"
+  },
+  {
+   "count": 1,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 1,
+   "value": "InterTelecom LLC"
+  },
+  {
+   "count": 1,
+   "value": "Intersvyaz-2 JSC"
+  },
+  {
+   "count": 1,
+   "value": "JSC \"ER-Telecom Holding\" Irkutsk Branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC \"ER-Telecom Holding\" Tomsk Branch"
+  },
+  {
+   "count": 1,
+   "value": "JSC \"Zap-Sib TransTeleCom\""
+  },
+  {
+   "count": 1,
+   "value": "LLC \"HyperNet\""
+  },
+  {
+   "count": 1,
+   "value": "LLC firm \"Letkom\""
+  },
+  {
+   "count": 1,
+   "value": "LTD \"Olympus NSP\""
+  },
+  {
+   "count": 1,
+   "value": "Local infrastructure expansion for DSL (PPPoE)"
+  },
+  {
+   "count": 1,
+   "value": "Multiservice Cable Networks Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Network Slolution Provider Olympus NSP"
+  },
+  {
+   "count": 1,
+   "value": "PJSC \"Mobile TeleSystems\""
+  },
+  {
+   "count": 1,
+   "value": "PPPoE address pool"
+  },
+  {
+   "count": 1,
+   "value": "StarHub Cable Vision Ltd"
+  },
+  {
+   "count": 1,
+   "value": "TensorTelecom"
+  },
+  {
+   "count": 1,
+   "value": "VPN (PPTP, PPPoE) customers Pervouralsk Sverdlovsk reg. \"Interra\" Ltd."
+  },
+  {
+   "count": 1,
+   "value": "subnet 5.129.64-71 ethernet pool"
+  }
+ ],
+ "id": "mini-httpd-port-58000",
+ "parent": "mini-httpd",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 58000",
+  "ru": "Все версии · порт 58000",
+  "es": "Todas las versiones · puerto 58000",
+  "zh": "所有版本 · 端口 58000"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "mini-httpd"
+ },
+ "denominator": null
+}

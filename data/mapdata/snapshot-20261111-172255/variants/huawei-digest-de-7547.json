@@ -1,0 +1,107 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:DE port:7547",
+ "total": 43427,
+ "taken": "2026-11-11T18:33:27+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 43427,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 7,
+   "covered": 43427,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 43427,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 43427,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 43427,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 42894,
+   "value": "as3320"
+  },
+  {
+   "count": 520,
+   "value": "as50670"
+  },
+  {
+   "count": 9,
+   "value": "as206355"
+  },
+  {
+   "count": 3,
+   "value": "as44034"
+  },
+  {
+   "count": 1,
+   "value": "as396982"
+  }
+ ],
+ "ports": [
+  {
+   "count": 43427,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 42894,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 366,
+   "value": "VTEL HOLDINGS LIMITED/JORDAN CO."
+  },
+  {
+   "count": 136,
+   "value": "Company 64d34520KumHKEDa"
+  },
+  {
+   "count": 18,
+   "value": "Private Customer"
+  },
+  {
+   "count": 9,
+   "value": "UAB Simurgh"
+  },
+  {
+   "count": 3,
+   "value": "3 Customer dynamic address pool"
+  },
+  {
+   "count": 1,
+   "value": "Google LLC"
+  }
+ ],
+ "id": "huawei-digest-de-7547",
+ "parent": "huaweihomegateway",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "Huawei Digest · DE · 7547",
+  "en": "Huawei Digest · DE · 7547",
+  "es": "Huawei Digest · DE · 7547",
+  "zh": "Huawei Digest · DE · 7547"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

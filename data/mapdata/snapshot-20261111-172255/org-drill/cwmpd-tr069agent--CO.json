@@ -1,0 +1,53 @@
+{
+ "dork": "\"cwmpd\" opaque country:CO",
+ "total": 26,
+ "taken": "2026-11-11T18:24:30+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 26,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 26,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 11,
+   "value": "as10620"
+  },
+  {
+   "count": 10,
+   "value": "as13489"
+  },
+  {
+   "count": 5,
+   "value": "as14080"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 16,
+   "value": "Telmex Colombia S.A."
+  },
+  {
+   "count": 7,
+   "value": "UNE EPM TELECOMUNICACIONES S.A."
+  },
+  {
+   "count": 3,
+   "value": "Colombia Móvil"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "CO"
+}

@@ -82,7 +82,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
     'const W=1320,H=600,svg=$("#world"); let newsIndex=0,newsPaused=false;const newsMotion={matches:false};',
     ...['selectRole','queryTypeLabel','queryBadges','facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
       'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dNodeBox','dNodePort','dConnection','dPaintConnections','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
-      'sourcesHtml','measurementQualityHtml','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
+      'sourcesHtml','measurementQualityHtml','specimenCardHtml','specimenEvidenceHtml','renderSpecimens','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
       'newsText','newsImportant','newsDate','newsSelection','newsRelations','relatedNewsItems','newsHref','renderRelatedNews','renderNewsTicker','renderNews','newsStep','shouldRotateNews','focusNews','openNewsItem','renderWanted','renderTabVisibility'].map(fn),
@@ -777,6 +777,28 @@ test('attribution-evidence', 'Pinned code and firmware anchors render across lan
   c.run('DATA.attributions.items[0].artifacts[0].title="<img src=x>";renderWanted()');
   expect(!c.element('#attributedGrid').innerHTML.includes('<img'),'Artifact title entered HTML unescaped');
   return 'Five components, six lines, four languages, direct pinned links and file hashes';
+});
+test('research-specimens', 'Sample results, gaps, filters and translations stay separate from fleet counts', () => {
+  const c=context();
+  for(const lang of ['en','ru','es','zh']){
+    c.run(`LANG=${JSON.stringify(lang)};renderSpecimens()`);
+    const cards=c.element('#specimenGrid').innerHTML;
+    for(const item of data.specimens.items)expect(cards.includes(item.title),'Missing sample');
+    expect(!cards.includes('undefined')&&!/specimen_(?:matched|missing|pending)/.test(cards),'Missing specimen translation');
+    if(lang!=='ru')expect(!/[А-Яа-яЁё]/.test(cards),'Russian fallback in specimens');
+  }
+  c.run('LANG="en";S.specimenStatus="negative";renderSpecimens()');
+  expect(c.element('#specimenGrid').innerHTML.includes('TG789')&&!c.element('#specimenGrid').innerHTML.includes('VR1600v'),'Result filter mixed matches and negatives');
+  c.run('S.specimenStatus="all";S.specimenQuery="nOkIa";renderSpecimens()');
+  expect(c.element('#specimenCount').textContent.endsWith('1 / '+data.specimens.items.length),'Search result count incorrect');
+  c.run('S.specimenQuery="no_such_model";renderSpecimens()');
+  expect(!c.element('#specimenGrid').innerHTML.includes('<details'),'Empty search retained cards');
+  expect(c.run('specimenEvidenceHtml("gateway-realm")').includes('Scoped negative'),'Gateway evidence lost its negative scope');
+  expect(c.run('specimenEvidenceHtml("absent")')==='','Unknown line gained samples');
+  expect(c.run('!SNAPSHOT_FIELDS.includes("specimens")'),'Specimens mixed with historical measurements');
+  c.run('S.specimenQuery="";DATA.specimens.items[0].title="<img src=x>";renderSpecimens()');
+  expect(!c.element('#specimenGrid').innerHTML.includes('<img'),'Unescaped specimen title');
+  return 'Four languages, result/search filters, source gaps, escaping and editorial snapshot scope';
 });
 test('wanted-navigation', 'Wanted tab and map filters survive snapshot changes; unrelated panels hide', () => {
   const c=context({hash:'#lang=es&tab=wanted&lines=tr069-client&geo=c:GB'});

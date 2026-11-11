@@ -1,0 +1,53 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" country:RU",
+ "total": 80,
+ "taken": "2026-11-11T17:46:18+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 80,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 80,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 78,
+   "value": "as57169"
+  },
+  {
+   "count": 1,
+   "value": "as12389"
+  },
+  {
+   "count": 1,
+   "value": "as33934"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 78,
+   "value": "EDIS GmbH"
+  },
+  {
+   "count": 1,
+   "value": "OJSC Rostelecom Macroregional Branch South"
+  },
+  {
+   "count": 1,
+   "value": "PJSC Rostelecom"
+  }
+ ],
+ "line": "TR069 Client",
+ "line_id": "tr069-client",
+ "cc": "RU"
+}

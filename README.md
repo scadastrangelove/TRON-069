@@ -220,6 +220,7 @@ catalog schema. The reviewed operator aliases and groups are maintained in
 | [data/project-news.json](data/project-news.json) | Dated developments with supporting files |
 | [data/wanted.json](data/wanted.json) | Community firmware searches, evidence gaps, review status and translations; generates WANTED.md |
 | [data/attribution-evidence.json](data/attribution-evidence.json) | Direct public code and firmware anchors, pinned commits, matching markers and file hashes; generates [ATTRIBUTIONS.md](ATTRIBUTIONS.md) |
+| [data/research-specimens.json](data/research-specimens.json) | Individual samples, bounded negatives, partial extractions and pending leads; generates [SPECIMENS.md](SPECIMENS.md) |
 | [LEGACY-HTTP.md](LEGACY-HTTP.md) | RomPager, mini_httpd, all-port slices and suspected honeypots |
 | [TR-PARK-REGISTRY.md](TR-PARK-REGISTRY.md) | Human-readable registry from the current collection |
 

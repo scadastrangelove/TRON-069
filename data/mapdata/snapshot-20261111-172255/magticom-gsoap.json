@@ -1,0 +1,521 @@
+{
+ "dork": "port:6264 gSOAP",
+ "total": 33181,
+ "taken": "2026-11-11T17:24:21+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 21,
+   "covered": 33181,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 33130,
+   "remainder": 51
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 33181,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 26012,
+   "value": "GE"
+  },
+  {
+   "count": 4625,
+   "value": "ID"
+  },
+  {
+   "count": 1474,
+   "value": "RU"
+  },
+  {
+   "count": 448,
+   "value": "ZA"
+  },
+  {
+   "count": 215,
+   "value": "TW"
+  },
+  {
+   "count": 190,
+   "value": "UA"
+  },
+  {
+   "count": 133,
+   "value": "VN"
+  },
+  {
+   "count": 38,
+   "value": "MZ"
+  },
+  {
+   "count": 10,
+   "value": "CA"
+  },
+  {
+   "count": 9,
+   "value": "HK"
+  },
+  {
+   "count": 9,
+   "value": "MU"
+  },
+  {
+   "count": 4,
+   "value": "BG"
+  },
+  {
+   "count": 3,
+   "value": "PL"
+  },
+  {
+   "count": 2,
+   "value": "BR"
+  },
+  {
+   "count": 2,
+   "value": "DE"
+  },
+  {
+   "count": 2,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "EC"
+  },
+  {
+   "count": 1,
+   "value": "LT"
+  },
+  {
+   "count": 1,
+   "value": "MO"
+  },
+  {
+   "count": 1,
+   "value": "TH"
+  },
+  {
+   "count": 1,
+   "value": "UZ"
+  }
+ ],
+ "asn": [
+  {
+   "count": 26010,
+   "value": "as16010"
+  },
+  {
+   "count": 4624,
+   "value": "as23700"
+  },
+  {
+   "count": 1048,
+   "value": "as12714"
+  },
+  {
+   "count": 415,
+   "value": "as328471"
+  },
+  {
+   "count": 168,
+   "value": "as18049"
+  },
+  {
+   "count": 160,
+   "value": "as28840"
+  },
+  {
+   "count": 127,
+   "value": "as7552"
+  },
+  {
+   "count": 110,
+   "value": "as12389"
+  },
+  {
+   "count": 38,
+   "value": "as34700"
+  },
+  {
+   "count": 38,
+   "value": "as37342"
+  },
+  {
+   "count": 33,
+   "value": "as49332"
+  },
+  {
+   "count": 29,
+   "value": "as31133"
+  },
+  {
+   "count": 29,
+   "value": "as39608"
+  },
+  {
+   "count": 22,
+   "value": "as328178"
+  },
+  {
+   "count": 21,
+   "value": "as50543"
+  },
+  {
+   "count": 20,
+   "value": "as202103"
+  },
+  {
+   "count": 16,
+   "value": "as48437"
+  },
+  {
+   "count": 14,
+   "value": "as3462"
+  },
+  {
+   "count": 12,
+   "value": "as50512"
+  },
+  {
+   "count": 7,
+   "value": "as12768"
+  },
+  {
+   "count": 7,
+   "value": "as41096"
+  },
+  {
+   "count": 7,
+   "value": "as4780"
+  },
+  {
+   "count": 7,
+   "value": "as57026"
+  },
+  {
+   "count": 7,
+   "value": "as8334"
+  },
+  {
+   "count": 7,
+   "value": "as9416"
+  },
+  {
+   "count": 5,
+   "value": "as13188"
+  },
+  {
+   "count": 5,
+   "value": "as17809"
+  },
+  {
+   "count": 5,
+   "value": "as20011"
+  },
+  {
+   "count": 5,
+   "value": "as35807"
+  },
+  {
+   "count": 5,
+   "value": "as9304"
+  },
+  {
+   "count": 4,
+   "value": "as37457"
+  },
+  {
+   "count": 4,
+   "value": "as39435"
+  },
+  {
+   "count": 4,
+   "value": "as41682"
+  },
+  {
+   "count": 4,
+   "value": "as43764"
+  },
+  {
+   "count": 4,
+   "value": "as7311"
+  },
+  {
+   "count": 3,
+   "value": "as131602"
+  },
+  {
+   "count": 3,
+   "value": "as16509"
+  },
+  {
+   "count": 3,
+   "value": "as21453"
+  },
+  {
+   "count": 3,
+   "value": "as22423"
+  },
+  {
+   "count": 3,
+   "value": "as24086"
+  },
+  {
+   "count": 3,
+   "value": "as28773"
+  },
+  {
+   "count": 3,
+   "value": "as31364"
+  },
+  {
+   "count": 3,
+   "value": "as41911"
+  },
+  {
+   "count": 3,
+   "value": "as43120"
+  },
+  {
+   "count": 3,
+   "value": "as45899"
+  },
+  {
+   "count": 3,
+   "value": "as47531"
+  },
+  {
+   "count": 3,
+   "value": "as56433"
+  },
+  {
+   "count": 3,
+   "value": "as7482"
+  },
+  {
+   "count": 3,
+   "value": "as8369"
+  },
+  {
+   "count": 2,
+   "value": "as17716"
+  },
+  {
+   "count": 2,
+   "value": "as29107"
+  },
+  {
+   "count": 2,
+   "value": "as31520"
+  },
+  {
+   "count": 2,
+   "value": "as34629"
+  },
+  {
+   "count": 2,
+   "value": "as37564"
+  },
+  {
+   "count": 2,
+   "value": "as37611"
+  },
+  {
+   "count": 2,
+   "value": "as43434"
+  },
+  {
+   "count": 2,
+   "value": "as47164"
+  },
+  {
+   "count": 2,
+   "value": "as48475"
+  },
+  {
+   "count": 2,
+   "value": "as50498"
+  },
+  {
+   "count": 2,
+   "value": "as50544"
+  },
+  {
+   "count": 2,
+   "value": "as56522"
+  },
+  {
+   "count": 2,
+   "value": "as57812"
+  },
+  {
+   "count": 2,
+   "value": "as59793"
+  },
+  {
+   "count": 2,
+   "value": "as6849"
+  },
+  {
+   "count": 2,
+   "value": "as9919"
+  },
+  {
+   "count": 1,
+   "value": "as11290"
+  },
+  {
+   "count": 1,
+   "value": "as11845"
+  },
+  {
+   "count": 1,
+   "value": "as12741"
+  },
+  {
+   "count": 1,
+   "value": "as131596"
+  },
+  {
+   "count": 1,
+   "value": "as133613"
+  },
+  {
+   "count": 1,
+   "value": "as137872"
+  },
+  {
+   "count": 1,
+   "value": "as14522"
+  },
+  {
+   "count": 1,
+   "value": "as18046"
+  },
+  {
+   "count": 1,
+   "value": "as18182"
+  },
+  {
+   "count": 1,
+   "value": "as196739"
+  },
+  {
+   "count": 1,
+   "value": "as196767"
+  },
+  {
+   "count": 1,
+   "value": "as197394"
+  },
+  {
+   "count": 1,
+   "value": "as197718"
+  },
+  {
+   "count": 1,
+   "value": "as202177"
+  },
+  {
+   "count": 1,
+   "value": "as205673"
+  },
+  {
+   "count": 1,
+   "value": "as20590"
+  },
+  {
+   "count": 1,
+   "value": "as212994"
+  },
+  {
+   "count": 1,
+   "value": "as215853"
+  },
+  {
+   "count": 1,
+   "value": "as25133"
+  },
+  {
+   "count": 1,
+   "value": "as263357"
+  },
+  {
+   "count": 1,
+   "value": "as28573"
+  },
+  {
+   "count": 1,
+   "value": "as29124"
+  },
+  {
+   "count": 1,
+   "value": "as29196"
+  },
+  {
+   "count": 1,
+   "value": "as29319"
+  },
+  {
+   "count": 1,
+   "value": "as29582"
+  },
+  {
+   "count": 1,
+   "value": "as29687"
+  },
+  {
+   "count": 1,
+   "value": "as31028"
+  },
+  {
+   "count": 1,
+   "value": "as31195"
+  },
+  {
+   "count": 1,
+   "value": "as31272"
+  },
+  {
+   "count": 1,
+   "value": "as3226"
+  },
+  {
+   "count": 1,
+   "value": "as327991"
+  },
+  {
+   "count": 1,
+   "value": "as3320"
+  },
+  {
+   "count": 1,
+   "value": "as34056"
+  },
+  {
+   "count": 1,
+   "value": "as34467"
+  },
+  {
+   "count": 1,
+   "value": "as34590"
+  }
+ ],
+ "ports": [
+  {
+   "count": 33181,
+   "value": 6264
+  }
+ ],
+ "orgs": [],
+ "name": "Magticom gSOAP"
+}

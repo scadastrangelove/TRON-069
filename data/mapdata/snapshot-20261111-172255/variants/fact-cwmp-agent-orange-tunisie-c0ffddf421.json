@@ -1,0 +1,159 @@
+{
+ "dork": "\"CWMP-Agent\" country:HK",
+ "total": 2552,
+ "taken": "2026-11-11T18:33:17+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 2552,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 10,
+   "covered": 2552,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 2552,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 9,
+   "covered": 2552,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2552,
+   "value": "HK"
+  }
+ ],
+ "asn": [
+  {
+   "count": 2541,
+   "value": "as4760"
+  },
+  {
+   "count": 5,
+   "value": "as45102"
+  },
+  {
+   "count": 2,
+   "value": "as17924"
+  },
+  {
+   "count": 1,
+   "value": "as136907"
+  },
+  {
+   "count": 1,
+   "value": "as61112"
+  },
+  {
+   "count": 1,
+   "value": "as9269"
+  },
+  {
+   "count": 1,
+   "value": "as9304"
+  }
+ ],
+ "ports": [
+  {
+   "count": 2544,
+   "value": 5400
+  },
+  {
+   "count": 1,
+   "value": 86
+  },
+  {
+   "count": 1,
+   "value": 314
+  },
+  {
+   "count": 1,
+   "value": 843
+  },
+  {
+   "count": 1,
+   "value": 3128
+  },
+  {
+   "count": 1,
+   "value": 7547
+  },
+  {
+   "count": 1,
+   "value": 8457
+  },
+  {
+   "count": 1,
+   "value": 9943
+  },
+  {
+   "count": 1,
+   "value": 18108
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1583,
+   "value": "Hong Kong Telecommunications (HKT) Limited Mass Internet"
+  },
+  {
+   "count": 372,
+   "value": "PCCW Global (HK) Limited"
+  },
+  {
+   "count": 340,
+   "value": "HKT Limited"
+  },
+  {
+   "count": 246,
+   "value": "Hong Kong Telecommunications (HKT) Limited"
+  },
+  {
+   "count": 5,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 2,
+   "value": "Smartone Mobile communications Limited"
+  },
+  {
+   "count": 1,
+   "value": "AkileCloud AKILE LTD"
+  },
+  {
+   "count": 1,
+   "value": "HGC Global Communications Limited"
+  },
+  {
+   "count": 1,
+   "value": "Hong Kong Broadband Network Limited"
+  },
+  {
+   "count": 1,
+   "value": "Huawei Cloud Hongkong Region"
+  }
+ ],
+ "id": "fact-cwmp-agent-orange-tunisie-c0ffddf421",
+ "parent": "cwmp-agent-orange-tunisie",
+ "group": "facts",
+ "label": {
+  "ru": "карман HKT/PCCW HK (порт 5400)",
+  "en": "HKT/PCCW HK subset (port 5400)",
+  "es": "Subconjunto HKT/PCCW HK (puerto 5400)",
+  "zh": "HKT/PCCW HK 子集（端口 5400）"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,49 @@
+{
+ "dork": "\"cwmpd\" opaque country:JP",
+ "total": 3,
+ "taken": "2026-11-11T18:25:03+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as4713"
+  },
+  {
+   "count": 1,
+   "value": "as10010"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "NTT DOCOMO BUSINESS,Inc."
+  },
+  {
+   "count": 1,
+   "value": "Open Computer Network"
+  },
+  {
+   "count": 1,
+   "value": "TOKAI Communications Corporation"
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "JP"
+}
