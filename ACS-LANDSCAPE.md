@@ -16,6 +16,18 @@ The CPE knows its management server address from its configuration. Internet
 visibility describes only part of the ACS attack surface. An ACS absent from a
 public search index may still be reachable by devices on an operator network.
 
+<a id="management-to-device"></a>
+## From management authority to device execution
+
+The downstream ACS → CPE leg also has public examples. RDK-B's
+`provisioning-and-management` 2.10.0 includes a
+[remote syslog command-injection fix](PUBLIC-DISCLOSURES.md#rdkb-remote-syslog-20261012).
+The patch closes a path from a writable management parameter to a shell command
+on the device. Where an ACS can write that parameter, compromise of the ACS
+can turn its configuration authority into a route to device execution.
+This supplies a concrete downstream mechanism for the Bad CPE model; the
+initial CPE → ACS compromise is a separate prerequisite.
+
 ## What the atlas measures
 
 The map counts dated matches for public fingerprints. The CPE–ACS graph adds

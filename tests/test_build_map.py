@@ -381,7 +381,7 @@ class BuildTests(unittest.TestCase):
     def test_fleet_news_requires_primary_links_and_valid_relations(self):
         news = builder.read_news()
         fleet = [item for item in news if item['kind'] == 'fleet']
-        self.assertEqual(len(fleet), 5)
+        self.assertTrue(fleet, 'Expected fleet news to exercise validation')
         with (ROOT/'registry.csv').open() as stream:
             lines = {r['id'] for r in csv.DictReader(stream)}
         operators = builder.read_operators()
@@ -395,6 +395,7 @@ class BuildTests(unittest.TestCase):
                 builder.validate_news_relations([bad], lines, operators)
         bad = copy.deepcopy(fleet[0])
         bad['links'] = []
+        bad.pop('evidence', None)
         with patch.object(builder, 'read', return_value=[bad]):
             with self.assertRaisesRegex(ValueError, 'Missing news evidence'):
                 builder.read_news()

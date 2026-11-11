@@ -4,6 +4,35 @@ This page links published reports relevant to TRON-069. The
 [Rust-in-Peace disclosure tracker](https://github.com/scadastrangelove/rust-in-peace/blob/main/DISCLOSURES-PUBLIC.md)
 tracks the wider research programme, including reports that remain private.
 
+<a id="rdkb-remote-syslog-20261012"></a>
+## RDK-B — remote syslog command injection fixed in 2.10.0
+
+RDK's `provisioning-and-management` 2.10.0 includes **RDKB-66685**, a public
+command-injection fix in remote syslog configuration. Upstream
+[PR #359](https://github.com/rdkcentral/provisioning-and-management/pull/359)
+was merged on 23 September 2026; the
+[2.10.0 tag](https://github.com/rdkcentral/provisioning-and-management/tree/2.10.0)
+was created on 12 October at 06:27:32 UTC. The fix is listed in the
+[release changelog](https://github.com/rdkcentral/provisioning-and-management/blob/2.10.0/CHANGELOG.md).
+
+The affected management parameter is
+`Device.X_CISCO_COM_Diagnostics.Syslog.RemoteLog.Host`.
+The patch validates the host, checks its length in the parameter setter, and
+replaces `vsystem` with `v_secure_system` when starting syslogd. This is a fix in
+the provisioning component shipped alongside the TR-069 agent; the agent's
+separate 2.5.0 version does not identify the fixed provisioning code.
+
+This illustrates the **ACS → CPE** leg of the
+[Bad CPE model](ACS-LANDSCAPE.md#management-to-device): control over a writable
+management parameter can reach command execution on a device. An ACS takeover
+would supply that control where the parameter is exposed and writable through
+the ACS. The upstream fix establishes this downstream mechanism; a complete
+CPE → ACS → fleet chain would also require a way to compromise the ACS.
+
+The atlas links this report to `rdk-b-ccsptr069pa` as RDK-B platform context.
+Its fingerprint does not reveal the provisioning component version, build
+options or operator patch status. Sources checked on 11 November 2026.
+
 <a id="genieacs-20261020"></a>
 ## GenieACS — seven advisories published 20 October 2026
 

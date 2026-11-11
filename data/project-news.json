@@ -1,5 +1,49 @@
 [
   {
+    "id": "rdkb-remote-syslog-fix",
+    "date": "2026-10-12",
+    "kind": "fleet",
+    "important": true,
+    "view": "ecosystem",
+    "title": {
+      "en": "RDK-B: remote syslog command injection fixed",
+      "ru": "RDK-B: исправлена инъекция команд в настройках syslog",
+      "es": "RDK-B: corregida la inyección de comandos en syslog remoto",
+      "zh": "RDK-B：远程 syslog 配置中的命令注入已修复"
+    },
+    "body": {
+      "en": "RDK provisioning-and-management 2.10.0, tagged on October 12, includes the public fix RDKB-66685 for command injection in remote syslog configuration. Upstream PR #359 was merged on September 23. The fix validates the Host parameter and changes how syslogd is launched.\n\nThis illustrates the ACS → CPE leg of Bad CPE: control of a management parameter can become command execution on a device. A compromised ACS could provide that control where the parameter is exposed. The RDK-B fingerprint links the platform to this report; patch status depends on the device build.",
+      "ru": "В RDK provisioning-and-management 2.10.0, отмеченный тегом 12 октября, вошёл публичный фикс RDKB-66685: инъекция команд в настройках удалённого syslog. PR #359 принят 23 сентября. Исправление добавляет проверку параметра Host и меняет способ запуска syslogd.\n\nЭто пример участка ACS → CPE в модели Bad CPE: контроль над параметром управления может превратиться в выполнение команд на устройстве. Захваченный ACS может дать такой контроль там, где параметр доступен для записи. Сигнатура RDK-B связывает платформу с этой публикацией; наличие исправления зависит от сборки устройства.",
+      "es": "RDK provisioning-and-management 2.10.0, etiquetado el 12 de octubre, incluye la corrección pública RDKB-66685 para una inyección de comandos en la configuración de syslog remoto. El PR #359 se integró el 23 de septiembre. La corrección valida el parámetro Host y cambia la forma de iniciar syslogd.\n\nEs un ejemplo del tramo ACS → CPE del modelo Bad CPE: controlar un parámetro de gestión puede permitir ejecutar comandos en un dispositivo. Un ACS comprometido podría ofrecer ese control donde el parámetro sea accesible. La huella RDK-B vincula la plataforma con este informe; el estado del parche depende de la compilación del dispositivo.",
+      "zh": "RDK provisioning-and-management 2.10.0 于 10 月 12 日打标签，包含远程 syslog 配置命令注入的公开修复 RDKB-66685。上游 PR #359 于 9 月 23 日合并。修复增加了 Host 参数校验，并改变了 syslogd 的启动方式。\n\n这是 Bad CPE 模型中 ACS → CPE 环节的公开案例：对管理参数的控制可能转化为设备上的命令执行。在该参数可写的部署中，被攻陷的 ACS 可能提供这种控制。RDK-B 指纹将该平台与此报告关联；是否已修复取决于具体设备构建。"
+    },
+    "links": [
+      {
+        "label": "RDK · provisioning-and-management 2.10.0",
+        "url": "https://github.com/rdkcentral/provisioning-and-management/blob/2.10.0/CHANGELOG.md"
+      },
+      {
+        "label": "RDK · PR #359 / RDKB-66685",
+        "url": "https://github.com/rdkcentral/provisioning-and-management/pull/359"
+      }
+    ],
+    "evidence": [
+      {
+        "file": "PUBLIC-DISCLOSURES.md",
+        "anchor": "rdkb-remote-syslog-20261012"
+      },
+      {
+        "file": "ACS-LANDSCAPE.md",
+        "anchor": "management-to-device"
+      }
+    ],
+    "related": {
+      "lines": [
+        "rdk-b-ccsptr069pa"
+      ]
+    }
+  },
+  {
     "id": "research-specimens-20261111",
     "date": "2026-11-11",
     "kind": "research",
