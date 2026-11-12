@@ -188,6 +188,24 @@ use a new snapshot for daily history. No daily scheduler is installed by this re
 `--query-group` selects catalog groups. `--skip-variants` omits research queries.
 The resume plan freezes these choices, including query text and facets.
 
+The default collection also includes the passive TLS discovery catalog in
+`data/infrastructure-queries.json`. Use `--skip-infrastructure` to omit it.
+Its results live in the snapshot's `infrastructure/` directory and never enter
+the device-signature totals. The frozen resume plan includes these queries.
+To supplement a completed fleet snapshot with only the management research:
+
+```sh
+python3 tools/collect-map.py --from-snapshot SOURCE --queries-only \
+  --query-group huawei-deployment,management-infrastructure --build
+```
+
+The **TLS candidates** map mode displays one query at a time. Firmware profiles,
+joint country/port observations and open evidence gaps are linked from the Huawei
+card and the **CPE ↔ ACS** research view. Measurements keep their own collection
+dates; copied fleet data is not relabelled as newly collected. See
+[management infrastructure](MANAGEMENT-INFRASTRUCTURE.md) for the method and
+[the public profile catalog](data/management-evidence.json) for reviewed fields.
+
 ## CPE–ACS graph
 
 Open the **CPE ↔ ACS** tab or [link directly to it](index.html#lang=en&tab=ecosystem).

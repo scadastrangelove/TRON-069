@@ -118,3 +118,14 @@ part of the public repository. Daily collection is supported but not scheduled.
 - [ ] Find named operator deployments for RDK-B and GenieACS.
 - [ ] Add exact public sources for the BT community-log lead.
 - [ ] Extend the relationship catalog when operator, model and version evidence can be matched.
+
+## Management infrastructure evidence gaps (November 12)
+
+- [ ] Huawei image: publish a retrievable source, version and hash; independently verify EG8145V5.
+- [ ] Deduplicate the 172 profile IDs and review country/operator aliases, including unresolved `at` and `mongolia`.
+- [ ] Attribute organizations only within exact Huawei × port × country queries; review facet tails and label aliases.
+- [ ] Verify certificate chains/keys against the firmware trust anchor; issuer-name equality alone is a discovery clue.
+- [ ] Confirm service roles for CWMP-name candidates and classify broad provisioning matches.
+- [ ] Add joint country × organization TLS slices when needed; global facets are not a country/operator join.
+
+The previous 48/167 cross-match claims are withdrawn. See [the reviewed method](MANAGEMENT-INFRASTRUCTURE.md).

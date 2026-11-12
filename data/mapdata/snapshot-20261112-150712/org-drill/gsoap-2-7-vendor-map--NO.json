@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.7\" country:NO",
+ "total": 44,
+ "taken": "2026-11-11T17:49:11+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 3,
+   "covered": 44,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 44,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 43,
+   "value": "as2116"
+  },
+  {
+   "count": 1,
+   "value": "as58302"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 25,
+   "value": "GlobalConnect-AS2116 GLOBALCONNECT"
+  },
+  {
+   "count": 18,
+   "value": "GLOBALCONNECT AS"
+  },
+  {
+   "count": 1,
+   "value": "Studentersamfundet i Trondhjem"
+  }
+ ],
+ "line": "gSOAP/2.7 vendor map",
+ "line_id": "gsoap-2-7-vendor-map",
+ "cc": "NO"
+}

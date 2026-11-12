@@ -1635,5 +1635,59 @@
         "freeacs"
       ]
     }
+  },
+  {
+    "id": "huawei-firmware-profiles",
+    "date": "2026-11-12",
+    "kind": "investigation",
+    "view": "ecosystem",
+    "ecosystem_node": "huawei-deployment-manifest",
+    "title": {
+      "en": "One firmware, 172 profiles",
+      "ru": "Одна прошивка, 172 профиля",
+      "es": "Un firmware, 172 perfiles",
+      "zh": "一份固件，172 个配置"
+    },
+    "body": {
+      "en": "An inspected Huawei platform tree contains operator customization profiles and 38 data-model views. Eight reviewed profile entries explain five CR port settings. The atlas now compares each profile with a dated Huawei × port × country query. Operator aliases and public image provenance remain open research tasks.",
+      "ru": "В дереве платформы Huawei найдены операторские профили и 38 представлений датамодели. Восемь разобранных профилей объясняют пять настроек CR-порта. Теперь атлас сопоставляет каждый профиль с датированным запросом Huawei × порт × страна. Операторские алиасы и публичное происхождение образа остаются задачами исследования.",
+      "es": "El árbol de una plataforma Huawei contiene perfiles de operador y 38 vistas del modelo de datos. Ocho perfiles revisados explican cinco puertos CR. El atlas compara cada perfil con una consulta fechada Huawei × puerto × país. Quedan por verificar los alias de operadores y la procedencia pública de la imagen.",
+      "zh": "受检 Huawei 平台包含运营商配置及 38 个数据模型视图。八个已审阅配置对应五个 CR 端口设置。图谱将各配置与带日期的 Huawei × 端口 × 国家查询进行对照。运营商别名和固件公开来源仍待核验。"
+    },
+    "evidence": [
+      {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      }
+    ],
+    "related": {
+      "lines": [
+        "huaweihomegateway",
+        "huaweihomegateway-cr-slice"
+      ]
+    }
+  },
+  {
+    "id": "acs-certificate-calling-card",
+    "date": "2026-11-12",
+    "kind": "investigation",
+    "view": "ecosystem",
+    "ecosystem_node": "tls-cwmp-cn",
+    "title": {
+      "en": "ACS leaves a calling card in its certificate",
+      "ru": "ACS оставляет визитку в сертификате",
+      "es": "El ACS deja su tarjeta en el certificado",
+      "zh": "ACS 在证书中留下名片"
+    },
+    "body": {
+      "en": "CWMP names and carrier issuer names expose another view of management infrastructure. The new TLS layer records certificate candidates, ports, countries and organization labels through Shodan Count. Each query has its own dated count. Service roles and CA chains remain explicit verification tasks; overlapping queries stay separate from the device-fleet totals.",
+      "ru": "Имена CWMP и операторские issuer дают ещё один взгляд на инфраструктуру управления. Новый TLS-слой собирает сертификатные признаки, порты, страны и метки организаций через Shodan Count. У каждого запроса свой датированный счётчик. Роли сервисов и цепочки CA вынесены в задачи проверки; пересекающиеся выборки учитываются отдельно от флота устройств.",
+      "es": "Los nombres CWMP y los emisores de operadores ofrecen otra vista de la infraestructura de gestión. La capa TLS recoge candidatos, puertos, países y organizaciones mediante Shodan Count. Cada consulta conserva su recuento fechado. Los roles de servicio y las cadenas CA requieren verificación; las consultas solapadas se mantienen separadas del total de dispositivos.",
+      "zh": "CWMP 名称及运营商颁发者名称提供了管理基础设施的另一视角。TLS 图层通过 Shodan Count 收集候选证书特征、端口、国家和组织标签。各查询保留独立的带日期计数。服务角色和 CA 链仍需核验；重叠查询与设备群计数分开呈现。"
+    },
+    "evidence": [
+      {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      }
+    ]
   }
 ]

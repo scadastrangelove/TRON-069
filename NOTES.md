@@ -411,3 +411,54 @@ operator overlap or WPS component identification alone does not establish it.
 Public cards describe software composition and evidence scope. Binary-level
 rule results and operational material remain outside this repository; the
 atlas does not assign vulnerability status to models, operators or map points.
+
+<a id="section-9.50"></a>
+## 9.50. Operator profiles inside a firmware image — November 12
+
+The inspected Huawei platform tree was reported to contain 172 customization
+profile identifiers and 38 data-model views. Profiles include multiple variants
+for the same operator. These are configuration artifacts, not a count of deployed
+operators. Public image provenance, version and hash are still evidence gaps;
+the separate EG8145V5 artifact needs independent verification.
+
+Eight reviewed profile entries span five CR port values: 30005, 8085, 51005, 9090
+and 10301. The public catalog records profile IDs, reported country/operator hints
+and configured ports. It excludes management URLs, credentials and security
+feature settings. See [management infrastructure](MANAGEMENT-INFRASTRUCTURE.md).
+
+The data-model views describe the CPE parameters available to ACS. They can guide
+interoperability analysis; evidence about how an ACS processes device-controlled
+values requires separate research.
+
+<a id="section-9.51"></a>
+## 9.51. Reviewing the firmware-to-fleet cross-match — November 12
+
+The preliminary claims of 48 matched Huawei operator clusters and 167 hidden
+operators were withdrawn. Telecom Argentina, Claro NXT, Rogers and TDC totals
+had been taken from the RDK-B line. A shared operator label does not transfer
+observations between component families.
+
+The replacement uses exact Huawei banner × configured port × reported country
+queries. Each result retains its timestamp and organization facets. Profile
+aliases remain unverified, and profiles sharing a query share its measurement.
+No observation in a query or facet does not establish NAT or the size of a hidden
+population. The public evidence catalog lists the remaining attribution gaps.
+
+<a id="section-9.52"></a>
+## 9.52. TLS certificates as a management discovery channel — November 12
+
+The atlas now has a separate catalog for certificate-name and issuer-name
+queries. CWMP in a certificate CN is an ACS candidate marker. Provisioning names
+are a broader research set. An issuer-name match can identify related services;
+a connection to a particular firmware trust anchor requires chain/key evidence.
+A bundled certificate alone does not establish pinning.
+
+The collector stores exact queries, timestamps and country, organization, ASN,
+port and certificate-fingerprint facets. Matches can overlap and are not counts
+of unique ACS controllers. Port slices remain separate from CPE signature totals.
+Historical snapshots with no TLS collection explicitly show missing data.
+
+CPE initiates the CWMP session to ACS; NAT may obstruct incoming connection
+requests to CPE. ACS reachability is a separate property. Certificate fields add
+discovery evidence for the server side without establishing the service role of
+every match. See [methods and gaps](MANAGEMENT-INFRASTRUCTURE.md).

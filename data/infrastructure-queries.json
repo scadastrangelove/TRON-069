@@ -1,0 +1,133 @@
+{
+ "schema_version": 1,
+ "queries": [
+  {
+   "id": "tls-cwmp-cn",
+   "query": "ssl.cert.subject.CN:cwmp",
+   "classification": "acs-candidate",
+   "label": {
+    "en": "CWMP certificate names",
+    "ru": "CWMP в именах сертификатов",
+    "es": "Nombres de certificado CWMP",
+    "zh": "证书名称中的 CWMP"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-telefonica-issuer",
+   "query": "ssl.cert.issuer.CN:\"Telefonica Moviles\"",
+   "classification": "issuer-match",
+   "label": {
+    "en": "Telefónica issuer names",
+    "ru": "Имена issuer Telefónica",
+    "es": "Nombres de emisor Telefónica",
+    "zh": "Telefónica 颁发者名称"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-telefonica-subordinate",
+   "query": "ssl.cert.issuer.CN:\"Subordinada Telefonica Moviles\"",
+   "classification": "issuer-match",
+   "label": {
+    "en": "Telefónica subordinate issuer",
+    "ru": "Промежуточный issuer Telefónica",
+    "es": "Emisor subordinado Telefónica",
+    "zh": "Telefónica 中间颁发者"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-provisioning-cn",
+   "query": "ssl.cert.subject.CN:provisioning",
+   "classification": "broad-discovery",
+   "label": {
+    "en": "Provisioning certificate names",
+    "ru": "Provisioning в именах сертификатов",
+    "es": "Nombres de certificado provisioning",
+    "zh": "证书名称中的 provisioning"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-cwmp-port-7547",
+   "query": "ssl.cert.subject.CN:cwmp port:7547",
+   "classification": "acs-candidate",
+   "label": {
+    "en": "CWMP names · port 7547",
+    "ru": "CWMP в CN · порт 7547",
+    "es": "Nombres CWMP · puerto 7547",
+    "zh": "CWMP 名称 · 端口 7547"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-cwmp-port-7548",
+   "query": "ssl.cert.subject.CN:cwmp port:7548",
+   "classification": "acs-candidate",
+   "label": {
+    "en": "CWMP names · port 7548",
+    "ru": "CWMP в CN · порт 7548",
+    "es": "Nombres CWMP · puerto 7548",
+    "zh": "CWMP 名称 · 端口 7548"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-cwmp-port-443",
+   "query": "ssl.cert.subject.CN:cwmp port:443",
+   "classification": "acs-candidate",
+   "label": {
+    "en": "CWMP names · port 443",
+    "ru": "CWMP в CN · порт 443",
+    "es": "Nombres CWMP · puerto 443",
+    "zh": "CWMP 名称 · 端口 443"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-cwmp-port-8443",
+   "query": "ssl.cert.subject.CN:cwmp port:8443",
+   "classification": "acs-candidate",
+   "label": {
+    "en": "CWMP names · port 8443",
+    "ru": "CWMP в CN · порт 8443",
+    "es": "Nombres CWMP · puerto 8443",
+    "zh": "CWMP 名称 · 端口 8443"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  }
+ ]
+}

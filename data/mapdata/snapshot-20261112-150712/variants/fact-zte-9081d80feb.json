@@ -1,0 +1,155 @@
+{
+ "dork": "\"ZXHN H108N\"",
+ "total": 20,
+ "taken": "2026-11-11T18:32:56+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 6,
+   "covered": 20,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 7,
+   "covered": 20,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 20,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 7,
+   "covered": 20,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 12,
+   "value": "RU"
+  },
+  {
+   "count": 4,
+   "value": "EG"
+  },
+  {
+   "count": 1,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "UA"
+  },
+  {
+   "count": 1,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "VE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 12,
+   "value": "as12389"
+  },
+  {
+   "count": 4,
+   "value": "as8452"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as63949"
+  },
+  {
+   "count": 1,
+   "value": "as6849"
+  },
+  {
+   "count": 1,
+   "value": "as8048"
+  }
+ ],
+ "ports": [
+  {
+   "count": 12,
+   "value": 23
+  },
+  {
+   "count": 3,
+   "value": 1723
+  },
+  {
+   "count": 1,
+   "value": 80
+  },
+  {
+   "count": 1,
+   "value": 3541
+  },
+  {
+   "count": 1,
+   "value": 5172
+  },
+  {
+   "count": 1,
+   "value": 52869
+  },
+  {
+   "count": 1,
+   "value": 62023
+  }
+ ],
+ "orgs": [
+  {
+   "count": 11,
+   "value": "OJSC \"Sibirtelecom\""
+  },
+  {
+   "count": 4,
+   "value": "For Internet Abuse & Spam reports : admins@tedata.net"
+  },
+  {
+   "count": 1,
+   "value": "CANTV Servicios, Venezuela"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "E-mail for SPAM and abuse postmaster@ukrtelecom.ua"
+  },
+  {
+   "count": 1,
+   "value": "Linode"
+  },
+  {
+   "count": 1,
+   "value": "OJSC \"Rostelecom\""
+  }
+ ],
+ "id": "fact-zte-9081d80feb",
+ "parent": "zte",
+ "group": "facts",
+ "label": {
+  "ru": "telnet-баннеры ZXHN",
+  "en": "ZXHN Telnet banners",
+  "es": "Banners Telnet ZXHN",
+  "zh": "ZXHN Telnet 横幅"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

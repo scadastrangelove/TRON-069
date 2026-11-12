@@ -1,0 +1,549 @@
+{
+ "dork": "ssl.cert.subject.CN:cwmp port:443",
+ "total": 80,
+ "taken": "2026-11-12T15:07:55+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 16,
+   "covered": 80,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 28,
+   "covered": 80,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 25,
+   "covered": 80,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 80,
+   "remainder": 0
+  },
+  "ssl.cert.fingerprint": {
+   "values_returned": 53,
+   "covered": 80,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 29,
+   "value": "US"
+  },
+  {
+   "count": 11,
+   "value": "CA"
+  },
+  {
+   "count": 9,
+   "value": "AU"
+  },
+  {
+   "count": 6,
+   "value": "GB"
+  },
+  {
+   "count": 5,
+   "value": "BR"
+  },
+  {
+   "count": 5,
+   "value": "IE"
+  },
+  {
+   "count": 3,
+   "value": "FR"
+  },
+  {
+   "count": 2,
+   "value": "BE"
+  },
+  {
+   "count": 2,
+   "value": "ID"
+  },
+  {
+   "count": 2,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "CH"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "IT"
+  },
+  {
+   "count": 1,
+   "value": "KR"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  }
+ ],
+ "asn": [
+  {
+   "count": 38,
+   "value": "as16509"
+  },
+  {
+   "count": 11,
+   "value": "as577"
+  },
+  {
+   "count": 5,
+   "value": "as396982"
+  },
+  {
+   "count": 4,
+   "value": "as1221"
+  },
+  {
+   "count": 2,
+   "value": "as50628"
+  },
+  {
+   "count": 1,
+   "value": "as13030"
+  },
+  {
+   "count": 1,
+   "value": "as132746"
+  },
+  {
+   "count": 1,
+   "value": "as135354"
+  },
+  {
+   "count": 1,
+   "value": "as135799"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as200043"
+  },
+  {
+   "count": 1,
+   "value": "as202305"
+  },
+  {
+   "count": 1,
+   "value": "as210356"
+  },
+  {
+   "count": 1,
+   "value": "as24904"
+  },
+  {
+   "count": 1,
+   "value": "as262290"
+  },
+  {
+   "count": 1,
+   "value": "as264441"
+  },
+  {
+   "count": 1,
+   "value": "as265126"
+  },
+  {
+   "count": 1,
+   "value": "as273467"
+  },
+  {
+   "count": 1,
+   "value": "as28670"
+  },
+  {
+   "count": 1,
+   "value": "as31898"
+  },
+  {
+   "count": 1,
+   "value": "as35847"
+  },
+  {
+   "count": 1,
+   "value": "as38513"
+  },
+  {
+   "count": 1,
+   "value": "as40021"
+  },
+  {
+   "count": 1,
+   "value": "as63949"
+  },
+  {
+   "count": 1,
+   "value": "as8151"
+  }
+ ],
+ "ports": [
+  {
+   "count": 80,
+   "value": 443
+  }
+ ],
+ "orgs": [
+  {
+   "count": 19,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 11,
+   "value": "Bell Canada"
+  },
+  {
+   "count": 9,
+   "value": "Sky UK Limited"
+  },
+  {
+   "count": 7,
+   "value": "Amazon.com, Inc."
+  },
+  {
+   "count": 5,
+   "value": "Google LLC"
+  },
+  {
+   "count": 4,
+   "value": "Telstra Limited"
+  },
+  {
+   "count": 3,
+   "value": "Amazon Corporate Services Pty Ltd"
+  },
+  {
+   "count": 2,
+   "value": "Leonix-Telecom Leonix Telecom SAS"
+  },
+  {
+   "count": 1,
+   "value": "Apek Technology Pvt. Ltd."
+  },
+  {
+   "count": 1,
+   "value": "CESENA NET S.R.L."
+  },
+  {
+   "count": 1,
+   "value": "CST-REDEL SERVIÇOS DE TELECOMUNICAÇÕES LTDA."
+  },
+  {
+   "count": 1,
+   "value": "Contabo Inc."
+  },
+  {
+   "count": 1,
+   "value": "DELTA TELECOM"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Ezee Fiber"
+  },
+  {
+   "count": 1,
+   "value": "FLEETNET TELECOMUNICACOES LTDA - ME"
+  },
+  {
+   "count": 1,
+   "value": "H R B LACERDA"
+  },
+  {
+   "count": 1,
+   "value": "INFOLINK BROADBAND SERVICES PVT LTD"
+  },
+  {
+   "count": 1,
+   "value": "Indonesia Online Access"
+  },
+  {
+   "count": 1,
+   "value": "Init7 (Switzerland) Ltd."
+  },
+  {
+   "count": 1,
+   "value": "JOAN GRAU FERRI"
+  },
+  {
+   "count": 1,
+   "value": "K-Net SAS"
+  },
+  {
+   "count": 1,
+   "value": "Linode"
+  },
+  {
+   "count": 1,
+   "value": "NAVER Cloud Corp."
+  },
+  {
+   "count": 1,
+   "value": "Newparce Telecomunicações Ltda ME"
+  },
+  {
+   "count": 1,
+   "value": "Oracle Corporation"
+  },
+  {
+   "count": 1,
+   "value": "Private Customer"
+  },
+  {
+   "count": 1,
+   "value": "Uninet S.A. de C.V."
+  }
+ ],
+ "id": "tls-cwmp-port-443",
+ "group": "management-infrastructure",
+ "label": {
+  "en": "CWMP names · port 443",
+  "ru": "CWMP в CN · порт 443",
+  "es": "Nombres CWMP · puerto 443",
+  "zh": "CWMP 名称 · 端口 443"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "classification": "acs-candidate",
+ "fingerprints": [
+  {
+   "count": 5,
+   "value": "47e5a332fb8493eb438f670a54e6945e1588646f"
+  },
+  {
+   "count": 4,
+   "value": "0442421f11f9f42fd88424996f9d21e2d20e2956"
+  },
+  {
+   "count": 4,
+   "value": "15f5bc2c151cb725037b0a3df1c917950f94313e"
+  },
+  {
+   "count": 4,
+   "value": "71c395266a25340e6a7d2b656a8ede8783a0b77c"
+  },
+  {
+   "count": 3,
+   "value": "75d5bf4047da3bef9bce61c39bd21a8b7a59d47a"
+  },
+  {
+   "count": 3,
+   "value": "e12b77e79c1a890ce4d3aa2cc4ed840d241ab600"
+  },
+  {
+   "count": 2,
+   "value": "03c6cd8fc5f8c0d9e890fd582d96004100f7dcab"
+  },
+  {
+   "count": 2,
+   "value": "38c62578b5f8819f4bd10eca9c91a1e3faa7e66b"
+  },
+  {
+   "count": 2,
+   "value": "4dfbee5b9ff798a11cc47b13ae7b9d6ca1e8d95c"
+  },
+  {
+   "count": 2,
+   "value": "7017124f8b3896c0ddbb2318f039f55284a66601"
+  },
+  {
+   "count": 2,
+   "value": "889ac00f3a19983f9c146d35ffa65c846a512f08"
+  },
+  {
+   "count": 2,
+   "value": "8c6e4b5d85fb82e2553fffd33eb13f08309ca0f5"
+  },
+  {
+   "count": 2,
+   "value": "8f30fdc7c529f18804b2c70c7d213cb53caec63b"
+  },
+  {
+   "count": 2,
+   "value": "9bc9725cb090de663a5415c7d177411adc9b7e71"
+  },
+  {
+   "count": 2,
+   "value": "9d7239df7fd758c62f26806c18d2647dc154261c"
+  },
+  {
+   "count": 2,
+   "value": "b5d1be45803d66e2f92489a066ad25d9b6c84a13"
+  },
+  {
+   "count": 1,
+   "value": "04a449fc2bc87ad1eba7f57ce65dba9f51305d7c"
+  },
+  {
+   "count": 1,
+   "value": "0799b63d26080451cfd5181a93638195a7b5342e"
+  },
+  {
+   "count": 1,
+   "value": "22703b6a834e308476325e8614613139c42a2efa"
+  },
+  {
+   "count": 1,
+   "value": "24bb6bc67cd5f678ffefd3b968a18c75263dad8b"
+  },
+  {
+   "count": 1,
+   "value": "2675ef995b37c8009d1a7d5d46dae5247c20395c"
+  },
+  {
+   "count": 1,
+   "value": "26e667a473efe942be4855a474dd000d243af278"
+  },
+  {
+   "count": 1,
+   "value": "2768a649ca9f44f746a9f7cf3954f634e3448a6e"
+  },
+  {
+   "count": 1,
+   "value": "33882b1f730c630d37e4c62c3eaaa6e646bf5990"
+  },
+  {
+   "count": 1,
+   "value": "390391ee0a2d50e5d5ddd783fd02da8c72c0f8eb"
+  },
+  {
+   "count": 1,
+   "value": "403c2ad062a12f525f9e7f3136a50748406fc49c"
+  },
+  {
+   "count": 1,
+   "value": "430b8cb56adc7e6e9170683b20d11c9afd3273bd"
+  },
+  {
+   "count": 1,
+   "value": "471a385cdf64b15318b8331cb067c19291f6223c"
+  },
+  {
+   "count": 1,
+   "value": "4c293a5d94b6476f88b2ab5633fb3c7047fe9167"
+  },
+  {
+   "count": 1,
+   "value": "50396c82d2db3ceb6d75c0b0bbd1ec615ade325d"
+  },
+  {
+   "count": 1,
+   "value": "50bd8fdecb6e116323d7e5c913f74804698633c6"
+  },
+  {
+   "count": 1,
+   "value": "6116e50a7abf58a6a4eac6fc83239f87584256e5"
+  },
+  {
+   "count": 1,
+   "value": "75adec4b79056886d563161d7e381c4445ca326d"
+  },
+  {
+   "count": 1,
+   "value": "76419a2d9949ec1b8068b29469e9457b87aafa19"
+  },
+  {
+   "count": 1,
+   "value": "7d1002b257940ece4941a58b0a41fd875e61275c"
+  },
+  {
+   "count": 1,
+   "value": "7d1a8b27ef2575f93197fdd0a4b1c3b5ecbe0c9c"
+  },
+  {
+   "count": 1,
+   "value": "87ae343ef8e179cdd8633218f286b977c7acb73d"
+  },
+  {
+   "count": 1,
+   "value": "883e700ab73562732572fa7b923f9fcc7158a4b6"
+  },
+  {
+   "count": 1,
+   "value": "8cdf02840ee5073b9874790d99f16619790bb504"
+  },
+  {
+   "count": 1,
+   "value": "9790102a9b5e025f99875f7701f0cb9c10133ea5"
+  },
+  {
+   "count": 1,
+   "value": "a0390c06949a49224608f3bb9a4830849153c35b"
+  },
+  {
+   "count": 1,
+   "value": "a7b264d61133641dcb2dc617ba6da55ffc880427"
+  },
+  {
+   "count": 1,
+   "value": "ade6be492ab201b8aba778e9c374e3adf9bc7cfc"
+  },
+  {
+   "count": 1,
+   "value": "c11d3a3d771f3220032f34a5c39e2249764b35fe"
+  },
+  {
+   "count": 1,
+   "value": "c4c4ba92339e29168a24d079e0ff8daee38e16da"
+  },
+  {
+   "count": 1,
+   "value": "c504abd95d1824f0a67ea670df14c3f88109c77b"
+  },
+  {
+   "count": 1,
+   "value": "c7a728bc0cb65e009a9c6a4de212b589388212d7"
+  },
+  {
+   "count": 1,
+   "value": "c9dbc068b8dae5aa0364ccb2b7ec56e226fcf86f"
+  },
+  {
+   "count": 1,
+   "value": "cc87d02f8d352b1781b3dc6fd13d9cf3b6936086"
+  },
+  {
+   "count": 1,
+   "value": "ccc8723fc4b3a0d484fe4f8da605b3ae0254f501"
+  },
+  {
+   "count": 1,
+   "value": "d1a89f7b7543c88cc895216b853f7cac646fac65"
+  },
+  {
+   "count": 1,
+   "value": "e3cdb4218b5a99fc45cd9e1234ef8ea28e77e7ee"
+  },
+  {
+   "count": 1,
+   "value": "ff8e34263cb1e9d7bfb67412bcafff279cd048db"
+  }
+ ]
+}

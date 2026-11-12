@@ -1,0 +1,269 @@
+{
+ "dork": "ssl.cert.issuer.CN:\"Telefonica Moviles\"",
+ "total": 924,
+ "taken": "2026-11-12T15:07:44+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 7,
+   "covered": 924,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 21,
+   "covered": 924,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 15,
+   "covered": 924,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 2,
+   "covered": 924,
+   "remainder": 0
+  },
+  "ssl.cert.fingerprint": {
+   "values_returned": 8,
+   "covered": 924,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 903,
+   "value": "ES"
+  },
+  {
+   "count": 11,
+   "value": "AR"
+  },
+  {
+   "count": 5,
+   "value": "BR"
+  },
+  {
+   "count": 2,
+   "value": "VE"
+  },
+  {
+   "count": 1,
+   "value": "CL"
+  },
+  {
+   "count": 1,
+   "value": "RO"
+  },
+  {
+   "count": 1,
+   "value": "SE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 898,
+   "value": "as3352"
+  },
+  {
+   "count": 5,
+   "value": "as262175"
+  },
+  {
+   "count": 4,
+   "value": "as12430"
+  },
+  {
+   "count": 3,
+   "value": "as265804"
+  },
+  {
+   "count": 2,
+   "value": "as271252"
+  },
+  {
+   "count": 2,
+   "value": "as4926"
+  },
+  {
+   "count": 2,
+   "value": "as8048"
+  },
+  {
+   "count": 1,
+   "value": "as22927"
+  },
+  {
+   "count": 1,
+   "value": "as262490"
+  },
+  {
+   "count": 1,
+   "value": "as268255"
+  },
+  {
+   "count": 1,
+   "value": "as28640"
+  },
+  {
+   "count": 1,
+   "value": "as3301"
+  },
+  {
+   "count": 1,
+   "value": "as35699"
+  },
+  {
+   "count": 1,
+   "value": "as57269"
+  },
+  {
+   "count": 1,
+   "value": "as7418"
+  }
+ ],
+ "ports": [
+  {
+   "count": 922,
+   "value": 443
+  },
+  {
+   "count": 2,
+   "value": 8443
+  }
+ ],
+ "orgs": [
+  {
+   "count": 489,
+   "value": "Telefonica de Espana SAU"
+  },
+  {
+   "count": 265,
+   "value": "Red de servicios IP"
+  },
+  {
+   "count": 80,
+   "value": "Telefonica de Espana SAU Red de servicios IP Spain"
+  },
+  {
+   "count": 38,
+   "value": "Telefonica de Espana SAU (NCC"
+  },
+  {
+   "count": 20,
+   "value": "Red de Servicios IP"
+  },
+  {
+   "count": 6,
+   "value": "Telefonica De Espana SAU (NCC"
+  },
+  {
+   "count": 4,
+   "value": "Telefónica Móviles Argentina"
+  },
+  {
+   "count": 3,
+   "value": "COMUNIDAD 3 PLAY"
+  },
+  {
+   "count": 3,
+   "value": "Telefonica de Argentina"
+  },
+  {
+   "count": 3,
+   "value": "VODAFONE ESPANA S.A.U."
+  },
+  {
+   "count": 2,
+   "value": "BHNET FIBRA TELECOMUNICACOES LTDA"
+  },
+  {
+   "count": 2,
+   "value": "CANTV Servicios, Venezuela"
+  },
+  {
+   "count": 1,
+   "value": "Adamo Telecom Iberia S.A.U"
+  },
+  {
+   "count": 1,
+   "value": "Ambiente Virtual Sistemas e Conectividade Ltda"
+  },
+  {
+   "count": 1,
+   "value": "DIGI SPAIN TELECOM S.A"
+  },
+  {
+   "count": 1,
+   "value": "FIBRANET BRASIL"
+  },
+  {
+   "count": 1,
+   "value": "TELEFÓNICA CHILE S.A."
+  },
+  {
+   "count": 1,
+   "value": "Telefónica Móviles Argentina S.A. (Movistar Argentina)"
+  },
+  {
+   "count": 1,
+   "value": "Telia Network Services"
+  },
+  {
+   "count": 1,
+   "value": "VIPWAY Telecomunicações Ltda"
+  },
+  {
+   "count": 1,
+   "value": "VODAFONE ESPANA, S.A.U"
+  }
+ ],
+ "id": "tls-telefonica-issuer",
+ "group": "management-infrastructure",
+ "label": {
+  "en": "Telefónica issuer names",
+  "ru": "Имена issuer Telefónica",
+  "es": "Nombres de emisor Telefónica",
+  "zh": "Telefónica 颁发者名称"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "classification": "issuer-match",
+ "fingerprints": [
+  {
+   "count": 906,
+   "value": "52e41c6fa636712e42b4a94a05d48910be0d194c"
+  },
+  {
+   "count": 7,
+   "value": "25bd5f897c7deed69e747259197978cddd9c5335"
+  },
+  {
+   "count": 3,
+   "value": "b4def4c23369ea33268bc23128454b328df4924b"
+  },
+  {
+   "count": 2,
+   "value": "540fed39b3f7f6666a7619960297bdfb12ecb975"
+  },
+  {
+   "count": 2,
+   "value": "75d153b38736ef229d22277a679503162581ebae"
+  },
+  {
+   "count": 2,
+   "value": "cdc267370d99933217a438a73ddcaae0f8df1714"
+  },
+  {
+   "count": 1,
+   "value": "1ef69b6ddcd7d15ae99f2d0aa912805ead14cd85"
+  },
+  {
+   "count": 1,
+   "value": "7a1d3bc8a56b5dbbaa08baced8b4d86569334d7e"
+  }
+ ]
+}

@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from shodan_count import (CountClient, CountError, RequestBudget, cli_config_dir,
                           load_key, now, read, save, slugify, compatible, facet_meta, country_query)
 from collection_catalog import bind_facts, can_sync_facts, sync_facts
+from management import infrastructure_jobs
 from snapshot_history import write_history
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -69,7 +70,7 @@ def drill_jobs(records, line_limit=0, country_limit=0):
 
 PLAN_DEFAULTS = dict(drill_lines=0, drill_countries=0, org_limit=100, asn_limit=100,
                      skip_drill=False, skip_stickers=False, skip_variants=False,
-                     queries_only=False, refresh_base=False, only=[], query_group=[])
+                     queries_only=False, refresh_base=False, only=[], query_group=[], skip_infrastructure=False)
 
 
 def catalog_jobs(path=None, parents=None):
@@ -124,7 +125,7 @@ def parser():
     ap.add_argument('--interval', type=float, help='minimum seconds between requests (>=1; default 1.1)')
     ap.add_argument('--shodan-config-dir', type=Path)
     ap.add_argument('--max-requests', type=int, help='stop at this number of HTTP attempts; resume later')
-    for flag in ('skip-drill','skip-stickers','skip-variants','queries-only','refresh-base'):
+    for flag in ('skip-drill','skip-stickers','skip-variants','queries-only','refresh-base','skip-infrastructure'):
         ap.add_argument('--'+flag, action='store_true', default=None)
     ap.add_argument('--dry-run', action='store_true', help='no key, network access or writes')
     ap.add_argument('--build', action='store_true')
@@ -148,7 +149,7 @@ def prepare(args):
             raise ValueError('Checkpoint has no saved plan; start a new collection')
         for key in PLAN_DEFAULTS:
             supplied = getattr(args, key)
-            if supplied is not None and supplied != plan['options'][key]:
+            if supplied is not None and supplied != plan['options'].get(key, PLAN_DEFAULTS[key]):
                 raise ValueError(f'--{key.replace("_", "-")} conflicts with the saved plan')
         if args.query_catalog:
             raise ValueError('Resume uses the catalog embedded in its saved plan')
@@ -179,9 +180,12 @@ def prepare(args):
     variants = [] if options['skip_variants'] else catalog_jobs(args.query_catalog, parents)
     facts = fact_plan(jobs, variants) if not options['skip_variants'] and not args.query_catalog else None
     groups = set(options['query_group'])
-    if groups - {v['group'] for v in variants}:
+    if groups - ({v['group'] for v in variants} | {'management-infrastructure'}):
         raise ValueError('Unknown query group')
     variants = [v for v in variants if v['parent'] in selected and (not groups or v['group'] in groups)]
+    infrastructure = (infrastructure_jobs(ROOT) if not options['skip_infrastructure']
+                      and not args.drill_only and not options['only']
+                      and (not groups or 'management-infrastructure' in groups) else [])
     # Include denominator queries even if a future catalog places them in another group.
     chosen = {v['id']:v for v in variants}
     if variants:
@@ -199,7 +203,7 @@ def prepare(args):
     plan = dict(version=1, id=str(uuid.uuid4()), snapshot_time=ts, created_at=now(), source_snapshot=source_ref,
                 mode='drill-only' if args.drill_only else 'queries-only' if options['queries_only'] else 'full',
                 options=options, selected=sorted(selected), base_jobs=jobs, queries=list(chosen.values()),
-                interval=args.interval or 1.1, facts=facts)
+                interval=args.interval or 1.1, facts=facts, infrastructure_queries=infrastructure)
     return out, source, plan, old or {}
 
 
@@ -244,8 +248,9 @@ def collect(args, client_factory=CountClient):
     facets = f'org:{opt["org_limit"]},asn:{opt["asn_limit"]}'
     cached = sum(compatible(read(source/'org-drill'/f'{s}.json'),q,facets) for s,_,_,q in pairs) if source else 0
     query_jobs = plan['queries']
-    def query_cached(base, job):
-        rec = read(base/'variants'/f'{job["id"]}.json') if base else None
+    infra_jobs = plan.get('infrastructure_queries', [])
+    def query_cached(base, job, folder='variants'):
+        rec = read(base/folder/f'{job["id"]}.json') if base else None
         return bool(compatible(rec,job['query'],job['facets']) and rec.get('run_id')==plan['id'])
     if args.dry_run:
         print(json.dumps(dict(output=str(out), source=str(source) if source else None,
@@ -253,6 +258,7 @@ def collect(args, client_factory=CountClient):
             pair_requests=len(pairs)-cached if len(records)==len(plan['base_jobs']) else 'determined after country facets',
             selected_pairs=len(pairs), reusable_pairs=cached,
             variant_requests=sum(not query_cached(source,q) for q in query_jobs),
+            infrastructure_requests=sum(not query_cached(source,q,'infrastructure') for q in infra_jobs),
             fact_observations=sum(map(len, (plan.get('facts') or {}).values())),
             sticker_requests=int(not opt['skip_stickers'] and plan['mode']=='full'),
             requested_facets=facets, interval_seconds=interval, query_credits=0,
@@ -269,7 +275,7 @@ def collect(args, client_factory=CountClient):
                 raise ValueError('Symlinks are not snapshot data')
             if path.is_file():
                 shutil.copy2(path,out/name)
-        for subdir in ('org-drill','variants'):
+        for subdir in ('org-drill','variants','infrastructure'):
             for path in (source/subdir).glob('*.json'):
                 if path.is_symlink():
                     raise ValueError('Symlinks are not snapshot data')
@@ -294,7 +300,8 @@ def collect(args, client_factory=CountClient):
             org_drill=dict(scope='skipped' if opt['skip_drill'] else 'selected' if opt['only'] else 'limited' if opt['drill_lines'] or opt['drill_countries'] else 'all',
                 expected=len(pairs),completed=len(completed),pending=len(pairs)-len(completed),
                 org_limit=opt['org_limit'],asn_limit=opt['asn_limit']),
-            variants=dict(expected=len(query_jobs),completed=done_queries,pending=len(query_jobs)-done_queries))
+            variants=dict(expected=len(query_jobs),completed=done_queries,pending=len(query_jobs)-done_queries),
+            infrastructure=dict(expected=len(infra_jobs),completed=sum(query_cached(out,q,'infrastructure') for q in infra_jobs)))
         if status == 'complete':
             manifest['completed_at'] = now()
         save(out/'manifest.json',manifest)
@@ -347,6 +354,16 @@ def collect(args, client_factory=CountClient):
                 save(out/'variants'/f'{job["id"]}.json',rec)
             checkpoint()
             print(f'Variant: {job["id"]}',flush=True)
+        for job in infra_jobs:
+            if query_cached(out,job,'infrastructure'):continue
+            data=request(job['query'],job['facets'],job['id'])
+            if data is not None:
+                rec=record(data,job['query'],job['facets'])
+                rec.update({k:job[k] for k in ('id','group','label','source','classification')})
+                rec['fingerprints']=data.get('facets',{}).get('ssl.cert.fingerprint',[])
+                save(out/'infrastructure'/f'{job["id"]}.json',rec)
+            checkpoint()
+            print(f'Infrastructure: {job["id"]}',flush=True)
         if not opt['skip_stickers'] and plan['mode']=='full':
             stickers=read(out/'stickers.json') or {}
             q,f='port:7547 ssl','country:250,asn:10'

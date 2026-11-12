@@ -1,0 +1,49 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:TN",
+ "total": 6,
+ "taken": "2026-11-11T18:17:19+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 6,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 6,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as2609"
+  },
+  {
+   "count": 2,
+   "value": "as327934"
+  },
+  {
+   "count": 1,
+   "value": "as31245"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 4,
+   "value": "ATI - Agence Tunisienne Internet"
+  },
+  {
+   "count": 2,
+   "value": "NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom) - SOCIETE NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom)"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "TN"
+}

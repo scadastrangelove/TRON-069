@@ -16,6 +16,7 @@ from index_comparison import read_comparison
 from wanted import read_wanted, render_wanted
 from attribution import read_attributions, render_attributions
 from specimens import read_specimens, render_specimens
+from management import infrastructure_jobs, read_evidence, read_measurements, profile_measurements
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -143,12 +144,16 @@ def read_ecosystem(registry):
     nodes = identifiers(catalog['nodes'])
     identifiers(catalog['edges'])
     for node in catalog['nodes']:
-        if set(node) - {'id', 'kind', 'name', 'description', 'line', 'operator'}:
+        if set(node) - {'id', 'kind', 'name', 'description', 'line', 'operator', 'profile', 'query'}:
             raise ValueError('Unknown ecosystem node fields')
         if node.get('operator') and (node['kind'] != 'operator' or node['operator'] not in operator_ids):
             raise ValueError('Invalid ecosystem operator reference')
-        if node['kind'] not in ('cpe', 'operator', 'acs', 'endpoint'):
+        if node['kind'] not in ('cpe', 'operator', 'acs', 'endpoint', 'artifact', 'profile', 'certificate', 'infrastructure'):
             raise ValueError('Unknown ecosystem node kind')
+        if node.get('profile') and node['profile'] not in {p['id'] for p in read_evidence(ROOT, registry)['profiles']}:
+            raise ValueError('Unknown ecosystem profile')
+        if node.get('query') and node['query'] not in {q['id'] for q in infrastructure_jobs(ROOT)}:
+            raise ValueError('Unknown ecosystem infrastructure query')
         if not localized(node['description']) or not (localized(node['name']) or
                 isinstance(node['name'], str) and node['name'].strip()):
             raise ValueError('Missing ecosystem translation')
@@ -357,7 +362,11 @@ def build_data(snapshot):
         'queryCatalog': read_query_catalog(registry),
         'wanted': read_wanted(ROOT, registry),
         'attributions': read_attributions(ROOT, registry),
+        'management': read_evidence(ROOT, registry),
+        'infrastructureCatalog': infrastructure_jobs(ROOT),
+        'infrastructure': read_measurements(snapshot, manifest),
     }
+    data['profileObservations'] = profile_measurements(data['management'], data['variants'])
     data['specimens'] = read_specimens(ROOT, registry, data['attributions'])
     validate_translations(data)
     validate_news_relations(data['news'], registry, data['operatorCatalog'])
@@ -383,7 +392,7 @@ def read_query_catalog(registry):
             for q in catalog['queries']]
 
 
-SNAPSHOT_FIELDS = ('snapshot', 'park', 'http', 'denominators', 'queryTotals', 'lines', 'orgdrill', 'variants', 'collection', 'stickers', 'facts')
+SNAPSHOT_FIELDS = ('snapshot', 'park', 'http', 'denominators', 'queryTotals', 'lines', 'orgdrill', 'variants', 'collection', 'stickers', 'facts', 'infrastructure', 'profileObservations')
 
 
 def daily_snapshots(archives):

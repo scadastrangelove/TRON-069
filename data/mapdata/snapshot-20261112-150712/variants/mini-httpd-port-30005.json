@@ -1,0 +1,228 @@
+{
+ "dork": "\"mini_httpd\" port:30005",
+ "total": 22,
+ "taken": "2026-11-11T18:34:34+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 16,
+   "covered": 22,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 14,
+   "covered": 22,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 13,
+   "covered": 22,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 22,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 4,
+   "value": "US"
+  },
+  {
+   "count": 2,
+   "value": "IN"
+  },
+  {
+   "count": 2,
+   "value": "JP"
+  },
+  {
+   "count": 2,
+   "value": "KR"
+  },
+  {
+   "count": 1,
+   "value": "AT"
+  },
+  {
+   "count": 1,
+   "value": "AU"
+  },
+  {
+   "count": 1,
+   "value": "BR"
+  },
+  {
+   "count": 1,
+   "value": "CL"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "FR"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  },
+  {
+   "count": 1,
+   "value": "HU"
+  },
+  {
+   "count": 1,
+   "value": "ID"
+  },
+  {
+   "count": 1,
+   "value": "IL"
+  },
+  {
+   "count": 1,
+   "value": "IT"
+  },
+  {
+   "count": 1,
+   "value": "VN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 7,
+   "value": "as63949"
+  },
+  {
+   "count": 4,
+   "value": "as16509"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as22773"
+  },
+  {
+   "count": 1,
+   "value": "as270543"
+  },
+  {
+   "count": 1,
+   "value": "as28099"
+  },
+  {
+   "count": 1,
+   "value": "as45102"
+  },
+  {
+   "count": 1,
+   "value": "as5483"
+  },
+  {
+   "count": 1,
+   "value": "as57169"
+  },
+  {
+   "count": 1,
+   "value": "as61102"
+  },
+  {
+   "count": 1,
+   "value": "as7552"
+  },
+  {
+   "count": 1,
+   "value": "as9009"
+  },
+  {
+   "count": 1,
+   "value": "as9318"
+  }
+ ],
+ "ports": [
+  {
+   "count": 22,
+   "value": 30005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 6,
+   "value": "Linode"
+  },
+  {
+   "count": 4,
+   "value": "EDIS GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Alibaba Cloud (Singapore) Private Limited"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services France"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services India"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Italy"
+  },
+  {
+   "count": 1,
+   "value": "Amazon.com, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Cox Communications Inc."
+  },
+  {
+   "count": 1,
+   "value": "EDIS Infrastructure in Austria"
+  },
+  {
+   "count": 1,
+   "value": "Gwg telco telecomunicaçoes eireli"
+  },
+  {
+   "count": 1,
+   "value": "Linode, LLC"
+  },
+  {
+   "count": 1,
+   "value": "SK Broadband Co Ltd"
+  },
+  {
+   "count": 1,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Viettel Group"
+  }
+ ],
+ "id": "mini-httpd-port-30005",
+ "parent": "mini-httpd",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 30005",
+  "ru": "Все версии · порт 30005",
+  "es": "Todas las versiones · puerto 30005",
+  "zh": "所有版本 · 端口 30005"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "mini-httpd"
+ },
+ "denominator": null
+}

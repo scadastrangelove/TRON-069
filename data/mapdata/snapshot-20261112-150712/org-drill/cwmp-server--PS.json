@@ -1,0 +1,49 @@
+{
+ "dork": "\"Server: cwmp server\" country:PS",
+ "total": 758,
+ "taken": "2026-11-11T18:10:51+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 758,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 758,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 758,
+   "value": "as47253"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 600,
+   "value": "BNET-NETWORK"
+  },
+  {
+   "count": 86,
+   "value": "BCI Telecommunication & Advanced Technology Company"
+  },
+  {
+   "count": 45,
+   "value": "BSA-ADSL Customer - ASR2"
+  },
+  {
+   "count": 27,
+   "value": "ADSL-Static"
+  }
+ ],
+ "line": "cwmp server",
+ "line_id": "cwmp-server",
+ "cc": "PS"
+}

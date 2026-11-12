@@ -1,0 +1,183 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 409 Conflict\"",
+ "total": 19,
+ "taken": "2026-11-11T18:32:48+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 6,
+   "covered": 19,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 12,
+   "covered": 19,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 14,
+   "covered": 19,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 19,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 14,
+   "value": "US"
+  },
+  {
+   "count": 1,
+   "value": "AE"
+  },
+  {
+   "count": 1,
+   "value": "AU"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  },
+  {
+   "count": 1,
+   "value": "IR"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as13977"
+  },
+  {
+   "count": 2,
+   "value": "as6536"
+  },
+  {
+   "count": 1,
+   "value": "as11776"
+  },
+  {
+   "count": 1,
+   "value": "as1221"
+  },
+  {
+   "count": 1,
+   "value": "as13638"
+  },
+  {
+   "count": 1,
+   "value": "as14051"
+  },
+  {
+   "count": 1,
+   "value": "as1423"
+  },
+  {
+   "count": 1,
+   "value": "as15802"
+  },
+  {
+   "count": 1,
+   "value": "as18712"
+  },
+  {
+   "count": 1,
+   "value": "as206067"
+  },
+  {
+   "count": 1,
+   "value": "as22639"
+  },
+  {
+   "count": 1,
+   "value": "as40755"
+  },
+  {
+   "count": 1,
+   "value": "as50810"
+  },
+  {
+   "count": 1,
+   "value": "as6300"
+  }
+ ],
+ "ports": [
+  {
+   "count": 19,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 7,
+   "value": "Fidium"
+  },
+  {
+   "count": 2,
+   "value": "CityNet"
+  },
+  {
+   "count": 1,
+   "value": "Atlantic Broadband"
+  },
+  {
+   "count": 1,
+   "value": "Cooptel Coop de Telecommunication"
+  },
+  {
+   "count": 1,
+   "value": "Emirates Integrated Telecommunications Company PJSC (EITC-DU)"
+  },
+  {
+   "count": 1,
+   "value": "Everfast Fiber Networks LLC"
+  },
+  {
+   "count": 1,
+   "value": "Metalink Technologies, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Mobile Broadband Service"
+  },
+  {
+   "count": 1,
+   "value": "Mobin Net Communication Company (Private Joint Stock)"
+  },
+  {
+   "count": 1,
+   "value": "ProTek Communications, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Rainbow Communications, L.L.C."
+  },
+  {
+   "count": 1,
+   "value": "Telstra Limited"
+  }
+ ],
+ "id": "easycwmp-http409",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "HTTP 409: широкий контрольный запрос",
+  "en": "HTTP 409: broad control query",
+  "es": "HTTP 409: consulta de control amplia",
+  "zh": "HTTP 409：宽泛对照查询"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

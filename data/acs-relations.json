@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-11-01",
+  "reviewed": "2026-11-12",
   "nodes": [
     {
       "id": "easycwmp",
@@ -206,6 +206,285 @@
         "es": "Servidor de autoconfiguración TR-069.",
         "zh": "TR-069 自动配置服务器。"
       }
+    },
+    {
+      "id": "huawei-platform-operators",
+      "kind": "operator",
+      "name": {
+        "en": "Huawei platform operator group (172 profiles)",
+        "ru": "Группа операторов платформы Huawei (172 профиля)",
+        "es": "Grupo de operadores de plataforma Huawei (172 perfiles)",
+        "zh": "华为平台运营商组（172个配置文件）"
+      },
+      "description": {
+        "en": "Customization profiles found inside one firmware image. Profiles are not unique operators (PCCW, PCCW2mac, PCCW4mac and PCCWBRIDGE share one operator). A profile confirms planned configuration, not observed deployment.",
+        "ru": "Профили кастомизации из образа прошивки. Профили ≠ уникальные операторы (PCCW×4 = один). Профиль подтверждает предусмотренную конфигурацию, а не фактическое развёртывание.",
+        "es": "Perfiles de personalización de una imagen de firmware. Los perfiles no son operadores únicos.",
+        "zh": "在一个固件镜像中发现的定制配置文件。配置文件不等于唯一运营商。"
+      }
+    },
+    {
+      "id": "huawei-platform",
+      "kind": "cpe",
+      "name": "HuaweiHomeGateway",
+      "description": {
+        "en": "Huawei response family. Device models and operator profiles require separate evidence.",
+        "ru": "Семейство ответов Huawei. Модели устройств и операторские профили требуют отдельных доказательств.",
+        "es": "Familia de respuestas Huawei. Los modelos y perfiles de operador requieren evidencia propia.",
+        "zh": "Huawei 响应家族。设备型号和运营商配置需单独的证据。"
+      },
+      "line": "huaweihomegateway"
+    },
+    {
+      "id": "huawei-deployment-manifest",
+      "kind": "artifact",
+      "name": {
+        "en": "Huawei firmware profiles",
+        "ru": "Профили прошивки Huawei",
+        "es": "Perfiles de firmware Huawei",
+        "zh": "Huawei 固件配置"
+      },
+      "description": {
+        "en": "172 reported profile identifiers; 38 data-model views. Public image source, version and hash are pending.",
+        "ru": "172 идентификатора профилей; 38 представлений датамодели. Публичные источник образа, версия и хеш ещё не закреплены.",
+        "es": "172 identificadores de perfil y 38 vistas del modelo de datos. Faltan fuente pública, versión y hash de la imagen.",
+        "zh": "报告了 172 个配置标识及 38 个数据模型视图。公开固件来源、版本和哈希仍待补充。"
+      }
+    },
+    {
+      "id": "huawei-profile-at",
+      "kind": "profile",
+      "name": "at · :30005",
+      "description": {
+        "en": "Reported configuration for AT; operator hint: Austria · operator unresolved. Identity unverified.",
+        "ru": "Конфигурация для AT по разбору; операторская подсказка: Austria · operator unresolved. Идентичность не подтверждена.",
+        "es": "Configuración reportada para AT; indicio de operador: Austria · operator unresolved. Identidad sin verificar.",
+        "zh": "报告的 AT 配置；运营商线索：Austria · operator unresolved。身份尚未验证。"
+      },
+      "profile": "huawei-profile-at"
+    },
+    {
+      "id": "huawei-profile-edatel",
+      "kind": "profile",
+      "name": "edatel · :8085",
+      "description": {
+        "en": "Reported configuration for CO; operator hint: Edatel. Identity unverified.",
+        "ru": "Конфигурация для CO по разбору; операторская подсказка: Edatel. Идентичность не подтверждена.",
+        "es": "Configuración reportada para CO; indicio de operador: Edatel. Identidad sin verificar.",
+        "zh": "报告的 CO 配置；运营商线索：Edatel。身份尚未验证。"
+      },
+      "profile": "huawei-profile-edatel"
+    },
+    {
+      "id": "profile-hint-edatel",
+      "kind": "operator",
+      "name": "Edatel",
+      "description": {
+        "en": "Operator identity suggested by a profile name; public attribution pending.",
+        "ru": "Операторская подсказка по имени профиля; публичная атрибуция ожидает проверки.",
+        "es": "Operador sugerido por el nombre del perfil; atribución pública pendiente.",
+        "zh": "配置名称提示的运营商；公开归属仍待核验。"
+      }
+    },
+    {
+      "id": "huawei-profile-une",
+      "kind": "profile",
+      "name": "une · :8085",
+      "description": {
+        "en": "Reported configuration for CO; operator hint: UNE. Identity unverified.",
+        "ru": "Конфигурация для CO по разбору; операторская подсказка: UNE. Идентичность не подтверждена.",
+        "es": "Configuración reportada para CO; indicio de operador: UNE. Identidad sin verificar.",
+        "zh": "报告的 CO 配置；运营商线索：UNE。身份尚未验证。"
+      },
+      "profile": "huawei-profile-une"
+    },
+    {
+      "id": "profile-hint-une",
+      "kind": "operator",
+      "name": "UNE",
+      "description": {
+        "en": "Operator identity suggested by a profile name; public attribution pending.",
+        "ru": "Операторская подсказка по имени профиля; публичная атрибуция ожидает проверки.",
+        "es": "Operador sugerido por el nombre del perfil; atribución pública pendiente.",
+        "zh": "配置名称提示的运营商；公开归属仍待核验。"
+      }
+    },
+    {
+      "id": "huawei-profile-oi2",
+      "kind": "profile",
+      "name": "oi2 · :51005",
+      "description": {
+        "en": "Reported configuration for BR; operator hint: Oi. Identity unverified.",
+        "ru": "Конфигурация для BR по разбору; операторская подсказка: Oi. Идентичность не подтверждена.",
+        "es": "Configuración reportada para BR; indicio de operador: Oi. Identidad sin verificar.",
+        "zh": "报告的 BR 配置；运营商线索：Oi。身份尚未验证。"
+      },
+      "profile": "huawei-profile-oi2"
+    },
+    {
+      "id": "profile-hint-oi",
+      "kind": "operator",
+      "name": "Oi",
+      "description": {
+        "en": "Operator identity suggested by a profile name; public attribution pending.",
+        "ru": "Операторская подсказка по имени профиля; публичная атрибуция ожидает проверки.",
+        "es": "Operador sugerido por el nombre del perfil; atribución pública pendiente.",
+        "zh": "配置名称提示的运营商；公开归属仍待核验。"
+      }
+    },
+    {
+      "id": "huawei-profile-teliaest",
+      "kind": "profile",
+      "name": "teliaest · :51005",
+      "description": {
+        "en": "Reported configuration for EE; operator hint: Telia Estonia. Identity unverified.",
+        "ru": "Конфигурация для EE по разбору; операторская подсказка: Telia Estonia. Идентичность не подтверждена.",
+        "es": "Configuración reportada para EE; indicio de operador: Telia Estonia. Identidad sin verificar.",
+        "zh": "报告的 EE 配置；运营商线索：Telia Estonia。身份尚未验证。"
+      },
+      "profile": "huawei-profile-teliaest"
+    },
+    {
+      "id": "profile-hint-telia-estonia",
+      "kind": "operator",
+      "name": "Telia Estonia",
+      "description": {
+        "en": "Operator identity suggested by a profile name; public attribution pending.",
+        "ru": "Операторская подсказка по имени профиля; публичная атрибуция ожидает проверки.",
+        "es": "Operador sugerido por el nombre del perfil; atribución pública pendiente.",
+        "zh": "配置名称提示的运营商；公开归属仍待核验。"
+      }
+    },
+    {
+      "id": "huawei-profile-true",
+      "kind": "profile",
+      "name": "true · :9090",
+      "description": {
+        "en": "Reported configuration for TH; operator hint: True. Identity unverified.",
+        "ru": "Конфигурация для TH по разбору; операторская подсказка: True. Идентичность не подтверждена.",
+        "es": "Configuración reportada para TH; indicio de operador: True. Identidad sin verificar.",
+        "zh": "报告的 TH 配置；运营商线索：True。身份尚未验证。"
+      },
+      "profile": "huawei-profile-true"
+    },
+    {
+      "id": "profile-hint-true",
+      "kind": "operator",
+      "name": "True",
+      "description": {
+        "en": "Operator identity suggested by a profile name; public attribution pending.",
+        "ru": "Операторская подсказка по имени профиля; публичная атрибуция ожидает проверки.",
+        "es": "Operador sugerido por el nombre del perfil; atribución pública pendiente.",
+        "zh": "配置名称提示的运营商；公开归属仍待核验。"
+      }
+    },
+    {
+      "id": "huawei-profile-truerg",
+      "kind": "profile",
+      "name": "truerg · :9090",
+      "description": {
+        "en": "Reported configuration for TH; operator hint: True. Identity unverified.",
+        "ru": "Конфигурация для TH по разбору; операторская подсказка: True. Идентичность не подтверждена.",
+        "es": "Configuración reportada para TH; indicio de operador: True. Identidad sin verificar.",
+        "zh": "报告的 TH 配置；运营商线索：True。身份尚未验证。"
+      },
+      "profile": "huawei-profile-truerg"
+    },
+    {
+      "id": "huawei-profile-mongolia",
+      "kind": "profile",
+      "name": "mongolia · :10301",
+      "description": {
+        "en": "Reported configuration for MN; operator hint: Mongolia · operator unresolved. Identity unverified.",
+        "ru": "Конфигурация для MN по разбору; операторская подсказка: Mongolia · operator unresolved. Идентичность не подтверждена.",
+        "es": "Configuración reportada para MN; indicio de operador: Mongolia · operator unresolved. Identidad sin verificar.",
+        "zh": "报告的 MN 配置；运营商线索：Mongolia · operator unresolved。身份尚未验证。"
+      },
+      "profile": "huawei-profile-mongolia"
+    },
+    {
+      "id": "tls-cwmp-cn",
+      "kind": "certificate",
+      "name": {
+        "en": "CWMP certificate names",
+        "ru": "CWMP в именах сертификатов",
+        "es": "Nombres de certificado CWMP",
+        "zh": "证书名称中的 CWMP"
+      },
+      "description": {
+        "en": "A certificate-field discovery query. Counts and facets are dated separately for each snapshot.",
+        "ru": "Поисковый признак в сертификате. Счётчики и фасеты сохраняются с датой в каждом срезе.",
+        "es": "Consulta sobre campos del certificado. Cada instantánea conserva sus recuentos y facetas con fecha.",
+        "zh": "证书字段发现查询。每个快照单独保留带日期的计数及分面。"
+      },
+      "query": "tls-cwmp-cn"
+    },
+    {
+      "id": "tls-telefonica-issuer",
+      "kind": "certificate",
+      "name": {
+        "en": "Telefónica issuer names",
+        "ru": "Имена issuer Telefónica",
+        "es": "Nombres de emisor Telefónica",
+        "zh": "Telefónica 颁发者名称"
+      },
+      "description": {
+        "en": "A certificate-field discovery query. Counts and facets are dated separately for each snapshot.",
+        "ru": "Поисковый признак в сертификате. Счётчики и фасеты сохраняются с датой в каждом срезе.",
+        "es": "Consulta sobre campos del certificado. Cada instantánea conserva sus recuentos y facetas con fecha.",
+        "zh": "证书字段发现查询。每个快照单独保留带日期的计数及分面。"
+      },
+      "query": "tls-telefonica-issuer"
+    },
+    {
+      "id": "tls-telefonica-subordinate",
+      "kind": "certificate",
+      "name": {
+        "en": "Telefónica subordinate issuer",
+        "ru": "Промежуточный issuer Telefónica",
+        "es": "Emisor subordinado Telefónica",
+        "zh": "Telefónica 中间颁发者"
+      },
+      "description": {
+        "en": "A certificate-field discovery query. Counts and facets are dated separately for each snapshot.",
+        "ru": "Поисковый признак в сертификате. Счётчики и фасеты сохраняются с датой в каждом срезе.",
+        "es": "Consulta sobre campos del certificado. Cada instantánea conserva sus recuentos y facetas con fecha.",
+        "zh": "证书字段发现查询。每个快照单独保留带日期的计数及分面。"
+      },
+      "query": "tls-telefonica-subordinate"
+    },
+    {
+      "id": "tls-provisioning-cn",
+      "kind": "certificate",
+      "name": {
+        "en": "Provisioning certificate names",
+        "ru": "Provisioning в именах сертификатов",
+        "es": "Nombres de certificado provisioning",
+        "zh": "证书名称中的 provisioning"
+      },
+      "description": {
+        "en": "A certificate-field discovery query. Counts and facets are dated separately for each snapshot.",
+        "ru": "Поисковый признак в сертификате. Счётчики и фасеты сохраняются с датой в каждом срезе.",
+        "es": "Consulta sobre campos del certificado. Cada instantánea conserva sus recuentos y facetas con fecha.",
+        "zh": "证书字段发现查询。每个快照单独保留带日期的计数及分面。"
+      },
+      "query": "tls-provisioning-cn"
+    },
+    {
+      "id": "tls-management-candidates",
+      "kind": "infrastructure",
+      "name": {
+        "en": "Management service candidates",
+        "ru": "Кандидаты сервисов управления",
+        "es": "Candidatos a servicios de gestión",
+        "zh": "管理服务候选"
+      },
+      "description": {
+        "en": "Service role, production status and certificate chains remain to be verified.",
+        "ru": "Роль сервиса, статус production и цепочки сертификатов ещё нужно проверить.",
+        "es": "Falta verificar el rol del servicio, su uso en producción y las cadenas de certificados.",
+        "zh": "服务角色、生产状态及证书链仍需验证。"
+      }
     }
   ],
   "edges": [
@@ -408,6 +687,386 @@
         {
           "url": "https://avsystem.com/news/imagine-deploys-avsystems-unified-management-platform-across-its-fibre-and-5g-network",
           "title": "AVSystem · Imagine deployment · 2026-10-23"
+        }
+      ]
+    },
+    {
+      "id": "huawei-platform-artifact",
+      "source": "huawei-platform",
+      "target": "huawei-deployment-manifest",
+      "kind": "attribution",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Configuration evidence reported for the HG8145V5 platform. EG8145V5 needs a separately verified artifact.",
+        "ru": "Конфигурационные свидетельства для платформы HG8145V5. Для EG8145V5 нужен отдельно проверенный образ.",
+        "es": "Evidencia de configuración de la plataforma HG8145V5. EG8145V5 requiere un archivo verificado por separado.",
+        "zh": "HG8145V5 平台的配置证据。EG8145V5 需要独立核验的样本。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-at-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-at",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile at configures CR port 30005.",
+        "ru": "Профиль at задаёт CR-порт 30005.",
+        "es": "El perfil at configura el puerto CR 30005.",
+        "zh": "配置 at 设置 CR 端口 30005。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-edatel-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-edatel",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile edatel configures CR port 8085.",
+        "ru": "Профиль edatel задаёт CR-порт 8085.",
+        "es": "El perfil edatel configura el puerto CR 8085.",
+        "zh": "配置 edatel 设置 CR 端口 8085。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-edatel-operator",
+      "source": "huawei-profile-edatel",
+      "target": "profile-hint-edatel",
+      "kind": "operator",
+      "status": "hypothesis",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Name-based operator hypothesis. Shodan organization labels are shown separately.",
+        "ru": "Гипотеза об операторе по имени. Метки организаций Shodan показаны отдельно.",
+        "es": "Hipótesis de operador basada en el nombre. Las organizaciones de Shodan se muestran por separado.",
+        "zh": "基于名称的运营商假设。Shodan 组织标签单独展示。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-une-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-une",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile une configures CR port 8085.",
+        "ru": "Профиль une задаёт CR-порт 8085.",
+        "es": "El perfil une configura el puerto CR 8085.",
+        "zh": "配置 une 设置 CR 端口 8085。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-une-operator",
+      "source": "huawei-profile-une",
+      "target": "profile-hint-une",
+      "kind": "operator",
+      "status": "hypothesis",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Name-based operator hypothesis. Shodan organization labels are shown separately.",
+        "ru": "Гипотеза об операторе по имени. Метки организаций Shodan показаны отдельно.",
+        "es": "Hipótesis de operador basada en el nombre. Las organizaciones de Shodan se muestran por separado.",
+        "zh": "基于名称的运营商假设。Shodan 组织标签单独展示。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-oi2-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-oi2",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile oi2 configures CR port 51005.",
+        "ru": "Профиль oi2 задаёт CR-порт 51005.",
+        "es": "El perfil oi2 configura el puerto CR 51005.",
+        "zh": "配置 oi2 设置 CR 端口 51005。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-oi2-operator",
+      "source": "huawei-profile-oi2",
+      "target": "profile-hint-oi",
+      "kind": "operator",
+      "status": "hypothesis",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Name-based operator hypothesis. Shodan organization labels are shown separately.",
+        "ru": "Гипотеза об операторе по имени. Метки организаций Shodan показаны отдельно.",
+        "es": "Hipótesis de operador basada en el nombre. Las organizaciones de Shodan se muestran por separado.",
+        "zh": "基于名称的运营商假设。Shodan 组织标签单独展示。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-teliaest-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-teliaest",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile teliaest configures CR port 51005.",
+        "ru": "Профиль teliaest задаёт CR-порт 51005.",
+        "es": "El perfil teliaest configura el puerto CR 51005.",
+        "zh": "配置 teliaest 设置 CR 端口 51005。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-teliaest-operator",
+      "source": "huawei-profile-teliaest",
+      "target": "profile-hint-telia-estonia",
+      "kind": "operator",
+      "status": "hypothesis",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Name-based operator hypothesis. Shodan organization labels are shown separately.",
+        "ru": "Гипотеза об операторе по имени. Метки организаций Shodan показаны отдельно.",
+        "es": "Hipótesis de operador basada en el nombre. Las organizaciones de Shodan se muestran por separado.",
+        "zh": "基于名称的运营商假设。Shodan 组织标签单独展示。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-true-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-true",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile true configures CR port 9090.",
+        "ru": "Профиль true задаёт CR-порт 9090.",
+        "es": "El perfil true configura el puerto CR 9090.",
+        "zh": "配置 true 设置 CR 端口 9090。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-true-operator",
+      "source": "huawei-profile-true",
+      "target": "profile-hint-true",
+      "kind": "operator",
+      "status": "hypothesis",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Name-based operator hypothesis. Shodan organization labels are shown separately.",
+        "ru": "Гипотеза об операторе по имени. Метки организаций Shodan показаны отдельно.",
+        "es": "Hipótesis de operador basada en el nombre. Las organizaciones de Shodan se muestran por separado.",
+        "zh": "基于名称的运营商假设。Shodan 组织标签单独展示。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-truerg-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-truerg",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile truerg configures CR port 9090.",
+        "ru": "Профиль truerg задаёт CR-порт 9090.",
+        "es": "El perfil truerg configura el puerto CR 9090.",
+        "zh": "配置 truerg 设置 CR 端口 9090。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-truerg-operator",
+      "source": "huawei-profile-truerg",
+      "target": "profile-hint-true",
+      "kind": "operator",
+      "status": "hypothesis",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Name-based operator hypothesis. Shodan organization labels are shown separately.",
+        "ru": "Гипотеза об операторе по имени. Метки организаций Shodan показаны отдельно.",
+        "es": "Hipótesis de operador basada en el nombre. Las organizaciones de Shodan se muestran por separado.",
+        "zh": "基于名称的运营商假设。Shodan 组织标签单独展示。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "huawei-profile-mongolia-config",
+      "source": "huawei-deployment-manifest",
+      "target": "huawei-profile-mongolia",
+      "kind": "configuration",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Profile mongolia configures CR port 10301.",
+        "ru": "Профиль mongolia задаёт CR-порт 10301.",
+        "es": "El perfil mongolia configura el puerto CR 10301.",
+        "zh": "配置 mongolia 设置 CR 端口 10301。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "tls-cwmp-cn-discovery",
+      "source": "tls-cwmp-cn",
+      "target": "tls-management-candidates",
+      "kind": "attribution",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Discovery evidence from certificate names. Query groups overlap and do not identify unique ACS instances.",
+        "ru": "Поисковые признаки из имён сертификатов. Выборки пересекаются и не устанавливают число уникальных ACS.",
+        "es": "Indicios en nombres de certificados. Las consultas se solapan y no identifican instancias ACS únicas.",
+        "zh": "来自证书名称的发现线索。查询结果重叠，无法确定唯一 ACS 实例数量。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "tls-telefonica-issuer-discovery",
+      "source": "tls-telefonica-issuer",
+      "target": "tls-management-candidates",
+      "kind": "attribution",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Discovery evidence from certificate names. Query groups overlap and do not identify unique ACS instances.",
+        "ru": "Поисковые признаки из имён сертификатов. Выборки пересекаются и не устанавливают число уникальных ACS.",
+        "es": "Indicios en nombres de certificados. Las consultas se solapan y no identifican instancias ACS únicas.",
+        "zh": "来自证书名称的发现线索。查询结果重叠，无法确定唯一 ACS 实例数量。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "tls-telefonica-subordinate-discovery",
+      "source": "tls-telefonica-subordinate",
+      "target": "tls-management-candidates",
+      "kind": "attribution",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Discovery evidence from certificate names. Query groups overlap and do not identify unique ACS instances.",
+        "ru": "Поисковые признаки из имён сертификатов. Выборки пересекаются и не устанавливают число уникальных ACS.",
+        "es": "Indicios en nombres de certificados. Las consultas se solapan y no identifican instancias ACS únicas.",
+        "zh": "来自证书名称的发现线索。查询结果重叠，无法确定唯一 ACS 实例数量。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
+        }
+      ]
+    },
+    {
+      "id": "tls-provisioning-cn-discovery",
+      "source": "tls-provisioning-cn",
+      "target": "tls-management-candidates",
+      "kind": "attribution",
+      "status": "reported",
+      "observed": "2026-11-12",
+      "reviewed": "2026-11-12",
+      "summary": {
+        "en": "Discovery evidence from certificate names. Query groups overlap and do not identify unique ACS instances.",
+        "ru": "Поисковые признаки из имён сертификатов. Выборки пересекаются и не устанавливают число уникальных ACS.",
+        "es": "Indicios en nombres de certificados. Las consultas se solapan y no identifican instancias ACS únicas.",
+        "zh": "来自证书名称的发现线索。查询结果重叠，无法确定唯一 ACS 实例数量。"
+      },
+      "sources": [
+        {
+          "file": "MANAGEMENT-INFRASTRUCTURE.md"
         }
       ]
     }

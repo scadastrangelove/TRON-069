@@ -1,0 +1,118 @@
+{
+ "schema_version": 1,
+ "reviewed": "2026-11-12",
+ "platform": {
+  "id": "huawei-deployment-manifest",
+  "name": "Huawei HG8145V5 platform",
+  "line": "huaweihomegateway",
+  "profile_count": 172,
+  "data_model_count": 38,
+  "source": {
+   "file": "MANAGEMENT-INFRASTRUCTURE.md"
+  },
+  "gaps": [
+   "artifact-source",
+   "artifact-version",
+   "artifact-hash",
+   "profile-deduplication"
+  ]
+ },
+ "profiles": [
+  {
+   "id": "huawei-profile-at",
+   "profile": "at",
+   "country": "AT",
+   "port": 30005,
+   "operator_hint": "Austria · operator unresolved",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-30005-at",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "huawei-profile-edatel",
+   "profile": "edatel",
+   "country": "CO",
+   "port": 8085,
+   "operator_hint": "Edatel",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-8085-co",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "huawei-profile-une",
+   "profile": "une",
+   "country": "CO",
+   "port": 8085,
+   "operator_hint": "UNE",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-8085-co",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "huawei-profile-oi2",
+   "profile": "oi2",
+   "country": "BR",
+   "port": 51005,
+   "operator_hint": "Oi",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-51005-br",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "huawei-profile-teliaest",
+   "profile": "teliaest",
+   "country": "EE",
+   "port": 51005,
+   "operator_hint": "Telia Estonia",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-51005-ee",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "huawei-profile-true",
+   "profile": "true",
+   "country": "TH",
+   "port": 9090,
+   "operator_hint": "True",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-9090-th",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "huawei-profile-truerg",
+   "profile": "truerg",
+   "country": "TH",
+   "port": 9090,
+   "operator_hint": "True",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-9090-th",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "huawei-profile-mongolia",
+   "profile": "mongolia",
+   "country": "MN",
+   "port": 10301,
+   "operator_hint": "Mongolia · operator unresolved",
+   "operator_status": "unverified",
+   "query_id": "huawei-port-10301-mn",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  }
+ ]
+}

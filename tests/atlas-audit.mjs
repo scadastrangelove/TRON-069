@@ -32,14 +32,18 @@ function test(id, description, work) {
 }
 function expect(ok, evidence) { if (!ok) throw new Error(evidence); return evidence; }
 function section(start, end) { return source.slice(source.indexOf(start), source.indexOf(end)); }
+const functionSourceLines = source.split('\n'), functionSources = new Map();
 function fn(name) {
-  const lines = source.split('\n');
+  if(functionSources.has(name))return functionSources.get(name);
+  const lines = functionSourceLines;
   const start = lines.findIndex(l => l.startsWith(`function ${name}(`));
   if (start < 0) throw new Error(`Missing function: ${name}`);
   if (lines[start].endsWith('}')) return lines[start];
   const end = lines.findIndex((l, i) => i > start && /^}\s*;?\s*$/.test(l));
   if (end < 0) throw new Error(`Missing function end: ${name}`);
-  return lines.slice(start, end + 1).join('\n');
+  const body=lines.slice(start, end + 1).join('\n');
+  functionSources.set(name,body);
+  return body;
 }
 function context({ hash = '', storageBlocked = false, storedLanguage = null, payload = data } = {}) {
   const elements = new Map();
@@ -83,6 +87,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
     ...['selectRole','queryTypeLabel','queryBadges','facetBtnState','renderChips','renderMode','lineGeoTotals','renderLinesTable','card','badgeHtml','serviceBadge','variantHtml',
       'buildDeploymentIndex','dEntity','dAggregate','dFiltered','dCellState','dEvidence','dDetail','dNodeKeys','dNodeInfo','dTouches','dGraphRows','dBuildGraph','dForceLayout','dFlowLayout','dNodeDetail','dNodeBox','dNodePort','dConnection','dPaintConnections','dGraph','dFitGraph','dPaintCamera','dExpandNode','dMatrix','renderDeployments',
       'sourcesHtml','measurementQualityHtml','specimenCardHtml','specimenEvidenceHtml','renderSpecimens','attributionEvidenceHtml','ecoLineLink','ecoText','ecoName','ecoFiltered','ecoLayout','ecoSources','ecoRenderDetail','renderEcosystem',
+      'infrastructureQuery','infrastructureRecord','infrastructureCountry','managementSources','managementProfilesHtml','managementGapsHtml','managementEvidenceHtml','managementFacetsHtml','infrastructureDetailHtml','renderInfrastructureInspector','renderManagement',
       'renderInspector','toggleInsp','computeShortcuts','kkBuild','showToast','exportCSV','exportJSON','svgXY',
       'coverageNote','unknownCountryTotal','renderRegistry','renderComparison','renderFindings','renderAbout','renderOverview','renderLegend',
       'newsText','newsImportant','newsDate','newsSelection','newsRelations','relatedNewsItems','newsHref','renderRelatedNews','renderNewsTicker','renderNews','newsStep','shouldRotateNews','focusNews','openNewsItem','renderWanted','renderTabVisibility'].map(fn),
@@ -91,7 +96,7 @@ function context({ hash = '', storageBlocked = false, storedLanguage = null, pay
   ];
   // Each isolated VM indexes the full snapshot. Keep setup separate from the
   // three-second function-call bound, including on busy development machines.
-  vm.runInContext(chunks.join('\n'), sandbox, { timeout: 10000 });
+  vm.runInContext(chunks.join('\n'), sandbox, { timeout: 30000 });
   return { run: code => vm.runInContext(code, sandbox, { timeout: 3000 }), sandbox, element };
 }
 
@@ -810,6 +815,35 @@ test('wanted-navigation', 'Wanted tab and map filters survive snapshot changes; 
   c.run('S.tab="map";renderTabVisibility()');
   expect(c.element('#tab-wanted').hidden&&!c.element('#tab-map').hidden&&!c.element('#facetsRow').hidden,'Map visibility not restored');
   return 'Wanted deep link, snapshot navigation and return to map';
+});
+test('management-tls-snapshot-scope', 'TLS state survives navigation and old dates stay uncollected', () => {
+  const c=context({hash:'#lang=ru&mode=infrastructure&infra_query=tls-telefonica-issuer&lines=huaweihomegateway&geo=c:ES'});
+  c.run('urlRead();urlWrite();renderInfrastructureInspector()');
+  expect(c.sandbox.location.hash.includes('infra_query=tls-telefonica-issuer'),'TLS query lost');
+  expect(c.run('S.lines.has("huaweihomegateway")'),'Fleet filter lost');
+  expect(c.run('infrastructureRecord().total')===data.infrastructure['tls-telefonica-issuer'].total,'Wrong query result');
+  const old=structuredClone(data);old.infrastructure={};old.profileObservations={};
+  const previous=context({payload:old});
+  previous.run('S.mode="infrastructure";renderInfrastructureInspector()');
+  expect(previous.element('#inspector').innerHTML.includes('Not collected in this snapshot'),'Historical missing data became zero or current data');
+  return 'Separate query state, retained fleet filters, explicit historical absence';
+});
+test('management-locales-and-profile-scope', 'Profiles retain their joint scope and have four complete locales', () => {
+  const c=context();
+  for(const lang of ['en','ru','es','zh']){
+    c.run(`LANG="${lang}";S.mode="infrastructure";renderInfrastructureInspector()`);
+    expect(!/mgmt_[a-z_-]+/.test(c.element('#inspector').innerHTML),'Raw management translation key');
+    const profile=c.run('managementProfilesHtml("huawei-profile-oi2")');
+    expect(profile.includes('oi2')&&profile.includes(':51005'),'Wrong profile');
+    expect(!profile.includes('edatel'),'Unrelated profile leaked into selected card');
+  }
+  c.run('DATA.infrastructure["tls-cwmp-cn"].orgs=[{value:"<img src=x>",count:1}]');
+  expect(!c.run('infrastructureDetailHtml("tls-cwmp-cn")').includes('<img'),'Unescaped organization label');
+  expect(c.run('SNAPSHOT_FIELDS.includes("infrastructure")&&SNAPSHOT_FIELDS.includes("profileObservations")'),'Measurement fields not versioned');
+  expect(c.run('!SNAPSHOT_FIELDS.includes("management")'),'Editorial catalog incorrectly frozen');
+  expect(c.run('ENODES["tls-management-candidates"].kind==="infrastructure"'),'TLS candidates presented as configured endpoints');
+  expect(c.run('E.focus="huawei-deployment-manifest";E.depth=1;const positions=ecoLayout(ecoFiltered()).positions;positions.get("huawei-platform").x<positions.get("huawei-deployment-manifest").x&&positions.get("huawei-deployment-manifest").x<positions.get("huawei-profile-oi2").x'),'Firmware evidence chain lost its layout');
+  return 'Four locales, scoped profiles, escaped labels and dated measurements';
 });
 const exportedContext=context();
 exportedContext.run('S.lines.add("igdauthentication");S.geo.add("c:US");S.orgs.add("Blue Stream");refreshTest();exportJSON();');

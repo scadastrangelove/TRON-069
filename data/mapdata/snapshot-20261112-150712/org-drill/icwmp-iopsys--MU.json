@@ -1,0 +1,41 @@
+{
+ "dork": "\"authenticate@cwmp\" country:MU",
+ "total": 77,
+ "taken": "2026-11-11T17:28:04+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 77,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 77,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 77,
+   "value": "as23889"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 49,
+   "value": "Mauritius Telecom Ltd"
+  },
+  {
+   "count": 28,
+   "value": "MauritiusTelecom"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "MU"
+}

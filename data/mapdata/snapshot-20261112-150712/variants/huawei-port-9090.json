@@ -1,0 +1,135 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:9090",
+ "total": 16,
+ "taken": "2026-11-12T15:07:33+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 5,
+   "covered": 16,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 9,
+   "covered": 16,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 16,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 16,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 9,
+   "value": "TH"
+  },
+  {
+   "count": 4,
+   "value": "IN"
+  },
+  {
+   "count": 1,
+   "value": "IE"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "MY"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as4618"
+  },
+  {
+   "count": 4,
+   "value": "as7470"
+  },
+  {
+   "count": 4,
+   "value": "as9829"
+  },
+  {
+   "count": 1,
+   "value": "as16509"
+  },
+  {
+   "count": 1,
+   "value": "as8151"
+  },
+  {
+   "count": 1,
+   "value": "as9930"
+  }
+ ],
+ "ports": [
+  {
+   "count": 16,
+   "value": 9090
+  }
+ ],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Broadband Multiplay Project, O/o DGM BB, NOC BSNL Bangalore"
+  },
+  {
+   "count": 3,
+   "value": "INEXT Broadband Company Limited"
+  },
+  {
+   "count": 3,
+   "value": "TRUE INTERNET CORPORATION CO. LTD."
+  },
+  {
+   "count": 2,
+   "value": "Internet Thailand Company Limited"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 1,
+   "value": "Fix ip for coporate customer"
+  },
+  {
+   "count": 1,
+   "value": "Mahanagar Telephone Nigam Limited"
+  },
+  {
+   "count": 1,
+   "value": "TT DOTCOM SDN BHD"
+  },
+  {
+   "count": 1,
+   "value": "Uninet S.A. de C.V."
+  }
+ ],
+ "id": "huawei-port-9090",
+ "parent": "huaweihomegateway",
+ "group": "huawei-deployment",
+ "label": {
+  "en": "CR port 9090",
+  "ru": "CR-порт 9090",
+  "es": "Puerto CR 9090",
+  "zh": "CR 端口 9090"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "denominator": null
+}

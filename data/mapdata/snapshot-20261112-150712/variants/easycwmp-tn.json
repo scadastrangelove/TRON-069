@@ -1,0 +1,83 @@
+{
+ "dork": "\"realm@easycwmp\" country:TN",
+ "total": 16239,
+ "taken": "2026-11-11T18:32:50+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 16239,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 4,
+   "covered": 16239,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 16239,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 16239,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 16239,
+   "value": "TN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 16232,
+   "value": "as37492"
+  },
+  {
+   "count": 7,
+   "value": "as327934"
+  }
+ ],
+ "ports": [
+  {
+   "count": 16239,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 9314,
+   "value": "Orange Tunisie - Orange Tunisie"
+  },
+  {
+   "count": 6670,
+   "value": "ATI - Agence Tunisienne Internet"
+  },
+  {
+   "count": 248,
+   "value": "ORANGE-"
+  },
+  {
+   "count": 7,
+   "value": "NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom) - SOCIETE NATIONALE DES TELECOMMUNICATIONS (Tunisie Telecom)"
+  }
+ ],
+ "id": "easycwmp-tn",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "Тунис",
+  "en": "Tunisia",
+  "es": "Túnez",
+  "zh": "突尼斯"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

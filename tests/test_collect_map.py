@@ -104,11 +104,29 @@ class CollectionTests(unittest.TestCase):
         self.client=FakeClient
         self.job_patch=patch.object(m,'base_jobs',return_value=self.jobs);self.job_patch.start()
         self.catalog_patch=patch.object(m,'catalog_jobs',return_value=[]);self.catalog_patch.start()
+        self.infrastructure_patch=patch.object(m,'infrastructure_jobs',return_value=[]);self.infrastructure_patch.start()
         self.facts_patch=patch.object(m,'fact_plan',return_value={});self.facts_patch.start()
         self.env_patch=patch.dict(os.environ,{'SHODAN_API_KEY':'fake-key'});self.env_patch.start()
 
     def tearDown(self):
-        self.env_patch.stop();self.job_patch.stop();self.catalog_patch.stop();self.facts_patch.stop();self.temp.cleanup()
+        self.env_patch.stop();self.job_patch.stop();self.catalog_patch.stop();self.infrastructure_patch.stop();self.facts_patch.stop();self.temp.cleanup()
+
+    def test_infrastructure_resume_freezes_queries_and_preserves_base(self):
+        target=self.out.parent/'tls'
+        jobs=[dict(id=f'tls-{i}',group='management-infrastructure',query=f'ssl.cert.subject.CN:query{i}',
+                   facets='country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100',
+                   label={k:'Query' for k in ('en','ru','es','zh')},source={'file':'NOTES.md'},classification='acs-candidate') for i in range(2)]
+        before=(self.out/'line.json').read_bytes()
+        with patch.object(m,'infrastructure_jobs',return_value=jobs):
+            self.assertEqual(self.run_collect('--from-snapshot',str(self.out),'--queries-only','--output-dir',str(target),'--max-requests','1'),3)
+        with patch.object(m,'infrastructure_jobs',side_effect=AssertionError('resume reread catalog')):
+            self.assertEqual(self.run_collect('--resume',str(target)),0)
+        manifest=m.read(target/'manifest.json')
+        self.assertEqual(manifest['infrastructure']['completed'],2)
+        self.assertEqual(manifest['plan']['infrastructure_queries'],jobs)
+        self.assertEqual((target/'line.json').read_bytes(),before)
+        self.assertEqual(len(self.calls),2)
+        self.assertEqual(m.read(target/'infrastructure/tls-1.json')['fingerprints'],[])
 
     def run_collect(self,*flags):
         args=m.parser().parse_args(list(flags))

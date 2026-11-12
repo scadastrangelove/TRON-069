@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 opaque \"gSOAP Service\" country:ES",
+ "total": 58,
+ "taken": "2026-11-11T18:26:14+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 58,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 58,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 58,
+   "value": "as3352"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 56,
+   "value": "Red de Servicios IP"
+  },
+  {
+   "count": 2,
+   "value": "TELEFONICA DE ESPANA S.A.U."
+  }
+ ],
+ "line": "gSOAP Service realm",
+ "line_id": "gsoap-service-realm",
+ "cc": "ES"
+}

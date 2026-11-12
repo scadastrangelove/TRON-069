@@ -1,0 +1,79 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8085",
+ "total": 3,
+ "taken": "2026-11-12T15:07:32+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 3,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 3,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "US"
+  }
+ ],
+ "asn": [
+  {
+   "count": 2,
+   "value": "as8151"
+  },
+  {
+   "count": 1,
+   "value": "as14618"
+  }
+ ],
+ "ports": [
+  {
+   "count": 3,
+   "value": 8085
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "Uninet S.A. de C.V."
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Northern Virginia"
+  }
+ ],
+ "id": "huawei-port-8085",
+ "parent": "huaweihomegateway",
+ "group": "huawei-deployment",
+ "label": {
+  "en": "CR port 8085",
+  "ru": "CR-порт 8085",
+  "es": "Puerto CR 8085",
+  "zh": "CR 端口 8085"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "denominator": null
+}

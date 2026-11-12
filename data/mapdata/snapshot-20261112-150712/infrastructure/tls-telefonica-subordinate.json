@@ -1,0 +1,113 @@
+{
+ "dork": "ssl.cert.issuer.CN:\"Subordinada Telefonica Moviles\"",
+ "total": 8,
+ "taken": "2026-11-12T15:07:48+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 8,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 3,
+   "covered": 8,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 8,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 2,
+   "covered": 8,
+   "remainder": 0
+  },
+  "ssl.cert.fingerprint": {
+   "values_returned": 5,
+   "covered": 8,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 8,
+   "value": "AR"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5,
+   "value": "as262175"
+  },
+  {
+   "count": 2,
+   "value": "as4926"
+  },
+  {
+   "count": 1,
+   "value": "as22927"
+  }
+ ],
+ "ports": [
+  {
+   "count": 6,
+   "value": 443
+  },
+  {
+   "count": 2,
+   "value": 8443
+  }
+ ],
+ "orgs": [
+  {
+   "count": 4,
+   "value": "Telefónica Móviles Argentina"
+  },
+  {
+   "count": 3,
+   "value": "Telefonica de Argentina"
+  },
+  {
+   "count": 1,
+   "value": "Telefónica Móviles Argentina S.A. (Movistar Argentina)"
+  }
+ ],
+ "id": "tls-telefonica-subordinate",
+ "group": "management-infrastructure",
+ "label": {
+  "en": "Telefónica subordinate issuer",
+  "ru": "Промежуточный issuer Telefónica",
+  "es": "Emisor subordinado Telefónica",
+  "zh": "Telefónica 中间颁发者"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "classification": "issuer-match",
+ "fingerprints": [
+  {
+   "count": 2,
+   "value": "540fed39b3f7f6666a7619960297bdfb12ecb975"
+  },
+  {
+   "count": 2,
+   "value": "75d153b38736ef229d22277a679503162581ebae"
+  },
+  {
+   "count": 2,
+   "value": "cdc267370d99933217a438a73ddcaae0f8df1714"
+  },
+  {
+   "count": 1,
+   "value": "1ef69b6ddcd7d15ae99f2d0aa912805ead14cd85"
+  },
+  {
+   "count": 1,
+   "value": "7a1d3bc8a56b5dbbaa08baced8b4d86569334d7e"
+  }
+ ]
+}

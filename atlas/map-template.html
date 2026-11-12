@@ -565,6 +565,28 @@ dialog b{color:var(--ink)}
 @media(max-width:760px){.d-explorer{padding:8px;border-radius:12px}.d-stage{height:480px}.d-camera-tools .btn{min-width:38px;min-height:40px}.d-selection-bar{align-items:flex-start}.d-selection-bar .btn{min-height:44px}#deploymentPanel.d-fullscreen{padding:8px}#deploymentPanel.d-fullscreen .d-stage{height:calc(100dvh - 230px)}}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+
+.management-controls,.management-overview{margin:14px 0;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--card,#fff)}
+.management-controls label{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:600}
+.management-controls select{max-width:100%;min-width:0;flex:1}
+.management-overview summary{cursor:pointer;font-weight:700;line-height:1.5}
+.management-overview p,.management-overview li{font-size:13px;line-height:1.6}
+.management-profile-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px}
+.management-profile{border:1px solid var(--line);border-radius:12px;padding:10px;background:#f7fafc;min-width:0}
+.management-profile>div{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.management-profile p{margin:7px 0;overflow-wrap:anywhere}
+.management-query{display:block;white-space:pre-wrap;overflow-wrap:anywhere;padding:10px;margin:10px 0;background:#eef5f7;border-radius:8px;font-size:12px}
+.management-facets{list-style:none;padding:0;max-height:260px;overflow:auto}
+.management-facets li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px solid var(--line2);font-size:12px}
+.management-facets li span{min-width:0;overflow-wrap:anywhere}
+.management-facets b{white-space:nowrap}
+.management-countries{display:flex;gap:6px;flex-wrap:wrap}
+.management-countries .btn{white-space:normal;text-align:left}
+.eco-node.artifact{border-style:dashed;background:#fff7e8}
+.eco-node.profile{background:#f0f7fc;border-color:#93b7d1}
+.eco-node.certificate,.eco-node.infrastructure{background:#eaf7f5;border-color:#7bb8b3}
+#infrastructureControls[hidden],#mapcard .legendbar[hidden],#tab-map .bottom[hidden],#facet-lines[hidden],#facet-org[hidden]{display:none}
 </style>
 </head>
 
@@ -588,7 +610,8 @@ dialog b{color:var(--ink)}
  .workspace{grid-template-columns:1fr}
  .inspector{max-height:380px}
  .stage{height:340px}
-}</style>
+}
+</style>
 
 <style>
 @media(max-width:760px){
@@ -608,6 +631,7 @@ dialog b{color:var(--ink)}
  .lgchip .solo{display:none}
  .tblwrap{overflow-x:auto}
 }
+
 </style><body>
 <header class="topbar">
  <a href="#" class="brand" id="brandHome" aria-label="TRON-069 by SCADA StrangeLove"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
@@ -661,6 +685,7 @@ dialog b{color:var(--ink)}
   <button class="active" data-mode="clouds">◌ <span data-i18n="m_clouds">Облака</span></button>
   <button data-mode="countries">◈ <span data-i18n="m_countries">Страны</span></button>
   <button data-mode="http">HTTP</button>
+  <button data-mode="infrastructure"><span data-i18n="mgmt_tls"></span></button>
  </div>
  <button class="resetall" id="resetAll" data-i18n-title="reset_title" title="Сбросить все фильтры (фокус останется)">↺ <b data-i18n="reset_all">Сбросить всё</b></button>
 </div>
@@ -679,6 +704,7 @@ dialog b{color:var(--ink)}
   <button class="btn ghost news-all" id="newsAll" data-i18n="news_all">All news</button>
   <span class="sr-only" id="newsStatus" aria-live="polite"></span>
  </section>
+ <div id="infrastructureControls" class="management-controls" hidden><label><span data-i18n="mgmt_query"></span><select id="infrastructureQuery" class="service-select"></select></label><p class="note" data-i18n="mgmt_scope"></p></div>
  <div class="mapcard" id="mapcard">
   <div class="maphead">
    <div><div class="eyebrow" id="mapEyebrow">GLOBAL OVERVIEW</div><h2 id="mapTitle">География компонентов</h2></div>
@@ -767,6 +793,7 @@ dialog b{color:var(--ink)}
 <section id="tab-ecosystem" hidden>
  <div class="eco-header"><div><div class="eyebrow">CPE ↔ ACS</div><h1 data-i18n="eco_title"></h1><p data-i18n="eco_intro"></p></div><button class="btn" id="ecoShare" data-i18n="eco_share"></button></div>
  <div class="eco-views segmented" role="group" data-i18n-aria="eco_tab"><button data-eco-view="networks" data-i18n="d_networks"></button><button data-eco-view="evidence" data-i18n="d_evidence"></button></div>
+ <details class="management-overview" id="managementOverview"></details>
  <section id="deploymentPanel">
   <p class="eco-help" data-i18n="d_panel_intro"></p>
   <div class="d-controls">
@@ -804,7 +831,7 @@ dialog b{color:var(--ink)}
  <div class="eco-summary"><span id="ecoStatus" role="status"></span><span id="ecoReview"></span></div>
  <div class="eco-layout">
   <div>
-   <div class="eco-visual"><div class="eco-columns"><span data-i18n="eco_cpe"></span><span data-i18n="eco_operator"></span><span data-i18n="eco_acs_column"></span></div><div class="eco-canvas" id="ecoCanvas"></div></div>
+   <div class="eco-visual"><div class="eco-columns"><span data-i18n="mgmt_devices_profiles"></span><span data-i18n="eco_operator"></span><span data-i18n="eco_acs_column"></span></div><div class="eco-canvas" id="ecoCanvas"></div></div>
    <div class="eco-list" id="ecoList"></div>
    <p id="ecoEmpty" class="eco-empty" hidden data-i18n="eco_empty"></p>
    <p class="eco-help" data-i18n="eco_help"></p>
@@ -1163,7 +1190,7 @@ const DATA = /*__DATA__*/{};
 /* SNAPSHOT LOADER */
 const INITIAL_SNAPSHOT=DATA.snapshot;
 const SNAPSHOT_INDEX=DATA.history||{snapshots:[{id:DATA.snapshot}],latest:DATA.snapshot,lines:{},countries:[],orgs:{}};
-const SNAPSHOT_FIELDS=['snapshot','park','http','denominators','queryTotals','lines','orgdrill','variants','collection','stickers','facts'];
+const SNAPSHOT_FIELDS=['snapshot','park','http','denominators','queryTotals','lines','orgdrill','variants','collection','stickers','facts','infrastructure','profileObservations'];
 let snapshotError='';
 function snapshotTarget(){
  return new URLSearchParams(location.hash.slice(1)).get('snapshot')||INITIAL_SNAPSHOT;
@@ -1254,7 +1281,7 @@ function lineCount(slug,cc){
  return (cell?.orgs||[]).reduce((n,o)=>n+(S.orgs.has("raw:"+o.value)||S.orgs.has(normOrg(o.value,cc))?o.count:0),0);
 }
 /* состояние */
-const S = { lines:new Set(), geo:new Set(), orgs:new Set(), mode:"clouds",
+const S = { lines:new Set(), geo:new Set(), orgs:new Set(), mode:"clouds", infraQuery:"tls-cwmp-cn",
  cell:null, sort:{key:"base",dir:-1}, ccq:"", shown:60, tab:"map", newsId:"", newsFilter:"all",
  lgExpanded:false, lgHover:null, hovCc:null };
 let openPanel=null, inspCollapsed=false;
@@ -1280,6 +1307,7 @@ function urlWrite(push=false){
  if(S.geo.size)p.set("geo",[...S.geo].join(","));
  for(const org of S.orgs)p.append("org",org);
  if(S.mode!=="clouds")p.set("mode",S.mode);
+ if(S.infraQuery!=="tls-cwmp-cn")p.set("infra_query",S.infraQuery);
  if(S.cell)p.set("cell",S.cell.cc+","+S.cell.slug);
  if(S.tab!=="map")p.set("tab",S.tab);
  if(S.tab==="news"){
@@ -1316,7 +1344,8 @@ function urlRead(){
  const old=p.get("orgs")||"";
  const orgs=p.getAll("org").concat(ORG_NAMES.has(old)?[old]:old.split(","));
  for(const o of orgs)if(ORG_NAMES.has(o)||o.startsWith("raw:")&&RAW_ORG_NAMES.has(o.slice(4)))S.orgs.add(o);
- if(["clouds","countries","http"].includes(p.get("mode")))S.mode=p.get("mode");
+ if(["clouds","countries","http","infrastructure"].includes(p.get("mode")))S.mode=p.get("mode");
+ S.infraQuery=DATA.infrastructureCatalog.some(q=>q.id===p.get("infra_query"))?p.get("infra_query"):"tls-cwmp-cn";
  const c=(p.get("cell")||"").split(",");
  if(c.length===2&&ALL_CCS.has(c[0])&&Object.hasOwn(DATA.lines,c[1]))S.cell={cc:c[0],slug:c[1]};
  if(Object.hasOwn(I18N,p.get("lang")))LANG=p.get("lang");
@@ -1717,7 +1746,7 @@ function renderCountries(){
   g.innerHTML=h;
   g.querySelectorAll(".country").forEach(el=>{
    if(!pathMap.has(el.dataset.cc))pathMap.set(el.dataset.cc,[]);pathMap.get(el.dataset.cc).push(el);
-   el.addEventListener("mouseenter",()=>{S.hovCc=el.dataset.cc;paintHover();if(SLICE.ccs.has(el.dataset.cc))showTipCc(el.dataset.cc);});
+   el.addEventListener("mouseenter",()=>{S.hovCc=el.dataset.cc;paintHover();if(S.mode==="infrastructure"||SLICE.ccs.has(el.dataset.cc))showTipCc(el.dataset.cc);});
    el.addEventListener("mousemove",e=>moveTip(e));
    el.addEventListener("mouseleave",()=>{S.hovCc=null;paintHover();hideTip();});
   });
@@ -1738,10 +1767,11 @@ function renderCountries(){
    if(s!==null)fill=s>0.5?"#e8b27a":s>0.15?"#d9c9a8":"#d3e3f5";
   }
   if(S.mode==="clouds"&&DATA.park[cc])fill="#dfe9f5";
+  if(S.mode==="infrastructure"){const n=infrastructureCountry(cc),max=Math.max(1,...(infrastructureRecord()?.countries||[]).map(c=>c.count));fill=n?`hsl(185 48% ${88-35*Math.log1p(n)/Math.log1p(max)}%)`:"#dde7f4";}
   el.style.fill=fill;
   const cls=["country"];
   if(!inGeo)cls.push("faded");
-  else if(S.mode!=="http"&&solo&&!c)cls.push("faded");
+  else if(S.mode!=="http"&&S.mode!=="infrastructure"&&solo&&!c)cls.push("faded");
   if(cselSet&&cselSet.has(cc))cls.push("sel");
   if(S.hovCc===cc)cls.push("hov");
   el.setAttribute("class",cls.join(" "));
@@ -1750,7 +1780,7 @@ function renderCountries(){
  const soloAbsent=cc=>S.lines.size===1&&!((SLICE.ccs.get(cc)||{lines:{}}).lines[[...S.lines][0]]);
  for(const cc in MICRO){
   const[x,y]=CENT[cc];if(x==null)continue;
-  const dim=(!geoPass(cc)||(S.mode!=="http"&&soloAbsent(cc)))?"faded":"";
+  const dim=(!geoPass(cc)||(S.mode!=="http"&&S.mode!=="infrastructure"&&soloAbsent(cc)))?"faded":"";
   hd+=`<g class="dotanchor ${dim}" data-cc="${cc}" transform="translate(${x} ${y})"><circle r="2.6" class="pt"/><circle r="6.5" fill="transparent"/></g>`;
  }
  gD.innerHTML=hd;
@@ -1851,6 +1881,7 @@ function renderLabels(){
 /* тултипы */
 const tip=$("#tip");
 function showTipCc(cc){
+ if(S.mode==="infrastructure"){tip.innerHTML=`<strong>${esc(ccName(cc))}</strong><div class="big num">${fmt(infrastructureCountry(cc))}</div><span>${t("mgmt_matches")}</span>`;tip.hidden=false;return;}
  const c=SLICE_FULL.ccs.get(cc)||SLICE.ccs.get(cc);
  if(!c){tip.innerHTML=`<strong>${esc(ccName(cc))}</strong><div class="row"><span>${t("in_slice_short")}</span><b>${t("no_data")}</b></div>`;tip.hidden=false;return;}
  const lead=Object.entries(c.lines).sort((a,b)=>b[1]-a[1]).slice(0,3);
@@ -1894,6 +1925,7 @@ function renderMode(){
  else if(csel.length>1)mt.textContent=t("title_ctry",csel.length);
  else if(S.orgs.size)mt.textContent=t("title_orgs",S.orgs.size);
  else mt.textContent=t("title_def");
+ if(S.mode==="infrastructure"){mt.textContent=ecoText(infrastructureQuery().label);eb.textContent=t("mgmt_title");$("#mapHint").textContent=t("mgmt_tls_geo");}
 }
 
 /* легенда-лёгкий срез */
@@ -2116,7 +2148,56 @@ function renderSpecimens(){
  $('#specimenCount').textContent=t('specimen_count')+': '+items.length+' / '+all.length;
  $('#specimenGrid').innerHTML=items.length?items.map(item=>specimenCardHtml(item)).join(''):`<p class="note">${esc(t('specimen_empty'))}</p>`;
 }
+/* Management measurements never enter the CPE signature totals. */
+function infrastructureQuery(){return DATA.infrastructureCatalog.find(q=>q.id===S.infraQuery)||DATA.infrastructureCatalog[0];}
+function infrastructureRecord(){return DATA.infrastructure?.[infrastructureQuery().id]||null;}
+function infrastructureCountry(cc){const r=infrastructureRecord();return r?r.countries.find(c=>c.value===cc)?.count??(r.facet_meta.country.remainder?null:0):null;}
+function managementSources(){return sourcesHtml([{file:'MANAGEMENT-INFRASTRUCTURE.md',title:t('mgmt_methods')}]);}
+function managementProfilesHtml(profileId=''){
+ const profiles=DATA.management.profiles.filter(p=>!profileId||p.id===profileId);
+ return `<div class="management-profiles"><h3>${t('mgmt_profiles')}</h3><p class="note">${t('mgmt_profile_note')}</p><div class="management-profile-list">${profiles.map(p=>{
+  const obs=DATA.profileObservations?.[p.id],state=obs?.status||'not-collected',hint=p.operator_hint.includes('unresolved')?t('mgmt_unresolved'):p.operator_hint;
+  return `<article class="management-profile"><div><button class="btn ghost" data-eco-open="${esc(p.id)}"><strong>${esc(p.profile)}</strong></button><span>${esc(ccName(p.country))} · :${p.port}</span></div><p class="note">${t('mgmt_hint')}: ${esc(hint)}</p><p>${t('mgmt_observation')} · <strong class="num">${fmt(obs?.total)}</strong><br><span class="note">${t('mgmt_'+state)}${obs?.taken?' · '+esc(obs.taken):''}</span></p></article>`;
+ }).join('')}</div><p class="note">${t('mgmt_shared_query')}</p>${managementSources()}</div>`;
+}
+function managementGapsHtml(){
+ return `<h3>${t('mgmt_evidence')}</h3><ul>${DATA.management.platform.gaps.map(g=>`<li>${t('mgmt_gap_'+g)}</li>`).join('')}<li>${t('mgmt_tls_gaps')}</li></ul>`;
+}
+function managementEvidenceHtml(node){
+ if(node?.query)return infrastructureDetailHtml(node.query)+`<button class="btn soft" data-management-map="${esc(node.query)}">${t('mgmt_map')}</button>`;
+ if(node?.profile){
+  const p=DATA.management.profiles.find(p=>p.id===node.profile),obs=DATA.profileObservations?.[node.profile];
+  return managementProfilesHtml(node.profile)+(obs?.orgs?.length?`<h3>${t('s_ops')} · ${esc(p.country)} · :${p.port}</h3>${managementFacetsHtml(obs.orgs)}<p class="note">${t('mgmt_tail',fmt(obs.remainder))}</p>`:'');
+ }
+ if(node?.id==='huawei-deployment-manifest'||node?.line==='huaweihomegateway')return managementProfilesHtml()+managementGapsHtml();
+ return '';
+}
+function managementFacetsHtml(values){
+ return `<ul class="management-facets">${values.map(v=>`<li><span>${esc(v.value)}</span><b class="num">${fmt(v.count)}</b></li>`).join('')}</ul>`;
+}
+function infrastructureDetailHtml(id){
+ const q=DATA.infrastructureCatalog.find(q=>q.id===id),r=DATA.infrastructure?.[id];if(!q)return '';
+ return `<span class="eco-status">${t('mgmt_'+q.classification)}</span><h3>${esc(ecoText(q.label))}</h3><code class="management-query">${esc(r?.dork||q.query)}</code>${r?`<div class="bignum num">${fmt(r.total)}</div><p>${t('mgmt_matches')}<br><span class="note">${t('collected_at')}: ${esc(r.taken)}</span></p><h3>${t('mgmt_global')}</h3><details><summary>${t("mgmt_ports")} · ${r.ports.length}</summary><div class="portrow">${r.ports.map(p=>`<span class="pchip">:${p.value} · ${fmt(p.count)}</span>`).join('')}</div></details><details><summary>${t('s_ops')} · ${r.orgs.length}</summary>${managementFacetsHtml(r.orgs)}<p class="note">${t('mgmt_tail',fmt(r.facet_meta.org.remainder))}</p></details><details><summary>ASN</summary>${managementFacetsHtml(r.asn)}</details><p class="note">${t('mgmt_fingerprints')}: ${r.fingerprints.length}<br>${t('mgmt_country_tail',fmt(r.facet_meta.country.remainder))}</p>`:`<p class="scopewarn">${t('mgmt_missing')}</p>`}<p class="note">${t('mgmt_scope')}</p>${managementSources()}`;
+}
+function renderInfrastructureInspector(){
+ const r=infrastructureRecord(),selected=!!S.geo.size,countries=(r?.countries||[]).filter(c=>geoPass(c.value)),count=countries.reduce((n,c)=>n+c.count,0);
+ insp.innerHTML=`<div class="eyebrow">${t('mgmt_title')}</div><h2>${t('mgmt_tls')}</h2>${selected?`<p class="scopewarn">${t('mgmt_country_scope',r?fmt(count):'—')}</p>`:''}${infrastructureDetailHtml(infrastructureQuery().id)}${r?`<h3>${t('mgmt_tls_geo')}</h3><div class="management-countries">${countries.map(c=>`<button class="btn" data-infra-country="${esc(c.value)}">${esc(ccName(c.value))} <b>${fmt(c.count)}</b></button>`).join('')}</div>`:''}<div class="actrow"><button class="btn soft" data-eco-open="${esc(infrastructureQuery().id.startsWith('tls-cwmp-port-')?'tls-cwmp-cn':infrastructureQuery().id)}">${t('mgmt_graph')}</button></div>`;
+}
+function renderManagement(){
+ const active=S.mode==='infrastructure';
+ $('#infrastructureControls').hidden=!active||S.tab!=='map';
+ $('#infrastructureQuery').innerHTML=DATA.infrastructureCatalog.map(q=>`<option value="${esc(q.id)}"${infrastructureQuery().id===q.id?' selected':''}>${esc(ecoText(q.label))}</option>`).join('');
+ for(const selector of ['#facet-lines','#facet-org','#mapcard .legendbar','#tab-map .bottom'])$(selector).hidden=active;
+ $('#managementOverview').innerHTML=`<summary>${t('mgmt_title')} · ${t('mgmt_evidence')}</summary><p>${t('mgmt_research_note')}</p><p>${t('mgmt_inventory',DATA.management.platform.profile_count,DATA.management.platform.data_model_count)}</p><div class="actrow"><button class="btn soft" data-management-map="tls-cwmp-cn">${t('mgmt_map')}</button><button class="btn" data-eco-open="huawei-deployment-manifest">${t('mgmt_profiles')}</button><button class="btn" data-eco-open="tls-cwmp-cn">${t('mgmt_graph')}</button></div>${managementGapsHtml()}${managementSources()}`;
+}
+document.addEventListener('click',e=>{
+ const map=e.target.closest('[data-management-map]');if(map){S.infraQuery=map.dataset.managementMap;S.mode='infrastructure';S.tab='map';inspCollapsed=false;refreshAll();window.scrollTo({top:0,behavior:'auto'});return;}
+ const cc=e.target.closest('[data-infra-country]');if(cc){const token='c:'+cc.dataset.infraCountry;S.geo.has(token)?S.geo.delete(token):S.geo.add(token);refreshAll();zoomToCountry(cc.dataset.infraCountry);}
+});
+$('#infrastructureQuery').onchange=e=>{S.infraQuery=e.target.value;refreshAll();};
+
 function renderInspector(){
+ if(S.mode==="infrastructure"){renderInfrastructureInspector();return;}
  let h=`<button id="inspCollapse" title="${esc(t("fold_panel"))}" style="position:sticky;top:0;float:right;z-index:5;background:#fff;border:1px solid var(--line);border-radius:8px;width:24px;height:24px;color:var(--muted)">${inspCollapsed?"‹":"›"}</button>`;
  const M=slug=>DATA.meta.lines[slug]||{};
  if(S.cell){
@@ -2202,6 +2283,7 @@ function renderInspector(){
   <div class="sc-grid" style="margin-top:14px" id="scPanel"></div>
   <div class="scopewarn">${t("warn_slice")}</div>`;
  }
+ if(S.lines.size===1&&S.lines.has("huaweihomegateway")||S.cell?.slug==="huaweihomegateway")h+=managementProfilesHtml();
  h=h.replace("</h2>",`</h2><section class="related-news" id="relatedNews" aria-labelledby="relatedNewsTitle" hidden>
   <div class="related-news-head"><div><h3 id="relatedNewsTitle">${esc(t("news_related"))}</h3></div><button class="btn ghost" id="newsRelatedAll" data-news-related-all>${esc(t("news_all_related"))}</button></div>
   <div class="related-news-grid" id="relatedNewsGrid"></div>
@@ -2380,6 +2462,8 @@ function renderTabVisibility(){
  $$(".nav").forEach(b=>b.classList.toggle("active",b.dataset.tab===S.tab));
  for(const name of ["map","registry","findings","ecosystem","news","wanted"])$("#tab-"+name).hidden=S.tab!==name;
  for(const id of ["#atlasIntro","#facetsRow","#chipsRow"])$(id).hidden=["news","ecosystem","wanted"].includes(S.tab);
+ $("#chipsRow").hidden||=S.mode==="infrastructure";
+ $("#infrastructureControls").hidden=S.tab!=="map"||S.mode!=="infrastructure";
  $("#modeNote").hidden=["news","ecosystem","wanted"].includes(S.tab)||S.mode!=="http";
 }
 function switchTab(t){S.tab=t;if(t!=="news")S.newsId="";renderTabVisibility();if(t==="ecosystem")renderEcosystem();urlWrite();}
@@ -2409,7 +2493,7 @@ function ecoFiltered(){
 }
 function ecoLayout(edges){
  const ids=new Set(edges.flatMap(e=>[e.source,e.target])),positions=new Map();
- const col=n=>n.kind==="cpe"?0:n.kind==="operator"?1:2;
+ const col=n=>["cpe","certificate"].includes(n.kind)?0:["operator","artifact"].includes(n.kind)?1:2;
  let row=0;
  for(const start of ECO.nodes.filter(n=>ids.has(n.id))){
   if(positions.has(start.id))continue;
@@ -2434,6 +2518,7 @@ function ecoRenderDetail(edges){
   const line=DATA.lines[node.line],related=ECO.edges.filter(e=>(E.hyp||e.status!=="hypothesis")&&(e.source===node.id||e.target===node.id));
   html=`<div class="eyebrow">${t("eco_"+node.kind)}</div><h2>${esc(ecoName(node.id))}</h2><p>${esc(ecoText(node.description))}</p>${line?`<h3>${t("eco_map_count",fmt(line.total))}</h3><p>${t("collected_at")}: ${esc(line.taken||DATA.snapshot)}<br>${esc(line.dork)}</p><p>${t("eco_count_note")}</p><button class="btn soft" data-eco-map="${esc(node.line)}">${t("eco_map")}</button>`:""}<div class="actrow"><button class="btn" data-eco-focus="${node.id}">${t("eco_focus")}</button>${E.focus===node.id&&E.depth<3?`<button class="btn" id="ecoExpand">${t("eco_expand")}</button>`:""}</div><h3>${t("eco_connections")}</h3><div class="eco-related">${related.map(e=>`<button data-eco-edge="${e.id}">${esc(ecoName(e.source===node.id?e.target:e.source))}<br><span class="note">${t("eco_"+e.kind)} · ${t("eco_"+e.status)}</span></button>`).join("")}</div>`;
  }
+ if(node)html+=managementEvidenceHtml(node);
  $("#ecoDetail").innerHTML=html+((edge||node)?`<button class="btn ghost eco-back" id="ecoBack">← ${t("eco_back")}</button>`:"");
 }
 function renderEcosystem(){
@@ -2442,6 +2527,7 @@ function renderEcosystem(){
  $("#ecoModelSource").innerHTML=ecoSources([{file:"ACS-LANDSCAPE.md",title:t("eco_bad_read")}]);
  if(E.view==="networks"){if(S.tab==="ecosystem")renderDeployments();return;}
  const edges=ecoFiltered(),{positions,height}=ecoLayout(edges),ids=new Set(edges.flatMap(e=>[e.source,e.target]));
+ $(".eco-columns").hidden=[...ids].some(id=>["artifact","profile","certificate","infrastructure"].includes(ENODES[id].kind));
  $("#ecoSearch").value=E.q;$("#ecoKind").value=E.kind;$("#ecoHyp").checked=E.hyp;
  $("#ecoStatus").textContent=t("eco_counts",ids.size,edges.length)+(E.focus?" · "+t("eco_focused",ecoName(E.focus)):"");
  $("#ecoReview").textContent=t("eco_reviewed")+": "+ECO.reviewed;
@@ -2465,7 +2551,8 @@ function ecoUpdate(patch,push=true){
  Object.assign(E,patch);urlWrite(push);renderEcosystem();
 }
 function ecoOpenNode(id){
- Object.assign(E,{view:"evidence",node:id,edge:"",focus:"",q:"",kind:"all",depth:1,hyp:ECO.edges.some(e=>e.status==="hypothesis"&&(e.source===id||e.target===id))&&id==="gateway-candidates"});
+ const management=["artifact","profile","certificate","infrastructure"].includes(ENODES[id]?.kind);
+ Object.assign(E,{view:"evidence",node:id,edge:"",focus:management?id:"",q:"",kind:"all",depth:1,hyp:ECO.edges.some(e=>e.status==="hypothesis"&&(e.source===id||e.target===id))&&id==="gateway-candidates"});
  S.tab="ecosystem";urlWrite(true);renderEcosystem();renderTabVisibility();window.scrollTo({top:0,behavior:"auto"});
 }
 document.addEventListener("click",e=>{
@@ -2625,7 +2712,7 @@ function dNodeDetail(key,rows){
  const node=dNodeInfo(key);if(!node){dDetail(null);return;}
  const adjacent=rows.filter(r=>dTouches(r,key)),seen=new Set(DG.rows.map(r=>r.id)),shown=adjacent.filter(r=>seen.has(r.id));
  const expansion=DS.expanded.find(e=>e[0]===key),more=DS.view==='graph'&&shown.length<adjacent.length&&(expansion?.[1]||0)<32;
- $('#dDetail').innerHTML=`<span class="eco-status">${node.kind==='line'?t('d_line'):t('eco_operator')}</span><h2>${esc(node.name)}</h2><p>${esc(node.sub)} · ${t('d_neighbors',adjacent.length)}</p><div class="actrow">${more?`<button class="btn soft" data-d-expand="${esc(key)}">${t('d_expand')}</button>`:''}<button class="btn ghost" data-d-filter="${esc(key)}">${t('d_filter_node')}</button>${DS.view==='graph'?`<button class="btn ghost" data-d-pin="${esc(key)}">${t(DG.pins.has(key)?'d_unpin':'d_pin')}</button>`:''}</div><h3>${t('d_connections')}</h3><div class="d-neighbors">${adjacent.slice(0,32).map(r=>`<button class="d-proof" data-d-cell="${esc(r.id)}"><span>${esc(node.kind==='line'?DINDEX.entities[r.operator].name+' · '+ccName(r.cc):DATA.lines[r.line].name)}</span><span class="num">${fmt(r.count)}</span></button>`).join('')}</div><p class="note">${t('d_shown',shown.length,adjacent.length)}</p>${ecoSources([{file:'DEPLOYMENTS.md',title:t('d_method')}])}`;
+ $('#dDetail').innerHTML=`<span class="eco-status">${node.kind==='line'?t('d_line'):t('eco_operator')}</span><h2>${esc(node.name)}</h2><p>${esc(node.sub)} · ${t('d_neighbors',adjacent.length)}</p><div class="actrow">${more?`<button class="btn soft" data-d-expand="${esc(key)}">${t('d_expand')}</button>`:''}<button class="btn ghost" data-d-filter="${esc(key)}">${t('d_filter_node')}</button>${DS.view==='graph'?`<button class="btn ghost" data-d-pin="${esc(key)}">${t(DG.pins.has(key)?'d_unpin':'d_pin')}</button>`:''}</div><h3>${t('d_connections')}</h3><div class="d-neighbors">${adjacent.slice(0,32).map(r=>`<button class="d-proof" data-d-cell="${esc(r.id)}"><span>${esc(node.kind==='line'?DINDEX.entities[r.operator].name+' · '+ccName(r.cc):DATA.lines[r.line].name)}</span><span class="num">${fmt(r.count)}</span></button>`).join('')}</div><p class="note">${t('d_shown',shown.length,adjacent.length)}</p>${ecoSources([{file:'DEPLOYMENTS.md',title:t('d_method')}])}${node.line==='huaweihomegateway'?managementProfilesHtml():''}`;
 }
 /* Card geometry is shared by initial rendering, drag and flow zoom. */
 function dNodeBox(node,view,labelScale=1){
@@ -2926,6 +3013,7 @@ function newsHref(id){
  return '#'+p.toString();
 }
 function renderRelatedNews(){
+ if(!$('#relatedNews'))return;
  const rows=relatedNewsItems(),selection=newsSelection();
  $('#relatedNews').hidden=!selection.active;
  $('#relatedNewsEmpty').hidden=!!rows.length;
@@ -3088,6 +3176,7 @@ function refreshAll(){
  SLICE_FULL=computeSlice(true);
  GEOT=lineGeoTotals();
  renderSnapshotPicker();
+ renderManagement();
  facetBtnState();renderChips();renderMode();
  renderCountries();renderClouds();renderLabels();
  renderOverview();renderLegend();renderTable();renderLinesTable();renderInspector();

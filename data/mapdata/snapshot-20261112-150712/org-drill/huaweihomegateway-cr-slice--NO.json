@@ -1,0 +1,41 @@
+{
+ "dork": "port:7547 \"HuaweiHomeGateway\" country:NO",
+ "total": 210,
+ "taken": "2026-11-11T17:33:24+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 210,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 210,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 210,
+   "value": "as15659"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 206,
+   "value": "NextGenTel AS"
+  },
+  {
+   "count": 4,
+   "value": "XDSL access and service provider in Norway"
+  }
+ ],
+ "line": "HuaweiHomeGateway CR slice",
+ "line_id": "huaweihomegateway-cr-slice",
+ "cc": "NO"
+}

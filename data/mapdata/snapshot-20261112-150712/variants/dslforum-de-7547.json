@@ -1,0 +1,128 @@
+{
+ "dork": "\"DSLForum CPE Management\" country:DE port:7547",
+ "total": 12272,
+ "taken": "2026-11-11T18:33:48+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 12272,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 10,
+   "covered": 12272,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 12272,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 12272,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 12272,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 12254,
+   "value": "as3320"
+  },
+  {
+   "count": 7,
+   "value": "as6805"
+  },
+  {
+   "count": 6,
+   "value": "as8881"
+  },
+  {
+   "count": 2,
+   "value": "as12355"
+  },
+  {
+   "count": 1,
+   "value": "as12312"
+  },
+  {
+   "count": 1,
+   "value": "as3209"
+  },
+  {
+   "count": 1,
+   "value": "as57353"
+  }
+ ],
+ "ports": [
+  {
+   "count": 12272,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 12254,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 5,
+   "value": "NCC"
+  },
+  {
+   "count": 4,
+   "value": "1&1 Versatel GmbH"
+  },
+  {
+   "count": 2,
+   "value": "1&1 Telecom GmbH"
+  },
+  {
+   "count": 2,
+   "value": "HeLi NET Telekommunikation GmbH & Co."
+  },
+  {
+   "count": 1,
+   "value": "Telefonica Germany GmbH & Co. OHG"
+  },
+  {
+   "count": 1,
+   "value": "Telefonica Germany GmbH & Co.OHG"
+  },
+  {
+   "count": 1,
+   "value": "Vodafone GmbH"
+  },
+  {
+   "count": 1,
+   "value": "ecotel communication ag"
+  },
+  {
+   "count": 1,
+   "value": "freenet DLS GmbH"
+  }
+ ],
+ "id": "dslforum-de-7547",
+ "parent": "dt-speedport-sdk",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "DSLForum · DE:7547",
+  "ru": "DSLForum · DE:7547",
+  "es": "DSLForum · DE:7547",
+  "zh": "DSLForum · DE:7547"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "dslforum-cpe-management"
+ },
+ "denominator": null
+}

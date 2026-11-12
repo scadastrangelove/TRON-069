@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "timezone": "UTC",
- "latest_complete": "snapshot-20261111-172255",
+ "latest_complete": "snapshot-20261112-150712",
  "snapshots": [
   {
    "snapshot": "snapshot-20261008-1451",
@@ -423,6 +423,30 @@
    "research_queries": {
     "expected": 132,
     "completed": 132,
+    "pending": 0
+   }
+  },
+  {
+   "snapshot": "snapshot-20261112-150712",
+   "status": "complete",
+   "started_at": "2026-11-12T15:07:28+00:00",
+   "completed_at": "2026-11-12T15:07:56+00:00",
+   "updated_at": "2026-11-12T15:07:56+00:00",
+   "source_snapshot": "data/mapdata/snapshot-20261111-172255",
+   "mode": "queries-only",
+   "errors": 0,
+   "lines": 55,
+   "operator_pairs": {
+    "scope": "skipped",
+    "expected": 0,
+    "completed": 0,
+    "pending": 0,
+    "org_limit": 100,
+    "asn_limit": 100
+   },
+   "research_queries": {
+    "expected": 10,
+    "completed": 10,
     "pending": 0
    }
   }

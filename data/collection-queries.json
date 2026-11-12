@@ -2298,6 +2298,176 @@
         "anchor": "mini-httpd"
       },
       "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-30005",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:30005",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 30005",
+        "ru": "CR-порт 30005",
+        "es": "Puerto CR 30005",
+        "zh": "CR 端口 30005"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-8085",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:8085",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 8085",
+        "ru": "CR-порт 8085",
+        "es": "Puerto CR 8085",
+        "zh": "CR 端口 8085"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-9090",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:9090",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 9090",
+        "ru": "CR-порт 9090",
+        "es": "Puerto CR 9090",
+        "zh": "CR 端口 9090"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-10301",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:10301",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 10301",
+        "ru": "CR-порт 10301",
+        "es": "Puerto CR 10301",
+        "zh": "CR 端口 10301"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-30005-at",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:30005 country:AT",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 30005 · AT",
+        "ru": "CR-порт 30005 · AT",
+        "es": "Puerto CR 30005 · AT",
+        "zh": "CR 端口 30005 · AT"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-8085-co",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:8085 country:CO",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 8085 · CO",
+        "ru": "CR-порт 8085 · CO",
+        "es": "Puerto CR 8085 · CO",
+        "zh": "CR 端口 8085 · CO"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-51005-br",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:51005 country:BR",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 51005 · BR",
+        "ru": "CR-порт 51005 · BR",
+        "es": "Puerto CR 51005 · BR",
+        "zh": "CR 端口 51005 · BR"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-51005-ee",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:51005 country:EE",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 51005 · EE",
+        "ru": "CR-порт 51005 · EE",
+        "es": "Puerto CR 51005 · EE",
+        "zh": "CR 端口 51005 · EE"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-9090-th",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:9090 country:TH",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 9090 · TH",
+        "ru": "CR-порт 9090 · TH",
+        "es": "Puerto CR 9090 · TH",
+        "zh": "CR 端口 9090 · TH"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
+    },
+    {
+      "id": "huawei-port-10301-mn",
+      "parent": "huaweihomegateway",
+      "group": "huawei-deployment",
+      "query": "\"HuaweiHomeGateway\" port:10301 country:MN",
+      "facets": "country:250,org:100,asn:100,port:100",
+      "label": {
+        "en": "CR port 10301 · MN",
+        "ru": "CR-порт 10301 · MN",
+        "es": "Puerto CR 10301 · MN",
+        "zh": "CR 端口 10301 · MN"
+      },
+      "source": {
+        "file": "MANAGEMENT-INFRASTRUCTURE.md"
+      },
+      "overlap": "possible"
     }
   ]
 }

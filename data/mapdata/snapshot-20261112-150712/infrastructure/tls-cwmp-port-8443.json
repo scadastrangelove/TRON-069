@@ -1,0 +1,409 @@
+{
+ "dork": "ssl.cert.subject.CN:cwmp port:8443",
+ "total": 46,
+ "taken": "2026-11-12T15:07:56+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 20,
+   "covered": 46,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 32,
+   "covered": 46,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 30,
+   "covered": 46,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 46,
+   "remainder": 0
+  },
+  "ssl.cert.fingerprint": {
+   "values_returned": 5,
+   "covered": 46,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 7,
+   "value": "AU"
+  },
+  {
+   "count": 6,
+   "value": "DE"
+  },
+  {
+   "count": 4,
+   "value": "CN"
+  },
+  {
+   "count": 3,
+   "value": "HK"
+  },
+  {
+   "count": 3,
+   "value": "SG"
+  },
+  {
+   "count": 3,
+   "value": "US"
+  },
+  {
+   "count": 2,
+   "value": "BR"
+  },
+  {
+   "count": 2,
+   "value": "FR"
+  },
+  {
+   "count": 2,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "IN"
+  },
+  {
+   "count": 2,
+   "value": "IT"
+  },
+  {
+   "count": 2,
+   "value": "ZA"
+  },
+  {
+   "count": 1,
+   "value": "BE"
+  },
+  {
+   "count": 1,
+   "value": "CA"
+  },
+  {
+   "count": 1,
+   "value": "CH"
+  },
+  {
+   "count": 1,
+   "value": "DK"
+  },
+  {
+   "count": 1,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "MN"
+  },
+  {
+   "count": 1,
+   "value": "NZ"
+  },
+  {
+   "count": 1,
+   "value": "SA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 6,
+   "value": "as8075"
+  },
+  {
+   "count": 4,
+   "value": "as37963"
+  },
+  {
+   "count": 4,
+   "value": "as45102"
+  },
+  {
+   "count": 3,
+   "value": "as16276"
+  },
+  {
+   "count": 3,
+   "value": "as396982"
+  },
+  {
+   "count": 2,
+   "value": "as24940"
+  },
+  {
+   "count": 1,
+   "value": "as134087"
+  },
+  {
+   "count": 1,
+   "value": "as135799"
+  },
+  {
+   "count": 1,
+   "value": "as136907"
+  },
+  {
+   "count": 1,
+   "value": "as137549"
+  },
+  {
+   "count": 1,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as142116"
+  },
+  {
+   "count": 1,
+   "value": "as17882"
+  },
+  {
+   "count": 1,
+   "value": "as197540"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as206123"
+  },
+  {
+   "count": 1,
+   "value": "as265126"
+  },
+  {
+   "count": 1,
+   "value": "as266185"
+  },
+  {
+   "count": 1,
+   "value": "as31034"
+  },
+  {
+   "count": 1,
+   "value": "as34397"
+  },
+  {
+   "count": 1,
+   "value": "as37988"
+  },
+  {
+   "count": 1,
+   "value": "as42730"
+  },
+  {
+   "count": 1,
+   "value": "as52468"
+  },
+  {
+   "count": 1,
+   "value": "as5650"
+  },
+  {
+   "count": 1,
+   "value": "as5713"
+  },
+  {
+   "count": 1,
+   "value": "as6724"
+  },
+  {
+   "count": 1,
+   "value": "as7474"
+  },
+  {
+   "count": 1,
+   "value": "as8560"
+  },
+  {
+   "count": 1,
+   "value": "as9381"
+  },
+  {
+   "count": 1,
+   "value": "as9500"
+  }
+ ],
+ "ports": [
+  {
+   "count": 46,
+   "value": 8443
+  }
+ ],
+ "orgs": [
+  {
+   "count": 6,
+   "value": "Microsoft Corporation"
+  },
+  {
+   "count": 4,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 4,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 3,
+   "value": "Google LLC"
+  },
+  {
+   "count": 2,
+   "value": "Hetzner Online GmbH"
+  },
+  {
+   "count": 1,
+   "value": "1blu GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Apek Technology Pvt. Ltd."
+  },
+  {
+   "count": 1,
+   "value": "Aruba S.p.A. - Dedicated servers"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "FLEETNET TELECOMUNICACOES LTDA - ME"
+  },
+  {
+   "count": 1,
+   "value": "FlowVPS"
+  },
+  {
+   "count": 1,
+   "value": "HKBN Enterprise Solutions HK Limited"
+  },
+  {
+   "count": 1,
+   "value": "Huawei South Africa Clouds"
+  },
+  {
+   "count": 1,
+   "value": "IONOS SE"
+  },
+  {
+   "count": 1,
+   "value": "Middle East Internet Company Limited"
+  },
+  {
+   "count": 1,
+   "value": "NODE1 INTERNET"
+  },
+  {
+   "count": 1,
+   "value": "OVH GmbH"
+  },
+  {
+   "count": 1,
+   "value": "OVH Hosting, Inc."
+  },
+  {
+   "count": 1,
+   "value": "OVH SAS"
+  },
+  {
+   "count": 1,
+   "value": "One New Zealand Group Limited"
+  },
+  {
+   "count": 1,
+   "value": "One Solution IT Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "SingTel Optus Pty Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Spin Telecomunicações"
+  },
+  {
+   "count": 1,
+   "value": "Strato GmbH"
+  },
+  {
+   "count": 1,
+   "value": "UFINET PANAMA S.A."
+  },
+  {
+   "count": 1,
+   "value": "Univision LLC"
+  },
+  {
+   "count": 1,
+   "value": "UplinkMe"
+  },
+  {
+   "count": 1,
+   "value": "Verizon Business"
+  },
+  {
+   "count": 1,
+   "value": "Vultr Holdings, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Xelon AG"
+  },
+  {
+   "count": 1,
+   "value": "netcup GmbH"
+  },
+  {
+   "count": 1,
+   "value": "noc e-mail: <nnoc@saix.net>, phone: +27-12-680-7569"
+  }
+ ],
+ "id": "tls-cwmp-port-8443",
+ "group": "management-infrastructure",
+ "label": {
+  "en": "CWMP names · port 8443",
+  "ru": "CWMP в CN · порт 8443",
+  "es": "Nombres CWMP · puerto 8443",
+  "zh": "CWMP 名称 · 端口 8443"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "classification": "acs-candidate",
+ "fingerprints": [
+  {
+   "count": 39,
+   "value": "8cc406814df9684d2dce311ef2cd20dc15493494"
+  },
+  {
+   "count": 4,
+   "value": "2b6789702ee84c956c13246521ce774b3b5ee632"
+  },
+  {
+   "count": 1,
+   "value": "7d1002b257940ece4941a58b0a41fd875e61275c"
+  },
+  {
+   "count": 1,
+   "value": "883e700ab73562732572fa7b923f9fcc7158a4b6"
+  },
+  {
+   "count": 1,
+   "value": "a12d88ddf01b4135b9d160dc4fe6d040876bd852"
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "dork": "ssl.cert.subject.CN:cwmp port:7547",
+ "total": 2,
+ "taken": "2026-11-12T15:07:52+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 2,
+   "remainder": 0
+  },
+  "ssl.cert.fingerprint": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1,
+   "value": "BR"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as273467"
+  },
+  {
+   "count": 1,
+   "value": "as60981"
+  }
+ ],
+ "ports": [
+  {
+   "count": 2,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "Ethernet Clients"
+  },
+  {
+   "count": 1,
+   "value": "H R B LACERDA"
+  }
+ ],
+ "id": "tls-cwmp-port-7547",
+ "group": "management-infrastructure",
+ "label": {
+  "en": "CWMP names · port 7547",
+  "ru": "CWMP в CN · порт 7547",
+  "es": "Nombres CWMP · puerto 7547",
+  "zh": "CWMP 名称 · 端口 7547"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "classification": "acs-candidate",
+ "fingerprints": [
+  {
+   "count": 1,
+   "value": "0799b63d26080451cfd5181a93638195a7b5342e"
+  },
+  {
+   "count": 1,
+   "value": "2eeed76300af11d09f05e128dc82c4222da50ecf"
+  }
+ ]
+}

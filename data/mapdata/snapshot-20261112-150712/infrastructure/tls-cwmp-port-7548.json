@@ -1,0 +1,77 @@
+{
+ "dork": "ssl.cert.subject.CN:cwmp port:7548",
+ "total": 1,
+ "taken": "2026-11-12T15:07:53+00:00",
+ "run_id": "0921a773-5094-40fd-a66d-0467abd694e9",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "ssl.cert.fingerprint": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1,
+   "value": "IN"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as135799"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1,
+   "value": 7548
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "Apek Technology Pvt. Ltd."
+  }
+ ],
+ "id": "tls-cwmp-port-7548",
+ "group": "management-infrastructure",
+ "label": {
+  "en": "CWMP names · port 7548",
+  "ru": "CWMP в CN · порт 7548",
+  "es": "Nombres CWMP · puerto 7548",
+  "zh": "CWMP 名称 · 端口 7548"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "classification": "acs-candidate",
+ "fingerprints": [
+  {
+   "count": 1,
+   "value": "883e700ab73562732572fa7b923f9fcc7158a4b6"
+  }
+ ]
+}

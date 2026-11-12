@@ -1,0 +1,152 @@
+{
+ "dork": "\"RomPager\" port:51007",
+ "total": 1823,
+ "taken": "2026-11-11T18:34:24+00:00",
+ "run_id": "bf1dd305-87a5-4f64-aa01-3075cc7a2a5b",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 8,
+   "covered": 1823,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 11,
+   "covered": 1823,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 1823,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1823,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1812,
+   "value": "GB"
+  },
+  {
+   "count": 2,
+   "value": "IN"
+  },
+  {
+   "count": 2,
+   "value": "TW"
+  },
+  {
+   "count": 2,
+   "value": "US"
+  },
+  {
+   "count": 2,
+   "value": "ZA"
+  },
+  {
+   "count": 1,
+   "value": "CH"
+  },
+  {
+   "count": 1,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "IE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1812,
+   "value": "as13285"
+  },
+  {
+   "count": 5,
+   "value": "as135377"
+  },
+  {
+   "count": 3,
+   "value": "as16509"
+  },
+  {
+   "count": 2,
+   "value": "as63949"
+  },
+  {
+   "count": 1,
+   "value": "as136907"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1823,
+   "value": 51007
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1005,
+   "value": "Customer Dynamic IPs"
+  },
+  {
+   "count": 801,
+   "value": "TalkTalk Communications Limited"
+  },
+  {
+   "count": 6,
+   "value": "TalkTalk Business Related WBMC services"
+  },
+  {
+   "count": 4,
+   "value": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED"
+  },
+  {
+   "count": 1,
+   "value": "Akamai Technologies, Inc."
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services South Africa"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Data Services Switzerland"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 1,
+   "value": "Huawei South Africa Clouds"
+  },
+  {
+   "count": 1,
+   "value": "Linode"
+  },
+  {
+   "count": 1,
+   "value": "UCLOUD"
+  }
+ ],
+ "id": "rompager-port-51007",
+ "parent": "rompager",
+ "group": "legacy-http",
+ "label": {
+  "en": "All versions · port 51007",
+  "ru": "Все версии · порт 51007",
+  "es": "Todas las versiones · puerto 51007",
+  "zh": "所有版本 · 端口 51007"
+ },
+ "source": {
+  "file": "LEGACY-HTTP.md",
+  "anchor": "rompager"
+ },
+ "denominator": null
+}

@@ -70,10 +70,9 @@ class ComparisonTests(unittest.TestCase):
                 record = json.loads((snapshot/(slug+'.json')).read_text())
                 self.assertEqual(line['total'], record['total'])
                 self.assertEqual(line['dork'], record['dork'])
-                if slug not in data['excluded']:
-                    for cc, n in line['countries'].items():
-                        expected[cc] = expected.get(cc, 0) + n
-            self.assertEqual(data['ident'], expected)
+                for cc, n in line['countries'].items():
+                    expected[cc] = expected.get(cc, 0) + n
+            self.assertEqual(data['queryTotals'], expected)
             self.assertEqual(data['lines']['dt-speedport-sdk']['name'], 'DSLForum CPE Management')
 
 
