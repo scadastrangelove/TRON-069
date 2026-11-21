@@ -532,7 +532,7 @@ dialog b{color:var(--ink)}
 .eco-empty{padding:30px;text-align:center;color:var(--muted);font-size:14px}
 .eco-help{font-size:11px;line-height:1.7;color:var(--muted);margin:12px 0 0}
 .eco-model{margin:22px 0;padding:24px;border:1px solid #dfd8ef;border-radius:18px;background:#f5f1fc;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
-.eco-scenarios{grid-column:1/-1;min-width:0}.eco-scenarios summary{cursor:pointer;font-weight:700}.eco-scenarios dt{margin-top:12px;font-weight:600}.eco-scenarios dd{margin:4px 0;line-height:1.5}
+.eco-scenarios{grid-column:1/-1;min-width:0;scroll-margin-top:90px}.eco-scenarios h3{margin:0}.eco-scenarios dt{margin-top:12px;font-weight:600}.eco-scenarios dd{margin:4px 0;line-height:1.5}
 .eco-model h2{font-size:21px;margin:8px 0 12px;letter-spacing:-.5px}.eco-model p{font-size:12px;line-height:1.8;color:var(--muted)}
 .eco-flow{display:flex;gap:10px;align-items:center;justify-content:center;font-size:12px}.eco-flow span{padding:15px 12px;background:#fff;border:1px solid #ddd4ef;border-radius:10px;text-align:center}.eco-flow b{font-size:20px;color:#8870ba}
 @media(max-width:1100px){.eco-layout{grid-template-columns:1fr}.eco-detail{position:static}.eco-back{display:block}.eco-visual{padding:18px}.eco-node strong{font-size:13px}}
@@ -843,8 +843,8 @@ dialog b{color:var(--ink)}
  <section class="eco-model">
   <div><div class="eyebrow" data-i18n="eco_bad_model"></div><h2 data-i18n="eco_bad_title"></h2><p data-i18n="eco_bad_text"></p><div id="ecoModelSource"></div></div>
   <div class="eco-flow"><span data-i18n="eco_hostile"></span><b aria-hidden="true">→</b><span>ACS</span><b aria-hidden="true">→</b><span data-i18n="eco_fleet"></span></div>
-  <details class="eco-scenarios">
-   <summary data-i18n="eco_scenarios"></summary>
+  <section class="eco-scenarios" id="scenario-tracker" aria-labelledby="scenario-title">
+   <h3 id="scenario-title" tabindex="-1" data-i18n="eco_scenarios"></h3>
    <p data-i18n="eco_scenario_scope"></p>
    <dl>
     <dt data-i18n="eco_s1_name"></dt><dd data-i18n="eco_s1_body"></dd>
@@ -856,7 +856,7 @@ dialog b{color:var(--ink)}
     <dt data-i18n="eco_s7_name"></dt><dd data-i18n="eco_s7_body"></dd>
    </dl>
    <a href="https://github.com/scadastrangelove/TRON-069/blob/main/ACS-LANDSCAPE.md#scenario-tracker" data-i18n="eco_scenario_evidence"></a>
-  </details>
+  </section>
  </section>
 </section>
 
@@ -1331,6 +1331,7 @@ function urlWrite(push=false){
  }
  if(S.tab==="ecosystem"){
   p.set("eco_view",E.view);
+  if(S.ecoSection)p.set("eco_section",S.ecoSection);
   if(DS.view!=="graph")p.set("net_view",DS.view);
   for(const key of ["country","line","operator","q","selected","node"])if(DS[key])p.set("net_"+key,DS[key]);
   if(DS.role!=="cpe")p.set("net_role",DS.role);
@@ -1387,6 +1388,7 @@ function urlRead(){
  try{const expanded=JSON.parse((p.get("net_expand")||"[]").slice(0,12000));if(Array.isArray(expanded))for(const entry of expanded.slice(0,8)){if(Array.isArray(entry)&&typeof entry[0]==="string"&&dNodeInfo(entry[0])&&Number.isInteger(entry[1])&&!DS.expanded.some(e=>e[0]===entry[0]))DS.expanded.push([entry[0],Math.max(8,Math.min(32,entry[1]))]);}}catch(e){}
 
  S.tab=["map","registry","findings","ecosystem","news","wanted"].includes(p.get("tab"))?p.get("tab"):"map";
+ S.ecoSection=S.tab==="ecosystem"&&p.get("eco_section")==="scenarios"?"scenarios":"";
  S.newsId=S.tab==="news"&&(DATA.news||[]).some(n=>n.id===p.get("news"))?p.get("news"):"";
  S.newsFilter=["fleet","project","related"].includes(p.get("news_filter"))?p.get("news_filter"):"all";
  if(S.newsId)S.newsFilter="all";
@@ -2481,7 +2483,7 @@ function renderTabVisibility(){
  $("#infrastructureControls").hidden=S.tab!=="map"||S.mode!=="infrastructure";
  $("#modeNote").hidden=["news","ecosystem","wanted"].includes(S.tab)||S.mode!=="http";
 }
-function switchTab(t){S.tab=t;if(t!=="news")S.newsId="";renderTabVisibility();if(t==="ecosystem")renderEcosystem();urlWrite();}
+function switchTab(t){if(t!==S.tab)S.ecoSection="";S.tab=t;if(t!=="news")S.newsId="";renderTabVisibility();if(t==="ecosystem")renderEcosystem();urlWrite();}
 $$(".nav").forEach(b=>b.onclick=()=>{switchTab(b.dataset.tab);window.scrollTo({top:0,behavior:"auto"});});
 $("#brandHome").onclick=e=>{e.preventDefault();switchTab("map");};
 
@@ -3015,7 +3017,7 @@ function relatedNewsItems(){
  if(!selection.active)return [];
  return (DATA.news||[]).map(item=>({item,reasons:newsRelations(item,selection)})).filter(row=>row.reasons.length).sort((a,b)=>b.item.date.localeCompare(a.item.date)||a.item.id.localeCompare(b.item.id));
 }
-function newsHref(id){
+function newsHref(id,view="news"){
  const p=new URLSearchParams(location.hash.slice(1));
  // Rendering precedes urlWrite during map updates; links must use the new selection.
  for(const key of ['lines','geo','org','orgs','cell','mode'])p.delete(key);
@@ -3024,7 +3026,12 @@ function newsHref(id){
  for(const org of S.orgs)p.append('org',org);
  if(S.cell)p.set('cell',S.cell.cc+','+S.cell.slug);
  if(S.mode!=='clouds')p.set('mode',S.mode);
- p.set('lang',LANG);p.set('snapshot',DATA.snapshot);p.set('tab','news');p.set('news',id);p.delete('news_filter');
+ p.set('lang',LANG);p.set('snapshot',DATA.snapshot);p.delete('news_filter');
+ if(view==='scenarios'){
+  p.set('tab','ecosystem');p.set('eco_section','scenarios');p.delete('news');
+ }else{
+  p.set('tab','news');p.set('news',id);p.delete('eco_section');
+ }
  return '#'+p.toString();
 }
 function renderRelatedNews(){
@@ -3041,9 +3048,17 @@ function renderNews(){
  else if(S.newsFilter!=='all')items=items.filter(item=>(item.kind==='fleet')===(S.newsFilter==='fleet'));
  $$('#newsFilters button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.newsFilter===S.newsFilter)));
  $('#newsEmpty').hidden=!!items.length;
- $('#newsGrid').innerHTML=items.map(item=>`<article class="news-card${newsImportant(item)?' important':''}${S.newsId===item.id?' news-selected':''}" id="news-${esc(item.id)}" tabindex="-1"><div class="news-meta">${item.pinned?`<span class="news-pin">${esc(t('news_pinned'))}</span>`:''}${newsImportant(item)?`<span class="news-important">${esc(t('news_important'))}</span>`:''}<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span class="news-tag">${esc(t('news_kind_'+item.kind))}</span></div><h3>${esc(newsText(item,'title'))}</h3>${newsText(item,'body').split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join('')}${newsRelations(item).length?`<div class="news-relations">${esc(t('news_related_to'))}: ${esc(newsRelations(item).join(' · '))}</div>`:''}${item.links?.length?`<div class="news-links">${item.links.map(link=>`<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join('')}</div>`:''}${sourcesHtml(item.evidence)}<div class="news-links"><a data-news-open="${esc(item.id)}" href="${esc(newsHref(item.id))}">${esc(t('news_permalink'))} ↗</a></div>${item.view==='ecosystem'?`<div class="actrow"><button class="btn soft" ${item.ecosystem_node?`data-eco-open="${esc(item.ecosystem_node)}"`:"data-eco-news"}>${t('eco_news_link')}</button></div>`:''}${item.view==='wanted'?`<div class="actrow"><button class="btn soft" data-wanted-open>${t('wanted_news_link')}</button></div>`:''}</article>`).join('');
+ $('#newsGrid').innerHTML=items.map(item=>`<article class="news-card${newsImportant(item)?' important':''}${S.newsId===item.id?' news-selected':''}" id="news-${esc(item.id)}" tabindex="-1"><div class="news-meta">${item.pinned?`<span class="news-pin">${esc(t('news_pinned'))}</span>`:''}${newsImportant(item)?`<span class="news-important">${esc(t('news_important'))}</span>`:''}<time datetime="${esc(item.date)}">${esc(newsDate(item.date))}</time><span class="news-tag">${esc(t('news_kind_'+item.kind))}</span></div><h3>${esc(newsText(item,'title'))}</h3>${newsText(item,'body').split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join('')}${newsRelations(item).length?`<div class="news-relations">${esc(t('news_related_to'))}: ${esc(newsRelations(item).join(' · '))}</div>`:''}${item.links?.length?`<div class="news-links">${item.links.map(link=>`<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join('')}</div>`:''}${sourcesHtml(item.evidence)}<div class="news-links"><a data-news-open="${esc(item.id)}" href="${esc(newsHref(item.id))}">${esc(t('news_permalink'))} ↗</a></div>${item.view==='scenarios'?`<div class="actrow"><a class="btn soft" href="${esc(newsHref(item.id,'scenarios'))}">${esc(t('eco_scenarios'))} →</a></div>`:''}${item.view==='ecosystem'?`<div class="actrow"><button class="btn soft" ${item.ecosystem_node?`data-eco-open="${esc(item.ecosystem_node)}"`:"data-eco-news"}>${t('eco_news_link')}</button></div>`:''}${item.view==='wanted'?`<div class="actrow"><button class="btn soft" data-wanted-open>${t('wanted_news_link')}</button></div>`:''}</article>`).join('');
  renderNewsTicker();
  renderRelatedNews();
+}
+function focusDestination(){
+ if(S.tab==="ecosystem"&&S.ecoSection==="scenarios"){
+  $("#scenario-tracker").scrollIntoView({block:"start",behavior:"instant"});
+  $("#scenario-title").focus({preventScroll:true});
+ }else{
+  focusNews();
+ }
 }
 function focusNews(){
  if(S.tab!=='news'||!S.newsId)return;
@@ -3203,12 +3218,12 @@ document.addEventListener("keydown",e=>{
 });
 urlRead();switchTab(S.tab);try{DNcur=new Intl.DisplayNames([LANG==="zh"?"zh-Hans":LANG],{type:"region"});}catch(e){}
 applyStaticI18N();$$(".langbtn").forEach(b2=>{b2.classList.toggle("on",b2.dataset.lang===LANG);b2.onclick=()=>setLang(b2.dataset.lang);});
-refreshAll();focusNews();
+refreshAll();focusDestination();
 window.addEventListener("resize",()=>{scaleStatics();});
 $('#snapshotSelect').onchange=e=>chooseSnapshot(e.target.value);
 window.addEventListener("hashchange",()=>{
  if(snapshotTarget()!==DATA.snapshot){location.reload();return;}
- urlRead();setLang(LANG);switchTab(S.tab);focusNews();
+ urlRead();setLang(LANG);switchTab(S.tab);focusDestination();
 });
 
 })();

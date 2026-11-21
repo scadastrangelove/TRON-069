@@ -56,7 +56,7 @@ def read_news():
         date.fromisoformat(item['date'])
         if item['kind'] not in ('atlas', 'research', 'data', 'disclosure', 'fleet', 'investigation'):
             raise ValueError('Unknown news category')
-        if item.get('view') not in (None, 'ecosystem', 'wanted'):
+        if item.get('view') not in (None, 'ecosystem', 'wanted', 'scenarios'):
             raise ValueError('Unknown news view')
         if not isinstance(item.get('pinned', False), bool):
             raise ValueError('News pinned flag must be boolean')
