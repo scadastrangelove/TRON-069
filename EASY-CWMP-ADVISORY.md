@@ -1,6 +1,8 @@
 # EasyCwmp 1.8.6 security advisory
 
 Published 22 November 2026 by Sergey Gordeychik, SCADA StrangeLove.
+We will publish the technical details on **1 December 2026**.
+
 The research covered EasyCwmp 1.8.6 at upstream revision
 [`6094b86`](https://github.com/pivasoftware/easycwmp/tree/6094b8676bf59e25277958a8291d8fc673251311).
 Integrators should review their firmware's actual build, configuration and patches.
