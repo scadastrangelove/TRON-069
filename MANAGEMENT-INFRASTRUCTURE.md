@@ -1,6 +1,6 @@
 # Management infrastructure: profiles, observations and TLS candidates
 
-Reviewed on November 12, 2026. This layer describes discovery evidence and
+Reviewed on November 21, 2026. This layer describes discovery evidence and
 configuration provenance. It does not assign vulnerability status to a fleet.
 
 ## Firmware profiles
@@ -10,6 +10,10 @@ customization profile identifiers and 38 data-model views. Several identifiers
 belong to variants of the same operator. Neither number measures deployed
 operators, devices or reachable ACS instances. The separate EG8145V5 artifact
 remains unverified; see the [specimen inventory](SPECIMENS.md).
+
+Grouping the 172 identifiers by name produced 133 groups. These include common
+templates and regional variants. Counting operating companies requires independent
+evidence for the aliases.
 
 The public catalog exports eight reviewed profile/port entries from the research
 summary. It contains no management URLs, credentials, command definitions,
@@ -97,6 +101,23 @@ not a count of unique controllers, unique certificates or devices currently onli
 Facet tails are explicit. Historical snapshots without this layer show it as
 uncollected. The supplementary collection preserves the original timestamps of
 copied fleet measurements.
+
+## Provisioning names and organization filters
+
+The November 13 cross-check counted Shodan matches with `provisioning` anywhere
+in the certificate CN. All times below are UTC.
+
+| Time | Query | Matches |
+| --- | --- | ---: |
+| 21:55:10 | `ssl.cert.subject.CN:*provisioning*` | 3,429 |
+| 21:55:11 | `ssl.cert.subject.CN:*provisioning* -org:"Amazon" -org:"Microsoft" -org:"Google"` | 1,395 |
+| 21:55:12 | `ssl.cert.subject.CN:*provisioning* country:GB` | 91 |
+| 21:55:13 | `ssl.cert.subject.CN:*provisioning* -org:"Amazon*" -org:"Microsoft*" -org:"Google*" country:GB` | 31 |
+
+The organization facet still contained 911 matches for Amazon.com, Inc. in the
+filtered global result and nine in the filtered UK result. The atlas presents
+these as overlapping discovery queries. Classifying an ACS requires independent
+service evidence.
 
 ## Evidence gaps and next steps
 

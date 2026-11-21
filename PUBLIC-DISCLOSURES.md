@@ -4,6 +4,24 @@ This page links published reports relevant to TRON-069. The
 [Rust-in-Peace disclosure tracker](https://github.com/scadastrangelove/rust-in-peace/blob/main/DISCLOSURES-PUBLIC.md)
 tracks the wider research programme, including reports that remain private.
 
+<a id="easycwmp-20261122"></a>
+## EasyCwmp 1.8.6 — project advisory, 22 November 2026
+
+The [EasyCwmp advisory](EASY-CWMP-ADVISORY.md) documents ACS peer authentication,
+Connection Request authentication with unset credentials, local temporary-file
+handling and management-input processing. It includes the tested revision,
+operator checks, the limits of the decoder finding and the disclosure timeline.
+
+<a id="icwmp-20261122"></a>
+## icwmp — operator update, 22 November 2026
+
+IOPSYS confirmed fixes on its development branch for the six findings in the
+[October notice](#iopsys-icwmp-20261020). Operators can use the seven linked
+commits to check their downstream firmware or request the backport status from
+their supplier. Check the handlers for connection requests, HTTPS transfers,
+scheduled downloads and DHCP, and ensure logs exclude credentials. A deployment
+assessment requires the firmware revision and its patch history.
+
 <a id="rdkb-remote-syslog-20261012"></a>
 ## RDK-B — remote syslog command injection fixed in 2.10.0
 

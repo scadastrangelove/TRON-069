@@ -197,16 +197,16 @@
     },
     {
       "id": "tplink-works-openagent",
-      "title": "TP-Link Archer VR1600v V2 · Works Systems openagent lineage",
+      "title": "TP-Link Archer VR · Works Systems openagent lineage",
       "lines": [
         "tr069-http-server"
       ],
-      "reviewed_at": "2026-11-11",
+      "reviewed_at": "2026-11-21",
       "summary": {
-        "en": "The inspected Archer VR1600v V2 handler belongs to the Works Systems openagent code family. Corresponding function names and the 401 header template link it to the public GPL source.",
-        "ru": "Обработчик из исследованного Archer VR1600v V2 принадлежит кодовой линии Works Systems openagent. С публичным GPL-исходником его связывают соответствующие имена функций и шаблон заголовков ответа 401.",
-        "es": "El handler del Archer VR1600v V2 inspeccionado pertenece al linaje Works Systems openagent. Los nombres de funciones correspondientes y la plantilla de cabeceras 401 lo vinculan al código GPL público.",
-        "zh": "所检查的 Archer VR1600v V2 处理程序属于 Works Systems openagent 代码谱系。对应的函数名称和 401 响应头模板将其与公开 GPL 源码联系起来。"
+        "en": "Three Archer VR firmware builds contain the same Server string and two HTTP response headers in cwmp. The VR1600v V2 code comparison anchors the Works Systems lineage.",
+        "ru": "В трёх прошивках Archer VR бинарник cwmp содержит одну строку Server и два одинаковых заголовка HTTP-ответа. Принадлежность к семейству Works Systems установлена по сравнению кода на VR1600v V2.",
+        "es": "Tres compilaciones de Archer VR contienen la misma cadena Server y dos cabeceras HTTP en cwmp. La comparación del código de VR1600v V2 identifica el linaje Works Systems.",
+        "zh": "三个 Archer VR 固件版本的 cwmp 均含相同的 Server 字符串和两个 HTTP 响应头。VR1600v V2 的代码比对确认了 Works Systems 谱系。"
       },
       "sources": [
         {
@@ -216,6 +216,10 @@
         {
           "file": "NOTES.md",
           "anchor": "section-9.34"
+        },
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "archer-vr-three-builds"
         }
       ],
       "artifacts": [
@@ -235,6 +239,22 @@
           "marker": "Works Systems, Inc.; Server: Apache/2.0.40 (Red Hat Linux)",
           "sha256": "7fff1cfcb61b21424aedf9eec8bcedf02cc701532c1a2ffa447cf8e2e8cb0f7c",
           "version": "openagent-2.0"
+        },
+        {
+          "title": "Archer VR1600v V1 (AU) · /usr/bin/cwmp",
+          "kind": "firmware",
+          "url": "https://static.tp-link.com/upload/firmware/2026/202604/20260408/Archer_VR1600vV1_2.1.0_0.9.1_up_boot%28260318%29_2026-03-18_16.40.26.bin.zip",
+          "version": "2.1.0 Build 260318",
+          "marker": "tr069 http server @ 0x1ab28; Vary: accept-language @ 0x1abd4; Accept-Ranges: bytes @ 0x1abeb",
+          "sha256": "1daf4c9e9030c0f25eb4669a17dfd8ff6f0e61d8727aec2d15e209505fd129e3"
+        },
+        {
+          "title": "Archer VR600v V2 (EU) · /usr/bin/cwmp",
+          "kind": "firmware",
+          "url": "https://static.tp-link.com/upload/firmware/2022/202201/20220113/Archer_VR600v%28EU%29_v2_220112.zip",
+          "version": "1.2.0 Build 220112",
+          "marker": "tr069 http server @ 0x17e48; Vary: accept-language @ 0x17ef4; Accept-Ranges: bytes @ 0x17f0b",
+          "sha256": "20989d127a9bccfeea3adecfa2b939a84141d192cb248483faa550c1d4a8e107"
         }
       ]
     }

@@ -18,7 +18,10 @@ class ManagementTests(unittest.TestCase):
 
     def test_catalog_uses_certificate_scope_and_safe_aggregate_facets(self):
         jobs=infrastructure_jobs(ROOT)
-        self.assertEqual(len(jobs),8)
+        controls={q['id']: q for q in jobs if q['query'].startswith('ssl.cert.subject.CN:*provisioning*')}
+        self.assertEqual(set(controls), {'tls-provisioning-wildcard', 'tls-provisioning-org-filter',
+                                         'tls-provisioning-gb', 'tls-provisioning-gb-org-filter'})
+        self.assertTrue(all(q['classification']=='broad-discovery' for q in controls.values()))
         self.assertTrue(all(q['query'].startswith('ssl.cert.') for q in jobs))
         self.assertTrue(all('ssl.cert.fingerprint:100' in q['facets'] for q in jobs))
         self.assertTrue(all('parent' not in q for q in jobs))

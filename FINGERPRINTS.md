@@ -231,3 +231,34 @@ sampled US fixed-wireless builds. Route presence distinguishes those inspected
 builds; it does not classify every device in a country. Route names, operational
 records and security findings are excluded. The catalog adds explicit port-1234,
 Serbia and AS8400 scopes for dated passive follow-up.
+
+<a id="sample-literal-checks-20261121"></a>
+## Literal checks on two CPE executables (21 November 2026)
+
+An exact ASCII search of the Sercomm RV6699 v4-RT `usr/bin/cwmp` found
+neither `Sercomm CPE Authentication` nor `TR069 Client`. A separate search
+of the ZTE F670L V9.0.11P1N40 `cspd` found neither `cpe@zte.com` nor
+`CPE-SERVER/1.0`. Both tests covered a single extracted executable. Other
+processes and configuration files can supply the strings seen on the wire.
+
+The [specimen inventory](SPECIMENS.md) records the SHA-256 for each file.
+The P1N40 check concerns a different build from the earlier F670L P1N36 image.
+
+<a id="archer-vr-three-builds"></a>
+## Works Systems HTTP markers in three Archer VR builds
+
+The November 21 check repeated the VR1600v V2 comparison on official
+[VR1600v V1 AU](https://www.tp-link.com/au/support/download/archer-vr1600v/v1/)
+and [VR600v V2 EU](https://www.tp-link.com/it/support/download/archer-vr600v/v2/)
+images. Each shipped `/usr/bin/cwmp` contains `tr069 http server`,
+`Vary: accept-language` and `Accept-Ranges: bytes`. The specimen cards link
+to the exact archives and record the SHA-256 of the extracted executable.
+
+| Official firmware | Build | Executable size | Archive SHA-256 |
+| --- | --- | ---: | --- |
+| Archer VR1600v V1 AU | 260318 | 134,092 bytes | `a4bc6a855183d0e167de5440912c5f6ac743a14563c7bba5a043426a89345d10` |
+| Archer VR600v V2 EU | 220112 | 119,588 bytes | `eca9c732097cdc620043e136e6a8e77705b0be26de2f6648771e5b77e30ad22d` |
+
+The GPL distribution can include other TR-069 clients from the chipset SDK.
+Attribution here follows the executable extracted from the distributed firmware.
+The three builds share a single registry query.

@@ -128,6 +128,70 @@
    "source": {
     "file": "MANAGEMENT-INFRASTRUCTURE.md"
    }
+  },
+  {
+   "id": "tls-provisioning-wildcard",
+   "query": "ssl.cert.subject.CN:*provisioning*",
+   "classification": "broad-discovery",
+   "label": {
+    "en": "Provisioning · wildcard baseline",
+    "ru": "Provisioning · все совпадения по маске",
+    "es": "Provisioning · total por patrón",
+    "zh": "Provisioning · 通配符基线"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-provisioning-org-filter",
+   "query": "ssl.cert.subject.CN:*provisioning* -org:\"Amazon\" -org:\"Microsoft\" -org:\"Google\"",
+   "classification": "broad-discovery",
+   "label": {
+    "en": "Provisioning · organization filter",
+    "ru": "Provisioning · фильтр организаций",
+    "es": "Provisioning · filtro de organizaciones",
+    "zh": "Provisioning · 组织筛选"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-provisioning-gb",
+   "query": "ssl.cert.subject.CN:*provisioning* country:GB",
+   "classification": "broad-discovery",
+   "label": {
+    "en": "Provisioning · UK",
+    "ru": "Provisioning · Великобритания",
+    "es": "Provisioning · Reino Unido",
+    "zh": "Provisioning · 英国"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
+  },
+  {
+   "id": "tls-provisioning-gb-org-filter",
+   "query": "ssl.cert.subject.CN:*provisioning* -org:\"Amazon*\" -org:\"Microsoft*\" -org:\"Google*\" country:GB",
+   "classification": "broad-discovery",
+   "label": {
+    "en": "Provisioning · UK organization filter",
+    "ru": "Provisioning · Великобритания с фильтром организаций",
+    "es": "Provisioning · Reino Unido con filtro de organizaciones",
+    "zh": "Provisioning · 英国组织筛选"
+   },
+   "group": "management-infrastructure",
+   "facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+   "source": {
+    "file": "MANAGEMENT-INFRASTRUCTURE.md"
+   }
   }
  ]
 }

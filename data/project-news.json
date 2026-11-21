@@ -1,5 +1,203 @@
 [
   {
+    "id": "icwmp-backport-review-20261122",
+    "date": "2026-11-22",
+    "kind": "disclosure",
+    "title": {
+      "en": "icwmp: checking the six fixes in operator firmware",
+      "ru": "icwmp. Как проверить шесть исправлений в прошивке оператора",
+      "es": "Cómo comprobar las seis correcciones de icwmp en el firmware del operador",
+      "zh": "如何在运营商固件中核对 icwmp 的六项修复"
+    },
+    "body": {
+      "en": "IOPSYS confirmed six fixes on devel in October. The November note links the vendor commits so operators can check which changes reached their firmware.",
+      "ru": "В октябре IOPSYS подтвердила исправления шести уязвимостей в ветке devel. В ноябрьской заметке собраны ссылки, по которым оператор может проверить перенос исправлений в свою прошивку.",
+      "es": "IOPSYS confirmó seis correcciones en la rama devel en octubre. La nota de noviembre enlaza los cambios para que los operadores puedan comprobar su incorporación al firmware.",
+      "zh": "IOPSYS 于十月确认在 devel 分支修复了六项问题。十一月的说明列出对应提交，供运营商核对固件是否包含这些修复。"
+    },
+    "evidence": [
+      {
+        "file": "PUBLIC-DISCLOSURES.md",
+        "anchor": "icwmp-20261122"
+      }
+    ]
+  },
+  {
+    "id": "easycwmp-advisory-20261122",
+    "date": "2026-11-22",
+    "kind": "disclosure",
+    "title": {
+      "en": "EasyCwmp 1.8.6: how the device authenticates its ACS",
+      "ru": "EasyCwmp 1.8.6. Как устройство проверяет свой ACS",
+      "es": "Cómo autentica EasyCwmp 1.8.6 a su ACS",
+      "zh": "EasyCwmp 1.8.6 如何验证 ACS 身份"
+    },
+    "body": {
+      "en": "The project advisory documents ACS identity checks, Connection Request authentication and local privilege boundaries. It gives operators checks for their own firmware.",
+      "ru": "В бюллетене разобраны проверка подлинности ACS, авторизация входящих Connection Request и локальное повышение привилегий. Для операторов приведены проверки на собственной прошивке.",
+      "es": "El aviso describe la verificación del ACS, la autenticación de Connection Request y los privilegios locales. Incluye comprobaciones para el firmware de cada operador.",
+      "zh": "公告说明 ACS 身份验证、连接请求认证及本地权限问题，并列出供运营商检查自身固件的步骤。"
+    },
+    "evidence": [
+      {
+        "file": "PUBLIC-DISCLOSURES.md",
+        "anchor": "easycwmp-20261122"
+      }
+    ]
+  },
+  {
+    "id": "tplink-archer-vr-three-builds",
+    "date": "2026-11-21",
+    "kind": "research",
+    "title": {
+      "en": "Two more Archer VR builds carry the Works HTTP signature",
+      "ru": "Ещё две сборки Archer VR содержат HTTP-сигнатуру Works",
+      "es": "Dos versiones más de Archer VR contienen la firma HTTP de Works",
+      "zh": "另两版 Archer VR 固件含有 Works HTTP 签名"
+    },
+    "body": {
+      "en": "The official Australian VR1600v V1 and European VR600v V2 images contain the same three HTTP markers previously checked on VR1600v V2. Each specimen now has an extracted binary hash and a link to its firmware. All three use the existing atlas query.",
+      "ru": "В официальных образах VR1600v V1 для Австралии и VR600v V2 для Европы найдены те же три HTTP-маркера, что и на VR1600v V2. В карточках указаны хеши бинарников и ссылки на прошивки. Для трёх образцов используется один существующий запрос атласа.",
+      "es": "Las imágenes oficiales del VR1600v V1 australiano y del VR600v V2 europeo contienen los tres marcadores HTTP observados en VR1600v V2. Cada ficha incluye el hash del binario y el enlace al firmware. Una misma consulta cubre las tres muestras.",
+      "zh": "澳大利亚版 VR1600v V1 和欧洲版 VR600v V2 的官方固件均含有先前在 VR1600v V2 中验证的三个 HTTP 标记。样本记录附有文件哈希和固件链接。三者沿用同一条图集查询。"
+    },
+    "related": {
+      "lines": [
+        "tr069-http-server"
+      ]
+    },
+    "links": [
+      {
+        "label": "TP-Link · Archer VR1600v V1 (AU)",
+        "url": "https://www.tp-link.com/au/support/download/archer-vr1600v/v1/"
+      },
+      {
+        "label": "TP-Link · Archer VR600v V2 (EU)",
+        "url": "https://www.tp-link.com/it/support/download/archer-vr600v/v2/"
+      }
+    ],
+    "evidence": [
+      {
+        "file": "FINGERPRINTS.md",
+        "anchor": "archer-vr-three-builds"
+      }
+    ]
+  },
+  {
+    "id": "gsoap-2-8-147-keepalive",
+    "date": "2026-11-09",
+    "kind": "fleet",
+    "title": {
+      "ru": "gSOAP 2.8.147 исправляет регрессию HTTP keep-alive",
+      "en": "gSOAP 2.8.147 fixes an HTTP keep-alive regression",
+      "es": "gSOAP 2.8.147 corrige una regresión de HTTP keep-alive",
+      "zh": "gSOAP 2.8.147 修复 HTTP 长连接回归问题"
+    },
+    "body": {
+      "ru": "По журналу Genivia, регрессия затронула версии 2.8.143–2.8.146. Исправление касается повторного использования HTTP-соединения для следующих сообщений. Для коммерческой сборки 2.8.147E Genivia опубликовала SHA-256 архива.",
+      "en": "Genivia traces the regression to versions 2.8.143–2.8.146. The fix concerns reuse of an HTTP connection for subsequent messages. Genivia also published the archive SHA-256 for the commercial 2.8.147E build.",
+      "es": "Genivia sitúa la regresión en las versiones 2.8.143–2.8.146. La corrección afecta a la reutilización de una conexión HTTP para mensajes posteriores. Genivia también publicó el SHA-256 del archivo comercial 2.8.147E.",
+      "zh": "据 Genivia 的更新日志，受此回归影响的是 2.8.143 至 2.8.146 版本。此次修复涉及后续消息复用同一 HTTP 连接的行为。Genivia 还公布了商业版 2.8.147E 压缩包的 SHA-256。"
+    },
+    "links": [
+      {
+        "label": "Genivia · changelog",
+        "url": "https://www.genivia.com/changelog.html"
+      },
+      {
+        "label": "Genivia · SHA-256",
+        "url": "https://www.genivia.com/downloads.html"
+      }
+    ],
+    "related": {
+      "lines": [
+        "gsoap-park"
+      ]
+    }
+  },
+  {
+    "id": "zyxel-november-cpe-advisories",
+    "date": "2026-11-17",
+    "kind": "fleet",
+    "title": {
+      "ru": "Zyxel выпустила два бюллетеня по операторским CPE",
+      "en": "Zyxel issues two advisories for broadband CPE",
+      "es": "Zyxel publica dos avisos para equipos de banda ancha",
+      "zh": "合勤发布两份宽带终端安全公告"
+    },
+    "body": {
+      "ru": "Первый бюллетень касается проверки прав при настройке SNMP в заказной прошивке Ethernet-шлюза EE5301-00 (CVE-2026-12487). Второй охватывает ряд DSL- и Ethernet-устройств, оптических терминалов и Wi-Fi-расширителей (CVE-2026-79614 и CVE-2026-86676). Для сверки конкретного устройства Zyxel приводит модели и версии прошивок.",
+      "en": "One advisory covers SNMP authorization in customized EE5301-00 Ethernet gateway firmware (CVE-2026-12487). The other covers selected DSL and Ethernet CPE, optical terminals and wireless extenders (CVE-2026-79614 and CVE-2026-86676). Zyxel lists the models and firmware versions for device owners to check.",
+      "es": "Un aviso trata la autorización de SNMP en el firmware personalizado de la pasarela Ethernet EE5301-00 (CVE-2026-12487). El segundo abarca determinados equipos DSL y Ethernet, terminales ópticos y extensores inalámbricos (CVE-2026-79614 y CVE-2026-86676). Zyxel detalla los modelos y las versiones de firmware.",
+      "zh": "第一份公告涉及 EE5301-00 以太网网关定制固件的 SNMP 授权检查（CVE-2026-12487）。第二份涉及部分 DSL 和以太网终端、光网络终端及无线扩展器（CVE-2026-79614、CVE-2026-86676）。设备所有者可按公告中的型号和固件版本核对。"
+    },
+    "links": [
+      {
+        "label": "Zyxel · EE5301-00",
+        "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-incorrect-authorization-vulnerability-in-the-snmp-parameter-of-customized-firmware-for-the-ee5301-00-ethernet-cpe-11-17-2026"
+      },
+      {
+        "label": "Zyxel · DSL / Ethernet / ONT",
+        "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-out-of-bounds-write-and-post-authentication-command-injection-vulnerabilities-in-certain-dsl-ethernet-cpe-fiber-onts-and-wireless-extenders-11-17-2026"
+      }
+    ]
+  },
+  {
+    "id": "bbf-tr181-amendment-22",
+    "date": "2026-11-09",
+    "kind": "fleet",
+    "title": {
+      "ru": "TR-181 2.22 описывает, как CPE запрашивает сертификат",
+      "en": "TR-181 2.22 documents device certificate requests",
+      "es": "TR-181 2.22 documenta cómo solicita certificados el CPE",
+      "zh": "TR-181 2.22 说明终端如何申请证书"
+    },
+    "body": {
+      "ru": "Broadband Forum обновил общую модель данных для CWMP и USP. В главе об управлении сертификатами появился разбор запроса на подпись (CSR). Для веб-интерфейса устройства модель описывает журнал доступа и ограничение числа сеансов.",
+      "en": "Broadband Forum updated the device data model shared by CWMP and USP. The certificate management chapter now covers signing requests (CSRs). The model also describes access logs and session limits for the device web interface.",
+      "es": "Broadband Forum actualizó el modelo de datos común a CWMP y USP. El capítulo de certificados incorpora las solicitudes de firma (CSR). El modelo también describe registros de acceso y límites de sesiones para la interfaz web del equipo.",
+      "zh": "宽带论坛更新了 CWMP 与 USP 共用的设备数据模型。证书管理章节新增了证书签名请求（CSR）的说明。模型还描述了设备 Web 界面的访问日志和会话数限制。"
+    },
+    "links": [
+      {
+        "label": "Broadband Forum · TR-181",
+        "url": "https://device-data-model.broadband-forum.org/index.htm"
+      },
+      {
+        "label": "Broadband Forum · Device:2.22",
+        "url": "https://usp-data-models.broadband-forum.org/index.html"
+      }
+    ]
+  },
+  {
+    "id": "bbf-usp-controller-kickoff",
+    "date": "2026-11-20",
+    "kind": "fleet",
+    "title": {
+      "ru": "Broadband Forum начинает разработку USP-контроллера",
+      "en": "Broadband Forum starts work on a USP controller",
+      "es": "Broadband Forum inicia el desarrollo de un controlador USP",
+      "zh": "宽带论坛启动 USP 控制器项目"
+    },
+    "body": {
+      "ru": "На 20 ноября Broadband Forum назначил первую встречу проекта OB-USP-C. Команда разрабатывает контроллер для тестирования приложений на prplOS и RDK-B. На стороне устройств prplOS 5.1 и 5.2 уже включают агент OBUSPA 11.0.2.",
+      "en": "Broadband Forum scheduled the OB-USP-C kickoff for 20 November. The project aims to give developers a controller for testing applications on prplOS and RDK-B. On the device side, prplOS 5.1 and 5.2 already ship OBUSPA 11.0.2.",
+      "es": "Broadband Forum programó para el 20 de noviembre la reunión inicial de OB-USP-C. El proyecto ofrecerá un controlador para probar aplicaciones en prplOS y RDK-B. En los dispositivos, prplOS 5.1 y 5.2 ya incluyen OBUSPA 11.0.2.",
+      "zh": "宽带论坛将 OB-USP-C 项目启动会定于 11 月 20 日。项目计划为开发者提供控制器，用于测试 prplOS 和 RDK-B 上的应用。终端侧的 prplOS 5.1 和 5.2 已包含 OBUSPA 11.0.2。"
+    },
+    "links": [
+      {
+        "label": "Broadband Forum · Fall 2026",
+        "url": "https://www.broadband-forum.org/public/events/fall-2026-member-meeting-roundup"
+      }
+    ],
+    "related": {
+      "lines": [
+        "rdk-b-ccsptr069pa"
+      ]
+    }
+  },
+  {
     "id": "cisco-ccsp-changing-owners",
     "date": "2026-11-12",
     "kind": "investigation",

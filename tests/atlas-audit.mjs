@@ -663,8 +663,11 @@ test('related-news-selection', 'Related stories use explicit line, country and e
   expect(!c.run('newsSelection().active')&&c.run('relatedNewsItems().length')===0,'Default map has implicit news matches');
   c.run('S.lines.add("gsoap-park");renderNews()');
   expect(c.element('#relatedNewsGrid').innerHTML.includes('lines=gsoap-park'),'Preview href uses stale URL filters');
-  expect(c.run('relatedNewsItems()[0].item.id')==='gsoap-same-version-different-bytes','Latest component story missing');
-  expect(c.element('#relatedNewsGrid').innerHTML.includes('data-news-open="gsoap-same-version-different-bytes"'),'Component preview missing');
+  const gsoapStories = data.news.filter(item => item.related?.lines?.includes('gsoap-park'));
+  const first = c.run('relatedNewsItems()[0].item');
+  expect(gsoapStories.length >= 2 && gsoapStories.every(item => item.date <= first.date),
+    'Latest component story missing');
+  expect(c.element('#relatedNewsGrid').innerHTML.includes(`data-news-open="${first.id}"`), 'Component preview missing');
   expect(!c.run('relatedNewsItems().some(r=>r.item.id==="wpsplinter-broadcom-operator-cpe")'),'Unrelated Broadcom story leaks into gSOAP');
   c.run('S.lines.clear();S.geo.add("c:BE")');
   expect(c.run('relatedNewsItems().some(r=>r.item.id==="wpsplinter-broadcom-operator-cpe")'),'Country association missing');

@@ -177,11 +177,11 @@ SHA-256: `3b1877d457726ff84b6eb4bc79ca9592c2472072f677b5c0c7dd803470e67334`.
 Research: [NOTES.md](NOTES.md)
 
 <a id="tplink-works-openagent"></a>
-## TP-Link Archer VR1600v V2 · Works Systems openagent lineage
+## TP-Link Archer VR · Works Systems openagent lineage
 
-The inspected Archer VR1600v V2 handler belongs to the Works Systems openagent code family. Corresponding function names and the 401 header template link it to the public GPL source.
+Three Archer VR firmware builds contain the same Server string and two HTTP response headers in cwmp. The VR1600v V2 code comparison anchors the Works Systems lineage.
 
-Reviewed: **2026-11-11**.
+Reviewed: **2026-11-21**.
 
 Atlas lines: `tr069-http-server`.
 
@@ -207,4 +207,24 @@ Commit: `272e8bbe56907d3d89e8409f4de1552b63055823`.
 
 SHA-256: `7fff1cfcb61b21424aedf9eec8bcedf02cc701532c1a2ffa447cf8e2e8cb0f7c`.
 
-Research: [FINGERPRINTS.md](FINGERPRINTS.md#tplink-works-lineage) · [NOTES.md](NOTES.md#section-9.34)
+### [Archer VR1600v V1 (AU) · /usr/bin/cwmp](https://static.tp-link.com/upload/firmware/2026/202604/20260408/Archer_VR1600vV1_2.1.0_0.9.1_up_boot%28260318%29_2026-03-18_16.40.26.bin.zip)
+
+Type: firmware binary.
+
+Fingerprint: `tr069 http server @ 0x1ab28; Vary: accept-language @ 0x1abd4; Accept-Ranges: bytes @ 0x1abeb`.
+
+Version: `2.1.0 Build 260318`.
+
+SHA-256: `1daf4c9e9030c0f25eb4669a17dfd8ff6f0e61d8727aec2d15e209505fd129e3`.
+
+### [Archer VR600v V2 (EU) · /usr/bin/cwmp](https://static.tp-link.com/upload/firmware/2022/202201/20220113/Archer_VR600v%28EU%29_v2_220112.zip)
+
+Type: firmware binary.
+
+Fingerprint: `tr069 http server @ 0x17e48; Vary: accept-language @ 0x17ef4; Accept-Ranges: bytes @ 0x17f0b`.
+
+Version: `1.2.0 Build 220112`.
+
+SHA-256: `20989d127a9bccfeea3adecfa2b939a84141d192cb248483faa550c1d4a8e107`.
+
+Research: [FINGERPRINTS.md](FINGERPRINTS.md#tplink-works-lineage) · [NOTES.md](NOTES.md#section-9.34) · [FINGERPRINTS.md](FINGERPRINTS.md#archer-vr-three-builds)

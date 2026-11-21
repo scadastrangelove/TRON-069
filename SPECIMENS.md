@@ -4,7 +4,7 @@ Inspected firmware, source trees, bounded negative results and reported leads.
 Related atlas lines identify the research question. Partial, negative and pending
 records do not assign a device to a measured fleet.
 
-Reviewed: **2026-11-11**. 15 records.
+Reviewed: **2026-11-21**. 19 records.
 
 [Browse in the atlas](https://scadastrangelove.github.io/TRON-069/#lang=en&tab=wanted)
 
@@ -19,7 +19,7 @@ Reviewed: **2026-11-11**. 15 records.
 | [Huawei EG8145V5](#huawei-eg8145v5) | Firmware image | Awaiting verification | Reported lead |
 | [D-Link DIR-615 · AthSDK GPL](#dir615-openagent) | Source code | Match in sample | Artifact checked |
 | [ASUS asuswrt · OneAgent TR](#asus-oneagent) | Source code | Match in sample | Artifact checked |
-| [Technicolor TG789vac · TIM](#technicolor-tg789vac) | Binary / dump | Scoped negative | Published research note |
+| [Technicolor TG789vac v2 · MST](#technicolor-tg789vac) | Binary / dump | Scoped negative | Published research note |
 | [ZyXEL VMG1312-B10A](#zyxel-vmg1312) | Binary / dump | Match in sample | Artifact checked |
 | [ZyXEL C1000Z · CenturyLink](#zyxel-c1000z) | Binary / dump | Match in sample | Published research note |
 | [ZyXEL C1100Z · CenturyLink](#zyxel-c1100z) | Binary / dump | Match in sample | Published research note |
@@ -27,6 +27,10 @@ Reviewed: **2026-11-11**. 15 records.
 | [Nokia FastMile 5G Gateway 3.2](#nokia-fastmile-32) | Binary / dump | Match in sample | Artifact checked |
 | [Arcadyan ARV7519RW22 · Orange](#arcadyan-arv7519rw22) | Firmware container | Partial extraction | Reported lead |
 | [Speedport W723V](#speedport-w723v) | Firmware image | Scoped negative | Reported lead |
+| [Sercomm RV6699 v4-RT](#sercomm-rv6699v4rt) | Binary / dump | Scoped negative | Published research note |
+| [ZTE F670L · V9.0.11P1N40](#zte-f670l-p1n40-cspd) | Binary / dump | Scoped negative | Published research note |
+| [TP-Link Archer VR1600v V1 (AU)](#tplink-vr1600v-v1) | Firmware image | Match in sample | Artifact checked |
+| [TP-Link Archer VR600v V2 (EU)](#tplink-vr600v-v2) | Firmware image | Match in sample | Artifact checked |
 
 <a id="tplink-vr1600v-v2"></a>
 ## TP-Link Archer VR1600v V2
@@ -46,17 +50,19 @@ Research: [FINGERPRINTS.md](FINGERPRINTS.md#tplink-works-lineage).
 <a id="zte-h108n"></a>
 ## ZTE ZXHN H108N
 
-The inspected httpd and cspd anchor CPE-SERVER/1.0 and cpe@zte.com. Local extracted-file hashes are recorded; the exact source archive and version still need a public citation.
+The sample notes identify the build as FV251T6TR1. Both httpd and cspd contain cpe@zte.com; httpd also contains CPE-SERVER/1.0. Both extracted hashes were rechecked.
 
 Result: **Match in sample**. Evidence: Published research note.
 
 Related research: `cpe-server-1-0`, `zte`, `mini-web-server-1-0-zte-corp`.
 
+Version: `ZTE_ZXHN_H108N_HV20_FV251T6TR1_20131118`.
+
 - Extracted `bin/httpd` — SHA-256 `ed2d28b7557ce5f4ced8d4ba46574e188953d383a075dd9e373da915160bfb91`.
 
 - Extracted `cspd` — SHA-256 `951876f5be0b174f59e3e4d223f42ec94ca0d7036eb4ed4d11cc64c4f8eaddd1`.
 
-Still needed: public artifact source, exact release / revision.
+Still needed: public artifact source.
 
 Research: [NOTES.md](NOTES.md#section-9.17).
 
@@ -134,7 +140,7 @@ Related research: `tr069-client`.
 Research: [DEANON-TR069CLIENT.md](DEANON-TR069CLIENT.md#public-evidence).
 
 <a id="technicolor-tg789vac"></a>
-## Technicolor TG789vac · TIM
+## Technicolor TG789vac v2 · MST
 
 The inspected image used port 51007 and lacked the observed Gateway realm. It does not close attribution of the Gateway:7170 population. This is a binary review, not source-code proof.
 
@@ -142,7 +148,11 @@ Result: **Scoped negative**. Evidence: Published research note.
 
 Related research: `gateway-realm`.
 
-Still needed: public artifact source, exact release / revision, binary hash.
+Version: `MST.TG789vac.v2-17.2.278`.
+
+- Extracted `cwmpd` — SHA-256 `3b1de1853a16a2d109851c9887b559b5da065d6bfda4bbeabb6415245ec65301`.
+
+Still needed: public artifact source.
 
 Research: [ACS-HUNT.md](ACS-HUNT.md) · [ACS-URL-MINING.md](ACS-URL-MINING.md).
 
@@ -238,3 +248,65 @@ Related research: `dt-speedport-sdk`.
 Still needed: public artifact source, hardware variant, exact release / revision, binary hash.
 
 Research: [FINGERPRINTS.md](FINGERPRINTS.md#specimen-review-20261111).
+
+<a id="sercomm-rv6699v4rt"></a>
+## Sercomm RV6699 v4-RT
+
+An exact ASCII search of the 485,132-byte cwmp executable found neither Sercomm CPE Authentication nor TR069 Client. This check covers that file only.
+
+Result: **Scoped negative**. Evidence: Published research note.
+
+Related research: `sercomm-cpe-authentication`, `tr069-client`.
+
+- Extracted `usr/bin/cwmp` — SHA-256 `1571cb63f796969bbcd3fd954eefff64f1a0dd5359d44a75eb3bf0be816eb175`.
+
+Still needed: public artifact source, exact release / revision.
+
+Research: [FINGERPRINTS.md](FINGERPRINTS.md#sample-literal-checks-20261121).
+
+<a id="zte-f670l-p1n40-cspd"></a>
+## ZTE F670L · V9.0.11P1N40
+
+An exact ASCII search of this build’s ARM cspd executable found neither cpe@zte.com nor CPE-SERVER/1.0. The inventory records the earlier P3N4D and P1N36 images separately.
+
+Result: **Scoped negative**. Evidence: Published research note.
+
+Related research: `zte`, `cpe-server-1-0`.
+
+Version: `V9.0.11P1N40`.
+
+- Extracted `cspd` — SHA-256 `267912935920f3252cc77e431876b39ca29ffa2c871a773fcbdd1f18f4bc2a0d`.
+
+Still needed: public artifact source.
+
+Research: [FINGERPRINTS.md](FINGERPRINTS.md#sample-literal-checks-20261121).
+
+<a id="tplink-vr1600v-v1"></a>
+## TP-Link Archer VR1600v V1 (AU)
+
+The official image contains all three HTTP markers in /usr/bin/cwmp. The offsets and extracted file hash are listed below.
+
+Result: **Match in sample**. Evidence: Artifact checked.
+
+Related research: `tr069-http-server`.
+
+Version: `2.1.0 Build 260318`.
+
+- [Archer VR1600v V1 (AU) · /usr/bin/cwmp](https://static.tp-link.com/upload/firmware/2026/202604/20260408/Archer_VR1600vV1_2.1.0_0.9.1_up_boot%28260318%29_2026-03-18_16.40.26.bin.zip) — SHA-256 `1daf4c9e9030c0f25eb4669a17dfd8ff6f0e61d8727aec2d15e209505fd129e3`.
+
+Research: [FINGERPRINTS.md](FINGERPRINTS.md#archer-vr-three-builds).
+
+<a id="tplink-vr600v-v2"></a>
+## TP-Link Archer VR600v V2 (EU)
+
+The official image contains all three HTTP markers in /usr/bin/cwmp. The offsets and extracted file hash are listed below.
+
+Result: **Match in sample**. Evidence: Artifact checked.
+
+Related research: `tr069-http-server`.
+
+Version: `1.2.0 Build 220112`.
+
+- [Archer VR600v V2 (EU) · /usr/bin/cwmp](https://static.tp-link.com/upload/firmware/2022/202201/20220113/Archer_VR600v%28EU%29_v2_220112.zip) — SHA-256 `20989d127a9bccfeea3adecfa2b939a84141d192cb248483faa550c1d4a8e107`.
+
+Research: [FINGERPRINTS.md](FINGERPRINTS.md#archer-vr-three-builds).

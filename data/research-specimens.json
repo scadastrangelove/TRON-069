@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_at": "2026-11-11",
+  "reviewed_at": "2026-11-21",
   "items": [
     {
       "id": "tplink-vr1600v-v2",
@@ -45,13 +45,13 @@
         "zte",
         "mini-web-server-1-0-zte-corp"
       ],
-      "version": null,
-      "reviewed_at": "2026-11-11",
+      "version": "ZTE_ZXHN_H108N_HV20_FV251T6TR1_20131118",
+      "reviewed_at": "2026-11-21",
       "summary": {
-        "en": "The inspected httpd and cspd anchor CPE-SERVER/1.0 and cpe@zte.com. Local extracted-file hashes are recorded; the exact source archive and version still need a public citation.",
-        "ru": "Исследованные httpd и cspd подтверждают CPE-SERVER/1.0 и cpe@zte.com. Хеши извлечённых файлов записаны; точный архив и версия ещё требуют публичной ссылки.",
-        "es": "Los httpd y cspd inspeccionados confirman CPE-SERVER/1.0 y cpe@zte.com. Se registran los hashes extraídos; falta citar públicamente el archivo y la versión exactos.",
-        "zh": "所检查的 httpd 和 cspd 为 CPE-SERVER/1.0 与 cpe@zte.com 提供样本证据。已记录提取文件哈希，仍需补充确切固件包及版本的公开来源。"
+        "en": "The sample notes identify the build as FV251T6TR1. Both httpd and cspd contain cpe@zte.com; httpd also contains CPE-SERVER/1.0. Both extracted hashes were rechecked.",
+        "ru": "В записях об образце указана сборка FV251T6TR1. Строка cpe@zte.com есть в httpd и cspd, а CPE-SERVER/1.0 — в httpd. Хеши обоих файлов сверены повторно.",
+        "es": "Las notas del ejemplar indican la compilación FV251T6TR1. Tanto httpd como cspd contienen cpe@zte.com y httpd contiene también CPE-SERVER/1.0. Se verificaron ambos hashes.",
+        "zh": "样本记录标注的构建版本为 FV251T6TR1。httpd 和 cspd 均含 cpe@zte.com，httpd 还含 CPE-SERVER/1.0。两个文件的哈希均已复核。"
       },
       "sources": [
         {
@@ -60,8 +60,7 @@
         }
       ],
       "missing": [
-        "source",
-        "version"
+        "source"
       ],
       "artifact_refs": [],
       "files": [
@@ -256,15 +255,15 @@
     },
     {
       "id": "technicolor-tg789vac",
-      "title": "Technicolor TG789vac · TIM",
+      "title": "Technicolor TG789vac v2 · MST",
       "kind": "binary",
       "status": "negative",
       "verification": "documented",
       "lines": [
         "gateway-realm"
       ],
-      "version": null,
-      "reviewed_at": "2026-11-11",
+      "version": "MST.TG789vac.v2-17.2.278",
+      "reviewed_at": "2026-11-21",
       "summary": {
         "en": "The inspected image used port 51007 and lacked the observed Gateway realm. It does not close attribution of the Gateway:7170 population. This is a binary review, not source-code proof.",
         "ru": "Исследованный образ использовал порт 51007 и не содержал наблюдаемый realm Gateway. Он не закрывает атрибуцию выборки Gateway:7170. Это анализ бинарника, а не доказательство по исходникам.",
@@ -280,12 +279,15 @@
         }
       ],
       "missing": [
-        "source",
-        "version",
-        "hash"
+        "source"
       ],
       "artifact_refs": [],
-      "files": []
+      "files": [
+        {
+          "name": "cwmpd",
+          "sha256": "3b1de1853a16a2d109851c9887b559b5da065d6bfda4bbeabb6415245ec65301"
+        }
+      ]
     },
     {
       "id": "zyxel-vmg1312",
@@ -520,6 +522,141 @@
         "hash"
       ],
       "artifact_refs": [],
+      "files": []
+    },
+    {
+      "id": "sercomm-rv6699v4rt",
+      "title": "Sercomm RV6699 v4-RT",
+      "version": null,
+      "kind": "binary",
+      "status": "negative",
+      "verification": "documented",
+      "lines": [
+        "sercomm-cpe-authentication",
+        "tr069-client"
+      ],
+      "reviewed_at": "2026-11-21",
+      "summary": {
+        "ru": "В извлечённом cwmp (485 132 байта) поиск точных ASCII-строк Sercomm CPE Authentication и TR069 Client дал ноль совпадений. Проверен только этот исполняемый файл.",
+        "en": "An exact ASCII search of the 485,132-byte cwmp executable found neither Sercomm CPE Authentication nor TR069 Client. This check covers that file only.",
+        "es": "La búsqueda literal en ASCII en el ejecutable cwmp de 485 132 bytes no encontró Sercomm CPE Authentication ni TR069 Client. La comprobación abarca solo este archivo.",
+        "zh": "在 485,132 字节的 cwmp 可执行文件中，按 ASCII 精确检索未发现 Sercomm CPE Authentication 或 TR069 Client。本次检查仅涵盖该文件。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "sample-literal-checks-20261121"
+        }
+      ],
+      "missing": [
+        "source",
+        "version"
+      ],
+      "artifact_refs": [],
+      "files": [
+        {
+          "name": "usr/bin/cwmp",
+          "sha256": "1571cb63f796969bbcd3fd954eefff64f1a0dd5359d44a75eb3bf0be816eb175"
+        }
+      ]
+    },
+    {
+      "id": "zte-f670l-p1n40-cspd",
+      "title": "ZTE F670L · V9.0.11P1N40",
+      "version": "V9.0.11P1N40",
+      "kind": "binary",
+      "status": "negative",
+      "verification": "documented",
+      "lines": [
+        "zte",
+        "cpe-server-1-0"
+      ],
+      "reviewed_at": "2026-11-21",
+      "summary": {
+        "ru": "В ARM-бинарнике cspd этой сборки точный поиск ASCII-строк cpe@zte.com и CPE-SERVER/1.0 дал ноль совпадений. Ранее проверенные образы P3N4D и P1N36 описаны отдельно.",
+        "en": "An exact ASCII search of this build’s ARM cspd executable found neither cpe@zte.com nor CPE-SERVER/1.0. The inventory records the earlier P3N4D and P1N36 images separately.",
+        "es": "La búsqueda literal en ASCII en el ejecutable ARM cspd de esta versión no encontró cpe@zte.com ni CPE-SERVER/1.0. Las imágenes P3N4D y P1N36 tienen una ficha aparte.",
+        "zh": "在此版本的 ARM cspd 可执行文件中，按 ASCII 精确检索未发现 cpe@zte.com 或 CPE-SERVER/1.0。之前检查的 P3N4D 和 P1N36 镜像单独记录。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "sample-literal-checks-20261121"
+        }
+      ],
+      "missing": [
+        "source"
+      ],
+      "artifact_refs": [],
+      "files": [
+        {
+          "name": "cspd",
+          "sha256": "267912935920f3252cc77e431876b39ca29ffa2c871a773fcbdd1f18f4bc2a0d"
+        }
+      ]
+    },
+    {
+      "id": "tplink-vr1600v-v1",
+      "title": "TP-Link Archer VR1600v V1 (AU)",
+      "kind": "image",
+      "status": "matched",
+      "verification": "reproduced",
+      "lines": [
+        "tr069-http-server"
+      ],
+      "version": "2.1.0 Build 260318",
+      "reviewed_at": "2026-11-21",
+      "summary": {
+        "en": "The official image contains all three HTTP markers in /usr/bin/cwmp. The offsets and extracted file hash are listed below.",
+        "ru": "В официальном образе все три HTTP-маркера найдены в /usr/bin/cwmp. Приведены смещения строк и хеш файла.",
+        "es": "La imagen oficial contiene los tres marcadores HTTP en /usr/bin/cwmp. Se indican sus posiciones y el hash del archivo.",
+        "zh": "官方镜像的 /usr/bin/cwmp 含有全部三个 HTTP 标记。下方列出偏移量和文件哈希。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "archer-vr-three-builds"
+        }
+      ],
+      "missing": [],
+      "artifact_refs": [
+        {
+          "attribution": "tplink-works-openagent",
+          "title": "Archer VR1600v V1 (AU) · /usr/bin/cwmp"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "tplink-vr600v-v2",
+      "title": "TP-Link Archer VR600v V2 (EU)",
+      "kind": "image",
+      "status": "matched",
+      "verification": "reproduced",
+      "lines": [
+        "tr069-http-server"
+      ],
+      "version": "1.2.0 Build 220112",
+      "reviewed_at": "2026-11-21",
+      "summary": {
+        "en": "The official image contains all three HTTP markers in /usr/bin/cwmp. The offsets and extracted file hash are listed below.",
+        "ru": "В официальном образе все три HTTP-маркера найдены в /usr/bin/cwmp. Приведены смещения строк и хеш файла.",
+        "es": "La imagen oficial contiene los tres marcadores HTTP en /usr/bin/cwmp. Se indican sus posiciones y el hash del archivo.",
+        "zh": "官方镜像的 /usr/bin/cwmp 含有全部三个 HTTP 标记。下方列出偏移量和文件哈希。"
+      },
+      "sources": [
+        {
+          "file": "FINGERPRINTS.md",
+          "anchor": "archer-vr-three-builds"
+        }
+      ],
+      "missing": [],
+      "artifact_refs": [
+        {
+          "attribution": "tplink-works-openagent",
+          "title": "Archer VR600v V2 (EU) · /usr/bin/cwmp"
+        }
+      ],
       "files": []
     }
   ]

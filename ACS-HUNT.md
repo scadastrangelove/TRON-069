@@ -79,11 +79,18 @@ The research log's organization facets and 200-banner ISP sample supported this
 association. It must not be generalized to every service using realm Gateway.
 
 Technicolor and ADB remain candidates. A later writeup claimed a closed
-Technicolor attribution after inspecting a TIM TG789vac image, but that image
+Technicolor attribution after inspecting a TG789vac image, but that image
 used port 51007 and did not contain the observed Gateway realm. A similar Digest
 template does not resolve those gaps. The claimed integer-overflow explanation
 also confused printf field width with value length. The public atlas therefore
 keeps attribution open and records the 51007 control query separately.
+
+The binary review records `cwmpd` from `MST.TG789vac.v2-17.2.278`
+(197,551 bytes). The [specimen card](SPECIMENS.md#technicolor-tg789vac)
+gives the SHA-256 recorded in that review. The
+[firmware index](https://hack-technicolor.readthedocs.io/en/stable/Repository/#tg789vac-v2-vant-6)
+lists MST as a TG789vac v2 firmware branch. The sample's operator provenance
+remains open.
 
 ## Airties port 9080: CPE web interface, not ACS
 
