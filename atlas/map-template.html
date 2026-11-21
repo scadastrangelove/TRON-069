@@ -532,6 +532,7 @@ dialog b{color:var(--ink)}
 .eco-empty{padding:30px;text-align:center;color:var(--muted);font-size:14px}
 .eco-help{font-size:11px;line-height:1.7;color:var(--muted);margin:12px 0 0}
 .eco-model{margin:22px 0;padding:24px;border:1px solid #dfd8ef;border-radius:18px;background:#f5f1fc;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.eco-scenarios{grid-column:1/-1;min-width:0}.eco-scenarios summary{cursor:pointer;font-weight:700}.eco-scenarios dt{margin-top:12px;font-weight:600}.eco-scenarios dd{margin:4px 0;line-height:1.5}
 .eco-model h2{font-size:21px;margin:8px 0 12px;letter-spacing:-.5px}.eco-model p{font-size:12px;line-height:1.8;color:var(--muted)}
 .eco-flow{display:flex;gap:10px;align-items:center;justify-content:center;font-size:12px}.eco-flow span{padding:15px 12px;background:#fff;border:1px solid #ddd4ef;border-radius:10px;text-align:center}.eco-flow b{font-size:20px;color:#8870ba}
 @media(max-width:1100px){.eco-layout{grid-template-columns:1fr}.eco-detail{position:static}.eco-back{display:block}.eco-visual{padding:18px}.eco-node strong{font-size:13px}}
@@ -842,6 +843,20 @@ dialog b{color:var(--ink)}
  <section class="eco-model">
   <div><div class="eyebrow" data-i18n="eco_bad_model"></div><h2 data-i18n="eco_bad_title"></h2><p data-i18n="eco_bad_text"></p><div id="ecoModelSource"></div></div>
   <div class="eco-flow"><span data-i18n="eco_hostile"></span><b aria-hidden="true">→</b><span>ACS</span><b aria-hidden="true">→</b><span data-i18n="eco_fleet"></span></div>
+  <details class="eco-scenarios">
+   <summary data-i18n="eco_scenarios"></summary>
+   <p data-i18n="eco_scenario_scope"></p>
+   <dl>
+    <dt data-i18n="eco_s1_name"></dt><dd data-i18n="eco_s1_body"></dd>
+    <dt data-i18n="eco_s2_name"></dt><dd data-i18n="eco_s2_body"></dd>
+    <dt data-i18n="eco_s3_name"></dt><dd data-i18n="eco_s3_body"></dd>
+    <dt data-i18n="eco_s4_name"></dt><dd data-i18n="eco_s4_body"></dd>
+    <dt data-i18n="eco_s5_name"></dt><dd data-i18n="eco_s5_body"></dd>
+    <dt data-i18n="eco_s6_name"></dt><dd data-i18n="eco_s6_body"></dd>
+    <dt data-i18n="eco_s7_name"></dt><dd data-i18n="eco_s7_body"></dd>
+   </dl>
+   <a href="https://github.com/scadastrangelove/TRON-069/blob/main/ACS-LANDSCAPE.md#scenario-tracker" data-i18n="eco_scenario_evidence"></a>
+  </details>
  </section>
 </section>
 

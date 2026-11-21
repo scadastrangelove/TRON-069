@@ -16,6 +16,21 @@ The CPE knows its management server address from its configuration. Internet
 visibility describes only part of the ACS attack surface. An ACS absent from a
 public search index may still be reachable by devices on an operator network.
 
+<a id="scenario-tracker"></a>
+## Scenario tracker
+
+Reviewed 22 November 2026. An atlas pair is confirmed only when the same device and management server were tested together and the stated outcome was observed. None of the seven scenarios meets that threshold yet.
+
+| ID | Scenario | Evidence and scope |
+| --- | --- | --- |
+| S1 | Fleet identity impersonation | Partial. Shared key material was found in firmware. Its role in client authentication and acceptance as a different subscriber device remain unverified. [Firmware review](PUBLIC-DISCLOSURES.md#zte-f670l-public-scope). |
+| S2 | ACS denial of service before authentication | Lab-confirmed and published. Device-side traffic caused worker memory growth and reproducible worker crashes. The measured impact concerns availability. [Public availability advisory](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-r976-f8qf-3hrm). |
+| S3 | Firmware substitution during distribution | Separate components. A published report documents unauthorized changes to a file store. A device-side review documents missing integrity checks. Delivery and installation of the changed file on the same managed device remain unverified. [File-store advisory](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-cjv9-7rj9-fp6m). [Device-side review](EASY-CWMP-ADVISORY.md). |
+| S4 | Stored XSS in the operator console | Lab-confirmed and published. A device-supplied value was stored and rendered as unescaped HTML in the operator interface. The test covered the console rendering path. [Published console finding](https://github.com/scadastrangelove/freeacs/issues/4). |
+| S5 | Memory corruption in a SOAP component | Component lab result. Memory corruption was reproduced in an isolated parser test. Reachability through a deployed ACS configuration and code execution there remain unverified. Project lab review; independent verification pending. |
+| S6 | Code execution on the ACS from a device session | Unproven. Reviewed device-facing tests establish availability impact. No test demonstrates control of code execution in the ACS process. |
+| S7 | False device reports influence provisioning | Partial. In a lab configuration, device-supplied data was accepted and stored. A resulting change to a provisioning decision or to another device remains unverified. [Lab observations](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-r976-f8qf-3hrm). |
+
 <a id="management-to-device"></a>
 ## From management authority to device execution
 
