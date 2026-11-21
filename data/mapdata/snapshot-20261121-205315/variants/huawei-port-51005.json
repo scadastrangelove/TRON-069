@@ -1,0 +1,531 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:51005",
+ "total": 106926,
+ "taken": "2026-11-21T21:48:53+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 11,
+   "covered": 106926,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 78,
+   "covered": 106926,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 30,
+   "covered": 106926,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 106926,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 95686,
+   "value": "GR"
+  },
+  {
+   "count": 9723,
+   "value": "MA"
+  },
+  {
+   "count": 806,
+   "value": "BR"
+  },
+  {
+   "count": 703,
+   "value": "AE"
+  },
+  {
+   "count": 2,
+   "value": "EH"
+  },
+  {
+   "count": 1,
+   "value": "CL"
+  },
+  {
+   "count": 1,
+   "value": "EE"
+  },
+  {
+   "count": 1,
+   "value": "IT"
+  },
+  {
+   "count": 1,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "TN"
+  },
+  {
+   "count": 1,
+   "value": "US"
+  }
+ ],
+ "asn": [
+  {
+   "count": 63725,
+   "value": "as1241"
+  },
+  {
+   "count": 31962,
+   "value": "as25472"
+  },
+  {
+   "count": 9722,
+   "value": "as36903"
+  },
+  {
+   "count": 703,
+   "value": "as5384"
+  },
+  {
+   "count": 606,
+   "value": "as8167"
+  },
+  {
+   "count": 110,
+   "value": "as7738"
+  },
+  {
+   "count": 43,
+   "value": "as53006"
+  },
+  {
+   "count": 26,
+   "value": "as16735"
+  },
+  {
+   "count": 4,
+   "value": "as26599"
+  },
+  {
+   "count": 3,
+   "value": "as6713"
+  },
+  {
+   "count": 2,
+   "value": "as266181"
+  },
+  {
+   "count": 2,
+   "value": "as266624"
+  },
+  {
+   "count": 1,
+   "value": "as1257"
+  },
+  {
+   "count": 1,
+   "value": "as20473"
+  },
+  {
+   "count": 1,
+   "value": "as263099"
+  },
+  {
+   "count": 1,
+   "value": "as267236"
+  },
+  {
+   "count": 1,
+   "value": "as268421"
+  },
+  {
+   "count": 1,
+   "value": "as268708"
+  },
+  {
+   "count": 1,
+   "value": "as269312"
+  },
+  {
+   "count": 1,
+   "value": "as269462"
+  },
+  {
+   "count": 1,
+   "value": "as270943"
+  },
+  {
+   "count": 1,
+   "value": "as270983"
+  },
+  {
+   "count": 1,
+   "value": "as271034"
+  },
+  {
+   "count": 1,
+   "value": "as271253"
+  },
+  {
+   "count": 1,
+   "value": "as271369"
+  },
+  {
+   "count": 1,
+   "value": "as274366"
+  },
+  {
+   "count": 1,
+   "value": "as37693"
+  },
+  {
+   "count": 1,
+   "value": "as396982"
+  },
+  {
+   "count": 1,
+   "value": "as52662"
+  },
+  {
+   "count": 1,
+   "value": "as63949"
+  }
+ ],
+ "ports": [
+  {
+   "count": 106926,
+   "value": 51005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 47048,
+   "value": "ADSL LLU POOLS"
+  },
+  {
+   "count": 15642,
+   "value": "Evergy S.A."
+  },
+  {
+   "count": 7134,
+   "value": "RESIDENTIAL CUSTOMER POOL"
+  },
+  {
+   "count": 6032,
+   "value": "Nova Telecommunications & Media Single Member S.A"
+  },
+  {
+   "count": 5860,
+   "value": "FORTHNET LLU POOLS"
+  },
+  {
+   "count": 4392,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 3565,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 3501,
+   "value": "Tellas S.A."
+  },
+  {
+   "count": 2870,
+   "value": "NOVA S.A."
+  },
+  {
+   "count": 2059,
+   "value": "Retail Customer Pool"
+  },
+  {
+   "count": 2020,
+   "value": "ADSL POOLS"
+  },
+  {
+   "count": 1539,
+   "value": "MarocTelecomASDL"
+  },
+  {
+   "count": 871,
+   "value": "ADSL POOL"
+  },
+  {
+   "count": 812,
+   "value": "Hellenic-Telecommunications-and-Telematic-Applications-Company"
+  },
+  {
+   "count": 769,
+   "value": "aDSL dynamic pools"
+  },
+  {
+   "count": 716,
+   "value": "V tal"
+  },
+  {
+   "count": 703,
+   "value": "Emirates Telecommunications Corporation"
+  },
+  {
+   "count": 327,
+   "value": "ADSL LLU POOL"
+  },
+  {
+   "count": 219,
+   "value": "MT-MPLS"
+  },
+  {
+   "count": 184,
+   "value": "INFRA-AW"
+  },
+  {
+   "count": 126,
+   "value": "ADSL SITES KLN"
+  },
+  {
+   "count": 69,
+   "value": "ALGAR TELECOM S/A"
+  },
+  {
+   "count": 60,
+   "value": "Nova Residential Static Pool"
+  },
+  {
+   "count": 57,
+   "value": "STATIC POOL"
+  },
+  {
+   "count": 50,
+   "value": "FORTHNet Noc"
+  },
+  {
+   "count": 34,
+   "value": "Dial-up pools"
+  },
+  {
+   "count": 32,
+   "value": "Athens"
+  },
+  {
+   "count": 30,
+   "value": "Static dial-up pools"
+  },
+  {
+   "count": 20,
+   "value": "Forthnet Static Pools"
+  },
+  {
+   "count": 16,
+   "value": "STREAMING SERVICES"
+  },
+  {
+   "count": 15,
+   "value": "ZFM STATIC IP POOL"
+  },
+  {
+   "count": 14,
+   "value": "Forthnet Dynamic Pools"
+  },
+  {
+   "count": 12,
+   "value": "Industry"
+  },
+  {
+   "count": 10,
+   "value": "MarocTelecom4G"
+  },
+  {
+   "count": 8,
+   "value": "STATIC ADSL POOL"
+  },
+  {
+   "count": 7,
+   "value": "Daphne communications"
+  },
+  {
+   "count": 6,
+   "value": "Dial up pool"
+  },
+  {
+   "count": 6,
+   "value": "Forthnet Static Pool"
+  },
+  {
+   "count": 6,
+   "value": "POOLS ZFM"
+  },
+  {
+   "count": 6,
+   "value": "STATIC DSL POOL"
+  },
+  {
+   "count": 6,
+   "value": "STATIC USERS"
+  },
+  {
+   "count": 5,
+   "value": "FORTHnet NOC"
+  },
+  {
+   "count": 5,
+   "value": "STATIC CUSTOMERS POOL"
+  },
+  {
+   "count": 5,
+   "value": "STATIC xDSL POOL"
+  },
+  {
+   "count": 4,
+   "value": "Pool for static IPv4 customers"
+  },
+  {
+   "count": 4,
+   "value": "Static Dial-up pools"
+  },
+  {
+   "count": 4,
+   "value": "TELEFÔNICA BRASIL S.A"
+  },
+  {
+   "count": 4,
+   "value": "WIFI"
+  },
+  {
+   "count": 3,
+   "value": "NETWORK SERVICES"
+  },
+  {
+   "count": 3,
+   "value": "POOL STATIC IP ZFM"
+  },
+  {
+   "count": 2,
+   "value": "Athens Greece"
+  },
+  {
+   "count": 2,
+   "value": "CONEXAO VIP TELECOM"
+  },
+  {
+   "count": 2,
+   "value": "Cosmos-internet-cafe network"
+  },
+  {
+   "count": 2,
+   "value": "Dial-up Pools"
+  },
+  {
+   "count": 2,
+   "value": "Foundation of Research and Technology Hellas"
+  },
+  {
+   "count": 2,
+   "value": "GOLDEN LINK"
+  },
+  {
+   "count": 2,
+   "value": "STATIC Dial-up pools"
+  },
+  {
+   "count": 2,
+   "value": "trading company"
+  },
+  {
+   "count": 1,
+   "value": "ATI - Agence Tunisienne Internet"
+  },
+  {
+   "count": 1,
+   "value": "Akamai Technologies, Inc."
+  },
+  {
+   "count": 1,
+   "value": "EstNOC OY"
+  },
+  {
+   "count": 1,
+   "value": "FIBINET NETWORKS TELECOMUNICACOES LTDA"
+  },
+  {
+   "count": 1,
+   "value": "FIBRANETBR TECNOLOGIA LTDA"
+  },
+  {
+   "count": 1,
+   "value": "GM Telecom LTDA"
+  },
+  {
+   "count": 1,
+   "value": "Google LLC"
+  },
+  {
+   "count": 1,
+   "value": "LINK BRASIL TELECOMUNICACOES LTDA"
+  },
+  {
+   "count": 1,
+   "value": "NETFLY LTDA ME"
+  },
+  {
+   "count": 1,
+   "value": "PNZ NET SERV. DE COMUNICAÇÃO E MULTIMÍDIA EIRELI"
+  },
+  {
+   "count": 1,
+   "value": "R&E TECNOLOGIA E SERVICOS LTDA - ME"
+  },
+  {
+   "count": 1,
+   "value": "Royal Company Infinity LTDA"
+  },
+  {
+   "count": 1,
+   "value": "STIW Sistema de Telecom. Inf e Wireless LTDA"
+  },
+  {
+   "count": 1,
+   "value": "TELECALL TELECOMUNICACOES"
+  },
+  {
+   "count": 1,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Velho Ponto Net -Telecom"
+  },
+  {
+   "count": 1,
+   "value": "WANFIBX & INETKX INTERNET LTDA"
+  },
+  {
+   "count": 1,
+   "value": "WEBFIBER TELECOMUNICACAO LTDA ­ ME"
+  },
+  {
+   "count": 1,
+   "value": "local authority"
+  },
+  {
+   "count": 1,
+   "value": "web services"
+  }
+ ],
+ "id": "huawei-port-51005",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 51005",
+  "en": "CR port 51005",
+  "es": "Puerto CR 51005",
+  "zh": "CR 端口 51005"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

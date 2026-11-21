@@ -1,0 +1,639 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" \"WWW-Authenticate: Basic\"",
+ "total": 1600,
+ "taken": "2026-11-21T21:48:43+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 23,
+   "covered": 1600,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 55,
+   "covered": 1600,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 44,
+   "covered": 1600,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 25,
+   "covered": 1600,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1303,
+   "value": "CA"
+  },
+  {
+   "count": 162,
+   "value": "IT"
+  },
+  {
+   "count": 53,
+   "value": "MA"
+  },
+  {
+   "count": 20,
+   "value": "US"
+  },
+  {
+   "count": 12,
+   "value": "TW"
+  },
+  {
+   "count": 11,
+   "value": "IR"
+  },
+  {
+   "count": 8,
+   "value": "CN"
+  },
+  {
+   "count": 5,
+   "value": "FR"
+  },
+  {
+   "count": 3,
+   "value": "ID"
+  },
+  {
+   "count": 3,
+   "value": "KR"
+  },
+  {
+   "count": 3,
+   "value": "SG"
+  },
+  {
+   "count": 2,
+   "value": "AE"
+  },
+  {
+   "count": 2,
+   "value": "HK"
+  },
+  {
+   "count": 2,
+   "value": "SE"
+  },
+  {
+   "count": 2,
+   "value": "TR"
+  },
+  {
+   "count": 2,
+   "value": "UA"
+  },
+  {
+   "count": 1,
+   "value": "BE"
+  },
+  {
+   "count": 1,
+   "value": "CH"
+  },
+  {
+   "count": 1,
+   "value": "DK"
+  },
+  {
+   "count": 1,
+   "value": "ES"
+  },
+  {
+   "count": 1,
+   "value": "LT"
+  },
+  {
+   "count": 1,
+   "value": "NZ"
+  },
+  {
+   "count": 1,
+   "value": "TH"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1284,
+   "value": "as5769"
+  },
+  {
+   "count": 161,
+   "value": "as16232"
+  },
+  {
+   "count": 53,
+   "value": "as36903"
+  },
+  {
+   "count": 8,
+   "value": "as13911"
+  },
+  {
+   "count": 7,
+   "value": "as45102"
+  },
+  {
+   "count": 7,
+   "value": "as62969"
+  },
+  {
+   "count": 6,
+   "value": "as20213"
+  },
+  {
+   "count": 6,
+   "value": "as9674"
+  },
+  {
+   "count": 5,
+   "value": "as136907"
+  },
+  {
+   "count": 5,
+   "value": "as17421"
+  },
+  {
+   "count": 5,
+   "value": "as3215"
+  },
+  {
+   "count": 5,
+   "value": "as44244"
+  },
+  {
+   "count": 5,
+   "value": "as62948"
+  },
+  {
+   "count": 4,
+   "value": "as43754"
+  },
+  {
+   "count": 4,
+   "value": "as58519"
+  },
+  {
+   "count": 2,
+   "value": "as12735"
+  },
+  {
+   "count": 2,
+   "value": "as22423"
+  },
+  {
+   "count": 2,
+   "value": "as37963"
+  },
+  {
+   "count": 2,
+   "value": "as4766"
+  },
+  {
+   "count": 2,
+   "value": "as49100"
+  },
+  {
+   "count": 2,
+   "value": "as6128"
+  },
+  {
+   "count": 1,
+   "value": "as12271"
+  },
+  {
+   "count": 1,
+   "value": "as1267"
+  },
+  {
+   "count": 1,
+   "value": "as132268"
+  },
+  {
+   "count": 1,
+   "value": "as15600"
+  },
+  {
+   "count": 1,
+   "value": "as1633"
+  },
+  {
+   "count": 1,
+   "value": "as17621"
+  },
+  {
+   "count": 1,
+   "value": "as28773"
+  },
+  {
+   "count": 1,
+   "value": "as29518"
+  },
+  {
+   "count": 1,
+   "value": "as32444"
+  },
+  {
+   "count": 1,
+   "value": "as3352"
+  },
+  {
+   "count": 1,
+   "value": "as33922"
+  },
+  {
+   "count": 1,
+   "value": "as3462"
+  },
+  {
+   "count": 1,
+   "value": "as398721"
+  },
+  {
+   "count": 1,
+   "value": "as40091"
+  },
+  {
+   "count": 1,
+   "value": "as49824"
+  },
+  {
+   "count": 1,
+   "value": "as53324"
+  },
+  {
+   "count": 1,
+   "value": "as5432"
+  },
+  {
+   "count": 1,
+   "value": "as55990"
+  },
+  {
+   "count": 1,
+   "value": "as5645"
+  },
+  {
+   "count": 1,
+   "value": "as6167"
+  },
+  {
+   "count": 1,
+   "value": "as8434"
+  },
+  {
+   "count": 1,
+   "value": "as9158"
+  },
+  {
+   "count": 1,
+   "value": "as9318"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1286,
+   "value": 8159
+  },
+  {
+   "count": 162,
+   "value": 7080
+  },
+  {
+   "count": 85,
+   "value": 7547
+  },
+  {
+   "count": 43,
+   "value": 8082
+  },
+  {
+   "count": 4,
+   "value": 9090
+  },
+  {
+   "count": 1,
+   "value": 1050
+  },
+  {
+   "count": 1,
+   "value": 1456
+  },
+  {
+   "count": 1,
+   "value": 2226
+  },
+  {
+   "count": 1,
+   "value": 3006
+  },
+  {
+   "count": 1,
+   "value": 4664
+  },
+  {
+   "count": 1,
+   "value": 8099
+  },
+  {
+   "count": 1,
+   "value": 8129
+  },
+  {
+   "count": 1,
+   "value": 8413
+  },
+  {
+   "count": 1,
+   "value": 8532
+  },
+  {
+   "count": 1,
+   "value": 9057
+  },
+  {
+   "count": 1,
+   "value": 9071
+  },
+  {
+   "count": 1,
+   "value": 9183
+  },
+  {
+   "count": 1,
+   "value": 9797
+  },
+  {
+   "count": 1,
+   "value": 12201
+  },
+  {
+   "count": 1,
+   "value": 12288
+  },
+  {
+   "count": 1,
+   "value": 12323
+  },
+  {
+   "count": 1,
+   "value": 14897
+  },
+  {
+   "count": 1,
+   "value": 16037
+  },
+  {
+   "count": 1,
+   "value": 18003
+  },
+  {
+   "count": 1,
+   "value": 33389
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1284,
+   "value": "Videotron Ltee"
+  },
+  {
+   "count": 161,
+   "value": "Telecom Italia Mobile"
+  },
+  {
+   "count": 29,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 18,
+   "value": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
+  },
+  {
+   "count": 8,
+   "value": "Missing Link Internet inc."
+  },
+  {
+   "count": 7,
+   "value": "ABC Allen Business Communications Ltd"
+  },
+  {
+   "count": 6,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 6,
+   "value": "Far EasTone Telecommunication Co., Ltd."
+  },
+  {
+   "count": 6,
+   "value": "Gifford Wireless Inc"
+  },
+  {
+   "count": 6,
+   "value": "MarocTelecomASDL"
+  },
+  {
+   "count": 5,
+   "value": "Air Link Rural Broadband, LLC"
+  },
+  {
+   "count": 5,
+   "value": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+  },
+  {
+   "count": 5,
+   "value": "Iran Cell Service and Communication Company"
+  },
+  {
+   "count": 4,
+   "value": "CHT-Mobile business Group,Chunghwa"
+  },
+  {
+   "count": 3,
+   "value": "Asiatech Data Transmission Co."
+  },
+  {
+   "count": 3,
+   "value": "Huawei Cloud Singapore Region"
+  },
+  {
+   "count": 2,
+   "value": "Aliyun Computing Co., LTD"
+  },
+  {
+   "count": 2,
+   "value": "Korea Telecom"
+  },
+  {
+   "count": 2,
+   "value": "Optimum Online"
+  },
+  {
+   "count": 2,
+   "value": "POP REN"
+  },
+  {
+   "count": 2,
+   "value": "Pishgaman Toseeh Ertebatat Company (Private Joint Stock)"
+  },
+  {
+   "count": 1,
+   "value": "21/F, Ciputra World 1 (DBS Tower), JalanProf. DR. Satrio Kav 3-5, Jakarta 12940, Indonesia"
+  },
+  {
+   "count": 1,
+   "value": "353233 Alberta LTD"
+  },
+  {
+   "count": 1,
+   "value": "Altima Telecom"
+  },
+  {
+   "count": 1,
+   "value": "Asiatech Data Transmission company"
+  },
+  {
+   "count": 1,
+   "value": "BSANN653 Annecy Bloc 1"
+  },
+  {
+   "count": 1,
+   "value": "Bredband2 Customer"
+  },
+  {
+   "count": 1,
+   "value": "CHINA UNICOM Shanghai network"
+  },
+  {
+   "count": 1,
+   "value": "CHT-Mobile Business Group,Chunghwa"
+  },
+  {
+   "count": 1,
+   "value": "Charter Communications Inc"
+  },
+  {
+   "count": 1,
+   "value": "City Wide Communications Inc."
+  },
+  {
+   "count": 1,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 1,
+   "value": "Cybercity A/S xDSL users"
+  },
+  {
+   "count": 1,
+   "value": "Data Communication Business Group,"
+  },
+  {
+   "count": 1,
+   "value": "FTTH Network"
+  },
+  {
+   "count": 1,
+   "value": "Global Technologies of Ukraine LLC"
+  },
+  {
+   "count": 1,
+   "value": "Huawei Cloud Hongkong Region"
+  },
+  {
+   "count": 1,
+   "value": "Huawei Cloud Thailand POP"
+  },
+  {
+   "count": 1,
+   "value": "LOCAL TV AND ELECTRONICS, INC."
+  },
+  {
+   "count": 1,
+   "value": "OXIO"
+  },
+  {
+   "count": 1,
+   "value": "Ownit DHCP Customers"
+  },
+  {
+   "count": 1,
+   "value": "PC \"Astra-net\""
+  },
+  {
+   "count": 1,
+   "value": "POP MAR"
+  },
+  {
+   "count": 1,
+   "value": "POP POI"
+  },
+  {
+   "count": 1,
+   "value": "Proximus NV"
+  },
+  {
+   "count": 1,
+   "value": "Red de servicios IP"
+  },
+  {
+   "count": 1,
+   "value": "SK Broadband Co Ltd"
+  },
+  {
+   "count": 1,
+   "value": "TekSavvy Solutions Inc."
+  },
+  {
+   "count": 1,
+   "value": "TurkNet Iletisim Hizmetleri A.S."
+  },
+  {
+   "count": 1,
+   "value": "TurkNet-DSL"
+  },
+  {
+   "count": 1,
+   "value": "UAB Nacionalinis Telekomunikaciju Tinklas"
+  },
+  {
+   "count": 1,
+   "value": "Velocity Net Limited"
+  },
+  {
+   "count": 1,
+   "value": "Verizon Business"
+  },
+  {
+   "count": 1,
+   "value": "WIND TRE S.P.A."
+  },
+  {
+   "count": 1,
+   "value": "WVVA.net Inc."
+  }
+ ],
+ "id": "tr069-basic",
+ "parent": "tr069-client",
+ "group": "tr069-family",
+ "label": {
+  "ru": "Basic-ответы",
+  "en": "Basic responses",
+  "es": "Respuestas Basic",
+  "zh": "Basic 响应"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

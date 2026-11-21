@@ -1,0 +1,61 @@
+{
+ "dork": "\"authenticate@cwmp\" country:ES",
+ "total": 103,
+ "taken": "2026-11-21T20:56:38+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 103,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 103,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 81,
+   "value": "as35699"
+  },
+  {
+   "count": 18,
+   "value": "as3352"
+  },
+  {
+   "count": 4,
+   "value": "as29119"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 48,
+   "value": "Adamo Telecom Iberia S.A.U"
+  },
+  {
+   "count": 33,
+   "value": "Adamo Telecom Iberia S.A."
+  },
+  {
+   "count": 13,
+   "value": "Red de servicios IP"
+  },
+  {
+   "count": 5,
+   "value": "Red de Servicios IP"
+  },
+  {
+   "count": 4,
+   "value": "Citelia s.a."
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "ES"
+}

@@ -1,5 +1,34 @@
 [
   {
+    "id": "zte-f670l-public-research-scope",
+    "date": "2026-11-22",
+    "kind": "fleet",
+    "title": {
+      "en": "Two independent reviews of ZTE F670L firmware",
+      "ru": "Два независимых исследования прошивок ZTE F670L",
+      "es": "Dos análisis independientes del firmware de ZTE F670L",
+      "zh": "两项独立的中兴 F670L 固件研究"
+    },
+    "body": {
+      "ru": "На штатной F670L V1.1.20P3N4D мы независимо обнаружили проблемы с заводским доступом, хранением секретов, ключами TLS и защитой резервных копий конфигурации. Заводской доступ подтвердили в изолированной эмуляции. 12 октября сообщили ZTE PSIRT, 14 октября получили технический ответ. 27 октября varun935 опубликовал независимый разбор тех же четырёх тем на F670L V9.0.10P1N12A. В трёх августовских CVE указаны F689 и сборки F680V9. Применимость этих CVE к F670L и F6600P остаётся открытой.",
+      "en": "We independently found issues with factory-mode access, stored secrets, TLS keys and configuration-backup protection in stock F670L V1.1.20P3N4D. We reproduced factory-mode access in isolation, reported to ZTE PSIRT on 12 October and received a technical response on 14 October. On 27 October varun935 published independent findings in the same four areas on F670L V9.0.10P1N12A. The August CVE records name F689 and F680V9 builds. Coverage of F670L and F6600P remains unconfirmed.",
+      "es": "En F670L V1.1.20P3N4D identificamos de forma independiente problemas de acceso de fábrica, almacenamiento de secretos, claves TLS y protección de copias de configuración. Reprodujimos el acceso de fábrica en emulación aislada. Informamos a ZTE PSIRT el 12 de octubre y recibimos respuesta técnica el día 14. El 27 de octubre varun935 publicó resultados independientes sobre los mismos cuatro temas en F670L V9.0.10P1N12A. Los CVE de agosto enumeran F689 y versiones F680V9. La inclusión de F670L y F6600P sigue pendiente de confirmación.",
+      "zh": "我们独立研究了 F670L 原厂固件 V1.1.20P3N4D，发现了涉及工厂模式访问、秘密信息存储、TLS 密钥和配置备份保护的问题。我们在隔离仿真环境中复现了工厂模式访问，于 10 月 12 日向中兴 PSIRT 报告，并于 14 日收到技术回复。10 月 27 日，varun935 独立发表了关于 F670L V9.0.10P1N12A 的研究，涉及同样四个方面。八月的 CVE 列出 F689 和 F680V9 构建版本，是否涵盖 F670L 和 F6600P 仍待确认。"
+    },
+    "links": [
+      {
+        "label": "ZTE · CVE-2026-49006",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-49006"
+      }
+    ],
+    "evidence": [
+      {
+        "file": "PUBLIC-DISCLOSURES.md",
+        "anchor": "zte-f670l-public-scope"
+      }
+    ]
+  },
+  {
     "id": "icwmp-backport-review-20261122",
     "date": "2026-11-22",
     "kind": "disclosure",

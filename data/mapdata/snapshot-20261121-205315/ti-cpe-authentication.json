@@ -1,0 +1,77 @@
+{
+ "dork": "\"TI CPE Authentication\"",
+ "total": 32540,
+ "taken": "2026-11-21T20:54:00+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 3,
+   "covered": 32540,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 32540,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 32540,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 32535,
+   "value": "IT"
+  },
+  {
+   "count": 4,
+   "value": "ZA"
+  },
+  {
+   "count": 1,
+   "value": "UA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 32476,
+   "value": "as3269"
+  },
+  {
+   "count": 45,
+   "value": "as1267"
+  },
+  {
+   "count": 12,
+   "value": "as20580"
+  },
+  {
+   "count": 4,
+   "value": "as327782"
+  },
+  {
+   "count": 1,
+   "value": "as24608"
+  },
+  {
+   "count": 1,
+   "value": "as49824"
+  },
+  {
+   "count": 1,
+   "value": "as5602"
+  }
+ ],
+ "ports": [
+  {
+   "count": 32540,
+   "value": 7170
+  }
+ ],
+ "orgs": [],
+ "name": "TI CPE Authentication"
+}

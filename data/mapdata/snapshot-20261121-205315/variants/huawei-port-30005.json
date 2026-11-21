@@ -1,0 +1,219 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:30005",
+ "total": 1904,
+ "taken": "2026-11-21T21:51:13+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 10,
+   "covered": 1904,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 17,
+   "covered": 1904,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 14,
+   "covered": 1904,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1904,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 960,
+   "value": "CW"
+  },
+  {
+   "count": 742,
+   "value": "AU"
+  },
+  {
+   "count": 178,
+   "value": "AR"
+  },
+  {
+   "count": 9,
+   "value": "VE"
+  },
+  {
+   "count": 5,
+   "value": "AE"
+  },
+  {
+   "count": 5,
+   "value": "BR"
+  },
+  {
+   "count": 2,
+   "value": "MX"
+  },
+  {
+   "count": 1,
+   "value": "DE"
+  },
+  {
+   "count": 1,
+   "value": "EE"
+  },
+  {
+   "count": 1,
+   "value": "NL"
+  }
+ ],
+ "asn": [
+  {
+   "count": 960,
+   "value": "as11081"
+  },
+  {
+   "count": 720,
+   "value": "as7545"
+  },
+  {
+   "count": 177,
+   "value": "as7303"
+  },
+  {
+   "count": 22,
+   "value": "as4739"
+  },
+  {
+   "count": 9,
+   "value": "as8048"
+  },
+  {
+   "count": 5,
+   "value": "as15802"
+  },
+  {
+   "count": 3,
+   "value": "as16735"
+  },
+  {
+   "count": 2,
+   "value": "as396982"
+  },
+  {
+   "count": 1,
+   "value": "as1257"
+  },
+  {
+   "count": 1,
+   "value": "as17069"
+  },
+  {
+   "count": 1,
+   "value": "as41436"
+  },
+  {
+   "count": 1,
+   "value": "as52790"
+  },
+  {
+   "count": 1,
+   "value": "as53006"
+  },
+  {
+   "count": 1,
+   "value": "as8151"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1904,
+   "value": 30005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 960,
+   "value": "United Telecommunication Services (UTS)"
+  },
+  {
+   "count": 725,
+   "value": "iiNet Limited"
+  },
+  {
+   "count": 91,
+   "value": "Telecom Argentina S.A."
+  },
+  {
+   "count": 46,
+   "value": "Telecom Personal Bs As"
+  },
+  {
+   "count": 40,
+   "value": "Apolo -Gold-Telecom-Per"
+  },
+  {
+   "count": 9,
+   "value": "AAPT Limited"
+  },
+  {
+   "count": 9,
+   "value": "CANTV Servicios, Venezuela"
+  },
+  {
+   "count": 8,
+   "value": "TPG Internet Pty Ltd"
+  },
+  {
+   "count": 4,
+   "value": "ALGAR TELECOM S/A"
+  },
+  {
+   "count": 4,
+   "value": "Emirates Integrated Telecommunications Company PJSC"
+  },
+  {
+   "count": 2,
+   "value": "Google LLC"
+  },
+  {
+   "count": 1,
+   "value": "CONECTA NET TELECOMUNICAÇÕES LTDA ME"
+  },
+  {
+   "count": 1,
+   "value": "CloudWebManage-EU Kamatera Inc"
+  },
+  {
+   "count": 1,
+   "value": "Coop Telefonica Villa Gesell Ltda"
+  },
+  {
+   "count": 1,
+   "value": "Emirates Integrated Telecommunications Company PJSC (EITC-DU)"
+  },
+  {
+   "count": 1,
+   "value": "EstNOC OY"
+  },
+  {
+   "count": 1,
+   "value": "Uninet S.A. de C.V."
+  }
+ ],
+ "id": "huawei-port-30005",
+ "parent": "huaweihomegateway",
+ "group": "huawei-deployment",
+ "label": {
+  "en": "CR port 30005",
+  "ru": "CR-порт 30005",
+  "es": "Puerto CR 30005",
+  "zh": "CR 端口 30005"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "denominator": null
+}

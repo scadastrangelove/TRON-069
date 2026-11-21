@@ -1,0 +1,67 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:51005 country:EE",
+ "total": 1,
+ "taken": "2026-11-21T21:51:21+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 1,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1,
+   "value": "EE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as1257"
+  }
+ ],
+ "ports": [
+  {
+   "count": 1,
+   "value": 51005
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "EstNOC OY"
+  }
+ ],
+ "id": "huawei-port-51005-ee",
+ "parent": "huaweihomegateway",
+ "group": "huawei-deployment",
+ "label": {
+  "en": "CR port 51005 · EE",
+  "ru": "CR-порт 51005 · EE",
+  "es": "Puerto CR 51005 · EE",
+  "zh": "CR 端口 51005 · EE"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "denominator": null
+}

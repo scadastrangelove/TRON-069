@@ -1,0 +1,111 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:DE port:7547",
+ "total": 41566,
+ "taken": "2026-11-21T21:50:08+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 41566,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 7,
+   "covered": 41566,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 6,
+   "covered": 41566,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 41566,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 41566,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 41008,
+   "value": "as3320"
+  },
+  {
+   "count": 545,
+   "value": "as50670"
+  },
+  {
+   "count": 9,
+   "value": "as206355"
+  },
+  {
+   "count": 2,
+   "value": "as396982"
+  },
+  {
+   "count": 1,
+   "value": "as44034"
+  },
+  {
+   "count": 1,
+   "value": "as680"
+  }
+ ],
+ "ports": [
+  {
+   "count": 41566,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 41008,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 372,
+   "value": "VTEL HOLDINGS LIMITED/JORDAN CO."
+  },
+  {
+   "count": 173,
+   "value": "Company 64d34520KumHKEDa"
+  },
+  {
+   "count": 9,
+   "value": "UAB Simurgh"
+  },
+  {
+   "count": 2,
+   "value": "Google LLC"
+  },
+  {
+   "count": 1,
+   "value": "3 Customer dynamic address pool"
+  },
+  {
+   "count": 1,
+   "value": "Technische Universitaet Dresden"
+  }
+ ],
+ "id": "huawei-digest-de-7547",
+ "parent": "huaweihomegateway",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "Huawei Digest · DE · 7547",
+  "en": "Huawei Digest · DE · 7547",
+  "es": "Huawei Digest · DE · 7547",
+  "zh": "Huawei Digest · DE · 7547"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,1575 @@
+{
+ "dork": "\"GenieACS-Version: 1.2\"",
+ "total": 3700,
+ "taken": "2026-11-21T21:50:00+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 81,
+   "covered": 3694,
+   "remainder": 6
+  },
+  "org": {
+   "values_returned": 100,
+   "covered": 2062,
+   "remainder": 1638
+  },
+  "asn": {
+   "values_returned": 100,
+   "covered": 2095,
+   "remainder": 1605
+  },
+  "port": {
+   "values_returned": 100,
+   "covered": 3228,
+   "remainder": 472
+  }
+ },
+ "countries": [
+  {
+   "count": 1531,
+   "value": "ID"
+  },
+  {
+   "count": 561,
+   "value": "BR"
+  },
+  {
+   "count": 452,
+   "value": "US"
+  },
+  {
+   "count": 155,
+   "value": "AR"
+  },
+  {
+   "count": 129,
+   "value": "ES"
+  },
+  {
+   "count": 121,
+   "value": "AU"
+  },
+  {
+   "count": 92,
+   "value": "IN"
+  },
+  {
+   "count": 84,
+   "value": "SG"
+  },
+  {
+   "count": 65,
+   "value": "DE"
+  },
+  {
+   "count": 47,
+   "value": "GB"
+  },
+  {
+   "count": 46,
+   "value": "NP"
+  },
+  {
+   "count": 40,
+   "value": "ZA"
+  },
+  {
+   "count": 34,
+   "value": "KE"
+  },
+  {
+   "count": 23,
+   "value": "CN"
+  },
+  {
+   "count": 22,
+   "value": "EC"
+  },
+  {
+   "count": 21,
+   "value": "CA"
+  },
+  {
+   "count": 21,
+   "value": "CO"
+  },
+  {
+   "count": 19,
+   "value": "PH"
+  },
+  {
+   "count": 13,
+   "value": "BD"
+  },
+  {
+   "count": 12,
+   "value": "FR"
+  },
+  {
+   "count": 12,
+   "value": "PK"
+  },
+  {
+   "count": 10,
+   "value": "CL"
+  },
+  {
+   "count": 10,
+   "value": "IT"
+  },
+  {
+   "count": 10,
+   "value": "MU"
+  },
+  {
+   "count": 10,
+   "value": "TW"
+  },
+  {
+   "count": 8,
+   "value": "HK"
+  },
+  {
+   "count": 8,
+   "value": "HU"
+  },
+  {
+   "count": 8,
+   "value": "PE"
+  },
+  {
+   "count": 8,
+   "value": "TR"
+  },
+  {
+   "count": 7,
+   "value": "CZ"
+  },
+  {
+   "count": 6,
+   "value": "AL"
+  },
+  {
+   "count": 6,
+   "value": "MX"
+  },
+  {
+   "count": 5,
+   "value": "AM"
+  },
+  {
+   "count": 5,
+   "value": "BG"
+  },
+  {
+   "count": 5,
+   "value": "MY"
+  },
+  {
+   "count": 5,
+   "value": "NL"
+  },
+  {
+   "count": 5,
+   "value": "UA"
+  },
+  {
+   "count": 5,
+   "value": "VN"
+  },
+  {
+   "count": 4,
+   "value": "MM"
+  },
+  {
+   "count": 4,
+   "value": "VE"
+  },
+  {
+   "count": 3,
+   "value": "CH"
+  },
+  {
+   "count": 3,
+   "value": "DO"
+  },
+  {
+   "count": 3,
+   "value": "FI"
+  },
+  {
+   "count": 3,
+   "value": "JP"
+  },
+  {
+   "count": 3,
+   "value": "PL"
+  },
+  {
+   "count": 3,
+   "value": "SE"
+  },
+  {
+   "count": 3,
+   "value": "TH"
+  },
+  {
+   "count": 2,
+   "value": "AF"
+  },
+  {
+   "count": 2,
+   "value": "AT"
+  },
+  {
+   "count": 2,
+   "value": "BE"
+  },
+  {
+   "count": 2,
+   "value": "DK"
+  },
+  {
+   "count": 2,
+   "value": "KR"
+  },
+  {
+   "count": 2,
+   "value": "PR"
+  },
+  {
+   "count": 2,
+   "value": "PY"
+  },
+  {
+   "count": 2,
+   "value": "SA"
+  },
+  {
+   "count": 2,
+   "value": "TT"
+  },
+  {
+   "count": 2,
+   "value": "UY"
+  },
+  {
+   "count": 1,
+   "value": "BO"
+  },
+  {
+   "count": 1,
+   "value": "CR"
+  },
+  {
+   "count": 1,
+   "value": "CY"
+  },
+  {
+   "count": 1,
+   "value": "GF"
+  },
+  {
+   "count": 1,
+   "value": "HN"
+  },
+  {
+   "count": 1,
+   "value": "HR"
+  },
+  {
+   "count": 1,
+   "value": "IL"
+  },
+  {
+   "count": 1,
+   "value": "IR"
+  },
+  {
+   "count": 1,
+   "value": "LA"
+  },
+  {
+   "count": 1,
+   "value": "MA"
+  },
+  {
+   "count": 1,
+   "value": "MD"
+  },
+  {
+   "count": 1,
+   "value": "MV"
+  },
+  {
+   "count": 1,
+   "value": "NG"
+  },
+  {
+   "count": 1,
+   "value": "NO"
+  },
+  {
+   "count": 1,
+   "value": "PS"
+  },
+  {
+   "count": 1,
+   "value": "PT"
+  },
+  {
+   "count": 1,
+   "value": "RO"
+  },
+  {
+   "count": 1,
+   "value": "RS"
+  },
+  {
+   "count": 1,
+   "value": "SL"
+  },
+  {
+   "count": 1,
+   "value": "SV"
+  },
+  {
+   "count": 1,
+   "value": "TN"
+  },
+  {
+   "count": 1,
+   "value": "UZ"
+  },
+  {
+   "count": 1,
+   "value": "XK"
+  },
+  {
+   "count": 1,
+   "value": "ZM"
+  }
+ ],
+ "asn": [
+  {
+   "count": 320,
+   "value": "as55699"
+  },
+  {
+   "count": 181,
+   "value": "as14061"
+  },
+  {
+   "count": 146,
+   "value": "as63949"
+  },
+  {
+   "count": 119,
+   "value": "as272845"
+  },
+  {
+   "count": 104,
+   "value": "as29119"
+  },
+  {
+   "count": 65,
+   "value": "as133800"
+  },
+  {
+   "count": 64,
+   "value": "as264398"
+  },
+  {
+   "count": 50,
+   "value": "as51167"
+  },
+  {
+   "count": 46,
+   "value": "as271493"
+  },
+  {
+   "count": 45,
+   "value": "as45305"
+  },
+  {
+   "count": 38,
+   "value": "as211407"
+  },
+  {
+   "count": 31,
+   "value": "as133360"
+  },
+  {
+   "count": 31,
+   "value": "as58821"
+  },
+  {
+   "count": 30,
+   "value": "as132203"
+  },
+  {
+   "count": 27,
+   "value": "as153937"
+  },
+  {
+   "count": 23,
+   "value": "as262312"
+  },
+  {
+   "count": 23,
+   "value": "as31898"
+  },
+  {
+   "count": 22,
+   "value": "as396982"
+  },
+  {
+   "count": 20,
+   "value": "as137331"
+  },
+  {
+   "count": 20,
+   "value": "as138087"
+  },
+  {
+   "count": 20,
+   "value": "as138089"
+  },
+  {
+   "count": 20,
+   "value": "as16276"
+  },
+  {
+   "count": 20,
+   "value": "as20473"
+  },
+  {
+   "count": 19,
+   "value": "as328656"
+  },
+  {
+   "count": 19,
+   "value": "as7713"
+  },
+  {
+   "count": 18,
+   "value": "as150279"
+  },
+  {
+   "count": 17,
+   "value": "as140457"
+  },
+  {
+   "count": 16,
+   "value": "as141916"
+  },
+  {
+   "count": 16,
+   "value": "as149360"
+  },
+  {
+   "count": 16,
+   "value": "as8560"
+  },
+  {
+   "count": 15,
+   "value": "as38511"
+  },
+  {
+   "count": 14,
+   "value": "as138064"
+  },
+  {
+   "count": 14,
+   "value": "as141995"
+  },
+  {
+   "count": 14,
+   "value": "as19114"
+  },
+  {
+   "count": 14,
+   "value": "as24940"
+  },
+  {
+   "count": 13,
+   "value": "as152736"
+  },
+  {
+   "count": 12,
+   "value": "as131706"
+  },
+  {
+   "count": 12,
+   "value": "as138123"
+  },
+  {
+   "count": 12,
+   "value": "as149359"
+  },
+  {
+   "count": 12,
+   "value": "as58487"
+  },
+  {
+   "count": 11,
+   "value": "as141968"
+  },
+  {
+   "count": 11,
+   "value": "as151508"
+  },
+  {
+   "count": 11,
+   "value": "as63859"
+  },
+  {
+   "count": 10,
+   "value": "as40021"
+  },
+  {
+   "count": 10,
+   "value": "as55701"
+  },
+  {
+   "count": 9,
+   "value": "as139549"
+  },
+  {
+   "count": 9,
+   "value": "as142370"
+  },
+  {
+   "count": 9,
+   "value": "as142386"
+  },
+  {
+   "count": 9,
+   "value": "as149912"
+  },
+  {
+   "count": 9,
+   "value": "as150961"
+  },
+  {
+   "count": 9,
+   "value": "as151006"
+  },
+  {
+   "count": 8,
+   "value": "as134467"
+  },
+  {
+   "count": 8,
+   "value": "as138886"
+  },
+  {
+   "count": 8,
+   "value": "as141955"
+  },
+  {
+   "count": 8,
+   "value": "as152769"
+  },
+  {
+   "count": 8,
+   "value": "as268599"
+  },
+  {
+   "count": 8,
+   "value": "as3462"
+  },
+  {
+   "count": 7,
+   "value": "as136865"
+  },
+  {
+   "count": 7,
+   "value": "as138112"
+  },
+  {
+   "count": 7,
+   "value": "as141674"
+  },
+  {
+   "count": 7,
+   "value": "as147106"
+  },
+  {
+   "count": 7,
+   "value": "as152436"
+  },
+  {
+   "count": 7,
+   "value": "as202053"
+  },
+  {
+   "count": 7,
+   "value": "as328987"
+  },
+  {
+   "count": 6,
+   "value": "as13489"
+  },
+  {
+   "count": 6,
+   "value": "as140443"
+  },
+  {
+   "count": 6,
+   "value": "as141077"
+  },
+  {
+   "count": 6,
+   "value": "as149878"
+  },
+  {
+   "count": 6,
+   "value": "as152773"
+  },
+  {
+   "count": 6,
+   "value": "as38513"
+  },
+  {
+   "count": 6,
+   "value": "as52468"
+  },
+  {
+   "count": 5,
+   "value": "as131111"
+  },
+  {
+   "count": 5,
+   "value": "as134526"
+  },
+  {
+   "count": 5,
+   "value": "as137329"
+  },
+  {
+   "count": 5,
+   "value": "as138115"
+  },
+  {
+   "count": 5,
+   "value": "as138881"
+  },
+  {
+   "count": 5,
+   "value": "as139742"
+  },
+  {
+   "count": 5,
+   "value": "as142393"
+  },
+  {
+   "count": 5,
+   "value": "as142401"
+  },
+  {
+   "count": 5,
+   "value": "as149725"
+  },
+  {
+   "count": 5,
+   "value": "as149736"
+  },
+  {
+   "count": 5,
+   "value": "as149925"
+  },
+  {
+   "count": 5,
+   "value": "as152377"
+  },
+  {
+   "count": 5,
+   "value": "as153098"
+  },
+  {
+   "count": 5,
+   "value": "as197540"
+  },
+  {
+   "count": 5,
+   "value": "as58485"
+  },
+  {
+   "count": 4,
+   "value": "as1267"
+  },
+  {
+   "count": 4,
+   "value": "as135477"
+  },
+  {
+   "count": 4,
+   "value": "as136121"
+  },
+  {
+   "count": 4,
+   "value": "as138131"
+  },
+  {
+   "count": 4,
+   "value": "as139972"
+  },
+  {
+   "count": 4,
+   "value": "as140401"
+  },
+  {
+   "count": 4,
+   "value": "as141071"
+  },
+  {
+   "count": 4,
+   "value": "as142220"
+  },
+  {
+   "count": 4,
+   "value": "as147142"
+  },
+  {
+   "count": 4,
+   "value": "as149933"
+  },
+  {
+   "count": 4,
+   "value": "as150208"
+  },
+  {
+   "count": 4,
+   "value": "as150493"
+  },
+  {
+   "count": 4,
+   "value": "as150924"
+  },
+  {
+   "count": 4,
+   "value": "as151600"
+  }
+ ],
+ "ports": [
+  {
+   "count": 2149,
+   "value": 3000
+  },
+  {
+   "count": 253,
+   "value": 443
+  },
+  {
+   "count": 104,
+   "value": 8193
+  },
+  {
+   "count": 95,
+   "value": 13000
+  },
+  {
+   "count": 62,
+   "value": 3001
+  },
+  {
+   "count": 55,
+   "value": 80
+  },
+  {
+   "count": 51,
+   "value": 9023
+  },
+  {
+   "count": 38,
+   "value": 3030
+  },
+  {
+   "count": 24,
+   "value": 3002
+  },
+  {
+   "count": 24,
+   "value": 9003
+  },
+  {
+   "count": 16,
+   "value": 5000
+  },
+  {
+   "count": 15,
+   "value": 9999
+  },
+  {
+   "count": 14,
+   "value": 3333
+  },
+  {
+   "count": 14,
+   "value": 8443
+  },
+  {
+   "count": 14,
+   "value": 9000
+  },
+  {
+   "count": 10,
+   "value": 3009
+  },
+  {
+   "count": 10,
+   "value": 4444
+  },
+  {
+   "count": 10,
+   "value": 7000
+  },
+  {
+   "count": 9,
+   "value": 3003
+  },
+  {
+   "count": 8,
+   "value": 3010
+  },
+  {
+   "count": 8,
+   "value": 8080
+  },
+  {
+   "count": 8,
+   "value": 8888
+  },
+  {
+   "count": 7,
+   "value": 4002
+  },
+  {
+   "count": 7,
+   "value": 4401
+  },
+  {
+   "count": 7,
+   "value": 8000
+  },
+  {
+   "count": 6,
+   "value": 82
+  },
+  {
+   "count": 6,
+   "value": 3004
+  },
+  {
+   "count": 6,
+   "value": 3005
+  },
+  {
+   "count": 6,
+   "value": 5001
+  },
+  {
+   "count": 6,
+   "value": 7547
+  },
+  {
+   "count": 6,
+   "value": 8081
+  },
+  {
+   "count": 6,
+   "value": 8090
+  },
+  {
+   "count": 5,
+   "value": 1234
+  },
+  {
+   "count": 5,
+   "value": 2222
+  },
+  {
+   "count": 5,
+   "value": 3100
+  },
+  {
+   "count": 5,
+   "value": 8001
+  },
+  {
+   "count": 4,
+   "value": 3012
+  },
+  {
+   "count": 4,
+   "value": 4455
+  },
+  {
+   "count": 4,
+   "value": 7548
+  },
+  {
+   "count": 4,
+   "value": 8010
+  },
+  {
+   "count": 4,
+   "value": 9090
+  },
+  {
+   "count": 3,
+   "value": 88
+  },
+  {
+   "count": 3,
+   "value": 3006
+  },
+  {
+   "count": 3,
+   "value": 3007
+  },
+  {
+   "count": 3,
+   "value": 3020
+  },
+  {
+   "count": 3,
+   "value": 3131
+  },
+  {
+   "count": 3,
+   "value": 5002
+  },
+  {
+   "count": 3,
+   "value": 7777
+  },
+  {
+   "count": 3,
+   "value": 8008
+  },
+  {
+   "count": 3,
+   "value": 8082
+  },
+  {
+   "count": 3,
+   "value": 8083
+  },
+  {
+   "count": 3,
+   "value": 8091
+  },
+  {
+   "count": 3,
+   "value": 9595
+  },
+  {
+   "count": 3,
+   "value": 30000
+  },
+  {
+   "count": 3,
+   "value": 30001
+  },
+  {
+   "count": 3,
+   "value": 60001
+  },
+  {
+   "count": 3,
+   "value": 65000
+  },
+  {
+   "count": 2,
+   "value": 81
+  },
+  {
+   "count": 2,
+   "value": 83
+  },
+  {
+   "count": 2,
+   "value": 90
+  },
+  {
+   "count": 2,
+   "value": 100
+  },
+  {
+   "count": 2,
+   "value": 450
+  },
+  {
+   "count": 2,
+   "value": 800
+  },
+  {
+   "count": 2,
+   "value": 1025
+  },
+  {
+   "count": 2,
+   "value": 1026
+  },
+  {
+   "count": 2,
+   "value": 2002
+  },
+  {
+   "count": 2,
+   "value": 2020
+  },
+  {
+   "count": 2,
+   "value": 3011
+  },
+  {
+   "count": 2,
+   "value": 3022
+  },
+  {
+   "count": 2,
+   "value": 3099
+  },
+  {
+   "count": 2,
+   "value": 3200
+  },
+  {
+   "count": 2,
+   "value": 3211
+  },
+  {
+   "count": 2,
+   "value": 3443
+  },
+  {
+   "count": 2,
+   "value": 4001
+  },
+  {
+   "count": 2,
+   "value": 4040
+  },
+  {
+   "count": 2,
+   "value": 5003
+  },
+  {
+   "count": 2,
+   "value": 5005
+  },
+  {
+   "count": 2,
+   "value": 5555
+  },
+  {
+   "count": 2,
+   "value": 5858
+  },
+  {
+   "count": 2,
+   "value": 7007
+  },
+  {
+   "count": 2,
+   "value": 7537
+  },
+  {
+   "count": 2,
+   "value": 7557
+  },
+  {
+   "count": 2,
+   "value": 7779
+  },
+  {
+   "count": 2,
+   "value": 8005
+  },
+  {
+   "count": 2,
+   "value": 8015
+  },
+  {
+   "count": 2,
+   "value": 8069
+  },
+  {
+   "count": 2,
+   "value": 8085
+  },
+  {
+   "count": 2,
+   "value": 8098
+  },
+  {
+   "count": 2,
+   "value": 8099
+  },
+  {
+   "count": 2,
+   "value": 8123
+  },
+  {
+   "count": 2,
+   "value": 8156
+  },
+  {
+   "count": 2,
+   "value": 8300
+  },
+  {
+   "count": 2,
+   "value": 8333
+  },
+  {
+   "count": 2,
+   "value": 8385
+  },
+  {
+   "count": 2,
+   "value": 8500
+  },
+  {
+   "count": 2,
+   "value": 8557
+  },
+  {
+   "count": 2,
+   "value": 8889
+  },
+  {
+   "count": 2,
+   "value": 8899
+  },
+  {
+   "count": 2,
+   "value": 9001
+  },
+  {
+   "count": 2,
+   "value": 9007
+  }
+ ],
+ "orgs": [
+  {
+   "count": 317,
+   "value": "PT. Cemerlang Multimedia Internet Service Provider Jl. Bangau No. 2-4 Bogor, Jawa Barat 16161"
+  },
+  {
+   "count": 247,
+   "value": "Cogent Communications, LLC"
+  },
+  {
+   "count": 181,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 105,
+   "value": "Linode"
+  },
+  {
+   "count": 104,
+   "value": "AIRE NETWORKS DEL MEDITERRANEO SL UNIPERSONAL"
+  },
+  {
+   "count": 64,
+   "value": "EMERSON MEDEIROS DE MELO ME"
+  },
+  {
+   "count": 63,
+   "value": "Contabo GmbH"
+  },
+  {
+   "count": 55,
+   "value": "Indonesia Network Information Center"
+  },
+  {
+   "count": 49,
+   "value": "Asia Pacific Network Information Center, Pty. Ltd."
+  },
+  {
+   "count": 47,
+   "value": "PT Biznet Gio Nusantara"
+  },
+  {
+   "count": 41,
+   "value": "Akamai Technologies, Inc."
+  },
+  {
+   "count": 38,
+   "value": "Early registration addresses"
+  },
+  {
+   "count": 32,
+   "value": "PT Perwira Media Solusi"
+  },
+  {
+   "count": 31,
+   "value": "PT Awinet Global Mandiri"
+  },
+  {
+   "count": 24,
+   "value": "Google LLC"
+  },
+  {
+   "count": 21,
+   "value": "Emalangeni Technologies (Pty) Ltd"
+  },
+  {
+   "count": 20,
+   "value": "PT JAVA MEDIANET TEKHNOLOGI"
+  },
+  {
+   "count": 20,
+   "value": "Tencent Building, Kejizhongyi Avenue"
+  },
+  {
+   "count": 19,
+   "value": "VEX TELECOM SERVIÇOS DE TELECOMUNICAÇÃO LTDA"
+  },
+  {
+   "count": 18,
+   "value": "LDP-NET"
+  },
+  {
+   "count": 16,
+   "value": "PT Bantani Media Utama"
+  },
+  {
+   "count": 14,
+   "value": "Otecel S.A."
+  },
+  {
+   "count": 14,
+   "value": "PT Lintas Data Prima"
+  },
+  {
+   "count": 14,
+   "value": "PT Lintas Network Solusi"
+  },
+  {
+   "count": 13,
+   "value": "Hetzner Online GmbH"
+  },
+  {
+   "count": 13,
+   "value": "IONOS SE"
+  },
+  {
+   "count": 13,
+   "value": "Internet Utilities NA LLC"
+  },
+  {
+   "count": 13,
+   "value": "PT Cloud Teknologi Nusantara"
+  },
+  {
+   "count": 11,
+   "value": "Oracle Corporation"
+  },
+  {
+   "count": 11,
+   "value": "PT Indo Telemedia Solusi"
+  },
+  {
+   "count": 11,
+   "value": "PT TELKOM INDONESIA"
+  },
+  {
+   "count": 11,
+   "value": "PT. Jinom Network Indonesia"
+  },
+  {
+   "count": 10,
+   "value": "Chunghwa Telecom Data Communication Business Group"
+  },
+  {
+   "count": 10,
+   "value": "JOSE MAURO MANOEL DE SOUSA - ME"
+  },
+  {
+   "count": 10,
+   "value": "PT Ikhlas Cipta Teknologi"
+  },
+  {
+   "count": 9,
+   "value": "OVH SAS"
+  },
+  {
+   "count": 9,
+   "value": "PT Persada Data Multimedia"
+  },
+  {
+   "count": 9,
+   "value": "PT Remala Abadi"
+  },
+  {
+   "count": 9,
+   "value": "PT Terabyte Network Indonesia"
+  },
+  {
+   "count": 9,
+   "value": "PT Usaha Adi Sanggoro"
+  },
+  {
+   "count": 9,
+   "value": "Sinko IT Engineering Pvt. LTD"
+  },
+  {
+   "count": 9,
+   "value": "Vultr Holdings, LLC"
+  },
+  {
+   "count": 8,
+   "value": "Crisp Enterprises"
+  },
+  {
+   "count": 8,
+   "value": "Indonesia Online Access"
+  },
+  {
+   "count": 8,
+   "value": "Network infrastructure assignment"
+  },
+  {
+   "count": 8,
+   "value": "PT Data Buana Nusantara"
+  },
+  {
+   "count": 8,
+   "value": "PT Gopal Network Solusindo"
+  },
+  {
+   "count": 8,
+   "value": "PT. ADEAKSA INDO JAYATAMA"
+  },
+  {
+   "count": 8,
+   "value": "PT.GRAHA SUMBER TEKNOLOGI"
+  },
+  {
+   "count": 7,
+   "value": "Fiberbyte"
+  },
+  {
+   "count": 7,
+   "value": "HostPapa"
+  },
+  {
+   "count": 7,
+   "value": "Oracle Public Cloud"
+  },
+  {
+   "count": 7,
+   "value": "PT Ard Management Group"
+  },
+  {
+   "count": 7,
+   "value": "PT Data Arta Sedaya"
+  },
+  {
+   "count": 7,
+   "value": "PT Digital Registra Indonesia"
+  },
+  {
+   "count": 7,
+   "value": "PT Foura Inti Sinergi"
+  },
+  {
+   "count": 7,
+   "value": "PT Global Erasiber Teknologi"
+  },
+  {
+   "count": 7,
+   "value": "PT Lintas Jaringan Nasional"
+  },
+  {
+   "count": 6,
+   "value": "ACEVILLE PTE.LTD."
+  },
+  {
+   "count": 6,
+   "value": "ONSITE AFRICA LIMITED - ONSITE AFRICA LIMITED"
+  },
+  {
+   "count": 6,
+   "value": "OVH Hosting, Inc."
+  },
+  {
+   "count": 6,
+   "value": "PT Chiabinet Jaringan Multimedia"
+  },
+  {
+   "count": 6,
+   "value": "PT Erajaya Telco Indonesia"
+  },
+  {
+   "count": 6,
+   "value": "PT Jaringan Kabel Nusantara"
+  },
+  {
+   "count": 6,
+   "value": "PT Nesta Indo Media"
+  },
+  {
+   "count": 6,
+   "value": "PT SELARAS CITRA TERABIT"
+  },
+  {
+   "count": 6,
+   "value": "The Constant Company, LLC"
+  },
+  {
+   "count": 5,
+   "value": "Airtel Networks Kenya Limited - Airtel Networks Kenya Limited"
+  },
+  {
+   "count": 5,
+   "value": "Datalix"
+  },
+  {
+   "count": 5,
+   "value": "Microsoft Corporation"
+  },
+  {
+   "count": 5,
+   "value": "NETLATIN S.R.L."
+  },
+  {
+   "count": 5,
+   "value": "PT Gerbang Nasional Akses Prima"
+  },
+  {
+   "count": 5,
+   "value": "PT Global Port Binekatara"
+  },
+  {
+   "count": 5,
+   "value": "PT Inter Koneksi Media"
+  },
+  {
+   "count": 5,
+   "value": "PT JARINGAN LINTAS ARTHA"
+  },
+  {
+   "count": 5,
+   "value": "PT Lintas Jaringan Nusantara"
+  },
+  {
+   "count": 5,
+   "value": "PT Timor Lintas Nusantara"
+  },
+  {
+   "count": 5,
+   "value": "PT Trans Media Telekomunikasi"
+  },
+  {
+   "count": 5,
+   "value": "PT. GEMILANG SARANA MANDIRI"
+  },
+  {
+   "count": 5,
+   "value": "Private Customer"
+  },
+  {
+   "count": 5,
+   "value": "WIFIAN ID"
+  },
+  {
+   "count": 4,
+   "value": "ASSOCIAÇÃO NACIONAL PARA INCLUSÃO DIGITAL - ANID"
+  },
+  {
+   "count": 4,
+   "value": "China Mobile Communications Group Co., Ltd"
+  },
+  {
+   "count": 4,
+   "value": "China Unicom Guangdong province network"
+  },
+  {
+   "count": 4,
+   "value": "Corporate / Direct Member IDNIC"
+  },
+  {
+   "count": 4,
+   "value": "FIBERLINK TELECOM LTDA"
+  },
+  {
+   "count": 4,
+   "value": "ISUPER TELECOMUNICACOES INFO LTDA"
+  },
+  {
+   "count": 4,
+   "value": "Interserver, Inc"
+  },
+  {
+   "count": 4,
+   "value": "NEXT THING NETWORKS Limited"
+  },
+  {
+   "count": 4,
+   "value": "Net Service BG Ltd"
+  },
+  {
+   "count": 4,
+   "value": "Oracle Svenska AB"
+  },
+  {
+   "count": 4,
+   "value": "PT Gunung Sedayu Sentosa"
+  },
+  {
+   "count": 4,
+   "value": "PT Hepra Teknologi Indonesia"
+  },
+  {
+   "count": 4,
+   "value": "PT Inti Data Guna"
+  },
+  {
+   "count": 4,
+   "value": "PT JARINGANKU SARANA NUSANTARA"
+  },
+  {
+   "count": 4,
+   "value": "PT Kaisar Artha Putera"
+  },
+  {
+   "count": 4,
+   "value": "PT Kusuma Dinatha Jaya Abadi"
+  },
+  {
+   "count": 4,
+   "value": "PT MERAH PUTIH TELEMATIKA"
+  },
+  {
+   "count": 4,
+   "value": "PT Ryndo Jaringan Nusantara"
+  },
+  {
+   "count": 4,
+   "value": "PT Trimitra Aditama Koneksindo"
+  }
+ ],
+ "id": "fact-genieacs-admin-ui-0365d63da7",
+ "parent": "genieacs-admin-ui",
+ "group": "facts",
+ "label": {
+  "ru": "версии 1.2.x",
+  "en": "Versions 1.2.x",
+  "es": "Versiones 1.2.x",
+  "zh": "版本 1.2.x"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

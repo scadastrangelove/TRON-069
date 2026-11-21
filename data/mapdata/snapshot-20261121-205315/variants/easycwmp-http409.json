@@ -1,0 +1,79 @@
+{
+ "dork": "port:7547 \"HTTP/1.1 409 Conflict\"",
+ "total": 2,
+ "taken": "2026-11-21T21:49:26+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 2,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 2,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 1,
+   "value": "AU"
+  },
+  {
+   "count": 1,
+   "value": "GB"
+  }
+ ],
+ "asn": [
+  {
+   "count": 1,
+   "value": "as1221"
+  },
+  {
+   "count": 1,
+   "value": "as206067"
+  }
+ ],
+ "ports": [
+  {
+   "count": 2,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1,
+   "value": "Mobile Broadband Service"
+  },
+  {
+   "count": 1,
+   "value": "Telstra Limited"
+  }
+ ],
+ "id": "easycwmp-http409",
+ "parent": "easycwmp-vanilla",
+ "group": "easycwmp",
+ "label": {
+  "ru": "HTTP 409: широкий контрольный запрос",
+  "en": "HTTP 409: broad control query",
+  "es": "HTTP 409: consulta de control amplia",
+  "zh": "HTTP 409：宽泛对照查询"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}

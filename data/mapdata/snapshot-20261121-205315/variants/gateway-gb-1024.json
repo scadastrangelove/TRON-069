@@ -1,0 +1,100 @@
+{
+ "dork": "realm=\"Gateway\" country:GB port:1024",
+ "total": 7965,
+ "taken": "2026-11-21T21:50:34+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 7965,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 7,
+   "covered": 7965,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 7965,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 7965,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 7965,
+   "value": "GB"
+  }
+ ],
+ "asn": [
+  {
+   "count": 7940,
+   "value": "as5378"
+  },
+  {
+   "count": 24,
+   "value": "as25310"
+  },
+  {
+   "count": 1,
+   "value": "as5607"
+  }
+ ],
+ "ports": [
+  {
+   "count": 7965,
+   "value": 1024
+  }
+ ],
+ "orgs": [
+  {
+   "count": 6758,
+   "value": "Dynamic IP Addresses"
+  },
+  {
+   "count": 1125,
+   "value": "Vodafone Limited"
+  },
+  {
+   "count": 41,
+   "value": "Vodafone Wholesale Broadband"
+  },
+  {
+   "count": 33,
+   "value": "Fixed IP (Static)"
+  },
+  {
+   "count": 5,
+   "value": "Dynamic IP pool"
+  },
+  {
+   "count": 2,
+   "value": "City Fibre"
+  },
+  {
+   "count": 1,
+   "value": "Sky UK Limited"
+  }
+ ],
+ "id": "gateway-gb-1024",
+ "parent": "gateway-realm",
+ "group": "fingerprint-followup",
+ "label": {
+  "en": "Gateway · GB:1024",
+  "ru": "Gateway · GB:1024",
+  "es": "Gateway · GB:1024",
+  "zh": "Gateway · GB:1024"
+ },
+ "source": {
+  "file": "FINGERPRINTS.md",
+  "anchor": "gateway-port-scopes"
+ },
+ "denominator": null
+}

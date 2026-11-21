@@ -1,0 +1,91 @@
+{
+ "dork": "\"Server: cwmp server\" country:UA org:\"Lanet\"",
+ "total": 11791,
+ "taken": "2026-11-21T21:50:22+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 11791,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 11791,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 11791,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 11791,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 11791,
+   "value": "UA"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5117,
+   "value": "as39608"
+  },
+  {
+   "count": 2819,
+   "value": "as202103"
+  },
+  {
+   "count": 2717,
+   "value": "as49332"
+  },
+  {
+   "count": 610,
+   "value": "as41911"
+  },
+  {
+   "count": 334,
+   "value": "as205673"
+  },
+  {
+   "count": 113,
+   "value": "as51180"
+  },
+  {
+   "count": 81,
+   "value": "as43120"
+  }
+ ],
+ "ports": [
+  {
+   "count": 11791,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 11791,
+   "value": "Lanet Network Ltd"
+  }
+ ],
+ "id": "cwmp-server-lanet-ua",
+ "parent": "cwmp-server",
+ "group": "writeup-followups",
+ "label": {
+  "ru": "cwmp server · Lanet UA; вендор не установлен",
+  "en": "cwmp server · Lanet UA; vendor unknown",
+  "es": "cwmp server · Lanet UA; fabricante desconocido",
+  "zh": "cwmp server · Lanet UA；厂商未确定"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,147 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Digest\" country:DE",
+ "total": 41568,
+ "taken": "2026-11-21T21:49:11+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 41568,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 9,
+   "covered": 41568,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 41568,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 7,
+   "covered": 41568,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 41568,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 41001,
+   "value": "as3320"
+  },
+  {
+   "count": 545,
+   "value": "as50670"
+  },
+  {
+   "count": 9,
+   "value": "as206355"
+  },
+  {
+   "count": 9,
+   "value": "as396982"
+  },
+  {
+   "count": 2,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as44034"
+  },
+  {
+   "count": 1,
+   "value": "as680"
+  }
+ ],
+ "ports": [
+  {
+   "count": 41557,
+   "value": 7547
+  },
+  {
+   "count": 3,
+   "value": 80
+  },
+  {
+   "count": 2,
+   "value": 1024
+  },
+  {
+   "count": 2,
+   "value": 1025
+  },
+  {
+   "count": 2,
+   "value": 7548
+  },
+  {
+   "count": 1,
+   "value": 30005
+  },
+  {
+   "count": 1,
+   "value": 37215
+  }
+ ],
+ "orgs": [
+  {
+   "count": 40999,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 372,
+   "value": "VTEL HOLDINGS LIMITED/JORDAN CO."
+  },
+  {
+   "count": 173,
+   "value": "Company 64d34520KumHKEDa"
+  },
+  {
+   "count": 9,
+   "value": "Google LLC"
+  },
+  {
+   "count": 9,
+   "value": "UAB Simurgh"
+  },
+  {
+   "count": 2,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 2,
+   "value": "Telekom Deutschland GmbH"
+  },
+  {
+   "count": 1,
+   "value": "3 Customer dynamic address pool"
+  },
+  {
+   "count": 1,
+   "value": "Technische Universitaet Dresden"
+  }
+ ],
+ "id": "huawei-digest-de",
+ "parent": "huaweihomegateway",
+ "group": "huawei-auth",
+ "label": {
+  "ru": "Ответы Digest · DE",
+  "en": "Digest responses · DE",
+  "es": "Respuestas Digest · DE",
+  "zh": "Digest 响应 · DE"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

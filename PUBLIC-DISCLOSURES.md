@@ -4,6 +4,30 @@ This page links published reports relevant to TRON-069. The
 [Rust-in-Peace disclosure tracker](https://github.com/scadastrangelove/rust-in-peace/blob/main/DISCLOSURES-PUBLIC.md)
 tracks the wider research programme, including reports that remain private.
 
+<a id="zte-f670l-public-scope"></a>
+## ZTE F670L — public research and CVE scope, reviewed 22 November 2026
+
+In our review of the stock **ZXHN F670L V1.1.20P3N4D** firmware, we
+independently identified four issues involving factory-mode access, the storage
+of embedded secrets, TLS key material and the key used to protect configuration
+backups. We reproduced the factory-mode access in isolated emulation and examined
+the key material offline. We reported these findings to ZTE PSIRT on **12 October
+2026**. PSIRT sent a technical response on **14 October**.
+
+On **27 October**, varun935 published an independent teardown of **F670L
+V9.0.10P1N12A** describing the same four areas. The two investigations provide
+evidence from different firmware generations.
+[Publication history](https://github.com/varun935/Zte-f670l-firmware-teardown/commits/5c76a7cf4859915bf7b454f0fa3cbcad608bef38/).
+
+The three ZTE CVE records published on 7 August list **F689** in the product
+field and seven **ZXHN F680V9** builds in the affected-version field.
+Coverage of F670L V1.1, F670L V9.0 and F6600P under those identifiers remains
+unconfirmed. Operators checking an inventory should match both the product and
+the firmware build against the vendor record.
+[CVE-2026-49006](https://www.cve.org/CVERecord?id=CVE-2026-49006),
+[CVE-2026-49007](https://www.cve.org/CVERecord?id=CVE-2026-49007),
+[CVE-2026-49008](https://www.cve.org/CVERecord?id=CVE-2026-49008).
+
 <a id="easycwmp-20261122"></a>
 ## EasyCwmp 1.8.6 — project advisory, 22 November 2026
 

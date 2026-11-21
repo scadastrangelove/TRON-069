@@ -1,0 +1,61 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:GB",
+ "total": 59,
+ "taken": "2026-11-21T21:36:55+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 5,
+   "covered": 59,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 59,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 57,
+   "value": "as57793"
+  },
+  {
+   "count": 1,
+   "value": "as2856"
+  },
+  {
+   "count": 1,
+   "value": "as6871"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 28,
+   "value": "1310 Limited"
+  },
+  {
+   "count": 24,
+   "value": "thirteenten 1310 Limited"
+  },
+  {
+   "count": 5,
+   "value": "Hampshire Broadband Ltd"
+  },
+  {
+   "count": 1,
+   "value": "Dial-up and ADSL pool"
+  },
+  {
+   "count": 1,
+   "value": "IP pools"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "GB"
+}

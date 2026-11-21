@@ -1,0 +1,65 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:JO",
+ "total": 11,
+ "taken": "2026-11-21T21:37:04+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 11,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 11,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 9,
+   "value": "as48832"
+  },
+  {
+   "count": 1,
+   "value": "as8376"
+  },
+  {
+   "count": 1,
+   "value": "as9038"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 3,
+   "value": "Zain Data-Jordan"
+  },
+  {
+   "count": 2,
+   "value": "ADSL, Fastlinkdata, Jordan"
+  },
+  {
+   "count": 2,
+   "value": "Broadband Service"
+  },
+  {
+   "count": 2,
+   "value": "Pool"
+  },
+  {
+   "count": 1,
+   "value": "Assigned for ADSL customers"
+  },
+  {
+   "count": 1,
+   "value": "UMNIAH COMPANY"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "JO"
+}

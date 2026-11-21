@@ -1,0 +1,67 @@
+{
+ "dork": "\"NettyServer\" country:IT",
+ "total": 31898,
+ "taken": "2026-11-21T21:50:04+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 31898,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 1,
+   "covered": 31898,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 31898,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 31898,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 31898,
+   "value": "IT"
+  }
+ ],
+ "asn": [
+  {
+   "count": 31898,
+   "value": "as1267"
+  }
+ ],
+ "ports": [
+  {
+   "count": 31898,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 31898,
+   "value": "WIND TRE S.P.A."
+  }
+ ],
+ "id": "fact-nettyserver-b44e80cd32",
+ "parent": "nettyserver",
+ "group": "facts",
+ "label": {
+  "en": "NettyServer Italy slice",
+  "ru": "Срез NettyServer в Италии",
+  "es": "Corte NettyServer en Italia",
+  "zh": "意大利 NettyServer 切片"
+ },
+ "source": {
+  "file": "ACS-HUNT.md"
+ },
+ "denominator": null
+}

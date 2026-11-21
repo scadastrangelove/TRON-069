@@ -1,0 +1,83 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:9090 country:TH",
+ "total": 5,
+ "taken": "2026-11-21T21:51:22+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 5,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 4,
+   "covered": 5,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 5,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 5,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 5,
+   "value": "TH"
+  }
+ ],
+ "asn": [
+  {
+   "count": 3,
+   "value": "as7470"
+  },
+  {
+   "count": 2,
+   "value": "as4618"
+  }
+ ],
+ "ports": [
+  {
+   "count": 5,
+   "value": 9090
+  }
+ ],
+ "orgs": [
+  {
+   "count": 2,
+   "value": "TRUE INTERNET CORPORATION CO. LTD."
+  },
+  {
+   "count": 1,
+   "value": "Fix ip for coporate customer"
+  },
+  {
+   "count": 1,
+   "value": "INEXT Broadband Company Limited"
+  },
+  {
+   "count": 1,
+   "value": "Internet Thailand Company Limited"
+  }
+ ],
+ "id": "huawei-port-9090-th",
+ "parent": "huaweihomegateway",
+ "group": "huawei-deployment",
+ "label": {
+  "en": "CR port 9090 · TH",
+  "ru": "CR-порт 9090 · TH",
+  "es": "Puerto CR 9090 · TH",
+  "zh": "CR 端口 9090 · TH"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "denominator": null
+}

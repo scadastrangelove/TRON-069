@@ -1,0 +1,103 @@
+{
+ "dork": "\"HuaweiHomeGateway\" \"WWW-Authenticate: Basic\" country:DE",
+ "total": 21615,
+ "taken": "2026-11-21T21:49:08+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 21615,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 4,
+   "covered": 21615,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 21615,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 6,
+   "covered": 21615,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 21615,
+   "value": "DE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 21610,
+   "value": "as3320"
+  },
+  {
+   "count": 5,
+   "value": "as16509"
+  }
+ ],
+ "ports": [
+  {
+   "count": 21610,
+   "value": 7547
+  },
+  {
+   "count": 1,
+   "value": 1291
+  },
+  {
+   "count": 1,
+   "value": 6001
+  },
+  {
+   "count": 1,
+   "value": 10324
+  },
+  {
+   "count": 1,
+   "value": 11434
+  },
+  {
+   "count": 1,
+   "value": 48703
+  }
+ ],
+ "orgs": [
+  {
+   "count": 21610,
+   "value": "Deutsche Telekom AG"
+  },
+  {
+   "count": 3,
+   "value": "A100 ROW GmbH"
+  },
+  {
+   "count": 1,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 1,
+   "value": "Amazon.com, Inc."
+  }
+ ],
+ "id": "huawei-basic-de",
+ "parent": "huaweihomegateway",
+ "group": "huawei-auth",
+ "label": {
+  "ru": "Ответы Basic · DE",
+  "en": "Basic responses · DE",
+  "es": "Respuestas Basic · DE",
+  "zh": "Basic 响应 · DE"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"Server: gSOAP/2.8\" country:NL",
+ "total": 702,
+ "taken": "2026-11-21T21:33:15+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 702,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 702,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 580,
+   "value": "as31615"
+  },
+  {
+   "count": 112,
+   "value": "as50266"
+  },
+  {
+   "count": 10,
+   "value": "as33915"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 345,
+   "value": "Pool for mobile users"
+  },
+  {
+   "count": 294,
+   "value": "Pool for internet users"
+  },
+  {
+   "count": 53,
+   "value": "Pool for Mobile users"
+  },
+  {
+   "count": 10,
+   "value": "VOIP Customers NL"
+  }
+ ],
+ "line": "gSOAP/2.8 vendor map",
+ "line_id": "gsoap-2-8-vendor-map",
+ "cc": "NL"
+}

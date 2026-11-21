@@ -1,0 +1,357 @@
+{
+ "dork": "ssl.cert.subject.CN:*provisioning* country:GB",
+ "total": 94,
+ "taken": "2026-11-21T21:51:49+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100,ssl.cert.fingerprint:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 94,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 13,
+   "covered": 94,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 9,
+   "covered": 94,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 5,
+   "covered": 94,
+   "remainder": 0
+  },
+  "ssl.cert.fingerprint": {
+   "values_returned": 47,
+   "covered": 94,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 94,
+   "value": "GB"
+  }
+ ],
+ "asn": [
+  {
+   "count": 62,
+   "value": "as16509"
+  },
+  {
+   "count": 10,
+   "value": "as31472"
+  },
+  {
+   "count": 10,
+   "value": "as8075"
+  },
+  {
+   "count": 4,
+   "value": "as41495"
+  },
+  {
+   "count": 3,
+   "value": "as8943"
+  },
+  {
+   "count": 2,
+   "value": "as14061"
+  },
+  {
+   "count": 1,
+   "value": "as16276"
+  },
+  {
+   "count": 1,
+   "value": "as51561"
+  },
+  {
+   "count": 1,
+   "value": "as63949"
+  }
+ ],
+ "ports": [
+  {
+   "count": 89,
+   "value": 443
+  },
+  {
+   "count": 2,
+   "value": 8883
+  },
+  {
+   "count": 1,
+   "value": 25
+  },
+  {
+   "count": 1,
+   "value": 587
+  },
+  {
+   "count": 1,
+   "value": 8443
+  }
+ ],
+ "orgs": [
+  {
+   "count": 37,
+   "value": "Amazon Data Services UK"
+  },
+  {
+   "count": 14,
+   "value": "Amazon Technologies Inc."
+  },
+  {
+   "count": 10,
+   "value": "Amazon.com, Inc."
+  },
+  {
+   "count": 10,
+   "value": "Microsoft Corporation"
+  },
+  {
+   "count": 10,
+   "value": "VoiceHost Ltd"
+  },
+  {
+   "count": 4,
+   "value": "Faelix Limited"
+  },
+  {
+   "count": 3,
+   "value": "Jump Networks Ltd"
+  },
+  {
+   "count": 1,
+   "value": "A100 ROW Inc"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean London"
+  },
+  {
+   "count": 1,
+   "value": "DigitalOcean, LLC"
+  },
+  {
+   "count": 1,
+   "value": "ICUK Computing Services Limited"
+  },
+  {
+   "count": 1,
+   "value": "Linode, LLC"
+  },
+  {
+   "count": 1,
+   "value": "OVH Ltd"
+  }
+ ],
+ "id": "tls-provisioning-gb",
+ "group": "management-infrastructure",
+ "label": {
+  "en": "Provisioning · UK",
+  "ru": "Provisioning · Великобритания",
+  "es": "Provisioning · Reino Unido",
+  "zh": "Provisioning · 英国"
+ },
+ "source": {
+  "file": "MANAGEMENT-INFRASTRUCTURE.md"
+ },
+ "classification": "broad-discovery",
+ "fingerprints": [
+  {
+   "count": 6,
+   "value": "0548491786eaaaa919c993100c44bec7da43de38"
+  },
+  {
+   "count": 6,
+   "value": "1ec214fb34c7fa999ad3d7ba3a01fcf36088fe17"
+  },
+  {
+   "count": 5,
+   "value": "81bbcb9d7821b4f3a831c2b4ef6e8147e2ad550a"
+  },
+  {
+   "count": 5,
+   "value": "fc6a6fa3ae9ac3caad5fe3242400d3f30060127f"
+  },
+  {
+   "count": 4,
+   "value": "8370b3ee6efdfe5d0ec0cb97fcc5a8007298bfe4"
+  },
+  {
+   "count": 4,
+   "value": "bb363a4cea664acdb1cb2918a0e4eb043acbba09"
+  },
+  {
+   "count": 3,
+   "value": "0d2ef5fecf9a17fe04d6da4faded5949a7d45a05"
+  },
+  {
+   "count": 3,
+   "value": "69f9ae659d162822d1a8c72279910bba569f4f76"
+  },
+  {
+   "count": 3,
+   "value": "6c30207f71c1674da34dfbe5bc4bd859fa10b67a"
+  },
+  {
+   "count": 3,
+   "value": "7ca278f8e7d70c2a7a0edfbe149037a95ce531de"
+  },
+  {
+   "count": 3,
+   "value": "93a7cc98dddd26a54042c9b1c54808c873af6c05"
+  },
+  {
+   "count": 3,
+   "value": "cf53ee8949305a3d8f2ef9238a48ee253e292e71"
+  },
+  {
+   "count": 3,
+   "value": "e27dc45b2cbe2c265cf39c0d608bf9bc59adf998"
+  },
+  {
+   "count": 2,
+   "value": "52712e8d20ccc22895ff9aa24cb0a1b13b1940b6"
+  },
+  {
+   "count": 2,
+   "value": "6144ee4f97883ceaab61cea74ebb0b393e1d1a01"
+  },
+  {
+   "count": 2,
+   "value": "6a05e523aaf1c8105f18387c50bf45f703fb06a6"
+  },
+  {
+   "count": 2,
+   "value": "8115683ce14b2a6c4795fdee7886baa8b710ddc2"
+  },
+  {
+   "count": 2,
+   "value": "8b0920dd2bd3cb3b312d7c1e914a767bc3b3b5d9"
+  },
+  {
+   "count": 2,
+   "value": "bd53335a7b2a30e39626610502926ecd3f532d12"
+  },
+  {
+   "count": 2,
+   "value": "c7c950847b2b0724c43af741afda39083613d0e1"
+  },
+  {
+   "count": 2,
+   "value": "cb3e12669139b40e63e30210d1876414b801c1cd"
+  },
+  {
+   "count": 2,
+   "value": "f4a3ba2b5f36a3011d707263fd9288f9eeb639ff"
+  },
+  {
+   "count": 1,
+   "value": "0ee81fc742b0207c017685679c1167605076d57f"
+  },
+  {
+   "count": 1,
+   "value": "0f1a204bd95b5d6d3d081b8da6c94ef7c2e9339c"
+  },
+  {
+   "count": 1,
+   "value": "0fe82cd5197b96378057ebe4571790fbc6cd7d3f"
+  },
+  {
+   "count": 1,
+   "value": "221aeda0a988e471c1ae8b922d07cae0ec6ebcac"
+  },
+  {
+   "count": 1,
+   "value": "2f68a7335e97cea91e33178552dd4f95d733d0a4"
+  },
+  {
+   "count": 1,
+   "value": "35f2740bef6d37fd5cea6ac6f0b4520d7271500d"
+  },
+  {
+   "count": 1,
+   "value": "36749b7669c0cdcdcaa84f7b67299217f25e4e94"
+  },
+  {
+   "count": 1,
+   "value": "45144c3082e33d99f5420c0a4b622fc0a520f755"
+  },
+  {
+   "count": 1,
+   "value": "520338b7c36a411870129647ec9104d760edcb2c"
+  },
+  {
+   "count": 1,
+   "value": "5ffdc97f318dbadfcbab8d513831562447cde721"
+  },
+  {
+   "count": 1,
+   "value": "6d085c2805f08dd6ca73bdb1469c04239adfc04a"
+  },
+  {
+   "count": 1,
+   "value": "7a3167e3df4cfbd35f969f22fde0c41497d3e0e3"
+  },
+  {
+   "count": 1,
+   "value": "8e380eb2b3bce8572b62ed046b6b127a14c2f228"
+  },
+  {
+   "count": 1,
+   "value": "96e605c37b07c28c2acf8aff7473a31b84b44897"
+  },
+  {
+   "count": 1,
+   "value": "9c744cd95c2718505abe52553ea363f4155eb795"
+  },
+  {
+   "count": 1,
+   "value": "9dc0d0aa84c91709265c288868b65accf1f46e00"
+  },
+  {
+   "count": 1,
+   "value": "aadef778ace38e1b39bda7505c8cae25bea23433"
+  },
+  {
+   "count": 1,
+   "value": "acd3a40524e0b98e081a8808dab399244a23a04a"
+  },
+  {
+   "count": 1,
+   "value": "b3d1a4fac91a93835ac027a5e6683016ce5493c0"
+  },
+  {
+   "count": 1,
+   "value": "bcb730f9ca937890862474b3584ce1fe175450f8"
+  },
+  {
+   "count": 1,
+   "value": "bed676843878e696340c48b362e7feace8a8cda6"
+  },
+  {
+   "count": 1,
+   "value": "d2fbb9395448807748aa3c6fc436e196315b4a93"
+  },
+  {
+   "count": 1,
+   "value": "d8c40e5908a93bd77625b8cb8a6bcbc09b13feeb"
+  },
+  {
+   "count": 1,
+   "value": "dbe97bd98064d7ce9ae26c75ca2049af89dba37c"
+  },
+  {
+   "count": 1,
+   "value": "df2b091ac61e2ced8b3b8d12d31e6fd663e2fa80"
+  }
+ ]
+}

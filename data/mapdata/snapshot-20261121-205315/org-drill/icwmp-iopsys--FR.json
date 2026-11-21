@@ -1,0 +1,45 @@
+{
+ "dork": "\"authenticate@cwmp\" country:FR",
+ "total": 34,
+ "taken": "2026-11-21T20:56:44+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 2,
+   "covered": 34,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 2,
+   "covered": 34,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 33,
+   "value": "as41114"
+  },
+  {
+   "count": 1,
+   "value": "as39271"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 33,
+   "value": "Orne THD SPL"
+  },
+  {
+   "count": 1,
+   "value": "C'Chartres Innovations Numeriques SEM"
+  }
+ ],
+ "line": "icwmp (iopsys)",
+ "line_id": "icwmp-iopsys",
+ "cc": "FR"
+}

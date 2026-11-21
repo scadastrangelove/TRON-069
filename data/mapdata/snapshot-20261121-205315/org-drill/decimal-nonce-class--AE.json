@@ -1,0 +1,57 @@
+{
+ "dork": "port:7547 \"algorithm=\\\"MD5\\\",qop=\\\"auth\\\"\" \"nonce=\\\"17\" country:AE",
+ "total": 348,
+ "taken": "2026-11-21T21:36:36+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 6,
+   "covered": 348,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 1,
+   "covered": 348,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 348,
+   "value": "as5384"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 313,
+   "value": "Emirates Telecommunications Corporation"
+  },
+  {
+   "count": 31,
+   "value": "EMIRATES TELECOMMUNICATIONS GROUP COMPANY (ETISALAT GROUP) PJSC"
+  },
+  {
+   "count": 1,
+   "value": "Desert Treasure"
+  },
+  {
+   "count": 1,
+   "value": "Emirates Internet"
+  },
+  {
+   "count": 1,
+   "value": "QUE CLUB"
+  },
+  {
+   "count": 1,
+   "value": "Seaport Authority - Mussafah Port"
+  }
+ ],
+ "line": "decimal-nonce class",
+ "line_id": "decimal-nonce-class",
+ "cc": "AE"
+}

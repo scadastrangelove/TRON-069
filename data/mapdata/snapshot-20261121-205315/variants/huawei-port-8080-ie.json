@@ -1,0 +1,159 @@
+{
+ "dork": "\"HuaweiHomeGateway\" port:8080 country:IE",
+ "total": 10162,
+ "taken": "2026-11-21T21:48:59+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 10162,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 20,
+   "covered": 10162,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 5,
+   "covered": 10162,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 10162,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 10162,
+   "value": "IE"
+  }
+ ],
+ "asn": [
+  {
+   "count": 5409,
+   "value": "as2110"
+  },
+  {
+   "count": 4744,
+   "value": "as5466"
+  },
+  {
+   "count": 4,
+   "value": "as15502"
+  },
+  {
+   "count": 3,
+   "value": "as5607"
+  },
+  {
+   "count": 2,
+   "value": "as25441"
+  }
+ ],
+ "ports": [
+  {
+   "count": 10162,
+   "value": 8080
+  }
+ ],
+ "orgs": [
+  {
+   "count": 5070,
+   "value": "Enet Communications LIMITED"
+  },
+  {
+   "count": 2538,
+   "value": "Eircom"
+  },
+  {
+   "count": 1316,
+   "value": "Eircom Limited"
+  },
+  {
+   "count": 884,
+   "value": "eircom Ltd"
+  },
+  {
+   "count": 173,
+   "value": "Enet Communications DSL DYNAMIC IP"
+  },
+  {
+   "count": 73,
+   "value": "Enet Communications Whitelabel BB"
+  },
+  {
+   "count": 35,
+   "value": "Enet Communications WLB Broadband Customers"
+  },
+  {
+   "count": 21,
+   "value": "Enet Communications WL Broadband Customers"
+  },
+  {
+   "count": 11,
+   "value": "Enet Communications BB Customer IP'S"
+  },
+  {
+   "count": 11,
+   "value": "Ireland On-Line Broadband Customers"
+  },
+  {
+   "count": 6,
+   "value": "Enet Communications Business Broadband Customers"
+  },
+  {
+   "count": 6,
+   "value": "PURE Telecom - Whitelabel DSL - Assigned Statics"
+  },
+  {
+   "count": 5,
+   "value": "Enet CommunicationsBroadband Customers"
+  },
+  {
+   "count": 3,
+   "value": "Sky UK Limited"
+  },
+  {
+   "count": 2,
+   "value": "CityWest RoI LAN Infrastructure"
+  },
+  {
+   "count": 2,
+   "value": "Enet Communications DSL Loopbacks"
+  },
+  {
+   "count": 2,
+   "value": "Imagine Communications Group Limited"
+  },
+  {
+   "count": 2,
+   "value": "Vodafone ISP"
+  },
+  {
+   "count": 1,
+   "value": "Mobile Broadband ISP"
+  },
+  {
+   "count": 1,
+   "value": "Vodafone Ireland Limited"
+  }
+ ],
+ "id": "huawei-port-8080-ie",
+ "parent": "huaweihomegateway",
+ "group": "huawei-ports",
+ "label": {
+  "ru": "CR-порт 8080 · IE",
+  "en": "CR port 8080 · IE",
+  "es": "Puerto CR 8080 · IE",
+  "zh": "CR 端口 8080 · IE"
+ },
+ "source": {
+  "file": "DEANON-HUAWEI-CR.md"
+ },
+ "denominator": null
+}

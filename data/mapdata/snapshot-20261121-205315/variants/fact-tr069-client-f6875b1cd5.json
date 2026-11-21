@@ -1,0 +1,131 @@
+{
+ "dork": "\"TR069 client TCP connection request Server\" org:\"Charter Communications\"",
+ "total": 570555,
+ "taken": "2026-11-21T21:49:37+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 2,
+   "covered": 570555,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 3,
+   "covered": 570555,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 14,
+   "covered": 570555,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 1,
+   "covered": 570555,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 570553,
+   "value": "US"
+  },
+  {
+   "count": 2,
+   "value": "BD"
+  }
+ ],
+ "asn": [
+  {
+   "count": 154307,
+   "value": "as20115"
+  },
+  {
+   "count": 85491,
+   "value": "as11427"
+  },
+  {
+   "count": 79418,
+   "value": "as20001"
+  },
+  {
+   "count": 75151,
+   "value": "as10796"
+  },
+  {
+   "count": 50332,
+   "value": "as11426"
+  },
+  {
+   "count": 42130,
+   "value": "as11351"
+  },
+  {
+   "count": 34167,
+   "value": "as12271"
+  },
+  {
+   "count": 31585,
+   "value": "as33363"
+  },
+  {
+   "count": 8956,
+   "value": "as33588"
+  },
+  {
+   "count": 7634,
+   "value": "as22516"
+  },
+  {
+   "count": 845,
+   "value": "as10838"
+  },
+  {
+   "count": 332,
+   "value": "as20231"
+  },
+  {
+   "count": 199,
+   "value": "as11955"
+  },
+  {
+   "count": 8,
+   "value": "as19643"
+  }
+ ],
+ "ports": [
+  {
+   "count": 570555,
+   "value": 7547
+  }
+ ],
+ "orgs": [
+  {
+   "count": 378472,
+   "value": "Charter Communications Inc"
+  },
+  {
+   "count": 175812,
+   "value": "Charter Communications LLC"
+  },
+  {
+   "count": 16271,
+   "value": "Charter Communications, Inc"
+  }
+ ],
+ "id": "fact-tr069-client-f6875b1cd5",
+ "parent": "tr069-client",
+ "group": "facts",
+ "label": {
+  "ru": "карман Charter/Spectrum",
+  "en": "Charter/Spectrum subset",
+  "es": "Subconjunto Charter/Spectrum",
+  "zh": "Charter/Spectrum 子集"
+ },
+ "source": {
+  "file": "DEANON-TR069CLIENT.md"
+ },
+ "denominator": null
+}

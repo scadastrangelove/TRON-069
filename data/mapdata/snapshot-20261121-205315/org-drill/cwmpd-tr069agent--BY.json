@@ -1,0 +1,57 @@
+{
+ "dork": "\"cwmpd\" opaque country:BY",
+ "total": 7012,
+ "taken": "2026-11-21T21:40:53+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "org:100,asn:100",
+ "facet_meta": {
+  "org": {
+   "values_returned": 4,
+   "covered": 7012,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 3,
+   "covered": 7012,
+   "remainder": 0
+  }
+ },
+ "countries": [],
+ "asn": [
+  {
+   "count": 7001,
+   "value": "as25106"
+  },
+  {
+   "count": 9,
+   "value": "as42772"
+  },
+  {
+   "count": 2,
+   "value": "as31143"
+  }
+ ],
+ "ports": [],
+ "orgs": [
+  {
+   "count": 7001,
+   "value": "Mobile TeleSystems JLLC"
+  },
+  {
+   "count": 9,
+   "value": "Unitary enterprise A1"
+  },
+  {
+   "count": 1,
+   "value": "COSMOS TV JLLC"
+  },
+  {
+   "count": 1,
+   "value": "JCLL \"Cosmos TV\""
+  }
+ ],
+ "line": "cwmpd / TR069Agent",
+ "line_id": "cwmpd-tr069agent",
+ "cc": "BY"
+}

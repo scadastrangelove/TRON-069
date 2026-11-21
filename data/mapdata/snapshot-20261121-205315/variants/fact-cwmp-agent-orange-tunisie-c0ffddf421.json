@@ -1,0 +1,215 @@
+{
+ "dork": "\"CWMP-Agent\" country:HK",
+ "total": 2631,
+ "taken": "2026-11-21T21:49:58+00:00",
+ "run_id": "9f201eca-6f90-4931-a5c0-19f802911156",
+ "collection_status": "ok",
+ "requested_facets": "country:250,org:100,asn:100,port:100",
+ "facet_meta": {
+  "country": {
+   "values_returned": 1,
+   "covered": 2631,
+   "remainder": 0
+  },
+  "org": {
+   "values_returned": 10,
+   "covered": 2631,
+   "remainder": 0
+  },
+  "asn": {
+   "values_returned": 7,
+   "covered": 2631,
+   "remainder": 0
+  },
+  "port": {
+   "values_returned": 23,
+   "covered": 2631,
+   "remainder": 0
+  }
+ },
+ "countries": [
+  {
+   "count": 2631,
+   "value": "HK"
+  }
+ ],
+ "asn": [
+  {
+   "count": 2607,
+   "value": "as4760"
+  },
+  {
+   "count": 13,
+   "value": "as45102"
+  },
+  {
+   "count": 7,
+   "value": "as136907"
+  },
+  {
+   "count": 1,
+   "value": "as17924"
+  },
+  {
+   "count": 1,
+   "value": "as61112"
+  },
+  {
+   "count": 1,
+   "value": "as9269"
+  },
+  {
+   "count": 1,
+   "value": "as9304"
+  }
+ ],
+ "ports": [
+  {
+   "count": 2609,
+   "value": 5400
+  },
+  {
+   "count": 1,
+   "value": 19
+  },
+  {
+   "count": 1,
+   "value": 843
+  },
+  {
+   "count": 1,
+   "value": 1013
+  },
+  {
+   "count": 1,
+   "value": 1925
+  },
+  {
+   "count": 1,
+   "value": 3030
+  },
+  {
+   "count": 1,
+   "value": 3580
+  },
+  {
+   "count": 1,
+   "value": 7013
+  },
+  {
+   "count": 1,
+   "value": 7547
+  },
+  {
+   "count": 1,
+   "value": 8008
+  },
+  {
+   "count": 1,
+   "value": 8173
+  },
+  {
+   "count": 1,
+   "value": 8239
+  },
+  {
+   "count": 1,
+   "value": 8833
+  },
+  {
+   "count": 1,
+   "value": 8866
+  },
+  {
+   "count": 1,
+   "value": 9057
+  },
+  {
+   "count": 1,
+   "value": 9398
+  },
+  {
+   "count": 1,
+   "value": 9993
+  },
+  {
+   "count": 1,
+   "value": 10017
+  },
+  {
+   "count": 1,
+   "value": 11110
+  },
+  {
+   "count": 1,
+   "value": 11401
+  },
+  {
+   "count": 1,
+   "value": 12130
+  },
+  {
+   "count": 1,
+   "value": 12902
+  },
+  {
+   "count": 1,
+   "value": 18113
+  }
+ ],
+ "orgs": [
+  {
+   "count": 1603,
+   "value": "Hong Kong Telecommunications (HKT) Limited Mass Internet"
+  },
+  {
+   "count": 381,
+   "value": "PCCW Global (HK) Limited"
+  },
+  {
+   "count": 379,
+   "value": "HKT Limited"
+  },
+  {
+   "count": 244,
+   "value": "Hong Kong Telecommunications (HKT) Limited"
+  },
+  {
+   "count": 13,
+   "value": "Alibaba Cloud LLC"
+  },
+  {
+   "count": 7,
+   "value": "Huawei Cloud Hongkong Region"
+  },
+  {
+   "count": 1,
+   "value": "AkileCloud AKILE LTD"
+  },
+  {
+   "count": 1,
+   "value": "HGC Global Communications Limited"
+  },
+  {
+   "count": 1,
+   "value": "Hong Kong Broadband Network Limited"
+  },
+  {
+   "count": 1,
+   "value": "Smartone Mobile communications Limited"
+  }
+ ],
+ "id": "fact-cwmp-agent-orange-tunisie-c0ffddf421",
+ "parent": "cwmp-agent-orange-tunisie",
+ "group": "facts",
+ "label": {
+  "ru": "карман HKT/PCCW HK (порт 5400)",
+  "en": "HKT/PCCW HK subset (port 5400)",
+  "es": "Subconjunto HKT/PCCW HK (puerto 5400)",
+  "zh": "HKT/PCCW HK 子集（端口 5400）"
+ },
+ "source": {
+  "file": "NOTES.md"
+ },
+ "denominator": null
+}
