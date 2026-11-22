@@ -7,12 +7,21 @@ tracks the wider research programme, including reports that remain private.
 <a id="zte-f670l-public-scope"></a>
 ## ZTE F670L — public research and CVE scope, reviewed 22 November 2026
 
-In our review of the stock **ZXHN F670L V1.1.20P3N4D** firmware, we
-independently identified four issues involving factory-mode access, the storage
-of embedded secrets, TLS key material and the key used to protect configuration
-backups. We reproduced the factory-mode access in isolated emulation and examined
-the key material offline. We reported these findings to ZTE PSIRT on **12 October
-2026**. PSIRT sent a technical response on **14 October**.
+<a id="zte-f670l-v11-findings"></a>
+### SCADA StrangeLove findings on F670L V1.1.20P3N4D
+
+We examined the stock firmware offline and tested factory-mode access in
+isolated emulation. We reported our findings to ZTE PSIRT on **12 October
+2026** and received a technical response on **14 October**.
+
+| Finding in the vendor report | What we verified on this build |
+| --- | --- |
+| #1 · Factory-mode access | We reproduced access to a privileged shell through the factory-mode login in isolated emulation. |
+| #3 · Stored secrets | Offline inspection identified secrets embedded in the firmware's factory data store. |
+| #7 · TLS keys | The image contained static TLS private key material. Use of this material for ACS client authentication remains unverified. |
+| #8 · Configuration backups | The firmware contained the key used to encrypt configuration backups. |
+
+### Independent review and CVE scope
 
 On **27 October**, varun935 published an independent teardown of **F670L
 V9.0.10P1N12A** describing the same four areas. The two investigations provide
