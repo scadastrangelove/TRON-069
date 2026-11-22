@@ -29,7 +29,7 @@ Reviewed 22 November 2026. An atlas pair is confirmed only when the same device 
 | S4 | Stored XSS in the operator console | Lab-confirmed and published. A device-supplied value was stored and rendered as unescaped HTML in the operator interface. The test covered the console rendering path. [Published console finding](https://github.com/scadastrangelove/freeacs/issues/4). |
 | S5 | Memory corruption in a SOAP component | Component lab result. Memory corruption was reproduced in an isolated parser test. Reachability through a deployed ACS configuration and code execution there remain unverified. Project lab review; independent verification pending. |
 | S6 | Code execution on the ACS from a device session | Unproven. Reviewed device-facing tests establish availability impact. No test demonstrates control of code execution in the ACS process. |
-| S7 | False device reports influence provisioning | Partial. In a lab configuration, device-supplied data was accepted and stored. A resulting change to a provisioning decision or to another device remains unverified. [Lab observations](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-r976-f8qf-3hrm). |
+| S7 | False device reports influence provisioning | Partial. The ACS [stored a device-supplied parameter in the lab](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-r976-f8qf-3hrm). A separate report documents [how the ACS uses stored Connection Request data](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-q8c4-88vj-32ww). A change to a provisioning decision or to another device remains unverified. |
 
 <a id="management-to-device"></a>
 ## From management authority to device execution

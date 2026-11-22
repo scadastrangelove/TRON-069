@@ -37,16 +37,10 @@ The numbers follow the original report to the maintainer.
 
 ## Coordination
 
-The reporter contacted Piva Software on 8 October 2026 and proposed a 45-day
-coordination window. The general contact mailbox returned SMTP 550 (mailbox
-unavailable). The reporter forwarded the report to the sales contact on
-10 October. By 22 November the reporter had received no vendor response
-or confirmation of a fix. On 21 October,
-CERT/CC declined to assign CVEs or coordinate the case (VU#937703).
-Its assessment treated the ACS as a trusted role for #1, #4, #7 and #8,
-discussed example credentials for #2 and placed #6 outside its current scope.
-The response did not address #3. The peer-authentication, fail-open and local
-access distinctions above explain the reporter's assessment.
+- **8 October 2026.** The reporter sent the findings to Piva Software and proposed a 45-day coordination window. The general contact mailbox returned SMTP 550 (mailbox unavailable).
+- **10 October.** The reporter forwarded the report to the vendor's sales contact.
+- **21 October.** CERT/CC declined to assign CVEs or coordinate the case (VU#937703).
+- **22 November.** The reporter published this advisory and sent the maintainer a final notice giving **1 December 2026** as the publication date for the technical details. As of 22 November, the reporter had received no vendor response or confirmation of a fix.
 
 This is an independent project advisory. The reviewed source revision is the
 scope of the report. Operators can use the checks above to assess their own

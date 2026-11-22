@@ -62,10 +62,10 @@
       "zh": "EasyCwmp 1.8.6 如何验证 ACS 身份"
     },
     "body": {
-      "en": "The project advisory documents ACS identity checks, Connection Request authentication and local privilege boundaries. It gives operators checks for their own firmware. We will publish the technical details on 1 December 2026.",
-      "ru": "В бюллетене разобраны проверка подлинности ACS, авторизация входящих Connection Request и локальное повышение привилегий. Для операторов приведены проверки на собственной прошивке. Технические подробности опубликуем 1 декабря 2026 года.",
-      "es": "El aviso describe la verificación del ACS, la autenticación de Connection Request y los privilegios locales. Incluye comprobaciones para el firmware de cada operador. Publicaremos los detalles técnicos el 1 de diciembre de 2026.",
-      "zh": "公告说明 ACS 身份验证、连接请求认证及本地权限问题，并列出供运营商检查自身固件的步骤。我们将于2026年12月1日公布技术细节。"
+      "en": "The project advisory documents ACS identity checks, Connection Request authentication and local privilege boundaries. It gives operators checks for their own firmware.\n\nOn 22 November we sent the maintainer a final notice. We had received no response or confirmation of a fix. We will publish the technical details on 1 December 2026.",
+      "ru": "В бюллетене разобраны проверка подлинности ACS, авторизация входящих Connection Request и локальное повышение привилегий. Для операторов приведены проверки на собственной прошивке.\n\n22 ноября мы отправили разработчику заключительное уведомление. К этой дате ответ и подтверждение исправлений не поступили. Технические подробности опубликуем 1 декабря 2026 года.",
+      "es": "El aviso describe la verificación del ACS, la autenticación de Connection Request y los privilegios locales. Incluye comprobaciones para el firmware de cada operador.\n\nEl 22 de noviembre enviamos el aviso final al mantenedor. Hasta esa fecha no habíamos recibido respuesta ni confirmación de una corrección. Publicaremos los detalles técnicos el 1 de diciembre de 2026.",
+      "zh": "公告说明 ACS 身份验证、连接请求认证及本地权限问题，并列出供运营商检查自身固件的步骤。\n\n11 月 22 日，我们向维护者发出了最后通知。截至当天，我们尚未收到答复或修复确认。我们将于2026年12月1日公布技术细节。"
     },
     "evidence": [
       {
@@ -691,16 +691,16 @@
     "date": "2026-10-20",
     "kind": "disclosure",
     "title": {
-      "en": "GenieACS: seven security advisories published",
-      "ru": "GenieACS: опубликованы семь отчётов об уязвимостях",
-      "es": "GenieACS: siete avisos de seguridad publicados",
-      "zh": "GenieACS：七份安全公告已公开"
+      "en": "GenieACS security advisories and fixes on master",
+      "ru": "Бюллетени GenieACS и исправления в master",
+      "es": "Avisos de seguridad de GenieACS y correcciones en master",
+      "zh": "GenieACS 安全公告及 master 分支修复"
     },
     "body": {
-      "en": "On October 20 we published seven GenieACS security advisories and opened upstream PR #423 with targeted fixes and hardening recommendations. Publication followed CERT/CC advice after no maintainer response. The reports cover code execution through NBI provisioning, disclosure of secrets, firmware/file distribution, SSRF and CWMP availability. The device-facing findings extend Bad CPE: a managed device can affect its management infrastructure. Research used Reproof and Rust-in-Peace; reports and the PR are linked below.",
-      "ru": "20 октября опубликованы семь security advisories GenieACS и открыт PR #423 с исправлениями и рекомендациями по защите. Сопровождающие проекта не ответили; по рекомендации CERT/CC отчёты и PR опубликованы открыто. Отчёты охватывают выполнение кода через provisioning в NBI, раскрытие секретов, раздачу прошивок и файлов, SSRF и доступность CWMP. Находки в обработке запросов CPE дополняют Bad CPE: управляемое устройство может атаковать инфраструктуру управления. В исследовании использовались Reproof и Rust-in-Peace. Ссылки на отчёты и PR — ниже.",
-      "es": "El 20 de octubre publicamos siete avisos de seguridad de GenieACS y abrimos el PR #423 con correcciones específicas y recomendaciones de protección. La publicación siguió el consejo de CERT/CC tras no recibir respuesta de los mantenedores. Los informes abarcan ejecución de código mediante provisioning en NBI, exposición de secretos, distribución de firmware y archivos, SSRF y disponibilidad de CWMP. Los hallazgos en la interfaz de dispositivos amplían Bad CPE: un dispositivo gestionado puede afectar a su infraestructura de gestión. La investigación utilizó Reproof y Rust-in-Peace. Informes y PR enlazados abajo.",
-      "zh": "10 月 20 日，我们公开了七份 GenieACS 安全公告，并向上游提交 PR #423，提供针对性修复和加固建议。在未收到维护者回复后，我们按 CERT/CC 的建议公开披露。报告涵盖通过 NBI 配置脚本执行代码、秘密信息泄露、固件及文件分发、SSRF 和 CWMP 可用性。设备接口相关发现扩展了 Bad CPE 模型：受管设备可以影响其管理基础设施。研究使用了 Reproof 和 Rust-in-Peace，报告和 PR 链接见下方。"
+      "en": "On 20 October we published seven GenieACS security advisories and opened upstream PR #423 on CERT/CC’s advice. The reports cover the NBI, file distribution, Connection Requests and CWMP availability. The device-facing findings inform the Bad CPE scenarios. We used Reproof and Rust-in-Peace in the research.\n\nOn 22 November six of the seven advisories were publicly accessible. The master branch now limits CWMP request bodies and binds the NBI to loopback by default. The latest stable release was v1.2.16. PR #423 remained open.",
+      "ru": "20 октября по рекомендации CERT/CC мы опубликовали семь бюллетеней GenieACS и открыли PR #423. В отчётах разобраны NBI, раздача файлов, обработка Connection Request и доступность CWMP. Наблюдения на стороне устройств вошли в сценарии Bad CPE. В исследовании использовались Reproof и Rust-in-Peace.\n\nНа 22 ноября в открытом доступе оставались шесть из семи бюллетеней. В ветке master ограничили размер тела CWMP-запроса. По умолчанию NBI теперь принимает соединения только через локальный интерфейс. Последним стабильным релизом оставался v1.2.16. PR #423 открыт.",
+      "es": "El 20 de octubre, por recomendación de CERT/CC, publicamos siete avisos de seguridad de GenieACS y abrimos el PR #423. Los informes cubren la NBI, la distribución de archivos, las solicitudes de conexión y la disponibilidad de CWMP. Los hallazgos en la interfaz de dispositivos se recogen en los escenarios Bad CPE. La investigación utilizó Reproof y Rust-in-Peace.\n\nEl 22 de noviembre seguían accesibles al público seis de los siete avisos. La rama master limita el tamaño del cuerpo de las solicitudes CWMP y la NBI solo escucha por defecto en la interfaz de bucle local. La última versión estable era la v1.2.16. El PR #423 seguía abierto.",
+      "zh": "10 月 20 日，我们根据 CERT/CC 的建议发布了七份 GenieACS 安全公告，并向上游提交了 PR #423。公告涉及北向接口（NBI）、文件分发、连接请求和 CWMP 服务可用性。设备侧接口的研究结果已纳入 Bad CPE 场景。研究使用了 Reproof 和 Rust-in-Peace。\n\n截至 11 月 22 日，七份公告中仍有六份可公开查阅。master 分支现已限制 CWMP 请求体大小，NBI 默认仅监听本地回环接口。最新稳定版仍为 v1.2.16，PR #423 仍处于开放状态。"
     },
     "evidence": [
       {

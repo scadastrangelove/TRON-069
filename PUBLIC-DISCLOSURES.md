@@ -78,11 +78,11 @@ options or operator patch status. Sources checked on 11 November 2026.
 <a id="genieacs-20261020"></a>
 ## GenieACS — seven advisories published 20 October 2026
 
-Seven [security advisories](https://github.com/scadastrangelove/genieacs/security/advisories)
-and [upstream PR #423](https://github.com/genieacs/genieacs/pull/423) were published
-following CERT/CC's recommendation, after the reporter received no maintainer
-response. The PR records the coordination context and supplies targeted fixes
-and recommendations for changes to authentication and isolation.
+On 20 October we published seven security advisories and opened
+[upstream PR #423](https://github.com/genieacs/genieacs/pull/423) following
+CERT/CC's recommendation. On 22 November, six of the seven were publicly
+accessible in the [advisory index](https://github.com/scadastrangelove/genieacs/security/advisories).
+The table links those six reports.
 
 | Advisory | Finding |
 | --- | --- |
@@ -91,8 +91,7 @@ and recommendations for changes to authentication and isolation.
 | [GHSA-cjv9-7rj9-fp6m](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-cjv9-7rj9-fp6m) | Unauthenticated upload and deletion of files distributed to CPE through the File Server. |
 | [GHSA-q8c4-88vj-32ww](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-q8c4-88vj-32ww) | ACS-side SSRF and Connection Request authentication-material disclosure. |
 | [GHSA-r976-f8qf-3hrm](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-r976-f8qf-3hrm) | Unbounded request bodies and decompression, plus CWMP worker crashes from device input. |
-| [GHSA-4wgx-cx5h-m65h](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-4wgx-cx5h-m65h) | `/ping` argument injection: fixed in the 1.2.15 release line, with the fix missing from the inspected `master`. |
-| [GHSA-4v25-9q7x-x86v](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-4v25-9q7x-x86v) | Reflected XML injection through the unencoded `cwmp:ID` response field. |
+| [GHSA-4wgx-cx5h-m65h](https://github.com/scadastrangelove/genieacs/security/advisories/GHSA-4wgx-cx5h-m65h) | Version 1.2.15 fixed argument injection in `/ping`. The inspected `master` revision lacked the fix. It landed on `master` on [26 October](https://github.com/genieacs/genieacs/commit/6b79d82). |
 
 The reports document isolated-lab testing on `master` at `4aa5cbf` and comparisons
 with the release branch. The research used Reproof and Rust-in-Peace. The CWMP
@@ -100,9 +99,18 @@ availability and Connection Request findings extend the atlas's
 [Bad CPE model](ACS-LANDSCAPE.md); the NBI findings concern access to the
 administrative API and its management authority.
 
-Status on 20 October: all seven advisories are public; PR #423 is open.
-The PR contains targeted patches and recommendations for the broader design
-changes described in the reports.
+### Upstream status on 22 November 2026
+
+| Area | Changes on `master` |
+| --- | --- |
+| Northbound API (NBI) | The NBI [binds to loopback by default](https://github.com/genieacs/genieacs/commit/d2a89de), [restricts query operators](https://github.com/genieacs/genieacs/commit/94a2643) and [omits password and salt fields from user queries](https://github.com/genieacs/genieacs/commit/26e639b). |
+| CWMP workers | The agent-facing service [limits request body size](https://github.com/genieacs/genieacs/commit/d885468). It also handles [inherited command keys](https://github.com/genieacs/genieacs/commit/9a1d499), [mismatched attribute responses](https://github.com/genieacs/genieacs/commit/a7091ea) and [unsupported device requests](https://github.com/genieacs/genieacs/commit/48ad0c6). |
+| Setup wizard | The wizard [requires admin credentials](https://github.com/genieacs/genieacs/commit/ba5d52b) and [preserves existing resources](https://github.com/genieacs/genieacs/commit/c9d4a99). |
+
+The latest stable release was [v1.2.16, published 29 March](https://github.com/genieacs/genieacs/releases/tag/v1.2.16).
+The [`v1.2` branch was three commits ahead of that tag](https://github.com/genieacs/genieacs/compare/v1.2.16...v1.2).
+Its tip was `e773297`, committed on 14 September, before the October and November
+changes on `master`. [PR #423](https://github.com/genieacs/genieacs/pull/423) remained open.
 
 <a id="iopsys-icwmp-20261020"></a>
 ## icwmp (iopsys) — fixes confirmed 15 October 2026

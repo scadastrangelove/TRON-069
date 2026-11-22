@@ -370,7 +370,9 @@
     "eco_s6_body": "Не подтверждено. Проверенные тесты со стороны CPE показали влияние на доступность. Выполнение произвольного кода в процессе ACS не продемонстрировано.",
     "eco_s7_name": "S7 · Ложные данные устройства влияют на настройки",
     "eco_s7_body": "Частично. В стендовой конфигурации ACS принял и сохранил данные устройства. Изменение решения о настройке или воздействие на другое устройство не подтверждено.",
-    "eco_scenario_evidence": "Источники по сценариям"
+    "eco_scenario_evidence": "Источники по сценариям",
+    "eco_s7_storage": "Сохранение значения, полученного от устройства",
+    "eco_s7_cr": "Использование сохранённых данных Connection Request"
   },
   "en": {
     "open_panel": "Open inspector",
@@ -743,7 +745,9 @@
     "eco_s6_body": "Unproven. Reviewed device-facing tests establish availability impact. No test demonstrates control of code execution in the ACS process.",
     "eco_s7_name": "S7 · False device reports influence provisioning",
     "eco_s7_body": "Partial. In a lab configuration, device-supplied data was accepted and stored. A resulting change to a provisioning decision or to another device remains unverified.",
-    "eco_scenario_evidence": "Evidence by scenario"
+    "eco_scenario_evidence": "Evidence by scenario",
+    "eco_s7_storage": "Storage of a reported value",
+    "eco_s7_cr": "Use of stored Connection Request data"
   },
   "es": {
     "open_panel": "Abrir inspector",
@@ -1116,7 +1120,9 @@
     "eco_s6_body": "Sin confirmar. Las pruebas desde el dispositivo demuestran impacto en la disponibilidad. Ninguna demuestra ejecución arbitraria de código en el proceso del ACS.",
     "eco_s7_name": "S7 · Datos falsos del equipo influyen en la configuración",
     "eco_s7_body": "Parcial. En el laboratorio, el ACS aceptó y almacenó datos del equipo. Falta demostrar un cambio en una decisión de configuración o un efecto en otro dispositivo.",
-    "eco_scenario_evidence": "Fuentes por escenario"
+    "eco_scenario_evidence": "Fuentes por escenario",
+    "eco_s7_storage": "Almacenamiento del valor comunicado",
+    "eco_s7_cr": "Uso de datos almacenados en solicitudes de conexión"
   },
   "zh": {
     "open_panel": "打开详情面板",
@@ -1489,6 +1495,8 @@
     "eco_s6_body": "尚未证实。设备侧测试显示可用性受到影响，尚无测试证实可在 ACS 进程中执行任意代码。",
     "eco_s7_name": "S7 · 虚假设备数据影响配置下发",
     "eco_s7_body": "部分证据。在实验配置中，ACS 接收并保存了设备上报的数据。尚未验证这些数据改变了配置决策或影响其他设备。",
-    "eco_scenario_evidence": "各场景的证据来源"
+    "eco_scenario_evidence": "各场景的证据来源",
+    "eco_s7_storage": "保存设备上报的参数值",
+    "eco_s7_cr": "连接请求如何使用已保存的数据"
   }
 }
